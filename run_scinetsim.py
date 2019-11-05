@@ -9,16 +9,20 @@ import tkinter
 from twisted.internet import tksupport
 
 from tkinter import messagebox
+from tkinter import PhotoImage
+
+
+from utils.draggableImage import DraggableImage
+
+import PIL
+from PIL import ImageTk, Image
 
 # These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
 window = tkinter.Tk()
 tksupport.install(window)
 
-
-window.title("SCINetSim v1.0.1 - An Smart City Integrated Networks Simulator")
-# pack is used to show the object in the window
-label = tkinter.Label(window, text = "Simulation is ready to play").pack()
-
+global canvas
+canvas = None
 
 # This method is called when close window button is press. - Rafael Sampaio
 def on_closing():
@@ -26,30 +30,74 @@ def on_closing():
         log.msg("Closing SCINetSim Application...")
         # window.destroy() # it maybe not need. - Rafael Sampaio
         reactor.stop()
-window.protocol("WM_DELETE_WINDOW", on_closing)
-# make Esc exit the program
-window.bind('<Escape>', lambda e: reactor.stop())
 
-# create a menu bar with an Exit command
-menubar = tkinter.Menu(window)
-mainmenu = tkinter.Menu(menubar, tearoff=0)
+def config():
+	# Main window size and positions settings. - Rafael Sampaio
+	w_heigth = 600
+	w_width = 800
+	w_top_padding = 80
+	w_letf_padding = 100
+	window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
 
-mainmenu.add_command(label="Exit", command=reactor.stop)
-menubar.add_cascade(label="Main", menu=mainmenu)
+	# Setting window icon. - Rafael Sampaio
+	window.tk.call('wm', 'iconphoto', window._w, PhotoImage(file='graphics/icons/scinetsim_icon.png'))
+	
+	# Setting window top text. - Rafael Sampaio
+	window.title("SCINetSim v1.0.1 - An Smart City Integrated Network Simulator")
+	
+	#Set action to the window close button. - Rafael Sampaio
+	window.protocol("WM_DELETE_WINDOW", on_closing)
+	
+	# Sets esc to close application - Rafael Sampaio
+	window.bind('<Escape>', lambda e: on_closing())
+	
+	global canvas
+	canvas = tkinter.Canvas(window, width=1000, height=900, bg='steelblue', highlightthickness=0)
+	canvas.pack(side=tkinter.RIGHT)
+	#canvas.pack(fill="both", expand=True)
 
-menubar.add_command(label="About Project", command=reactor.stop)
-window.config(menu=menubar)
+
+
+	#image_1 = DraggableImage(canvas, "graphics/icons/scinetsim_restfull_server.png", 100, 100)
+	#image_2 = DraggableImage(canvas, "graphics/icons/scinetsim_arduino_uno.png", 200, 100)
+
+
+
+def top_menu():
+	# create a menu bar with an Exit command
+	menubar = tkinter.Menu(window)
+	mainmenu = tkinter.Menu(menubar, tearoff=0)
+	mainmenu.add_command(label="Opção 1", command=None)
+	mainmenu.add_separator()  
+	mainmenu.add_command(label="Exit", command=on_closing)
+	menubar.add_cascade(label="Main", menu=mainmenu)
+
+	menubar.add_command(label="About Project", command=None)
+	menubar.add_command(label="Help", command=None)
+	window.config(menu=menubar)
 
 
 def main():
-    bkr = mqttBroker()
-    bkr.run()
-    pbr = mqttPublisher()
-    pbr.run()
+	global canvas
+	top_menu()
+
+	# pack allow componentes to be displayed on the main window. - Rafael Sampaio
+	#head_text = tkinter.Label(window, text = "Simulation is ready to play").pack()
+
+
+	bkr = mqttBroker()
+	bkr.setCanvas(canvas)
+	bkr.run()
+	pbr = mqttPublisher()
+	pbr.setCanvas(canvas)
+	pbr.run()
+
+
 
 
 if __name__ == '__main__':
     log.startLogging(sys.stdout)
+    config()
     main()
 
     reactor.run()

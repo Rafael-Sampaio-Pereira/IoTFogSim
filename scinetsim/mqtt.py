@@ -1,6 +1,7 @@
 
 from twisted.internet import protocol, reactor,endpoints
 from twisted.python import log
+from utils.draggableImage import DraggableImage
     
 
 # ========== BROKER ==========
@@ -32,9 +33,14 @@ class mqttBroker():
         return mqttBrokerProtocol()
     
     def __init__(self):
-        pass
+        self.canvas = None
+        self.icon = None
+
+    def setCanvas(self, canvas):
+        self.canvas = canvas
 
     def run(self):
+        self.icon = DraggableImage(self.canvas, "graphics/icons/scinetsim_restfull_server.png", 100, 100)
         endpoints.serverFromString(reactor, "tcp:interface=127.0.0.1:5000").listen(mqttBroker())
 
 # ========== PUBLISHER ==========
@@ -67,9 +73,14 @@ class mqttPublisher():
         return mqttPublisherProtocol()
 
     def __init__(self):
-        pass
+        self.canvas = None
+        self.icon = None
+
+    def setCanvas(self, canvas):
+        self.canvas = canvas
 
     def run(self):
+        self.icon = DraggableImage(self.canvas, "graphics/icons/scinetsim_arduino_uno.png", 200, 100)
         client = endpoints.clientFromString(reactor, "tcp:127.0.0.1:5000")
         client.connect(mqttPublisher())
 
