@@ -11,8 +11,8 @@ from twisted.internet import tksupport
 from tkinter import messagebox
 from tkinter import PhotoImage
 
-
-from utils.draggableImage import DraggableImage
+from scinetsim.standarddevice import StandardServerDevice
+from scinetsim.standarddevice import StandardClientDevice
 
 import PIL
 from PIL import ImageTk, Image
@@ -20,6 +20,8 @@ from PIL import ImageTk, Image
 # These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
 window = tkinter.Tk()
 tksupport.install(window)
+
+top_frame = tkinter.Frame(window).pack()
 
 global canvas
 canvas = None
@@ -52,15 +54,10 @@ def config():
 	window.bind('<Escape>', lambda e: on_closing())
 	
 	global canvas
-	canvas = tkinter.Canvas(window, width=1000, height=900, bg='steelblue', highlightthickness=0)
+	canvas = tkinter.Canvas(top_frame, width=1000, height=900, bg='steelblue', highlightthickness=0)
+	# pack allow componentes to be displayed on the main window. - Rafael Sampaio
 	canvas.pack(side=tkinter.RIGHT)
 	#canvas.pack(fill="both", expand=True)
-
-
-
-	#image_1 = DraggableImage(canvas, "graphics/icons/scinetsim_restfull_server.png", 100, 100)
-	#image_2 = DraggableImage(canvas, "graphics/icons/scinetsim_arduino_uno.png", 200, 100)
-
 
 
 def top_menu():
@@ -81,16 +78,12 @@ def main():
 	global canvas
 	top_menu()
 
-	# pack allow componentes to be displayed on the main window. - Rafael Sampaio
-	#head_text = tkinter.Label(window, text = "Simulation is ready to play").pack()
-
-
-	bkr = mqttBroker()
-	bkr.setCanvas(canvas)
-	bkr.run()
-	pbr = mqttPublisher()
-	pbr.setCanvas(canvas)
-	pbr.run()
+	server = StandardServerDevice()
+	server.setCanvas(canvas)
+	server.run()
+	client = StandardClientDevice()
+	client.setCanvas(canvas)
+	client.run()
 
 
 

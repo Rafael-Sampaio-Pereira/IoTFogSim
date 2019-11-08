@@ -2,6 +2,7 @@
 from twisted.internet import protocol, reactor,endpoints
 from twisted.python import log
 from utils.draggableImage import DraggableImage
+import tkinter
     
 
 # ========== BROKER ==========
@@ -73,8 +74,10 @@ class mqttPublisher():
         return mqttPublisherProtocol()
 
     def __init__(self):
+        self.protocol = mqttPublisherProtocol()
         self.canvas = None
         self.icon = None
+        self.message_label = tkinter.Label(self.canvas, text="", width=40)
 
     def setCanvas(self, canvas):
         self.canvas = canvas
@@ -83,6 +86,12 @@ class mqttPublisher():
         self.icon = DraggableImage(self.canvas, "graphics/icons/scinetsim_arduino_uno.png", 200, 100)
         client = endpoints.clientFromString(reactor, "tcp:127.0.0.1:5000")
         client.connect(mqttPublisher())
+        self.message_label.pack(side="top", fill="x")
+        self.show_message_on_label()
+
+
+    def show_message_on_label(self):
+        self.message_label.configure(text="textonatela")
 
 # ========== SUBSCRIBER ==========
 
