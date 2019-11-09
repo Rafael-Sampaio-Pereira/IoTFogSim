@@ -78,11 +78,11 @@ def main():
 	global canvas
 	top_menu()
 
-	server = StandardServerDevice()
-	server.setCanvas(canvas)
+	server = StandardServerDevice(canvas)
+	#server.setCanvas(canvas)
 	server.run()
-	client = StandardClientDevice()
-	client.setCanvas(canvas)
+	client = StandardClientDevice(canvas)
+	#client.setCanvas(canvas)
 	client.run()
 
 
