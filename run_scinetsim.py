@@ -1,6 +1,4 @@
 from twisted.internet import reactor
-from scinetsim.mqtt import mqttBroker
-from scinetsim.mqtt import mqttPublisher
 from twisted.python import log
 import sys
 
@@ -18,14 +16,54 @@ from scinetsim.standarddevice import AccessPoint
 import PIL
 from PIL import ImageTk, Image
 
+import random
+
 # These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
 window = tkinter.Tk()
 tksupport.install(window)
 
-top_frame = tkinter.Frame(window).pack()
-
 global canvas
 canvas = None
+
+class ScrollableScreen(tkinter.Frame):
+    def __init__(self, root):
+        tkinter.Frame.__init__(self, root)
+        
+        self.canvas = tkinter.Canvas(self, width=1000, height=900, bg='steelblue', highlightthickness=0)
+        self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
+        self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
+        self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
+        self.canvas.configure(scrollregion=(0,0,1000,1000))
+
+        self.xsb.grid(row=1, column=0, sticky="ew")
+        self.ysb.grid(row=0, column=1, sticky="ns")
+        self.canvas.grid(row=0, column=0, sticky="nsew")
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+       
+        self.canvas.create_text(50,10, anchor="nw", 
+                                text="Click and drag to move the canvas")
+
+        # This is what enables scrolling with the mouse:
+        self.canvas.bind("<ButtonPress-1>", self.scroll_start)
+        self.canvas.bind("<B1-Motion>", self.scroll_move)
+
+       	global canvas
+        canvas = self.canvas
+
+    def scroll_start(self, event):
+        self.canvas.scan_mark(event.x, event.y)
+
+    def scroll_move(self, event):
+        self.canvas.scan_dragto(event.x, event.y, gain=1)
+
+
+
+
+
+
+
 
 # This method is called when close window button is press. - Rafael Sampaio
 def on_closing():
@@ -53,12 +91,11 @@ def config():
 	
 	# Sets esc to close application - Rafael Sampaio
 	window.bind('<Escape>', lambda e: on_closing())
-	
-	global canvas
-	canvas = tkinter.Canvas(top_frame, width=1000, height=900, bg='steelblue', highlightthickness=0)
+		
 	# pack allow componentes to be displayed on the main window. - Rafael Sampaio
-	canvas.pack(side=tkinter.RIGHT)
-	#canvas.pack(fill="both", expand=True)
+	#canvas.pack(side=tkinter.RIGHT)
+
+	ScrollableScreen(window).pack(fill="both", expand=True)
 
 
 def top_menu():
@@ -96,4 +133,3 @@ if __name__ == '__main__':
     main()
 
     reactor.run()
-    #window.mainloop()

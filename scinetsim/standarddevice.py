@@ -75,6 +75,7 @@ class AccessPoint(object):
         log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
         self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
         self.visual_component.propagate_signal()
+        # Reactor will send an beacon frame each TBTT interval time. - Rafael Sampaio
         reactor.callLater(self.TBTT, self.sendBeacon)
         
 

@@ -5,6 +5,10 @@ from utils.draggableImage import DraggableImage
 import tkinter
     
 
+obsoleta precisa ser deletada da versão final
+
+
+
 # ========== BROKER ==========
 
 class mqttBrokerProtocol(protocol.Protocol):
