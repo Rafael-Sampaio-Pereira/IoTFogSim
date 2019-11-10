@@ -23,9 +23,7 @@ class StandardClientApplicationComponent(protocol.Protocol):
         self.transport.write(message)
 
     def dataReceived(self, data):
-
-        self.visual_component.image_file = tkinter.PhotoImage(file=ICONS_PATH+"scinetsim_esp8266_signal.png")
-        self.canvas.itemconfig(self.visual_component.draggable_img, image=self.visual_component.image_file )
+        self.visual_component.propagate_signal()       
         # Print the received data on the sreen.  - Rafael Sampaio
         self.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
         log.msg("Received data %s"%(data))

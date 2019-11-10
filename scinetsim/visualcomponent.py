@@ -4,15 +4,25 @@ from config.settings import ICONS_PATH
 
 class VisualComponent(object):
 
-    def __init__(self, canvas, deviceName, file, x, y):
+    def __init__(self, is_wireless, canvas, deviceName, file, x, y):
         self.canvas = canvas
         self.x = x
         self.y = y
-        self.signal_radius = 1
+        self.is_wireless = is_wireless
 
-        
-        # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
-        self.draggable_signal_circle = self.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,2))
+        if self.is_wireless:
+            self.signal_radius = 1
+            self.coverage_area_radius = 100
+            # The signal circle object to show wifi coverage area. - Rafael Sampaio
+            self.draggable_coverage_area_circle = self.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="#4CAF50", outline="#4CAF50", width=1, stipple="gray12")
+
+            # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
+            self.draggable_signal_circle = self.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,2))
+
+            canvas.tag_bind(self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)
+            canvas.tag_bind(self.draggable_coverage_area_circle, '<ButtonRelease-1>', self.release) 
+            canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
+            canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release) 
 
         self.image_file = tkinter.PhotoImage(file=file)
         self.draggable_img = self.canvas.create_image(x, y, image=self.image_file)
@@ -25,8 +35,8 @@ class VisualComponent(object):
         # font="Times 9 italic bold"
 
 
-        canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
-        canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release) 
+
+        
         canvas.tag_bind(self.draggable_alert, '<Button1-Motion>', self.move)
         canvas.tag_bind(self.draggable_alert, '<ButtonRelease-1>', self.release)
         canvas.tag_bind(self.draggable_name, '<Button1-Motion>', self.move)
@@ -36,7 +46,7 @@ class VisualComponent(object):
         canvas.configure(cursor="hand1")
         self.move_flag = False
 
-        self.propagate_signal()
+        
          
     def move(self, event):
         if self.move_flag:
@@ -44,10 +54,13 @@ class VisualComponent(object):
             new_ypos = event.y
             self.x = new_xpos
             self.y = new_ypos
-             
+            
+            if self.is_wireless:
+                self.canvas.move(self.draggable_coverage_area_circle,
+                    new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
-            self.canvas.move(self.draggable_signal_circle,
-                new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
+                self.canvas.move(self.draggable_signal_circle,
+                    new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
             self.canvas.move(self.draggable_name,
                 new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
@@ -62,7 +75,9 @@ class VisualComponent(object):
             self.mouse_ypos = new_ypos
         else:
             self.move_flag = True
-            self.canvas.tag_raise(self.draggable_signal_circle)
+            if self.is_wireless:
+                self.canvas.tag_raise(self.draggable_coverage_area_circle) 
+                self.canvas.tag_raise(self.draggable_signal_circle)
             self.canvas.tag_raise(self.draggable_img)
             self.canvas.tag_raise(self.draggable_name)
             self.canvas.tag_raise(self.draggable_alert)
@@ -82,3 +97,7 @@ class VisualComponent(object):
             self.canvas.coords(self.draggable_signal_circle, self.x+self.signal_radius, self.y+self.signal_radius, self.x-self.signal_radius, self.y-self.signal_radius)
             # signal propagation event occurs at 10 milliseconds. - Rafael Sampaio
             self.canvas.after(10, self.propagate_signal)
+        else:
+            # Cleaning propagated signal. - Rafael Sampaio
+            self.canvas.itemconfig(self.draggable_signal_circle, outline = "")
+            self.signal_radius = 1
