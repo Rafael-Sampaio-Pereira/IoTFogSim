@@ -1,23 +1,23 @@
-import tkinter as tk
+import tkinter
+import random
 
-class Example(tk.Frame):
-    def __init__(self, *args, **kwargs):
-        tk.Frame.__init__(self, *args, **kwargs)
-        self.l1 = tk.Label(self, text="Hover over me")
-        self.l2 = tk.Label(self, text="", width=40)
-        self.l1.pack(side="top")
-        self.l2.pack(side="top", fill="x")
 
-        self.l1.bind("<Enter>", self.on_enter)
-        self.l1.bind("<Leave>", self.on_leave)
+c = tkinter.Canvas(width = 400, height = 300)
+c.pack()
 
-    def on_enter(self, event):
-        self.l2.configure(text="Hello world")
+def klik(event):
+    r = 1
+    x, y = event.x, event.y
+    color = "red"
+    circ = c.create_oval(x - r, y - r, x + r, y + r, fill="", outline = 'red', dash=(4,2))
 
-    def on_leave(self, enter):
-        self.l2.configure(text="")
+    def shrink(r, x, y, color, circ):
+        if r > 0 and r < 40:
+            r += 1
+            c.coords(circ, x+r, y+r, x-r, y-r)
+            c.after(100, shrink, r, x, y, color, circ)
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    Example(root).pack(side="top", fill="both", expand="true")
-    root.mainloop()
+    shrink(r, x, y, color, circ)
+
+c.bind('<Button-1>', klik)
+tkinter.mainloop()

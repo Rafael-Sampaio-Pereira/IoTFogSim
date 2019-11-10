@@ -13,6 +13,7 @@ from tkinter import PhotoImage
 
 from scinetsim.standarddevice import StandardServerDevice
 from scinetsim.standarddevice import StandardClientDevice
+from scinetsim.standarddevice import AccessPoint
 
 import PIL
 from PIL import ImageTk, Image
@@ -79,11 +80,12 @@ def main():
 	top_menu()
 
 	server = StandardServerDevice(canvas)
-	#server.setCanvas(canvas)
 	server.run()
+
 	client = StandardClientDevice(canvas)
-	#client.setCanvas(canvas)
 	client.run()
+	
+	ap = AccessPoint(canvas)
 
 
 

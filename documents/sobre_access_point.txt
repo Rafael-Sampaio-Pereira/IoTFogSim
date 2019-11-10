@@ -1,0 +1,4 @@
+
+1 - Acess point tem Ip? Não obrigatoriamente.
+	https://stackoverflow.com/questions/4929438/does-wifi-access-points-have-an-ip-address
+
