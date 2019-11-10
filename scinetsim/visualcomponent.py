@@ -8,6 +8,8 @@ class VisualComponent(object):
         self.canvas = canvas
         self.x = x
         self.y = y
+
+
         self.is_wireless = is_wireless
 
         if self.is_wireless:
@@ -33,9 +35,6 @@ class VisualComponent(object):
         self.draggable_alert = self.canvas.create_text(x,y-27,fill="black",font="Times 9",
                         text="alert")
         # font="Times 9 italic bold"
-
-
-
         
         canvas.tag_bind(self.draggable_alert, '<Button1-Motion>', self.move)
         canvas.tag_bind(self.draggable_alert, '<ButtonRelease-1>', self.release)
@@ -49,6 +48,7 @@ class VisualComponent(object):
         
          
     def move(self, event):
+        
         if self.move_flag:
             new_xpos = event.x
             new_ypos = event.y
@@ -90,13 +90,13 @@ class VisualComponent(object):
 
     def propagate_signal(self):
 
-        self.canvas.itemconfig(self.draggable_signal_circle, outline = "red")
+        self.canvas.itemconfig(self.draggable_signal_circle, outline="red")
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-        if self.signal_radius > 0 and self.signal_radius < 100:
+        if self.signal_radius > 0 and self.signal_radius < self.coverage_area_radius:
             self.signal_radius += 1
             self.canvas.coords(self.draggable_signal_circle, self.x+self.signal_radius, self.y+self.signal_radius, self.x-self.signal_radius, self.y-self.signal_radius)
             # signal propagation event occurs at 10 milliseconds. - Rafael Sampaio
-            self.canvas.after(10, self.propagate_signal)
+            self.canvas.after(5, self.propagate_signal)
         else:
             # Cleaning propagated signal. - Rafael Sampaio
             self.canvas.itemconfig(self.draggable_signal_circle, outline = "")
