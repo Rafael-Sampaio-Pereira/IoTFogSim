@@ -6,17 +6,20 @@ from config.settings import ICONS_PATH
 from scinetsim.visualcomponent import VisualComponent
 from scinetsim.networkcomponent import StandardServerNetworkComponent
 from scinetsim.networkcomponent import StandardClientNetworkComponent
-
+import uuid
 
 class StandardServerDevice(object):
     
     def __init__(self, canvas):
+        self.access_point = None
         self.real_ip = None
         self.simulation_ip = "192.121.0.1"
+
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
         self.name = "Server - %s"%(self.simulation_ip)
         self.visual_component = VisualComponent(False, self.canvas, self.name, ICONS_PATH+"scinetsim_restfull_server.png", 100, 100)
-
         self.network_component = StandardServerNetworkComponent("127.0.0.1", 5000, self.visual_component, self.canvas)
 
     def run(self):
@@ -29,6 +32,9 @@ class StandardClientDevice(object):
         self.access_point = None
         self.real_ip = None
         self.simulation_ip = "192.121.0.1"
+
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
         self.name = "Client - %s"%(self.simulation_ip)
         self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_esp8266.png", 100, 100)
@@ -49,10 +55,12 @@ class AccessPoint(object):
 
         # SSID maximum size is 32 characters. - Rafael Sampaio
         self.SSID = "Access_Point"
-
-        self.WPA2_password = "scinetsim2019"
-        self.canvas = canvas
         self.name = self.SSID
+        self.WPA2_password = "scinetsim2019"
+
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        self.id = uuid.uuid4().fields[-1]
+        self.canvas = canvas
         self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_access_point.png", 100, 100)
         self.authenticated_devices = []
         self.associated_devices = []
