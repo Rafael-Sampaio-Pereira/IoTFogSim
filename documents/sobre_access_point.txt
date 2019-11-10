@@ -2,3 +2,11 @@
 1 - Acess point tem Ip? Não obrigatoriamente.
 	https://stackoverflow.com/questions/4929438/does-wifi-access-points-have-an-ip-address
 
+2 - SSID, WPA, WAP2, MAC, IP? Conheça os principais elementos da rede Wi-Fi
+	https://www.techtudo.com.br/listas/noticia/2016/02/ssid-wpa-wap2-mac-ip-conheca-os-principais-elementos-da-rede-wi-fi.html
+
+3 - 802.11 Beacon Intervals – The Real Story
+	https://www.cwnp.com/cwnp-wifi-blog/80211-beacon-intervals/
+
+4 - Como um Wi-Fi funciona? Entenda a tecnologia
+	https://www.techtudo.com.br/noticias/noticia/2015/02/como-um-wi-fi-funciona-entenda-tecnologia.html

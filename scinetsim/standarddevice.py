@@ -26,6 +26,7 @@ class StandardServerDevice(object):
 class StandardClientDevice(object):
     
     def __init__(self, canvas):
+        self.access_point = None
         self.real_ip = None
         self.simulation_ip = "192.121.0.1"
         self.canvas = canvas
@@ -41,10 +42,15 @@ class StandardClientDevice(object):
 class AccessPoint(object):
 
     def __init__(self, canvas):
+        
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
-        self.TBTT = 1
-        self.SSID = "scinetsim_wifi_access_point"
-        self.WAP2_password = "scinetsim2019"
+        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
+        self.TBTT = 0.1024
+
+        # SSID maximum size is 32 characters. - Rafael Sampaio
+        self.SSID = "Access_Point"
+
+        self.WPA2_password = "scinetsim2019"
         self.canvas = canvas
         self.name = self.SSID
         self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_access_point.png", 100, 100)
@@ -53,12 +59,13 @@ class AccessPoint(object):
         
         # This stores the twisted protocol instance for the router device. - Rafael Sampaio
         self.router_protocol = None
+        self.visual_component.set_coverage_area_radius(200)
         self.sendBeacon()
         
 
     def sendBeacon(self):
         log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
-        self.canvas.itemconfig(self.visual_component.draggable_alert, text="beacon")
+        self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
         self.visual_component.propagate_signal()
         reactor.callLater(self.TBTT, self.sendBeacon)
         

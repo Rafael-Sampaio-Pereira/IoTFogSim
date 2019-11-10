@@ -89,15 +89,19 @@ class VisualComponent(object):
         self.move_flag = False
 
     def propagate_signal(self):
-
+        # coverage are need not to be visible. - Rafael Sampaio
+        self.canvas.itemconfig(self.draggable_coverage_area_circle, fill="", outline="")
         self.canvas.itemconfig(self.draggable_signal_circle, outline="red")
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
         if self.signal_radius > 0 and self.signal_radius < self.coverage_area_radius:
             self.signal_radius += 1
             self.canvas.coords(self.draggable_signal_circle, self.x+self.signal_radius, self.y+self.signal_radius, self.x-self.signal_radius, self.y-self.signal_radius)
             # signal propagation event occurs at 10 milliseconds. - Rafael Sampaio
-            self.canvas.after(5, self.propagate_signal)
+            self.canvas.after(1, self.propagate_signal)
         else:
             # Cleaning propagated signal. - Rafael Sampaio
             self.canvas.itemconfig(self.draggable_signal_circle, outline = "")
             self.signal_radius = 1
+
+    def set_coverage_area_radius(self, radius):
+        self.coverage_area_radius = radius
