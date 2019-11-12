@@ -1,6 +1,6 @@
 import tkinter
 from config.settings import ICONS_PATH
-
+from twisted.python import log
 
 class VisualComponent(object):
 
@@ -24,7 +24,7 @@ class VisualComponent(object):
             canvas.tag_bind(self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)
             canvas.tag_bind(self.draggable_coverage_area_circle, '<ButtonRelease-1>', self.release) 
             canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
-            canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release) 
+            canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release)
 
         self.image_file = tkinter.PhotoImage(file=file)
         self.draggable_img = self.canvas.create_image(x, y, image=self.image_file)
@@ -92,16 +92,42 @@ class VisualComponent(object):
         # coverage are need not to be visible. - Rafael Sampaio
         self.canvas.itemconfig(self.draggable_coverage_area_circle, fill="", outline="")
         self.canvas.itemconfig(self.draggable_signal_circle, outline="red")
+        
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
         if self.signal_radius > 0 and self.signal_radius < self.coverage_area_radius:
             self.signal_radius += 1
             self.canvas.coords(self.draggable_signal_circle, self.x+self.signal_radius, self.y+self.signal_radius, self.x-self.signal_radius, self.y-self.signal_radius)
+            
+            self.detect_device_within_wifi_signal_coverage_area()
+
             # signal propagation event occurs at 10 milliseconds. - Rafael Sampaio
             self.canvas.after(1, self.propagate_signal)
         else:
-            # Cleaning propagated signal. - Rafael Sampaio
+            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
             self.canvas.itemconfig(self.draggable_signal_circle, outline = "")
             self.signal_radius = 1
 
     def set_coverage_area_radius(self, radius):
         self.coverage_area_radius = radius
+
+    
+    def detect_device_within_wifi_signal_coverage_area(self):
+        
+        # getting all canvas objects in wifi signal coverage area
+        all_coveraged_devices = self.canvas.find_overlapping(self.x+self.signal_radius, self.y+self.signal_radius, self.x-self.signal_radius, self.y-self.signal_radius)
+        self.canvas.itemconfig(self.draggable_alert, text=all_coveraged_devices)
+
+        # finding all the wifi devices on the canvas screen. - Rafael Sampaio
+        wifi_devices = self.canvas.find_withtag("wifi_device")
+        
+        # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
+        if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
+            # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
+            for device in all_coveraged_devices:
+                if device in wifi_devices:
+                    log.msg(self.canvas.itemcget(device,"tags"))
+                else:
+                    pass
+                    #log.msg("The device is not wireless based")
+        else:
+            log.msg("There is no wifi devices in this simulation or it is not in this wifi signal coverage area.")

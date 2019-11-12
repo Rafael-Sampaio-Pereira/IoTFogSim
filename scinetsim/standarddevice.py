@@ -39,6 +39,9 @@ class StandardClientDevice(object):
         self.name = "Client - %s"%(self.simulation_ip)
         self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_esp8266.png", 100, 100)
         self.network_component = StandardClientNetworkComponent("127.0.0.1", 5000, self.visual_component, self.canvas)
+        
+        # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+        self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
         client = endpoints.clientFromString(reactor, self.network_component.network_settings)
@@ -72,7 +75,7 @@ class AccessPoint(object):
         
 
     def sendBeacon(self):
-        log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
+        #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
         self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
         self.visual_component.propagate_signal()
         # Reactor will send an beacon frame each TBTT interval time. - Rafael Sampaio

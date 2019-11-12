@@ -1,43 +1,55 @@
-import tkinter as tk
-import random
+from tkinter import *
 
-class Example(tk.Frame):
-    def __init__(self, root):
-        tk.Frame.__init__(self, root)
-        self.canvas = tk.Canvas(self, width=400, height=400, background="bisque")
-        self.xsb = tk.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
-        self.ysb = tk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
-        self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
-        self.canvas.configure(scrollregion=(0,0,1000,1000))
+# this file demonstrates the movement of a single canvas item under mouse control
 
-        self.xsb.grid(row=1, column=0, sticky="ew")
-        self.ysb.grid(row=0, column=1, sticky="ns")
-        self.canvas.grid(row=0, column=0, sticky="nsew")
-        self.grid_rowconfigure(0, weight=1)
-        self.grid_columnconfigure(0, weight=1)
+class Test(Frame):
+    ###################################################################
+    ###### Event callbacks for THE CANVAS (not the stuff drawn on it)
+    ###################################################################
+    def mouseDown(self, event):
+        # remember where the mouse went down
+        self.lastx = event.x
+        self.lasty = event.y
 
-        for n in range(50):
-            x0 = random.randint(0, 900)
-            y0 = random.randint(50, 900)
-            x1 = x0 + random.randint(50, 100)
-            y1 = y0 + random.randint(50,100)
-            color = ("red", "orange", "yellow", "green", "blue")[random.randint(0,4)]
-            self.canvas.create_rectangle(x0,y0,x1,y1, outline="black", fill=color)
-        self.canvas.create_text(50,10, anchor="nw", 
-                                text="Click and drag to move the canvas")
+    def mouseMove(self, event):
+        # whatever the mouse is over gets tagged as CURRENT for free by tk.
+        self.draw.move(CURRENT, event.x - self.lastx, event.y - self.lasty)
+        self.lastx = event.x
+        self.lasty = event.y
 
-        # This is what enables scrolling with the mouse:
-        self.canvas.bind("<ButtonPress-1>", self.scroll_start)
-        self.canvas.bind("<B1-Motion>", self.scroll_move)
+    ###################################################################
+    ###### Event callbacks for canvas ITEMS (stuff drawn on the canvas)
+    ###################################################################
+    def mouseEnter(self, event):
+        # the CURRENT tag is applied to the object the cursor is over.
+        # this happens automatically.
+        self.draw.itemconfig(CURRENT, fill="red")
 
-    def scroll_start(self, event):
-        self.canvas.scan_mark(event.x, event.y)
+    def mouseLeave(self, event):
+        # the CURRENT tag is applied to the object the cursor is over.
+        # this happens automatically.
+        self.draw.itemconfig(CURRENT, fill="blue")
 
-    def scroll_move(self, event):
-        self.canvas.scan_dragto(event.x, event.y, gain=1)
+    def createWidgets(self):
+        self.QUIT = Button(self, text='QUIT', foreground='red',
+                           command=self.quit)
+        self.QUIT.pack(side=LEFT, fill=BOTH)
+        self.draw = Canvas(self, width="5i", height="5i")
+        self.draw.pack(side=LEFT)
 
+        fred = self.draw.create_oval(0, 0, 20, 20,
+                                     fill="green", tags="selected")
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    Example(root).pack(fill="both", expand=True)
-    root.mainloop()
+        self.draw.tag_bind(fred, "<Any-Enter>", self.mouseEnter)
+        self.draw.tag_bind(fred, "<Any-Leave>", self.mouseLeave)
+
+        Widget.bind(self.draw, "<1>", self.mouseDown)
+        Widget.bind(self.draw, "<B1-Motion>", self.mouseMove)
+
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        Pack.config(self)
+        self.createWidgets()
+
+test = Test()
+test.mainloop()

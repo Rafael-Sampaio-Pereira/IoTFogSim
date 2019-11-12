@@ -28,12 +28,15 @@ canvas = None
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root):
         tkinter.Frame.__init__(self, root)
+
+        self.screen_w = 2000
+        self.screen_h = 2000
         
-        self.canvas = tkinter.Canvas(self, width=1000, height=900, bg='steelblue', highlightthickness=0)
+        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='steelblue', highlightthickness=0)
         self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
         self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
-        self.canvas.configure(scrollregion=(0,0,1000,1000))
+        self.canvas.configure(scrollregion=(0,0,  self.screen_w,  self.screen_h))
 
         self.xsb.grid(row=1, column=0, sticky="ew")
         self.ysb.grid(row=0, column=1, sticky="ns")
@@ -46,21 +49,21 @@ class ScrollableScreen(tkinter.Frame):
                                 text="Click and drag to move the canvas")
 
         # This is what enables scrolling with the mouse:
-        self.canvas.bind("<ButtonPress-1>", self.scroll_start)
-        self.canvas.bind("<B1-Motion>", self.scroll_move)
+        self.canvas.bind("<ButtonPress-2>", self.scroll_start)
+        self.canvas.bind("<B2-Motion>", self.scroll_move)
+        
 
        	global canvas
         canvas = self.canvas
+      
 
     def scroll_start(self, event):
+        self.canvas.config(cursor='fleur')
         self.canvas.scan_mark(event.x, event.y)
 
     def scroll_move(self, event):
+        self.canvas.config(cursor='fleur')
         self.canvas.scan_dragto(event.x, event.y, gain=1)
-
-
-
-
 
 
 
@@ -95,20 +98,22 @@ def config():
 	# pack allow componentes to be displayed on the main window. - Rafael Sampaio
 	#canvas.pack(side=tkinter.RIGHT)
 
+	# Simulation area on screen. - Rafael Sampaio
 	ScrollableScreen(window).pack(fill="both", expand=True)
-
+	
 
 def top_menu():
-	# create a menu bar with an Exit command
 	menubar = tkinter.Menu(window)
+	
 	mainmenu = tkinter.Menu(menubar, tearoff=0)
 	mainmenu.add_command(label="Opção 1", command=None)
 	mainmenu.add_separator()  
 	mainmenu.add_command(label="Exit", command=on_closing)
+	
 	menubar.add_cascade(label="Main", menu=mainmenu)
-
 	menubar.add_command(label="About Project", command=None)
 	menubar.add_command(label="Help", command=None)
+	
 	window.config(menu=menubar)
 
 
