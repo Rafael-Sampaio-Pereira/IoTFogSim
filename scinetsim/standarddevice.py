@@ -71,17 +71,57 @@ class AccessPoint(object):
         # This stores the twisted protocol instance for the router device. - Rafael Sampaio
         self.router_protocol = None
         self.visual_component.set_coverage_area_radius(200)
-        self.sendBeacon()
         
-
-    def sendBeacon(self):
-        #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
-        self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
-        self.visual_component.propagate_signal()
-        # Reactor will send an beacon frame each TBTT interval time. - Rafael Sampaio
-        reactor.callLater(self.TBTT, self.sendBeacon)
+        # Sends beacon frame. - Rafael Sampaio
+        self.passive_scanning()
         
 
     def run(self):
         pass
         #endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
+
+    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+    def passive_scanning(self):
+        
+        #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
+        self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
+        #self.visual_component.propagate_signal()
+
+        self.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        
+        # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+        if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+            self.visual_component.signal_radius += 10
+            self.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            
+       
+            
+            # getting all canvas objects in wifi signal coverage area
+            all_coveraged_devices = self.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            self.canvas.itemconfig(self.visual_component.draggable_alert, text=all_coveraged_devices)
+
+            # finding all the wifi devices on the canvas screen. - Rafael Sampaio
+            wifi_devices = self.canvas.find_withtag("wifi_device")
+            
+            # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
+            if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
+                # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
+                for device in all_coveraged_devices:
+                    if device in wifi_devices:
+                        log.msg(self.canvas.itemcget(device,"tags"))
+                    else:
+                        pass
+                        #log.msg("The device is not wireless based")
+            else:
+                log.msg("There is no wifi devices in this simulation or it is not in this wifi signal coverage area.")
+
+            # signal propagation event occurs at 10 milliseconds. - Rafael Sampaio
+            #self.canvas.after(1, self.propagate_signal)
+        else:
+            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+            self.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+            self.visual_component.signal_radius = 1
+
+        self.canvas.update()
+        # Reactor will send an beacon frame using passive scanning method at each TBTT interval time. - Rafael Sampaio
+        reactor.callLater(self.TBTT, self.passive_scanning)
