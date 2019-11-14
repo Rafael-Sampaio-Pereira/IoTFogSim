@@ -22,8 +22,7 @@ class StandardClientApplicationComponent(protocol.Protocol):
     def send(self, message):
         self.transport.write(message)
 
-    def dataReceived(self, data):
-        self.visual_component.propagate_signal()       
+    def dataReceived(self, data):     
         # Print the received data on the sreen.  - Rafael Sampaio
         self.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
         log.msg("Received data %s"%(data))
@@ -49,7 +48,6 @@ class StandardServerApplicationComponent(protocol.Protocol):
         self.transport.write(message)
 
     def dataReceived(self, data):
-
         # Print the received data on the sreen.  - Rafael Sampaio
         self.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
         log.msg("Received data %s"%(data))

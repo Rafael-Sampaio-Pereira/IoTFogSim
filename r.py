@@ -1,55 +1,73 @@
 from tkinter import *
 
-# this file demonstrates the movement of a single canvas item under mouse control
+janela = Tk()
 
-class Test(Frame):
-    ###################################################################
-    ###### Event callbacks for THE CANVAS (not the stuff drawn on it)
-    ###################################################################
-    def mouseDown(self, event):
-        # remember where the mouse went down
-        self.lastx = event.x
-        self.lasty = event.y
+def __init__():
+    pass
 
-    def mouseMove(self, event):
-        # whatever the mouse is over gets tagged as CURRENT for free by tk.
-        self.draw.move(CURRENT, event.x - self.lastx, event.y - self.lasty)
-        self.lastx = event.x
-        self.lasty = event.y
+def ok():
+    nick = str(CaixaDeEntrada1.get())
+    patente = str(CaixaDeEntrada2.get())
+    pagpromocao = str(CaixaDeEntrada3.get())
+    Linha_Entry_1 = nick
+    Linha_Entry_2 = patente
+    Linha_Entry_3 = pagpromocao
+    print (Linha_Entry_1)
+    print (Linha_Entry_2)
+    print (Linha_Entry_3)
+    CaixaDeEntrada3['bg'] = 'white'
+    if nick in ' ':
+        CaixaDeEntrada1['bg'] = 'pink'
+        erro['text'] = 'Preencha todos os campos!'
+    else:
+        CaixaDeEntrada1['bg'] = 'white'
+    if patente in ' ':
+        CaixaDeEntrada2['bg'] = 'pink'
+        erro['text'] = 'Preencha todos os campos!'
+    else:
+        CaixaDeEntrada2['bg'] = 'white'
+    if pagpromocao in ' ':
+        CaixaDeEntrada3['bg'] = 'pink'
+        erro['text'] = 'Preencha todos os campos!'
+    else:
+        CaixaDeEntrada3['bg'] = 'white'
+    if nick != '' and patente != '' and pagpromocao != '':
+        janela.destroy()
 
-    ###################################################################
-    ###### Event callbacks for canvas ITEMS (stuff drawn on the canvas)
-    ###################################################################
-    def mouseEnter(self, event):
-        # the CURRENT tag is applied to the object the cursor is over.
-        # this happens automatically.
-        self.draw.itemconfig(CURRENT, fill="red")
 
-    def mouseLeave(self, event):
-        # the CURRENT tag is applied to the object the cursor is over.
-        # this happens automatically.
-        self.draw.itemconfig(CURRENT, fill="blue")
+#==========================================Janela Inicial:
 
-    def createWidgets(self):
-        self.QUIT = Button(self, text='QUIT', foreground='red',
-                           command=self.quit)
-        self.QUIT.pack(side=LEFT, fill=BOTH)
-        self.draw = Canvas(self, width="5i", height="5i")
-        self.draw.pack(side=LEFT)
+titulo1 = Label(bg='#191970', font=('Arial', '14', 'bold'), fg='white', text='BEM VINDO ao RELATÓRIOS DIC')
+titulo1.place(x='13', y='10')
 
-        fred = self.draw.create_oval(0, 0, 20, 20,
-                                     fill="green", tags="selected")
+CaixaDeEntrada1 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
+CaixaDeEntrada1.place(x=130, y=50)
+Info1 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Nick:')
+Info1.place(x=10, y=50)
 
-        self.draw.tag_bind(fred, "<Any-Enter>", self.mouseEnter)
-        self.draw.tag_bind(fred, "<Any-Leave>", self.mouseLeave)
+CaixaDeEntrada2 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
+CaixaDeEntrada2.place(x=130, y=75)
+Info2 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Patente:')
+Info2.place(x=10, y=75)
 
-        Widget.bind(self.draw, "<1>", self.mouseDown)
-        Widget.bind(self.draw, "<B1-Motion>", self.mouseMove)
+CaixaDeEntrada3 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
+CaixaDeEntrada3.place(x=130, y=100)
+Info3 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Pág. Promoção:')
+Info3.place(x=10, y=100)
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        Pack.config(self)
-        self.createWidgets()
+erro = Label(bg='#191970', fg='red', font=('Arial', '11'), text='')
+erro.place(x=135, y=125)
 
-test = Test()
-test.mainloop()
+proximo = Button(width='39', text='Próximo', font=('Arial','10'), command=ok)
+proximo.place(x=15, y=150)
+
+
+#=======================================FimDaJanelaInicial
+
+#Propriedades da janela:
+janela.resizable(width=False, height=False)
+janela.configure(bg='#191970')
+#janela.wm_iconbitmap('ICO.ico')
+janela.title('Relatórios DIC - Por WellersonOP')
+janela.geometry('350x190+450+300')
+janela.mainloop()
