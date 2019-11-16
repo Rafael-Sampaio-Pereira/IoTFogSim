@@ -87,6 +87,7 @@ class AccessPoint(object):
         self.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
         self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
 
+        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
         self.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
         
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
@@ -107,7 +108,7 @@ class AccessPoint(object):
                 # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
                 for device in all_coveraged_devices:
                     if device in wifi_devices:
-                        self.canvas.itemconfig(self.visual_component.draggable_alert, fill="black")
+                        self.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
                         self.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
                         #pass
                         #log.msg(self.canvas.itemcget(device,"tags"))

@@ -126,9 +126,7 @@ def main():
 
 	client = StandardClientDevice(canvas)
 	client.run()
-	
 	ap = AccessPoint(canvas)
-
 
 
 
@@ -136,5 +134,4 @@ if __name__ == '__main__':
     log.startLogging(sys.stdout)
     config()
     main()
-
     reactor.run()

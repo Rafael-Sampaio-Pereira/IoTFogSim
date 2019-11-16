@@ -1,73 +1,32 @@
-from tkinter import *
+import tkinter as tk
+from tkinter import ttk
+from tkinter.messagebox import showinfo
 
-janela = Tk()
+def popup_bonus():
+    win = tk.Toplevel()
+    win.wm_title("Window")
 
-def __init__():
-    pass
+    l = tk.Label(win, text="Input")
+    l.grid(row=0, column=0)
 
-def ok():
-    nick = str(CaixaDeEntrada1.get())
-    patente = str(CaixaDeEntrada2.get())
-    pagpromocao = str(CaixaDeEntrada3.get())
-    Linha_Entry_1 = nick
-    Linha_Entry_2 = patente
-    Linha_Entry_3 = pagpromocao
-    print (Linha_Entry_1)
-    print (Linha_Entry_2)
-    print (Linha_Entry_3)
-    CaixaDeEntrada3['bg'] = 'white'
-    if nick in ' ':
-        CaixaDeEntrada1['bg'] = 'pink'
-        erro['text'] = 'Preencha todos os campos!'
-    else:
-        CaixaDeEntrada1['bg'] = 'white'
-    if patente in ' ':
-        CaixaDeEntrada2['bg'] = 'pink'
-        erro['text'] = 'Preencha todos os campos!'
-    else:
-        CaixaDeEntrada2['bg'] = 'white'
-    if pagpromocao in ' ':
-        CaixaDeEntrada3['bg'] = 'pink'
-        erro['text'] = 'Preencha todos os campos!'
-    else:
-        CaixaDeEntrada3['bg'] = 'white'
-    if nick != '' and patente != '' and pagpromocao != '':
-        janela.destroy()
+    b = ttk.Button(win, text="Okay", command=win.destroy)
+    b.grid(row=0, column=1)
+
+    CaixaDeEntrada1 = tk.Entry(win,width=20, bg='white', font=('Comic Sans MS', '10')).grid(row=1, column = 1, pady=2)
+
+class Application(ttk.Frame):
+
+    def __init__(self, master):
+        ttk.Frame.__init__(self, master)
+        self.pack()
+
+        self.button_bonus = ttk.Button(self, text="Bonuses", command=popup_bonus)
+        self.button_bonus.pack()
 
 
-#==========================================Janela Inicial:
 
-titulo1 = Label(bg='#191970', font=('Arial', '14', 'bold'), fg='white', text='BEM VINDO ao RELATÓRIOS DIC')
-titulo1.place(x='13', y='10')
+root = tk.Tk()
 
-CaixaDeEntrada1 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
-CaixaDeEntrada1.place(x=130, y=50)
-Info1 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Nick:')
-Info1.place(x=10, y=50)
+app = Application(root)
 
-CaixaDeEntrada2 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
-CaixaDeEntrada2.place(x=130, y=75)
-Info2 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Patente:')
-Info2.place(x=10, y=75)
-
-CaixaDeEntrada3 = Entry(width=25, bg='white', font=('Comic Sans MS', '10'))
-CaixaDeEntrada3.place(x=130, y=100)
-Info3 = Label(font=('Arial', '11', 'bold'), fg='white', bg='#191970', text='Pág. Promoção:')
-Info3.place(x=10, y=100)
-
-erro = Label(bg='#191970', fg='red', font=('Arial', '11'), text='')
-erro.place(x=135, y=125)
-
-proximo = Button(width='39', text='Próximo', font=('Arial','10'), command=ok)
-proximo.place(x=15, y=150)
-
-
-#=======================================FimDaJanelaInicial
-
-#Propriedades da janela:
-janela.resizable(width=False, height=False)
-janela.configure(bg='#191970')
-#janela.wm_iconbitmap('ICO.ico')
-janela.title('Relatórios DIC - Por WellersonOP')
-janela.geometry('350x190+450+300')
-janela.mainloop()
+root.mainloop()
