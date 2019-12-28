@@ -126,3 +126,38 @@ class AccessPoint(object):
         self.canvas.update()
         # Reactor will send an beacon frame using passive scanning method at each TBTT interval time. - Rafael Sampaio
         reactor.callLater(self.TBTT, self.passive_scanning)
+
+
+
+
+
+class Connection(object):
+
+    def __init__(self, canvas, device1, device2):
+        self.canvas = canvas
+        self.device1 = device1
+        self.device2 = device2
+        self.create_connection(self.canvas,device1,device2)
+        
+        #self.update_connection_arrow()
+
+
+    def create_connection(self,canvas,device1,device2):
+        x1 = self.device1.visual_component.x
+
+        y1 = self.device1.visual_component.y
+
+        x2 = self.device2.visual_component.x
+
+        y2 = self.device2.visual_component.y
+
+        self.id = self.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
+
+        self.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
+        self.canvas.tag_bind(self.device2.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)        
+
+    def update_connection_arrow(self,event):
+        self.canvas.coords(self.id,self.device1.visual_component.x-8, self.device1.visual_component.y-8, self.device2.visual_component.x-8, self.device2.visual_component.y-8)
+        self.canvas.update()
+        #reactor.callLater(1, self.update_connection_arrow)
+
