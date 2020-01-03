@@ -10,17 +10,22 @@ import uuid
 
 class StandardServerDevice(object):
     
-    def __init__(self, canvas):
-        self.access_point = None
-        self.real_ip = None
-        self.simulation_ip = "192.121.0.1"
+    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+        self.real_ip = real_ip
+        self.simulation_ip = simulation_ip
 
         # generating an unic id for the instance object. - Rafael Sampaio.
         self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
-        self.name = "Server - %s"%(self.simulation_ip)
-        self.visual_component = VisualComponent(False, self.canvas, self.name, ICONS_PATH+"scinetsim_restfull_server.png", 100, 100)
-        self.network_component = StandardServerNetworkComponent("127.0.0.1", 5000, self.visual_component, self.canvas)
+        self.name = name
+        self.icon = ICONS_PATH+icon
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
+        self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
+
+        if(self.is_wireless == True):
+            # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+            self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
         endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
@@ -28,20 +33,22 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, canvas):
-        self.access_point = None
-        self.real_ip = None
-        self.simulation_ip = "192.121.0.1"
+    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+        self.real_ip = real_ip
+        self.simulation_ip = simulation_ip
 
         # generating an unic id for the instance object. - Rafael Sampaio.
         self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
-        self.name = "Client - %s"%(self.simulation_ip)
-        self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_esp8266.png", 100, 100)
-        self.network_component = StandardClientNetworkComponent("127.0.0.1", 5000, self.visual_component, self.canvas)
+        self.name = name
+        self.icon = ICONS_PATH+icon
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
+        self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
         
-        # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
-        self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+        if(self.is_wireless == True):
+            # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+            self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
         client = endpoints.clientFromString(reactor, self.network_component.network_settings)
