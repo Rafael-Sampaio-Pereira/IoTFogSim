@@ -64,21 +64,26 @@ class StandardClientDevice(object):
 
 class AccessPoint(object):
 
-    def __init__(self, canvas):
+    def __init__(self, canvas, simulation_ip, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
-        self.TBTT = 0.1024
+        self.TBTT = TBTT or 0.1024
+        self.simulation_ip = simulation_ip
 
         # SSID maximum size is 32 characters. - Rafael Sampaio
-        self.SSID = "Access_Point"
+        self.SSID = SSID
         self.name = self.SSID
-        self.WPA2_password = "scinetsim2019"
+        self.WPA2_password = WPA2_password
+        self.is_wireless = is_wireless
+
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
         self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
-        self.visual_component = VisualComponent(True, self.canvas, self.name, ICONS_PATH+"scinetsim_access_point.png", 100, 100)
+        self.visual_component = VisualComponent(True, self.canvas, self.name, self.icon, x, y)
         self.authenticated_devices = []
         self.associated_devices = []
         

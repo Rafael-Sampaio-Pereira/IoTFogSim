@@ -25,8 +25,9 @@ def main():
 
 	allFogNodes = []
 	allCloudNodes = []
-	allAccessPointsNodes = []
+	allAccessPoints= []
 	allRoutersNodes = []
+	allIoTNodes = []
 
 
 	with open('nodes.js') as nodes_file:
@@ -67,6 +68,34 @@ def main():
 				
 			else:
 				log.msg("Error: Type not found.")
+
+		for iot_node in data['iot_nodes']:
+			
+			log.msg("Creating iot node ...")
+			iot = None
+			
+			if(iot_node['type'] == 'server'):
+				iot = StandardServerDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+				allIoTNodes.append(iot)
+				iot.run()
+				
+			elif(iot_node['type'] == 'client'):
+				iot = StandardClientDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+				allIoTNodes.append(iot)
+				iot.run()
+				
+			else:
+				log.msg("Error: Type not found.")
+
+
+		for access_point in data['access_points']:
+			
+			log.msg("Creating iot node ...")
+			
+			ap = AccessPoint(canvas, access_point['simulation_ip'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
+			allAccessPoints.append(iot)
+
+				
 
 			
 
