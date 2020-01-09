@@ -31,7 +31,7 @@ class VisualComponent(object):
         self.image_file = tkinter.PhotoImage(file=file)
         self.draggable_img = self.canvas.create_image(x, y, image=self.image_file)
 
-        self.draggable_name = self.canvas.create_text(x,y+32,fill="black",font="Arial 9",
+        self.draggable_name = self.canvas.create_text(x,y+35,fill="black",font="Arial 9",
                         text=deviceName)
 
         self.draggable_alert = self.canvas.create_text(x,y-33,fill="black",font="Times 9",
