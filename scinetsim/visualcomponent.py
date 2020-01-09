@@ -1,5 +1,6 @@
 import tkinter
 from config.settings import ICONS_PATH
+
 from twisted.python import log
 
 class VisualComponent(object):

@@ -16,7 +16,7 @@ def config():
 	window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
 
 	# Setting window icon. - Rafael Sampaio
-	window.tk.call('wm', 'iconphoto', window._w, PhotoImage(file='graphics/icons/scinetsim_icon.png'))
+	window.tk.call('wm', 'iconphoto', window._w, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
 	
 	# Setting window top text. - Rafael Sampaio
 	window.title("IoTFogSim v1.0.1 - An Distributed Event-Driven Network Simulator")

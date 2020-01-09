@@ -4,7 +4,7 @@
             "name": "Fog Broker Node", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
-            "icon": "scinetsim_restfull_server.png",
+            "icon": "server_icon",
             "type": "server",
             "is_wireless": false,
             "x": 150,
@@ -14,7 +14,7 @@
             "name": "Fog Storage Node ", 
             "simulation_ip": "192.121.0.2",
             "real_ip": "127.0.0.2",
-            "icon": "scinetsim_restfull_server.png",
+            "icon": "sensor_icon",
             "type": "client",
             "is_wireless": true,
             "x": 210,
@@ -23,10 +23,14 @@
     ],
     "cloud_nodes": [
         {
-            "website": "stackabuse.com", 
-            "from": "Nebraska", 
-            "name": "Scott",
-            "is_wireless": "True"
+            "name": "Cloud Computing Node", 
+            "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "icon": "cloud_icon",
+            "type": "server",
+            "is_wireless": false,
+            "x": 170,
+            "y": 75
         }
     ],
     "iot_nodes": [

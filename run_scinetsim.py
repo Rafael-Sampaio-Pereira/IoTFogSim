@@ -31,6 +31,7 @@ def main():
 
 	with open('nodes.js') as nodes_file:
 		data = json.load(nodes_file)
+		
 		for fog_node in data['fog_nodes']:
 			
 			log.msg("Creating fog node ...")
@@ -49,6 +50,24 @@ def main():
 			else:
 				log.msg("Error: Type not found.")
 
+		for cloud_node in data['cloud_nodes']:
+			
+			log.msg("Creating cloud node ...")
+			fog = None
+			
+			if(cloud_node['type'] == 'server'):
+				cloud = StandardServerDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+				allCloudNodes.append(cloud)
+				cloud.run()
+				
+			elif(cloud_node['type'] == 'client'):
+				cloud = StandardClientDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+				allCloudNodes.append(cloud)
+				cloud.run()
+				
+			else:
+				log.msg("Error: Type not found.")
+
 			
 
 
@@ -60,7 +79,7 @@ def main():
 
 	#client = StandardClientDevice(canvas)
 	#client.run()
-	ap = AccessPoint(canvas)
+	#ap = AccessPoint(canvas)
 
 	#con1 = Connection(canvas,ap,client)
 

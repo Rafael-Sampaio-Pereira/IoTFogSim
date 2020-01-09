@@ -8,17 +8,22 @@ from scinetsim.networkcomponent import StandardServerNetworkComponent
 from scinetsim.networkcomponent import StandardClientNetworkComponent
 import uuid
 
+from scinetsim.iconsRegister import getIconFileName
+
+
 class StandardServerDevice(object):
     
     def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
+        
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
         self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
         self.name = name
-        self.icon = ICONS_PATH+icon
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
         self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
@@ -37,11 +42,13 @@ class StandardClientDevice(object):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
 
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
         # generating an unic id for the instance object. - Rafael Sampaio.
         self.id = uuid.uuid4().fields[-1]
         self.canvas = canvas
         self.name = name
-        self.icon = ICONS_PATH+icon
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
         self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
