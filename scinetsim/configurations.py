@@ -8,10 +8,81 @@ from scinetsim.standarddevice import AccessPoint
 from scinetsim.standarddevice import Connection
 from scinetsim.ScrollableScreen import ScrollableScreen
 import json
+from config.settings import version
+import os
+
+from tkinter import ttk
+from tkinter import messagebox
 
 def config():
+	initialization_screen()
+	
+	
+
+
+def initialization_screen():
+	window = tkinter.Toplevel()
+	tksupport.install(window)
+	window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+	window.geometry("400x400")
+	window.resizable(False, False)
+
+	# Getting all projects folders name from the directory 'projects' and saving it on a list - Rafael Sampaio
+	projects_list = [f.name for f in os.scandir("projects") if f.is_dir() ]
+
+	def open_project():
+	    selected_project_name = cmb_projects_list.get()
+	    messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
+	    
+	    canvas = create_simulation_canvas()
+	    load_nodes(canvas,selected_project_name)
+
+	    window.destroy()
+
+	cmb_projects_list = ttk.Combobox(window, width="10", values=projects_list)
+	cmb_projects_list.place(relx="0.1",rely="0.1")
+
+	label_one = tkinter.Label(window,text="Select a project to open:")
+	label_one.place(relx="0.1",rely="0.04")
+
+	btn_open = ttk.Button(window, text="Open Project",command=open_project)
+	btn_open.place(relx="0.5",rely="0.1")
+
+	sep = ttk.Separator(window).place(relx="0.0", rely="0.2", relwidth=1)
+
+	label_two = tkinter.Label(window,text="Or create a new one and start.")
+	label_two.place(relx="0.1",rely="0.23")
+
+	label_three = tkinter.Label(window,text="Project name:")
+	label_three.place(relx="0.1",rely="0.3")
+
+	input_new_project_name = tkinter.Entry(window)
+	input_new_project_name.place(relx="0.4",rely="0.3")
+
+	btn_new = ttk.Button(window, text="Create new project and start it",command=None)
+	btn_new.place(relx="0.2",rely="0.4")
+
+	#root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def create_simulation_canvas():
+	
 	# These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
-	window = tkinter.Tk()
+	window = tkinter.Toplevel()
 	tksupport.install(window)
 
 	# Main window size and positions settings. - Rafael Sampaio
@@ -22,10 +93,10 @@ def config():
 	window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
 
 	# Setting window icon. - Rafael Sampaio
-	window.tk.call('wm', 'iconphoto', window._w, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
+	window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
 	
 	# Setting window top text. - Rafael Sampaio
-	window.title("IoTFogSim v1.0.1 - An Distributed Event-Driven Network Simulator")
+	window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
 	
 	# Simulation area on screen. - Rafael Sampaio
 	simulation_screen = ScrollableScreen(window)
@@ -35,7 +106,7 @@ def config():
 	return canvas
 
 
-def load_nodes(canvas):
+def load_nodes(canvas, project_name):
 
 	allWirelessConnections = []
 	allConnections = []
@@ -46,9 +117,8 @@ def load_nodes(canvas):
 	allRoutersNodes = []
 	allIoTNodes = []
 
-	working_poject_name = "example"
 
-	with open('projects/'+working_poject_name+'/nodes.js') as nodes_file:
+	with open('projects/'+project_name+'/nodes.js') as nodes_file:
 		data = json.load(nodes_file)
 		
 		for fog_node in data['fog_nodes']:
