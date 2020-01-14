@@ -5,6 +5,7 @@ from twisted.python import log
 from scinetsim.standarddevice import StandardServerDevice
 from scinetsim.standarddevice import StandardClientDevice
 from scinetsim.standarddevice import AccessPoint
+from scinetsim.standarddevice import Router
 from scinetsim.standarddevice import Connection
 from scinetsim.ScrollableScreen import ScrollableScreen
 import json
@@ -55,7 +56,7 @@ def initialization_screen():
 			nodes_file = "projects/%s/nodes.js"%(new_project_name)
 			if not os.path.exists(nodes_file):
 				with open(nodes_file, 'w') as file:
-					print("{}", file=file)
+					print("{}", file=ile)
 
 			canvas = create_simulation_canvas()
 			load_nodes(canvas,new_project_name)
@@ -139,6 +140,7 @@ def load_nodes(canvas, project_name):
 	allAccessPoints= []
 	allRoutersNodes = []
 	allIoTNodes = []
+	allRouters = []
 
 
 	with open('projects/'+project_name+'/nodes.js') as nodes_file:
@@ -202,7 +204,15 @@ def load_nodes(canvas, project_name):
 
 			for access_point in data['access_points']:
 				
-				log.msg("Creating iot node ...")
+				log.msg("Creating AccessPoint station ...")
 				
 				ap = AccessPoint(canvas, access_point['simulation_ip'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
 				allAccessPoints.append(iot)
+
+			for router in data['routers']:
+
+				log.msg("Creating router ...")
+				print(router['icon'])
+				rt = Router(canvas, router['real_ip'], router['simulation_ip'], router['name'], router['icon'], router['is_wireless'], router['x'], router['y'])
+				allRouters.append(rts)
+				

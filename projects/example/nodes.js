@@ -79,11 +79,15 @@
         }
     ],
     "routers": [
-        {
-            "website": "stackabuse.com", 
-            "from": "Nebraska", 
-            "name": "Scott",
-            "is_wireless": "True"
+        { 
+            "name": "Router 001", 
+            "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "icon": "router_icon",
+            "type": "router",
+            "is_wireless": false,
+            "x": 400,
+            "y": 200
         }
     ]
 }

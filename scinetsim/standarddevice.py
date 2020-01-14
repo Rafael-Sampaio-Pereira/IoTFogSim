@@ -62,6 +62,26 @@ class StandardClientDevice(object):
         client.connect(self.network_component)
         
 
+
+class Router(object):
+
+    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+        self.canvas = canvas
+        self.simulation_ip = simulation_ip
+        self.name = name
+        
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        self.x = x
+        self. y = y
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
+
+    def run(self):
+        pass
+
+
 class AccessPoint(object):
 
     def __init__(self, canvas, simulation_ip, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
