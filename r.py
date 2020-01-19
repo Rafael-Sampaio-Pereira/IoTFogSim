@@ -1,34 +1,74 @@
-from tkinter import *
-#from ttk import *
-from PIL import Image, ImageTk
 
-trans_color = '-alpha'
+from collections import defaultdict
 
-root = Tk()
-img = ImageTk.PhotoImage(Image.open('graphics/icons/iotfogsim_icon.png'))
-img_label = Label(root, image=img)
-img_label.pack()
-img_label.img = img  # PIL says we need to keep a ref so it doesn't get GCed
-root.update()
-overlay = Toplevel(root)
-print ('root.geo=', root.geometry())
-geo = '{}x{}+{}+{}'.format(root.winfo_width(), root.winfo_height(),
-    root.winfo_rootx(), root.winfo_rooty())
-print ('geo=',geo)
-overlay.geometry(geo)
-overlay.overrideredirect(1)
-overlay.wm_attributes('-transparent', trans_color)
-overlay.config(background=trans_color)
 
-lbl = Label(overlay, text='LABEL')
-lbl.config(background=trans_color)
-lbl.pack()
+class SimulationCore(object):
+ 	
+	def __init__(self):
+		self.allWirelessConnections = defaultdict(list)
+		self.allConnections = defaultdict(list)
+		self.allFogNodes = defaultdict(list)
+		self.allCloudNodes = defaultdict(list)
+		self.allAccessPointsNode = defaultdict(list)
+		#allRoutersNodes = defaultdict(list)
+		self.allIoTNodes = defaultdict(list)
+		self.allRoutersNodes = defaultdict(list)
 
-def moved(e):
-    geo = '{}x{}+{}+{}'.format(root.winfo_width(), root.winfo_height(),
-        root.winfo_rootx(), root.winfo_rooty())
-    overlay.geometry(geo)
+	def getFogNodeById(self, id):
+		filtered_list = self.allFogNodes[id]
+		print(self.allFogNodes[id][0].id)
+		return filtered_list[0]
 
-root.bind('<Configure>', moved)
+	def getCloudNodeById(self, id):
+		filtered_list = self.allCloudNodes[id]
+		return filtered_list[0]
 
-root.mainloop()
+	def getAccessPointById(self, id):
+		filtered_list = self.allAccessPointNodes[id]
+		return filtered_list[0]
+
+	def getRouterNodeById(self, id):
+		filtered_list = self.allRouterNodes[id]
+		return filtered_list[0]
+
+	def getIoTNodeById(self, id):
+		filtered_list = self.allIoTNodes[id]
+		return filtered_list[0]
+
+	def getConnectionById(self, id):
+		filtered_list = self.allConnections[id]
+		return filtered_list[0]
+
+	def getWirelessConnectionById(self, id):
+		filtered_list = self.allWirelessConnections[id]
+		return filtered_list[0]
+
+	def appendFogNode(self, fog_node):
+		self.allFogNodes[fog_node.id].append(fog_node)
+
+	def appendCloudNode(self, cloud_node):
+		self.allCloudNodes[cloud_node.id].append(cloud_node)
+
+	def appendAccessPointNodes(self, ap):
+		self.allAccessPointNodes[ap.id].append(ap)
+
+	def appendIoTNodes(self, iot_node):
+		self.allIoTNodes[iot_node.id].append(iot_node)
+
+	def appendRouterNodes(self, router_node):
+		self.allRouterNodes[router_node.id].append(router_node)
+
+
+
+# classe para fins de estudos
+class Node(object):
+	def __init__(self, name, id):
+		self.name = name
+		self.id = id
+
+# Demostração de uso
+n1 = Node('computer',1)
+sc = SimulationCore()
+sc.appendFogNode(n1)
+nd = sc.getFogNodeById(n1.id)
+print(nd.name)

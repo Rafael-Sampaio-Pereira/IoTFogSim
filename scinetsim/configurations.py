@@ -8,6 +8,7 @@ from scinetsim.standarddevice import AccessPoint
 from scinetsim.standarddevice import Router
 from scinetsim.standarddevice import Connection
 from scinetsim.ScrollableScreen import ScrollableScreen
+from scinetsim.simulationcore import SimulationCore
 import json
 from config.settings import version
 import os
@@ -21,10 +22,13 @@ def config():
 	root = tkinter.Tk()
 	# escondendo a instancia vazia de tk() para evitar a exibição desnecessária - Rafael Sampaio
 	root.withdraw()
-	initialization_screen()
+
+	simulation_core = SimulationCore()
+
+	initialization_screen(simulation_core)
 	
 	
-def initialization_screen():
+def initialization_screen(simulation_core):
 	window = tkinter.Toplevel()
 	tksupport.install(window)
 	window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
@@ -34,21 +38,22 @@ def initialization_screen():
 	# Setting window icon. - Rafael Sampaio
 	window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
 	
-	
+	# returns a list with all the subdirectoys in a folder -  Rafael Sampaio
 	def load_projects(directory):
 		return [f.name for f in os.scandir(directory) if f.is_dir() ]
 
-	def open_project(window):
+	def open_project(window, simulation_core):
 	    selected_project_name = cmb_projects_list.get()
 	    messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
 	    
 	    canvas = create_simulation_canvas()
-	    load_nodes(canvas,selected_project_name)
+	    load_nodes(canvas, selected_project_name, simulation_core)
+	    load_connections(canvas, selected_project_name, simulation_core)
 
 	    window.destroy()
 	    window.update()
 
-	def creat_project(window,new_project_name):
+	def creat_project(window,new_project_name, simulation_core):
 		try:
 			os.makedirs("projects/%s"%(new_project_name))
 
@@ -56,10 +61,10 @@ def initialization_screen():
 			nodes_file = "projects/%s/nodes.js"%(new_project_name)
 			if not os.path.exists(nodes_file):
 				with open(nodes_file, 'w') as file:
-					print("{}", file=ile)
+					print("{}", file=file)
 
 			canvas = create_simulation_canvas()
-			load_nodes(canvas,new_project_name)
+			load_nodes(canvas,new_project_name, simulation_core)
 			
 			window.destroy()
 			window.update()
@@ -84,7 +89,7 @@ def initialization_screen():
 	label_one = tkinter.Label(window,text="Select a project to open:")
 	label_one.place(relx="0.1",rely="0.04")
 
-	btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window))
+	btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
 	btn_open.place(relx="0.5",rely="0.1")
 
 	sep = ttk.Separator(window).place(relx="0.0", rely="0.2", relwidth=1)
@@ -98,7 +103,7 @@ def initialization_screen():
 	input_new_project_name = tkinter.Entry(window)
 	input_new_project_name.place(relx="0.4",rely="0.3")
 
-	btn_new = ttk.Button(window, text="Create new project and start it",command = lambda: creat_project(window,input_new_project_name.get()))
+	btn_new = ttk.Button(window, text="Create new project and start it",command = lambda: creat_project(window,input_new_project_name.get(), simulation_core))
 	btn_new.place(relx="0.2",rely="0.4")
 
 
@@ -130,18 +135,10 @@ def create_simulation_canvas():
 	return canvas
 
 
-def load_nodes(canvas, project_name):
+def load_nodes(canvas, project_name, simulation_core):
 
 	allWirelessConnections = []
 	allConnections = []
-
-	allFogNodes = []
-	allCloudNodes = []
-	allAccessPoints= []
-	allRoutersNodes = []
-	allIoTNodes = []
-	allRouters = []
-
 
 	with open('projects/'+project_name+'/nodes.js') as nodes_file:
 		data = json.load(nodes_file)
@@ -153,13 +150,13 @@ def load_nodes(canvas, project_name):
 				fog = None
 				
 				if(fog_node['type'] == 'server'):
-					fog = StandardServerDevice(canvas, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
-					allFogNodes.append(fog)
+					fog = StandardServerDevice(canvas, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
+					simulation_core.appendFogNodes(fog)
 					fog.run()
 					
 				elif(fog_node['type'] == 'client'):
-					fog = StandardClientDevice(canvas, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
-					allFogNodes.append(fog)
+					fog = StandardClientDevice(canvas, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
+					simulation_core.appendFogNodes(fog)
 					fog.run()
 					
 				else:
@@ -171,13 +168,13 @@ def load_nodes(canvas, project_name):
 				fog = None
 				
 				if(cloud_node['type'] == 'server'):
-					cloud = StandardServerDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
-					allCloudNodes.append(cloud)
+					cloud = StandardServerDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+					simulation_core.appendCloudNodes(cloud)
 					cloud.run()
 					
 				elif(cloud_node['type'] == 'client'):
-					cloud = StandardClientDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
-					allCloudNodes.append(cloud)
+					cloud = StandardClientDevice(canvas, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+					simulation_core.appendCloudNodes(cloud)
 					cloud.run()
 					
 				else:
@@ -189,13 +186,13 @@ def load_nodes(canvas, project_name):
 				iot = None
 				
 				if(iot_node['type'] == 'server'):
-					iot = StandardServerDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
-					allIoTNodes.append(iot)
+					iot = StandardServerDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+					simulation_core.appendIoTNodes(iot)
 					iot.run()
 					
 				elif(iot_node['type'] == 'client'):
-					iot = StandardClientDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
-					allIoTNodes.append(iot)
+					iot = StandardClientDevice(canvas, iot_node['real_ip'], iot_node['simulation_ip'],  iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+					simulation_core.appendIoTNodes(iot)
 					iot.run()
 					
 				else:
@@ -206,13 +203,29 @@ def load_nodes(canvas, project_name):
 				
 				log.msg("Creating AccessPoint station ...")
 				
-				ap = AccessPoint(canvas, access_point['simulation_ip'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
-				allAccessPoints.append(iot)
+				ap = AccessPoint(canvas, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
+				simulation_core.appendAccessPointNode(iot)
 
 			for router in data['routers']:
 
 				log.msg("Creating router ...")
-				print(router['icon'])
-				rt = Router(canvas, router['real_ip'], router['simulation_ip'], router['name'], router['icon'], router['is_wireless'], router['x'], router['y'])
-				allRouters.append(rts)
+				#print(router['icon'])
+				rt = Router(canvas, router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'])
+				simulation_core.appendRouterNodes(rt)
 				
+
+
+def load_connections(canvas, project_name, simulation_core):
+
+
+	with open('projects/'+project_name+'/connections.js') as connections_file:
+		data = json.load(connections_file)
+		
+		if data:
+			for connection in data['connections']:
+				
+				log.msg("Creating connections ...")
+
+				con = Connection(canvas, simulation_core, connection['id_device_1'], connection['id_device_2'])
+
+				simulation_core.appendConnections(con)

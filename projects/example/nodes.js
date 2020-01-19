@@ -1,6 +1,7 @@
 {
     "fog_nodes": [
         { 
+            "id": 1,
             "name": "Fog Broker Node", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -10,7 +11,8 @@
             "x": 250,
             "y": 175
         },
-        { 
+        {   
+            "id": 2,
             "name": "Fog Storage Node ", 
             "simulation_ip": "192.121.0.2",
             "real_ip": "127.0.0.2",
@@ -23,6 +25,7 @@
     ],
     "cloud_nodes": [
         {
+            "id": 3,
             "name": "Cloud Computing Node", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -35,6 +38,7 @@
     ],
     "iot_nodes": [
         {
+            "id": 4,
             "name": "Arduino based sensor", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -45,6 +49,7 @@
             "y": 380
         },
         {
+            "id": 5,
             "name": "ESP8266 based sensor", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -55,6 +60,7 @@
             "y": 440
         },
         {
+            "id": 6,
             "name": "ESP8266 based sensor", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -67,6 +73,7 @@
     ],
     "access_points": [
         { 
+            "id": 7,
             "TBTT": 0.1024,
             "SSID": "Rede privada 001",
             "WPA2_password": "iotfogsim2019",
@@ -80,6 +87,7 @@
     ],
     "routers": [
         { 
+            "id": 8,
             "name": "Router 001", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",

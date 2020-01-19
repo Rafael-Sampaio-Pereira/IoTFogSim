@@ -13,7 +13,7 @@ from scinetsim.iconsRegister import getIconFileName
 
 class StandardServerDevice(object):
     
-    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+    def __init__(self, canvas, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
         
@@ -21,7 +21,9 @@ class StandardServerDevice(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        self.id = uuid.uuid4().fields[-1]
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
         self.canvas = canvas
         self.name = name
         self.is_wireless = is_wireless
@@ -38,7 +40,7 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+    def __init__(self, canvas, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
 
@@ -46,7 +48,9 @@ class StandardClientDevice(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        self.id = uuid.uuid4().fields[-1]
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
         self.canvas = canvas
         self.name = name
         self.is_wireless = is_wireless
@@ -65,10 +69,14 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, canvas, real_ip, simulation_ip, name, icon, is_wireless, x, y):
+    def __init__(self, canvas, real_ip, simulation_ip, id,name, icon, is_wireless, x, y):
         self.canvas = canvas
         self.simulation_ip = simulation_ip
         self.name = name
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
         
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -84,7 +92,7 @@ class Router(object):
 
 class AccessPoint(object):
 
-    def __init__(self, canvas, simulation_ip, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
+    def __init__(self, canvas, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
@@ -101,7 +109,10 @@ class AccessPoint(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        self.id = uuid.uuid4().fields[-1]
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
+        
         self.canvas = canvas
         self.visual_component = VisualComponent(True, self.canvas, self.name, self.icon, x, y)
         self.authenticated_devices = []
@@ -172,16 +183,17 @@ class AccessPoint(object):
 
 class Connection(object):
 
-    def __init__(self, canvas, device1, device2):
+    def __init__(self, canvas, simulation_core, id_device_1, id_device_2):
         self.canvas = canvas
-        self.device1 = device1
-        self.device2 = device2
-        self.create_connection(self.canvas,device1,device2)
+        self.device1 = simulation_core.getAnyDeviceById(id_device_1)
+        self.device2 = simulation_core.getAnyDeviceById(id_device_2)
+
+        self.create_connection(self.canvas, self.device1, self.device2)
         
         #self.update_connection_arrow()
 
 
-    def create_connection(self,canvas,device1,device2):
+    def create_connection(self,canvas, device1,device2):
         x1 = self.device1.visual_component.x
 
         y1 = self.device1.visual_component.y
@@ -199,4 +211,5 @@ class Connection(object):
         self.canvas.coords(self.id,self.device1.visual_component.x-8, self.device1.visual_component.y-8, self.device2.visual_component.x-8, self.device2.visual_component.y-8)
         self.canvas.update()
         #reactor.callLater(1, self.update_connection_arrow)
+
 
