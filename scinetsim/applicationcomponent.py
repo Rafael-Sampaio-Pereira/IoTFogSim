@@ -5,9 +5,9 @@ from config.settings import ICONS_PATH
 
 class StandardClientApplicationComponent(protocol.Protocol):
     
-    def __init__(self, visual_component, canvas):
+    def __init__(self, visual_component, simulation_core):
         self.visual_component = visual_component
-        self.canvas = canvas
+        self.simulation_core = simulation_core
 
     def connectionMade(self):
         log.msg("One connection was successfuly established to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
@@ -24,15 +24,15 @@ class StandardClientApplicationComponent(protocol.Protocol):
 
     def dataReceived(self, data):     
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
         log.msg("Received data %s"%(data))
 
 
 class StandardServerApplicationComponent(protocol.Protocol):
     
-    def __init__(self, visual_component, canvas):
+    def __init__(self, visual_component, simulation_core):
         self.visual_component = visual_component
-        self.canvas = canvas
+        self.simulation_core = simulation_core
 
     def connectionMade(self):
         log.msg("One connection was successfuly established to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
@@ -49,5 +49,5 @@ class StandardServerApplicationComponent(protocol.Protocol):
 
     def dataReceived(self, data):
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
         log.msg("Received data %s"%(data))

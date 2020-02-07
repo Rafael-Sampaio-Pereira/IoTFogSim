@@ -6,8 +6,8 @@ from PIL import ImageTk, Image
 
 class VisualComponent(object):
 
-    def __init__(self, is_wireless, canvas, deviceName, file, x, y):
-        self.canvas = canvas
+    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y):
+        self.simulation_core = simulation_core
         self.x = x
         self.y = y
         self.move_flag = False
@@ -20,35 +20,35 @@ class VisualComponent(object):
             self.coverage_area_radius = 100
             # The signal circle object to show wifi coverage area. - Rafael Sampaio
             # coverage are need not to be visible. - Rafael Sampaio
-            self.draggable_coverage_area_circle = self.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="", outline="", width=1, stipple="gray12")
+            self.draggable_coverage_area_circle = self.simulation_core.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="", outline="", width=1, stipple="gray12")
 
             # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
-            self.draggable_signal_circle = self.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,2))
+            self.draggable_signal_circle = self.simulation_core.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,2))
 
-            canvas.tag_bind(self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)
-            canvas.tag_bind(self.draggable_coverage_area_circle, '<ButtonRelease-1>', self.release) 
-            canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
-            canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release)
+            simulation_core.canvas.tag_bind(self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)
+            simulation_core.canvas.tag_bind(self.draggable_coverage_area_circle, '<ButtonRelease-1>', self.release) 
+            simulation_core.canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
+            simulation_core.canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release)
 
         self.image_file = ImageTk.PhotoImage(file=file)
-        self.draggable_img = self.canvas.create_image(x, y, image=self.image_file)
+        self.draggable_img = self.simulation_core.canvas.create_image(x, y, image=self.image_file)
         #self.draggable_img = tkinter.Label(self.canvas,image=self.image_file, borderwidth=0, highlightthickness=0)
         #self.draggable_img.image = self.image_file
 
-        self.draggable_name = self.canvas.create_text(x,y+22,fill="black",font="Arial 7",
+        self.draggable_name = self.simulation_core.canvas.create_text(x,y+22,fill="black",font="Arial 7",
                         text=deviceName)
 
-        self.draggable_alert = self.canvas.create_text(x,y-22,fill="black",font="Times 7",
+        self.draggable_alert = self.simulation_core.canvas.create_text(x,y-22,fill="black",font="Times 7",
                         text="alert")
         # font="Times 9 italic bold"
         
-        canvas.tag_bind(self.draggable_alert, '<Button1-Motion>', self.move)
-        canvas.tag_bind(self.draggable_alert, '<ButtonRelease-1>', self.release)
-        canvas.tag_bind(self.draggable_name, '<Button1-Motion>', self.move)
-        canvas.tag_bind(self.draggable_name, '<ButtonRelease-1>', self.release)
-        canvas.tag_bind(self.draggable_img, '<Button1-Motion>', self.move)
-        canvas.tag_bind(self.draggable_img, '<ButtonRelease-1>', self.release)
-        canvas.configure(cursor="hand1")
+        simulation_core.canvas.tag_bind(self.draggable_alert, '<Button1-Motion>', self.move)
+        simulation_core.canvas.tag_bind(self.draggable_alert, '<ButtonRelease-1>', self.release)
+        simulation_core.canvas.tag_bind(self.draggable_name, '<Button1-Motion>', self.move)
+        simulation_core.canvas.tag_bind(self.draggable_name, '<ButtonRelease-1>', self.release)
+        simulation_core.canvas.tag_bind(self.draggable_img, '<Button1-Motion>', self.move)
+        simulation_core.canvas.tag_bind(self.draggable_img, '<ButtonRelease-1>', self.release)
+        simulation_core.canvas.configure(cursor="hand1")
         self.move_flag = False
 
         
@@ -62,19 +62,19 @@ class VisualComponent(object):
             self.y = new_ypos
             
             if self.is_wireless:
-                self.canvas.move(self.draggable_coverage_area_circle,
+                self.simulation_core.canvas.move(self.draggable_coverage_area_circle,
                     new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
-                self.canvas.move(self.draggable_signal_circle,
+                self.simulation_core.canvas.move(self.draggable_signal_circle,
                     new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
-            self.canvas.move(self.draggable_name,
+            self.simulation_core.canvas.move(self.draggable_name,
                 new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
-            self.canvas.move(self.draggable_alert,
+            self.simulation_core.canvas.move(self.draggable_alert,
                 new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
-            self.canvas.move(self.draggable_img,
+            self.simulation_core.canvas.move(self.draggable_img,
                 new_xpos-self.mouse_xpos ,new_ypos-self.mouse_ypos)
 
             self.mouse_xpos = new_xpos
@@ -82,11 +82,11 @@ class VisualComponent(object):
         else:
             self.move_flag = True
             if self.is_wireless:
-                self.canvas.tag_raise(self.draggable_coverage_area_circle) 
-                self.canvas.tag_raise(self.draggable_signal_circle)
-            self.canvas.tag_raise(self.draggable_img)
-            self.canvas.tag_raise(self.draggable_name)
-            self.canvas.tag_raise(self.draggable_alert)
+                self.simulation_core.canvas.tag_raise(self.draggable_coverage_area_circle) 
+                self.simulation_core.canvas.tag_raise(self.draggable_signal_circle)
+            self.simulation_core.canvas.tag_raise(self.draggable_img)
+            self.simulation_core.canvas.tag_raise(self.draggable_name)
+            self.simulation_core.canvas.tag_raise(self.draggable_alert)
             self.mouse_xpos = event.x
             self.mouse_ypos = event.y
 

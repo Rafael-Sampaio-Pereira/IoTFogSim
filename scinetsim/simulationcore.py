@@ -1,6 +1,11 @@
 
 from collections import defaultdict
 from twisted.python import log
+import tkinter
+from twisted.internet import tksupport
+from tkinter import PhotoImage
+from config.settings import version
+from scinetsim.ScrollableScreen import ScrollableScreen
 
 
 class SimulationCore(object):
@@ -14,6 +19,8 @@ class SimulationCore(object):
 		#allRoutersNodes = defaultdict(list)
 		self.allIoTNodes = defaultdict(list)
 		self.allRouterNodes = defaultdict(list)
+
+		self.canvas = None
 
 		self.eventsCounter = 0
 
@@ -108,3 +115,32 @@ class SimulationCore(object):
 		elif self.getRouterNodeById(id):
 			if self.getRouterNodeById(id).id == id:
 				return self.allRouterNodes[id][0]
+
+	def create_simulation_canvas(self):
+			
+		# These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
+		window = tkinter.Toplevel()
+		tksupport.install(window)
+
+		# Main window size and positions settings. - Rafael Sampaio
+		w_heigth = 600
+		w_width = 800
+		w_top_padding = 80
+		w_letf_padding = 100
+		window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
+
+		# Setting window icon. - Rafael Sampaio
+		#window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
+		window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
+		
+		# Setting window top text. - Rafael Sampaio
+		window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+		
+		# Simulation area on screen. - Rafael Sampaio
+		simulation_screen = ScrollableScreen(window)
+		simulation_screen.pack(fill="both", expand=True)
+		canvas = simulation_screen.getCanvas()
+
+		self.canvas = canvas
+
+		return self.canvas

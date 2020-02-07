@@ -13,7 +13,7 @@ from scinetsim.iconsRegister import getIconFileName
 
 class StandardServerDevice(object):
     
-    def __init__(self, canvas, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
         
@@ -24,15 +24,15 @@ class StandardServerDevice(object):
         #self.id = uuid.uuid4().fields[-1]
 
         self.id = id
-        self.canvas = canvas
+        self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
-        self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
 
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
-            self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
         endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
@@ -40,7 +40,7 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, canvas, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
 
@@ -51,15 +51,15 @@ class StandardClientDevice(object):
         #self.id = uuid.uuid4().fields[-1]
 
         self.id = id
-        self.canvas = canvas
+        self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
-        self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.canvas)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
         
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
-            self.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
         client = endpoints.clientFromString(reactor, self.network_component.network_settings)
@@ -69,8 +69,8 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, canvas, real_ip, simulation_ip, id,name, icon, is_wireless, x, y):
-        self.canvas = canvas
+    def __init__(self, simulation_core, real_ip, simulation_ip, id,name, icon, is_wireless, x, y):
+        self.simulation_core = simulation_core
         self.simulation_ip = simulation_ip
         self.name = name
         # generating an unic id for the instance object. - Rafael Sampaio.
@@ -84,7 +84,7 @@ class Router(object):
         self.x = x
         self. y = y
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.canvas, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
 
     def run(self):
         pass
@@ -92,7 +92,7 @@ class Router(object):
 
 class AccessPoint(object):
 
-    def __init__(self, canvas, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
@@ -113,8 +113,8 @@ class AccessPoint(object):
 
         self.id = id
         
-        self.canvas = canvas
-        self.visual_component = VisualComponent(True, self.canvas, self.name, self.icon, x, y)
+        self.simulation_core = simulation_core
+        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y)
         self.authenticated_devices = []
         self.associated_devices = []
         
@@ -134,32 +134,32 @@ class AccessPoint(object):
     def passive_scanning(self):
         
         #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
-        self.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
-        self.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
 
         # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
-        self.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
         
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
         if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
             # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
             self.visual_component.signal_radius += 10
-            self.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             
             # getting all canvas objects in wifi signal coverage area
-            all_coveraged_devices = self.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             
 
             # finding all the wifi devices on the canvas screen. - Rafael Sampaio
-            wifi_devices = self.canvas.find_withtag("wifi_device")
+            wifi_devices = self.simulation_core.canvas.find_withtag("wifi_device")
             
             # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
             if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
                 # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
                 for device in all_coveraged_devices:
                     if device in wifi_devices:
-                        self.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
-                        self.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
+                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
+                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
                         #pass
                         #log.msg(self.canvas.itemcget(device,"tags"))
                     else:
@@ -170,10 +170,10 @@ class AccessPoint(object):
 
         else:
             # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-            self.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
             self.visual_component.signal_radius = 1
 
-        self.canvas.update()
+        self.simulation_core.canvas.update()
         # Reactor will send an beacon frame using passive scanning method at each TBTT interval time. - Rafael Sampaio
         reactor.callLater(self.TBTT, self.passive_scanning)
 
@@ -183,17 +183,17 @@ class AccessPoint(object):
 
 class Connection(object):
 
-    def __init__(self, canvas, simulation_core, id_device_1, id_device_2):
-        self.canvas = canvas
+    def __init__(self, simulation_core, id_device_1, id_device_2):
+        self.simulation_core = simulation_core
         self.device1 = simulation_core.getAnyDeviceById(id_device_1)
         self.device2 = simulation_core.getAnyDeviceById(id_device_2)
 
-        self.create_connection(self.canvas, self.device1, self.device2)
+        self.create_connection(self.simulation_core, self.device1, self.device2)
         
         #self.update_connection_arrow()
 
 
-    def create_connection(self,canvas, device1,device2):
+    def create_connection(self,simulation_core, device1,device2):
         x1 = self.device1.visual_component.x
 
         y1 = self.device1.visual_component.y
@@ -202,14 +202,14 @@ class Connection(object):
 
         y2 = self.device2.visual_component.y
 
-        self.id = self.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
+        self.id = self.simulation_core.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
 
-        self.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
-        self.canvas.tag_bind(self.device2.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)        
+        self.simulation_core.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
+        self.simulation_core.canvas.tag_bind(self.device2.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)        
 
     def update_connection_arrow(self,event):
-        self.canvas.coords(self.id,self.device1.visual_component.x-8, self.device1.visual_component.y-8, self.device2.visual_component.x-8, self.device2.visual_component.y-8)
-        self.canvas.update()
+        self.simulation_core.canvas.coords(self.id,self.device1.visual_component.x-8, self.device1.visual_component.y-8, self.device2.visual_component.x-8, self.device2.visual_component.y-8)
+        self.simulation_core.canvas.update()
         #reactor.callLater(1, self.update_connection_arrow)
 
 
