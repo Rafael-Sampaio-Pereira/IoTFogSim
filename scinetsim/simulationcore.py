@@ -15,6 +15,8 @@ class SimulationCore(object):
 		self.allIoTNodes = defaultdict(list)
 		self.allRouterNodes = defaultdict(list)
 
+		self.eventsCounter = 0
+
 	def getFogNodeById(self, id):
 		try:
 			filtered_list = self.allFogNodes[id]
@@ -106,17 +108,3 @@ class SimulationCore(object):
 		elif self.getRouterNodeById(id):
 			if self.getRouterNodeById(id).id == id:
 				return self.allRouterNodes[id][0]
-
-
-# classe para fins de estudos
-class Node(object):
-	def __init__(self, name, id):
-		self.name = name
-		self.id = id
-
-# Demostração de uso
-n1 = Node('computer',1)
-sc = SimulationCore()
-sc.appendFogNodes(n1)
-nd = sc.getFogNodeById(n1.id)
-print(nd.name)

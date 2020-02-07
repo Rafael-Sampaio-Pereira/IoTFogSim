@@ -2,6 +2,7 @@ import tkinter
 from config.settings import ICONS_PATH
 
 from twisted.python import log
+from PIL import ImageTk, Image
 
 class VisualComponent(object):
 
@@ -9,6 +10,7 @@ class VisualComponent(object):
         self.canvas = canvas
         self.x = x
         self.y = y
+        self.move_flag = False
 
 
         self.is_wireless = is_wireless
@@ -28,8 +30,10 @@ class VisualComponent(object):
             canvas.tag_bind(self.draggable_signal_circle, '<Button1-Motion>', self.move)
             canvas.tag_bind(self.draggable_signal_circle, '<ButtonRelease-1>', self.release)
 
-        self.image_file = tkinter.PhotoImage(file=file)
+        self.image_file = ImageTk.PhotoImage(file=file)
         self.draggable_img = self.canvas.create_image(x, y, image=self.image_file)
+        #self.draggable_img = tkinter.Label(self.canvas,image=self.image_file, borderwidth=0, highlightthickness=0)
+        #self.draggable_img.image = self.image_file
 
         self.draggable_name = self.canvas.create_text(x,y+22,fill="black",font="Arial 7",
                         text=deviceName)
