@@ -24,6 +24,10 @@ class SimulationCore(object):
 
 		self.eventsCounter = 0
 
+	def updateEventsCounter(self, event_description):
+		self.eventsCounter = self.eventsCounter + 1
+		log.msg(event_description+" - Number of events: %i" %(self.eventsCounter))
+
 	def getFogNodeById(self, id):
 		try:
 			filtered_list = self.allFogNodes[id]

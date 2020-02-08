@@ -29,6 +29,7 @@ class StandardServerDevice(object):
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
         self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
+        self.simulation_core.updateEventsCounter("Initializing Server")
 
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
@@ -56,6 +57,7 @@ class StandardClientDevice(object):
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
         self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
+        self.simulation_core.updateEventsCounter("Initializing Client")
         
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
@@ -85,6 +87,7 @@ class Router(object):
         self. y = y
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.simulation_core.updateEventsCounter("Initializing Router")
 
     def run(self):
         pass
@@ -121,6 +124,8 @@ class AccessPoint(object):
         # This stores the twisted protocol instance for the router device. - Rafael Sampaio
         self.router_protocol = None
         self.visual_component.set_coverage_area_radius(200)
+
+        self.simulation_core.updateEventsCounter("Initializing Access Point")
         
         # Sends beacon frame. - Rafael Sampaio
         self.passive_scanning()
@@ -133,6 +138,8 @@ class AccessPoint(object):
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
     def passive_scanning(self):
         
+        self.simulation_core.updateEventsCounter("Access Point BEACON")
+
         #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
