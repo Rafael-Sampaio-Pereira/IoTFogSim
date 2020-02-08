@@ -124,12 +124,12 @@ def load_nodes(project_name, simulation_core):
 				fog = None
 				
 				if(fog_node['type'] == 'server'):
-					fog = StandardServerDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
+					fog = StandardServerDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'])
 					simulation_core.appendFogNodes(fog)
 					fog.run()
 					
 				elif(fog_node['type'] == 'client'):
-					fog = StandardClientDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'])
+					fog = StandardClientDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'])
 					simulation_core.appendFogNodes(fog)
 					fog.run()
 					
@@ -142,12 +142,12 @@ def load_nodes(project_name, simulation_core):
 				fog = None
 				
 				if(cloud_node['type'] == 'server'):
-					cloud = StandardServerDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+					cloud = StandardServerDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'])
 					simulation_core.appendCloudNodes(cloud)
 					cloud.run()
 					
 				elif(cloud_node['type'] == 'client'):
-					cloud = StandardClientDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'])
+					cloud = StandardClientDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'])
 					simulation_core.appendCloudNodes(cloud)
 					cloud.run()
 					
@@ -160,12 +160,12 @@ def load_nodes(project_name, simulation_core):
 				iot = None
 				
 				if(iot_node['type'] == 'server'):
-					iot = StandardServerDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+					iot = StandardServerDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'], iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'])
 					simulation_core.appendIoTNodes(iot)
 					iot.run()
 					
 				elif(iot_node['type'] == 'client'):
-					iot = StandardClientDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'],  iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'])
+					iot = StandardClientDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'],  iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'])
 					simulation_core.appendIoTNodes(iot)
 					iot.run()
 					

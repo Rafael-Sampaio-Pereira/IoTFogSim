@@ -13,7 +13,7 @@ from scinetsim.iconsRegister import getIconFileName
 
 class StandardServerDevice(object):
     
-    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
         
@@ -28,7 +28,7 @@ class StandardServerDevice(object):
         self.name = name
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
+        self.network_component = StandardServerNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Server")
 
         if(self.is_wireless == True):
@@ -41,7 +41,7 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
         self.real_ip = real_ip
         self.simulation_ip = simulation_ip
 
@@ -56,7 +56,7 @@ class StandardClientDevice(object):
         self.name = name
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core)
+        self.network_component = StandardClientNetworkComponent(self.real_ip, 5000, self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Client")
         
         if(self.is_wireless == True):

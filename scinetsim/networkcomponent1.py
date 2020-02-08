@@ -1,5 +1,5 @@
-from scinetsim.applicationcomponent1 import StandardServerApplicationComponent
-from scinetsim.applicationcomponent1 import StandardClientApplicationComponent
+from applications.applicationcomponent1 import StandardServerApplicationComponent
+from applications.applicationcomponent1 import StandardClientApplicationComponent
 from twisted.python import log
 
 class StandardServerNetworkComponent():

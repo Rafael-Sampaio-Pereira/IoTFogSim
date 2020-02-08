@@ -8,6 +8,7 @@
             "icon": "server_icon",
             "type": "server",
             "is_wireless": false,
+            "application": "applications.applicationcomponent.StandardServerApplicationComponent",
             "x": 250,
             "y": 175
         },
@@ -19,6 +20,7 @@
             "icon": "server_icon",
             "type": "client",
             "is_wireless": true,
+            "application": "applications.applicationcomponent.StandardServerApplicationComponent",
             "x": 500,
             "y": 175
         }
@@ -32,6 +34,7 @@
             "icon": "cloud_icon",
             "type": "server",
             "is_wireless": false,
+            "application": "applications.applicationcomponent.StandardServerApplicationComponent",
             "x": 400,
             "y": 75
         }
@@ -45,6 +48,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": false,
+            "application": "applications.applicationcomponent.StandardClientApplicationComponent",
             "x": 170,
             "y": 380
         },
@@ -56,6 +60,7 @@
             "icon": "esp8266_icon",
             "type": "client",
             "is_wireless": false,
+            "application": "applications.applicationcomponent.StandardClientApplicationComponent",
             "x": 370,
             "y": 440
         },
@@ -67,6 +72,7 @@
             "icon": "esp8266_icon",
             "type": "client",
             "is_wireless": false,
+            "application": "applications.applicationcomponent.StandardClientApplicationComponent",
             "x": 600,
             "y": 380
         }

@@ -5,9 +5,9 @@ from config.settings import ICONS_PATH
 
 class StandardClientApplicationComponent(protocol.Protocol):
     
-    def __init__(self, visual_component, simulation_core):
-        self.visual_component = visual_component
-        self.simulation_core = simulation_core
+    def __init__(self):
+        self.visual_component = None
+        self.simulation_core =  None
 
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
@@ -35,9 +35,9 @@ class StandardClientApplicationComponent(protocol.Protocol):
 
 class StandardServerApplicationComponent(protocol.Protocol):
     
-    def __init__(self, visual_component, simulation_core):
-        self.visual_component = visual_component
-        self.simulation_core = simulation_core
+    def __init__(self):
+        self.visual_component = None
+        self.simulation_core = None
 
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
