@@ -20,12 +20,15 @@ protocol.Protocol.noisy = False
 class RouterApplication:
     
     def __init__(self):
-        # list all cyber connection objects (Connector)
         self.all_connectors_list = []
+        self.visual_component = None
+        self.simulation_core = None
 
     def start(self, addr, port):
         try:
             factory = RouterINFactory()
+            factory.simulation_core = self.simulation_core
+            factory.visual_component = self.visual_component
             factory.all_connectors_list = self.all_connectors_list
             reactor.listenTCP(port, factory, interface=addr)
 
@@ -42,6 +45,8 @@ class RouterIN(protocol.Protocol):
         self.buffer = None
         self.client = None
         self.factory = factory
+        self.visual_component = self.factory.visual_component
+        self.simulation_core = self.factory.simulation_core
 
     def connectionMade(self):
         self.transport.setTcpKeepAlive(1)
@@ -54,7 +59,7 @@ class RouterIN(protocol.Protocol):
         log.msg("Connection was closed %s" % (reason.getErrorMessage()))
 
     def dataReceived(self, data):
-
+        self.simulation_core.updateEventsCounter("Router receiving package")
         try:
             destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
             
@@ -76,6 +81,7 @@ class RouterIN(protocol.Protocol):
 
                     if con:
                         con.transport.write(data)
+                        self.simulation_core.updateEventsCounter("Router Forwarding package")
 
                     # else start a new connection- Rafael Sampaio
                     else:
@@ -86,6 +92,7 @@ class RouterIN(protocol.Protocol):
                             # After save connection, send the first message - Rafael Sampaio
                             con = self.find_connector_by_source_and_destiny_addresses(destiny_addr, source_addr)
                             con.router_out_protocol.transport.write(data)
+                            self.simulation_core.updateEventsCounter("Router Forwarding package")
 
                         from twisted.internet.endpoints import TCP4ClientEndpoint
                         from twisted.internet.endpoints import connectProtocol
@@ -171,6 +178,8 @@ class RouterINFactory(protocol.ServerFactory): #OK
 
     def __init__(self):
         self.all_connectors_list = []
+        self.visual_component = None
+        self.simulation_core = None
 
     def buildProtocol(self, addr):
         return RouterIN(self)

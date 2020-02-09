@@ -84,6 +84,7 @@ class Router(object):
         self.addr = real_ip
         self.port = port
         self.simulation_core = simulation_core
+        
         self.simulation_ip = simulation_ip
         self.name = name
         # generating an unic id for the instance object. - Rafael Sampaio.
@@ -100,8 +101,11 @@ class Router(object):
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter("Initializing Router")
 
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+
     def run(self):
-        
+
         self.application.start(self.addr, self.port)
 
 

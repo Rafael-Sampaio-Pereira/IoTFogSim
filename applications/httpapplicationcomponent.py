@@ -25,8 +25,11 @@ class HttpClientApplicationComponent(protocol.Protocol):
         self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
 
     def connectionMade(self):
+        self.simulation_core.updateEventsCounter("Connected to http server")
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
+
+        self.simulation_core.updateEventsCounter("sending HTTP REQUEST")
 
         package = {
                         "destiny_addr": self.destiny_addr,
@@ -55,8 +58,9 @@ class HttpClientApplicationComponent(protocol.Protocol):
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data) 
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
         log.msg("Received from server %s"%(payload))
+        self.simulation_core.updateEventsCounter("Http response received")
 
 
 class HttpServerApplicationComponent(protocol.Protocol):
@@ -77,7 +81,7 @@ class HttpServerApplicationComponent(protocol.Protocol):
         self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
     def connectionMade(self):
-        pass
+        self.simulation_core.updateEventsCounter("Connection received")
         #self.send(b"test data")
         
 
@@ -95,7 +99,7 @@ class HttpServerApplicationComponent(protocol.Protocol):
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
         log.msg("Received from client %s"%(payload))
 
         package = {
@@ -109,4 +113,6 @@ class HttpServerApplicationComponent(protocol.Protocol):
         package = json.dumps(package)
         msg_bytes, _ = codecs.escape_decode(package, 'utf8')
         self.send(msg_bytes)
+
+        self.simulation_core.updateEventsCounter("Sending HTTP RESPONSE")
         
