@@ -20,7 +20,7 @@
             "icon": "server_icon",
             "type": "client",
             "is_wireless": true,
-            "application": "applications.applicationcomponent.StandardServerApplicationComponent",
+            "application": "applications.applicationcomponent.StandardClientApplicationComponent",
             "x": 500,
             "y": 175
         }

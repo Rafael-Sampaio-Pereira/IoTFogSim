@@ -1,13 +1,15 @@
 from twisted.internet import protocol
 from twisted.python import log
-import tkinter
-from config.settings import ICONS_PATH
 
 class StandardClientApplicationComponent(protocol.Protocol):
     
     def __init__(self):
         self.visual_component = None
         self.simulation_core =  None
+
+        self.serverHost = "127.0.0.1"
+        self.serverPort = 5000 
+        self.network_settings = "tcp:{}:{}".format(self.serverHost,self.serverPort)
 
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
@@ -38,6 +40,10 @@ class StandardServerApplicationComponent(protocol.Protocol):
     def __init__(self):
         self.visual_component = None
         self.simulation_core = None
+
+        self.host = "127.0.0.1"
+        self.port = 5000
+        self.network_settings = "tcp:interface={}:{}".format(str(self.host),self.port)
 
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
