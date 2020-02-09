@@ -8,7 +8,7 @@ class SubscriberApplication(protocol.Protocol):
         self.simulation_core =  None
 
         self.serverHost = serverHost
-        self.serverPort = serverPort 
+        self.serverPort = serverPort
         self.network_settings = "tcp:{}:{}".format(self.serverHost,self.serverPort)
 
     def connectionMade(self):

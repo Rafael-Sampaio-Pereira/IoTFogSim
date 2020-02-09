@@ -14,7 +14,7 @@ class StandardServerNetworkComponent():
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
 
-        self.network_settings = "tcp:interface={}:{}".format(str(self.application.host),self.application.port)
+        self.network_settings = "tcp:interface={}:{}".format(str(self.application.source_addr),self.application.source_port)
 
 
     def doStart(self):
@@ -40,7 +40,7 @@ class StandardClientNetworkComponent():
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
 
-        self.network_settings = "tcp:{}:{}".format(self.application.serverHost,self.application.serverPort)
+        self.network_settings = "tcp:{}:{}".format(self.application.router_addr,self.application.router_port)
 
     def doStart(self):
         log.msg("Initializing client...")

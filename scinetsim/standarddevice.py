@@ -8,8 +8,15 @@ from scinetsim.networkcomponent import StandardServerNetworkComponent
 from scinetsim.networkcomponent import StandardClientNetworkComponent
 import uuid
 
-from scinetsim.iconsRegister import getIconFileName
+import time
 
+
+from twisted.internet.endpoints import TCP4ClientEndpoint
+from twisted.internet.endpoints import connectProtocol
+
+
+from scinetsim.iconsRegister import getIconFileName
+from scinetsim.functions import import_and_instantiate_class_from_string
 
 class StandardServerDevice(object):
     
@@ -71,7 +78,11 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, simulation_core, real_ip, simulation_ip, id,name, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id,name, icon, is_wireless, x, y, application):
+        
+        self.application = import_and_instantiate_class_from_string(application)
+        self.addr = real_ip
+        self.port = port
         self.simulation_core = simulation_core
         self.simulation_ip = simulation_ip
         self.name = name
@@ -90,7 +101,8 @@ class Router(object):
         self.simulation_core.updateEventsCounter("Initializing Router")
 
     def run(self):
-        pass
+        
+        self.application.start(self.addr, self.port)
 
 
 class AccessPoint(object):

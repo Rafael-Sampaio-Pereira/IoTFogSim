@@ -118,6 +118,22 @@ def load_nodes(project_name, simulation_core):
 		data = json.load(nodes_file)
 		
 		if data:
+    		
+			for router in data['routers']:
+
+				log.msg("Creating router ...")
+				#print(router['icon'])
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'])
+				simulation_core.appendRouterNodes(rt)
+				rt.run()
+
+			for access_point in data['access_points']:
+    				
+				log.msg("Creating AccessPoint station ...")
+				
+				ap = AccessPoint(simulation_core, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
+				simulation_core.appendAccessPointNode(iot)
+		
 			for fog_node in data['fog_nodes']:
 				
 				log.msg("Creating fog node ...")
@@ -173,19 +189,7 @@ def load_nodes(project_name, simulation_core):
 					log.msg("Error: Type not found.")
 
 
-			for access_point in data['access_points']:
-				
-				log.msg("Creating AccessPoint station ...")
-				
-				ap = AccessPoint(simulation_core, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
-				simulation_core.appendAccessPointNode(iot)
-
-			for router in data['routers']:
-
-				log.msg("Creating router ...")
-				#print(router['icon'])
-				rt = Router(simulation_core, router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'])
-				simulation_core.appendRouterNodes(rt)
+			
 				
 
 
