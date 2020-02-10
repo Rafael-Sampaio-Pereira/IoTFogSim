@@ -80,7 +80,7 @@ class RouterIN(protocol.Protocol):
                     con = self.find_connector_by_source_and_destiny_addresses(destiny_addr, source_addr)
 
                     if con:
-                        con.transport.write(data)
+                        con.router_out_protocol.transport.write(data)
                         self.simulation_core.updateEventsCounter("Router Forwarding package")
 
                     # else start a new connection- Rafael Sampaio
