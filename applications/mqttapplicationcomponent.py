@@ -3,10 +3,13 @@ from twisted.python import log
 import json
 import codecs
 
-from scinetsim.functions import extract_package_contents
+#from scinetsim.functions import extract_package_contents
 
 
-class PublisherApplicationComponent(protocol.Protocol):
+from applications.applicationcomponent import StandardApplicationComponent
+
+
+class PublisherApplicationComponent(StandardApplicationComponent):
     
     def __init__(self):
         self.visual_component = None
@@ -34,22 +37,19 @@ class PublisherApplicationComponent(protocol.Protocol):
 
     def publish(self):
         self.simulation_core.updateEventsCounter("sending MQTT REQUEST")
-        package = {
-                    "destiny_addr": self.destiny_addr,
-                    "destiny_port": self.destiny_port,
-                    "source_addr": self.source_addr,
-                    "source_port": self.source_port,
-                    "type": 'http',
-                    "payload": {
-                                "action": "publish",
-                                "topic": "sensors",
-                                "content": "25w"
-                    }
-        }
+        
+        msg = {
+                "action": "publish",
+                "topic": "sensors",
+                "content": "25w"
+            }
 
-        package = json.dumps(package)
-        msg_bytes, _ = codecs.escape_decode(package, 'utf8')
-        self.send(msg_bytes)
+
+        package = self.build_package(msg)
+        
+        self.send(package)
+        
+        
 
         reactor.callLater(self.publish_interval, self.publish)
         
@@ -66,14 +66,17 @@ class PublisherApplicationComponent(protocol.Protocol):
         self.transport.write(message)
 
     def dataReceived(self, data):
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data) 
+        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data) 
         # Print the received data on the sreen.  - Rafael Sampaio
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
         log.msg("Received from broker %s"%(payload))
         self.simulation_core.updateEventsCounter("Http response received")
 
+    
 
-class BrokerApplicationComponent(protocol.Protocol):
+
+
+class BrokerApplicationComponent(StandardApplicationComponent):
     
     def __init__(self):
         self.visual_component = None
@@ -107,7 +110,7 @@ class BrokerApplicationComponent(protocol.Protocol):
         self.transport.write(message)
 
     def dataReceived(self, data):
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
+        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
         # Print the received data on the sreen.  - Rafael Sampaio
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
         log.msg("Received from client %s"%(payload))

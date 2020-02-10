@@ -7,7 +7,9 @@ import time
 import codecs
 import json
 
-from scinetsim.functions import extract_package_contents
+#from scinetsim.functions import extract_package_contents
+
+from applications.applicationcomponent import StandardApplicationComponent
 
 protocol.Protocol.noisy = False
 
@@ -36,7 +38,7 @@ class RouterApplication:
             log.msg("Error: %s" % str(e))
 
 
-class RouterIN(protocol.Protocol):
+class RouterIN(StandardApplicationComponent):
 
     noisy = False
  
@@ -61,7 +63,7 @@ class RouterIN(protocol.Protocol):
     def dataReceived(self, data):
         self.simulation_core.updateEventsCounter("Router receiving package")
         try:
-            destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
+            destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
             
             if(payload):
                 if payload == ('ARP_REQUEST'):
@@ -118,7 +120,7 @@ class RouterIN(protocol.Protocol):
                 return False
 
 
-class RouterOUT(protocol.Protocol):
+class RouterOUT(StandardApplicationComponent):
 
     noisy = False
 

@@ -1,71 +1,41 @@
 from twisted.internet import protocol
 from twisted.python import log
+import json
+import codecs
 
-class StandardClientApplicationComponent(protocol.Protocol):
+class StandardApplicationComponent(protocol.Protocol):
     
     def __init__(self):
         self.visual_component = None
         self.simulation_core =  None
+        self.network_settings = None
 
-        self.serverHost = "127.0.0.1"
-        self.serverPort = 5000 
-        self.network_settings = "tcp:{}:{}".format(self.serverHost,self.serverPort)
 
-    def connectionMade(self):
-        self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-        self.send(b"test data")
+
+    def build_package(self, payload):
+    
+        package = {
+                    "destiny_addr": self.destiny_addr,
+                    "destiny_port": self.destiny_port,
+                    "source_addr": self.source_addr,
+                    "source_port": self.source_port,
+                    "type": 'http',
+                    "payload": payload
+        }
+
+        package = json.dumps(package)
+        msg_bytes, _ = codecs.escape_decode(package, 'utf8')
+        return msg_bytes
+
+
+    def extract_package_contents(self, msg):
         
+        try:
+            msg = msg.decode("utf-8")
+            msg = str(msg)[0:]
+            json_msg = json.loads(msg)
 
-    def connectionFailed(self, reason):
-        log.msg('connection failed:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("Connection failed")
-    
-    def connectionLost(self, reason):
-        log.msg('connection lost:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection lost")
-    
-    def send(self, message):
-        self.transport.write(message)
-        self.simulation_core.updateEventsCounter("Sending data to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-
-    def dataReceived(self, data):     
-        # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
-        log.msg("Received data %s"%(data))
-        self.simulation_core.updateEventsCounter("Received data from %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-
-
-class StandardServerApplicationComponent(protocol.Protocol):
-    
-    def __init__(self):
-        self.visual_component = None
-        self.simulation_core = None
-
-        self.host = "127.0.0.1"
-        self.port = 5000
-        self.network_settings = "tcp:interface={}:{}".format(str(self.host),self.port)
-
-    def connectionMade(self):
-        self.simulation_core.updateEventsCounter("Connected to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-        self.send(b"test data")
+            return json_msg["destiny_addr"], json_msg["destiny_port"], json_msg["source_addr"], json_msg["source_port"], json_msg["type"], json_msg["payload"]
         
-
-    def connectionFailed(self, reason):
-        log.msg('connection failed:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection failed")
-    
-    def connectionLost(self, reason):
-        log.msg('connection lost:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection lost")
-    
-    def send(self, message):
-        self.transport.write(message)
-        self.simulation_core.updateEventsCounter("Sending data to %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-        
-
-    def dataReceived(self, data):
-        # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(data)[1:])
-        log.msg("Received data %s"%(data))
-        self.simulation_core.updateEventsCounter("Received data from %s"%(self.transport.getPeer().host+":"+str(self.transport.getPeer().port)))
-        
+        except Exception as e:
+            log.msg(e)
