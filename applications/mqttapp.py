@@ -73,6 +73,8 @@ class BrokerApp(StandardApplicationComponent):
 
         self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
+        self.topics = []
+
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connection received")
         #self.send(b"test data")
@@ -108,3 +110,12 @@ def extract_mqtt_contents(self, package):
     except Exception as e:
         log.msg(e)
         
+    
+
+class MqttTopic(object):
+    
+    def __init__(self, title, description):
+        self.title = title
+        self.description = description
+        self.publishers = []
+        self.subscribers = []
