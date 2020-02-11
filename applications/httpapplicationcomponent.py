@@ -58,7 +58,7 @@ class HttpClientApplicationComponent(protocol.Protocol):
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data) 
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
+        self.update_alert_message_on_screen(payload)
         log.msg("Received from server %s"%(payload))
         self.simulation_core.updateEventsCounter("Http response received")
 
@@ -99,7 +99,7 @@ class HttpServerApplicationComponent(protocol.Protocol):
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
+        self.update_alert_message_on_screen(payload)
         log.msg("Received from client %s"%(payload))
 
         package = {

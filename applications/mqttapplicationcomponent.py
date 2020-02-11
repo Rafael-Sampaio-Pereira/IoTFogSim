@@ -3,9 +3,6 @@ from twisted.python import log
 import json
 import codecs
 
-#from scinetsim.functions import extract_package_contents
-
-
 from applications.applicationcomponent import StandardApplicationComponent
 
 
@@ -44,38 +41,21 @@ class PublisherApplicationComponent(StandardApplicationComponent):
                 "content": "25w"
             }
 
-
         package = self.build_package(msg)
-        
         self.send(package)
-        
-        
-
         reactor.callLater(self.publish_interval, self.publish)
-        
 
-    def connectionFailed(self, reason):
-        log.msg('connection failed:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("Connection failed")
     
-    def connectionLost(self, reason):
-        log.msg('connection lost:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection lost")
     
-    def send(self, message):
-        self.transport.write(message)
 
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data) 
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
+        self.update_alert_message_on_screen(payload)
         log.msg("Received from broker %s"%(payload))
         self.simulation_core.updateEventsCounter("Http response received")
 
     
-
-
-
 class BrokerApplicationComponent(StandardApplicationComponent):
     
     def __init__(self):
@@ -97,35 +77,34 @@ class BrokerApplicationComponent(StandardApplicationComponent):
         self.simulation_core.updateEventsCounter("Connection received")
         #self.send(b"test data")
         
-
-    def connectionFailed(self, reason):
-        log.msg('connection failed:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection failed")
-    
-    def connectionLost(self, reason):
-        log.msg('connection lost:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection lost")
-    
-    def send(self, message):
-        self.transport.write(message)
-
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
         # Print the received data on the sreen.  - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(payload))
+        self.update_alert_message_on_screen(payload)
         log.msg("Received from client %s"%(payload))
 
-        package = {
-                        "destiny_addr": self.destiny_addr,
-                        "destiny_port": self.destiny_port,
-                        "source_addr": self.source_addr,
-                        "source_port": self.source_port,
-                        "type": 'http',
-                        "payload": "reply test data"
-                    }
-        package = json.dumps(package)
-        msg_bytes, _ = codecs.escape_decode(package, 'utf8')
-        self.send(msg_bytes)
+        msg = {
+                "action": "response",
+                "topic": "sensors",
+                "content": "MQTT_ACK"
+            }
+
+        package = self.build_package(msg)
+        self.send(package)
 
         self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
+
+
+
+def extract_mqtt_contents(self, package):
+        
+    try:
+        package = package.decode("utf-8")
+        package = str(package)[0:]
+        json_msg = json.loads(package)
+
+        return json_msg["action"], json_msg["topic"], json_msg["content"]
+    
+    except Exception as e:
+        log.msg(e)
         
