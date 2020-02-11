@@ -19,7 +19,7 @@ protocol.Protocol.noisy = False
 # Ween destiny sends response, the reply wiil be received by the 'RouterOUT', that will use 'RouterIN' to send response to the client.
 #  - Rafael Sampaio
 
-class RouterApplication:
+class RouterApp:
     
     def __init__(self):
         self.all_connectors_list = []

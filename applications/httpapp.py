@@ -6,7 +6,7 @@ import codecs
 from scinetsim.functions import extract_package_contents
 
 
-class HttpClientApplicationComponent(protocol.Protocol):
+class HttpClientApp(protocol.Protocol):
     
     def __init__(self):
         self.visual_component = None
@@ -63,7 +63,7 @@ class HttpClientApplicationComponent(protocol.Protocol):
         self.simulation_core.updateEventsCounter("Http response received")
 
 
-class HttpServerApplicationComponent(protocol.Protocol):
+class HttpServerApp(protocol.Protocol):
     
     def __init__(self):
         self.visual_component = None

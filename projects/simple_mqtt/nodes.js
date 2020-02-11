@@ -8,7 +8,7 @@
             "icon": "server_icon",
             "type": "server",
             "is_wireless": false,
-            "application": "applications.mqttapplicationcomponent.BrokerApplicationComponent",
+            "application": "applications.mqttapp.BrokerApp",
             "x": 250,
             "y": 175
         }
@@ -25,7 +25,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": false,
-            "application": "applications.mqttapplicationcomponent.PublisherApplicationComponent",
+            "application": "applications.mqttapp.PublisherApp",
             "x": 170,
             "y": 380
         }
@@ -42,7 +42,7 @@
             "icon": "router_icon",
             "type": "router",
             "port": 8081,
-            "application": "applications.routerapplicationcomponent.RouterApplication",
+            "application": "applications.routerapp.RouterApp",
             "is_wireless": false,
             "x": 400,
             "y": 200

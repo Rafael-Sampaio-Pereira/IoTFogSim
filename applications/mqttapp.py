@@ -6,7 +6,7 @@ import codecs
 from applications.applicationcomponent import StandardApplicationComponent
 
 
-class PublisherApplicationComponent(StandardApplicationComponent):
+class PublisherApp(StandardApplicationComponent):
     
     def __init__(self):
         self.visual_component = None
@@ -56,7 +56,7 @@ class PublisherApplicationComponent(StandardApplicationComponent):
         self.simulation_core.updateEventsCounter("Http response received")
 
     
-class BrokerApplicationComponent(StandardApplicationComponent):
+class BrokerApp(StandardApplicationComponent):
     
     def __init__(self):
         self.visual_component = None
