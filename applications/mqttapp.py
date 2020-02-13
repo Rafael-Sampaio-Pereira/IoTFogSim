@@ -95,7 +95,9 @@ class BrokerApp(StandardApplicationComponent):
 
         topic = self.getTopic(topic_title)
 
-        is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self.transport.protocol)
+        is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self)
+
+        
 
         package = self.build_package("MQTT_ACK")
         self.send(package)
@@ -109,13 +111,27 @@ class BrokerApp(StandardApplicationComponent):
                 return topic
 
     def verify_if_a_publisher_already_in_publishers_list(self, topic, publisher_protocol):
-        for publisher in topic.publishers:
-            if publisher_protocol == topic.publisher:
-                return True
+        log.msg("ENTROUUUUUUUU")
+        try:
+            # Verify if is some publicher connected - Rafael Sampaio
+            if len(topic.publishers)>0:
+                for publisher in topic.publishers:
+                    # verify if the connected publisher protocol already in the topic publishers list - Rafael Sampaio
+                    if self == publisher:
+                        return True
+                    # if the connected publisher protocol is not in the publishers list, register it in that list - Rafael Sampaio  
+                    else:
+                        topic.register_publisher(publisher_protocol)
+                        log.msg("Publisher registred")
+                        return True
+            # if there is no connected publisher protocol in the publishers list, register the connected protocol in the list in that list - Rafael Sampaio  
             else:
                 topic.register_publisher(publisher_protocol)
                 log.msg("Publisher registred")
                 return True
+
+        except Exception as e:
+            print(e)
 
 
 
