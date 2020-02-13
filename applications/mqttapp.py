@@ -23,6 +23,8 @@ class PublisherApp(StandardApplicationComponent):
 
         self.publish_interval = 10
 
+       
+
 
         self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
 
@@ -75,6 +77,9 @@ class BrokerApp(StandardApplicationComponent):
 
         self.topics = []
 
+        sensor_metering = MqttTopic("sensor metering","A topic for environment sensor monitoring")
+        self.topics.append(sensor_metering)
+
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connection received")
         #self.send(b"test data")
@@ -85,20 +90,36 @@ class BrokerApp(StandardApplicationComponent):
         self.update_alert_message_on_screen(payload)
         log.msg("Received from client %s"%(payload))
 
-        msg = {
-                "action": "response",
-                "topic": "sensors",
-                "content": "MQTT_ACK"
-            }
+        action, topic_title, content = extract_mqtt_contents(payload)
 
-        package = self.build_package(msg)
+        topic = self.getTopic(topic_title)
+
+        is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self.transport.protocol)
+
+        package = self.build_package("MQTT_ACK")
         self.send(package)
 
         self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
 
+    def getTopic(self, topic_title):
+
+        for topic in self.topics:
+            if topic.title == topic_title:
+                return topic
+
+    def verify_if_a_publisher_already_in_publishers_list(self, topic, publisher_protocol):
+        for publisher in topic.publishers:
+            if publisher_protocol == topic.publisher:
+                return True
+            else:
+                topic.register_publisher(publisher_protocol)
+                log.msg("Publisher registred")
+                return True
 
 
-def extract_mqtt_contents(self, package):
+
+
+def extract_mqtt_contents(package):
         
     try:
         package = package.decode("utf-8")
@@ -119,3 +140,10 @@ class MqttTopic(object):
         self.description = description
         self.publishers = []
         self.subscribers = []
+
+    
+    def register_publisher(self, publisher_protocol):
+        self.publishers.append(publisher_protocol)
+
+
+MQTT_ACK = {"action": "response", "topic": "sensor_metering", "content": "MQTT_ACK"}
