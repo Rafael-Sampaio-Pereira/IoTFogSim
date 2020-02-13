@@ -122,7 +122,8 @@ class BrokerApp(StandardApplicationComponent):
 def extract_mqtt_contents(package):
         
     try:
-        package = package.decode("utf-8")
+        package = json.dumps(package)
+        #package = package.decode("utf-8")
         package = str(package)[0:]
         json_msg = json.loads(package)
 
