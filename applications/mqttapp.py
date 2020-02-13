@@ -39,7 +39,7 @@ class PublisherApp(StandardApplicationComponent):
         
         msg = {
                 "action": "publish",
-                "topic": "sensors",
+                "topic": "sensor_metering",
                 "content": "25w"
             }
 
@@ -77,7 +77,7 @@ class BrokerApp(StandardApplicationComponent):
 
         self.topics = []
 
-        sensor_metering = MqttTopic("sensor metering","A topic for environment sensor monitoring")
+        sensor_metering = MqttTopic("sensor_metering","A topic for environment sensor monitoring")
         self.topics.append(sensor_metering)
 
     def connectionMade(self):
@@ -91,6 +91,7 @@ class BrokerApp(StandardApplicationComponent):
         log.msg("Received from client %s"%(payload))
 
         action, topic_title, content = extract_mqtt_contents(payload)
+        print(topic_title)
 
         topic = self.getTopic(topic_title)
 
@@ -125,6 +126,7 @@ def extract_mqtt_contents(package):
         package = json.dumps(package)
         #package = package.decode("utf-8")
         package = str(package)[0:]
+        print(package)
         json_msg = json.loads(package)
 
         return json_msg["action"], json_msg["topic"], json_msg["content"]
