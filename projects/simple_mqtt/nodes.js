@@ -2,6 +2,18 @@
     "fog_nodes": [
         { 
             "id": 1,
+            "name": "Fog Subscriber Node", 
+            "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "icon": "server_icon",
+            "type": "client",
+            "is_wireless": false,
+            "application": "applications.mqttapp.SubscriberApp",
+            "x": 450,
+            "y": 175
+        },
+        { 
+            "id": 2,
             "name": "Fog Broker Node", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
@@ -19,7 +31,7 @@
     "iot_nodes": [
         {
             "id": 4,
-            "name": "Arduino based sensor", 
+            "name": "Arduino based sensor (publisher node)", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
@@ -35,7 +47,7 @@
     ],
     "routers": [
         { 
-            "id": 8,
+            "id": 3,
             "name": "Router 001", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
