@@ -21,6 +21,7 @@ class StandardApplicationComponent(protocol.Protocol):
         }
 
         package = json.dumps(package)
+        package = package+"\n"
         msg_bytes, _ = codecs.escape_decode(package, 'utf8')
         return msg_bytes
 
@@ -49,3 +50,10 @@ class StandardApplicationComponent(protocol.Protocol):
 
     def send(self, message):
         self.transport.write(message)
+
+    def put_package_in_buffer(self, data):
+        if data.endswith(b"\n"):
+            packages = data.split(b"\n")
+            for package in packages:
+                if package != b'':
+                    self._buffer.append(package)

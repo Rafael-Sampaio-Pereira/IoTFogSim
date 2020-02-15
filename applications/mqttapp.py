@@ -2,6 +2,7 @@ from twisted.internet import protocol, reactor
 from twisted.python import log
 import json
 import codecs
+import random 
 
 from applications.applicationcomponent import StandardApplicationComponent
 
@@ -40,11 +41,14 @@ class PublisherApp(StandardApplicationComponent):
         msg = {
                 "action": "publish",
                 "topic": "sensor_metering",
-                "content": "25w"
+                "content": str(random.uniform(10.5,17.5))+"KWH"
             }
 
         package = self.build_package(msg)
         self.send(package)
+
+        print(package)
+
         reactor.callLater(self.publish_interval, self.publish)
 
     
@@ -71,7 +75,7 @@ class SubscriberApp(StandardApplicationComponent):
         self.router_addr = "127.0.0.1"
         self.router_port = 8081
 
-        self.publish_interval = 10
+        self.publish_interval = 15
 
         self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
 
@@ -92,6 +96,8 @@ class SubscriberApp(StandardApplicationComponent):
 
         package = self.build_package(msg)
         self.send(package)
+
+        print(package)
         
 
     
@@ -123,6 +129,7 @@ class BrokerApp(StandardApplicationComponent):
         self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
         self.topics = []
+        self._buffer = []
 
         sensor_metering = MqttTopic("sensor_metering","A topic for environment sensor monitoring")
         self.topics.append(sensor_metering)
@@ -131,26 +138,42 @@ class BrokerApp(StandardApplicationComponent):
         self.simulation_core.updateEventsCounter("Connection received")
         #self.send(b"test data")
         
-    def dataReceived(self, data):
-        print(data)
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
-        # Print the received data on the sreen.  - Rafael Sampaio
-        self.update_alert_message_on_screen(payload)
-        log.msg("Received from client %s"%(payload))
+    def dataReceived(self, data):        
 
-        action, topic_title, content = extract_mqtt_contents(payload)
-        print(topic_title)
+        self.put_package_in_buffer(data)
 
-        if action == "publish":
+        for package in self._buffer:
 
-            topic = self.getTopic(topic_title)
-            is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self)
-            package = self.build_package("MQTT_ACK")
-            self.send(package)
-            self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
+            destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
+            # Print the received data on the sreen.  - Rafael Sampaio
+            self.update_alert_message_on_screen(payload)
+            #log.msg("Received from client %s"%(payload))
 
-        elif action == "subscribe":
-            print("tem subscriber")
+            action, topic_title, content = extract_mqtt_contents(payload)
+        
+            if action == "publish":
+
+                topic = self.getTopic(topic_title)
+                is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self)
+                response_package = self.build_package("MQTT_ACK")
+                self.send(response_package)
+                self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
+
+                self._buffer.remove(package)
+
+                #SEND TO ALL
+
+            elif action == "subscribe":
+                topic = self.getTopic(topic_title)
+                is_register_subscriber = self.verify_if_a_subscriber_already_in_subscribers_list(topic, self)
+                response_package = self.build_package("MQTT_ACK")
+                self.send(response_package)
+                self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
+
+                self._buffer.remove(package)
+
+
+            print(self._buffer)
 
 
 
@@ -161,7 +184,6 @@ class BrokerApp(StandardApplicationComponent):
                 return topic
 
     def verify_if_a_publisher_already_in_publishers_list(self, topic, publisher_protocol):
-        log.msg("ENTROUUUUUUUU")
         try:
             # Verify if is some publicher connected - Rafael Sampaio
             if len(topic.publishers)>0:
@@ -185,7 +207,6 @@ class BrokerApp(StandardApplicationComponent):
 
 
     def verify_if_a_subscriber_already_in_subscribers_list(self, topic, subscribe_protocol):
-        log.msg("ENTROUUUUUUUU subscriber")
         try:
             # Verify if is some subscriber connected - Rafael Sampaio
             if len(topic.subscribers)>0:
