@@ -1,6 +1,3 @@
-
-SERVER_PORT = 5000
-SERVER_ADDR = "127.0.0.1"
  
 from twisted.internet import protocol, reactor
 from applications.applicationcomponent import StandardApplicationComponent

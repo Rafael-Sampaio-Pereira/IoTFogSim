@@ -9,7 +9,7 @@
             "type": "client",
             "is_wireless": false,
             "application": "applications.mqttapp.SubscriberApp",
-            "x": 450,
+            "x": 550,
             "y": 175
         },
         { 

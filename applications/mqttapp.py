@@ -57,7 +57,7 @@ class PublisherApp(StandardApplicationComponent):
             destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
             # Print the received data on the sreen.  - Rafael Sampaio
             self.update_alert_message_on_screen(payload)
-            log.msg("PUBLISHER Received from broker %s"%(payload))
+            #log.msg("PUBLISHER Received from broker %s"%(payload))
             #self.simulation_core.updateEventsCounter("MQTT response received")
 
 class SubscriberApp(StandardApplicationComponent):
@@ -109,7 +109,7 @@ class SubscriberApp(StandardApplicationComponent):
             destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
             # Print the received data on the sreen.  - Rafael Sampaio
             self.update_alert_message_on_screen(payload)
-            log.msg("SUBSCRIBER Received from broker %s"%(payload))
+            #log.msg("SUBSCRIBER Received from broker %s"%(payload))
             #self.simulation_core.updateEventsCounter("MQTT response received")
 
     
@@ -128,7 +128,7 @@ class BrokerProtocol(StandardApplicationComponent):
         self.destiny_port = None
 
         self.router_addr = "127.0.0.1"
-        self.router_port = 80
+        self.router_port = 8081
 
         self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
@@ -163,11 +163,12 @@ class BrokerProtocol(StandardApplicationComponent):
             #log.msg("Received from client %s"%(payload))
 
             action, topic_title, content = extract_mqtt_contents(payload)
+
+            topic = self.getTopic(topic_title)
         
             if action == "publish":
                 print("AQUIIIIIIIIIIIIIIIII")
-                topic = self.getTopic(topic_title)
-                is_register_publisher = self.verify_if_a_publisher_already_in_publishers_list(topic, self)
+                
                 
                 self.destiny_addr = source_addr
                 self.destiny_port = source_port
@@ -181,32 +182,36 @@ class BrokerProtocol(StandardApplicationComponent):
                 self.send(response_package)
                 #self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
 
-                self._buffer.remove(package)
 
-                #SEND TO ALL
-                #topic.send_to_all_subscribers(package)
+
+                falta salvar o SUBSCRIBER NA LISTA E ENVIAR MENSAGENS PRA ELE
+
+                subscribers_list = list(map(str, topic.subscribers))
+                print(subscribers_list)
+                for subscriber in subscribers_list:
+  
+                    destiny_info = subscriber.split(':')
+
+                    print(destiny_info)
+                    
+
+
 
             elif action == "subscribe":
-                topic = self.getTopic(topic_title)
-                is_register_subscriber = self.verify_if_a_subscriber_already_in_subscribers_list(topic,  self)
-                
-                
+
+                subscriber = source_addr+":"+str(source_port)
+                topic.subscribers.append(subscriber)
+
                 self.destiny_addr = source_addr
                 self.destiny_port = source_port
                 
                 
                 response_package = self.build_package("MQTT_ACK"+str(round(random.uniform(2.5,22.5), 2)))
 
-
-                #print(response_package)
-
                 self.send(response_package)
                 #self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
 
                 self._buffer.remove(package)
-
-
-            #print(self._buffer)
 
 
 
@@ -216,50 +221,7 @@ class BrokerProtocol(StandardApplicationComponent):
             if topic.title == topic_title:
                 return topic
 
-    def verify_if_a_publisher_already_in_publishers_list(self, topic, publisher_protocol):
-        try:
-            # Verify if is some publicher connected - Rafael Sampaio
-            if len(topic.publishers)>0:
-                for publisher in topic.publishers:
-                    # verify if the connected publisher protocol already in the topic publishers list - Rafael Sampaio
-                    if self == publisher:
-                        return True
-                    # if the connected publisher protocol is not in the publishers list, register it in that list - Rafael Sampaio  
-                    else:
-                        topic.register_publisher(publisher_protocol)
-                        log.msg("Publisher registred")
-                        return True
-            # if there is no connected publisher protocol in the publishers list, register the connected protocol in the list in that list - Rafael Sampaio  
-            else:
-                topic.register_publisher(publisher_protocol)
-                log.msg("Publisher registred")
-                return True
-
-        except Exception as e:
-            print(e)
-
-
-    def verify_if_a_subscriber_already_in_subscribers_list(self, topic, subscriber_protocol):
-        try:
-            # Verify if is some subscriber connected - Rafael Sampaio
-            if len(topic.subscribers)>0:
-                for subscriber in topic.subscribers:
-                    # verify if the connected subscriber protocol already in the topic subscribers list - Rafael Sampaio
-                    if self == subscriber:
-                        return True
-                    # if the connected subscriber protocol is not in the subscribers list, register it in that list - Rafael Sampaio  
-                    else:
-                        topic.register_subscriber(subscriber_protocol)
-                        log.msg("subscriber registred")
-                        return True
-            # if there is no connected subscriber protocol in the subscribers list, register the connected protocol in the list in that list - Rafael Sampaio  
-            else:
-                topic.register_subscriber(subscriber_protocol)
-                log.msg("subscriber registred")
-                return True
-
-        except Exception as e:
-            print(e)
+  
 
 
 
@@ -307,14 +269,14 @@ class MqttTopic(object):
         self.title = title
         self.description = description
         self.publishers = []
-        self.subscribers = []
+        self.subscribers = [""]
 
     
-    def register_publisher(self, publisher_protocol):
-        self.publishers.append(publisher_protocol)
+    def register_publisher(self, publisher):
+        self.publishers.append(publisher)
 
-    def register_subscriber(self, subscriber_protocol):
-        self.subscribers.append(subscriber_protocol)
+    def register_subscriber(self, subscriber):
+        self.subscribers.append(subscriber)
     
     def send_to_all_subscribers(self, package):
         for subscriber in self.subscribers:
@@ -329,15 +291,7 @@ class BrokerFactory(protocol.ServerFactory):
     def __init__(self):
         self.clients = []
 
-    # def buildProtocol(self, addr):
-    #     try:
-    #         protocol.factory = self
-    #         proto = protocol.ServerFactory.buildProtocol(self, addr)
-    #         self.connectedProtocol = proto
-    #         return proto
-    #     except Exception as e:
-    #         log.msg("Error: %s"%str(e))
-
-
 
 MQTT_ACK = {"action": "response", "topic": "sensor_metering", "content": "MQTT_ACK"}
+
+
