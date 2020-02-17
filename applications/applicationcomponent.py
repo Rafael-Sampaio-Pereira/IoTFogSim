@@ -21,7 +21,7 @@ class StandardApplicationComponent(protocol.Protocol):
         }
 
         package = json.dumps(package)
-        package = package+"\n"
+        package = package
         msg_bytes, _ = codecs.escape_decode(package, 'utf8')
         return msg_bytes
 
@@ -40,6 +40,9 @@ class StandardApplicationComponent(protocol.Protocol):
     def update_alert_message_on_screen(self, msg):
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(msg))
 
+    def update_name_on_screen(self, msg):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(msg))
+
     def connectionFailed(self, reason):
         log.msg('connection failed:', reason.getErrorMessage())
         self.simulation_core.updateEventsCounter("Connection failed")
@@ -49,7 +52,7 @@ class StandardApplicationComponent(protocol.Protocol):
         self.simulation_core.updateEventsCounter("connection lost")
 
     def send(self, message):
-        self.transport.write(message)
+        self.transport.write(message+b"\n")
 
     def put_package_in_buffer(self, data):
         if data.endswith(b"\n"):
@@ -57,3 +60,4 @@ class StandardApplicationComponent(protocol.Protocol):
             for package in packages:
                 if package != b'':
                     self._buffer.append(package)
+

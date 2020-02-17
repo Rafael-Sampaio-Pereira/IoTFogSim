@@ -20,8 +20,11 @@ from scinetsim.functions import import_and_instantiate_class_from_string
 
 class StandardServerDevice(object):
     
-    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
-        self.real_ip = real_ip
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
+
+        self.application = import_and_instantiate_class_from_string(application)
+        self.addr = real_ip
+        self.port = port
         self.simulation_ip = simulation_ip
         
         icon_file = getIconFileName(icon)
@@ -38,18 +41,22 @@ class StandardServerDevice(object):
         self.network_component = StandardServerNetworkComponent(self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Server")
 
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
-        endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
+        self.application.start(self.addr, self.port)
+        #endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
 
 
 class StandardClientDevice(object):
     
     def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
-        self.real_ip = real_ip
+        self.addr = real_ip
         self.simulation_ip = simulation_ip
 
         icon_file = getIconFileName(icon)
@@ -99,6 +106,7 @@ class Router(object):
         self. y = y
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        #self.network_component = RouterNetworkComponent(self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Router")
 
         self.application.visual_component = self.visual_component

@@ -19,6 +19,7 @@
             "real_ip": "127.0.0.1",
             "icon": "server_icon",
             "type": "server",
+            "port": 5000,
             "is_wireless": false,
             "application": "applications.mqttapp.BrokerApp",
             "x": 250,
