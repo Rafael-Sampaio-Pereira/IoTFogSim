@@ -32,8 +32,6 @@ class VisualComponent(object):
 
         self.image_file = ImageTk.PhotoImage(file=file)
         self.draggable_img = self.simulation_core.canvas.create_image(x, y, image=self.image_file)
-        #self.draggable_img = tkinter.Label(self.canvas,image=self.image_file, borderwidth=0, highlightthickness=0)
-        #self.draggable_img.image = self.image_file
 
         self.draggable_name = self.simulation_core.canvas.create_text(x,y+22,fill="black",font="Arial 7",
                         text=deviceName)

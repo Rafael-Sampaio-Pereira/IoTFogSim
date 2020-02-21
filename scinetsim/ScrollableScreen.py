@@ -24,9 +24,8 @@ class ScrollableScreen(tkinter.Frame):
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-       
-        self.canvas.create_text(50,10, anchor="nw", 
-                                text="Click and drag to move the canvas")
+        self.canvas.create_text(50,10, anchor="nw", text="Events: ")
+        self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
 
         # This is what enables scrolling with the mouse:
         self.canvas.bind("<ButtonPress-2>", self.scroll_start)

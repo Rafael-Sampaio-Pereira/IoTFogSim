@@ -16,17 +16,19 @@ class SimulationCore(object):
 		self.allFogNodes = defaultdict(list)
 		self.allCloudNodes = defaultdict(list)
 		self.allAccessPointNodes = defaultdict(list)
-		#allRoutersNodes = defaultdict(list)
 		self.allIoTNodes = defaultdict(list)
 		self.allRouterNodes = defaultdict(list)
 
 		self.canvas = None
+		self.simulation_screen = None
 
 		self.eventsCounter = 0
 
 	def updateEventsCounter(self, event_description):
 		self.eventsCounter = self.eventsCounter + 1
 		log.msg(event_description+" - Number of events: %i" %(self.eventsCounter))
+		# Updates events counter value on screen - Rafael Sampaio
+		self.canvas.itemconfig(self.simulation_screen.events_counter_label, text=str(self.eventsCounter))
 
 	def getFogNodeById(self, id):
 		try:
@@ -141,9 +143,9 @@ class SimulationCore(object):
 		window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
 		
 		# Simulation area on screen. - Rafael Sampaio
-		simulation_screen = ScrollableScreen(window)
-		simulation_screen.pack(fill="both", expand=True)
-		canvas = simulation_screen.getCanvas()
+		self.simulation_screen = ScrollableScreen(window)
+		self.simulation_screen.pack(fill="both", expand=True)
+		canvas = self.simulation_screen.getCanvas()
 
 		self.canvas = canvas
 
