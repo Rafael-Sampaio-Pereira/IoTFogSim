@@ -38,7 +38,7 @@ class StandardServerDevice(object):
         self.name = name
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        self.network_component = StandardServerNetworkComponent(self.visual_component, self.simulation_core, application)
+        #self.network_component = StandardServerNetworkComponent(self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Server")
 
         self.application.visual_component = self.visual_component

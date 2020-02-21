@@ -2,12 +2,7 @@ from twisted.internet import protocol, reactor
 from twisted.python import log
 import json
 import codecs
-import random
-import sys
-import os
-
-from twisted.internet import reactor, protocol, endpoints
-from twisted.protocols import basic
+import random 
 
 from applications.applicationcomponent import StandardApplicationComponent
 
@@ -22,7 +17,7 @@ class PublisherApp(StandardApplicationComponent):
         self.source_port = None
 
         self.destiny_addr = "127.0.0.1"
-        self.destiny_port = 5100 
+        self.destiny_port = 5000 
 
         self.router_addr = "127.0.0.1"
         self.router_port = 8081
@@ -75,7 +70,7 @@ class SubscriberApp(StandardApplicationComponent):
         self.source_port = None
 
         self.destiny_addr = "127.0.0.1"
-        self.destiny_port = 5100 
+        self.destiny_port = 5000 
 
         self.router_addr = "127.0.0.1"
         self.router_port = 8081
@@ -123,11 +118,8 @@ class SubscriberApp(StandardApplicationComponent):
 class BrokerProtocol(StandardApplicationComponent):
     
     def __init__(self):
-
-        self.factory = None
-
-        self.visual_component = None
-        self.simulation_core = None
+        self.visual_component = self.factory.visual_component
+        self.simulation_core = self.factory.simulation_core
 
         self.source_addr = "127.0.0.1"
         self.source_port = 5000 
@@ -140,93 +132,124 @@ class BrokerProtocol(StandardApplicationComponent):
 
         self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
+        self.topics = []
+        self._buffer = []
+        self.factory = None
+
+        sensor_metering = MqttTopic("sensor_metering","A topic for environment sensor monitoring")
+        self.topics.append(sensor_metering)
+
         
-        self._buffer = None
 
     def connectionMade(self):
-        pass
-        #self.update_name_on_screen(self.transport.getHost().host+":"+str(self.transport.getHost().port))
-        #self.simulation_core.updateEventsCounter("Connection received")
+        self.update_name_on_screen(self.transport.getHost().host+":"+str(self.transport.getHost().port)) 
         
-    def dataReceived(self, data):      
+        #self.simulation_core.updateEventsCounter("Connection received")
+        #self.send(b"test data")
+        
+    def dataReceived(self, data): 
+        
+        #print(self.transport.getPeer)       
 
         self.put_package_in_buffer(data)
 
+        for package in self._buffer:
+
+            #print(package)
+
+            destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
+            # Print the received data on the sreen.  - Rafael Sampaio
+            self.update_alert_message_on_screen(payload)
+            #log.msg("Received from client %s"%(payload))
+
+            action, topic_title, content = extract_mqtt_contents(payload)
+
+            topic = self.getTopic(topic_title)
+        
+            if action == "publish":
+                print("AQUIIIIIIIIIIIIIIIII")
+                
+                
+                self.destiny_addr = source_addr
+                self.destiny_port = source_port
+                
+
+                response_package = self.build_package("MQTT_ACK")
+
+
+                #print("RESPONDENDO->> %s"%(str(response_package)))
+
+                self.send(response_package)
+                #self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
 
 
 
+                #falta salvar o SUBSCRIBER NA LISTA E ENVIAR MENSAGENS PRA ELE
+
+                print(len(topic.subscribers))
+                subscribers_list = list(map(str, topic.subscribers))
+                print(subscribers_list)
+                for subscriber in subscribers_list:
+  
+                    destiny_info = subscriber.split(':')
+
+                    print(destiny_info)
+                    
+
+
+
+            elif action == "subscribe":
+
+                subscriber = source_addr+":"+str(source_port)
+                topic.subscribers.append(subscriber)
+
+                print(len(topic.subscribers))
+                print(topic.subscribers)
+
+                self.destiny_addr = source_addr
+                self.destiny_port = source_port
+                
+                
+                response_package = self.build_package("MQTT_ACK"+str(round(random.uniform(2.5,22.5), 2)))
+
+                self.send(response_package)
+                #self.simulation_core.updateEventsCounter("Sending MQTT RESPONSE")
+
+                self._buffer.remove(package)
+
+
+
+    def getTopic(self, topic_title):
+
+        for topic in self.topics:
+            if topic.title == topic_title:
+                return topic
+
+  
 
 
 
 class BrokerApp:
+    
+    def __init__(self):
+        self.all_connectors_list = []
+        self.visual_component = None
+        self.simulation_core = None
 
     def start(self, addr, port):
-        endpoints.serverFromString(reactor, "tcp:interface={}:{}".format(addr, port)).listen(PubFactory())
+        try:
+            factory = BrokerFactory()
+            factory.protocol.noisy = False
+            #factory.protocol = BrokerProtocol
+            factory.protocol.factory = factory
+            factory.simulation_core = self.simulation_core
+            factory.visual_component = self.visual_component
+            factory.all_connectors_list = self.all_connectors_list
+            reactor.listenTCP(port, factory, interface=addr)
 
+        except Exception as e:
+            log.msg("Error: %s" % str(e))
 
-    
-
-
-class PubProtocol(StandardApplicationComponent):
-    def __init__(self, factory):
-        self.factory = factory
-
-    def connectionMade(self):
-        # self.factory.clients.add(self)
-        for c in self.factory.clients:
-            self.source_addr = c.transport.getHost().host
-            self.source_port = c.transport.getHost().port
-            self.destiny_addr = c.transport.getPeer().host
-            self.destiny_port = c.transport.getPeer().port
-            #source = "<{}> ".format(self.transport.getHost()).encode("ascii")
-            response_package = self.build_package("MQTT_ACK")
-            
-            c.send(response_package)
-
-    def connectionLost(self, reason):
-        self.factory.clients.remove(self)
-
-    def dataReceived(self, package):
-
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
-        # Print the received data on the sreen.  - Rafael Sampaio
-        #self.update_alert_message_on_screen(payload)
-
-        action, topic_title, content = extract_mqtt_contents(payload)
-
-        if action == "subscribe":
-            self.factory.clients.add(self)
-            self.send_mqtt_acknowledgement(source_addr, source_port)
-
-        elif action == "publish":
-            # send ack to the sender of the received package - Rafael Sampaio
-            self.send_mqtt_acknowledgement(source_addr, source_port)
-            self.send_package_to_all_subscribers(package)
-
-    def send_package_to_all_subscribers(self, package):
-        
-        for c in self.factory.clients:
-            self.source_addr = c.transport.getHost().host
-            self.source_port = c.transport.getHost().port
-            self.destiny_addr = c.transport.getPeer().host
-            self.destiny_port = c.transport.getPeer().port
-
-            c.send(package)
-
-    def send_mqtt_acknowledgement(self, destiny_addr, destiny_port):
-        self.destiny_addr = destiny_addr
-        self.destiny_port = destiny_port
-        self.source_addr = self.transport.getHost().host
-        self.source_port = self.transport.getHost().port
-        response_package = self.build_package("MQTT_ACK")
-        self.send(response_package)
-
-class PubFactory(protocol.Factory):
-    def __init__(self):
-        self.clients = set()
-
-    def buildProtocol(self, addr):
-        return PubProtocol(self)
 
 
 def extract_mqtt_contents(package):
@@ -241,8 +264,41 @@ def extract_mqtt_contents(package):
     
     except Exception as e:
         log.msg(e)
+        
+    
+
+class MqttTopic(object):
+    
+    def __init__(self, title, description):
+        self.title = title
+        self.description = description
+        self.publishers = []
+        self.subscribers = []
 
     
+    def register_publisher(self, publisher):
+        self.publishers.append(publisher)
+
+    def register_subscriber(self, subscriber):
+        self.subscribers.append(subscriber)
+    
+    def send_to_all_subscribers(self, package):
+        for subscriber in self.subscribers:
+            subscriber.send(package)
+
+
+
+
+
+
+
+class BrokerFactory(protocol.ServerFactory):
+    protocol = BrokerProtocol
+
+    def __init__(self):
+        self.clients = []
+
+
 MQTT_ACK = {"action": "response", "topic": "sensor_metering", "content": "MQTT_ACK"}
 
 
