@@ -13,6 +13,18 @@
             "y": 175
         },
         { 
+            "id": 10,
+            "name": "Fog Subscriber Node", 
+            "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "icon": "server_icon",
+            "type": "client",
+            "is_wireless": false,
+            "application": "applications.mqttapp.SubscriberApp",
+            "x": 550,
+            "y": 375
+        },
+        { 
             "id": 2,
             "name": "Fog Broker Node", 
             "simulation_ip": "192.121.0.1",
@@ -41,6 +53,18 @@
             "application": "applications.mqttapp.PublisherApp",
             "x": 170,
             "y": 380
+        },
+        {
+            "id": 14,
+            "name": "Arduino based sensor (publisher node)", 
+            "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "icon": "arduino_uno_icon",
+            "type": "client",
+            "is_wireless": false,
+            "application": "applications.mqttapp.PublisherApp",
+            "x": 370,
+            "y": 395
         }
     ],
     "access_points": [

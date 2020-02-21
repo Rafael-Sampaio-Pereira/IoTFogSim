@@ -12,17 +12,9 @@ from scinetsim.configurations import config
 from scinetsim.configurations import  load_nodes
 
 
-
-
 def main():
 
 	config()
-
-
-	
-			
-
-
 
 
 if __name__ == '__main__':

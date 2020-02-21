@@ -18,10 +18,8 @@ class SimulationCore(object):
 		self.allAccessPointNodes = defaultdict(list)
 		self.allIoTNodes = defaultdict(list)
 		self.allRouterNodes = defaultdict(list)
-
 		self.canvas = None
 		self.simulation_screen = None
-
 		self.eventsCounter = 0
 
 	def updateEventsCounter(self, event_description):
