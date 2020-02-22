@@ -15,6 +15,8 @@ from tkinter import ttk
 from tkinter import messagebox
 from config.settings import version
 
+from scinetsim.functions import configure_logger
+
 def config():
 	# para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
 	# que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
@@ -42,19 +44,27 @@ def initialization_screen(simulation_core):
 		return [f.name for f in os.scandir(directory) if f.is_dir() ]
 
 	def open_project(window, simulation_core):
-	    selected_project_name = cmb_projects_list.get()
-	    messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
-	    
-	    simulation_core.create_simulation_canvas()
-	    load_nodes(selected_project_name, simulation_core)
-	    load_connections(selected_project_name, simulation_core)
+			selected_project_name = cmb_projects_list.get()
+			messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
 
-	    window.destroy()
-	    window.update()
+			# Configuring log - Rafael Sampaio
+			log_path = "projects/"+selected_project_name+"/"
+			configure_logger(log_path, selected_project_name)
+
+			simulation_core.create_simulation_canvas()
+			load_nodes(selected_project_name, simulation_core)
+			load_connections(selected_project_name, simulation_core)
+
+			window.destroy()
+			window.update()
 
 	def creat_project(window,new_project_name, simulation_core):
 		try:
 			os.makedirs("projects/%s"%(new_project_name))
+
+			# Configuring log - Rafael Sampaio
+			log_path = "projects/"+new_project_name+"/"
+			configure_logger(log_path, new_project_name)
 
 			# creating the nodes.js file into the project directory - Rafael Sampaio
 			nodes_file = "projects/%s/nodes.js"%(new_project_name)
