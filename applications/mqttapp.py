@@ -127,10 +127,12 @@ class BrokerApp:
         self.simulation_core =  None
 
     def start(self, addr, port):
+        broker_factory = BrokerFactory(self.visual_component, self.simulation_core)
+        broker_factory.noisy = False
         # starting message broker server - Rafael Sampaio
-        endpoints.serverFromString(reactor, "tcp:interface={}:{}".format(addr, port)).listen(BrokerFactory(self.visual_component, self.simulation_core))
+        endpoints.serverFromString(reactor, "tcp:interface={}:{}".format(addr, port)).listen(broker_factory)
         # updating broker name (ip:port) on screen - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(addr+str(port))) 
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(addr+":"+str(port))) 
 
 class BrokerProtocol(StandardApplicationComponent):
     def __init__(self, factory):
@@ -152,7 +154,6 @@ class BrokerProtocol(StandardApplicationComponent):
 
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
         # Print the received data on the sreen.  - Rafael Sampaio
-        #self.update_alert_message_on_screen(payload)
 
         action, topic_title, content = extract_mqtt_contents(payload)
 

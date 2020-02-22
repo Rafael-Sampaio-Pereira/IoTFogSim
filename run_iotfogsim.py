@@ -18,6 +18,7 @@ def main():
 
 
 if __name__ == '__main__':
+    log.discardLogs()
     log.startLogging(sys.stdout)
     main()
     reactor.run()

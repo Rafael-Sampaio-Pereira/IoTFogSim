@@ -50,7 +50,6 @@ class StandardServerDevice(object):
 
     def run(self):
         self.application.start(self.addr, self.port)
-        #endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
 
 
 class StandardClientDevice(object):
