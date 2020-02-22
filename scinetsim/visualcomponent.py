@@ -37,7 +37,7 @@ class VisualComponent(object):
                         text=deviceName)
 
         self.draggable_alert = self.simulation_core.canvas.create_text(x,y-22,fill="black",font="Times 7",
-                        text="alert")
+                        text="")
         # font="Times 9 italic bold"
         
         simulation_core.canvas.tag_bind(self.draggable_alert, '<Button1-Motion>', self.move)
