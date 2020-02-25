@@ -3,6 +3,10 @@ from twisted.internet import protocol, reactor
 from applications.applicationcomponent import StandardApplicationComponent
 from twisted.internet.endpoints import TCP4ServerEndpoint
 
+from twisted.internet.endpoints import TCP4ClientEndpoint
+from twisted.internet.protocol import ClientFactory
+from twisted.internet.endpoints import connectProtocol
+
 protocol.ServerFactory.noisy = False
 
 class RouterApp:
@@ -30,15 +34,14 @@ class RouterApp:
         listenStarting = endpoint.listen(self.router_factory)
 
         #reactor.listenTCP(port, factory, interface=addr)
-        
+
 
         def save_protocol(p):
 
             # create a simple connection just to start the factory listen_potocol - Rafael_sampaio
-            from twisted.internet.endpoints import TCP4ClientEndpoint
-            from twisted.internet.protocol import ClientFactory
             endpoint = TCP4ClientEndpoint(reactor, addr, port)
             factory = ClientFactory()
+            factory.noisy = False
             factory.protocol = protocol.Protocol
             whenConnected = endpoint.connect(factory)
 
@@ -52,12 +55,6 @@ class RouterApp:
 
             whenConnected.addCallbacks(cbConnected, ebConnectError)
 
-
-
-            print(self.router_factory.listen_protocol)
-            #self.simulation_core.allProtocols.add(self.router_factory.listen_protocol)
-
-        #factory.addCallbacks(self.save_protocol_in_simulation_core(self))
         listenStarting.addCallback(save_protocol)
 
 
@@ -72,12 +69,51 @@ class RouterAppProtocol(StandardApplicationComponent):
         self.simulation_core =  None
     
     def dataReceived(self, data):
+        # factory = protocol.ClientFactory()
+        # factory.noisy = False
+        # factory.protocol = ClientProtocol
+        # factory.server = self
+        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
+        # reactor.connectTCP(destiny_addr, destiny_port, factory)
+
+        
+        # endpoint = TCP4ClientEndpoint(reactor, destiny_port, destiny_port)
+        # factory = protocol.ClientFactory()
+        # factory.protocol = ClientProtocol
+        # whenConnected = endpoint.connect(factory)
+
+        # def cbConnected(connectedProtocol):
+        #     print("PELO MENOS CHEGOU AQUI")
+        #     self.simulation_core.allProtocols.add(connectedProtocol)
+
+        # def ebConnectError(reason):
+        #     print("NAO FOI POSSIVEL CONNECTAR AO broker")
+
+        # whenConnected.addCallbacks(cbConnected, ebConnectError)
+
+
+        def save_protocol(proto):
+            print("PELO MENOS CHEGOU AQUI")
+            
+            self.simulation_core.allProtocols.add(proto)
+            proto.create_connection_animation()
+
+
         factory = protocol.ClientFactory()
         factory.noisy = False
-        factory.protocol = ClientProtocol
+
+        cur_protocol = ClientProtocol()
+        cur_protocol.visual_component = self.visual_component
+        cur_protocol.simulation_core = self.simulation_core
+        factory.protocol = cur_protocol
+        cur_protocol.factory = factory
         factory.server = self
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
-        reactor.connectTCP(destiny_addr, destiny_port, factory)
+        point = TCP4ClientEndpoint(reactor, destiny_addr, destiny_port)
+        d = connectProtocol(point, cur_protocol)
+        d.addCallback(save_protocol)
+
+
+        
 
         if self.client:
             self.client.write(data)
@@ -87,12 +123,9 @@ class RouterAppProtocol(StandardApplicationComponent):
     def write(self, data):
         self.transport.write(data)
 
-    
-       
 
     def connectionMade(self):
-        # updating broker name (ip:port) on screen - Rafael Sampaio
-        #self.update_name_on_screen(addr+":"+str(port))
+        
         self.save_protocol_in_simulation_core(self)
       
         
@@ -107,11 +140,6 @@ class RouterFactory(protocol.Factory):
         self.simulation_core = simulation_core
         self.listen_protocol = None
 
-    # def buildProtocol(self, addr):
-        # self.listen_protocol = RouterAppProtocol(self)
-        # return self.listen_protocol
-
-
     def buildProtocol(self, address):
         proto = protocol.ServerFactory.buildProtocol(self, address)
         self.listen_protocol = proto
@@ -124,7 +152,7 @@ class ClientProtocol(StandardApplicationComponent):
         self.factory.server.client = self
         self.write(self.factory.server.buffer)
         self.factory.server.buffer = ''
-        #self.create_connection_animation()
+        
 
     def dataReceived(self, data):
         self.factory.server.write(data)
