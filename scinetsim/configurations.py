@@ -53,7 +53,7 @@ def initialization_screen(simulation_core):
 
 			simulation_core.create_simulation_canvas()
 			load_nodes(selected_project_name, simulation_core)
-			load_connections(selected_project_name, simulation_core)
+			#load_connections(selected_project_name, simulation_core)
 
 			window.destroy()
 			window.update()
@@ -116,9 +116,6 @@ def initialization_screen(simulation_core):
 	btn_new.place(relx="0.2",rely="0.4")
 
 
-
-
-
 def load_nodes(project_name, simulation_core):
 
 	allWirelessConnections = []
@@ -132,7 +129,6 @@ def load_nodes(project_name, simulation_core):
 			for router in data['routers']:
 
 				log.msg("Creating router ...")
-				#print(router['icon'])
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'])
 				simulation_core.appendRouterNodes(rt)
 				rt.run()
@@ -142,7 +138,7 @@ def load_nodes(project_name, simulation_core):
 				log.msg("Creating AccessPoint station ...")
 				
 				ap = AccessPoint(simulation_core, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
-				simulation_core.appendAccessPointNode(iot)
+				simulation_core.appendAccessPointNode(ap)
 		
 			for fog_node in data['fog_nodes']:
 				
@@ -203,17 +199,17 @@ def load_nodes(project_name, simulation_core):
 				
 
 
-def load_connections(project_name, simulation_core):
+# def load_connections(project_name, simulation_core):
 
 
-	with open('projects/'+project_name+'/connections.js') as connections_file:
-		data = json.load(connections_file)
+# 	with open('projects/'+project_name+'/connections.js') as connections_file:
+# 		data = json.load(connections_file)
 		
-		if data:
-			for connection in data['connections']:
+# 		if data:
+# 			for connection in data['connections']:
 				
-				log.msg("Creating connections ...")
+# 				log.msg("Creating connections ...")
 
-				con = Connection(simulation_core, connection['id_device_1'], connection['id_device_2'])
+# 				con = Connection(simulation_core, connection['id_device_1'], connection['id_device_2'])
 
-				simulation_core.appendConnections(con)
+# 				simulation_core.appendConnections(con)
