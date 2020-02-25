@@ -2,6 +2,8 @@ from twisted.internet import protocol
 from twisted.python import log
 import json
 import codecs
+from scinetsim.standarddevice import Connection
+
 
 class StandardApplicationComponent(protocol.Protocol):
     
@@ -9,6 +11,7 @@ class StandardApplicationComponent(protocol.Protocol):
         self.visual_component = None
         self.simulation_core =  None
         self.network_settings = None
+
         
     def build_package(self, payload):
         package = {
@@ -60,4 +63,17 @@ class StandardApplicationComponent(protocol.Protocol):
             for package in packages:
                 if package != b'':
                     self._buffer.append(package)
+
+    
+    def save_protocol_in_simulation_core(self, proto):
+        if self.simulation_core:
+            self.simulation_core.allProtocols.add(proto)
+            print(self.simulation_core.allProtocols)
+        else:
+            print("This divice have no simulation core instance")
+
+    def create_connection_animation(self):
+        # this method can only be called on the connectionMade method of the clients devices. do not use that in servers instances - Rafael Sampaio
+        con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
+        self.simulation_core.appendConnections(con)
 

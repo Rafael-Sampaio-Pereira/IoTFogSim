@@ -12,6 +12,7 @@ from twisted.protocols import basic
 from applications.applicationcomponent import StandardApplicationComponent
 
 
+
 class PublisherApp(StandardApplicationComponent):
     
     def __init__(self):
@@ -35,6 +36,7 @@ class PublisherApp(StandardApplicationComponent):
         self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
 
     def connectionMade(self):
+        
         # Getting ip and port of the subscriber protocol to compose its name - Rafael Sampaio
         self.screen_name = self.transport.getHost().host+":"+str(self.transport.getHost().port)
         self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
@@ -42,7 +44,10 @@ class PublisherApp(StandardApplicationComponent):
         self.source_port = self.transport.getHost().port
         # After connect, send the first publish message with topic and value. it's not a simple connect mesage, it's fisrt data to a topic - Rafael Sampaio
         self.publish()
-        self.update_name_on_screen(self.screen_name)          
+        self.update_name_on_screen(self.screen_name)
+        self.save_protocol_in_simulation_core(self) 
+        
+        self.create_connection_animation()  
 
     def publish(self):
                 
@@ -89,13 +94,17 @@ class SubscriberApp(StandardApplicationComponent):
         self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
 
     def connectionMade(self):
+
         self.screen_name = self.transport.getHost().host+":"+str(self.transport.getHost().port)
         self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
         # After connect, send the subscribe request - Rafael Sampaio
         self.subscribe()
-        self.update_name_on_screen(self.screen_name)       
+        self.update_name_on_screen(self.screen_name)
+        self.save_protocol_in_simulation_core(self) 
+
+        self.create_connection_animation()    
 
     def subscribe(self):
                 
@@ -127,6 +136,7 @@ class BrokerApp:
         self.simulation_core =  None
 
     def start(self, addr, port):
+        
         broker_factory = BrokerFactory(self.visual_component, self.simulation_core)
         broker_factory.noisy = False
         # starting message broker server - Rafael Sampaio
@@ -137,18 +147,23 @@ class BrokerApp:
 class BrokerProtocol(StandardApplicationComponent):
     def __init__(self, factory):
         self.factory = factory
+        
 
+    def connectionLost(self, reason):
+        self.factory.subscribers.remove(self)
+    
     def connectionMade(self):
-        #for subscriber in self.factory.subscribers:
+        self.visual_component = self.factory.visual_component
+        self.simulation_core =  self.factory.simulation_core
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
         self.destiny_addr = self.transport.getPeer().host
         self.destiny_port = self.transport.getPeer().port
         response_package = self.build_package("MQTT_ACK")
         self.send(response_package)
+        self.save_protocol_in_simulation_core(self)
 
-    def connectionLost(self, reason):
-        self.factory.subscribers.remove(self)
+        
 
     def dataReceived(self, package):
 

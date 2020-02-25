@@ -1,0 +1,172 @@
+2020-02-25T10:49:45-0300 [-] Creating router ...
+2020-02-25T10:49:45-0300 [-] Initializing Router - Number of events: 1
+2020-02-25T10:49:45-0300 [-] ServerFactory starting on 8081
+2020-02-25T10:49:45-0300 [-] Creating fog node ...
+2020-02-25T10:49:45-0300 [stdout#info] applications.mqttapp.SubscriberApp
+2020-02-25T10:49:45-0300 [-] Initializing Client - Number of events: 2
+2020-02-25T10:49:45-0300 [-] Creating fog node ...
+2020-02-25T10:49:45-0300 [-] Initializing Server - Number of events: 3
+2020-02-25T10:49:45-0300 [-] BrokerFactory starting on 5100
+2020-02-25T10:49:45-0300 [-] Creating iot node ...
+2020-02-25T10:49:45-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-25T10:49:45-0300 [-] Initializing Client - Number of events: 4
+2020-02-25T10:49:45-0300 [-] Creating iot node ...
+2020-02-25T10:49:45-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-25T10:49:45-0300 [-] Initializing Client - Number of events: 5
+2020-02-25T10:49:45-0300 [stdout#info] This divice have no simulation core instance
+2020-02-25T10:49:45-0300 [stdout#info] This divice have no simulation core instance
+2020-02-25T10:49:45-0300 [stdout#info] This divice have no simulation core instance
+2020-02-25T10:49:45-0300 [stdout#info] {<applications.mqttapp.SubscriberApp object at 0x7fdff2d19668>}
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41600 - Connected to mqtt broker - Number of events: 6
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41600 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-02-25T10:49:45-0300 [stdout#info] {<applications.mqttapp.PublisherApp object at 0x7fdfeb8e7a20>, <applications.mqttapp.SubscriberApp object at 0x7fdff2d19668>}
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41602 - Connected to mqtt broker - Number of events: 8
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41602 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-02-25T10:49:45-0300 [stdout#info] {<applications.mqttapp.PublisherApp object at 0x7fdfeb8e7e10>, <applications.mqttapp.PublisherApp object at 0x7fdfeb8e7a20>, <applications.mqttapp.SubscriberApp object at 0x7fdff2d19668>}
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41604 - Connected to mqtt broker - Number of events: 10
+2020-02-25T10:49:45-0300 [Uninitialized] 127.0.0.1:41604 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-02-25T10:49:45-0300 [applications.mqttapp.BrokerFactory] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1427, in doRead
+	    self._buildAddr(addr))
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 203, in buildProtocol
+	    return BrokerProtocol(self)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 149, in __init__
+	    self.source_addr = self.transport.getHost().host
+	builtins.AttributeError: 'NoneType' object has no attribute 'getHost'
+	
+2020-02-25T10:49:45-0300 [applications.mqttapp.BrokerFactory] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1427, in doRead
+	    self._buildAddr(addr))
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 203, in buildProtocol
+	    return BrokerProtocol(self)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 149, in __init__
+	    self.source_addr = self.transport.getHost().host
+	builtins.AttributeError: 'NoneType' object has no attribute 'getHost'
+	
+2020-02-25T10:49:45-0300 [applications.mqttapp.BrokerFactory] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1427, in doRead
+	    self._buildAddr(addr))
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 203, in buildProtocol
+	    return BrokerProtocol(self)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 149, in __init__
+	    self.source_addr = self.transport.getHost().host
+	builtins.AttributeError: 'NoneType' object has no attribute 'getHost'
+	
+2020-02-25T10:49:48-0300 [-] Received SIGINT, shutting down.
+2020-02-25T10:49:48-0300 [twisted.internet.protocol.ServerFactory] (TCP Port 8081 Closed)
+2020-02-25T10:49:48-0300 [RouterApp,2,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [RouterApp,2,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 311, in addCallbacks
+	    self._runCallbacks()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 447, in _continueFiring
+	    callable(*args, **kwargs)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 706, in disconnectAll
+	    failure.Failure(main.CONNECTION_LOST))
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 327, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 53, in connectionLost
+	    self.simulation_core.updateEventsCounter("connection lost")
+	builtins.AttributeError: 'NoneType' object has no attribute 'updateEventsCounter'
+	
+2020-02-25T10:49:48-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-02-25T10:49:48-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [PublisherApp,client] connection lost - Number of events: 12
+2020-02-25T10:49:48-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [PublisherApp,client] connection lost - Number of events: 13
+2020-02-25T10:49:48-0300 [RouterApp,1,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [RouterApp,1,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 311, in addCallbacks
+	    self._runCallbacks()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 447, in _continueFiring
+	    callable(*args, **kwargs)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 706, in disconnectAll
+	    failure.Failure(main.CONNECTION_LOST))
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 327, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 53, in connectionLost
+	    self.simulation_core.updateEventsCounter("connection lost")
+	builtins.AttributeError: 'NoneType' object has no attribute 'updateEventsCounter'
+	
+2020-02-25T10:49:48-0300 [RouterApp,0,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [RouterApp,0,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 311, in addCallbacks
+	    self._runCallbacks()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 447, in _continueFiring
+	    callable(*args, **kwargs)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 706, in disconnectAll
+	    failure.Failure(main.CONNECTION_LOST))
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 327, in connectionLost
+	    protocol.connectionLost(reason)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 53, in connectionLost
+	    self.simulation_core.updateEventsCounter("connection lost")
+	builtins.AttributeError: 'NoneType' object has no attribute 'updateEventsCounter'
+	
+2020-02-25T10:49:48-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-25T10:49:48-0300 [SubscriberApp,client] connection lost - Number of events: 14
+2020-02-25T10:49:48-0300 [-] Main loop terminated.

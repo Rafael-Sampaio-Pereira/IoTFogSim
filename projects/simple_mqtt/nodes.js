@@ -53,69 +53,10 @@
             "application": "applications.mqttapp.PublisherApp",
             "x": 370,
             "y": 395
-        },
-        {
-            "id": 24,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": false,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 470,
-            "y": 495
-        },
-        {
-            "id": 34,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": false,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 570,
-            "y": 495
-        },
-        {
-            "id": 44,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": false,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 470,
-            "y": 295
-        },
-        {
-            "id": 55,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": false,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 389,
-            "y": 200
         }
     ],
     "access_points": [
-        { 
-            "id": 7,
-            "TBTT": 0.1024,
-            "SSID": "Rede privada 001",
-            "WPA2_password": "iotfogsim2019",
-            "simulation_ip": "192.121.0.1",
-            "icon": "ap_icon",
-            "type": "access_point",
-            "is_wireless": true,
-            "x": 400,
-            "y": 300
-        } 
+       
     ],
     "routers": [
         { 

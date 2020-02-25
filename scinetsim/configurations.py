@@ -6,7 +6,7 @@ from scinetsim.standarddevice import StandardServerDevice
 from scinetsim.standarddevice import StandardClientDevice
 from scinetsim.standarddevice import AccessPoint
 from scinetsim.standarddevice import Router
-from scinetsim.standarddevice import Connection
+
 from scinetsim.ScrollableScreen import ScrollableScreen
 from scinetsim.simulationcore import SimulationCore
 import json

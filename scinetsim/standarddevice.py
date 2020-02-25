@@ -155,7 +155,6 @@ class AccessPoint(object):
 
     def run(self):
         pass
-        #endpoints.serverFromString(reactor, self.network_component.network_settings).listen(self.network_component)
 
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
     def passive_scanning(self):
@@ -189,8 +188,6 @@ class AccessPoint(object):
                     if device in wifi_devices:
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
-                        #pass
-                        #log.msg(self.canvas.itemcget(device,"tags"))
                     else:
                         pass
                         #log.msg("The device is not wireless based")
@@ -212,10 +209,10 @@ class AccessPoint(object):
 
 class Connection(object):
 
-    def __init__(self, simulation_core, id_device_1, id_device_2):
+    def __init__(self, simulation_core, source_protocol, destiny_addr, destiny_port):
         self.simulation_core = simulation_core
-        self.device1 = simulation_core.getAnyDeviceById(id_device_1)
-        self.device2 = simulation_core.getAnyDeviceById(id_device_2)
+        self.device1 = source_protocol
+        self.device2 = simulation_core.get_any_protocol_by_addr_and_port(destiny_addr, destiny_port)
 
         self.create_connection(self.simulation_core, self.device1, self.device2)
         
