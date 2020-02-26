@@ -25,10 +25,12 @@ class SimulationCore(object):
 
 
 	def get_any_protocol_by_addr_and_port(self, addr, port):
-			for proto in self.allProtocols:
-				if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
-					print(addr+str(port))
-					return proto
+			try:
+				for proto in self.allProtocols:
+					if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
+						return proto
+			except:
+				log.msg("Sorry, we can't find any protocol with these network settings!")
 
 	def updateEventsCounter(self, event_description):
 		self.eventsCounter = self.eventsCounter + 1

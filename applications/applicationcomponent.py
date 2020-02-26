@@ -51,8 +51,12 @@ class StandardApplicationComponent(protocol.Protocol):
         self.simulation_core.updateEventsCounter("Connection failed")
     
     def connectionLost(self, reason):
-        log.msg('connection lost:', reason.getErrorMessage())
-        self.simulation_core.updateEventsCounter("connection lost")
+        try:
+            if self.simulation_core:
+                log.msg('connection lost:', reason.getErrorMessage())
+                self.simulation_core.updateEventsCounter("connection lost")
+        except NameError:
+            log.msg("The requested simulation_core is no longer available")
 
     def send(self, message):
         self.transport.write(message+b"\n")
@@ -66,11 +70,16 @@ class StandardApplicationComponent(protocol.Protocol):
 
     
     def save_protocol_in_simulation_core(self, proto):
-        if self.simulation_core:
-            self.simulation_core.allProtocols.add(proto)
-            print(self.simulation_core.allProtocols)
-        else:
-            print("This divice have no simulation core instance")
+        try:
+            if self.simulation_core:
+                if self.simulation_core:
+                    self.simulation_core.allProtocols.add(proto)
+                    #print(self.simulation_core.allProtocols)
+            else:
+                print("This divice have no simulation core instance")
+        except NameError:
+            log.msg("The requested simulation_core is no longer available")
+        
 
     def create_connection_animation(self):
         # this method can only be called on the connectionMade method of the clients devices. do not use that in servers instances - Rafael Sampaio

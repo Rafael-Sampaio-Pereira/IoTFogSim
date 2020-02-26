@@ -65,9 +65,13 @@ class RouterAppProtocol(StandardApplicationComponent):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
 
         def save_protocol(proto):
-            # saving the protocol used by the router as out(i.e. endponit to connect to a destiny host and redirect package) - Rafael Sampaio         
-            self.simulation_core.allProtocols.add(proto)
-            proto.create_connection_animation()
+            try:
+                if self.simulation_core:
+                    # saving the protocol used by the router as out(i.e. endponit to connect to a destiny host and redirect package) - Rafael Sampaio         
+                    self.simulation_core.allProtocols.add(proto)
+                    proto.create_connection_animation()
+            except NameError:
+                log.msg("The requested simulation_core is no longer available")
 
         # get start to connect redirect the receivede package - Rafael Sampaio
         factory = protocol.ClientFactory()
