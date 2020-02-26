@@ -145,12 +145,16 @@ class BrokerApp:
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(addr+":"+str(port))) 
 
 class BrokerProtocol(StandardApplicationComponent):
+    
     def __init__(self, factory):
         self.factory = factory
         
-
-    def connectionLost(self, reason):
-        self.factory.subscribers.remove(self)
+    def connectionLost(self, reason):        
+        try:
+            if self in factory.subscribers:
+                self.factory.subscribers.remove(self)
+        except NameError:
+            log.msg("The requested subscribers list is no longer available")
     
     def connectionMade(self):
         self.visual_component = self.factory.visual_component
