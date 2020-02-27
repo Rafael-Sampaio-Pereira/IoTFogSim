@@ -154,7 +154,7 @@ class BrokerProtocol(StandardApplicationComponent):
             if self in factory.subscribers:
                 self.factory.subscribers.remove(self)
         except NameError:
-            log.msg("The requested subscribers list is no longer available")
+            log.msg("The requested subscriber is no longer available in subscribers list")
     
     def connectionMade(self):
         self.visual_component = self.factory.visual_component

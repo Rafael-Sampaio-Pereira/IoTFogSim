@@ -1,0 +1,298 @@
+2020-02-26T12:00:34-0300 [-] Creating router ...
+2020-02-26T12:00:34-0300 [-] Initializing Router - Number of events: 1
+2020-02-26T12:00:34-0300 [-] RouterFactory starting on 8081
+2020-02-26T12:00:34-0300 [-] Creating fog node ...
+2020-02-26T12:00:34-0300 [stdout#info] applications.mqttapp.SubscriberApp
+2020-02-26T12:00:34-0300 [-] Initializing Client - Number of events: 2
+2020-02-26T12:00:34-0300 [-] Creating fog node ...
+2020-02-26T12:00:34-0300 [-] Initializing Server - Number of events: 3
+2020-02-26T12:00:34-0300 [-] BrokerFactory starting on 5100
+2020-02-26T12:00:34-0300 [-] Creating iot node ...
+2020-02-26T12:00:34-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T12:00:34-0300 [-] Initializing Client - Number of events: 4
+2020-02-26T12:00:34-0300 [-] Creating iot node ...
+2020-02-26T12:00:34-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T12:00:34-0300 [-] Initializing Client - Number of events: 5
+2020-02-26T12:00:34-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T12:00:34-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T12:00:34-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T12:00:34-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56744 - Connected to mqtt broker - Number of events: 6
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56744 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56746 - Connected to mqtt broker - Number of events: 8
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56748 - Connected to mqtt broker - Number of events: 10
+2020-02-26T12:00:34-0300 [Uninitialized] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-02-26T12:00:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3699b0>
+2020-02-26T12:00:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369cf8>
+2020-02-26T12:00:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369ef0>
+2020-02-26T12:00:39-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 12
+2020-02-26T12:00:39-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 13
+2020-02-26T12:00:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369d68>
+2020-02-26T12:00:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369ba8>
+2020-02-26T12:00:44-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 14
+2020-02-26T12:00:44-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-02-26T12:00:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3699e8>
+2020-02-26T12:00:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378898>
+2020-02-26T12:00:49-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-02-26T12:00:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e13a7470>
+2020-02-26T12:00:49-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-02-26T12:00:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3787f0>
+2020-02-26T12:00:54-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-02-26T12:00:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378b70>
+2020-02-26T12:00:54-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-02-26T12:00:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369b00>
+2020-02-26T12:00:59-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-02-26T12:00:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df389550>
+2020-02-26T12:00:59-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-02-26T12:00:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3895c0>
+2020-02-26T12:01:04-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-02-26T12:01:04-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-02-26T12:01:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3692e8>
+2020-02-26T12:01:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e67906d8>
+2020-02-26T12:01:09-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-02-26T12:01:09-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-02-26T12:01:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378d68>
+2020-02-26T12:01:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3696d8>
+2020-02-26T12:01:14-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-02-26T12:01:14-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-02-26T12:01:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378278>
+2020-02-26T12:01:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3698d0>
+2020-02-26T12:01:19-0300 [-] 127.0.0.1:56746 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-02-26T12:01:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378c50>
+2020-02-26T12:01:19-0300 [-] 127.0.0.1:56748 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-02-26T12:01:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e8070240>
+2020-02-26T12:01:21-0300 [-] Received SIGINT, shutting down.
+2020-02-26T12:01:21-0300 [BrokerProtocol,11,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,15,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369d68>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369b00>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e13a7470>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3698d0>
+2020-02-26T12:01:21-0300 [BrokerProtocol,4,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e8070240>
+2020-02-26T12:01:21-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378278>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369ef0>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3696d8>
+2020-02-26T12:01:21-0300 [BrokerProtocol,3,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,7,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T12:01:21-0300 [PublisherApp,client] connection lost - Number of events: 30
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378d68>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369ba8>
+2020-02-26T12:01:21-0300 [BrokerProtocol,12,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,8,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,16,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3692e8>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3787f0>
+2020-02-26T12:01:21-0300 [BrokerProtocol,1,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,0,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3699e8>
+2020-02-26T12:01:21-0300 [BrokerProtocol,2,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3895c0>
+2020-02-26T12:01:21-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T12:01:21-0300 [SubscriberApp,client] connection lost - Number of events: 31
+2020-02-26T12:01:21-0300 [BrokerProtocol,18,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,10,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,5,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-02-26T12:01:21-0300 [BrokerProtocol,17,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df3699b0>
+2020-02-26T12:01:21-0300 [BrokerProtocol,13,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T12:01:21-0300 [PublisherApp,client] connection lost - Number of events: 32
+2020-02-26T12:01:21-0300 [BrokerProtocol,9,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [BrokerProtocol,14,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378b70>
+2020-02-26T12:01:21-0300 [BrokerProtocol,19,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378898>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6e67906d8>
+2020-02-26T12:01:21-0300 [RouterAppProtocol,3,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T12:01:21-0300 [RouterAppProtocol,3,127.0.0.1] connection lost - Number of events: 33
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df378c50>
+2020-02-26T12:01:21-0300 [BrokerProtocol,6,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df389550>
+2020-02-26T12:01:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fe6df369cf8>
+2020-02-26T12:01:21-0300 [BrokerProtocol,20,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T12:01:21-0300 [-] Main loop terminated.
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-02-26T12:01:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 125, in connectionMade
+	    self._connectedDeferred.callback(self._wrappedProtocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 460, in callback
+	    self._startRunCallbacks(result)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 568, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 92, in save_protocol
+	    except NameError:
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 87, in create_connection_animation
+	    if len(self.simulation_core.allConnections) > 0:
+	builtins.AttributeError: 'NoneType' object has no attribute 'allConnections'
+	

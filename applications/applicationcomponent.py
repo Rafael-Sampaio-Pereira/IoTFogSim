@@ -55,6 +55,7 @@ class StandardApplicationComponent(protocol.Protocol):
             if self.simulation_core:
                 log.msg('connection lost:', reason.getErrorMessage())
                 self.simulation_core.updateEventsCounter("connection lost")
+                self.simulation_core.allProtocols.remove(self)
         except NameError:
             log.msg("The requested simulation_core is no longer available")
 
@@ -84,5 +85,27 @@ class StandardApplicationComponent(protocol.Protocol):
     def create_connection_animation(self):
         # this method can only be called on the connectionMade method of the clients devices. do not use that in servers instances - Rafael Sampaio
         con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
-        self.simulation_core.appendConnections(con)
+        self.simulation_core.allConnections.add(con)
+        
+
+
+        # if len(self.simulation_core.allConnections) > 0:
+        #     for connection in self.simulation_core.allConnections.copy():
+                    
+    
+        #         d1 = connection.device1.transport.getHost()
+        #         d2 = connection.device1.transport.getHost()
+        #         _self = self.transport.getHost()
+        #         peer = self.transport.getPeer()
+
+        #         if ((d1.host == _self.host and d1.port == _self.port) and (d2.host == peer.host and d1.port == peer.port)) or ((d2.host == _self.host and d2.port == _self.port) and (d1.host == peer.host and d1.port == peer.port)):
+
+        #             # if the conection animation arrow already exist, just pass - Rafael Sampaio
+        #             pass
+        #         else:
+        #             con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
+        #             self.simulation_core.allConnections.add(con)
+        # else:
+        #     con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
+        #     self.simulation_core.allConnections.add(con)
 

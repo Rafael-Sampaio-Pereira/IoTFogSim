@@ -1,0 +1,104 @@
+2020-02-26T11:40:58-0300 [-] Creating router ...
+2020-02-26T11:40:58-0300 [-] Initializing Router - Number of events: 1
+2020-02-26T11:40:58-0300 [-] RouterFactory starting on 8081
+2020-02-26T11:40:58-0300 [-] Creating fog node ...
+2020-02-26T11:40:58-0300 [stdout#info] applications.mqttapp.SubscriberApp
+2020-02-26T11:40:58-0300 [-] Initializing Client - Number of events: 2
+2020-02-26T11:40:58-0300 [-] Creating fog node ...
+2020-02-26T11:40:58-0300 [-] Initializing Server - Number of events: 3
+2020-02-26T11:40:58-0300 [-] BrokerFactory starting on 5100
+2020-02-26T11:40:58-0300 [-] Creating iot node ...
+2020-02-26T11:40:58-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T11:40:58-0300 [-] Initializing Client - Number of events: 4
+2020-02-26T11:40:58-0300 [-] Creating iot node ...
+2020-02-26T11:40:58-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T11:40:58-0300 [-] Initializing Client - Number of events: 5
+2020-02-26T11:40:58-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T11:40:58-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T11:40:58-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T11:40:58-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56022 - Connected to mqtt broker - Number of events: 6
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56022 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56024 - Connected to mqtt broker - Number of events: 8
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56024 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-02-26T11:40:58-0300 [Uninitialized] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 619, in _doReadOrWrite
+	    why = selectable.doWrite()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 627, in doConnect
+	    self._connectDone()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 656, in _connectDone
+	    self.protocol.makeConnection(self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 124, in connectionMade
+	    self._wrappedProtocol.makeConnection(self.transport)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 50, in connectionMade
+	    self.create_connection_animation()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 88, in create_connection_animation
+	    for connection in self.simulation_core.allConnections:
+	builtins.RuntimeError: Set changed size during iteration
+	
+2020-02-26T11:40:58-0300 [Uninitialized] connection lost: Set changed size during iteration
+2020-02-26T11:40:58-0300 [Uninitialized] connection lost - Number of events: 10
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56026 - Connected to mqtt broker - Number of events: 11
+2020-02-26T11:40:58-0300 [Uninitialized] 127.0.0.1:56026 - sending MQTT PUBLISH REQUEST - Number of events: 12
+2020-02-26T11:40:58-0300 [Uninitialized] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 619, in _doReadOrWrite
+	    why = selectable.doWrite()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 627, in doConnect
+	    self._connectDone()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 656, in _connectDone
+	    self.protocol.makeConnection(self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 124, in connectionMade
+	    self._wrappedProtocol.makeConnection(self.transport)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/protocol.py", line 514, in makeConnection
+	    self.connectionMade()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/mqttapp.py", line 50, in connectionMade
+	    self.create_connection_animation()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 88, in create_connection_animation
+	    for connection in self.simulation_core.allConnections:
+	builtins.RuntimeError: Set changed size during iteration
+	
+2020-02-26T11:40:58-0300 [Uninitialized] connection lost: Set changed size during iteration
+2020-02-26T11:40:58-0300 [Uninitialized] connection lost - Number of events: 13
+2020-02-26T11:40:58-0300 [RouterAppProtocol,3,127.0.0.1] connection lost: Connection was closed cleanly.
+2020-02-26T11:40:58-0300 [RouterAppProtocol,3,127.0.0.1] connection lost - Number of events: 14
+2020-02-26T11:40:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f6bb3c3f668>
+2020-02-26T11:41:03-0300 [-] 127.0.0.1:56024 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-02-26T11:41:03-0300 [-] 127.0.0.1:56026 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-02-26T11:41:08-0300 [-] 127.0.0.1:56024 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-02-26T11:41:08-0300 [-] 127.0.0.1:56026 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-02-26T11:41:13-0300 [-] 127.0.0.1:56024 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-02-26T11:41:13-0300 [-] 127.0.0.1:56026 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-02-26T11:41:15-0300 [-] Received SIGINT, shutting down.
+2020-02-26T11:41:15-0300 [BrokerProtocol,0,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T11:41:15-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-02-26T11:41:15-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-02-26T11:41:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f6bb3c3f668>
+2020-02-26T11:41:15-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T11:41:15-0300 [SubscriberApp,client] connection lost - Number of events: 21
+2020-02-26T11:41:15-0300 [-] Main loop terminated.

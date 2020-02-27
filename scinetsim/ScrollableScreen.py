@@ -12,7 +12,7 @@ class ScrollableScreen(tkinter.Frame):
         self.screen_h = 2000
         
         
-        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='steelblue', highlightthickness=0)
+        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#66BB6A', highlightthickness=0)
         self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
         self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)

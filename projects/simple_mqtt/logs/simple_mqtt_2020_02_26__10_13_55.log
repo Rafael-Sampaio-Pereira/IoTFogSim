@@ -1,0 +1,1248 @@
+2020-02-26T10:13:55-0300 [-] Creating router ...
+2020-02-26T10:13:55-0300 [-] Initializing Router - Number of events: 1
+2020-02-26T10:13:55-0300 [-] RouterFactory starting on 8081
+2020-02-26T10:13:55-0300 [-] Creating fog node ...
+2020-02-26T10:13:55-0300 [stdout#info] applications.mqttapp.SubscriberApp
+2020-02-26T10:13:55-0300 [-] Initializing Client - Number of events: 2
+2020-02-26T10:13:55-0300 [-] Creating fog node ...
+2020-02-26T10:13:55-0300 [-] Initializing Server - Number of events: 3
+2020-02-26T10:13:55-0300 [-] BrokerFactory starting on 5100
+2020-02-26T10:13:55-0300 [-] Creating iot node ...
+2020-02-26T10:13:55-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T10:13:55-0300 [-] Initializing Client - Number of events: 4
+2020-02-26T10:13:55-0300 [-] Creating iot node ...
+2020-02-26T10:13:55-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-02-26T10:13:55-0300 [-] Initializing Client - Number of events: 5
+2020-02-26T10:13:56-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T10:13:56-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T10:13:56-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T10:13:56-0300 [stdout#info] This divice have no simulation core instance
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51836 - Connected to mqtt broker - Number of events: 6
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51836 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51838 - Connected to mqtt broker - Number of events: 8
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51840 - Connected to mqtt broker - Number of events: 10
+2020-02-26T10:13:56-0300 [Uninitialized] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-02-26T10:13:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967b70>
+2020-02-26T10:13:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967d68>
+2020-02-26T10:13:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967f60>
+2020-02-26T10:14:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 12
+2020-02-26T10:14:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 13
+2020-02-26T10:14:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97a7b8>
+2020-02-26T10:14:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97a978>
+2020-02-26T10:14:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 14
+2020-02-26T10:14:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-02-26T10:14:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97aa90>
+2020-02-26T10:14:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97af28>
+2020-02-26T10:14:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-02-26T10:14:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-02-26T10:14:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9842b0>
+2020-02-26T10:14:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9844e0>
+2020-02-26T10:14:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-02-26T10:14:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-02-26T10:14:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984828>
+2020-02-26T10:14:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984a20>
+2020-02-26T10:14:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-02-26T10:14:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-02-26T10:14:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984dd8>
+2020-02-26T10:14:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984f98>
+2020-02-26T10:14:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-02-26T10:14:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-02-26T10:14:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005320>
+2020-02-26T10:14:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f0051d0>
+2020-02-26T10:14:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-02-26T10:14:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005748>
+2020-02-26T10:14:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-02-26T10:14:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005940>
+2020-02-26T10:14:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-02-26T10:14:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f0058d0>
+2020-02-26T10:14:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-02-26T10:14:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005e48>
+2020-02-26T10:14:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-02-26T10:14:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-02-26T10:14:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013160>
+2020-02-26T10:14:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013128>
+2020-02-26T10:14:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-02-26T10:14:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-02-26T10:14:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013630>
+2020-02-26T10:14:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013748>
+2020-02-26T10:14:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-02-26T10:14:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-02-26T10:14:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013860>
+2020-02-26T10:14:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013c50>
+2020-02-26T10:14:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-02-26T10:14:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013e80>
+2020-02-26T10:14:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-02-26T10:14:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c208>
+2020-02-26T10:15:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-02-26T10:15:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-02-26T10:15:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c4a8>
+2020-02-26T10:15:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c6a0>
+2020-02-26T10:15:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-02-26T10:15:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-02-26T10:15:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c550>
+2020-02-26T10:15:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01cba8>
+2020-02-26T10:15:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-02-26T10:15:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-02-26T10:15:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01cef0>
+2020-02-26T10:15:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d160>
+2020-02-26T10:15:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-02-26T10:15:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d550>
+2020-02-26T10:15:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 43
+2020-02-26T10:15:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d668>
+2020-02-26T10:15:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 44
+2020-02-26T10:15:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d860>
+2020-02-26T10:15:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 45
+2020-02-26T10:15:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02db70>
+2020-02-26T10:15:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 46
+2020-02-26T10:15:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02dba8>
+2020-02-26T10:15:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 47
+2020-02-26T10:15:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc30b8>
+2020-02-26T10:15:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 48
+2020-02-26T10:15:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc33c8>
+2020-02-26T10:15:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 49
+2020-02-26T10:15:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc35c0>
+2020-02-26T10:15:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 50
+2020-02-26T10:15:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc37f0>
+2020-02-26T10:15:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 51
+2020-02-26T10:15:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc3ac8>
+2020-02-26T10:15:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 52
+2020-02-26T10:15:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc3da0>
+2020-02-26T10:15:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 53
+2020-02-26T10:15:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc048>
+2020-02-26T10:15:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 54
+2020-02-26T10:15:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc278>
+2020-02-26T10:15:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 55
+2020-02-26T10:15:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc518>
+2020-02-26T10:15:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 56
+2020-02-26T10:15:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc7f0>
+2020-02-26T10:15:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 57
+2020-02-26T10:15:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdca20>
+2020-02-26T10:15:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 58
+2020-02-26T10:15:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdccf8>
+2020-02-26T10:15:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 59
+2020-02-26T10:15:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdcf98>
+2020-02-26T10:16:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 60
+2020-02-26T10:16:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9358>
+2020-02-26T10:16:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 61
+2020-02-26T10:16:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9470>
+2020-02-26T10:16:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 62
+2020-02-26T10:16:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff96d8>
+2020-02-26T10:16:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 63
+2020-02-26T10:16:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9978>
+2020-02-26T10:16:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 64
+2020-02-26T10:16:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9ba8>
+2020-02-26T10:16:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 65
+2020-02-26T10:16:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9ef0>
+2020-02-26T10:16:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 66
+2020-02-26T10:16:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86208>
+2020-02-26T10:16:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 67
+2020-02-26T10:16:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef863c8>
+2020-02-26T10:16:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 68
+2020-02-26T10:16:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86630>
+2020-02-26T10:16:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 69
+2020-02-26T10:16:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86908>
+2020-02-26T10:16:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 70
+2020-02-26T10:16:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86ba8>
+2020-02-26T10:16:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 71
+2020-02-26T10:16:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86e48>
+2020-02-26T10:16:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 72
+2020-02-26T10:16:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef910f0>
+2020-02-26T10:16:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 73
+2020-02-26T10:16:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91320>
+2020-02-26T10:16:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 74
+2020-02-26T10:16:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91588>
+2020-02-26T10:16:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 75
+2020-02-26T10:16:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91828>
+2020-02-26T10:16:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 76
+2020-02-26T10:16:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91b38>
+2020-02-26T10:16:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 77
+2020-02-26T10:16:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91d30>
+2020-02-26T10:16:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 78
+2020-02-26T10:16:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98198>
+2020-02-26T10:16:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 79
+2020-02-26T10:16:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98278>
+2020-02-26T10:16:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 80
+2020-02-26T10:16:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef980b8>
+2020-02-26T10:16:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 81
+2020-02-26T10:16:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98780>
+2020-02-26T10:16:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 82
+2020-02-26T10:16:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98ac8>
+2020-02-26T10:16:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 83
+2020-02-26T10:16:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98c88>
+2020-02-26T10:17:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 84
+2020-02-26T10:17:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98f98>
+2020-02-26T10:17:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 85
+2020-02-26T10:17:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa11d0>
+2020-02-26T10:17:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 86
+2020-02-26T10:17:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1128>
+2020-02-26T10:17:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 87
+2020-02-26T10:17:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa16d8>
+2020-02-26T10:17:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 88
+2020-02-26T10:17:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1a58>
+2020-02-26T10:17:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 89
+2020-02-26T10:17:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1c50>
+2020-02-26T10:17:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 90
+2020-02-26T10:17:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1dd8>
+2020-02-26T10:17:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 91
+2020-02-26T10:17:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae128>
+2020-02-26T10:17:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 92
+2020-02-26T10:17:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae320>
+2020-02-26T10:17:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 93
+2020-02-26T10:17:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae630>
+2020-02-26T10:17:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 94
+2020-02-26T10:17:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae978>
+2020-02-26T10:17:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 95
+2020-02-26T10:17:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efaeba8>
+2020-02-26T10:17:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 96
+2020-02-26T10:17:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efaedd8>
+2020-02-26T10:17:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 97
+2020-02-26T10:17:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb40b8>
+2020-02-26T10:17:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 98
+2020-02-26T10:17:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb44a8>
+2020-02-26T10:17:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 99
+2020-02-26T10:17:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4588>
+2020-02-26T10:17:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 100
+2020-02-26T10:17:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb49e8>
+2020-02-26T10:17:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 101
+2020-02-26T10:17:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4a90>
+2020-02-26T10:17:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 102
+2020-02-26T10:17:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb45c0>
+2020-02-26T10:17:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 103
+2020-02-26T10:17:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4fd0>
+2020-02-26T10:17:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 104
+2020-02-26T10:17:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd3c8>
+2020-02-26T10:17:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 105
+2020-02-26T10:17:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd4e0>
+2020-02-26T10:17:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 106
+2020-02-26T10:17:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd860>
+2020-02-26T10:17:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 107
+2020-02-26T10:17:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd9e8>
+2020-02-26T10:18:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 108
+2020-02-26T10:18:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbde10>
+2020-02-26T10:18:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 109
+2020-02-26T10:18:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbdef0>
+2020-02-26T10:18:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 110
+2020-02-26T10:18:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913128>
+2020-02-26T10:18:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 111
+2020-02-26T10:18:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913438>
+2020-02-26T10:18:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 112
+2020-02-26T10:18:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9137b8>
+2020-02-26T10:18:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 113
+2020-02-26T10:18:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913940>
+2020-02-26T10:18:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 114
+2020-02-26T10:18:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913c50>
+2020-02-26T10:18:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 115
+2020-02-26T10:18:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913e80>
+2020-02-26T10:18:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 116
+2020-02-26T10:18:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c198>
+2020-02-26T10:18:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 117
+2020-02-26T10:18:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c390>
+2020-02-26T10:18:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 118
+2020-02-26T10:18:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c550>
+2020-02-26T10:18:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 119
+2020-02-26T10:18:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c908>
+2020-02-26T10:18:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 120
+2020-02-26T10:18:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91cc88>
+2020-02-26T10:18:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 121
+2020-02-26T10:18:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91ce10>
+2020-02-26T10:18:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 122
+2020-02-26T10:18:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925198>
+2020-02-26T10:18:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 123
+2020-02-26T10:18:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9252e8>
+2020-02-26T10:18:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 124
+2020-02-26T10:18:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925748>
+2020-02-26T10:18:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 125
+2020-02-26T10:18:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925860>
+2020-02-26T10:18:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 126
+2020-02-26T10:18:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925b70>
+2020-02-26T10:18:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 127
+2020-02-26T10:18:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925d68>
+2020-02-26T10:18:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 128
+2020-02-26T10:18:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925cc0>
+2020-02-26T10:18:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 129
+2020-02-26T10:18:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e278>
+2020-02-26T10:18:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 130
+2020-02-26T10:18:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e6a0>
+2020-02-26T10:18:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 131
+2020-02-26T10:18:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e748>
+2020-02-26T10:19:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 132
+2020-02-26T10:19:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92eac8>
+2020-02-26T10:19:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 133
+2020-02-26T10:19:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92ecc0>
+2020-02-26T10:19:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 134
+2020-02-26T10:19:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92ee80>
+2020-02-26T10:19:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 135
+2020-02-26T10:19:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936208>
+2020-02-26T10:19:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 136
+2020-02-26T10:19:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936518>
+2020-02-26T10:19:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 137
+2020-02-26T10:19:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936358>
+2020-02-26T10:19:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 138
+2020-02-26T10:19:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9369b0>
+2020-02-26T10:19:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 139
+2020-02-26T10:19:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936860>
+2020-02-26T10:19:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 140
+2020-02-26T10:19:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936da0>
+2020-02-26T10:19:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 141
+2020-02-26T10:19:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940128>
+2020-02-26T10:19:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 142
+2020-02-26T10:19:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9403c8>
+2020-02-26T10:19:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 143
+2020-02-26T10:19:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940630>
+2020-02-26T10:19:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 144
+2020-02-26T10:19:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9405c0>
+2020-02-26T10:19:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 145
+2020-02-26T10:19:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940b38>
+2020-02-26T10:19:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 146
+2020-02-26T10:19:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940eb8>
+2020-02-26T10:19:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 147
+2020-02-26T10:19:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947080>
+2020-02-26T10:19:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 148
+2020-02-26T10:19:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947320>
+2020-02-26T10:19:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 149
+2020-02-26T10:19:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947588>
+2020-02-26T10:19:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 150
+2020-02-26T10:19:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9478d0>
+2020-02-26T10:19:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 151
+2020-02-26T10:19:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947a90>
+2020-02-26T10:19:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 152
+2020-02-26T10:19:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947d68>
+2020-02-26T10:19:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 153
+2020-02-26T10:19:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947cc0>
+2020-02-26T10:19:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 154
+2020-02-26T10:19:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1240>
+2020-02-26T10:19:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 155
+2020-02-26T10:19:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1160>
+2020-02-26T10:20:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 156
+2020-02-26T10:20:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1668>
+2020-02-26T10:20:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 157
+2020-02-26T10:20:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1b38>
+2020-02-26T10:20:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 158
+2020-02-26T10:20:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1d30>
+2020-02-26T10:20:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 159
+2020-02-26T10:20:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1f28>
+2020-02-26T10:20:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 160
+2020-02-26T10:20:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db160>
+2020-02-26T10:20:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 161
+2020-02-26T10:20:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db400>
+2020-02-26T10:20:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 162
+2020-02-26T10:20:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db668>
+2020-02-26T10:20:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 163
+2020-02-26T10:20:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db5c0>
+2020-02-26T10:20:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 164
+2020-02-26T10:20:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8dbd68>
+2020-02-26T10:20:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 165
+2020-02-26T10:20:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8dbeb8>
+2020-02-26T10:20:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 166
+2020-02-26T10:20:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3198>
+2020-02-26T10:20:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 167
+2020-02-26T10:20:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3048>
+2020-02-26T10:20:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 168
+2020-02-26T10:20:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e34e0>
+2020-02-26T10:20:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 169
+2020-02-26T10:20:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e37f0>
+2020-02-26T10:20:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 170
+2020-02-26T10:20:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3a20>
+2020-02-26T10:20:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 171
+2020-02-26T10:20:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3ef0>
+2020-02-26T10:20:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 172
+2020-02-26T10:20:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed160>
+2020-02-26T10:20:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 173
+2020-02-26T10:20:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed198>
+2020-02-26T10:20:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 174
+2020-02-26T10:20:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed588>
+2020-02-26T10:20:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 175
+2020-02-26T10:20:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed748>
+2020-02-26T10:20:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 176
+2020-02-26T10:20:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8eda90>
+2020-02-26T10:20:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 177
+2020-02-26T10:20:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed978>
+2020-02-26T10:20:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 178
+2020-02-26T10:20:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8edfd0>
+2020-02-26T10:20:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 179
+2020-02-26T10:20:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f61d0>
+2020-02-26T10:21:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 180
+2020-02-26T10:21:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6518>
+2020-02-26T10:21:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 181
+2020-02-26T10:21:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f64e0>
+2020-02-26T10:21:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 182
+2020-02-26T10:21:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f69b0>
+2020-02-26T10:21:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 183
+2020-02-26T10:21:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6c18>
+2020-02-26T10:21:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 184
+2020-02-26T10:21:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6dd8>
+2020-02-26T10:21:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 185
+2020-02-26T10:21:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd1d0>
+2020-02-26T10:21:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 186
+2020-02-26T10:21:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd4e0>
+2020-02-26T10:21:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 187
+2020-02-26T10:21:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd6a0>
+2020-02-26T10:21:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 188
+2020-02-26T10:21:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd908>
+2020-02-26T10:21:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 189
+2020-02-26T10:21:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd828>
+2020-02-26T10:21:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 190
+2020-02-26T10:21:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fda58>
+2020-02-26T10:21:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 191
+2020-02-26T10:21:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9080f0>
+2020-02-26T10:21:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 192
+2020-02-26T10:21:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908518>
+2020-02-26T10:21:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 193
+2020-02-26T10:21:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9085f8>
+2020-02-26T10:21:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 194
+2020-02-26T10:21:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9088d0>
+2020-02-26T10:21:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 195
+2020-02-26T10:21:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908940>
+2020-02-26T10:21:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 196
+2020-02-26T10:21:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908780>
+2020-02-26T10:21:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 197
+2020-02-26T10:21:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890080>
+2020-02-26T10:21:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 198
+2020-02-26T10:21:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8900b8>
+2020-02-26T10:21:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 199
+2020-02-26T10:21:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8906a0>
+2020-02-26T10:21:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 200
+2020-02-26T10:21:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890828>
+2020-02-26T10:21:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 201
+2020-02-26T10:21:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890a58>
+2020-02-26T10:21:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 202
+2020-02-26T10:21:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890cf8>
+2020-02-26T10:21:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 203
+2020-02-26T10:21:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fda90>
+2020-02-26T10:22:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 204
+2020-02-26T10:22:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a208>
+2020-02-26T10:22:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 205
+2020-02-26T10:22:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a400>
+2020-02-26T10:22:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 206
+2020-02-26T10:22:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a8d0>
+2020-02-26T10:22:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 207
+2020-02-26T10:22:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89aa20>
+2020-02-26T10:22:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 208
+2020-02-26T10:22:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89ac88>
+2020-02-26T10:22:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 209
+2020-02-26T10:22:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89af98>
+2020-02-26T10:22:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 210
+2020-02-26T10:22:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3198>
+2020-02-26T10:22:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 211
+2020-02-26T10:22:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a33c8>
+2020-02-26T10:22:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 212
+2020-02-26T10:22:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3588>
+2020-02-26T10:22:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 213
+2020-02-26T10:22:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3a58>
+2020-02-26T10:22:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 214
+2020-02-26T10:22:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3c50>
+2020-02-26T10:22:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 215
+2020-02-26T10:22:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3be0>
+2020-02-26T10:22:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 216
+2020-02-26T10:22:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae128>
+2020-02-26T10:22:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 217
+2020-02-26T10:22:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae320>
+2020-02-26T10:22:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 218
+2020-02-26T10:22:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae358>
+2020-02-26T10:22:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 219
+2020-02-26T10:22:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae860>
+2020-02-26T10:22:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 220
+2020-02-26T10:22:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8aeb70>
+2020-02-26T10:22:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 221
+2020-02-26T10:22:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8aee48>
+2020-02-26T10:22:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 222
+2020-02-26T10:22:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5080>
+2020-02-26T10:22:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 223
+2020-02-26T10:22:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5048>
+2020-02-26T10:22:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 224
+2020-02-26T10:22:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b55f8>
+2020-02-26T10:22:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 225
+2020-02-26T10:22:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5748>
+2020-02-26T10:22:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 226
+2020-02-26T10:22:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5978>
+2020-02-26T10:22:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 227
+2020-02-26T10:22:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5e10>
+2020-02-26T10:23:01-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 228
+2020-02-26T10:23:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5ba8>
+2020-02-26T10:23:01-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 229
+2020-02-26T10:23:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb320>
+2020-02-26T10:23:06-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 230
+2020-02-26T10:23:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb390>
+2020-02-26T10:23:06-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 231
+2020-02-26T10:23:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb710>
+2020-02-26T10:23:11-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 232
+2020-02-26T10:23:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb978>
+2020-02-26T10:23:11-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 233
+2020-02-26T10:23:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb8d0>
+2020-02-26T10:23:16-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 234
+2020-02-26T10:23:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bbfd0>
+2020-02-26T10:23:16-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 235
+2020-02-26T10:23:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8128>
+2020-02-26T10:23:21-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 236
+2020-02-26T10:23:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8438>
+2020-02-26T10:23:21-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 237
+2020-02-26T10:23:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8320>
+2020-02-26T10:23:26-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 238
+2020-02-26T10:23:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8a20>
+2020-02-26T10:23:26-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 239
+2020-02-26T10:23:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8828>
+2020-02-26T10:23:31-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 240
+2020-02-26T10:23:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8e48>
+2020-02-26T10:23:31-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 241
+2020-02-26T10:23:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8510b8>
+2020-02-26T10:23:36-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 242
+2020-02-26T10:23:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8514a8>
+2020-02-26T10:23:36-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 243
+2020-02-26T10:23:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8515c0>
+2020-02-26T10:23:41-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 244
+2020-02-26T10:23:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8516a0>
+2020-02-26T10:23:41-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 245
+2020-02-26T10:23:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851940>
+2020-02-26T10:23:46-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 246
+2020-02-26T10:23:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851ba8>
+2020-02-26T10:23:46-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 247
+2020-02-26T10:23:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851c88>
+2020-02-26T10:23:51-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 248
+2020-02-26T10:23:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859438>
+2020-02-26T10:23:51-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 249
+2020-02-26T10:23:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859630>
+2020-02-26T10:23:56-0300 [-] 127.0.0.1:51838 - sending MQTT PUBLISH REQUEST - Number of events: 250
+2020-02-26T10:23:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8597f0>
+2020-02-26T10:23:56-0300 [-] 127.0.0.1:51840 - sending MQTT PUBLISH REQUEST - Number of events: 251
+2020-02-26T10:23:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859978>
+2020-02-26T10:23:57-0300 [-] Received SIGINT, shutting down.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 252
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97af28>
+2020-02-26T10:23:57-0300 [BrokerProtocol,108,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98198>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 253
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890080>
+2020-02-26T10:23:57-0300 [BrokerProtocol,226,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013e80>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 254
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb40b8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 255
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc048>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c198>
+2020-02-26T10:23:57-0300 [BrokerProtocol,45,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,107,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 256
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9080f0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 257
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8128>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 258
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940128>
+2020-02-26T10:23:57-0300 [BrokerProtocol,189,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,132,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,26,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,89,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,70,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb44a8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9842b0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,8,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 259
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c208>
+2020-02-26T10:23:57-0300 [BrokerProtocol,91,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,133,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc278>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 260
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98278>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9403c8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,183,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908518>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8900b8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,227,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,46,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 261
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9085f8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,228,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,90,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,7,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef980b8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,28,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,10,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 262
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c390>
+2020-02-26T10:23:57-0300 [BrokerProtocol,71,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,27,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8438>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 263
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8906a0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,190,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c550>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 264
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8320>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 265
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9844e0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c4a8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,72,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,229,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 266
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890a58>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 267
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc518>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 268
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940630>
+2020-02-26T10:23:57-0300 [BrokerProtocol,109,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 269
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4588>
+2020-02-26T10:23:57-0300 [BrokerProtocol,134,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,47,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984828>
+2020-02-26T10:23:57-0300 [BrokerProtocol,184,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 270
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c6a0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,12,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,136,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890828>
+2020-02-26T10:23:57-0300 [BrokerProtocol,185,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9088d0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,9,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,48,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 271
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98780>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 272
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940b38>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8a20>
+2020-02-26T10:23:57-0300 [BrokerProtocol,110,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d890cf8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdc7f0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,75,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,30,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,191,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,92,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9405c0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,186,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb49e8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98ac8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,29,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 273
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91c908>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d940eb8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01c550>
+2020-02-26T10:23:57-0300 [BrokerProtocol,135,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 274
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908940>
+2020-02-26T10:23:57-0300 [BrokerProtocol,192,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 275
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984a20>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 276
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdca20>
+2020-02-26T10:23:57-0300 [BrokerProtocol,74,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 277
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4a90>
+2020-02-26T10:23:57-0300 [BrokerProtocol,73,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,111,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,49,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,93,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d908780>
+2020-02-26T10:23:57-0300 [BrokerProtocol,193,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,230,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 278
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01cba8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 279
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8828>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdccf8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91cc88>
+2020-02-26T10:23:57-0300 [BrokerProtocol,138,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,231,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,194,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,232,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb45c0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 280
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98c88>
+2020-02-26T10:23:57-0300 [BrokerProtocol,187,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,112,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,50,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-02-26T10:23:57-0300 [BrokerProtocol,137,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,188,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,11,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984dd8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 281
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d91ce10>
+2020-02-26T10:23:57-0300 [BrokerProtocol,94,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8c8e48>
+2020-02-26T10:23:57-0300 [BrokerProtocol,31,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,113,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed160>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6dd8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 282
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efdcf98>
+2020-02-26T10:23:57-0300 [BrokerProtocol,64,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef98f98>
+2020-02-26T10:23:57-0300 [BrokerProtocol,66,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 283
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947cc0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f01cef0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 284
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d984f98>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1240>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 285
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851c88>
+2020-02-26T10:23:57-0300 [BrokerProtocol,32,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925198>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 286
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efb4fd0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 287
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd1d0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5080>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 288
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8510b8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,96,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,54,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef910f0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,114,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,51,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,76,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,239,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005320>
+2020-02-26T10:23:57-0300 [BrokerProtocol,52,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,176,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 289
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d160>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9358>
+2020-02-26T10:23:57-0300 [BrokerProtocol,145,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd3c8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed588>
+2020-02-26T10:23:57-0300 [BrokerProtocol,233,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,240,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,33,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,20,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 290
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa11d0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859438>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 291
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed198>
+2020-02-26T10:23:57-0300 [BrokerProtocol,95,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,214,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 292
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5048>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8514a8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 293
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859630>
+2020-02-26T10:23:57-0300 [BrokerProtocol,164,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,177,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 294
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9252e8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 295
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91320>
+2020-02-26T10:23:57-0300 [BrokerProtocol,146,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd4e0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,215,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,14,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d550>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b55f8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 296
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f0051d0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,65,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,116,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 297
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8515c0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925748>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 298
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed748>
+2020-02-26T10:23:57-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [SubscriberApp,client] connection lost - Number of events: 299
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 300
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9470>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1128>
+2020-02-26T10:23:57-0300 [BrokerProtocol,217,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91588>
+2020-02-26T10:23:57-0300 [BrokerProtocol,78,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [RouterAppProtocol,3,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [RouterAppProtocol,3,127.0.0.1] connection lost - Number of events: 301
+2020-02-26T10:23:57-0300 [BrokerProtocol,165,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005748>
+2020-02-26T10:23:57-0300 [BrokerProtocol,34,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 302
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd4e0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,77,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 303
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1160>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925b70>
+2020-02-26T10:23:57-0300 [BrokerProtocol,79,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 304
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd6a0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,115,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,234,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,97,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,80,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd860>
+2020-02-26T10:23:57-0300 [BrokerProtocol,178,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,147,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 305
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d668>
+2020-02-26T10:23:57-0300 [BrokerProtocol,53,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8597f0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 306
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa16d8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,15,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff96d8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1668>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8516a0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,166,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,235,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 307
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d859978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,216,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,16,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 308
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925860>
+2020-02-26T10:23:57-0300 [BrokerProtocol,179,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,36,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,98,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,55,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,148,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,241,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 309
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5748>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 310
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91828>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd908>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1a58>
+2020-02-26T10:23:57-0300 [BrokerProtocol,18,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,167,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 311
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1b38>
+2020-02-26T10:23:57-0300 [BrokerProtocol,218,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,242,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02d860>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 312
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005940>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 313
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,236,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,35,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91b38>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 314
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fd828>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 315
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851940>
+2020-02-26T10:23:57-0300 [BrokerProtocol,17,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 316
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbd9e8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,69,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,180,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,68,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 317
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1f28>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbde10>
+2020-02-26T10:23:57-0300 [BrokerProtocol,67,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,117,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8eda90>
+2020-02-26T10:23:57-0300 [BrokerProtocol,237,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,100,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,182,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8d1d30>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f0058d0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 318
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02db70>
+2020-02-26T10:23:57-0300 [BrokerProtocol,118,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9ba8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 319
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5e10>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 320
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1c50>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f02dba8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,99,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 321
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ed978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,168,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,149,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 322
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925d68>
+2020-02-26T10:23:57-0300 [BrokerProtocol,181,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 323
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef91d30>
+2020-02-26T10:23:57-0300 [BrokerProtocol,56,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,38,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,219,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,81,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,119,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d851ba8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,37,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efa1dd8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,238,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,150,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 324
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f005e48>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 325
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248eff9ef0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,169,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fda58>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 326
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967f60>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 327
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8fda90>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92ee80>
+2020-02-26T10:23:57-0300 [BrokerProtocol,58,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d925cc0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8edfd0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,13,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86208>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6518>
+2020-02-26T10:23:57-0300 [BrokerProtocol,195,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,57,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae128>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 328
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae128>
+2020-02-26T10:23:57-0300 [BrokerProtocol,126,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,207,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,82,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 329
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936208>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 330
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f61d0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 331
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae320>
+2020-02-26T10:23:57-0300 [BrokerProtocol,1,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,196,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 332
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e278>
+2020-02-26T10:23:57-0300 [BrokerProtocol,170,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,59,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,2,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,120,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a208>
+2020-02-26T10:23:57-0300 [BrokerProtocol,84,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,127,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,208,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936518>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae320>
+2020-02-26T10:23:57-0300 [BrokerProtocol,172,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 333
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a400>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013160>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 334
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef863c8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,83,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,210,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e6a0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,122,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,171,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,209,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,60,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,121,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,197,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89ac88>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 335
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936358>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97a7b8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 336
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f64e0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,4,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86630>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 337
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae630>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89a8d0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,128,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae358>
+2020-02-26T10:23:57-0300 [BrokerProtocol,3,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,212,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86ba8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 338
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92e748>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9369b0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f69b0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,85,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 339
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89aa20>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 340
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86908>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efae978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,199,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92eac8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,63,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 341
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8ae860>
+2020-02-26T10:23:57-0300 [BrokerProtocol,173,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8aeb70>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 342
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97a978>
+2020-02-26T10:23:57-0300 [BrokerProtocol,198,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,129,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,211,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,86,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,123,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,130,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,156,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,174,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,61,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 343
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efaeba8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,200,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 344
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936860>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 345
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8aee48>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 346
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d92ecc0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,87,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,124,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 347
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8f6c18>
+2020-02-26T10:23:57-0300 [BrokerProtocol,6,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,62,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d936da0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d97aa90>
+2020-02-26T10:23:57-0300 [BrokerProtocol,125,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,88,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,5,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 348
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d89af98>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 349
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248ef86e48>
+2020-02-26T10:23:57-0300 [BrokerProtocol,175,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,131,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,213,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efaedd8>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 350
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013128>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 351
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efbdef0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913128>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb390>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3198>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8b5ba8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,101,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 352
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947080>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db160>
+2020-02-26T10:23:57-0300 [BrokerProtocol,152,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 353
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc30b8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,102,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,151,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,220,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,139,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,201,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc33c8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3198>
+2020-02-26T10:23:57-0300 [BrokerProtocol,157,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [PublisherApp,client] connection lost - Number of events: 354
+2020-02-26T10:23:57-0300 [BrokerProtocol,39,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 355
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb320>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 356
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3048>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 357
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db400>
+2020-02-26T10:23:57-0300 [BrokerProtocol,22,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 358
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb710>
+2020-02-26T10:23:57-0300 [BrokerProtocol,158,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,202,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947320>
+2020-02-26T10:23:57-0300 [BrokerProtocol,21,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,40,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,221,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,19,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e34e0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,41,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 359
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913438>
+2020-02-26T10:23:57-0300 [BrokerProtocol,161,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013630>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 360
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a33c8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,140,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,159,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 361
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947588>
+2020-02-26T10:23:57-0300 [BrokerProtocol,153,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,160,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 362
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3a58>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9137b8>
+2020-02-26T10:23:57-0300 [BrokerProtocol,222,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,104,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,154,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,203,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 363
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc35c0>
+2020-02-26T10:23:57-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [PublisherApp,client] connection lost - Number of events: 364
+2020-02-26T10:23:57-0300 [BrokerProtocol,103,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3588>
+2020-02-26T10:23:57-0300 [BrokerProtocol,42,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,141,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d9478d0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 365
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013748>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db668>
+2020-02-26T10:23:57-0300 [BrokerProtocol,204,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 366
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947a90>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc37f0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,155,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 367
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8db5c0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 368
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb8d0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 369
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e37f0>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 370
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913940>
+2020-02-26T10:23:57-0300 [BrokerProtocol,223,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d947d68>
+2020-02-26T10:23:57-0300 [BrokerProtocol,23,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,25,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bb978>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013860>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913c50>
+2020-02-26T10:23:57-0300 [BrokerProtocol,24,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3c50>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 371
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc3ac8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3a20>
+2020-02-26T10:23:57-0300 [BrokerProtocol,142,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,105,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8dbd68>
+2020-02-26T10:23:57-0300 [BrokerProtocol,206,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967b70>
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 372
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8e3ef0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,162,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 373
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248f013c50>
+2020-02-26T10:23:57-0300 [BrokerProtocol,205,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,224,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,43,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 374
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8a3be0>
+2020-02-26T10:23:57-0300 [BrokerProtocol,143,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 375
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8dbeb8>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248efc3da0>
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d967d68>
+2020-02-26T10:23:57-0300 [BrokerProtocol,225,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-02-26T10:23:57-0300 [ClientProtocol,client] connection lost - Number of events: 376
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d913e80>
+2020-02-26T10:23:57-0300 [BrokerProtocol,106,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,144,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,44,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,163,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [BrokerProtocol,0,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-02-26T10:23:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f248d8bbfd0>
+2020-02-26T10:23:57-0300 [-] Main loop terminated.

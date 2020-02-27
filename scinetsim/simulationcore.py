@@ -11,8 +11,8 @@ from scinetsim.ScrollableScreen import ScrollableScreen
 class SimulationCore(object):
  	
 	def __init__(self):
-		self.allWirelessConnections = defaultdict(list)
-		self.allConnections = defaultdict(list)
+		# self.allWirelessConnections = defaultdict(list)
+		self.allConnections = set()
 		self.allFogNodes = defaultdict(list)
 		self.allCloudNodes = defaultdict(list)
 		self.allAccessPointNodes = defaultdict(list)
@@ -105,8 +105,8 @@ class SimulationCore(object):
 	def appendConnections(self, connection):
 		self.allConnections[connection.id].append(connection)
 
-	def appendWirelessConnections(self, wireless_connection):
-		self.allwirelessConnections[wireless_connection.id].append(wireless_connection)
+	# def appendWirelessConnections(self, wireless_connection):
+	# 	self.allwirelessConnections[wireless_connection.id].append(wireless_connection)
 
 	def getAnyDeviceById(self, id):
 		
