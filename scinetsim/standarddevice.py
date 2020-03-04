@@ -230,22 +230,14 @@ class Connection(object):
 
         self.id = self.simulation_core.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
 
-        
         self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
-
-        # self.simulation_core.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
-        # self.simulation_core.canvas.tag_bind(self.device2.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)        
 
     def update_connection_arrow(self,event):
         
         self.simulation_core.canvas.delete(self.id)
-        #self.create_connection(self.simulation_core, self.device1, self.device2)
-        
-        #self.simulation_core.canvas.coords(self.id,self.device1.visual_component.x-8, self.device1.visual_component.y-8, self.device2.visual_component.x-8, self.device2.visual_component.y-8)
-        self.simulation_core.canvas.after(100, self.simulation_core.canvas.delete, self.id)
+        #self.simulation_core.canvas.after(100, self.simulation_core.canvas.delete, self.id)
         self.create_connection(self.simulation_core, self.device1, self.device2)
-        #self.simulation_core.canvas.update()
-        #reactor.callLater(1, self.update_connection_arrow, event)
+
 
         
 
