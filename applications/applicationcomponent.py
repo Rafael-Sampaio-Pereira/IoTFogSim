@@ -4,6 +4,9 @@ import json
 import codecs
 from scinetsim.standarddevice import Connection
 
+from twisted.internet.task import LoopingCall
+
+
 
 class StandardApplicationComponent(protocol.Protocol):
     
@@ -42,6 +45,7 @@ class StandardApplicationComponent(protocol.Protocol):
             log.msg(e)
 
     def update_alert_message_on_screen(self, msg):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="black")
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=str(msg))
 
     def update_name_on_screen(self, msg):
@@ -101,16 +105,37 @@ class StandardApplicationComponent(protocol.Protocol):
             # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
             
-            for i in range(100):
+            def propagate_signal():
+
+              
                 # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
                 if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
                     # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-                    self.visual_component.signal_radius += 1
+                    
+                    self.visual_component.signal_radius += 20
+
                     self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
 
                 else:
                     # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
                     self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
                     self.visual_component.signal_radius = 1
+                    
 
                 self.simulation_core.canvas.update()
+            
+            
+            LoopingCallWithCounter(100, propagate_signal).lc.start(1)
+
+
+    
+class LoopingCallWithCounter:
+    def __init__(self, count, f, *a, **kw):
+        self.i = 0
+        def wrapper():
+            if self.i >= count:
+                self.lc.stop()
+            else:
+                f(*a, **kw)
+                self.i += 1
+        self.lc = LoopingCall(wrapper)
