@@ -4,17 +4,11 @@ from twisted.python import log
 import tkinter
 from config.settings import ICONS_PATH
 from scinetsim.visualcomponent import VisualComponent
-from scinetsim.networkcomponent import StandardServerNetworkComponent
 from scinetsim.networkcomponent import StandardClientNetworkComponent
 import uuid
-
 import time
-
-
 from twisted.internet.endpoints import TCP4ClientEndpoint
 from twisted.internet.endpoints import connectProtocol
-
-
 from scinetsim.iconsRegister import getIconFileName
 from scinetsim.functions import import_and_instantiate_class_from_string
 
@@ -38,11 +32,10 @@ class StandardServerDevice(object):
         self.name = name
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        #self.network_component = StandardServerNetworkComponent(self.visual_component, self.simulation_core, application)
         self.simulation_core.updateEventsCounter("Initializing Server")
-
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
+        self.application.is_wireless = is_wireless
 
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 

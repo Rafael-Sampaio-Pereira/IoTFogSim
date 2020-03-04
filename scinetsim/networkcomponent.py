@@ -2,20 +2,6 @@
 from twisted.python import log
 from scinetsim.functions import import_and_instantiate_class_from_string
 
-class StandardServerNetworkComponent():
-
-    def __init__(self, visual_component, simulation_core, application):
-
-        self.visual_component = visual_component
-        self.simulation_core = simulation_core
-        self.application = import_and_instantiate_class_from_string(application)
-        self.application.visual_component = self.visual_component
-        self.application.simulation_core = self.simulation_core
-
-    def buildProtocol(self, addr):
-        return self.application
-
-
 class StandardClientNetworkComponent():
 
     def __init__(self, visual_component, simulation_core, application, is_wireless):
