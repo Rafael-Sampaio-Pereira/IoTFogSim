@@ -69,7 +69,7 @@ class StandardClientDevice(object):
         self.name = name
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application)
+        self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application, is_wireless)
         self.simulation_core.updateEventsCounter("Initializing Client")
         
         if(self.is_wireless == True):
@@ -213,29 +213,18 @@ class Connection(object):
         self.simulation_core = simulation_core
         self.device1 = source_protocol
         self.device2 = simulation_core.get_any_protocol_by_addr_and_port(destiny_addr, destiny_port)
-
         self.create_connection(self.simulation_core, self.device1, self.device2)
-        
-        #self.update_connection_arrow()
-
 
     def create_connection(self,simulation_core, device1,device2):
         x1 = self.device1.visual_component.x
-
         y1 = self.device1.visual_component.y
-
         x2 = self.device2.visual_component.x
-
         y2 = self.device2.visual_component.y
-
         self.id = self.simulation_core.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
-
         self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
 
     def update_connection_arrow(self,event):
-        
         self.simulation_core.canvas.delete(self.id)
-        #self.simulation_core.canvas.after(100, self.simulation_core.canvas.delete, self.id)
         self.create_connection(self.simulation_core, self.device1, self.device2)
 
 

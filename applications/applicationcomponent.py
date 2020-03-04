@@ -11,6 +11,7 @@ class StandardApplicationComponent(protocol.Protocol):
         self.visual_component = None
         self.simulation_core =  None
         self.network_settings = None
+        self.is_wireless = False
 
         
     def build_package(self, payload):
@@ -88,24 +89,28 @@ class StandardApplicationComponent(protocol.Protocol):
         self.simulation_core.allConnections.add(con)
         
 
+    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+    def passive_scanning(self):
+        
+        if self.is_wireless == True:
 
-        # if len(self.simulation_core.allConnections) > 0:
-        #     for connection in self.simulation_core.allConnections.copy():
-                    
-    
-        #         d1 = connection.device1.transport.getHost()
-        #         d2 = connection.device1.transport.getHost()
-        #         _self = self.transport.getHost()
-        #         peer = self.transport.getPeer()
+            #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< sending... >>")
 
-        #         if ((d1.host == _self.host and d1.port == _self.port) and (d2.host == peer.host and d1.port == peer.port)) or ((d2.host == _self.host and d2.port == _self.port) and (d1.host == peer.host and d1.port == peer.port)):
+            # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+            
+            for i in range(100):
+                # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+                if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+                    # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+                    self.visual_component.signal_radius += 1
+                    self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
 
-        #             # if the conection animation arrow already exist, just pass - Rafael Sampaio
-        #             pass
-        #         else:
-        #             con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
-        #             self.simulation_core.allConnections.add(con)
-        # else:
-        #     con = Connection(self.simulation_core, self, self.transport.getPeer().host, self.transport.getPeer().port)
-        #     self.simulation_core.allConnections.add(con)
+                else:
+                    # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+                    self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+                    self.visual_component.signal_radius = 1
 
+                self.simulation_core.canvas.update()

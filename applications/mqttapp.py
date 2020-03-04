@@ -60,6 +60,9 @@ class PublisherApp(StandardApplicationComponent):
         self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT PUBLISH REQUEST")
         package = self.build_package(msg)
         self.send(package)
+
+        self.passive_scanning()
+        
         # This publish function will be called periodically to the broker - Rafael Sampaio
         reactor.callLater(self.publish_interval, self.publish)
 

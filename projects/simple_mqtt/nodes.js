@@ -37,7 +37,7 @@
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
-            "is_wireless": false,
+            "is_wireless": true,
             "application": "applications.mqttapp.PublisherApp",
             "x": 170,
             "y": 380
@@ -49,7 +49,7 @@
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
-            "is_wireless": false,
+            "is_wireless": true,
             "application": "applications.mqttapp.PublisherApp",
             "x": 570,
             "y": 380
