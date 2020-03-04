@@ -231,7 +231,7 @@ class Connection(object):
         self.id = self.simulation_core.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
 
         
-        self.simulation_core.canvas.after(100, self.update_connection_arrow, None)
+        self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
 
         # self.simulation_core.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
         # self.simulation_core.canvas.tag_bind(self.device2.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)        
