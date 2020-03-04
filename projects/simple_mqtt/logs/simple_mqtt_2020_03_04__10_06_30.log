@@ -1,0 +1,45 @@
+2020-03-04T10:06:30-0300 [-] Creating router ...
+2020-03-04T10:06:30-0300 [-] Initializing Router - Number of events: 1
+2020-03-04T10:06:30-0300 [-] RouterFactory starting on 8081
+2020-03-04T10:06:30-0300 [-] Creating fog node ...
+2020-03-04T10:06:30-0300 [stdout#info] applications.mqttapp.SubscriberApp
+2020-03-04T10:06:30-0300 [-] Initializing Client - Number of events: 2
+2020-03-04T10:06:30-0300 [-] Creating fog node ...
+2020-03-04T10:06:30-0300 [-] Initializing Server - Number of events: 3
+2020-03-04T10:06:30-0300 [-] BrokerFactory starting on 5100
+2020-03-04T10:06:30-0300 [-] Creating iot node ...
+2020-03-04T10:06:30-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-03-04T10:06:30-0300 [-] Initializing Client - Number of events: 4
+2020-03-04T10:06:30-0300 [-] Creating iot node ...
+2020-03-04T10:06:30-0300 [stdout#info] applications.mqttapp.PublisherApp
+2020-03-04T10:06:30-0300 [-] Initializing Client - Number of events: 5
+2020-03-04T10:06:30-0300 [stdout#info] This divice have no simulation core instance
+2020-03-04T10:06:30-0300 [stdout#info] This divice have no simulation core instance
+2020-03-04T10:06:30-0300 [stdout#info] This divice have no simulation core instance
+2020-03-04T10:06:30-0300 [stdout#info] This divice have no simulation core instance
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42266 - Connected to mqtt broker - Number of events: 6
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42266 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42268 - Connected to mqtt broker - Number of events: 8
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42268 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42270 - Connected to mqtt broker - Number of events: 10
+2020-03-04T10:06:30-0300 [Uninitialized] 127.0.0.1:42270 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-03-04T10:06:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f6fa8599c18>
+2020-03-04T10:06:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f6fa8599e10>
+2020-03-04T10:06:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f6fa85af048>
+2020-03-04T10:06:33-0300 [stderr#error] Exception in Tkinter callback
+2020-03-04T10:06:33-0300 [stderr#error] Traceback (most recent call last):
+2020-03-04T10:06:33-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-03-04T10:06:33-0300 [stderr#error]     return self.func(*args)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 752, in callit
+2020-03-04T10:06:33-0300 [stderr#error]     func(*args)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 246, in update_connection_arrow
+2020-03-04T10:06:33-0300 [stderr#error]     self.create_connection(self.simulation_core, self.device1, self.device2)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 236, in create_connection
+2020-03-04T10:06:33-0300 [stderr#error]     self.simulation_core.canvas.tag_bind(self.device1.visual_component.draggable_img, '<ButtonRelease-1>', self.update_connection_arrow)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 2456, in tag_bind
+2020-03-04T10:06:33-0300 [stderr#error]     sequence, func, add)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1204, in _bind
+2020-03-04T10:06:33-0300 [stderr#error]     needcleanup)
+2020-03-04T10:06:33-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1365, in _register
+2020-03-04T10:06:33-0300 [stderr#error]     f = CallWrapper(func, subst, self).__call__
+2020-03-04T10:06:33-0300 [stderr#error] RecursionError: maximum recursion depth exceeded

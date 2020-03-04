@@ -46,8 +46,8 @@ class RouterApp:
             whenConnected = endpoint.connect(factory)
 
             def cbConnected(connectedProtocol):
-                self.router_factory.listen_protocol.visual_component = self.visual_component
-                self.router_factory.listen_protocol.simulation_core = self.simulation_core
+                self.router_factory.listen_protocol.visual_component = self.router_factory.visual_component
+                self.router_factory.listen_protocol.simulation_core = self.router_factory.simulation_core
                 self.simulation_core.allProtocols.add(self.router_factory.listen_protocol)
 
             def ebConnectError(reason):
