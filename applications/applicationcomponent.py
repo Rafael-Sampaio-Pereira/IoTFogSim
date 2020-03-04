@@ -90,13 +90,13 @@ class StandardApplicationComponent(protocol.Protocol):
         
 
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
-    def passive_scanning(self):
+    def draw_wireless_signal(self, msg):
         
         if self.is_wireless == True:
 
             #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< sending... >>")
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text=msg)
 
             # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")

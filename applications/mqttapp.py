@@ -61,8 +61,8 @@ class PublisherApp(StandardApplicationComponent):
         package = self.build_package(msg)
         self.send(package)
 
-        self.passive_scanning()
-        
+        self.draw_wireless_signal("MQTT_PUBLISH")
+
         # This publish function will be called periodically to the broker - Rafael Sampaio
         reactor.callLater(self.publish_interval, self.publish)
 
