@@ -121,7 +121,9 @@ class StandardApplicationComponent(protocol.Protocol):
                 self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
                 self.visual_component.signal_radius = 1
 
-                self.wireless_signal_control_id.cancel()
+                if self.wireless_signal_control_id is not None:
+                    self.wireless_signal_control_id.cancel()
+                    self.wireless_signal_control_id = None
 
             #self.simulation_core.canvas.update()
             

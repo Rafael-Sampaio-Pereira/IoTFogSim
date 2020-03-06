@@ -1,0 +1,738 @@
+2020-03-06T09:50:51-0300 [-] Creating router ...
+2020-03-06T09:50:51-0300 [-] Initializing Router - Number of events: 1
+2020-03-06T09:50:51-0300 [-] RouterFactory starting on 8081
+2020-03-06T09:50:51-0300 [-] Creating fog node ...
+2020-03-06T09:50:51-0300 [-] Initializing Client - Number of events: 2
+2020-03-06T09:50:51-0300 [-] Creating fog node ...
+2020-03-06T09:50:51-0300 [-] Initializing Server - Number of events: 3
+2020-03-06T09:50:51-0300 [-] BrokerFactory starting on 5100
+2020-03-06T09:50:51-0300 [-] Creating iot node ...
+2020-03-06T09:50:51-0300 [-] Initializing Client - Number of events: 4
+2020-03-06T09:50:51-0300 [-] Creating iot node ...
+2020-03-06T09:50:51-0300 [-] Initializing Client - Number of events: 5
+2020-03-06T09:50:51-0300 [stdout#info] This divice have no simulation core instance
+2020-03-06T09:50:51-0300 [stdout#info] This divice have no simulation core instance
+2020-03-06T09:50:51-0300 [stdout#info] This divice have no simulation core instance
+2020-03-06T09:50:51-0300 [stdout#info] This divice have no simulation core instance
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44788 - Connected to mqtt broker - Number of events: 6
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44788 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44790 - Connected to mqtt broker - Number of events: 8
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44792 - Connected to mqtt broker - Number of events: 10
+2020-03-06T09:50:51-0300 [Uninitialized] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-03-06T09:50:51-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44788, "type": "http", "payload": {"action": "subscribe", "topic": "sensor_metering", "content": "None"}}\n'
+2020-03-06T09:50:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bb00>
+2020-03-06T09:50:51-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.79 Kwh"}}\n'
+2020-03-06T09:50:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bcf8>
+2020-03-06T09:50:51-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.24 Kwh"}}\n'
+2020-03-06T09:50:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bef0>
+2020-03-06T09:50:52-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:50:52-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:50:56-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 12
+2020-03-06T09:50:56-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 13
+2020-03-06T09:50:56-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.64 Kwh"}}\n'
+2020-03-06T09:50:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a7b8>
+2020-03-06T09:50:56-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.93 Kwh"}}\n'
+2020-03-06T09:50:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a978>
+2020-03-06T09:50:57-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:50:57-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:01-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 14
+2020-03-06T09:51:01-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-03-06T09:51:01-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.2 Kwh"}}\n'
+2020-03-06T09:51:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a668>
+2020-03-06T09:51:01-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.83 Kwh"}}\n'
+2020-03-06T09:51:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801aeb8>
+2020-03-06T09:51:02-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:02-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:06-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-03-06T09:51:06-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-03-06T09:51:06-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.72 Kwh"}}\n'
+2020-03-06T09:51:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a0b8>
+2020-03-06T09:51:06-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.14 Kwh"}}\n'
+2020-03-06T09:51:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a278>
+2020-03-06T09:51:07-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:07-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:11-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-03-06T09:51:11-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.72 Kwh"}}\n'
+2020-03-06T09:51:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a588>
+2020-03-06T09:51:11-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-03-06T09:51:11-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.76 Kwh"}}\n'
+2020-03-06T09:51:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a898>
+2020-03-06T09:51:12-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:12-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:16-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-03-06T09:51:16-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.14 Kwh"}}\n'
+2020-03-06T09:51:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a780>
+2020-03-06T09:51:16-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-03-06T09:51:16-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.89 Kwh"}}\n'
+2020-03-06T09:51:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804add8>
+2020-03-06T09:51:17-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:17-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:21-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-03-06T09:51:21-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.14 Kwh"}}\n'
+2020-03-06T09:51:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a080>
+2020-03-06T09:51:21-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-03-06T09:51:21-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.3 Kwh"}}\n'
+2020-03-06T09:51:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc1d0>
+2020-03-06T09:51:22-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:22-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:26-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-03-06T09:51:26-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-03-06T09:51:26-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.39 Kwh"}}\n'
+2020-03-06T09:51:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc128>
+2020-03-06T09:51:26-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.3 Kwh"}}\n'
+2020-03-06T09:51:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc5c0>
+2020-03-06T09:51:27-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:27-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:31-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-03-06T09:51:31-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-03-06T09:51:31-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.08 Kwh"}}\n'
+2020-03-06T09:51:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc860>
+2020-03-06T09:51:31-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.99 Kwh"}}\n'
+2020-03-06T09:51:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdca90>
+2020-03-06T09:51:32-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:32-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:36-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-03-06T09:51:36-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.24 Kwh"}}\n'
+2020-03-06T09:51:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdcf28>
+2020-03-06T09:51:36-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-03-06T09:51:36-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.8 Kwh"}}\n'
+2020-03-06T09:51:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb048>
+2020-03-06T09:51:37-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:37-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:41-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-03-06T09:51:41-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.06 Kwh"}}\n'
+2020-03-06T09:51:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb160>
+2020-03-06T09:51:41-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-03-06T09:51:41-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.33 Kwh"}}\n'
+2020-03-06T09:51:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb588>
+2020-03-06T09:51:42-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:42-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:46-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-03-06T09:51:46-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.45 Kwh"}}\n'
+2020-03-06T09:51:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb550>
+2020-03-06T09:51:46-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-03-06T09:51:46-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.68 Kwh"}}\n'
+2020-03-06T09:51:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb9b0>
+2020-03-06T09:51:47-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:47-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:51-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-03-06T09:51:51-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-03-06T09:51:51-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.49 Kwh"}}\n'
+2020-03-06T09:51:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffbcf8>
+2020-03-06T09:51:51-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.53 Kwh"}}\n'
+2020-03-06T09:51:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffbe10>
+2020-03-06T09:51:52-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:52-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:56-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-03-06T09:51:56-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.1 Kwh"}}\n'
+2020-03-06T09:51:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7160>
+2020-03-06T09:51:56-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-03-06T09:51:56-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.67 Kwh"}}\n'
+2020-03-06T09:51:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7390>
+2020-03-06T09:51:57-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:51:57-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:52:01-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-03-06T09:52:01-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.39 Kwh"}}\n'
+2020-03-06T09:52:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7630>
+2020-03-06T09:52:01-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-03-06T09:52:01-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.95 Kwh"}}\n'
+2020-03-06T09:52:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa70b8>
+2020-03-06T09:52:02-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:52:02-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/applicationcomponent.py", line 125, in draw_wireless_signal
+	    self.wireless_signal_control_id.cancel()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 99, in cancel
+	    raise error.AlreadyCalled
+	twisted.internet.error.AlreadyCalled: Tried to cancel an already-called event.
+	
+2020-03-06T09:52:06-0300 [-] 127.0.0.1:44790 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-03-06T09:52:06-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44790, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.38 Kwh"}}\n'
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7588>
+2020-03-06T09:52:06-0300 [-] 127.0.0.1:44792 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-03-06T09:52:06-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 44792, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.89 Kwh"}}\n'
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7e10>
+2020-03-06T09:52:06-0300 [-] Received SIGINT, shutting down.
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc860>
+2020-03-06T09:52:06-0300 [BrokerProtocol,28,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,7,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,14,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,15,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 42
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb048>
+2020-03-06T09:52:06-0300 [BrokerProtocol,27,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,1,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc128>
+2020-03-06T09:52:06-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [PublisherApp,client] connection lost - Number of events: 43
+2020-03-06T09:52:06-0300 [BrokerProtocol,2,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 44
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a278>
+2020-03-06T09:52:06-0300 [BrokerProtocol,21,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7160>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 45
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc1d0>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a0b8>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 46
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7e10>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb160>
+2020-03-06T09:52:06-0300 [BrokerProtocol,12,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [RouterAppProtocol,3,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [RouterAppProtocol,3,127.0.0.1] connection lost - Number of events: 47
+2020-03-06T09:52:06-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [SubscriberApp,client] connection lost - Number of events: 48
+2020-03-06T09:52:06-0300 [BrokerProtocol,3,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,8,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 49
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7390>
+2020-03-06T09:52:06-0300 [BrokerProtocol,6,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a588>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 50
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb588>
+2020-03-06T09:52:06-0300 [BrokerProtocol,24,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-03-06T09:52:06-0300 [BrokerProtocol,22,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,9,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [PublisherApp,client] connection lost - Number of events: 51
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 52
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdc5c0>
+2020-03-06T09:52:06-0300 [BrokerProtocol,23,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,29,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,16,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,4,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7630>
+2020-03-06T09:52:06-0300 [BrokerProtocol,10,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 53
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa70b8>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb550>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a7b8>
+2020-03-06T09:52:06-0300 [BrokerProtocol,18,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 54
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a898>
+2020-03-06T09:52:06-0300 [BrokerProtocol,30,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,17,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,11,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 55
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a978>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fa7588>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 56
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffb9b0>
+2020-03-06T09:52:06-0300 [BrokerProtocol,31,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a080>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804a780>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 57
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdca90>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bb00>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffbcf8>
+2020-03-06T09:52:06-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-03-06T09:52:06-0300 [BrokerProtocol,5,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,13,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,25,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,20,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,26,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [BrokerProtocol,32,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bcf8>
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801a668>
+2020-03-06T09:52:06-0300 [BrokerProtocol,19,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7fdcf28>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 58
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd804add8>
+2020-03-06T09:52:06-0300 [BrokerProtocol,0,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 59
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd7ffbe10>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 60
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fd801aeb8>
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-06T09:52:06-0300 [ClientProtocol,client] connection lost - Number of events: 61
+2020-03-06T09:52:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9fddd5bef0>
+2020-03-06T09:52:06-0300 [-] Main loop terminated.
