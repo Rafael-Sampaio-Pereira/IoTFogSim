@@ -1,0 +1,132 @@
+2020-03-05T09:10:49-0300 [-] Creating router ...
+2020-03-05T09:10:49-0300 [-] Initializing Router - Number of events: 1
+2020-03-05T09:10:49-0300 [-] RouterFactory starting on 8081
+2020-03-05T09:10:49-0300 [-] Creating fog node ...
+2020-03-05T09:10:49-0300 [-] Initializing Client - Number of events: 2
+2020-03-05T09:10:49-0300 [-] Creating fog node ...
+2020-03-05T09:10:49-0300 [-] Initializing Server - Number of events: 3
+2020-03-05T09:10:49-0300 [-] BrokerFactory starting on 5100
+2020-03-05T09:10:49-0300 [-] Creating iot node ...
+2020-03-05T09:10:49-0300 [-] Initializing Client - Number of events: 4
+2020-03-05T09:10:49-0300 [-] Creating iot node ...
+2020-03-05T09:10:49-0300 [-] Initializing Client - Number of events: 5
+2020-03-05T09:10:49-0300 [stdout#info] This divice have no simulation core instance
+2020-03-05T09:10:49-0300 [stdout#info] This divice have no simulation core instance
+2020-03-05T09:10:49-0300 [stdout#info] This divice have no simulation core instance
+2020-03-05T09:10:49-0300 [stdout#info] This divice have no simulation core instance
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38654 - Connected to mqtt broker - Number of events: 6
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38654 - sending MQTT SUBSCRIBE REQUEST - Number of events: 7
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38656 - Connected to mqtt broker - Number of events: 8
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 9
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38658 - Connected to mqtt broker - Number of events: 10
+2020-03-05T09:10:49-0300 [Uninitialized] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 11
+2020-03-05T09:10:49-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38654, "type": "http", "payload": {"action": "subscribe", "topic": "sensor_metering", "content": "None"}}\n'
+2020-03-05T09:10:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d794dd8>
+2020-03-05T09:10:49-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.88 Kwh"}}\n'
+2020-03-05T09:10:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d794fd0>
+2020-03-05T09:10:49-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.18 Kwh"}}\n'
+2020-03-05T09:10:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2208>
+2020-03-05T09:10:54-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 12
+2020-03-05T09:10:54-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 13
+2020-03-05T09:10:54-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.0 Kwh"}}\n'
+2020-03-05T09:10:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2748>
+2020-03-05T09:10:54-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.54 Kwh"}}\n'
+2020-03-05T09:10:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2940>
+2020-03-05T09:10:59-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 14
+2020-03-05T09:10:59-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.78 Kwh"}}\n'
+2020-03-05T09:10:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2860>
+2020-03-05T09:10:59-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-03-05T09:10:59-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.66 Kwh"}}\n'
+2020-03-05T09:10:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b25c0>
+2020-03-05T09:11:04-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-03-05T09:11:04-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.97 Kwh"}}\n'
+2020-03-05T09:11:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2ba8>
+2020-03-05T09:11:04-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-03-05T09:11:04-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.13 Kwh"}}\n'
+2020-03-05T09:11:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac278>
+2020-03-05T09:11:09-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-03-05T09:11:09-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.52 Kwh"}}\n'
+2020-03-05T09:11:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac0b8>
+2020-03-05T09:11:09-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-03-05T09:11:09-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.84 Kwh"}}\n'
+2020-03-05T09:11:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac6d8>
+2020-03-05T09:11:14-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-03-05T09:11:14-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.22 Kwh"}}\n'
+2020-03-05T09:11:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac5f8>
+2020-03-05T09:11:14-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-03-05T09:11:14-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.05 Kwh"}}\n'
+2020-03-05T09:11:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acc18>
+2020-03-05T09:11:19-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-03-05T09:11:19-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.44 Kwh"}}\n'
+2020-03-05T09:11:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acf28>
+2020-03-05T09:11:19-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-03-05T09:11:19-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.6 Kwh"}}\n'
+2020-03-05T09:11:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acf98>
+2020-03-05T09:11:24-0300 [-] 127.0.0.1:38656 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-03-05T09:11:24-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38656, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.72 Kwh"}}\n'
+2020-03-05T09:11:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4ee63278>
+2020-03-05T09:11:24-0300 [-] 127.0.0.1:38658 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-03-05T09:11:24-0300 [stdout#info] OPACOTE É b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 38658, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.31 Kwh"}}\n'
+2020-03-05T09:11:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4ee63470>
+2020-03-05T09:11:28-0300 [-] Received SIGINT, shutting down.
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2748>
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 26
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acf98>
+2020-03-05T09:11:28-0300 [BrokerProtocol,4,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac5f8>
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d794fd0>
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 27
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac278>
+2020-03-05T09:11:28-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-03-05T09:11:28-0300 [BrokerProtocol,15,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4ee63278>
+2020-03-05T09:11:28-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [PublisherApp,client] connection lost - Number of events: 28
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 29
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2940>
+2020-03-05T09:11:28-0300 [BrokerProtocol,8,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,11,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,6,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 30
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2208>
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acf28>
+2020-03-05T09:11:28-0300 [BrokerProtocol,16,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,1,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [RouterAppProtocol,3,127.0.0.1] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [RouterAppProtocol,3,127.0.0.1] connection lost - Number of events: 31
+2020-03-05T09:11:28-0300 [BrokerProtocol,12,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,2,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,0,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,9,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 32
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7acc18>
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2860>
+2020-03-05T09:11:28-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [PublisherApp,client] connection lost - Number of events: 33
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac0b8>
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b2ba8>
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 34
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4ee63470>
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 35
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7b25c0>
+2020-03-05T09:11:28-0300 [BrokerProtocol,13,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,14,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,10,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [BrokerProtocol,5,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d794dd8>
+2020-03-05T09:11:28-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [SubscriberApp,client] connection lost - Number of events: 36
+2020-03-05T09:11:28-0300 [BrokerProtocol,7,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-03-05T09:11:28-0300 [ClientProtocol,client] connection lost - Number of events: 37
+2020-03-05T09:11:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fae4d7ac6d8>
+2020-03-05T09:11:28-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-03-05T09:11:28-0300 [BrokerProtocol,3,127.0.0.1] The requested subscriber is no longer available in subscribers list
+2020-03-05T09:11:28-0300 [-] Main loop terminated.
