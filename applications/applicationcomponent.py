@@ -7,6 +7,7 @@ from scinetsim.standarddevice import Connection
 from twisted.internet.task import LoopingCall
 
 from multiprocessing import Process
+
 import time
 
 class StandardApplicationComponent(protocol.Protocol):
@@ -96,35 +97,35 @@ class StandardApplicationComponent(protocol.Protocol):
         
 
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
-    def draw_wireless_signal(self, msg):
+    # def draw_wireless_signal(self, msg):
         
-        if self.is_wireless == True:
+    #     if self.is_wireless == True:
 
-            #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
+    #         #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
 
-            # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+    #         # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
             
-            # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-            if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-                # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-                self.visual_component.signal_radius += 10
-                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+    #         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+    #         if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+    #             # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+    #             self.visual_component.signal_radius += 10
+    #             self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
                 
-                # Reactor will send a wiriless signal draw_wireless_signal  method at each 0.1024 s interval time. - Rafael Sampaio
-                self.wireless_signal_control_id = reactor.callLater(0.1024, self.draw_wireless_signal, msg=msg)
+    #             # Reactor will send a wiriless signal draw_wireless_signal  method at each 0.1024 s interval time. - Rafael Sampaio
+    #             self.wireless_signal_control_id = reactor.callLater(0.1024, self.draw_wireless_signal, msg=msg)
 
-            else:
-                # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-                self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
-                self.visual_component.signal_radius = 1
+    #         else:
+    #             # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+    #             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+    #             self.visual_component.signal_radius = 1
 
-                if self.wireless_signal_control_id is not None:
-                    self.wireless_signal_control_id.cancel()
-                    self.wireless_signal_control_id = None
+    #             if self.wireless_signal_control_id is not None:
+    #                 self.wireless_signal_control_id.cancel()
+    #                 self.wireless_signal_control_id = None
 
-            #self.simulation_core.canvas.update()
+    #         #self.simulation_core.canvas.update()
             
             
