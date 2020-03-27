@@ -17,6 +17,8 @@ from config.settings import version
 
 from scinetsim.functions import configure_logger
 
+import time
+
 def config():
 	# para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
 	# que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
@@ -121,6 +123,9 @@ def load_nodes(project_name, simulation_core):
 	allWirelessConnections = []
 	allConnections = []
 
+	# Interval between nodes creation and nodes start(run)- Rafael Sampaio
+	interval=0.5
+
 	with open('projects/'+project_name+'/nodes.js') as nodes_file:
 		data = json.load(nodes_file)
 		
@@ -131,6 +136,7 @@ def load_nodes(project_name, simulation_core):
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'])
 				simulation_core.appendRouterNodes(rt)
+				time.sleep(interval)
 				rt.run()
 
 			for access_point in data['access_points']:
@@ -139,21 +145,23 @@ def load_nodes(project_name, simulation_core):
 				
 				ap = AccessPoint(simulation_core, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
 				simulation_core.appendAccessPointNode(ap)
+				time.sleep(interval)
 				ap.run()
 		
 			for fog_node in data['fog_nodes']:
 				
 				log.msg("Creating fog node ...")
-				fog = None
 				
 				if(fog_node['type'] == 'server'):
 					fog = StandardServerDevice(simulation_core, fog_node['port'], fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'])
 					simulation_core.appendFogNodes(fog)
+					time.sleep(interval)
 					fog.run()
 					
 				elif(fog_node['type'] == 'client'):
 					fog = StandardClientDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'])
 					simulation_core.appendFogNodes(fog)
+					time.sleep(interval)
 					fog.run()
 					
 				else:
@@ -162,16 +170,17 @@ def load_nodes(project_name, simulation_core):
 			for cloud_node in data['cloud_nodes']:
 				
 				log.msg("Creating cloud node ...")
-				fog = None
 				
 				if(cloud_node['type'] == 'server'):
 					cloud = StandardServerDevice(simulation_core, cloud_node['port'], cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'])
 					simulation_core.appendCloudNodes(cloud)
+					time.sleep(interval)
 					cloud.run()
 					
 				elif(cloud_node['type'] == 'client'):
 					cloud = StandardClientDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'])
 					simulation_core.appendCloudNodes(cloud)
+					time.sleep(interval)
 					cloud.run()
 					
 				else:
@@ -185,32 +194,15 @@ def load_nodes(project_name, simulation_core):
 				if(iot_node['type'] == 'server'):
 					iot = StandardServerDevice(simulation_core, iot_node['port'], iot_node['real_ip'], iot_node['simulation_ip'], iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'])
 					simulation_core.appendIoTNodes(iot)
+					time.sleep(interval)
 					iot.run()
 					
 				elif(iot_node['type'] == 'client'):
 					iot = StandardClientDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'],  iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'])
 					simulation_core.appendIoTNodes(iot)
+					time.sleep(interval)
 					iot.run()
+					
 					
 				else:
 					log.msg("Error: Type not found.")
-
-
-			
-				
-
-
-# def load_connections(project_name, simulation_core):
-
-
-# 	with open('projects/'+project_name+'/connections.js') as connections_file:
-# 		data = json.load(connections_file)
-		
-# 		if data:
-# 			for connection in data['connections']:
-				
-# 				log.msg("Creating connections ...")
-
-# 				con = Connection(simulation_core, connection['id_device_1'], connection['id_device_2'])
-
-# 				simulation_core.appendConnections(con)

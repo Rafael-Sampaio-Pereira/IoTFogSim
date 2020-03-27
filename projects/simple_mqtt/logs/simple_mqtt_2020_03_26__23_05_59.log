@@ -1,0 +1,15 @@
+2020-03-26T23:05:59-0300 [-] Creating router ...
+2020-03-26T23:05:59-0300 [-] Initializing Router - Number of events: 1
+2020-03-26T23:05:59-0300 [stderr#error] Exception in Tkinter callback
+2020-03-26T23:05:59-0300 [stderr#error] Traceback (most recent call last):
+2020-03-26T23:05:59-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-03-26T23:05:59-0300 [stderr#error]     return self.func(*args)
+2020-03-26T23:05:59-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 101, in <lambda>
+2020-03-26T23:05:59-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-03-26T23:05:59-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 55, in open_project
+2020-03-26T23:05:59-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-03-26T23:05:59-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 136, in load_nodes
+2020-03-26T23:05:59-0300 [stderr#error]     time.sleep(interval)
+2020-03-26T23:05:59-0300 [stderr#error] NameError: name 'time' is not defined
+2020-03-26T23:06:09-0300 [-] Closing IoTFogSim Application...
+2020-03-26T23:06:09-0300 [-] Main loop terminated.
