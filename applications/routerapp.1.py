@@ -1,73 +1,4 @@
-# #!/usr/local/bin/python
-# # $Id$
-# # $Source$
-# import getopt
-# import string
-# import sys
-
-# from twisted.internet import protocol
-# from twisted.internet import reactor
-
-# class RouterApp:
-    
-#     def __init__(self):
-#         self.visual_component = None
-#         self.simulation_core =  None
-
-#     def start(self, addr, port):
-#         reactor.listenTCP(port, DebugHttpServerFactory("127.0.0.1", int(5100)))
-
-
-# class DebugHttpClientProtocol(protocol.Protocol):
-#   """ Client protocol. Writes out the request to the target HTTP server."""
-#   """ Response is written to stdout on receipt, and back to the server's"""
-#   """ transport when the client connection is lost.                     """
-
-#   def __init__(self, serverTransport):
-#         self.serverTransport = serverTransport
-
-#   def sendMessage(self, data):
-#     self.transport.write(data)
-  
-#   def dataReceived(self, data):
-#     self.data = data
-#     self.transport.loseConnection()
-
-#   def connectionLost(self, reason):
-#     #self.serverTransport.write(self.data)
-#     self.serverTransport.loseConnection()
-
-
-# class DebugHttpServerProtocol(protocol.Protocol):
-#   """ Server Protocol. Handles data received from client application.   """
-#   """ Writes the data to console, then creates a proxy client component """
-#   """ and sends the data through, then terminates the client and server """
-#   """ connections.                                                      """
-
-#   def dataReceived(self, data):
-#     self.data = data
-
-#     client = protocol.ClientCreator(reactor, DebugHttpClientProtocol, self.transport)
-#     d = client.connectTCP(self.factory.targetHost, self.factory.targetPort)
-#     d.addCallback(self.forwardToClient, client)
-
-#   def forwardToClient(self, client, data):
-#     client.sendMessage(self.data)
-
-
-# class DebugHttpServerFactory(protocol.ServerFactory):
-#   """ Server Factory. A holder for the protocol and for user-supplied args """
-
-#   protocol = DebugHttpServerProtocol
-
-#   def __init__(self, targetHost, targetPort):
-#     self.targetHost = targetHost
-#     self.targetPort = targetPort
-
-
-
-
-
+ 
 from twisted.internet import protocol, reactor
 from applications.applicationcomponent import StandardApplicationComponent
 from twisted.internet.endpoints import TCP4ServerEndpoint
@@ -140,7 +71,7 @@ class RouterAppProtocol(StandardApplicationComponent):
     
     def dataReceived(self, package):
 
-        #print("OPACOTE É %s"%(package))
+        print("OPACOTE É %s"%(package))
 
         # Extracting package contents - Rafael Sampaio
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
@@ -174,13 +105,11 @@ class RouterAppProtocol(StandardApplicationComponent):
 
         if self.client:
             self.client.write(package)
-            self.client.transport.loseConnection()
         else:
             self.buffer = package
 
     def write(self, package):
         self.transport.write(package)
-        
 
     def connectionMade(self):
         # saving the router protocol that acts as input(i.e. this receives packages) - Rafael Sampaio
@@ -216,16 +145,15 @@ class ClientProtocol(StandardApplicationComponent):
         self.write(self.factory.server.buffer)
         self.factory.server.buffer = ''
         
+        
     def dataReceived(self, data):
         self.factory.server.write(data)
+        self.transport.loseConnection
         
-    def connectionLost(self, reason):
-        pass     
-         
+ 
     def write(self, data):
         if data:
             self.transport.write(data)
-            
  
-
+    
  

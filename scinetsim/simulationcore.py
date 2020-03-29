@@ -30,7 +30,7 @@ class SimulationCore(object):
 					if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
 						return proto
 			except:
-				log.msg("Sorry, we can't find any protocol with these network settings!")
+				pass
 
 	def updateEventsCounter(self, event_description):
 		self.eventsCounter = self.eventsCounter + 1

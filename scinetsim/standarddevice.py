@@ -152,7 +152,7 @@ class AccessPoint(object):
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
     def passive_scanning(self):
         
-        self.simulation_core.updateEventsCounter("Access Point BEACON")
+        #self.simulation_core.updateEventsCounter("Access Point BEACON")
 
         #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
@@ -206,7 +206,9 @@ class Connection(object):
         self.simulation_core = simulation_core
         self.device1 = source_protocol
         self.device2 = simulation_core.get_any_protocol_by_addr_and_port(destiny_addr, destiny_port)
-        self.create_connection(self.simulation_core, self.device1, self.device2)
+        
+        if self.device1 and self.device2:
+            self.create_connection(self.simulation_core, self.device1, self.device2)
 
     def create_connection(self,simulation_core, device1,device2):
         x1 = self.device1.visual_component.x
@@ -223,4 +225,29 @@ class Connection(object):
 
         
 
+class wireless_sensor_network(object):
+    
+    def __init__(self, simulation_core):
+        self.simulation_core = simulation_core
+        self.sink_list = set()
+        self.sensors_list = set()
+        self.wsn_network_protocol = "UDP"
+        self.wireless_standard = "Wi-SUN"
 
+class wsn_sensor_node(object):
+
+    def __init__(self, network_group):
+        self.simulation_core = network_group.simulation_core
+        self.network_group =  network_group
+        self.id = ""
+        self.location = ""
+        self.visual_component = None
+
+class wns_sink_node(object):
+    
+    def __init__(self, network_group):
+        self.simulation_core = network_group.simulation_core
+        self.network_group =  network_group
+        self.id = ""
+        self.location = ""
+        self.visual_component = None

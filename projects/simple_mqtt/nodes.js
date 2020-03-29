@@ -67,6 +67,18 @@
             "is_wireless": true,
             "x": 400,
             "y": 300
+        },
+        { 
+            "id": 8,
+            "TBTT": 0.1024,
+            "SSID": "Rede privada 002",
+            "WPA2_password": "iotfogsim2019",
+            "simulation_ip": "192.121.0.2",
+            "icon": "ap_icon",
+            "type": "access_point",
+            "is_wireless": true,
+            "x": 400,
+            "y": 300
         }
     ],
     "routers": [

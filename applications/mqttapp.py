@@ -73,6 +73,8 @@ class PublisherApp(StandardApplicationComponent):
             # Print the received data on the sreen.  - Rafael Sampaio
             self.update_alert_message_on_screen(payload)
             #self.simulation_core.updateEventsCounter("MQTT response received")
+            if data in self._buffer:
+                self._buffer.remove(data)
 
 class SubscriberApp(StandardApplicationComponent):
     
@@ -128,6 +130,8 @@ class SubscriberApp(StandardApplicationComponent):
             # Print the received data on the sreen.  - Rafael Sampaio
             self.update_alert_message_on_screen(payload)
             #self.simulation_core.updateEventsCounter("MQTT response received")
+            #if data in self._buffer:
+            #    self._buffer.remove(data)
 
 
 class BrokerApp:
@@ -155,7 +159,7 @@ class BrokerProtocol(StandardApplicationComponent):
             if self in factory.subscribers:
                 self.factory.subscribers.remove(self)
         except NameError:
-            log.msg("The requested subscriber is no longer available in subscribers list")
+            pass
     
     def connectionMade(self):
         self.visual_component = self.factory.visual_component
