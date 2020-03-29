@@ -5,6 +5,7 @@ import codecs
 import random
 import sys
 import os
+import time
 
 from twisted.internet import reactor, protocol, endpoints
 from twisted.protocols import basic
@@ -68,13 +69,17 @@ class PublisherApp(StandardApplicationComponent):
        
         self.put_package_in_buffer(data)
 
-        for package in self._buffer:
-            destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
-            # Print the received data on the sreen.  - Rafael Sampaio
-            self.update_alert_message_on_screen(payload)
-            #self.simulation_core.updateEventsCounter("MQTT response received")
-            if data in self._buffer:
-                self._buffer.remove(data)
+        try:
+            for package in self._buffer:
+                destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
+                # Print the received data on the sreen.  - Rafael Sampaio
+                self.update_alert_message_on_screen(payload)
+                #self.simulation_core.updateEventsCounter("MQTT response received")
+                #if data in self._buffer:
+            
+            self._buffer.remove(data)
+        except:
+            pass
 
 class SubscriberApp(StandardApplicationComponent):
     
@@ -124,14 +129,18 @@ class SubscriberApp(StandardApplicationComponent):
     def dataReceived(self, data):
 
         self.put_package_in_buffer(data)
-
-        for package in self._buffer:
-            destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
-            # Print the received data on the sreen.  - Rafael Sampaio
-            self.update_alert_message_on_screen(payload)
-            #self.simulation_core.updateEventsCounter("MQTT response received")
-            #if data in self._buffer:
-            #    self._buffer.remove(data)
+        try:
+            for package in self._buffer:
+                destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
+                # Print the received data on the sreen.  - Rafael Sampaio
+                self.update_alert_message_on_screen(payload)
+                #self.simulation_core.updateEventsCounter("MQTT response received")
+                #if data in self._buffer:
+            
+            self._buffer.clear()
+        except:
+            pass
+        
 
 
 class BrokerApp:
