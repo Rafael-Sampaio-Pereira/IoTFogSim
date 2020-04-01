@@ -164,10 +164,10 @@ class AccessPoint(object):
         # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
         if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
             # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-            self.visual_component.signal_radius += 10
+            self.visual_component.signal_radius += 33
             self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             
-            # getting all canvas objects in wifi signal coverage area
+            # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
             all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             
 

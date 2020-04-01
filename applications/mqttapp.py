@@ -77,7 +77,7 @@ class PublisherApp(StandardApplicationComponent):
                 #self.simulation_core.updateEventsCounter("MQTT response received")
                 #if data in self._buffer:
             
-            self._buffer.remove(data)
+                self._buffer.remove(data)
         except:
             pass
 

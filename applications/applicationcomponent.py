@@ -40,11 +40,23 @@ class StandardApplicationComponent(protocol.Protocol):
         try:
             package = package.decode("utf-8")
             package = str(package)[0:]
-            json_msg = json.loads(package)
+
+            # this was add because mqtt application has detected two json objects in one packages and these was not sparated by comma - Rafael Sampaio
+            if "}{" in package:
+                packages = package.replace("}{","},{")
+
+                packages = json.dumps(packages)
+                print("um pacote vai ser dropado, infelizmente ", packages)
+                print(packages[0])
+                json_msg = packages[0]
+
+            else:
+                json_msg = json.loads(package)
 
             return json_msg["destiny_addr"], json_msg["destiny_port"], json_msg["source_addr"], json_msg["source_port"], json_msg["type"], json_msg["payload"]
         
         except Exception as e:
+            log.msg(package)
             log.msg(e)
 
     def update_alert_message_on_screen(self, msg):
