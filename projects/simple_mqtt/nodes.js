@@ -143,5 +143,34 @@
             "x": 400,
             "y": 200
         }
+    ],
+    "wireless_sensor_networks": [
+        { 
+            "id": 3,
+            "name": "energe_metering_wsn", 
+            "ip_standard": "6LowPan",
+            "wireless_standard": "IEEE_802.11",
+            "description": "Simple wsn for envirioment monitoring",
+            "sink_icon": "",
+            "sensor_icon": "",
+            "sensor_application": "applications.wsnapp.SinkApp",
+            "sink_application": "applications.wsnapp.SensorApp",
+            "sink_nodes": [
+                {
+                    "id":20,
+                    "position":"teste"
+                }
+            ],
+            "sensor_nodes": [
+                {
+                    "id":20,
+                    "position":"teste"
+                },
+                {
+                    "id":20,
+                    "position":"teste"
+                }
+            ]
+        }
     ]
 }

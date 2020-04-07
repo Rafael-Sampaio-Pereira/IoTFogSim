@@ -114,7 +114,7 @@ class AccessPoint(object):
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
-        self.TBTT = TBTT or 0.1024
+        self.TBTT = TBTT or 0.3 #0.1024
         self.simulation_ip = simulation_ip
 
         # SSID maximum size is 32 characters. - Rafael Sampaio

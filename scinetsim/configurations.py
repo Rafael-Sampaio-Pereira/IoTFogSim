@@ -206,3 +206,15 @@ def load_nodes(project_name, simulation_core):
 					
 				else:
 					log.msg("Error: Type not found.")
+
+
+
+			for wsn in data['wireless_sensor_networks']:
+    			
+				for sink_node in wsn['sink_nodes']:
+					print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+				for sensor_node in wsn['sensor_nodes']:
+					print("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
+
+				
