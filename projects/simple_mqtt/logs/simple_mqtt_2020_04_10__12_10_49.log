@@ -1,0 +1,28 @@
+2020-04-10T12:10:49-0300 [-] Creating router ...
+2020-04-10T12:10:49-0300 [-] Initializing Router - Number of events: 1
+2020-04-10T12:10:49-0300 [-] RouterFactory starting on 8081
+2020-04-10T12:10:49-0300 [-] Creating AccessPoint station ...
+2020-04-10T12:10:49-0300 [-] Initializing Access Point - Number of events: 2
+2020-04-10T12:10:50-0300 [-] AccessPointFactory starting on 8082
+2020-04-10T12:10:50-0300 [-] Creating fog node ...
+2020-04-10T12:10:50-0300 [stderr#error] Exception in Tkinter callback
+2020-04-10T12:10:50-0300 [stderr#error] Traceback (most recent call last):
+2020-04-10T12:10:50-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-04-10T12:10:50-0300 [stderr#error]     return self.func(*args)
+2020-04-10T12:10:50-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 106, in <lambda>
+2020-04-10T12:10:50-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-04-10T12:10:50-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 60, in open_project
+2020-04-10T12:10:50-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-04-10T12:10:50-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 165, in load_nodes
+2020-04-10T12:10:50-0300 [stderr#error]     fog = StandardClientDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'])
+2020-04-10T12:10:50-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 65, in __init__
+2020-04-10T12:10:50-0300 [stderr#error]     self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application, is_wireless)
+2020-04-10T12:10:50-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/networkcomponent.py", line 15, in __init__
+2020-04-10T12:10:50-0300 [stderr#error]     self.network_settings = "tcp:{}:{}".format(self.application.router_addr,self.application.router_port)
+2020-04-10T12:10:50-0300 [stderr#error] AttributeError: 'SubscriberApp' object has no attribute 'router_addr'
+2020-04-10T12:10:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T12:10:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T12:11:42-0300 [-] Received SIGINT, shutting down.
+2020-04-10T12:11:42-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-04-10T12:11:42-0300 [applications.accesspointapp.AccessPointFactory] (TCP Port 8082 Closed)
+2020-04-10T12:11:42-0300 [-] Main loop terminated.

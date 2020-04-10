@@ -12,7 +12,7 @@ class StandardClientNetworkComponent():
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
         self.application.is_wireless = is_wireless
-        self.network_settings = "tcp:{}:{}".format(self.application.router_addr,self.application.router_port)
+        self.network_settings = "tcp:{}:{}".format(self.application.gateway_addr,self.application.gateway_port)
 
     def doStart(self):
         pass

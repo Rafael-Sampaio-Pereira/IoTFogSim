@@ -110,12 +110,16 @@ class Router(object):
 
 class AccessPoint(object):
 
-    def __init__(self, simulation_core, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y):
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port):
+
+        self.application = import_and_instantiate_class_from_string(application)
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
         self.TBTT = TBTT or 0.3 #0.1024
         self.simulation_ip = simulation_ip
+        self.addr = real_ip
+        self.port = port
 
         # SSID maximum size is 32 characters. - Rafael Sampaio
         self.SSID = SSID
@@ -136,65 +140,21 @@ class AccessPoint(object):
         self.authenticated_devices = []
         self.associated_devices = []
         
-        # This stores the twisted protocol instance for the router device. - Rafael Sampaio
-        self.router_protocol = None
         self.visual_component.set_coverage_area_radius(200)
 
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+        self.application.is_wireless = is_wireless
+        self.application.TBTT = self.TBTT
+        self.application.router_addr = router_addr
+        self.application.router_port = router_port
+
         self.simulation_core.updateEventsCounter("Initializing Access Point")
-        
-        # Sends beacon frame. - Rafael Sampaio
-        self.passive_scanning()
-        
-
+     
     def run(self):
-        pass
+        self.application.start(self.addr, self.port)
 
-    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
-    def passive_scanning(self):
-        
-        #self.simulation_core.updateEventsCounter("Access Point BEACON")
-
-        #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
-
-        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-        
-        # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-        if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-            # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-            self.visual_component.signal_radius += 33
-            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-            
-            # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
-            all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-            
-
-            # finding all the wifi devices on the canvas screen. - Rafael Sampaio
-            wifi_devices = self.simulation_core.canvas.find_withtag("wifi_device")
-            
-            # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
-            if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
-                # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
-                for device in all_coveraged_devices:
-                    if device in wifi_devices:
-                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
-                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
-                    else:
-                        pass
-                        #log.msg("The device is not wireless based")
-            else:
-                log.msg("There is no wifi devices in this simulation or it is not in this wifi signal coverage area.")
-
-        else:
-            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
-            self.visual_component.signal_radius = 1
-
-        self.simulation_core.canvas.update()
-        # Reactor will send an beacon frame using passive scanning method at each TBTT interval time. - Rafael Sampaio
-        reactor.callLater(self.TBTT, self.passive_scanning)
+    
 
 
 

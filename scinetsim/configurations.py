@@ -145,8 +145,8 @@ def load_nodes(project_name, simulation_core):
 			for access_point in data['access_points']:
     				
 				log.msg("Creating AccessPoint station ...")
-				
-				ap = AccessPoint(simulation_core, access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'])
+
+				ap = AccessPoint(simulation_core, access_point['port'], access_point['real_ip'], access_point['simulation_ip'], access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['router_addr'], access_point['router_port'])
 				simulation_core.appendAccessPointNode(ap)
 				time.sleep(interval)
 				ap.run()

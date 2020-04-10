@@ -6,6 +6,7 @@ import random
 import sys
 import os
 import time
+import uuid
 
 from twisted.internet import reactor, protocol, endpoints
 from twisted.protocols import basic
@@ -27,14 +28,14 @@ class PublisherApp(StandardApplicationComponent):
         self.destiny_addr = "127.0.0.1"
         self.destiny_port = 5100 
 
-        self.router_addr = "127.0.0.1"
-        self.router_port = 8081
+        self.gateway_addr = "127.0.0.1"
+        self.gateway_port = 8082
 
         self.publish_interval = 5
 
         self._buffer = []
 
-        self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
+        self.network_settings = "tcp:{}:{}".format(self.gateway_addr,self.gateway_port)
 
     def connectionMade(self):
         
@@ -94,12 +95,13 @@ class SubscriberApp(StandardApplicationComponent):
         self.destiny_addr = "127.0.0.1"
         self.destiny_port = 5100 
 
-        self.router_addr = "127.0.0.1"
-        self.router_port = 8081
+        self.gateway_addr = "127.0.0.1"
+        self.gateway_port = 8081
+
 
         self._buffer = []
 
-        self.network_settings = "tcp:{}:{}".format(self.router_addr,self.router_port)
+        self.network_settings = "tcp:{}:{}".format(self.gateway_addr,self.gateway_port)
 
     def connectionMade(self):
 
@@ -214,7 +216,7 @@ class BrokerProtocol(StandardApplicationComponent):
         self.destiny_port = destiny_port
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
-        response_package = self.build_package("MQTT_ACK")
+        response_package = self.build_package("MQTT_ACK"+str(uuid.uuid4().fields[-1]))
         self.send(response_package)
 
 class BrokerFactory(protocol.Factory):

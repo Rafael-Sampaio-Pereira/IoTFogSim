@@ -110,19 +110,12 @@
             "SSID": "Rede privada 001",
             "WPA2_password": "iotfogsim2019",
             "simulation_ip": "192.121.0.1",
+            "real_ip": "127.0.0.1",
+            "port": 8082,
             "icon": "ap_icon",
-            "type": "access_point",
-            "is_wireless": true,
-            "x": 400,
-            "y": 300
-        },
-        { 
-            "id": 8,
-            "TBTT": 0.1024,
-            "SSID": "Rede privada 002",
-            "WPA2_password": "iotfogsim2019",
-            "simulation_ip": "192.121.0.2",
-            "icon": "ap_icon",
+            "router_addr": "127.0.0.1",
+            "router_port": 8081,
+            "application": "applications.accesspointapp.AccessPointApp",
             "type": "access_point",
             "is_wireless": true,
             "x": 400,
@@ -159,7 +152,7 @@
                     "icon": "sensor_signal_icon",
                     "is_wireless": true,
                     "application": "applications.wsnapp.SinkApp",
-                    "x": 650,
+                    "x": 750,
                     "y": 100
                 }
             ],
@@ -170,7 +163,7 @@
                     "icon": "sensor_icon",
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 650,
+                    "x": 750,
                     "y": 200
                 },
                 {
@@ -179,7 +172,7 @@
                     "icon": "sensor_icon",
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 650,
+                    "x": 750,
                     "y": 300
                 }
             ]
