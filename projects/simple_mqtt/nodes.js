@@ -157,8 +157,9 @@
                     "id":20,
                     "name": "wsn_sink",
                     "icon": "sensor_signal_icon",
+                    "is_wireless": true,
                     "application": "applications.wsnapp.SinkApp",
-                    "x": 450,
+                    "x": 650,
                     "y": 100
                 }
             ],
@@ -168,8 +169,8 @@
                     "name": "wsn_sensor",
                     "icon": "sensor_icon",
                     "application": "applications.wsnapp.SensorApp",
-                    "is_wireless": false,
-                    "x": 450,
+                    "is_wireless": true,
+                    "x": 650,
                     "y": 200
                 },
                 {
@@ -177,8 +178,8 @@
                     "name": "wsn_sensor",
                     "icon": "sensor_icon",
                     "application": "applications.wsnapp.SensorApp",
-                    "is_wireless": false,
-                    "x": 450,
+                    "is_wireless": true,
+                    "x": 650,
                     "y": 300
                 }
             ]

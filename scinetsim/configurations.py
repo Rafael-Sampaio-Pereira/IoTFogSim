@@ -7,6 +7,7 @@ from scinetsim.standarddevice import StandardClientDevice
 from scinetsim.standarddevice import AccessPoint
 from scinetsim.standarddevice import Router
 from scinetsim.standarddevice import WSNSensorNode
+from scinetsim.standarddevice import WSNSinkNode
 from scinetsim.standarddevice import WirelessSensorNetwork
 
 from scinetsim.ScrollableScreen import ScrollableScreen
@@ -216,7 +217,11 @@ def load_nodes(project_name, simulation_core):
 				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
     			
 				for sink_node in wsn['sink_nodes']:
-					print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
+					sk_node = WSNSinkNode(simulation_core, sink_node['id'], sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], WSN_network_group)
+					simulation_core.appendSensorNodes(sk_node)
+					time.sleep(interval)
+					sk_node.run()
 
 				for sensor_node in wsn['sensor_nodes']:
 

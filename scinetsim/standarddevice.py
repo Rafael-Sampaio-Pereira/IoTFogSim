@@ -239,10 +239,7 @@ class WSNSensorNode(object):
     def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, WSN_network_group):
 
         self.application = import_and_instantiate_class_from_string(application)
-        #self.simulation_core = network_group.simulation_core
         self.WSN_network_group =  WSN_network_group
-        self.id = ""
-        self.location = ""
         self.is_wireless = is_wireless
 
         icon_file = getIconFileName(icon)
@@ -254,7 +251,6 @@ class WSNSensorNode(object):
 
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
-        #self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application, is_wireless)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
@@ -266,11 +262,30 @@ class WSNSensorNode(object):
     def run(self):
         pass
 
-class wns_sink_node(object):
-    
-    def __init__(self, network_group):
-        self.simulation_core = network_group.simulation_core
-        self.network_group =  network_group
-        self.id = ""
-        self.location = ""
-        self.visual_component = None
+class WSNSinkNode(object):
+       
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, WSN_network_group):
+
+        self.application = import_and_instantiate_class_from_string(application)
+        self.WSN_network_group =  WSN_network_group
+        self.is_wireless = is_wireless
+
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        self.name = name
+        self.id = id
+        self.simulation_core = simulation_core
+
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.simulation_core.updateEventsCounter("Initializing sensor node")
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+        
+        if(self.is_wireless == True):
+            # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+
+    def run(self):
+        pass
