@@ -149,26 +149,37 @@
             "id": 3,
             "name": "energe_metering_wsn", 
             "ip_standard": "6LowPan",
+            "network_layer_protocol": "UDP",
             "wireless_standard": "IEEE_802.11",
             "description": "Simple wsn for envirioment monitoring",
-            "sink_icon": "",
-            "sensor_icon": "",
-            "sensor_application": "applications.wsnapp.SinkApp",
-            "sink_application": "applications.wsnapp.SensorApp",
             "sink_nodes": [
                 {
                     "id":20,
-                    "position":"teste"
+                    "name": "wsn_sink",
+                    "icon": "sensor_signal_icon",
+                    "application": "applications.wsnapp.SinkApp",
+                    "x": 450,
+                    "y": 100
                 }
             ],
             "sensor_nodes": [
                 {
                     "id":20,
-                    "position":"teste"
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": false,
+                    "x": 450,
+                    "y": 200
                 },
                 {
                     "id":20,
-                    "position":"teste"
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": false,
+                    "x": 450,
+                    "y": 300
                 }
             ]
         }
