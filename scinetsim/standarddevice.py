@@ -220,7 +220,7 @@ class WSNSensorNode(object):
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
-        pass
+        self.application.start()
 
 class WSNSinkNode(object):
        

@@ -128,6 +128,42 @@
                     "is_wireless": true,
                     "x": 750,
                     "y": 300
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 850,
+                    "y": 200
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 850,
+                    "y": 300
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 750,
+                    "y": 260
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 750,
+                    "y": 380
                 }
             ]
         }
