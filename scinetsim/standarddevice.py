@@ -14,7 +14,7 @@ from scinetsim.functions import import_and_instantiate_class_from_string
 
 class StandardServerDevice(object):
     
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
@@ -31,7 +31,7 @@ class StandardServerDevice(object):
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.simulation_core.updateEventsCounter("Initializing Server")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
@@ -47,7 +47,7 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application):
+    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
         self.addr = real_ip
         self.simulation_ip = simulation_ip
 
@@ -61,7 +61,7 @@ class StandardClientDevice(object):
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application, is_wireless)
         self.simulation_core.updateEventsCounter("Initializing Client")
         
@@ -77,7 +77,7 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id,name, icon, is_wireless, x, y, application):
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id,name, icon, is_wireless, x, y, application, coverage_area_radius):
         
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
@@ -97,7 +97,7 @@ class Router(object):
         self.x = x
         self. y = y
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.simulation_core.updateEventsCounter("Initializing Router")
 
         self.application.visual_component = self.visual_component
@@ -110,7 +110,7 @@ class Router(object):
 
 class AccessPoint(object):
 
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port):
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         
@@ -136,7 +136,7 @@ class AccessPoint(object):
         self.id = id
         
         self.simulation_core = simulation_core
-        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.authenticated_devices = []
         self.associated_devices = []
         
@@ -196,7 +196,7 @@ class WirelessSensorNetwork(object):
 
 class WSNSensorNode(object):
        
-    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, WSN_network_group):
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, WSN_network_group):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.WSN_network_group =  WSN_network_group
@@ -210,7 +210,7 @@ class WSNSensorNode(object):
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
@@ -224,7 +224,7 @@ class WSNSensorNode(object):
 
 class WSNSinkNode(object):
        
-    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, WSN_network_group):
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, WSN_network_group):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.WSN_network_group =  WSN_network_group
@@ -238,7 +238,7 @@ class WSNSinkNode(object):
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core

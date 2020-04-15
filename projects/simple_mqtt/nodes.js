@@ -8,6 +8,7 @@
             "icon": "server_icon",
             "type": "client",
             "is_wireless": false,
+            "coverage_area_radius": 0,
             "application": "applications.mqttapp.SubscriberApp",
             "x": 550,
             "y": 175
@@ -20,6 +21,7 @@
             "icon": "server_icon",
             "type": "client",
             "is_wireless": false,
+            "coverage_area_radius": 0,
             "application": "applications.mqttapp.SubscriberApp",
             "x": 400,
             "y": 75
@@ -33,6 +35,7 @@
             "type": "server",
             "port": 5100,
             "is_wireless": false,
+            "coverage_area_radius": 0,
             "application": "applications.mqttapp.BrokerApp",
             "x": 250,
             "y": 175
@@ -50,6 +53,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": true,
+            "coverage_area_radius": 100,
             "application": "applications.mqttapp.PublisherApp",
             "x": 200,
             "y": 380
@@ -62,6 +66,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": true,
+            "coverage_area_radius": 100,
             "application": "applications.mqttapp.PublisherApp",
             "x": 300,
             "y": 380
@@ -74,6 +79,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": true,
+            "coverage_area_radius": 100,
             "application": "applications.mqttapp.PublisherApp",
             "x": 400,
             "y": 380
@@ -86,6 +92,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": true,
+            "coverage_area_radius": 100,
             "application": "applications.mqttapp.PublisherApp",
             "x": 500,
             "y": 380
@@ -98,6 +105,7 @@
             "icon": "arduino_uno_icon",
             "type": "client",
             "is_wireless": true,
+            "coverage_area_radius": 100,
             "application": "applications.mqttapp.PublisherApp",
             "x": 600,
             "y": 380
@@ -113,6 +121,7 @@
             "real_ip": "127.0.0.1",
             "port": 8082,
             "icon": "ap_icon",
+            "coverage_area_radius": 100,
             "router_addr": "127.0.0.1",
             "router_port": 8081,
             "application": "applications.accesspointapp.AccessPointApp",
@@ -133,6 +142,7 @@
             "port": 8081,
             "application": "applications.routerapp.RouterApp",
             "is_wireless": false,
+            "coverage_area_radius": 0,
             "x": 400,
             "y": 200
         }

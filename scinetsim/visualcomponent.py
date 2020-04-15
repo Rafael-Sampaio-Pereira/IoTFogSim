@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 
 class VisualComponent(object):
 
-    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y):
+    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y, coverage_area_radius):
         self.simulation_core = simulation_core
         self.x = x
         self.y = y
@@ -17,7 +17,7 @@ class VisualComponent(object):
 
         if self.is_wireless:
             self.signal_radius = 1
-            self.coverage_area_radius = 100
+            self.coverage_area_radius = coverage_area_radius
             # The signal circle object to show wifi coverage area. - Rafael Sampaio
             # coverage are need not to be visible. - Rafael Sampaio
             self.draggable_coverage_area_circle = self.simulation_core.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="", outline="", width=1, stipple="gray12")
