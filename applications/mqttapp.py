@@ -12,6 +12,7 @@ from twisted.internet import reactor, protocol, endpoints
 from twisted.protocols import basic
 
 from applications.applicationcomponent import StandardApplicationComponent
+from scinetsim.dataproducers import energy_consumption_meter
 
 
 
@@ -56,7 +57,7 @@ class PublisherApp(StandardApplicationComponent):
         msg = {
                 "action": "publish",
                 "topic": "sensor_metering",
-                "content": str(round(random.uniform(2.5,22.5), 2))+" Kwh"
+                "content": energy_consumption_meter()
             }
 
         self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT PUBLISH REQUEST")

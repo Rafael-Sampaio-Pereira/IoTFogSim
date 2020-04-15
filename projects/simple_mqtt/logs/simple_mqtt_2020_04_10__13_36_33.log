@@ -1,0 +1,671 @@
+2020-04-10T13:36:33-0300 [-] Creating router ...
+2020-04-10T13:36:33-0300 [-] Initializing Router - Number of events: 1
+2020-04-10T13:36:34-0300 [-] RouterFactory starting on 8081
+2020-04-10T13:36:34-0300 [-] Creating AccessPoint station ...
+2020-04-10T13:36:34-0300 [-] Initializing Access Point - Number of events: 2
+2020-04-10T13:36:34-0300 [-] AccessPointFactory starting on 8082
+2020-04-10T13:36:34-0300 [-] Creating fog node ...
+2020-04-10T13:36:34-0300 [-] Initializing Client - Number of events: 3
+2020-04-10T13:36:35-0300 [-] Creating fog node ...
+2020-04-10T13:36:35-0300 [-] Initializing Client - Number of events: 4
+2020-04-10T13:36:35-0300 [-] Creating fog node ...
+2020-04-10T13:36:35-0300 [-] Initializing Server - Number of events: 5
+2020-04-10T13:36:36-0300 [-] BrokerFactory starting on 5100
+2020-04-10T13:36:36-0300 [-] Creating iot node ...
+2020-04-10T13:36:36-0300 [-] Initializing Client - Number of events: 6
+2020-04-10T13:36:36-0300 [-] Creating iot node ...
+2020-04-10T13:36:36-0300 [-] Initializing Client - Number of events: 7
+2020-04-10T13:36:37-0300 [-] Creating iot node ...
+2020-04-10T13:36:37-0300 [-] Initializing Client - Number of events: 8
+2020-04-10T13:36:37-0300 [-] Creating iot node ...
+2020-04-10T13:36:37-0300 [-] Initializing Client - Number of events: 9
+2020-04-10T13:36:38-0300 [-] Creating iot node ...
+2020-04-10T13:36:38-0300 [-] Initializing Client - Number of events: 10
+2020-04-10T13:36:38-0300 [-] Initializing sensor node - Number of events: 11
+2020-04-10T13:36:39-0300 [-] Initializing sensor node - Number of events: 12
+2020-04-10T13:36:39-0300 [-] Initializing sensor node - Number of events: 13
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:45842 - Connected to mqtt broker - Number of events: 14
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:45842 - sending MQTT SUBSCRIBE REQUEST - Number of events: 15
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:45844 - Connected to mqtt broker - Number of events: 16
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:45844 - sending MQTT SUBSCRIBE REQUEST - Number of events: 17
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36630 - Connected to mqtt broker - Number of events: 18
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36630 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36632 - Connected to mqtt broker - Number of events: 20
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36632 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36634 - Connected to mqtt broker - Number of events: 22
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36634 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36636 - Connected to mqtt broker - Number of events: 24
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36636 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36638 - Connected to mqtt broker - Number of events: 26
+2020-04-10T13:36:40-0300 [Uninitialized] 127.0.0.1:36638 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793ee080>
+2020-04-10T13:36:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793eec88>
+2020-04-10T13:36:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793eee48>
+2020-04-10T13:36:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72080>
+2020-04-10T13:36:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa722e8>
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:40-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:45-0300 [-] 127.0.0.1:36630 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-04-10T13:36:45-0300 [-] 127.0.0.1:36632 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9dd8>
+2020-04-10T13:36:45-0300 [-] 127.0.0.1:36634 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-04-10T13:36:45-0300 [-] 127.0.0.1:36636 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-04-10T13:36:45-0300 [-] 127.0.0.1:36638 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793ee080>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72c88>
+2020-04-10T13:36:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793eec88>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72c50>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72f28>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a198>
+2020-04-10T13:36:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793eee48>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72080>
+2020-04-10T13:36:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa722e8>
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:45-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:50-0300 [-] 127.0.0.1:36630 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-04-10T13:36:50-0300 [-] 127.0.0.1:36632 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-04-10T13:36:50-0300 [-] 127.0.0.1:36634 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-04-10T13:36:50-0300 [-] 127.0.0.1:36636 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-04-10T13:36:50-0300 [-] 127.0.0.1:36638 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9cc0>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9dd8>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a898>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a630>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a438>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a828>
+2020-04-10T13:36:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72c88>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72c50>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa72f28>
+2020-04-10T13:36:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a198>
+2020-04-10T13:36:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:55-0300 [-] 127.0.0.1:36630 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9f28>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9cc0>
+2020-04-10T13:36:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:55-0300 [-] 127.0.0.1:36632 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:55-0300 [-] 127.0.0.1:36634 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-04-10T13:36:55-0300 [-] 127.0.0.1:36636 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-04-10T13:36:55-0300 [-] 127.0.0.1:36638 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a588>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a898>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a4e0>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa2f128>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa2f320>
+2020-04-10T13:36:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a630>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a438>
+2020-04-10T13:36:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a828>
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-04-10T13:36:55-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 106, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-04-10T13:36:59-0300 [-] Received SIGINT, shutting down.
+2020-04-10T13:36:59-0300 [applications.accesspointapp.AccessPointFactory] (TCP Port 8082 Closed)
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost - Number of events: 43
+2020-04-10T13:36:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f64793d9f28>
+2020-04-10T13:36:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a4e0>
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost - Number of events: 44
+2020-04-10T13:36:59-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [SubscriberApp,client] connection lost - Number of events: 45
+2020-04-10T13:36:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa2f128>
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost - Number of events: 46
+2020-04-10T13:36:59-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-04-10T13:36:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa8a588>
+2020-04-10T13:36:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f647aa2f320>
+2020-04-10T13:36:59-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [SubscriberApp,client] connection lost - Number of events: 47
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost - Number of events: 48
+2020-04-10T13:36:59-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:36:59-0300 [PublisherApp,client] connection lost - Number of events: 49
+2020-04-10T13:36:59-0300 [-] Main loop terminated.

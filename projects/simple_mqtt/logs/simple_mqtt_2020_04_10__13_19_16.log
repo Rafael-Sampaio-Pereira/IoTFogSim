@@ -1,0 +1,1237 @@
+2020-04-10T13:19:16-0300 [-] Creating router ...
+2020-04-10T13:19:16-0300 [-] Initializing Router - Number of events: 1
+2020-04-10T13:19:16-0300 [-] RouterFactory starting on 8081
+2020-04-10T13:19:16-0300 [-] Creating AccessPoint station ...
+2020-04-10T13:19:16-0300 [-] Initializing Access Point - Number of events: 2
+2020-04-10T13:19:17-0300 [-] AccessPointFactory starting on 8082
+2020-04-10T13:19:17-0300 [-] Creating fog node ...
+2020-04-10T13:19:17-0300 [-] Initializing Client - Number of events: 3
+2020-04-10T13:19:18-0300 [-] Creating fog node ...
+2020-04-10T13:19:18-0300 [-] Initializing Client - Number of events: 4
+2020-04-10T13:19:18-0300 [-] Creating fog node ...
+2020-04-10T13:19:18-0300 [-] Initializing Server - Number of events: 5
+2020-04-10T13:19:19-0300 [-] BrokerFactory starting on 5100
+2020-04-10T13:19:19-0300 [-] Creating iot node ...
+2020-04-10T13:19:19-0300 [-] Initializing Client - Number of events: 6
+2020-04-10T13:19:19-0300 [-] Creating iot node ...
+2020-04-10T13:19:19-0300 [-] Initializing Client - Number of events: 7
+2020-04-10T13:19:20-0300 [-] Creating iot node ...
+2020-04-10T13:19:20-0300 [-] Initializing Client - Number of events: 8
+2020-04-10T13:19:20-0300 [-] Creating iot node ...
+2020-04-10T13:19:20-0300 [-] Initializing Client - Number of events: 9
+2020-04-10T13:19:21-0300 [-] Creating iot node ...
+2020-04-10T13:19:21-0300 [-] Initializing Client - Number of events: 10
+2020-04-10T13:19:21-0300 [-] Initializing sensor node - Number of events: 11
+2020-04-10T13:19:22-0300 [-] Initializing sensor node - Number of events: 12
+2020-04-10T13:19:22-0300 [-] Initializing sensor node - Number of events: 13
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:42160 - Connected to mqtt broker - Number of events: 14
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:42160 - sending MQTT SUBSCRIBE REQUEST - Number of events: 15
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:42162 - Connected to mqtt broker - Number of events: 16
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:42162 - sending MQTT SUBSCRIBE REQUEST - Number of events: 17
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32948 - Connected to mqtt broker - Number of events: 18
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32950 - Connected to mqtt broker - Number of events: 20
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32952 - Connected to mqtt broker - Number of events: 22
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32954 - Connected to mqtt broker - Number of events: 24
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32956 - Connected to mqtt broker - Number of events: 26
+2020-04-10T13:19:23-0300 [Uninitialized] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738fef0>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5128>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5320>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5518>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5710>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5940>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5c50>
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0780>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b09e8>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0be0>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0e48>
+2020-04-10T13:19:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7198>
+2020-04-10T13:19:28-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-04-10T13:19:28-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7828>
+2020-04-10T13:19:28-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-04-10T13:19:28-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-04-10T13:19:28-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5320>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7908>
+2020-04-10T13:19:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7be0>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5518>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7da0>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7f98>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a681d0>
+2020-04-10T13:19:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0780>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68400>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5710>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5940>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5c50>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b09e8>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68710>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a688d0>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68ac8>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0be0>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0e48>
+2020-04-10T13:19:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7198>
+2020-04-10T13:19:33-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-04-10T13:19:33-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:19:33-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-04-10T13:19:33-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7828>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68f28>
+2020-04-10T13:19:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:33-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-04-10T13:19:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81278>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7908>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81438>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81630>
+2020-04-10T13:19:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81860>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7da0>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7f98>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a819e8>
+2020-04-10T13:19:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81d68>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81f60>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a681d0>
+2020-04-10T13:19:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b240>
+2020-04-10T13:19:38-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b438>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:19:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b780>
+2020-04-10T13:19:38-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b9b0>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68f28>
+2020-04-10T13:19:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8bc18>
+2020-04-10T13:19:38-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-04-10T13:19:38-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8beb8>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81438>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21048>
+2020-04-10T13:19:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21320>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81630>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a214e0>
+2020-04-10T13:19:38-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21860>
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a819e8>
+2020-04-10T13:19:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21a58>
+2020-04-10T13:19:43-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 43
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81b38>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b438>
+2020-04-10T13:19:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738a6d8>
+2020-04-10T13:19:43-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 44
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b6a0>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b9b0>
+2020-04-10T13:19:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68828>
+2020-04-10T13:19:43-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 45
+2020-04-10T13:19:43-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 46
+2020-04-10T13:19:43-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 47
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21940>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a217f0>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21eb8>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8beb8>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21048>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21860>
+2020-04-10T13:19:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a391d0>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a393c8>
+2020-04-10T13:19:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a395c0>
+2020-04-10T13:19:48-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 48
+2020-04-10T13:19:48-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 49
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a394e0>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81b38>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39a90>
+2020-04-10T13:19:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39d68>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b6a0>
+2020-04-10T13:19:48-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 50
+2020-04-10T13:19:48-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 51
+2020-04-10T13:19:48-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 52
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39f60>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c240>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c438>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c630>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21940>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a217f0>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21eb8>
+2020-04-10T13:19:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c908>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4cb38>
+2020-04-10T13:19:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4cd30>
+2020-04-10T13:19:53-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 53
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e00b8>
+2020-04-10T13:19:53-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 54
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a394e0>
+2020-04-10T13:19:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e02e8>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e04e0>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39a90>
+2020-04-10T13:19:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0780>
+2020-04-10T13:19:53-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 55
+2020-04-10T13:19:53-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 56
+2020-04-10T13:19:53-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 57
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0a20>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0be0>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c240>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c438>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e09e8>
+2020-04-10T13:19:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e70b8>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e72b0>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c630>
+2020-04-10T13:19:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7470>
+2020-04-10T13:19:58-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 58
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7278>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e00b8>
+2020-04-10T13:19:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7a58>
+2020-04-10T13:19:58-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 59
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7cf8>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e04e0>
+2020-04-10T13:19:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7ef0>
+2020-04-10T13:19:58-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 60
+2020-04-10T13:19:58-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 61
+2020-04-10T13:19:58-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 62
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee160>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee390>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0a20>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0be0>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee0f0>
+2020-04-10T13:19:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee828>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eea20>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e09e8>
+2020-04-10T13:19:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0908>
+2020-04-10T13:20:03-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 63
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee9b0>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7278>
+2020-04-10T13:20:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:03-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 64
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eed30>
+2020-04-10T13:20:03-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 65
+2020-04-10T13:20:03-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 66
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eeef0>
+2020-04-10T13:20:03-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 67
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7cf8>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7128>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7358>
+2020-04-10T13:20:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7668>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee160>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee390>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7828>
+2020-04-10T13:20:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7a58>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7c50>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee0f0>
+2020-04-10T13:20:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7fd0>
+2020-04-10T13:20:08-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 68
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00240>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee9b0>
+2020-04-10T13:20:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39518>
+2020-04-10T13:20:08-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 69
+2020-04-10T13:20:08-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 70
+2020-04-10T13:20:08-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 71
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7978>
+2020-04-10T13:20:08-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 72
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eeef0>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7208>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f77b8>
+2020-04-10T13:20:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0518>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7128>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7358>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a002b0>
+2020-04-10T13:20:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a006a0>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00898>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7828>
+2020-04-10T13:20:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee3c8>
+2020-04-10T13:20:13-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 73
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7cf8>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00240>
+2020-04-10T13:20:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0c18>
+2020-04-10T13:20:13-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 74
+2020-04-10T13:20:13-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 75
+2020-04-10T13:20:13-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 76
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c128>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c320>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39780>
+2020-04-10T13:20:13-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 77
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7978>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7208>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f77b8>
+2020-04-10T13:20:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517381cf8>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a216a0>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8bb00>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b9b0>
+2020-04-10T13:20:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a002b0>
+2020-04-10T13:20:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a819b0>
+2020-04-10T13:20:18-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 78
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a816d8>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7cf8>
+2020-04-10T13:20:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68c88>
+2020-04-10T13:20:18-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 79
+2020-04-10T13:20:18-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 80
+2020-04-10T13:20:18-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 81
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7a58>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c128>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c320>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7898>
+2020-04-10T13:20:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:18-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 82
+2020-04-10T13:20:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b77b8>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7278>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39780>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0eb8>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0a20>
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b9b0>
+2020-04-10T13:20:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c518>
+2020-04-10T13:20:23-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 83
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7d30>
+2020-04-10T13:20:23-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 84
+2020-04-10T13:20:23-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 85
+2020-04-10T13:20:23-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 86
+2020-04-10T13:20:23-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 87
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a816d8>
+2020-04-10T13:20:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0898>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a56d8>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5710>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5320>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738fd30>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7a58>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7898>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0a20>
+2020-04-10T13:20:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00a90>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00cc0>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00e80>
+2020-04-10T13:20:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a110b8>
+2020-04-10T13:20:28-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 88
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a114a8>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7d30>
+2020-04-10T13:20:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11668>
+2020-04-10T13:20:28-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 89
+2020-04-10T13:20:28-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 90
+2020-04-10T13:20:28-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 91
+2020-04-10T13:20:28-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 92
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11898>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11ac8>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11cc0>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11eb8>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a56d8>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5710>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5320>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738fd30>
+2020-04-10T13:20:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340208>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340400>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173405f8>
+2020-04-10T13:20:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a59b0>
+2020-04-10T13:20:33-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 93
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340518>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a114a8>
+2020-04-10T13:20:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173407b8>
+2020-04-10T13:20:33-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 94
+2020-04-10T13:20:33-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 95
+2020-04-10T13:20:33-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 96
+2020-04-10T13:20:33-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 97
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a007f0>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5358>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11a20>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7dd8>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11898>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11ac8>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11cc0>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11eb8>
+2020-04-10T13:20:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340550>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173409e8>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340be0>
+2020-04-10T13:20:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340dd8>
+2020-04-10T13:20:38-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 98
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c080>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340518>
+2020-04-10T13:20:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c400>
+2020-04-10T13:20:38-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 99
+2020-04-10T13:20:38-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 100
+2020-04-10T13:20:38-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 101
+2020-04-10T13:20:38-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 102
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c630>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a007f0>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c7f0>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c9e8>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734cbe0>
+2020-04-10T13:20:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734cf28>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5358>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11a20>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7dd8>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356160>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356358>
+2020-04-10T13:20:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7390>
+2020-04-10T13:20:43-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 103
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340518>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c080>
+2020-04-10T13:20:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356550>
+2020-04-10T13:20:43-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 104
+2020-04-10T13:20:43-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 105
+2020-04-10T13:20:43-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 106
+2020-04-10T13:20:43-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 107
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356780>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173569b0>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356ba8>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c630>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c7f0>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c9e8>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356b38>
+2020-04-10T13:20:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e0b8>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e2b0>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e4a8>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734cbe0>
+2020-04-10T13:20:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e630>
+2020-04-10T13:20:48-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 108
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e9e8>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340518>
+2020-04-10T13:20:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ecc0>
+2020-04-10T13:20:48-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 109
+2020-04-10T13:20:48-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 110
+2020-04-10T13:20:48-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 111
+2020-04-10T13:20:48-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 112
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ef98>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367160>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367358>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367550>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356780>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173569b0>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356ba8>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356b38>
+2020-04-10T13:20:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367898>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367a58>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173569e8>
+2020-04-10T13:20:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356780>
+2020-04-10T13:20:53-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 113
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367be0>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e9e8>
+2020-04-10T13:20:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367e10>
+2020-04-10T13:20:53-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 114
+2020-04-10T13:20:53-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 115
+2020-04-10T13:20:53-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 116
+2020-04-10T13:20:53-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 117
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173710b8>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173712b0>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ef98>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367160>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371080>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173715f8>
+2020-04-10T13:20:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173719b0>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371ba8>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367358>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367550>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371d68>
+2020-04-10T13:20:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371f60>
+2020-04-10T13:20:58-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 118
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b2e8>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367be0>
+2020-04-10T13:20:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b5c0>
+2020-04-10T13:20:58-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 119
+2020-04-10T13:20:58-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 120
+2020-04-10T13:20:58-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 121
+2020-04-10T13:20:58-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 122
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b860>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737ba20>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738f198>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bc50>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173710b8>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173712b0>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371080>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173715f8>
+2020-04-10T13:20:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371748>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e780>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173566a0>
+2020-04-10T13:20:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173672b0>
+2020-04-10T13:21:03-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 123
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b0f0>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b2e8>
+2020-04-10T13:21:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bf60>
+2020-04-10T13:21:03-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 124
+2020-04-10T13:21:03-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 125
+2020-04-10T13:21:03-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 126
+2020-04-10T13:21:03-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 127
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173081d0>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308400>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173085f8>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173087f0>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b860>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737ba20>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738f198>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bc50>
+2020-04-10T13:21:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308b00>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308cf8>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308ef0>
+2020-04-10T13:21:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f128>
+2020-04-10T13:21:08-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 128
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f470>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b0f0>
+2020-04-10T13:21:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f710>
+2020-04-10T13:21:08-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 129
+2020-04-10T13:21:08-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 130
+2020-04-10T13:21:08-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 131
+2020-04-10T13:21:08-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 132
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f940>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fb70>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bbe0>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173081d0>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308400>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173085f8>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f898>
+2020-04-10T13:21:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173170f0>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173172e8>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173174e0>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173087f0>
+2020-04-10T13:21:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317668>
+2020-04-10T13:21:13-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 133
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317940>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f470>
+2020-04-10T13:21:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317cf8>
+2020-04-10T13:21:13-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 134
+2020-04-10T13:21:13-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 135
+2020-04-10T13:21:13-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 136
+2020-04-10T13:21:13-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 137
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317f98>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321198>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321390>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321588>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f940>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fb70>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bbe0>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f898>
+2020-04-10T13:21:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321898>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321a90>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321c88>
+2020-04-10T13:21:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321e80>
+2020-04-10T13:21:18-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 138
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329160>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317940>
+2020-04-10T13:21:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329320>
+2020-04-10T13:21:18-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 139
+2020-04-10T13:21:18-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 140
+2020-04-10T13:21:18-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 141
+2020-04-10T13:21:18-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 142
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329550>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329780>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317f98>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321198>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173294e0>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329b00>
+2020-04-10T13:21:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329e80>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173340b8>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321390>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321588>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334278>
+2020-04-10T13:21:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173344a8>
+2020-04-10T13:21:23-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 143
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334898>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329160>
+2020-04-10T13:21:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334a90>
+2020-04-10T13:21:23-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 144
+2020-04-10T13:21:23-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 145
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334cc0>
+2020-04-10T13:21:23-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 146
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329550>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334e80>
+2020-04-10T13:21:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:23-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 147
+2020-04-10T13:21:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf198>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329780>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf358>
+2020-04-10T13:21:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf588>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173294e0>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf748>
+2020-04-10T13:21:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf470>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329b00>
+2020-04-10T13:21:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321fd0>
+2020-04-10T13:21:28-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 148
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f860>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334898>
+2020-04-10T13:21:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308550>
+2020-04-10T13:21:28-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 149
+2020-04-10T13:21:28-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 150
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334fd0>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf4a8>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334cc0>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334e80>
+2020-04-10T13:21:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bfa58>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bfc50>
+2020-04-10T13:21:28-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 151
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bff60>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf358>
+2020-04-10T13:21:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:28-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 152
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c81d0>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8358>
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf748>
+2020-04-10T13:21:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c86d8>
+2020-04-10T13:21:33-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 153
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8198>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f860>
+2020-04-10T13:21:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8b00>
+2020-04-10T13:21:33-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 154
+2020-04-10T13:21:33-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 155
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8da0>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8f60>
+2020-04-10T13:21:33-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 156
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334fd0>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf4a8>
+2020-04-10T13:21:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0208>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0400>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d05f8>
+2020-04-10T13:21:33-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 157
+2020-04-10T13:21:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bff60>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fdd8>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0588>
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8358>
+2020-04-10T13:21:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0978>
+2020-04-10T13:21:38-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 158
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0908>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8198>
+2020-04-10T13:21:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0dd8>
+2020-04-10T13:21:38-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 159
+2020-04-10T13:21:38-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 160
+2020-04-10T13:21:38-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 161
+2020-04-10T13:21:38-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 162
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc080>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc278>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc470>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8da0>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8f60>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d05f8>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc400>
+2020-04-10T13:21:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:38-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc940>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcb38>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcd30>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0588>
+2020-04-10T13:21:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dceb8>
+2020-04-10T13:21:43-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 163
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e52b0>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0908>
+2020-04-10T13:21:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5588>
+2020-04-10T13:21:43-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 164
+2020-04-10T13:21:43-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 165
+2020-04-10T13:21:43-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 166
+2020-04-10T13:21:43-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 167
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5860>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5a20>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5c18>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5400>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc080>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc278>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc470>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc400>
+2020-04-10T13:21:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:43-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5f60>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee198>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee390>
+2020-04-10T13:21:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee588>
+2020-04-10T13:21:48-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 168
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee898>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e52b0>
+2020-04-10T13:21:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eeb70>
+2020-04-10T13:21:48-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 169
+2020-04-10T13:21:48-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 170
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eee10>
+2020-04-10T13:21:48-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 171
+2020-04-10T13:21:48-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 172
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5860>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eed68>
+2020-04-10T13:21:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f62b0>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5a20>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6438>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6630>
+2020-04-10T13:21:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6828>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5c18>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5400>
+2020-04-10T13:21:48-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6ba8>
+2020-04-10T13:21:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6da0>
+2020-04-10T13:21:53-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 173
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c87b8>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee898>
+2020-04-10T13:21:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5b70>
+2020-04-10T13:21:53-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 174
+2020-04-10T13:21:53-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 175
+2020-04-10T13:21:53-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 176
+2020-04-10T13:21:53-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 177
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc5c0>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dce48>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6978>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0358>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eee10>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eed68>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6438>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6630>
+2020-04-10T13:21:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:53-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284198>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284390>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284588>
+2020-04-10T13:21:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284780>
+2020-04-10T13:21:58-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 178
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284a90>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c87b8>
+2020-04-10T13:21:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284d68>
+2020-04-10T13:21:58-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 179
+2020-04-10T13:21:58-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 180
+2020-04-10T13:21:58-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 181
+2020-04-10T13:21:58-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 182
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284f98>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d240>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d400>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc5c0>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dce48>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6978>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d3c8>
+2020-04-10T13:21:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:58-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d8d0>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728db00>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728dcc0>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0358>
+2020-04-10T13:21:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728de48>
+2020-04-10T13:22:03-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 183
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcfd0>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284a90>
+2020-04-10T13:22:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc2b0>
+2020-04-10T13:22:03-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 184
+2020-04-10T13:22:03-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 185
+2020-04-10T13:22:03-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 186
+2020-04-10T13:22:03-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 187
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e57f0>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e58d0>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5c50>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0ba8>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284f98>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d240>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d400>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d3c8>
+2020-04-10T13:22:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:03-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c80f0>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8f60>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c89b0>
+2020-04-10T13:22:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bffd0>
+2020-04-10T13:22:08-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 188
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334908>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcfd0>
+2020-04-10T13:22:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173347f0>
+2020-04-10T13:22:08-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 189
+2020-04-10T13:22:08-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 190
+2020-04-10T13:22:08-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 191
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173294e0>
+2020-04-10T13:22:08-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 192
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e57f0>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329160>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321240>
+2020-04-10T13:22:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317ac8>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e58d0>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5c50>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317940>
+2020-04-10T13:22:08-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fba8>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f358>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0ba8>
+2020-04-10T13:22:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173086a0>
+2020-04-10T13:22:13-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 193
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173084e0>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334908>
+2020-04-10T13:22:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173712e8>
+2020-04-10T13:22:13-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 194
+2020-04-10T13:22:13-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 195
+2020-04-10T13:22:13-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 196
+2020-04-10T13:22:13-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 197
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5a58>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dca90>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6518>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371470>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173294e0>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329160>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321240>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317940>
+2020-04-10T13:22:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:13-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bac8>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b278>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367c88>
+2020-04-10T13:22:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367400>
+2020-04-10T13:22:18-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 198
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735eef0>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173084e0>
+2020-04-10T13:22:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f4a8>
+2020-04-10T13:22:18-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 199
+2020-04-10T13:22:18-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 200
+2020-04-10T13:22:18-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 201
+2020-04-10T13:22:18-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 202
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371320>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d550>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e57b8>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ef98>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5a58>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dca90>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6518>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371470>
+2020-04-10T13:22:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:18-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c828>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c748>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11828>
+2020-04-10T13:22:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11ac8>
+2020-04-10T13:22:23-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 203
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7fd0>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735eef0>
+2020-04-10T13:22:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81710>
+2020-04-10T13:22:23-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 204
+2020-04-10T13:22:23-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 205
+2020-04-10T13:22:23-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 206
+2020-04-10T13:22:23-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 207
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e9b0>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc4a8>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e58d0>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371320>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d550>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e57b8>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ef98>
+2020-04-10T13:22:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:23-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284eb8>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee978>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eef98>
+2020-04-10T13:22:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294358>
+2020-04-10T13:22:28-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 208
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294400>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7fd0>
+2020-04-10T13:22:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294748>
+2020-04-10T13:22:28-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 209
+2020-04-10T13:22:28-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 210
+2020-04-10T13:22:28-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 211
+2020-04-10T13:22:28-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 212
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294978>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294ba8>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294da0>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294f98>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68be0>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e9b0>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc4a8>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e58d0>
+2020-04-10T13:22:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:28-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a82e8>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a84e0>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a86d8>
+2020-04-10T13:22:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a88d0>
+2020-04-10T13:22:33-0300 [-] 127.0.0.1:32948 - sending MQTT PUBLISH REQUEST - Number of events: 213
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a8c18>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294400>
+2020-04-10T13:22:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a8eb8>
+2020-04-10T13:22:33-0300 [-] 127.0.0.1:32950 - sending MQTT PUBLISH REQUEST - Number of events: 214
+2020-04-10T13:22:33-0300 [-] 127.0.0.1:32952 - sending MQTT PUBLISH REQUEST - Number of events: 215
+2020-04-10T13:22:33-0300 [-] 127.0.0.1:32954 - sending MQTT PUBLISH REQUEST - Number of events: 216
+2020-04-10T13:22:33-0300 [-] 127.0.0.1:32956 - sending MQTT PUBLISH REQUEST - Number of events: 217
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334860>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1080>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1240>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1438>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294978>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294ba8>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294da0>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294f98>
+2020-04-10T13:22:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:33-0300 [stdout#info] This divice have no simulation core instance
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1748>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1978>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1b38>
+2020-04-10T13:22:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1d30>
+2020-04-10T13:22:34-0300 [-] Received SIGINT, shutting down.
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bf60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39f60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c748>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0c18>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc2b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7fd0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308550>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7278>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294358>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173340b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284198>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c81d0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340208>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0208>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334278>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e02e8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a82e8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0518>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284390>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173086a0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c518>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68400>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340400>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0400>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c400>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a8eb8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68828>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0908>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173344a8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340550>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a84e0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c86d8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284588>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734c828>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738fef0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a006a0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68710>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0898>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a86d8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517294748>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e0780>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173407b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c89b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284780>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a688d0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a88d0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4c908>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dc940>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0978>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173409e8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284eb8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00a90>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334a90>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68ac8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308b00>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8b00>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4cb38>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcb38>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b0eb8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517334860>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340be0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371748>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c80f0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172a8c18>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00cc0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172c8f60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308cf8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a4cd30>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dcd30>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517284d68>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517340dd8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172d0dd8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a68c88>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00e80>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173712e8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172dceb8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517308ef0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a216a0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1080>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a110b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a5128>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a819b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a391d0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1240>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81278>
+2020-04-10T13:22:34-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [SubscriberApp,client] connection lost - Number of events: 218
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21320>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329320>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a393c8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173347f0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1438>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a214e0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173405f8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5588>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a395c0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81710>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173a59b0>
+2020-04-10T13:22:34-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11668>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1748>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11ac8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fdd8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81860>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321898>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728d8d0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7390>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1978>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173719b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a21a58>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321a90>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728db00>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1b38>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517381cf8>
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost - Number of events: 219
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371ba8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321c88>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a11828>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728dcc0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172b1d30>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39d68>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81d68>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371d68>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51728de48>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321e80>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517329e80>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51734cf28>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a39518>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5f60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173569e8>
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost - Number of events: 220
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e0b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee3c8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356160>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee198>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173566a0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e2b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f62b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356358>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356780>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee390>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e4a8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517356550>
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost - Number of events: 221
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee588>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e630>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189ee828>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6828>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172ee978>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eea20>
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost - Number of events: 222
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735e780>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eeb70>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6ba8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172e5b70>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51735ecc0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189eed30>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172f6da0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172eef98>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367a58>
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [PublisherApp,client] connection lost - Number of events: 223
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a81f60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517371f60>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e70b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173170f0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f128>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367400>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf198>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b240>
+2020-04-10T13:22:34-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-10T13:22:34-0300 [SubscriberApp,client] connection lost - Number of events: 224
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e72b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173172e8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a00898>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bffd0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b278>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173672b0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf470>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7470>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173174e0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f358>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bf588>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737b5c0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8bb00>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7668>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317668>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517321fd0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f710>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8b780>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51737bac8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367898>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730fba8>
+2020-04-10T13:22:34-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b77b8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7a58>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7a58>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bfa58>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51730f4a8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317ac8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367c88>
+2020-04-10T13:22:34-0300 [applications.accesspointapp.AccessPointFactory] (TCP Port 8082 Closed)
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5173b7be0>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff518a8bc18>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189f7c50>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5172bfc50>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff51738a6d8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517317cf8>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff517367e10>
+2020-04-10T13:22:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5189e7ef0>
+2020-04-10T13:22:34-0300 [-] Main loop terminated.

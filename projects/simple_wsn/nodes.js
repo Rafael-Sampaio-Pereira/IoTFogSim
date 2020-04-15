@@ -53,54 +53,6 @@
             "application": "applications.mqttapp.PublisherApp",
             "x": 200,
             "y": 380
-        },
-        {
-            "id": 4,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": true,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 300,
-            "y": 380
-        },
-        {
-            "id": 4,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": true,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 400,
-            "y": 380
-        },
-        {
-            "id": 4,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": true,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 500,
-            "y": 380
-        },
-        {
-            "id": 14,
-            "name": "Arduino based sensor (publisher node)", 
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "icon": "arduino_uno_icon",
-            "type": "client",
-            "is_wireless": true,
-            "application": "applications.mqttapp.PublisherApp",
-            "x": 600,
-            "y": 380
         }
     ],
     "access_points": [
@@ -131,6 +83,8 @@
             "icon": "router_icon",
             "type": "router",
             "port": 8081,
+            "accesspoint_addr": "127.0.0.1",
+            "accesspoint_port": 8082,
             "application": "applications.routerapp.RouterApp",
             "is_wireless": false,
             "x": 400,
@@ -138,6 +92,44 @@
         }
     ],
     "wireless_sensor_networks": [
-        
+        { 
+            "id": 3,
+            "name": "energe_metering_wsn", 
+            "ip_standard": "6LowPan",
+            "network_layer_protocol": "UDP",
+            "wireless_standard": "IEEE_802.11",
+            "description": "Simple wsn for envirioment monitoring",
+            "sink_nodes": [
+                {
+                    "id":20,
+                    "name": "wsn_sink",
+                    "icon": "sensor_signal_icon",
+                    "is_wireless": true,
+                    "application": "applications.wsnapp.SinkApp",
+                    "x": 750,
+                    "y": 100
+                }
+            ],
+            "sensor_nodes": [
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 750,
+                    "y": 200
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 750,
+                    "y": 300
+                }
+            ]
+        }
     ]
 }
