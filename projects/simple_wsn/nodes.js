@@ -69,7 +69,7 @@
             "real_ip": "127.0.0.1",
             "port": 8082,
             "icon": "ap_icon",
-            "coverage_area_radius": 100,
+            "coverage_area_radius": 50,
             "router_addr": "127.0.0.1",
             "router_port": 8081,
             "application": "applications.accesspointapp.AccessPointApp",
@@ -177,6 +177,36 @@
                     "is_wireless": true,
                     "x": 750,
                     "y": 380
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "coverage_area_radius": 100,
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 880,
+                    "y": 330
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "coverage_area_radius": 100,
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 730,
+                    "y": 290
+                },
+                {
+                    "id":20,
+                    "name": "wsn_sensor",
+                    "icon": "sensor_icon",
+                    "coverage_area_radius": 100,
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 780,
+                    "y": 410
                 }
             ]
         }

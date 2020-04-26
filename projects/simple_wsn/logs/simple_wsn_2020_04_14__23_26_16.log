@@ -1,0 +1,1683 @@
+2020-04-14T23:26:16-0300 [-] Creating router ...
+2020-04-14T23:26:16-0300 [-] Initializing Router - Number of events: 1
+2020-04-14T23:26:17-0300 [-] RouterFactory starting on 8081
+2020-04-14T23:26:17-0300 [-] Creating AccessPoint station ...
+2020-04-14T23:26:17-0300 [-] Initializing Access Point - Number of events: 2
+2020-04-14T23:26:17-0300 [-] AccessPointFactory starting on 8082
+2020-04-14T23:26:17-0300 [-] Creating fog node ...
+2020-04-14T23:26:17-0300 [-] Initializing Client - Number of events: 3
+2020-04-14T23:26:18-0300 [-] Creating fog node ...
+2020-04-14T23:26:18-0300 [-] Initializing Client - Number of events: 4
+2020-04-14T23:26:18-0300 [-] Creating fog node ...
+2020-04-14T23:26:18-0300 [-] Initializing Server - Number of events: 5
+2020-04-14T23:26:19-0300 [-] BrokerFactory starting on 5100
+2020-04-14T23:26:19-0300 [-] Creating iot node ...
+2020-04-14T23:26:19-0300 [-] Initializing Client - Number of events: 6
+2020-04-14T23:26:19-0300 [-] Initializing sensor node - Number of events: 7
+2020-04-14T23:26:20-0300 [-] Initializing sensor node - Number of events: 8
+2020-04-14T23:26:21-0300 [stdout#info] {'17.19 Kwh'}
+2020-04-14T23:26:21-0300 [stdout#info] 17.19 Kwh
+2020-04-14T23:26:21-0300 [-] Initializing sensor node - Number of events: 9
+2020-04-14T23:26:22-0300 [stdout#info] {'10.95 Kwh'}
+2020-04-14T23:26:22-0300 [stdout#info] 10.95 Kwh
+2020-04-14T23:26:22-0300 [-] Initializing sensor node - Number of events: 10
+2020-04-14T23:26:22-0300 [stdout#info] {'21.37 Kwh'}
+2020-04-14T23:26:22-0300 [stdout#info] 21.37 Kwh
+2020-04-14T23:26:22-0300 [-] Initializing sensor node - Number of events: 11
+2020-04-14T23:26:23-0300 [stdout#info] {'12.17 Kwh'}
+2020-04-14T23:26:23-0300 [stdout#info] 12.17 Kwh
+2020-04-14T23:26:23-0300 [-] Initializing sensor node - Number of events: 12
+2020-04-14T23:26:24-0300 [stdout#info] {'11.31 Kwh'}
+2020-04-14T23:26:24-0300 [stdout#info] 11.31 Kwh
+2020-04-14T23:26:24-0300 [-] Initializing sensor node - Number of events: 13
+2020-04-14T23:26:25-0300 [stdout#info] {'11.88 Kwh'}
+2020-04-14T23:26:25-0300 [stdout#info] 11.88 Kwh
+2020-04-14T23:26:25-0300 [stdout#info] {'4.64 Kwh'}
+2020-04-14T23:26:25-0300 [stdout#info] 4.64 Kwh
+2020-04-14T23:26:25-0300 [stdout#info] {'4.37 Kwh'}
+2020-04-14T23:26:25-0300 [stdout#info] 4.37 Kwh
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:46754 - Connected to mqtt broker - Number of events: 14
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:46754 - sending MQTT SUBSCRIBE REQUEST - Number of events: 15
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:46756 - Connected to mqtt broker - Number of events: 16
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:46756 - sending MQTT SUBSCRIBE REQUEST - Number of events: 17
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:41198 - Connected to mqtt broker - Number of events: 18
+2020-04-14T23:26:25-0300 [Uninitialized] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-04-14T23:26:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4c7b80588>
+2020-04-14T23:26:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce58a58>
+2020-04-14T23:26:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce58d68>
+2020-04-14T23:26:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68748>
+2020-04-14T23:26:25-0300 [stdout#info] {'3.2 Kwh'}
+2020-04-14T23:26:25-0300 [stdout#info] 3.2 Kwh
+2020-04-14T23:26:26-0300 [stdout#info] {'18.38 Kwh'}
+2020-04-14T23:26:26-0300 [stdout#info] 18.38 Kwh
+2020-04-14T23:26:27-0300 [stdout#info] {'18.9 Kwh'}
+2020-04-14T23:26:27-0300 [stdout#info] 18.9 Kwh
+2020-04-14T23:26:28-0300 [stdout#info] {'21.7 Kwh'}
+2020-04-14T23:26:28-0300 [stdout#info] 21.7 Kwh
+2020-04-14T23:26:28-0300 [stdout#info] {'12.71 Kwh'}
+2020-04-14T23:26:28-0300 [stdout#info] 12.71 Kwh
+2020-04-14T23:26:28-0300 [stdout#info] {'18.19 Kwh'}
+2020-04-14T23:26:28-0300 [stdout#info] 18.19 Kwh
+2020-04-14T23:26:28-0300 [stdout#info] {'12.22 Kwh'}
+2020-04-14T23:26:28-0300 [stdout#info] 12.22 Kwh
+2020-04-14T23:26:29-0300 [stdout#info] {'7.25 Kwh'}
+2020-04-14T23:26:29-0300 [stdout#info] 7.25 Kwh
+2020-04-14T23:26:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-04-14T23:26:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68b00>
+2020-04-14T23:26:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce58d68>
+2020-04-14T23:26:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68d30>
+2020-04-14T23:26:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68748>
+2020-04-14T23:26:30-0300 [stdout#info] {'3.38 Kwh'}
+2020-04-14T23:26:30-0300 [stdout#info] 3.38 Kwh
+2020-04-14T23:26:31-0300 [stdout#info] {'19.85 Kwh'}
+2020-04-14T23:26:31-0300 [stdout#info] 19.85 Kwh
+2020-04-14T23:26:31-0300 [stdout#info] {'13.61 Kwh'}
+2020-04-14T23:26:31-0300 [stdout#info] 13.61 Kwh
+2020-04-14T23:26:31-0300 [stdout#info] {'9.6 Kwh'}
+2020-04-14T23:26:31-0300 [stdout#info] 9.6 Kwh
+2020-04-14T23:26:31-0300 [stdout#info] {'19.54 Kwh'}
+2020-04-14T23:26:31-0300 [stdout#info] 19.54 Kwh
+2020-04-14T23:26:32-0300 [stdout#info] {'15.26 Kwh'}
+2020-04-14T23:26:32-0300 [stdout#info] 15.26 Kwh
+2020-04-14T23:26:33-0300 [stdout#info] {'4.84 Kwh'}
+2020-04-14T23:26:33-0300 [stdout#info] 4.84 Kwh
+2020-04-14T23:26:34-0300 [stdout#info] {'9.11 Kwh'}
+2020-04-14T23:26:34-0300 [stdout#info] 9.11 Kwh
+2020-04-14T23:26:34-0300 [stdout#info] {'18.49 Kwh'}
+2020-04-14T23:26:34-0300 [stdout#info] 18.49 Kwh
+2020-04-14T23:26:34-0300 [stdout#info] {'15.6 Kwh'}
+2020-04-14T23:26:34-0300 [stdout#info] 15.6 Kwh
+2020-04-14T23:26:34-0300 [stdout#info] {'11.86 Kwh'}
+2020-04-14T23:26:34-0300 [stdout#info] 11.86 Kwh
+2020-04-14T23:26:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-04-14T23:26:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bd685eb8>
+2020-04-14T23:26:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68b00>
+2020-04-14T23:26:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e1d0>
+2020-04-14T23:26:35-0300 [stdout#info] {'11.26 Kwh'}
+2020-04-14T23:26:35-0300 [stdout#info] 11.26 Kwh
+2020-04-14T23:26:36-0300 [stdout#info] {'21.56 Kwh'}
+2020-04-14T23:26:36-0300 [stdout#info] 21.56 Kwh
+2020-04-14T23:26:37-0300 [stdout#info] {'3.97 Kwh'}
+2020-04-14T23:26:37-0300 [stdout#info] 3.97 Kwh
+2020-04-14T23:26:37-0300 [stdout#info] {'4.64 Kwh'}
+2020-04-14T23:26:37-0300 [stdout#info] 4.64 Kwh
+2020-04-14T23:26:37-0300 [stdout#info] {'10.69 Kwh'}
+2020-04-14T23:26:37-0300 [stdout#info] 10.69 Kwh
+2020-04-14T23:26:37-0300 [stdout#info] {'3.01 Kwh'}
+2020-04-14T23:26:37-0300 [stdout#info] 3.01 Kwh
+2020-04-14T23:26:38-0300 [stdout#info] {'15.6 Kwh'}
+2020-04-14T23:26:38-0300 [stdout#info] 15.6 Kwh
+2020-04-14T23:26:39-0300 [stdout#info] {'12.38 Kwh'}
+2020-04-14T23:26:39-0300 [stdout#info] 12.38 Kwh
+2020-04-14T23:26:40-0300 [stdout#info] {'22.03 Kwh'}
+2020-04-14T23:26:40-0300 [stdout#info] 22.03 Kwh
+2020-04-14T23:26:40-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-04-14T23:26:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e400>
+2020-04-14T23:26:40-0300 [stdout#info] {'8.82 Kwh'}
+2020-04-14T23:26:40-0300 [stdout#info] 8.82 Kwh
+2020-04-14T23:26:40-0300 [stdout#info] {'21.09 Kwh'}
+2020-04-14T23:26:40-0300 [stdout#info] 21.09 Kwh
+2020-04-14T23:26:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bd685eb8>
+2020-04-14T23:26:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e6a0>
+2020-04-14T23:26:40-0300 [stdout#info] {'14.9 Kwh'}
+2020-04-14T23:26:40-0300 [stdout#info] 14.9 Kwh
+2020-04-14T23:26:41-0300 [stdout#info] {'3.99 Kwh'}
+2020-04-14T23:26:41-0300 [stdout#info] 3.99 Kwh
+2020-04-14T23:26:42-0300 [stdout#info] {'13.26 Kwh'}
+2020-04-14T23:26:42-0300 [stdout#info] 13.26 Kwh
+2020-04-14T23:26:43-0300 [stdout#info] {'10.79 Kwh'}
+2020-04-14T23:26:43-0300 [stdout#info] 10.79 Kwh
+2020-04-14T23:26:43-0300 [stdout#info] {'5.64 Kwh'}
+2020-04-14T23:26:43-0300 [stdout#info] 5.64 Kwh
+2020-04-14T23:26:43-0300 [stdout#info] {'11.51 Kwh'}
+2020-04-14T23:26:43-0300 [stdout#info] 11.51 Kwh
+2020-04-14T23:26:43-0300 [stdout#info] {'13.31 Kwh'}
+2020-04-14T23:26:43-0300 [stdout#info] 13.31 Kwh
+2020-04-14T23:26:44-0300 [stdout#info] {'4.42 Kwh'}
+2020-04-14T23:26:44-0300 [stdout#info] 4.42 Kwh
+2020-04-14T23:26:45-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-04-14T23:26:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e8d0>
+2020-04-14T23:26:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e400>
+2020-04-14T23:26:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51eb70>
+2020-04-14T23:26:45-0300 [stdout#info] {'21.15 Kwh'}
+2020-04-14T23:26:45-0300 [stdout#info] 21.15 Kwh
+2020-04-14T23:26:46-0300 [stdout#info] {'19.46 Kwh'}
+2020-04-14T23:26:46-0300 [stdout#info] 19.46 Kwh
+2020-04-14T23:26:46-0300 [stdout#info] {'6.68 Kwh'}
+2020-04-14T23:26:46-0300 [stdout#info] 6.68 Kwh
+2020-04-14T23:26:46-0300 [stdout#info] {'19.66 Kwh'}
+2020-04-14T23:26:46-0300 [stdout#info] 19.66 Kwh
+2020-04-14T23:26:46-0300 [stdout#info] {'10.16 Kwh'}
+2020-04-14T23:26:46-0300 [stdout#info] 10.16 Kwh
+2020-04-14T23:26:47-0300 [stdout#info] {'20.39 Kwh'}
+2020-04-14T23:26:47-0300 [stdout#info] 20.39 Kwh
+2020-04-14T23:26:48-0300 [stdout#info] {'16.77 Kwh'}
+2020-04-14T23:26:48-0300 [stdout#info] 16.77 Kwh
+2020-04-14T23:26:49-0300 [stdout#info] {'19.15 Kwh'}
+2020-04-14T23:26:49-0300 [stdout#info] 19.15 Kwh
+2020-04-14T23:26:49-0300 [stdout#info] {'17.6 Kwh'}
+2020-04-14T23:26:49-0300 [stdout#info] 17.6 Kwh
+2020-04-14T23:26:49-0300 [stdout#info] {'6.34 Kwh'}
+2020-04-14T23:26:49-0300 [stdout#info] 6.34 Kwh
+2020-04-14T23:26:49-0300 [stdout#info] {'3.12 Kwh'}
+2020-04-14T23:26:49-0300 [stdout#info] 3.12 Kwh
+2020-04-14T23:26:50-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-04-14T23:26:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e390>
+2020-04-14T23:26:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e8d0>
+2020-04-14T23:26:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51ef28>
+2020-04-14T23:26:50-0300 [stdout#info] {'15.05 Kwh'}
+2020-04-14T23:26:50-0300 [stdout#info] 15.05 Kwh
+2020-04-14T23:26:51-0300 [stdout#info] {'7.83 Kwh'}
+2020-04-14T23:26:51-0300 [stdout#info] 7.83 Kwh
+2020-04-14T23:26:52-0300 [stdout#info] {'6.33 Kwh'}
+2020-04-14T23:26:52-0300 [stdout#info] 6.33 Kwh
+2020-04-14T23:26:52-0300 [stdout#info] {'4.76 Kwh'}
+2020-04-14T23:26:52-0300 [stdout#info] 4.76 Kwh
+2020-04-14T23:26:52-0300 [stdout#info] {'3.03 Kwh'}
+2020-04-14T23:26:52-0300 [stdout#info] 3.03 Kwh
+2020-04-14T23:26:52-0300 [stdout#info] {'17.55 Kwh'}
+2020-04-14T23:26:52-0300 [stdout#info] 17.55 Kwh
+2020-04-14T23:26:53-0300 [stdout#info] {'11.91 Kwh'}
+2020-04-14T23:26:53-0300 [stdout#info] 11.91 Kwh
+2020-04-14T23:26:54-0300 [stdout#info] {'11.64 Kwh'}
+2020-04-14T23:26:54-0300 [stdout#info] 11.64 Kwh
+2020-04-14T23:26:55-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-04-14T23:26:55-0300 [stdout#info] {'12.79 Kwh'}
+2020-04-14T23:26:55-0300 [stdout#info] 12.79 Kwh
+2020-04-14T23:26:55-0300 [stdout#info] {'15.17 Kwh'}
+2020-04-14T23:26:55-0300 [stdout#info] 15.17 Kwh
+2020-04-14T23:26:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539128>
+2020-04-14T23:26:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e390>
+2020-04-14T23:26:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:26:55-0300 [stdout#info] {'3.18 Kwh'}
+2020-04-14T23:26:55-0300 [stdout#info] 3.18 Kwh
+2020-04-14T23:26:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539358>
+2020-04-14T23:26:55-0300 [stdout#info] {'14.95 Kwh'}
+2020-04-14T23:26:55-0300 [stdout#info] 14.95 Kwh
+2020-04-14T23:26:56-0300 [stdout#info] {'3.3 Kwh'}
+2020-04-14T23:26:56-0300 [stdout#info] 3.3 Kwh
+2020-04-14T23:26:57-0300 [stdout#info] {'3.41 Kwh'}
+2020-04-14T23:26:57-0300 [stdout#info] 3.41 Kwh
+2020-04-14T23:26:58-0300 [stdout#info] {'20.1 Kwh'}
+2020-04-14T23:26:58-0300 [stdout#info] 20.1 Kwh
+2020-04-14T23:26:58-0300 [stdout#info] {'12.24 Kwh'}
+2020-04-14T23:26:58-0300 [stdout#info] 12.24 Kwh
+2020-04-14T23:26:58-0300 [stdout#info] {'14.36 Kwh'}
+2020-04-14T23:26:58-0300 [stdout#info] 14.36 Kwh
+2020-04-14T23:26:58-0300 [stdout#info] {'17.18 Kwh'}
+2020-04-14T23:26:58-0300 [stdout#info] 17.18 Kwh
+2020-04-14T23:26:59-0300 [stdout#info] {'22.34 Kwh'}
+2020-04-14T23:26:59-0300 [stdout#info] 22.34 Kwh
+2020-04-14T23:27:00-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-04-14T23:27:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5395c0>
+2020-04-14T23:27:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539128>
+2020-04-14T23:27:00-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5397f0>
+2020-04-14T23:27:00-0300 [stdout#info] {'10.46 Kwh'}
+2020-04-14T23:27:00-0300 [stdout#info] 10.46 Kwh
+2020-04-14T23:27:01-0300 [stdout#info] {'20.08 Kwh'}
+2020-04-14T23:27:01-0300 [stdout#info] 20.08 Kwh
+2020-04-14T23:27:01-0300 [stdout#info] {'9.35 Kwh'}
+2020-04-14T23:27:01-0300 [stdout#info] 9.35 Kwh
+2020-04-14T23:27:01-0300 [stdout#info] {'11.1 Kwh'}
+2020-04-14T23:27:01-0300 [stdout#info] 11.1 Kwh
+2020-04-14T23:27:01-0300 [stdout#info] {'19.03 Kwh'}
+2020-04-14T23:27:01-0300 [stdout#info] 19.03 Kwh
+2020-04-14T23:27:02-0300 [stdout#info] {'4.91 Kwh'}
+2020-04-14T23:27:02-0300 [stdout#info] 4.91 Kwh
+2020-04-14T23:27:03-0300 [stdout#info] {'19.29 Kwh'}
+2020-04-14T23:27:03-0300 [stdout#info] 19.29 Kwh
+2020-04-14T23:27:04-0300 [stdout#info] {'12.04 Kwh'}
+2020-04-14T23:27:04-0300 [stdout#info] 12.04 Kwh
+2020-04-14T23:27:04-0300 [stdout#info] {'11.44 Kwh'}
+2020-04-14T23:27:04-0300 [stdout#info] 11.44 Kwh
+2020-04-14T23:27:04-0300 [stdout#info] {'9.22 Kwh'}
+2020-04-14T23:27:04-0300 [stdout#info] 9.22 Kwh
+2020-04-14T23:27:04-0300 [stdout#info] {'9.01 Kwh'}
+2020-04-14T23:27:04-0300 [stdout#info] 9.01 Kwh
+2020-04-14T23:27:05-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-04-14T23:27:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5397b8>
+2020-04-14T23:27:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5395c0>
+2020-04-14T23:27:05-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539c18>
+2020-04-14T23:27:05-0300 [stdout#info] {'18.47 Kwh'}
+2020-04-14T23:27:05-0300 [stdout#info] 18.47 Kwh
+2020-04-14T23:27:06-0300 [stdout#info] {'7.83 Kwh'}
+2020-04-14T23:27:06-0300 [stdout#info] 7.83 Kwh
+2020-04-14T23:27:07-0300 [stdout#info] {'21.0 Kwh'}
+2020-04-14T23:27:07-0300 [stdout#info] 21.0 Kwh
+2020-04-14T23:27:07-0300 [stdout#info] {'2.63 Kwh'}
+2020-04-14T23:27:07-0300 [stdout#info] 2.63 Kwh
+2020-04-14T23:27:07-0300 [stdout#info] {'21.43 Kwh'}
+2020-04-14T23:27:07-0300 [stdout#info] 21.43 Kwh
+2020-04-14T23:27:07-0300 [stdout#info] {'4.09 Kwh'}
+2020-04-14T23:27:07-0300 [stdout#info] 4.09 Kwh
+2020-04-14T23:27:08-0300 [stdout#info] {'7.94 Kwh'}
+2020-04-14T23:27:08-0300 [stdout#info] 7.94 Kwh
+2020-04-14T23:27:09-0300 [stdout#info] {'19.7 Kwh'}
+2020-04-14T23:27:09-0300 [stdout#info] 19.7 Kwh
+2020-04-14T23:27:10-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-04-14T23:27:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539da0>
+2020-04-14T23:27:10-0300 [stdout#info] {'18.25 Kwh'}
+2020-04-14T23:27:10-0300 [stdout#info] 18.25 Kwh
+2020-04-14T23:27:10-0300 [stdout#info] {'3.43 Kwh'}
+2020-04-14T23:27:10-0300 [stdout#info] 3.43 Kwh
+2020-04-14T23:27:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5397b8>
+2020-04-14T23:27:10-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e20b8>
+2020-04-14T23:27:10-0300 [stdout#info] {'10.8 Kwh'}
+2020-04-14T23:27:10-0300 [stdout#info] 10.8 Kwh
+2020-04-14T23:27:10-0300 [stdout#info] {'22.42 Kwh'}
+2020-04-14T23:27:10-0300 [stdout#info] 22.42 Kwh
+2020-04-14T23:27:11-0300 [stdout#info] {'18.74 Kwh'}
+2020-04-14T23:27:11-0300 [stdout#info] 18.74 Kwh
+2020-04-14T23:27:12-0300 [stdout#info] {'2.84 Kwh'}
+2020-04-14T23:27:12-0300 [stdout#info] 2.84 Kwh
+2020-04-14T23:27:13-0300 [stdout#info] {'12.34 Kwh'}
+2020-04-14T23:27:13-0300 [stdout#info] 12.34 Kwh
+2020-04-14T23:27:13-0300 [stdout#info] {'4.17 Kwh'}
+2020-04-14T23:27:13-0300 [stdout#info] 4.17 Kwh
+2020-04-14T23:27:13-0300 [stdout#info] {'9.68 Kwh'}
+2020-04-14T23:27:13-0300 [stdout#info] 9.68 Kwh
+2020-04-14T23:27:13-0300 [stdout#info] {'18.55 Kwh'}
+2020-04-14T23:27:13-0300 [stdout#info] 18.55 Kwh
+2020-04-14T23:27:14-0300 [stdout#info] {'12.56 Kwh'}
+2020-04-14T23:27:14-0300 [stdout#info] 12.56 Kwh
+2020-04-14T23:27:15-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-04-14T23:27:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2240>
+2020-04-14T23:27:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539da0>
+2020-04-14T23:27:15-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2518>
+2020-04-14T23:27:15-0300 [stdout#info] {'15.45 Kwh'}
+2020-04-14T23:27:15-0300 [stdout#info] 15.45 Kwh
+2020-04-14T23:27:16-0300 [stdout#info] {'20.59 Kwh'}
+2020-04-14T23:27:16-0300 [stdout#info] 20.59 Kwh
+2020-04-14T23:27:16-0300 [stdout#info] {'21.21 Kwh'}
+2020-04-14T23:27:16-0300 [stdout#info] 21.21 Kwh
+2020-04-14T23:27:16-0300 [stdout#info] {'4.48 Kwh'}
+2020-04-14T23:27:16-0300 [stdout#info] 4.48 Kwh
+2020-04-14T23:27:16-0300 [stdout#info] {'20.1 Kwh'}
+2020-04-14T23:27:16-0300 [stdout#info] 20.1 Kwh
+2020-04-14T23:27:17-0300 [stdout#info] {'20.68 Kwh'}
+2020-04-14T23:27:17-0300 [stdout#info] 20.68 Kwh
+2020-04-14T23:27:18-0300 [stdout#info] {'16.17 Kwh'}
+2020-04-14T23:27:18-0300 [stdout#info] 16.17 Kwh
+2020-04-14T23:27:19-0300 [stdout#info] {'13.95 Kwh'}
+2020-04-14T23:27:19-0300 [stdout#info] 13.95 Kwh
+2020-04-14T23:27:19-0300 [stdout#info] {'5.15 Kwh'}
+2020-04-14T23:27:19-0300 [stdout#info] 5.15 Kwh
+2020-04-14T23:27:19-0300 [stdout#info] {'3.65 Kwh'}
+2020-04-14T23:27:19-0300 [stdout#info] 3.65 Kwh
+2020-04-14T23:27:19-0300 [stdout#info] {'20.41 Kwh'}
+2020-04-14T23:27:19-0300 [stdout#info] 20.41 Kwh
+2020-04-14T23:27:20-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-04-14T23:27:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e26a0>
+2020-04-14T23:27:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2240>
+2020-04-14T23:27:20-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2978>
+2020-04-14T23:27:20-0300 [stdout#info] {'16.61 Kwh'}
+2020-04-14T23:27:20-0300 [stdout#info] 16.61 Kwh
+2020-04-14T23:27:21-0300 [stdout#info] {'16.66 Kwh'}
+2020-04-14T23:27:21-0300 [stdout#info] 16.66 Kwh
+2020-04-14T23:27:22-0300 [stdout#info] {'12.26 Kwh'}
+2020-04-14T23:27:22-0300 [stdout#info] 12.26 Kwh
+2020-04-14T23:27:22-0300 [stdout#info] {'21.02 Kwh'}
+2020-04-14T23:27:22-0300 [stdout#info] 21.02 Kwh
+2020-04-14T23:27:22-0300 [stdout#info] {'3.25 Kwh'}
+2020-04-14T23:27:22-0300 [stdout#info] 3.25 Kwh
+2020-04-14T23:27:22-0300 [stdout#info] {'13.75 Kwh'}
+2020-04-14T23:27:22-0300 [stdout#info] 13.75 Kwh
+2020-04-14T23:27:23-0300 [stdout#info] {'3.49 Kwh'}
+2020-04-14T23:27:23-0300 [stdout#info] 3.49 Kwh
+2020-04-14T23:27:24-0300 [stdout#info] {'15.14 Kwh'}
+2020-04-14T23:27:24-0300 [stdout#info] 15.14 Kwh
+2020-04-14T23:27:25-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-04-14T23:27:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e22b0>
+2020-04-14T23:27:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e26a0>
+2020-04-14T23:27:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2dd8>
+2020-04-14T23:27:25-0300 [stdout#info] {'14.69 Kwh'}
+2020-04-14T23:27:25-0300 [stdout#info] 14.69 Kwh
+2020-04-14T23:27:25-0300 [stdout#info] {'13.43 Kwh'}
+2020-04-14T23:27:25-0300 [stdout#info] 13.43 Kwh
+2020-04-14T23:27:25-0300 [stdout#info] {'11.05 Kwh'}
+2020-04-14T23:27:25-0300 [stdout#info] 11.05 Kwh
+2020-04-14T23:27:26-0300 [stdout#info] {'11.32 Kwh'}
+2020-04-14T23:27:26-0300 [stdout#info] 11.32 Kwh
+2020-04-14T23:27:26-0300 [stdout#info] {'3.31 Kwh'}
+2020-04-14T23:27:26-0300 [stdout#info] 3.31 Kwh
+2020-04-14T23:27:27-0300 [stdout#info] {'13.54 Kwh'}
+2020-04-14T23:27:27-0300 [stdout#info] 13.54 Kwh
+2020-04-14T23:27:28-0300 [stdout#info] {'15.3 Kwh'}
+2020-04-14T23:27:28-0300 [stdout#info] 15.3 Kwh
+2020-04-14T23:27:28-0300 [stdout#info] {'9.55 Kwh'}
+2020-04-14T23:27:28-0300 [stdout#info] 9.55 Kwh
+2020-04-14T23:27:28-0300 [stdout#info] {'12.69 Kwh'}
+2020-04-14T23:27:28-0300 [stdout#info] 12.69 Kwh
+2020-04-14T23:27:29-0300 [stdout#info] {'13.66 Kwh'}
+2020-04-14T23:27:29-0300 [stdout#info] 13.66 Kwh
+2020-04-14T23:27:29-0300 [stdout#info] {'10.62 Kwh'}
+2020-04-14T23:27:29-0300 [stdout#info] 10.62 Kwh
+2020-04-14T23:27:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-04-14T23:27:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2b38>
+2020-04-14T23:27:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e22b0>
+2020-04-14T23:27:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503278>
+2020-04-14T23:27:30-0300 [stdout#info] {'14.79 Kwh'}
+2020-04-14T23:27:30-0300 [stdout#info] 14.79 Kwh
+2020-04-14T23:27:31-0300 [stdout#info] {'11.48 Kwh'}
+2020-04-14T23:27:31-0300 [stdout#info] 11.48 Kwh
+2020-04-14T23:27:31-0300 [stdout#info] {'6.89 Kwh'}
+2020-04-14T23:27:31-0300 [stdout#info] 6.89 Kwh
+2020-04-14T23:27:31-0300 [stdout#info] {'13.29 Kwh'}
+2020-04-14T23:27:31-0300 [stdout#info] 13.29 Kwh
+2020-04-14T23:27:32-0300 [stdout#info] {'8.47 Kwh'}
+2020-04-14T23:27:32-0300 [stdout#info] 8.47 Kwh
+2020-04-14T23:27:32-0300 [stdout#info] {'5.02 Kwh'}
+2020-04-14T23:27:32-0300 [stdout#info] 5.02 Kwh
+2020-04-14T23:27:33-0300 [stdout#info] {'21.08 Kwh'}
+2020-04-14T23:27:33-0300 [stdout#info] 21.08 Kwh
+2020-04-14T23:27:34-0300 [stdout#info] {'15.35 Kwh'}
+2020-04-14T23:27:34-0300 [stdout#info] 15.35 Kwh
+2020-04-14T23:27:34-0300 [stdout#info] {'9.38 Kwh'}
+2020-04-14T23:27:34-0300 [stdout#info] 9.38 Kwh
+2020-04-14T23:27:34-0300 [stdout#info] {'4.6 Kwh'}
+2020-04-14T23:27:34-0300 [stdout#info] 4.6 Kwh
+2020-04-14T23:27:35-0300 [stdout#info] {'5.0 Kwh'}
+2020-04-14T23:27:35-0300 [stdout#info] 5.0 Kwh
+2020-04-14T23:27:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-04-14T23:27:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503400>
+2020-04-14T23:27:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2b38>
+2020-04-14T23:27:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5036d8>
+2020-04-14T23:27:35-0300 [stdout#info] {'6.29 Kwh'}
+2020-04-14T23:27:35-0300 [stdout#info] 6.29 Kwh
+2020-04-14T23:27:36-0300 [stdout#info] {'3.87 Kwh'}
+2020-04-14T23:27:36-0300 [stdout#info] 3.87 Kwh
+2020-04-14T23:27:37-0300 [stdout#info] {'15.43 Kwh'}
+2020-04-14T23:27:37-0300 [stdout#info] 15.43 Kwh
+2020-04-14T23:27:37-0300 [stdout#info] {'19.92 Kwh'}
+2020-04-14T23:27:37-0300 [stdout#info] 19.92 Kwh
+2020-04-14T23:27:37-0300 [stdout#info] {'10.19 Kwh'}
+2020-04-14T23:27:37-0300 [stdout#info] 10.19 Kwh
+2020-04-14T23:27:38-0300 [stdout#info] {'11.85 Kwh'}
+2020-04-14T23:27:38-0300 [stdout#info] 11.85 Kwh
+2020-04-14T23:27:38-0300 [stdout#info] {'17.84 Kwh'}
+2020-04-14T23:27:38-0300 [stdout#info] 17.84 Kwh
+2020-04-14T23:27:39-0300 [stdout#info] {'11.49 Kwh'}
+2020-04-14T23:27:39-0300 [stdout#info] 11.49 Kwh
+2020-04-14T23:27:40-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-04-14T23:27:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503860>
+2020-04-14T23:27:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503400>
+2020-04-14T23:27:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503b38>
+2020-04-14T23:27:40-0300 [stdout#info] {'12.01 Kwh'}
+2020-04-14T23:27:40-0300 [stdout#info] 12.01 Kwh
+2020-04-14T23:27:40-0300 [stdout#info] {'9.8 Kwh'}
+2020-04-14T23:27:40-0300 [stdout#info] 9.8 Kwh
+2020-04-14T23:27:40-0300 [stdout#info] {'7.03 Kwh'}
+2020-04-14T23:27:40-0300 [stdout#info] 7.03 Kwh
+2020-04-14T23:27:41-0300 [stdout#info] {'10.69 Kwh'}
+2020-04-14T23:27:41-0300 [stdout#info] 10.69 Kwh
+2020-04-14T23:27:41-0300 [stdout#info] {'7.37 Kwh'}
+2020-04-14T23:27:41-0300 [stdout#info] 7.37 Kwh
+2020-04-14T23:27:42-0300 [stdout#info] {'19.44 Kwh'}
+2020-04-14T23:27:42-0300 [stdout#info] 19.44 Kwh
+2020-04-14T23:27:43-0300 [stdout#info] {'13.08 Kwh'}
+2020-04-14T23:27:43-0300 [stdout#info] 13.08 Kwh
+2020-04-14T23:27:43-0300 [stdout#info] {'6.15 Kwh'}
+2020-04-14T23:27:43-0300 [stdout#info] 6.15 Kwh
+2020-04-14T23:27:43-0300 [stdout#info] {'17.52 Kwh'}
+2020-04-14T23:27:43-0300 [stdout#info] 17.52 Kwh
+2020-04-14T23:27:44-0300 [stdout#info] {'2.87 Kwh'}
+2020-04-14T23:27:44-0300 [stdout#info] 2.87 Kwh
+2020-04-14T23:27:44-0300 [stdout#info] {'18.16 Kwh'}
+2020-04-14T23:27:44-0300 [stdout#info] 18.16 Kwh
+2020-04-14T23:27:45-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-04-14T23:27:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce42cc0>
+2020-04-14T23:27:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503860>
+2020-04-14T23:27:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503f98>
+2020-04-14T23:27:45-0300 [stdout#info] {'6.17 Kwh'}
+2020-04-14T23:27:45-0300 [stdout#info] 6.17 Kwh
+2020-04-14T23:27:46-0300 [stdout#info] {'5.15 Kwh'}
+2020-04-14T23:27:46-0300 [stdout#info] 5.15 Kwh
+2020-04-14T23:27:46-0300 [stdout#info] {'16.6 Kwh'}
+2020-04-14T23:27:46-0300 [stdout#info] 16.6 Kwh
+2020-04-14T23:27:46-0300 [stdout#info] {'3.71 Kwh'}
+2020-04-14T23:27:46-0300 [stdout#info] 3.71 Kwh
+2020-04-14T23:27:47-0300 [stdout#info] {'12.84 Kwh'}
+2020-04-14T23:27:47-0300 [stdout#info] 12.84 Kwh
+2020-04-14T23:27:47-0300 [stdout#info] {'16.74 Kwh'}
+2020-04-14T23:27:47-0300 [stdout#info] 16.74 Kwh
+2020-04-14T23:27:48-0300 [stdout#info] {'13.8 Kwh'}
+2020-04-14T23:27:48-0300 [stdout#info] 13.8 Kwh
+2020-04-14T23:27:49-0300 [stdout#info] {'16.04 Kwh'}
+2020-04-14T23:27:49-0300 [stdout#info] 16.04 Kwh
+2020-04-14T23:27:49-0300 [stdout#info] {'20.88 Kwh'}
+2020-04-14T23:27:49-0300 [stdout#info] 20.88 Kwh
+2020-04-14T23:27:49-0300 [stdout#info] {'9.99 Kwh'}
+2020-04-14T23:27:49-0300 [stdout#info] 9.99 Kwh
+2020-04-14T23:27:50-0300 [stdout#info] {'12.25 Kwh'}
+2020-04-14T23:27:50-0300 [stdout#info] 12.25 Kwh
+2020-04-14T23:27:50-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-04-14T23:27:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514160>
+2020-04-14T23:27:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce42cc0>
+2020-04-14T23:27:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514438>
+2020-04-14T23:27:50-0300 [stdout#info] {'4.4 Kwh'}
+2020-04-14T23:27:50-0300 [stdout#info] 4.4 Kwh
+2020-04-14T23:27:51-0300 [stdout#info] {'21.85 Kwh'}
+2020-04-14T23:27:51-0300 [stdout#info] 21.85 Kwh
+2020-04-14T23:27:52-0300 [stdout#info] {'15.73 Kwh'}
+2020-04-14T23:27:52-0300 [stdout#info] 15.73 Kwh
+2020-04-14T23:27:52-0300 [stdout#info] {'22.42 Kwh'}
+2020-04-14T23:27:52-0300 [stdout#info] 22.42 Kwh
+2020-04-14T23:27:52-0300 [stdout#info] {'5.64 Kwh'}
+2020-04-14T23:27:52-0300 [stdout#info] 5.64 Kwh
+2020-04-14T23:27:53-0300 [stdout#info] {'9.1 Kwh'}
+2020-04-14T23:27:53-0300 [stdout#info] 9.1 Kwh
+2020-04-14T23:27:53-0300 [stdout#info] {'22.43 Kwh'}
+2020-04-14T23:27:53-0300 [stdout#info] 22.43 Kwh
+2020-04-14T23:27:54-0300 [stdout#info] {'3.23 Kwh'}
+2020-04-14T23:27:54-0300 [stdout#info] 3.23 Kwh
+2020-04-14T23:27:55-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-04-14T23:27:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5145c0>
+2020-04-14T23:27:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514160>
+2020-04-14T23:27:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:27:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514898>
+2020-04-14T23:27:55-0300 [stdout#info] {'14.3 Kwh'}
+2020-04-14T23:27:55-0300 [stdout#info] 14.3 Kwh
+2020-04-14T23:27:55-0300 [stdout#info] {'6.49 Kwh'}
+2020-04-14T23:27:55-0300 [stdout#info] 6.49 Kwh
+2020-04-14T23:27:55-0300 [stdout#info] {'16.74 Kwh'}
+2020-04-14T23:27:55-0300 [stdout#info] 16.74 Kwh
+2020-04-14T23:27:56-0300 [stdout#info] {'3.5 Kwh'}
+2020-04-14T23:27:56-0300 [stdout#info] 3.5 Kwh
+2020-04-14T23:27:56-0300 [stdout#info] {'13.01 Kwh'}
+2020-04-14T23:27:56-0300 [stdout#info] 13.01 Kwh
+2020-04-14T23:27:57-0300 [stdout#info] {'7.99 Kwh'}
+2020-04-14T23:27:57-0300 [stdout#info] 7.99 Kwh
+2020-04-14T23:27:58-0300 [stdout#info] {'7.82 Kwh'}
+2020-04-14T23:27:58-0300 [stdout#info] 7.82 Kwh
+2020-04-14T23:27:58-0300 [stdout#info] {'11.43 Kwh'}
+2020-04-14T23:27:58-0300 [stdout#info] 11.43 Kwh
+2020-04-14T23:27:58-0300 [stdout#info] {'8.0 Kwh'}
+2020-04-14T23:27:58-0300 [stdout#info] 8.0 Kwh
+2020-04-14T23:27:59-0300 [stdout#info] {'11.35 Kwh'}
+2020-04-14T23:27:59-0300 [stdout#info] 11.35 Kwh
+2020-04-14T23:27:59-0300 [stdout#info] {'15.94 Kwh'}
+2020-04-14T23:27:59-0300 [stdout#info] 15.94 Kwh
+2020-04-14T23:28:00-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-04-14T23:28:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514b00>
+2020-04-14T23:28:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5145c0>
+2020-04-14T23:28:00-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514cc0>
+2020-04-14T23:28:00-0300 [stdout#info] {'4.33 Kwh'}
+2020-04-14T23:28:00-0300 [stdout#info] 4.33 Kwh
+2020-04-14T23:28:01-0300 [stdout#info] {'4.22 Kwh'}
+2020-04-14T23:28:01-0300 [stdout#info] 4.22 Kwh
+2020-04-14T23:28:01-0300 [stdout#info] {'13.04 Kwh'}
+2020-04-14T23:28:01-0300 [stdout#info] 13.04 Kwh
+2020-04-14T23:28:01-0300 [stdout#info] {'16.95 Kwh'}
+2020-04-14T23:28:01-0300 [stdout#info] 16.95 Kwh
+2020-04-14T23:28:02-0300 [stdout#info] {'13.91 Kwh'}
+2020-04-14T23:28:02-0300 [stdout#info] 13.91 Kwh
+2020-04-14T23:28:02-0300 [stdout#info] {'17.07 Kwh'}
+2020-04-14T23:28:02-0300 [stdout#info] 17.07 Kwh
+2020-04-14T23:28:03-0300 [stdout#info] {'14.03 Kwh'}
+2020-04-14T23:28:03-0300 [stdout#info] 14.03 Kwh
+2020-04-14T23:28:04-0300 [stdout#info] {'9.68 Kwh'}
+2020-04-14T23:28:04-0300 [stdout#info] 9.68 Kwh
+2020-04-14T23:28:04-0300 [stdout#info] {'7.49 Kwh'}
+2020-04-14T23:28:04-0300 [stdout#info] 7.49 Kwh
+2020-04-14T23:28:04-0300 [stdout#info] {'14.08 Kwh'}
+2020-04-14T23:28:04-0300 [stdout#info] 14.08 Kwh
+2020-04-14T23:28:05-0300 [stdout#info] {'7.01 Kwh'}
+2020-04-14T23:28:05-0300 [stdout#info] 7.01 Kwh
+2020-04-14T23:28:05-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-04-14T23:28:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514e48>
+2020-04-14T23:28:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514b00>
+2020-04-14T23:28:05-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6160>
+2020-04-14T23:28:05-0300 [stdout#info] {'19.19 Kwh'}
+2020-04-14T23:28:05-0300 [stdout#info] 19.19 Kwh
+2020-04-14T23:28:06-0300 [stdout#info] {'13.11 Kwh'}
+2020-04-14T23:28:06-0300 [stdout#info] 13.11 Kwh
+2020-04-14T23:28:07-0300 [stdout#info] {'7.57 Kwh'}
+2020-04-14T23:28:07-0300 [stdout#info] 7.57 Kwh
+2020-04-14T23:28:07-0300 [stdout#info] {'12.81 Kwh'}
+2020-04-14T23:28:07-0300 [stdout#info] 12.81 Kwh
+2020-04-14T23:28:07-0300 [stdout#info] {'10.65 Kwh'}
+2020-04-14T23:28:07-0300 [stdout#info] 10.65 Kwh
+2020-04-14T23:28:08-0300 [stdout#info] {'21.65 Kwh'}
+2020-04-14T23:28:08-0300 [stdout#info] 21.65 Kwh
+2020-04-14T23:28:08-0300 [stdout#info] {'12.57 Kwh'}
+2020-04-14T23:28:08-0300 [stdout#info] 12.57 Kwh
+2020-04-14T23:28:09-0300 [stdout#info] {'11.24 Kwh'}
+2020-04-14T23:28:09-0300 [stdout#info] 11.24 Kwh
+2020-04-14T23:28:10-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-04-14T23:28:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a62e8>
+2020-04-14T23:28:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514e48>
+2020-04-14T23:28:10-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a65c0>
+2020-04-14T23:28:10-0300 [stdout#info] {'7.69 Kwh'}
+2020-04-14T23:28:10-0300 [stdout#info] 7.69 Kwh
+2020-04-14T23:28:10-0300 [stdout#info] {'9.95 Kwh'}
+2020-04-14T23:28:10-0300 [stdout#info] 9.95 Kwh
+2020-04-14T23:28:10-0300 [stdout#info] {'7.66 Kwh'}
+2020-04-14T23:28:10-0300 [stdout#info] 7.66 Kwh
+2020-04-14T23:28:11-0300 [stdout#info] {'19.19 Kwh'}
+2020-04-14T23:28:11-0300 [stdout#info] 19.19 Kwh
+2020-04-14T23:28:11-0300 [stdout#info] {'13.98 Kwh'}
+2020-04-14T23:28:11-0300 [stdout#info] 13.98 Kwh
+2020-04-14T23:28:12-0300 [stdout#info] {'7.71 Kwh'}
+2020-04-14T23:28:12-0300 [stdout#info] 7.71 Kwh
+2020-04-14T23:28:13-0300 [stdout#info] {'21.1 Kwh'}
+2020-04-14T23:28:13-0300 [stdout#info] 21.1 Kwh
+2020-04-14T23:28:13-0300 [stdout#info] {'5.18 Kwh'}
+2020-04-14T23:28:13-0300 [stdout#info] 5.18 Kwh
+2020-04-14T23:28:13-0300 [stdout#info] {'12.55 Kwh'}
+2020-04-14T23:28:13-0300 [stdout#info] 12.55 Kwh
+2020-04-14T23:28:14-0300 [stdout#info] {'13.31 Kwh'}
+2020-04-14T23:28:14-0300 [stdout#info] 13.31 Kwh
+2020-04-14T23:28:14-0300 [stdout#info] {'18.32 Kwh'}
+2020-04-14T23:28:14-0300 [stdout#info] 18.32 Kwh
+2020-04-14T23:28:15-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-04-14T23:28:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6748>
+2020-04-14T23:28:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a62e8>
+2020-04-14T23:28:15-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6a20>
+2020-04-14T23:28:15-0300 [stdout#info] {'19.96 Kwh'}
+2020-04-14T23:28:15-0300 [stdout#info] 19.96 Kwh
+2020-04-14T23:28:16-0300 [stdout#info] {'6.09 Kwh'}
+2020-04-14T23:28:16-0300 [stdout#info] 6.09 Kwh
+2020-04-14T23:28:16-0300 [stdout#info] {'5.96 Kwh'}
+2020-04-14T23:28:16-0300 [stdout#info] 5.96 Kwh
+2020-04-14T23:28:16-0300 [stdout#info] {'16.43 Kwh'}
+2020-04-14T23:28:16-0300 [stdout#info] 16.43 Kwh
+2020-04-14T23:28:17-0300 [stdout#info] {'10.19 Kwh'}
+2020-04-14T23:28:17-0300 [stdout#info] 10.19 Kwh
+2020-04-14T23:28:17-0300 [stdout#info] {'3.56 Kwh'}
+2020-04-14T23:28:17-0300 [stdout#info] 3.56 Kwh
+2020-04-14T23:28:18-0300 [stdout#info] {'15.96 Kwh'}
+2020-04-14T23:28:18-0300 [stdout#info] 15.96 Kwh
+2020-04-14T23:28:19-0300 [stdout#info] {'18.03 Kwh'}
+2020-04-14T23:28:19-0300 [stdout#info] 18.03 Kwh
+2020-04-14T23:28:19-0300 [stdout#info] {'6.73 Kwh'}
+2020-04-14T23:28:19-0300 [stdout#info] 6.73 Kwh
+2020-04-14T23:28:19-0300 [stdout#info] {'17.33 Kwh'}
+2020-04-14T23:28:19-0300 [stdout#info] 17.33 Kwh
+2020-04-14T23:28:20-0300 [stdout#info] {'20.09 Kwh'}
+2020-04-14T23:28:20-0300 [stdout#info] 20.09 Kwh
+2020-04-14T23:28:20-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-04-14T23:28:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6c88>
+2020-04-14T23:28:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6748>
+2020-04-14T23:28:20-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6eb8>
+2020-04-14T23:28:20-0300 [stdout#info] {'22.42 Kwh'}
+2020-04-14T23:28:20-0300 [stdout#info] 22.42 Kwh
+2020-04-14T23:28:21-0300 [stdout#info] {'5.63 Kwh'}
+2020-04-14T23:28:21-0300 [stdout#info] 5.63 Kwh
+2020-04-14T23:28:22-0300 [stdout#info] {'21.91 Kwh'}
+2020-04-14T23:28:22-0300 [stdout#info] 21.91 Kwh
+2020-04-14T23:28:22-0300 [stdout#info] {'9.38 Kwh'}
+2020-04-14T23:28:22-0300 [stdout#info] 9.38 Kwh
+2020-04-14T23:28:22-0300 [stdout#info] {'14.71 Kwh'}
+2020-04-14T23:28:22-0300 [stdout#info] 14.71 Kwh
+2020-04-14T23:28:23-0300 [stdout#info] {'12.76 Kwh'}
+2020-04-14T23:28:23-0300 [stdout#info] 12.76 Kwh
+2020-04-14T23:28:23-0300 [stdout#info] {'14.47 Kwh'}
+2020-04-14T23:28:23-0300 [stdout#info] 14.47 Kwh
+2020-04-14T23:28:24-0300 [stdout#info] {'3.87 Kwh'}
+2020-04-14T23:28:24-0300 [stdout#info] 3.87 Kwh
+2020-04-14T23:28:25-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 43
+2020-04-14T23:28:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b20f0>
+2020-04-14T23:28:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6c88>
+2020-04-14T23:28:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2320>
+2020-04-14T23:28:25-0300 [stdout#info] {'11.15 Kwh'}
+2020-04-14T23:28:25-0300 [stdout#info] 11.15 Kwh
+2020-04-14T23:28:25-0300 [stdout#info] {'9.52 Kwh'}
+2020-04-14T23:28:25-0300 [stdout#info] 9.52 Kwh
+2020-04-14T23:28:25-0300 [stdout#info] {'12.81 Kwh'}
+2020-04-14T23:28:25-0300 [stdout#info] 12.81 Kwh
+2020-04-14T23:28:26-0300 [stdout#info] {'17.66 Kwh'}
+2020-04-14T23:28:26-0300 [stdout#info] 17.66 Kwh
+2020-04-14T23:28:26-0300 [stdout#info] {'19.23 Kwh'}
+2020-04-14T23:28:26-0300 [stdout#info] 19.23 Kwh
+2020-04-14T23:28:27-0300 [stdout#info] {'21.87 Kwh'}
+2020-04-14T23:28:27-0300 [stdout#info] 21.87 Kwh
+2020-04-14T23:28:28-0300 [stdout#info] {'21.16 Kwh'}
+2020-04-14T23:28:28-0300 [stdout#info] 21.16 Kwh
+2020-04-14T23:28:28-0300 [stdout#info] {'18.03 Kwh'}
+2020-04-14T23:28:28-0300 [stdout#info] 18.03 Kwh
+2020-04-14T23:28:28-0300 [stdout#info] {'20.14 Kwh'}
+2020-04-14T23:28:28-0300 [stdout#info] 20.14 Kwh
+2020-04-14T23:28:29-0300 [stdout#info] {'12.92 Kwh'}
+2020-04-14T23:28:29-0300 [stdout#info] 12.92 Kwh
+2020-04-14T23:28:29-0300 [stdout#info] {'19.15 Kwh'}
+2020-04-14T23:28:29-0300 [stdout#info] 19.15 Kwh
+2020-04-14T23:28:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 44
+2020-04-14T23:28:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b24a8>
+2020-04-14T23:28:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b20f0>
+2020-04-14T23:28:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2780>
+2020-04-14T23:28:30-0300 [stdout#info] {'7.51 Kwh'}
+2020-04-14T23:28:30-0300 [stdout#info] 7.51 Kwh
+2020-04-14T23:28:31-0300 [stdout#info] {'6.08 Kwh'}
+2020-04-14T23:28:31-0300 [stdout#info] 6.08 Kwh
+2020-04-14T23:28:31-0300 [stdout#info] {'19.5 Kwh'}
+2020-04-14T23:28:31-0300 [stdout#info] 19.5 Kwh
+2020-04-14T23:28:31-0300 [stdout#info] {'2.85 Kwh'}
+2020-04-14T23:28:31-0300 [stdout#info] 2.85 Kwh
+2020-04-14T23:28:32-0300 [stdout#info] {'7.76 Kwh'}
+2020-04-14T23:28:32-0300 [stdout#info] 7.76 Kwh
+2020-04-14T23:28:32-0300 [stdout#info] {'10.07 Kwh'}
+2020-04-14T23:28:32-0300 [stdout#info] 10.07 Kwh
+2020-04-14T23:28:33-0300 [stdout#info] {'17.86 Kwh'}
+2020-04-14T23:28:33-0300 [stdout#info] 17.86 Kwh
+2020-04-14T23:28:34-0300 [stdout#info] {'22.02 Kwh'}
+2020-04-14T23:28:34-0300 [stdout#info] 22.02 Kwh
+2020-04-14T23:28:34-0300 [stdout#info] {'6.65 Kwh'}
+2020-04-14T23:28:34-0300 [stdout#info] 6.65 Kwh
+2020-04-14T23:28:34-0300 [stdout#info] {'19.58 Kwh'}
+2020-04-14T23:28:34-0300 [stdout#info] 19.58 Kwh
+2020-04-14T23:28:35-0300 [stdout#info] {'20.02 Kwh'}
+2020-04-14T23:28:35-0300 [stdout#info] 20.02 Kwh
+2020-04-14T23:28:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 45
+2020-04-14T23:28:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2908>
+2020-04-14T23:28:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b24a8>
+2020-04-14T23:28:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2be0>
+2020-04-14T23:28:35-0300 [stdout#info] {'14.87 Kwh'}
+2020-04-14T23:28:35-0300 [stdout#info] 14.87 Kwh
+2020-04-14T23:28:36-0300 [stdout#info] {'7.35 Kwh'}
+2020-04-14T23:28:36-0300 [stdout#info] 7.35 Kwh
+2020-04-14T23:28:37-0300 [stdout#info] {'4.96 Kwh'}
+2020-04-14T23:28:37-0300 [stdout#info] 4.96 Kwh
+2020-04-14T23:28:37-0300 [stdout#info] {'2.69 Kwh'}
+2020-04-14T23:28:37-0300 [stdout#info] 2.69 Kwh
+2020-04-14T23:28:37-0300 [stdout#info] {'7.81 Kwh'}
+2020-04-14T23:28:37-0300 [stdout#info] 7.81 Kwh
+2020-04-14T23:28:38-0300 [stdout#info] {'17.75 Kwh'}
+2020-04-14T23:28:38-0300 [stdout#info] 17.75 Kwh
+2020-04-14T23:28:38-0300 [stdout#info] {'20.79 Kwh'}
+2020-04-14T23:28:38-0300 [stdout#info] 20.79 Kwh
+2020-04-14T23:28:39-0300 [stdout#info] {'18.37 Kwh'}
+2020-04-14T23:28:39-0300 [stdout#info] 18.37 Kwh
+2020-04-14T23:28:40-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 46
+2020-04-14T23:28:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2da0>
+2020-04-14T23:28:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2908>
+2020-04-14T23:28:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2080>
+2020-04-14T23:28:40-0300 [stdout#info] {'10.8 Kwh'}
+2020-04-14T23:28:40-0300 [stdout#info] 10.8 Kwh
+2020-04-14T23:28:40-0300 [stdout#info] {'13.95 Kwh'}
+2020-04-14T23:28:40-0300 [stdout#info] 13.95 Kwh
+2020-04-14T23:28:40-0300 [stdout#info] {'19.98 Kwh'}
+2020-04-14T23:28:40-0300 [stdout#info] 19.98 Kwh
+2020-04-14T23:28:41-0300 [stdout#info] {'4.42 Kwh'}
+2020-04-14T23:28:41-0300 [stdout#info] 4.42 Kwh
+2020-04-14T23:28:41-0300 [stdout#info] {'18.25 Kwh'}
+2020-04-14T23:28:41-0300 [stdout#info] 18.25 Kwh
+2020-04-14T23:28:42-0300 [stdout#info] {'13.14 Kwh'}
+2020-04-14T23:28:42-0300 [stdout#info] 13.14 Kwh
+2020-04-14T23:28:43-0300 [stdout#info] {'8.92 Kwh'}
+2020-04-14T23:28:43-0300 [stdout#info] 8.92 Kwh
+2020-04-14T23:28:43-0300 [stdout#info] {'4.49 Kwh'}
+2020-04-14T23:28:43-0300 [stdout#info] 4.49 Kwh
+2020-04-14T23:28:43-0300 [stdout#info] {'13.68 Kwh'}
+2020-04-14T23:28:43-0300 [stdout#info] 13.68 Kwh
+2020-04-14T23:28:44-0300 [stdout#info] {'9.5 Kwh'}
+2020-04-14T23:28:44-0300 [stdout#info] 9.5 Kwh
+2020-04-14T23:28:44-0300 [stdout#info] {'19.59 Kwh'}
+2020-04-14T23:28:44-0300 [stdout#info] 19.59 Kwh
+2020-04-14T23:28:45-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 47
+2020-04-14T23:28:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c22e8>
+2020-04-14T23:28:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2da0>
+2020-04-14T23:28:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c24e0>
+2020-04-14T23:28:45-0300 [stdout#info] {'20.78 Kwh'}
+2020-04-14T23:28:45-0300 [stdout#info] 20.78 Kwh
+2020-04-14T23:28:46-0300 [stdout#info] {'17.57 Kwh'}
+2020-04-14T23:28:46-0300 [stdout#info] 17.57 Kwh
+2020-04-14T23:28:46-0300 [stdout#info] {'5.53 Kwh'}
+2020-04-14T23:28:46-0300 [stdout#info] 5.53 Kwh
+2020-04-14T23:28:46-0300 [stdout#info] {'20.12 Kwh'}
+2020-04-14T23:28:46-0300 [stdout#info] 20.12 Kwh
+2020-04-14T23:28:47-0300 [stdout#info] {'9.29 Kwh'}
+2020-04-14T23:28:47-0300 [stdout#info] 9.29 Kwh
+2020-04-14T23:28:47-0300 [stdout#info] {'16.44 Kwh'}
+2020-04-14T23:28:47-0300 [stdout#info] 16.44 Kwh
+2020-04-14T23:28:48-0300 [stdout#info] {'9.88 Kwh'}
+2020-04-14T23:28:48-0300 [stdout#info] 9.88 Kwh
+2020-04-14T23:28:49-0300 [stdout#info] {'17.8 Kwh'}
+2020-04-14T23:28:49-0300 [stdout#info] 17.8 Kwh
+2020-04-14T23:28:49-0300 [stdout#info] {'15.58 Kwh'}
+2020-04-14T23:28:49-0300 [stdout#info] 15.58 Kwh
+2020-04-14T23:28:49-0300 [stdout#info] {'10.28 Kwh'}
+2020-04-14T23:28:49-0300 [stdout#info] 10.28 Kwh
+2020-04-14T23:28:50-0300 [stdout#info] {'15.84 Kwh'}
+2020-04-14T23:28:50-0300 [stdout#info] 15.84 Kwh
+2020-04-14T23:28:50-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 48
+2020-04-14T23:28:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c26a0>
+2020-04-14T23:28:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c22e8>
+2020-04-14T23:28:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2940>
+2020-04-14T23:28:50-0300 [stdout#info] {'20.5 Kwh'}
+2020-04-14T23:28:50-0300 [stdout#info] 20.5 Kwh
+2020-04-14T23:28:51-0300 [stdout#info] {'15.12 Kwh'}
+2020-04-14T23:28:51-0300 [stdout#info] 15.12 Kwh
+2020-04-14T23:28:52-0300 [stdout#info] {'16.67 Kwh'}
+2020-04-14T23:28:52-0300 [stdout#info] 16.67 Kwh
+2020-04-14T23:28:52-0300 [stdout#info] {'7.41 Kwh'}
+2020-04-14T23:28:52-0300 [stdout#info] 7.41 Kwh
+2020-04-14T23:28:52-0300 [stdout#info] {'17.27 Kwh'}
+2020-04-14T23:28:52-0300 [stdout#info] 17.27 Kwh
+2020-04-14T23:28:53-0300 [stdout#info] {'2.92 Kwh'}
+2020-04-14T23:28:53-0300 [stdout#info] 2.92 Kwh
+2020-04-14T23:28:53-0300 [stdout#info] {'21.25 Kwh'}
+2020-04-14T23:28:53-0300 [stdout#info] 21.25 Kwh
+2020-04-14T23:28:54-0300 [stdout#info] {'14.51 Kwh'}
+2020-04-14T23:28:54-0300 [stdout#info] 14.51 Kwh
+2020-04-14T23:28:55-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 49
+2020-04-14T23:28:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2668>
+2020-04-14T23:28:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c26a0>
+2020-04-14T23:28:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:28:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2ac8>
+2020-04-14T23:28:55-0300 [stdout#info] {'14.19 Kwh'}
+2020-04-14T23:28:55-0300 [stdout#info] 14.19 Kwh
+2020-04-14T23:28:55-0300 [stdout#info] {'8.66 Kwh'}
+2020-04-14T23:28:55-0300 [stdout#info] 8.66 Kwh
+2020-04-14T23:28:55-0300 [stdout#info] {'19.19 Kwh'}
+2020-04-14T23:28:55-0300 [stdout#info] 19.19 Kwh
+2020-04-14T23:28:56-0300 [stdout#info] {'14.5 Kwh'}
+2020-04-14T23:28:56-0300 [stdout#info] 14.5 Kwh
+2020-04-14T23:28:56-0300 [stdout#info] {'3.26 Kwh'}
+2020-04-14T23:28:56-0300 [stdout#info] 3.26 Kwh
+2020-04-14T23:28:57-0300 [stdout#info] {'4.16 Kwh'}
+2020-04-14T23:28:57-0300 [stdout#info] 4.16 Kwh
+2020-04-14T23:28:58-0300 [stdout#info] {'13.54 Kwh'}
+2020-04-14T23:28:58-0300 [stdout#info] 13.54 Kwh
+2020-04-14T23:28:58-0300 [stdout#info] {'10.13 Kwh'}
+2020-04-14T23:28:58-0300 [stdout#info] 10.13 Kwh
+2020-04-14T23:28:58-0300 [stdout#info] {'15.91 Kwh'}
+2020-04-14T23:28:58-0300 [stdout#info] 15.91 Kwh
+2020-04-14T23:28:59-0300 [stdout#info] {'9.4 Kwh'}
+2020-04-14T23:28:59-0300 [stdout#info] 9.4 Kwh
+2020-04-14T23:28:59-0300 [stdout#info] {'14.03 Kwh'}
+2020-04-14T23:28:59-0300 [stdout#info] 14.03 Kwh
+2020-04-14T23:29:00-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 50
+2020-04-14T23:29:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2e80>
+2020-04-14T23:29:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2668>
+2020-04-14T23:29:00-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d20f0>
+2020-04-14T23:29:00-0300 [stdout#info] {'19.65 Kwh'}
+2020-04-14T23:29:00-0300 [stdout#info] 19.65 Kwh
+2020-04-14T23:29:01-0300 [stdout#info] {'8.04 Kwh'}
+2020-04-14T23:29:01-0300 [stdout#info] 8.04 Kwh
+2020-04-14T23:29:01-0300 [stdout#info] {'20.71 Kwh'}
+2020-04-14T23:29:01-0300 [stdout#info] 20.71 Kwh
+2020-04-14T23:29:01-0300 [stdout#info] {'4.68 Kwh'}
+2020-04-14T23:29:01-0300 [stdout#info] 4.68 Kwh
+2020-04-14T23:29:02-0300 [stdout#info] {'18.8 Kwh'}
+2020-04-14T23:29:02-0300 [stdout#info] 18.8 Kwh
+2020-04-14T23:29:02-0300 [stdout#info] {'22.05 Kwh'}
+2020-04-14T23:29:02-0300 [stdout#info] 22.05 Kwh
+2020-04-14T23:29:03-0300 [stdout#info] {'5.73 Kwh'}
+2020-04-14T23:29:03-0300 [stdout#info] 5.73 Kwh
+2020-04-14T23:29:04-0300 [stdout#info] {'14.6 Kwh'}
+2020-04-14T23:29:04-0300 [stdout#info] 14.6 Kwh
+2020-04-14T23:29:04-0300 [stdout#info] {'15.3 Kwh'}
+2020-04-14T23:29:04-0300 [stdout#info] 15.3 Kwh
+2020-04-14T23:29:04-0300 [stdout#info] {'17.3 Kwh'}
+2020-04-14T23:29:04-0300 [stdout#info] 17.3 Kwh
+2020-04-14T23:29:05-0300 [stdout#info] {'5.44 Kwh'}
+2020-04-14T23:29:05-0300 [stdout#info] 5.44 Kwh
+2020-04-14T23:29:05-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 51
+2020-04-14T23:29:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2080>
+2020-04-14T23:29:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2e80>
+2020-04-14T23:29:05-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2518>
+2020-04-14T23:29:05-0300 [stdout#info] {'8.94 Kwh'}
+2020-04-14T23:29:05-0300 [stdout#info] 8.94 Kwh
+2020-04-14T23:29:06-0300 [stdout#info] {'12.3 Kwh'}
+2020-04-14T23:29:06-0300 [stdout#info] 12.3 Kwh
+2020-04-14T23:29:07-0300 [stdout#info] {'19.85 Kwh'}
+2020-04-14T23:29:07-0300 [stdout#info] 19.85 Kwh
+2020-04-14T23:29:07-0300 [stdout#info] {'14.44 Kwh'}
+2020-04-14T23:29:07-0300 [stdout#info] 14.44 Kwh
+2020-04-14T23:29:07-0300 [stdout#info] {'16.51 Kwh'}
+2020-04-14T23:29:07-0300 [stdout#info] 16.51 Kwh
+2020-04-14T23:29:08-0300 [stdout#info] {'12.21 Kwh'}
+2020-04-14T23:29:08-0300 [stdout#info] 12.21 Kwh
+2020-04-14T23:29:08-0300 [stdout#info] {'15.88 Kwh'}
+2020-04-14T23:29:08-0300 [stdout#info] 15.88 Kwh
+2020-04-14T23:29:09-0300 [stdout#info] {'9.5 Kwh'}
+2020-04-14T23:29:09-0300 [stdout#info] 9.5 Kwh
+2020-04-14T23:29:10-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 52
+2020-04-14T23:29:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d22b0>
+2020-04-14T23:29:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2080>
+2020-04-14T23:29:10-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2978>
+2020-04-14T23:29:10-0300 [stdout#info] {'17.52 Kwh'}
+2020-04-14T23:29:10-0300 [stdout#info] 17.52 Kwh
+2020-04-14T23:29:10-0300 [stdout#info] {'8.6 Kwh'}
+2020-04-14T23:29:10-0300 [stdout#info] 8.6 Kwh
+2020-04-14T23:29:10-0300 [stdout#info] {'4.04 Kwh'}
+2020-04-14T23:29:10-0300 [stdout#info] 4.04 Kwh
+2020-04-14T23:29:11-0300 [stdout#info] {'12.52 Kwh'}
+2020-04-14T23:29:11-0300 [stdout#info] 12.52 Kwh
+2020-04-14T23:29:11-0300 [stdout#info] {'18.05 Kwh'}
+2020-04-14T23:29:11-0300 [stdout#info] 18.05 Kwh
+2020-04-14T23:29:12-0300 [stdout#info] {'20.13 Kwh'}
+2020-04-14T23:29:12-0300 [stdout#info] 20.13 Kwh
+2020-04-14T23:29:13-0300 [stdout#info] {'19.95 Kwh'}
+2020-04-14T23:29:13-0300 [stdout#info] 19.95 Kwh
+2020-04-14T23:29:13-0300 [stdout#info] {'17.7 Kwh'}
+2020-04-14T23:29:13-0300 [stdout#info] 17.7 Kwh
+2020-04-14T23:29:13-0300 [stdout#info] {'20.34 Kwh'}
+2020-04-14T23:29:13-0300 [stdout#info] 20.34 Kwh
+2020-04-14T23:29:14-0300 [stdout#info] {'8.61 Kwh'}
+2020-04-14T23:29:14-0300 [stdout#info] 8.61 Kwh
+2020-04-14T23:29:14-0300 [stdout#info] {'22.23 Kwh'}
+2020-04-14T23:29:14-0300 [stdout#info] 22.23 Kwh
+2020-04-14T23:29:15-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 53
+2020-04-14T23:29:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2b00>
+2020-04-14T23:29:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d22b0>
+2020-04-14T23:29:15-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2dd8>
+2020-04-14T23:29:15-0300 [stdout#info] {'3.19 Kwh'}
+2020-04-14T23:29:15-0300 [stdout#info] 3.19 Kwh
+2020-04-14T23:29:16-0300 [stdout#info] {'20.41 Kwh'}
+2020-04-14T23:29:16-0300 [stdout#info] 20.41 Kwh
+2020-04-14T23:29:16-0300 [stdout#info] {'9.44 Kwh'}
+2020-04-14T23:29:16-0300 [stdout#info] 9.44 Kwh
+2020-04-14T23:29:16-0300 [stdout#info] {'17.78 Kwh'}
+2020-04-14T23:29:16-0300 [stdout#info] 17.78 Kwh
+2020-04-14T23:29:17-0300 [stdout#info] {'9.26 Kwh'}
+2020-04-14T23:29:17-0300 [stdout#info] 9.26 Kwh
+2020-04-14T23:29:17-0300 [stdout#info] {'7.18 Kwh'}
+2020-04-14T23:29:17-0300 [stdout#info] 7.18 Kwh
+2020-04-14T23:29:18-0300 [stdout#info] {'10.43 Kwh'}
+2020-04-14T23:29:18-0300 [stdout#info] 10.43 Kwh
+2020-04-14T23:29:19-0300 [stdout#info] {'19.27 Kwh'}
+2020-04-14T23:29:19-0300 [stdout#info] 19.27 Kwh
+2020-04-14T23:29:19-0300 [stdout#info] {'3.72 Kwh'}
+2020-04-14T23:29:19-0300 [stdout#info] 3.72 Kwh
+2020-04-14T23:29:19-0300 [stdout#info] {'11.71 Kwh'}
+2020-04-14T23:29:19-0300 [stdout#info] 11.71 Kwh
+2020-04-14T23:29:20-0300 [stdout#info] {'15.74 Kwh'}
+2020-04-14T23:29:20-0300 [stdout#info] 15.74 Kwh
+2020-04-14T23:29:20-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 54
+2020-04-14T23:29:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2f98>
+2020-04-14T23:29:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2b00>
+2020-04-14T23:29:20-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a278>
+2020-04-14T23:29:20-0300 [stdout#info] {'12.21 Kwh'}
+2020-04-14T23:29:20-0300 [stdout#info] 12.21 Kwh
+2020-04-14T23:29:21-0300 [stdout#info] {'3.16 Kwh'}
+2020-04-14T23:29:21-0300 [stdout#info] 3.16 Kwh
+2020-04-14T23:29:22-0300 [stdout#info] {'9.27 Kwh'}
+2020-04-14T23:29:22-0300 [stdout#info] 9.27 Kwh
+2020-04-14T23:29:22-0300 [stdout#info] {'15.5 Kwh'}
+2020-04-14T23:29:22-0300 [stdout#info] 15.5 Kwh
+2020-04-14T23:29:22-0300 [stdout#info] {'21.24 Kwh'}
+2020-04-14T23:29:22-0300 [stdout#info] 21.24 Kwh
+2020-04-14T23:29:23-0300 [stdout#info] {'15.09 Kwh'}
+2020-04-14T23:29:23-0300 [stdout#info] 15.09 Kwh
+2020-04-14T23:29:23-0300 [stdout#info] {'5.75 Kwh'}
+2020-04-14T23:29:23-0300 [stdout#info] 5.75 Kwh
+2020-04-14T23:29:24-0300 [stdout#info] {'15.7 Kwh'}
+2020-04-14T23:29:24-0300 [stdout#info] 15.7 Kwh
+2020-04-14T23:29:25-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 55
+2020-04-14T23:29:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a400>
+2020-04-14T23:29:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2f98>
+2020-04-14T23:29:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a6d8>
+2020-04-14T23:29:25-0300 [stdout#info] {'4.96 Kwh'}
+2020-04-14T23:29:25-0300 [stdout#info] 4.96 Kwh
+2020-04-14T23:29:25-0300 [stdout#info] {'2.53 Kwh'}
+2020-04-14T23:29:25-0300 [stdout#info] 2.53 Kwh
+2020-04-14T23:29:25-0300 [stdout#info] {'7.76 Kwh'}
+2020-04-14T23:29:25-0300 [stdout#info] 7.76 Kwh
+2020-04-14T23:29:26-0300 [stdout#info] {'9.15 Kwh'}
+2020-04-14T23:29:26-0300 [stdout#info] 9.15 Kwh
+2020-04-14T23:29:26-0300 [stdout#info] {'5.44 Kwh'}
+2020-04-14T23:29:26-0300 [stdout#info] 5.44 Kwh
+2020-04-14T23:29:27-0300 [stdout#info] {'20.06 Kwh'}
+2020-04-14T23:29:27-0300 [stdout#info] 20.06 Kwh
+2020-04-14T23:29:28-0300 [stdout#info] {'14.8 Kwh'}
+2020-04-14T23:29:28-0300 [stdout#info] 14.8 Kwh
+2020-04-14T23:29:28-0300 [stdout#info] {'20.64 Kwh'}
+2020-04-14T23:29:28-0300 [stdout#info] 20.64 Kwh
+2020-04-14T23:29:28-0300 [stdout#info] {'20.99 Kwh'}
+2020-04-14T23:29:28-0300 [stdout#info] 20.99 Kwh
+2020-04-14T23:29:29-0300 [stdout#info] {'12.91 Kwh'}
+2020-04-14T23:29:29-0300 [stdout#info] 12.91 Kwh
+2020-04-14T23:29:29-0300 [stdout#info] {'6.06 Kwh'}
+2020-04-14T23:29:29-0300 [stdout#info] 6.06 Kwh
+2020-04-14T23:29:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 56
+2020-04-14T23:29:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a860>
+2020-04-14T23:29:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a400>
+2020-04-14T23:29:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0ab38>
+2020-04-14T23:29:30-0300 [stdout#info] {'2.88 Kwh'}
+2020-04-14T23:29:30-0300 [stdout#info] 2.88 Kwh
+2020-04-14T23:29:31-0300 [stdout#info] {'20.21 Kwh'}
+2020-04-14T23:29:31-0300 [stdout#info] 20.21 Kwh
+2020-04-14T23:29:31-0300 [stdout#info] {'5.42 Kwh'}
+2020-04-14T23:29:31-0300 [stdout#info] 5.42 Kwh
+2020-04-14T23:29:31-0300 [stdout#info] {'12.82 Kwh'}
+2020-04-14T23:29:31-0300 [stdout#info] 12.82 Kwh
+2020-04-14T23:29:32-0300 [stdout#info] {'9.7 Kwh'}
+2020-04-14T23:29:32-0300 [stdout#info] 9.7 Kwh
+2020-04-14T23:29:32-0300 [stdout#info] {'19.64 Kwh'}
+2020-04-14T23:29:32-0300 [stdout#info] 19.64 Kwh
+2020-04-14T23:29:33-0300 [stdout#info] {'9.96 Kwh'}
+2020-04-14T23:29:33-0300 [stdout#info] 9.96 Kwh
+2020-04-14T23:29:34-0300 [stdout#info] {'14.27 Kwh'}
+2020-04-14T23:29:34-0300 [stdout#info] 14.27 Kwh
+2020-04-14T23:29:34-0300 [stdout#info] {'13.03 Kwh'}
+2020-04-14T23:29:34-0300 [stdout#info] 13.03 Kwh
+2020-04-14T23:29:34-0300 [stdout#info] {'15.44 Kwh'}
+2020-04-14T23:29:34-0300 [stdout#info] 15.44 Kwh
+2020-04-14T23:29:35-0300 [stdout#info] {'15.7 Kwh'}
+2020-04-14T23:29:35-0300 [stdout#info] 15.7 Kwh
+2020-04-14T23:29:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 57
+2020-04-14T23:29:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0acc0>
+2020-04-14T23:29:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a860>
+2020-04-14T23:29:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0af98>
+2020-04-14T23:29:35-0300 [stdout#info] {'17.1 Kwh'}
+2020-04-14T23:29:35-0300 [stdout#info] 17.1 Kwh
+2020-04-14T23:29:36-0300 [stdout#info] {'15.7 Kwh'}
+2020-04-14T23:29:36-0300 [stdout#info] 15.7 Kwh
+2020-04-14T23:29:37-0300 [stdout#info] {'17.44 Kwh'}
+2020-04-14T23:29:37-0300 [stdout#info] 17.44 Kwh
+2020-04-14T23:29:37-0300 [stdout#info] {'12.77 Kwh'}
+2020-04-14T23:29:37-0300 [stdout#info] 12.77 Kwh
+2020-04-14T23:29:37-0300 [stdout#info] {'4.96 Kwh'}
+2020-04-14T23:29:37-0300 [stdout#info] 4.96 Kwh
+2020-04-14T23:29:38-0300 [stdout#info] {'4.65 Kwh'}
+2020-04-14T23:29:38-0300 [stdout#info] 4.65 Kwh
+2020-04-14T23:29:38-0300 [stdout#info] {'15.36 Kwh'}
+2020-04-14T23:29:38-0300 [stdout#info] 15.36 Kwh
+2020-04-14T23:29:39-0300 [stdout#info] {'18.81 Kwh'}
+2020-04-14T23:29:39-0300 [stdout#info] 18.81 Kwh
+2020-04-14T23:29:40-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 58
+2020-04-14T23:29:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce160f0>
+2020-04-14T23:29:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0acc0>
+2020-04-14T23:29:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16438>
+2020-04-14T23:29:40-0300 [stdout#info] {'11.72 Kwh'}
+2020-04-14T23:29:40-0300 [stdout#info] 11.72 Kwh
+2020-04-14T23:29:40-0300 [stdout#info] {'5.87 Kwh'}
+2020-04-14T23:29:40-0300 [stdout#info] 5.87 Kwh
+2020-04-14T23:29:40-0300 [stdout#info] {'8.38 Kwh'}
+2020-04-14T23:29:40-0300 [stdout#info] 8.38 Kwh
+2020-04-14T23:29:41-0300 [stdout#info] {'21.59 Kwh'}
+2020-04-14T23:29:41-0300 [stdout#info] 21.59 Kwh
+2020-04-14T23:29:41-0300 [stdout#info] {'5.74 Kwh'}
+2020-04-14T23:29:41-0300 [stdout#info] 5.74 Kwh
+2020-04-14T23:29:42-0300 [stdout#info] {'17.21 Kwh'}
+2020-04-14T23:29:42-0300 [stdout#info] 17.21 Kwh
+2020-04-14T23:29:43-0300 [stdout#info] {'17.86 Kwh'}
+2020-04-14T23:29:43-0300 [stdout#info] 17.86 Kwh
+2020-04-14T23:29:43-0300 [stdout#info] {'13.59 Kwh'}
+2020-04-14T23:29:43-0300 [stdout#info] 13.59 Kwh
+2020-04-14T23:29:43-0300 [stdout#info] {'9.02 Kwh'}
+2020-04-14T23:29:43-0300 [stdout#info] 9.02 Kwh
+2020-04-14T23:29:44-0300 [stdout#info] {'5.03 Kwh'}
+2020-04-14T23:29:44-0300 [stdout#info] 5.03 Kwh
+2020-04-14T23:29:44-0300 [stdout#info] {'20.29 Kwh'}
+2020-04-14T23:29:44-0300 [stdout#info] 20.29 Kwh
+2020-04-14T23:29:45-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 59
+2020-04-14T23:29:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce165c0>
+2020-04-14T23:29:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce160f0>
+2020-04-14T23:29:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16898>
+2020-04-14T23:29:45-0300 [stdout#info] {'22.18 Kwh'}
+2020-04-14T23:29:45-0300 [stdout#info] 22.18 Kwh
+2020-04-14T23:29:46-0300 [stdout#info] {'21.37 Kwh'}
+2020-04-14T23:29:46-0300 [stdout#info] 21.37 Kwh
+2020-04-14T23:29:46-0300 [stdout#info] {'2.98 Kwh'}
+2020-04-14T23:29:46-0300 [stdout#info] 2.98 Kwh
+2020-04-14T23:29:46-0300 [stdout#info] {'11.73 Kwh'}
+2020-04-14T23:29:46-0300 [stdout#info] 11.73 Kwh
+2020-04-14T23:29:47-0300 [stdout#info] {'17.39 Kwh'}
+2020-04-14T23:29:47-0300 [stdout#info] 17.39 Kwh
+2020-04-14T23:29:47-0300 [stdout#info] {'5.32 Kwh'}
+2020-04-14T23:29:47-0300 [stdout#info] 5.32 Kwh
+2020-04-14T23:29:48-0300 [stdout#info] {'18.19 Kwh'}
+2020-04-14T23:29:48-0300 [stdout#info] 18.19 Kwh
+2020-04-14T23:29:49-0300 [stdout#info] {'6.55 Kwh'}
+2020-04-14T23:29:49-0300 [stdout#info] 6.55 Kwh
+2020-04-14T23:29:49-0300 [stdout#info] {'12.02 Kwh'}
+2020-04-14T23:29:49-0300 [stdout#info] 12.02 Kwh
+2020-04-14T23:29:49-0300 [stdout#info] {'11.59 Kwh'}
+2020-04-14T23:29:49-0300 [stdout#info] 11.59 Kwh
+2020-04-14T23:29:50-0300 [stdout#info] {'19.74 Kwh'}
+2020-04-14T23:29:50-0300 [stdout#info] 19.74 Kwh
+2020-04-14T23:29:50-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 60
+2020-04-14T23:29:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16b38>
+2020-04-14T23:29:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce165c0>
+2020-04-14T23:29:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16cf8>
+2020-04-14T23:29:50-0300 [stdout#info] {'9.54 Kwh'}
+2020-04-14T23:29:50-0300 [stdout#info] 9.54 Kwh
+2020-04-14T23:29:51-0300 [stdout#info] {'3.81 Kwh'}
+2020-04-14T23:29:51-0300 [stdout#info] 3.81 Kwh
+2020-04-14T23:29:52-0300 [stdout#info] {'15.44 Kwh'}
+2020-04-14T23:29:52-0300 [stdout#info] 15.44 Kwh
+2020-04-14T23:29:52-0300 [stdout#info] {'11.52 Kwh'}
+2020-04-14T23:29:52-0300 [stdout#info] 11.52 Kwh
+2020-04-14T23:29:52-0300 [stdout#info] {'19.04 Kwh'}
+2020-04-14T23:29:52-0300 [stdout#info] 19.04 Kwh
+2020-04-14T23:29:53-0300 [stdout#info] {'21.57 Kwh'}
+2020-04-14T23:29:53-0300 [stdout#info] 21.57 Kwh
+2020-04-14T23:29:53-0300 [stdout#info] {'5.84 Kwh'}
+2020-04-14T23:29:53-0300 [stdout#info] 5.84 Kwh
+2020-04-14T23:29:54-0300 [stdout#info] {'19.58 Kwh'}
+2020-04-14T23:29:54-0300 [stdout#info] 19.58 Kwh
+2020-04-14T23:29:55-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 61
+2020-04-14T23:29:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16e80>
+2020-04-14T23:29:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16b38>
+2020-04-14T23:29:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:29:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27198>
+2020-04-14T23:29:55-0300 [stdout#info] {'22.07 Kwh'}
+2020-04-14T23:29:55-0300 [stdout#info] 22.07 Kwh
+2020-04-14T23:29:55-0300 [stdout#info] {'7.84 Kwh'}
+2020-04-14T23:29:55-0300 [stdout#info] 7.84 Kwh
+2020-04-14T23:29:55-0300 [stdout#info] {'14.29 Kwh'}
+2020-04-14T23:29:55-0300 [stdout#info] 14.29 Kwh
+2020-04-14T23:29:56-0300 [stdout#info] {'20.61 Kwh'}
+2020-04-14T23:29:56-0300 [stdout#info] 20.61 Kwh
+2020-04-14T23:29:56-0300 [stdout#info] {'15.39 Kwh'}
+2020-04-14T23:29:56-0300 [stdout#info] 15.39 Kwh
+2020-04-14T23:29:57-0300 [stdout#info] {'19.52 Kwh'}
+2020-04-14T23:29:57-0300 [stdout#info] 19.52 Kwh
+2020-04-14T23:29:58-0300 [stdout#info] {'11.42 Kwh'}
+2020-04-14T23:29:58-0300 [stdout#info] 11.42 Kwh
+2020-04-14T23:29:58-0300 [stdout#info] {'11.94 Kwh'}
+2020-04-14T23:29:58-0300 [stdout#info] 11.94 Kwh
+2020-04-14T23:29:58-0300 [stdout#info] {'4.73 Kwh'}
+2020-04-14T23:29:58-0300 [stdout#info] 4.73 Kwh
+2020-04-14T23:29:59-0300 [stdout#info] {'13.91 Kwh'}
+2020-04-14T23:29:59-0300 [stdout#info] 13.91 Kwh
+2020-04-14T23:30:00-0300 [stdout#info] {'16.49 Kwh'}
+2020-04-14T23:30:00-0300 [stdout#info] 16.49 Kwh
+2020-04-14T23:30:00-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 62
+2020-04-14T23:30:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27048>
+2020-04-14T23:30:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16e80>
+2020-04-14T23:30:00-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce275f8>
+2020-04-14T23:30:00-0300 [stdout#info] {'9.67 Kwh'}
+2020-04-14T23:30:00-0300 [stdout#info] 9.67 Kwh
+2020-04-14T23:30:01-0300 [stdout#info] {'9.43 Kwh'}
+2020-04-14T23:30:01-0300 [stdout#info] 9.43 Kwh
+2020-04-14T23:30:01-0300 [stdout#info] {'21.87 Kwh'}
+2020-04-14T23:30:01-0300 [stdout#info] 21.87 Kwh
+2020-04-14T23:30:01-0300 [stdout#info] {'21.43 Kwh'}
+2020-04-14T23:30:01-0300 [stdout#info] 21.43 Kwh
+2020-04-14T23:30:02-0300 [stdout#info] {'11.17 Kwh'}
+2020-04-14T23:30:02-0300 [stdout#info] 11.17 Kwh
+2020-04-14T23:30:03-0300 [stdout#info] {'2.84 Kwh'}
+2020-04-14T23:30:03-0300 [stdout#info] 2.84 Kwh
+2020-04-14T23:30:03-0300 [stdout#info] {'10.45 Kwh'}
+2020-04-14T23:30:03-0300 [stdout#info] 10.45 Kwh
+2020-04-14T23:30:04-0300 [stdout#info] {'8.56 Kwh'}
+2020-04-14T23:30:04-0300 [stdout#info] 8.56 Kwh
+2020-04-14T23:30:04-0300 [stdout#info] {'8.06 Kwh'}
+2020-04-14T23:30:04-0300 [stdout#info] 8.06 Kwh
+2020-04-14T23:30:04-0300 [stdout#info] {'16.24 Kwh'}
+2020-04-14T23:30:04-0300 [stdout#info] 16.24 Kwh
+2020-04-14T23:30:05-0300 [stdout#info] {'11.81 Kwh'}
+2020-04-14T23:30:05-0300 [stdout#info] 11.81 Kwh
+2020-04-14T23:30:05-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 63
+2020-04-14T23:30:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27780>
+2020-04-14T23:30:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27048>
+2020-04-14T23:30:05-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27a58>
+2020-04-14T23:30:06-0300 [stdout#info] {'21.05 Kwh'}
+2020-04-14T23:30:06-0300 [stdout#info] 21.05 Kwh
+2020-04-14T23:30:06-0300 [stdout#info] {'4.87 Kwh'}
+2020-04-14T23:30:06-0300 [stdout#info] 4.87 Kwh
+2020-04-14T23:30:07-0300 [stdout#info] {'10.38 Kwh'}
+2020-04-14T23:30:07-0300 [stdout#info] 10.38 Kwh
+2020-04-14T23:30:07-0300 [stdout#info] {'7.71 Kwh'}
+2020-04-14T23:30:07-0300 [stdout#info] 7.71 Kwh
+2020-04-14T23:30:07-0300 [stdout#info] {'17.23 Kwh'}
+2020-04-14T23:30:07-0300 [stdout#info] 17.23 Kwh
+2020-04-14T23:30:08-0300 [stdout#info] {'15.15 Kwh'}
+2020-04-14T23:30:08-0300 [stdout#info] 15.15 Kwh
+2020-04-14T23:30:09-0300 [stdout#info] {'18.82 Kwh'}
+2020-04-14T23:30:09-0300 [stdout#info] 18.82 Kwh
+2020-04-14T23:30:09-0300 [stdout#info] {'9.34 Kwh'}
+2020-04-14T23:30:09-0300 [stdout#info] 9.34 Kwh
+2020-04-14T23:30:10-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 64
+2020-04-14T23:30:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27c18>
+2020-04-14T23:30:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27780>
+2020-04-14T23:30:10-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27eb8>
+2020-04-14T23:30:10-0300 [stdout#info] {'7.64 Kwh'}
+2020-04-14T23:30:10-0300 [stdout#info] 7.64 Kwh
+2020-04-14T23:30:10-0300 [stdout#info] {'8.69 Kwh'}
+2020-04-14T23:30:10-0300 [stdout#info] 8.69 Kwh
+2020-04-14T23:30:10-0300 [stdout#info] {'21.03 Kwh'}
+2020-04-14T23:30:10-0300 [stdout#info] 21.03 Kwh
+2020-04-14T23:30:11-0300 [stdout#info] {'3.46 Kwh'}
+2020-04-14T23:30:11-0300 [stdout#info] 3.46 Kwh
+2020-04-14T23:30:12-0300 [stdout#info] {'20.32 Kwh'}
+2020-04-14T23:30:12-0300 [stdout#info] 20.32 Kwh
+2020-04-14T23:30:12-0300 [stdout#info] {'8.57 Kwh'}
+2020-04-14T23:30:12-0300 [stdout#info] 8.57 Kwh
+2020-04-14T23:30:13-0300 [stdout#info] {'20.52 Kwh'}
+2020-04-14T23:30:13-0300 [stdout#info] 20.52 Kwh
+2020-04-14T23:30:13-0300 [stdout#info] {'13.04 Kwh'}
+2020-04-14T23:30:13-0300 [stdout#info] 13.04 Kwh
+2020-04-14T23:30:13-0300 [stdout#info] {'10.51 Kwh'}
+2020-04-14T23:30:13-0300 [stdout#info] 10.51 Kwh
+2020-04-14T23:30:14-0300 [stdout#info] {'15.61 Kwh'}
+2020-04-14T23:30:14-0300 [stdout#info] 15.61 Kwh
+2020-04-14T23:30:15-0300 [stdout#info] {'12.26 Kwh'}
+2020-04-14T23:30:15-0300 [stdout#info] 12.26 Kwh
+2020-04-14T23:30:15-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 65
+2020-04-14T23:30:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34080>
+2020-04-14T23:30:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27c18>
+2020-04-14T23:30:15-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34358>
+2020-04-14T23:30:15-0300 [stdout#info] {'8.85 Kwh'}
+2020-04-14T23:30:15-0300 [stdout#info] 8.85 Kwh
+2020-04-14T23:30:16-0300 [stdout#info] {'4.85 Kwh'}
+2020-04-14T23:30:16-0300 [stdout#info] 4.85 Kwh
+2020-04-14T23:30:16-0300 [stdout#info] {'5.67 Kwh'}
+2020-04-14T23:30:16-0300 [stdout#info] 5.67 Kwh
+2020-04-14T23:30:16-0300 [stdout#info] {'12.53 Kwh'}
+2020-04-14T23:30:16-0300 [stdout#info] 12.53 Kwh
+2020-04-14T23:30:17-0300 [stdout#info] {'3.73 Kwh'}
+2020-04-14T23:30:17-0300 [stdout#info] 3.73 Kwh
+2020-04-14T23:30:18-0300 [stdout#info] {'6.59 Kwh'}
+2020-04-14T23:30:18-0300 [stdout#info] 6.59 Kwh
+2020-04-14T23:30:18-0300 [stdout#info] {'15.13 Kwh'}
+2020-04-14T23:30:18-0300 [stdout#info] 15.13 Kwh
+2020-04-14T23:30:19-0300 [stdout#info] {'15.2 Kwh'}
+2020-04-14T23:30:19-0300 [stdout#info] 15.2 Kwh
+2020-04-14T23:30:19-0300 [stdout#info] {'16.14 Kwh'}
+2020-04-14T23:30:19-0300 [stdout#info] 16.14 Kwh
+2020-04-14T23:30:19-0300 [stdout#info] {'14.93 Kwh'}
+2020-04-14T23:30:19-0300 [stdout#info] 14.93 Kwh
+2020-04-14T23:30:20-0300 [stdout#info] {'4.96 Kwh'}
+2020-04-14T23:30:20-0300 [stdout#info] 4.96 Kwh
+2020-04-14T23:30:20-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 66
+2020-04-14T23:30:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce345c0>
+2020-04-14T23:30:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34080>
+2020-04-14T23:30:20-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce347b8>
+2020-04-14T23:30:21-0300 [stdout#info] {'19.23 Kwh'}
+2020-04-14T23:30:21-0300 [stdout#info] 19.23 Kwh
+2020-04-14T23:30:21-0300 [stdout#info] {'3.94 Kwh'}
+2020-04-14T23:30:21-0300 [stdout#info] 3.94 Kwh
+2020-04-14T23:30:22-0300 [stdout#info] {'21.19 Kwh'}
+2020-04-14T23:30:22-0300 [stdout#info] 21.19 Kwh
+2020-04-14T23:30:22-0300 [stdout#info] {'22.14 Kwh'}
+2020-04-14T23:30:22-0300 [stdout#info] 22.14 Kwh
+2020-04-14T23:30:22-0300 [stdout#info] {'8.52 Kwh'}
+2020-04-14T23:30:22-0300 [stdout#info] 8.52 Kwh
+2020-04-14T23:30:23-0300 [stdout#info] {'4.51 Kwh'}
+2020-04-14T23:30:23-0300 [stdout#info] 4.51 Kwh
+2020-04-14T23:30:24-0300 [stdout#info] {'17.03 Kwh'}
+2020-04-14T23:30:24-0300 [stdout#info] 17.03 Kwh
+2020-04-14T23:30:24-0300 [stdout#info] {'3.84 Kwh'}
+2020-04-14T23:30:24-0300 [stdout#info] 3.84 Kwh
+2020-04-14T23:30:25-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 67
+2020-04-14T23:30:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34a20>
+2020-04-14T23:30:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce345c0>
+2020-04-14T23:30:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34c50>
+2020-04-14T23:30:25-0300 [stdout#info] {'16.99 Kwh'}
+2020-04-14T23:30:25-0300 [stdout#info] 16.99 Kwh
+2020-04-14T23:30:25-0300 [stdout#info] {'17.7 Kwh'}
+2020-04-14T23:30:25-0300 [stdout#info] 17.7 Kwh
+2020-04-14T23:30:25-0300 [stdout#info] {'14.33 Kwh'}
+2020-04-14T23:30:25-0300 [stdout#info] 14.33 Kwh
+2020-04-14T23:30:26-0300 [stdout#info] {'3.12 Kwh'}
+2020-04-14T23:30:26-0300 [stdout#info] 3.12 Kwh
+2020-04-14T23:30:27-0300 [stdout#info] {'21.35 Kwh'}
+2020-04-14T23:30:27-0300 [stdout#info] 21.35 Kwh
+2020-04-14T23:30:27-0300 [stdout#info] {'17.76 Kwh'}
+2020-04-14T23:30:27-0300 [stdout#info] 17.76 Kwh
+2020-04-14T23:30:28-0300 [stdout#info] {'6.45 Kwh'}
+2020-04-14T23:30:28-0300 [stdout#info] 6.45 Kwh
+2020-04-14T23:30:28-0300 [stdout#info] {'2.59 Kwh'}
+2020-04-14T23:30:28-0300 [stdout#info] 2.59 Kwh
+2020-04-14T23:30:28-0300 [stdout#info] {'14.11 Kwh'}
+2020-04-14T23:30:28-0300 [stdout#info] 14.11 Kwh
+2020-04-14T23:30:29-0300 [stdout#info] {'18.2 Kwh'}
+2020-04-14T23:30:29-0300 [stdout#info] 18.2 Kwh
+2020-04-14T23:30:30-0300 [stdout#info] {'14.98 Kwh'}
+2020-04-14T23:30:30-0300 [stdout#info] 14.98 Kwh
+2020-04-14T23:30:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 68
+2020-04-14T23:30:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34978>
+2020-04-14T23:30:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34a20>
+2020-04-14T23:30:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc50b8>
+2020-04-14T23:30:30-0300 [stdout#info] {'21.76 Kwh'}
+2020-04-14T23:30:30-0300 [stdout#info] 21.76 Kwh
+2020-04-14T23:30:31-0300 [stdout#info] {'14.14 Kwh'}
+2020-04-14T23:30:31-0300 [stdout#info] 14.14 Kwh
+2020-04-14T23:30:31-0300 [stdout#info] {'2.69 Kwh'}
+2020-04-14T23:30:31-0300 [stdout#info] 2.69 Kwh
+2020-04-14T23:30:31-0300 [stdout#info] {'13.96 Kwh'}
+2020-04-14T23:30:31-0300 [stdout#info] 13.96 Kwh
+2020-04-14T23:30:32-0300 [stdout#info] {'16.79 Kwh'}
+2020-04-14T23:30:32-0300 [stdout#info] 16.79 Kwh
+2020-04-14T23:30:33-0300 [stdout#info] {'15.89 Kwh'}
+2020-04-14T23:30:33-0300 [stdout#info] 15.89 Kwh
+2020-04-14T23:30:33-0300 [stdout#info] {'19.3 Kwh'}
+2020-04-14T23:30:33-0300 [stdout#info] 19.3 Kwh
+2020-04-14T23:30:34-0300 [stdout#info] {'19.86 Kwh'}
+2020-04-14T23:30:34-0300 [stdout#info] 19.86 Kwh
+2020-04-14T23:30:34-0300 [stdout#info] {'14.18 Kwh'}
+2020-04-14T23:30:34-0300 [stdout#info] 14.18 Kwh
+2020-04-14T23:30:34-0300 [stdout#info] {'18.73 Kwh'}
+2020-04-14T23:30:34-0300 [stdout#info] 18.73 Kwh
+2020-04-14T23:30:35-0300 [stdout#info] {'19.47 Kwh'}
+2020-04-14T23:30:35-0300 [stdout#info] 19.47 Kwh
+2020-04-14T23:30:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 69
+2020-04-14T23:30:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5240>
+2020-04-14T23:30:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34978>
+2020-04-14T23:30:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5518>
+2020-04-14T23:30:36-0300 [stdout#info] {'20.65 Kwh'}
+2020-04-14T23:30:36-0300 [stdout#info] 20.65 Kwh
+2020-04-14T23:30:36-0300 [stdout#info] {'9.86 Kwh'}
+2020-04-14T23:30:36-0300 [stdout#info] 9.86 Kwh
+2020-04-14T23:30:37-0300 [stdout#info] {'21.24 Kwh'}
+2020-04-14T23:30:37-0300 [stdout#info] 21.24 Kwh
+2020-04-14T23:30:37-0300 [stdout#info] {'16.25 Kwh'}
+2020-04-14T23:30:37-0300 [stdout#info] 16.25 Kwh
+2020-04-14T23:30:37-0300 [stdout#info] {'18.21 Kwh'}
+2020-04-14T23:30:37-0300 [stdout#info] 18.21 Kwh
+2020-04-14T23:30:38-0300 [stdout#info] {'9.0 Kwh'}
+2020-04-14T23:30:38-0300 [stdout#info] 9.0 Kwh
+2020-04-14T23:30:39-0300 [stdout#info] {'16.61 Kwh'}
+2020-04-14T23:30:39-0300 [stdout#info] 16.61 Kwh
+2020-04-14T23:30:39-0300 [stdout#info] {'7.73 Kwh'}
+2020-04-14T23:30:39-0300 [stdout#info] 7.73 Kwh
+2020-04-14T23:30:40-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 70
+2020-04-14T23:30:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5438>
+2020-04-14T23:30:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5240>
+2020-04-14T23:30:40-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5978>
+2020-04-14T23:30:40-0300 [stdout#info] {'21.13 Kwh'}
+2020-04-14T23:30:40-0300 [stdout#info] 21.13 Kwh
+2020-04-14T23:30:40-0300 [stdout#info] {'7.42 Kwh'}
+2020-04-14T23:30:40-0300 [stdout#info] 7.42 Kwh
+2020-04-14T23:30:40-0300 [stdout#info] {'12.04 Kwh'}
+2020-04-14T23:30:40-0300 [stdout#info] 12.04 Kwh
+2020-04-14T23:30:41-0300 [stdout#info] {'12.59 Kwh'}
+2020-04-14T23:30:41-0300 [stdout#info] 12.59 Kwh
+2020-04-14T23:30:42-0300 [stdout#info] {'21.52 Kwh'}
+2020-04-14T23:30:42-0300 [stdout#info] 21.52 Kwh
+2020-04-14T23:30:42-0300 [stdout#info] {'3.43 Kwh'}
+2020-04-14T23:30:42-0300 [stdout#info] 3.43 Kwh
+2020-04-14T23:30:43-0300 [stdout#info] {'18.01 Kwh'}
+2020-04-14T23:30:43-0300 [stdout#info] 18.01 Kwh
+2020-04-14T23:30:43-0300 [stdout#info] {'17.67 Kwh'}
+2020-04-14T23:30:43-0300 [stdout#info] 17.67 Kwh
+2020-04-14T23:30:43-0300 [stdout#info] {'5.35 Kwh'}
+2020-04-14T23:30:43-0300 [stdout#info] 5.35 Kwh
+2020-04-14T23:30:44-0300 [stdout#info] {'13.68 Kwh'}
+2020-04-14T23:30:44-0300 [stdout#info] 13.68 Kwh
+2020-04-14T23:30:45-0300 [stdout#info] {'22.35 Kwh'}
+2020-04-14T23:30:45-0300 [stdout#info] 22.35 Kwh
+2020-04-14T23:30:45-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 71
+2020-04-14T23:30:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5b00>
+2020-04-14T23:30:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5438>
+2020-04-14T23:30:45-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5dd8>
+2020-04-14T23:30:45-0300 [stdout#info] {'11.69 Kwh'}
+2020-04-14T23:30:45-0300 [stdout#info] 11.69 Kwh
+2020-04-14T23:30:46-0300 [stdout#info] {'10.71 Kwh'}
+2020-04-14T23:30:46-0300 [stdout#info] 10.71 Kwh
+2020-04-14T23:30:46-0300 [stdout#info] {'12.67 Kwh'}
+2020-04-14T23:30:46-0300 [stdout#info] 12.67 Kwh
+2020-04-14T23:30:46-0300 [stdout#info] {'14.79 Kwh'}
+2020-04-14T23:30:46-0300 [stdout#info] 14.79 Kwh
+2020-04-14T23:30:47-0300 [stdout#info] {'10.83 Kwh'}
+2020-04-14T23:30:47-0300 [stdout#info] 10.83 Kwh
+2020-04-14T23:30:48-0300 [stdout#info] {'9.41 Kwh'}
+2020-04-14T23:30:48-0300 [stdout#info] 9.41 Kwh
+2020-04-14T23:30:48-0300 [stdout#info] {'21.53 Kwh'}
+2020-04-14T23:30:48-0300 [stdout#info] 21.53 Kwh
+2020-04-14T23:30:49-0300 [stdout#info] {'9.3 Kwh'}
+2020-04-14T23:30:49-0300 [stdout#info] 9.3 Kwh
+2020-04-14T23:30:49-0300 [stdout#info] {'8.04 Kwh'}
+2020-04-14T23:30:49-0300 [stdout#info] 8.04 Kwh
+2020-04-14T23:30:49-0300 [stdout#info] {'17.47 Kwh'}
+2020-04-14T23:30:49-0300 [stdout#info] 17.47 Kwh
+2020-04-14T23:30:50-0300 [stdout#info] {'16.66 Kwh'}
+2020-04-14T23:30:50-0300 [stdout#info] 16.66 Kwh
+2020-04-14T23:30:50-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 72
+2020-04-14T23:30:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16a58>
+2020-04-14T23:30:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5b00>
+2020-04-14T23:30:50-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3278>
+2020-04-14T23:30:51-0300 [stdout#info] {'18.97 Kwh'}
+2020-04-14T23:30:51-0300 [stdout#info] 18.97 Kwh
+2020-04-14T23:30:51-0300 [stdout#info] {'19.36 Kwh'}
+2020-04-14T23:30:51-0300 [stdout#info] 19.36 Kwh
+2020-04-14T23:30:52-0300 [stdout#info] {'5.06 Kwh'}
+2020-04-14T23:30:52-0300 [stdout#info] 5.06 Kwh
+2020-04-14T23:30:52-0300 [stdout#info] {'14.16 Kwh'}
+2020-04-14T23:30:52-0300 [stdout#info] 14.16 Kwh
+2020-04-14T23:30:52-0300 [stdout#info] {'21.2 Kwh'}
+2020-04-14T23:30:52-0300 [stdout#info] 21.2 Kwh
+2020-04-14T23:30:53-0300 [stdout#info] {'16.22 Kwh'}
+2020-04-14T23:30:53-0300 [stdout#info] 16.22 Kwh
+2020-04-14T23:30:54-0300 [stdout#info] {'8.74 Kwh'}
+2020-04-14T23:30:54-0300 [stdout#info] 8.74 Kwh
+2020-04-14T23:30:54-0300 [stdout#info] {'7.78 Kwh'}
+2020-04-14T23:30:54-0300 [stdout#info] 7.78 Kwh
+2020-04-14T23:30:55-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 73
+2020-04-14T23:30:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3400>
+2020-04-14T23:30:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16a58>
+2020-04-14T23:30:55-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:30:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd36d8>
+2020-04-14T23:30:55-0300 [stdout#info] {'6.82 Kwh'}
+2020-04-14T23:30:55-0300 [stdout#info] 6.82 Kwh
+2020-04-14T23:30:55-0300 [stdout#info] {'6.37 Kwh'}
+2020-04-14T23:30:55-0300 [stdout#info] 6.37 Kwh
+2020-04-14T23:30:55-0300 [stdout#info] {'12.9 Kwh'}
+2020-04-14T23:30:55-0300 [stdout#info] 12.9 Kwh
+2020-04-14T23:30:56-0300 [stdout#info] {'13.04 Kwh'}
+2020-04-14T23:30:56-0300 [stdout#info] 13.04 Kwh
+2020-04-14T23:30:57-0300 [stdout#info] {'17.06 Kwh'}
+2020-04-14T23:30:57-0300 [stdout#info] 17.06 Kwh
+2020-04-14T23:30:57-0300 [stdout#info] {'4.76 Kwh'}
+2020-04-14T23:30:57-0300 [stdout#info] 4.76 Kwh
+2020-04-14T23:30:58-0300 [stdout#info] {'19.72 Kwh'}
+2020-04-14T23:30:58-0300 [stdout#info] 19.72 Kwh
+2020-04-14T23:30:58-0300 [stdout#info] {'11.18 Kwh'}
+2020-04-14T23:30:58-0300 [stdout#info] 11.18 Kwh
+2020-04-14T23:30:58-0300 [stdout#info] {'4.91 Kwh'}
+2020-04-14T23:30:58-0300 [stdout#info] 4.91 Kwh
+2020-04-14T23:30:59-0300 [stdout#info] {'11.04 Kwh'}
+2020-04-14T23:30:59-0300 [stdout#info] 11.04 Kwh
+2020-04-14T23:31:00-0300 [stdout#info] {'12.83 Kwh'}
+2020-04-14T23:31:00-0300 [stdout#info] 12.83 Kwh
+2020-04-14T23:31:00-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 74
+2020-04-14T23:31:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3898>
+2020-04-14T23:31:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3400>
+2020-04-14T23:31:00-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3b38>
+2020-04-14T23:31:00-0300 [stdout#info] {'21.46 Kwh'}
+2020-04-14T23:31:00-0300 [stdout#info] 21.46 Kwh
+2020-04-14T23:31:01-0300 [stdout#info] {'15.17 Kwh'}
+2020-04-14T23:31:01-0300 [stdout#info] 15.17 Kwh
+2020-04-14T23:31:01-0300 [stdout#info] {'9.81 Kwh'}
+2020-04-14T23:31:01-0300 [stdout#info] 9.81 Kwh
+2020-04-14T23:31:01-0300 [stdout#info] {'9.58 Kwh'}
+2020-04-14T23:31:01-0300 [stdout#info] 9.58 Kwh
+2020-04-14T23:31:02-0300 [stdout#info] {'18.45 Kwh'}
+2020-04-14T23:31:02-0300 [stdout#info] 18.45 Kwh
+2020-04-14T23:31:03-0300 [stdout#info] {'22.43 Kwh'}
+2020-04-14T23:31:03-0300 [stdout#info] 22.43 Kwh
+2020-04-14T23:31:03-0300 [stdout#info] {'21.63 Kwh'}
+2020-04-14T23:31:03-0300 [stdout#info] 21.63 Kwh
+2020-04-14T23:31:04-0300 [stdout#info] {'22.04 Kwh'}
+2020-04-14T23:31:04-0300 [stdout#info] 22.04 Kwh
+2020-04-14T23:31:04-0300 [stdout#info] {'5.13 Kwh'}
+2020-04-14T23:31:04-0300 [stdout#info] 5.13 Kwh
+2020-04-14T23:31:04-0300 [stdout#info] {'15.95 Kwh'}
+2020-04-14T23:31:04-0300 [stdout#info] 15.95 Kwh
+2020-04-14T23:31:05-0300 [stdout#info] {'6.41 Kwh'}
+2020-04-14T23:31:05-0300 [stdout#info] 6.41 Kwh
+2020-04-14T23:31:05-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 75
+2020-04-14T23:31:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3cc0>
+2020-04-14T23:31:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3898>
+2020-04-14T23:31:05-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3f98>
+2020-04-14T23:31:06-0300 [stdout#info] {'4.62 Kwh'}
+2020-04-14T23:31:06-0300 [stdout#info] 4.62 Kwh
+2020-04-14T23:31:06-0300 [stdout#info] {'20.11 Kwh'}
+2020-04-14T23:31:06-0300 [stdout#info] 20.11 Kwh
+2020-04-14T23:31:07-0300 [stdout#info] {'11.16 Kwh'}
+2020-04-14T23:31:07-0300 [stdout#info] 11.16 Kwh
+2020-04-14T23:31:07-0300 [stdout#info] {'12.76 Kwh'}
+2020-04-14T23:31:07-0300 [stdout#info] 12.76 Kwh
+2020-04-14T23:31:07-0300 [stdout#info] {'18.29 Kwh'}
+2020-04-14T23:31:07-0300 [stdout#info] 18.29 Kwh
+2020-04-14T23:31:08-0300 [stdout#info] {'5.37 Kwh'}
+2020-04-14T23:31:08-0300 [stdout#info] 5.37 Kwh
+2020-04-14T23:31:09-0300 [stdout#info] {'4.98 Kwh'}
+2020-04-14T23:31:09-0300 [stdout#info] 4.98 Kwh
+2020-04-14T23:31:09-0300 [stdout#info] {'8.74 Kwh'}
+2020-04-14T23:31:09-0300 [stdout#info] 8.74 Kwh
+2020-04-14T23:31:10-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 76
+2020-04-14T23:31:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc0f0>
+2020-04-14T23:31:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3cc0>
+2020-04-14T23:31:10-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc438>
+2020-04-14T23:31:10-0300 [stdout#info] {'12.04 Kwh'}
+2020-04-14T23:31:10-0300 [stdout#info] 12.04 Kwh
+2020-04-14T23:31:10-0300 [stdout#info] {'14.67 Kwh'}
+2020-04-14T23:31:10-0300 [stdout#info] 14.67 Kwh
+2020-04-14T23:31:10-0300 [stdout#info] {'12.38 Kwh'}
+2020-04-14T23:31:10-0300 [stdout#info] 12.38 Kwh
+2020-04-14T23:31:11-0300 [stdout#info] {'16.3 Kwh'}
+2020-04-14T23:31:11-0300 [stdout#info] 16.3 Kwh
+2020-04-14T23:31:12-0300 [stdout#info] {'5.5 Kwh'}
+2020-04-14T23:31:12-0300 [stdout#info] 5.5 Kwh
+2020-04-14T23:31:12-0300 [stdout#info] {'4.92 Kwh'}
+2020-04-14T23:31:12-0300 [stdout#info] 4.92 Kwh
+2020-04-14T23:31:13-0300 [stdout#info] {'22.42 Kwh'}
+2020-04-14T23:31:13-0300 [stdout#info] 22.42 Kwh
+2020-04-14T23:31:13-0300 [stdout#info] {'14.36 Kwh'}
+2020-04-14T23:31:13-0300 [stdout#info] 14.36 Kwh
+2020-04-14T23:31:13-0300 [stdout#info] {'14.94 Kwh'}
+2020-04-14T23:31:13-0300 [stdout#info] 14.94 Kwh
+2020-04-14T23:31:14-0300 [stdout#info] {'19.68 Kwh'}
+2020-04-14T23:31:14-0300 [stdout#info] 19.68 Kwh
+2020-04-14T23:31:15-0300 [stdout#info] {'5.48 Kwh'}
+2020-04-14T23:31:15-0300 [stdout#info] 5.48 Kwh
+2020-04-14T23:31:15-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 77
+2020-04-14T23:31:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc6a0>
+2020-04-14T23:31:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc0f0>
+2020-04-14T23:31:15-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc8d0>
+2020-04-14T23:31:15-0300 [stdout#info] {'13.87 Kwh'}
+2020-04-14T23:31:15-0300 [stdout#info] 13.87 Kwh
+2020-04-14T23:31:16-0300 [stdout#info] {'10.51 Kwh'}
+2020-04-14T23:31:16-0300 [stdout#info] 10.51 Kwh
+2020-04-14T23:31:16-0300 [stdout#info] {'4.17 Kwh'}
+2020-04-14T23:31:16-0300 [stdout#info] 4.17 Kwh
+2020-04-14T23:31:16-0300 [stdout#info] {'3.57 Kwh'}
+2020-04-14T23:31:16-0300 [stdout#info] 3.57 Kwh
+2020-04-14T23:31:17-0300 [stdout#info] {'5.64 Kwh'}
+2020-04-14T23:31:17-0300 [stdout#info] 5.64 Kwh
+2020-04-14T23:31:18-0300 [stdout#info] {'13.67 Kwh'}
+2020-04-14T23:31:18-0300 [stdout#info] 13.67 Kwh
+2020-04-14T23:31:18-0300 [stdout#info] {'21.2 Kwh'}
+2020-04-14T23:31:18-0300 [stdout#info] 21.2 Kwh
+2020-04-14T23:31:19-0300 [stdout#info] {'20.02 Kwh'}
+2020-04-14T23:31:19-0300 [stdout#info] 20.02 Kwh
+2020-04-14T23:31:19-0300 [stdout#info] {'14.72 Kwh'}
+2020-04-14T23:31:19-0300 [stdout#info] 14.72 Kwh
+2020-04-14T23:31:19-0300 [stdout#info] {'13.92 Kwh'}
+2020-04-14T23:31:19-0300 [stdout#info] 13.92 Kwh
+2020-04-14T23:31:20-0300 [stdout#info] {'4.81 Kwh'}
+2020-04-14T23:31:20-0300 [stdout#info] 4.81 Kwh
+2020-04-14T23:31:20-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 78
+2020-04-14T23:31:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc400>
+2020-04-14T23:31:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc6a0>
+2020-04-14T23:31:20-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddccf8>
+2020-04-14T23:31:21-0300 [stdout#info] {'21.3 Kwh'}
+2020-04-14T23:31:21-0300 [stdout#info] 21.3 Kwh
+2020-04-14T23:31:21-0300 [stdout#info] {'14.56 Kwh'}
+2020-04-14T23:31:21-0300 [stdout#info] 14.56 Kwh
+2020-04-14T23:31:22-0300 [stdout#info] {'9.98 Kwh'}
+2020-04-14T23:31:22-0300 [stdout#info] 9.98 Kwh
+2020-04-14T23:31:22-0300 [stdout#info] {'7.23 Kwh'}
+2020-04-14T23:31:22-0300 [stdout#info] 7.23 Kwh
+2020-04-14T23:31:22-0300 [stdout#info] {'13.67 Kwh'}
+2020-04-14T23:31:22-0300 [stdout#info] 13.67 Kwh
+2020-04-14T23:31:23-0300 [stdout#info] {'7.84 Kwh'}
+2020-04-14T23:31:23-0300 [stdout#info] 7.84 Kwh
+2020-04-14T23:31:24-0300 [stdout#info] {'9.33 Kwh'}
+2020-04-14T23:31:24-0300 [stdout#info] 9.33 Kwh
+2020-04-14T23:31:24-0300 [stdout#info] {'19.19 Kwh'}
+2020-04-14T23:31:24-0300 [stdout#info] 19.19 Kwh
+2020-04-14T23:31:25-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 79
+2020-04-14T23:31:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5400>
+2020-04-14T23:31:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc400>
+2020-04-14T23:31:25-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb198>
+2020-04-14T23:31:25-0300 [stdout#info] {'17.0 Kwh'}
+2020-04-14T23:31:25-0300 [stdout#info] 17.0 Kwh
+2020-04-14T23:31:25-0300 [stdout#info] {'4.46 Kwh'}
+2020-04-14T23:31:25-0300 [stdout#info] 4.46 Kwh
+2020-04-14T23:31:25-0300 [stdout#info] {'8.29 Kwh'}
+2020-04-14T23:31:25-0300 [stdout#info] 8.29 Kwh
+2020-04-14T23:31:26-0300 [stdout#info] {'3.9 Kwh'}
+2020-04-14T23:31:26-0300 [stdout#info] 3.9 Kwh
+2020-04-14T23:31:27-0300 [stdout#info] {'5.22 Kwh'}
+2020-04-14T23:31:27-0300 [stdout#info] 5.22 Kwh
+2020-04-14T23:31:27-0300 [stdout#info] {'6.38 Kwh'}
+2020-04-14T23:31:27-0300 [stdout#info] 6.38 Kwh
+2020-04-14T23:31:28-0300 [stdout#info] {'16.05 Kwh'}
+2020-04-14T23:31:28-0300 [stdout#info] 16.05 Kwh
+2020-04-14T23:31:28-0300 [stdout#info] {'14.01 Kwh'}
+2020-04-14T23:31:28-0300 [stdout#info] 14.01 Kwh
+2020-04-14T23:31:28-0300 [stdout#info] {'17.21 Kwh'}
+2020-04-14T23:31:28-0300 [stdout#info] 17.21 Kwh
+2020-04-14T23:31:29-0300 [stdout#info] {'18.17 Kwh'}
+2020-04-14T23:31:29-0300 [stdout#info] 18.17 Kwh
+2020-04-14T23:31:30-0300 [stdout#info] {'11.21 Kwh'}
+2020-04-14T23:31:30-0300 [stdout#info] 11.21 Kwh
+2020-04-14T23:31:30-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 80
+2020-04-14T23:31:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb320>
+2020-04-14T23:31:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5400>
+2020-04-14T23:31:30-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb5f8>
+2020-04-14T23:31:30-0300 [stdout#info] {'4.42 Kwh'}
+2020-04-14T23:31:30-0300 [stdout#info] 4.42 Kwh
+2020-04-14T23:31:31-0300 [stdout#info] {'7.9 Kwh'}
+2020-04-14T23:31:31-0300 [stdout#info] 7.9 Kwh
+2020-04-14T23:31:31-0300 [stdout#info] {'6.73 Kwh'}
+2020-04-14T23:31:31-0300 [stdout#info] 6.73 Kwh
+2020-04-14T23:31:31-0300 [stdout#info] {'4.47 Kwh'}
+2020-04-14T23:31:31-0300 [stdout#info] 4.47 Kwh
+2020-04-14T23:31:32-0300 [stdout#info] {'3.47 Kwh'}
+2020-04-14T23:31:32-0300 [stdout#info] 3.47 Kwh
+2020-04-14T23:31:33-0300 [stdout#info] {'15.68 Kwh'}
+2020-04-14T23:31:33-0300 [stdout#info] 15.68 Kwh
+2020-04-14T23:31:33-0300 [stdout#info] {'9.42 Kwh'}
+2020-04-14T23:31:33-0300 [stdout#info] 9.42 Kwh
+2020-04-14T23:31:34-0300 [stdout#info] {'8.67 Kwh'}
+2020-04-14T23:31:34-0300 [stdout#info] 8.67 Kwh
+2020-04-14T23:31:34-0300 [stdout#info] {'8.14 Kwh'}
+2020-04-14T23:31:34-0300 [stdout#info] 8.14 Kwh
+2020-04-14T23:31:34-0300 [stdout#info] {'6.64 Kwh'}
+2020-04-14T23:31:34-0300 [stdout#info] 6.64 Kwh
+2020-04-14T23:31:35-0300 [stdout#info] {'6.71 Kwh'}
+2020-04-14T23:31:35-0300 [stdout#info] 6.71 Kwh
+2020-04-14T23:31:35-0300 [-] 127.0.0.1:41198 - sending MQTT PUBLISH REQUEST - Number of events: 81
+2020-04-14T23:31:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb860>
+2020-04-14T23:31:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb320>
+2020-04-14T23:31:35-0300 [stdout#info] This divice have no simulation core instance
+2020-04-14T23:31:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeba58>
+2020-04-14T23:31:36-0300 [stdout#info] {'9.17 Kwh'}
+2020-04-14T23:31:36-0300 [stdout#info] 9.17 Kwh
+2020-04-14T23:31:36-0300 [stdout#info] {'16.87 Kwh'}
+2020-04-14T23:31:36-0300 [stdout#info] 16.87 Kwh
+2020-04-14T23:31:39-0300 [-] Closing IoTFogSim Application...
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503f98>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0af98>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3f98>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2080>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e20b8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d20f0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6160>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e1d0>
+2020-04-14T23:31:39-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-14T23:31:39-0300 [SubscriberApp,client] connection lost - Number of events: 82
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a278>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2320>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34358>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514438>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16438>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc438>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c24e0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2518>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2518>
+2020-04-14T23:31:39-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a65c0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51e6a0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0a6d8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2780>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce347b8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514898>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16898>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddc8d0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2940>
+2020-04-14T23:31:39-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2978>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2978>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6a20>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce58a58>
+2020-04-14T23:31:39-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-14T23:31:39-0300 [PublisherApp,client] connection lost - Number of events: 83
+2020-04-14T23:31:39-0300 [applications.accesspointapp.AccessPointFactory] (TCP Port 8082 Closed)
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce0ab38>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51eb70>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4b2be0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4c2ac8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce34c50>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be514cc0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce16cf8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcddccf8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce68d30>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4e2dd8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4d2dd8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be4a6eb8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be51ef28>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc50b8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4c7b80588>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27198>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb198>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503278>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3278>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539358>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5518>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce275f8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb5f8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5036d8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd36d8>
+2020-04-14T23:31:39-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-04-14T23:31:39-0300 [SubscriberApp,client] connection lost - Number of events: 84
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be5397f0>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeb860>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5978>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27a58>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdeba58>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be503b38>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdd3b38>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4be539c18>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bcdc5dd8>
+2020-04-14T23:31:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd4bce27eb8>
+2020-04-14T23:31:39-0300 [-] Main loop terminated.

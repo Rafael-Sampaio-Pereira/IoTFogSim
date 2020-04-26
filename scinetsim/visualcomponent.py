@@ -6,11 +6,15 @@ from PIL import ImageTk, Image
 
 class VisualComponent(object):
 
-    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y, coverage_area_radius):
+    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y, coverage_area_radius, device):
         self.simulation_core = simulation_core
         self.x = x
         self.y = y
         self.move_flag = False
+
+        # this refers to the equivalente device of this visual component - Rafael Sampaio
+        # By using the 'device' atribute, is possible access any atibute of the device instance, such as application - Rafael Sampaio
+        self.device = device
 
 
         self.is_wireless = is_wireless

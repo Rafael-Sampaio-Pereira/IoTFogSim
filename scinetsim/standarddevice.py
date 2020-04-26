@@ -31,7 +31,7 @@ class StandardServerDevice(object):
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing Server")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
@@ -48,6 +48,8 @@ class StandardServerDevice(object):
 class StandardClientDevice(object):
     
     def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+
+        self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
         self.simulation_ip = simulation_ip
 
@@ -61,15 +63,18 @@ class StandardClientDevice(object):
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
-        self.network_component = StandardClientNetworkComponent(self.visual_component, self.simulation_core, application, is_wireless)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing Client")
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+        self.application.is_wireless = is_wireless
         
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
+        self.network_component = StandardClientNetworkComponent(self.application)
         client = endpoints.clientFromString(reactor, self.network_component.network_settings)
         client.connect(self.network_component)
         
@@ -97,7 +102,7 @@ class Router(object):
         self.x = x
         self. y = y
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing Router")
 
         self.application.visual_component = self.visual_component
@@ -136,7 +141,7 @@ class AccessPoint(object):
         self.id = id
         
         self.simulation_core = simulation_core
-        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
+        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.authenticated_devices = []
         self.associated_devices = []
         
@@ -201,6 +206,7 @@ class WSNSensorNode(object):
         self.application = import_and_instantiate_class_from_string(application)
         self.WSN_network_group =  WSN_network_group
         self.is_wireless = is_wireless
+        self.coverage_area_radius = coverage_area_radius
 
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -210,7 +216,7 @@ class WSNSensorNode(object):
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
@@ -219,8 +225,16 @@ class WSNSensorNode(object):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
+    
+    def find_nearby_devices(self): 
+        # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
+        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.coverage_area_radius, self.visual_component.y+self.coverage_area_radius, self.visual_component.x-self.coverage_area_radius, self.visual_component.y-self.coverage_area_radius)
+        return all_coveraged_devices
+    
+    
     def run(self):
-        self.application.start()
+        nearby_devices_list = self.find_nearby_devices()
+        self.application.start(nearby_devices_list)
 
 class WSNSinkNode(object):
        
@@ -238,7 +252,7 @@ class WSNSinkNode(object):
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
-        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius)
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core

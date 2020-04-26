@@ -9,9 +9,9 @@ class SensorApp(object):
         self.interval = 3
         self.all_nearby_devices = set()
     
-    def start(self):
+    def start(self, nearby_devices_list):
         # putting all nearby devices in a list that will be use in future to send data across - Rafael Sampaio
-        self.find_nearby_devices()
+        #self.find_nearby_devices()
         time.sleep(0.3)
         self.collect_and_send_data()
 
@@ -27,16 +27,19 @@ class SensorApp(object):
         # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
         for data in self._buffer.copy():
             self.send_via_broadcast(data)
+            # after send, remove data from buffer - Rafael Sampaio
             self._buffer.remove(data)
+            print(self._buffer)
         
         reactor.callLater(self.interval, self.collect_and_send_data)
     
-    def find_nearby_devices(self):
-        # This function should only be called once, in the start method - Rafael Sampaio
-        pass
+    # def find_nearby_devices(self):
+    #     # This function should only be called once, in the start method - Rafael Sampaio
+    #     pass
     
     def send_via_broadcast(self, data):
-        print(data)
+        #print(data)
+        pass
 
 
 
