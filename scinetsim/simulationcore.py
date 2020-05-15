@@ -18,8 +18,8 @@ class SimulationCore(object):
 		self.allAccessPointNodes = defaultdict(list)
 		self.allIoTNodes = defaultdict(list)
 		self.allRouterNodes = defaultdict(list)
-		self.allSinkNodes = defaultdict(list)
-		self.allSensorNodes = defaultdict(list)
+		# self.allSinkNodes = defaultdict(list)
+		# self.allSensorNodes = defaultdict(list)
 		self.canvas = None
 		self.simulation_screen = None
 		self.eventsCounter = 0
@@ -68,19 +68,19 @@ class SimulationCore(object):
 		except Exception as e:
 			log.msg("There is no router whith the id %i"%(id))
 	
-	def getSinkNodeById(self, id):
-		try:
-			filtered_list = self.allSinkNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no sink whith the id %i"%(id))
+	# def getSinkNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allSinkNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no sink whith the id %i"%(id))
 
-	def getSensorNodeById(self, id):
-		try:
-			filtered_list = self.allSensorNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no sensor whith the id %i"%(id))
+	# def getSensorNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allSensorNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no sensor whith the id %i"%(id))
 
 	def getIoTNodeById(self, id):
 		try:
@@ -118,11 +118,11 @@ class SimulationCore(object):
 	def appendRouterNodes(self, router_node):
 		self.allRouterNodes[router_node.id].append(router_node)
 
-	def appendSinkNodes(self, sink_node):
-		self.allSinkNodes[sink_node.id].append(sink_node)
+	# def appendSinkNodes(self, sink_node):
+	# 	self.allSinkNodes[sink_node.id].append(sink_node)
 
-	def appendSensorNodes(self, sensor_node):
-		self.allSensorNodes[sensor_node.id].append(sensor_node)
+	# def appendSensorNodes(self, sensor_node):
+	# 	self.allSensorNodes[sensor_node.id].append(sensor_node)
 
 	def appendConnections(self, connection):
 		self.allConnections[connection.id].append(connection)
@@ -152,13 +152,13 @@ class SimulationCore(object):
 			if self.getRouterNodeById(id).id == id:
 				return self.allRouterNodes[id][0]
 		
-		elif self.getSinkNodeById(id):
-			if self.getSinkNodeById(id).id == id:
-				return self.allSinkNodes[id][0]
+		# elif self.getSinkNodeById(id):
+		# 	if self.getSinkNodeById(id).id == id:
+		# 		return self.allSinkNodes[id][0]
 
-		elif self.getSensorNodeById(id):
-			if self.getSensorNodeById(id).id == id:
-				return self.allSensorNodes[id][0]
+		# elif self.getSensorNodeById(id):
+		# 	if self.getSensorNodeById(id).id == id:
+		# 		return self.allSensorNodes[id][0]
 
 		
 
