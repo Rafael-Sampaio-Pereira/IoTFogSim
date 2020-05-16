@@ -107,7 +107,7 @@
             "description": "Simple wsn for envirioment monitoring",
             "sink_nodes": [
                 {
-                    "id":20,
+                    "id":0,
                     "name": "wsn_sink",
                     "icon": "sensor_signal_icon",
                     "coverage_area_radius": 100,
@@ -119,8 +119,8 @@
             ],
             "sensor_nodes": [
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -129,8 +129,8 @@
                     "y": 200
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -139,8 +139,8 @@
                     "y": 300
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -149,8 +149,8 @@
                     "y": 200
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -159,8 +159,8 @@
                     "y": 300
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -169,8 +169,8 @@
                     "y": 260
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -179,8 +179,8 @@
                     "y": 380
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -189,8 +189,8 @@
                     "y": 330
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
@@ -199,8 +199,8 @@
                     "y": 290
                 },
                 {
-                    "id":20,
-                    "name": "wsn_sensor",
+                    "id":0,
+                    "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",

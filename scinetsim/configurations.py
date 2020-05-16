@@ -213,27 +213,25 @@ def load_nodes(project_name, simulation_core):
 
 
 			for wsn in data['wireless_sensor_networks']:
-    				
-				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
-    			
-				for sink_node in wsn['sink_nodes']:
 
-					sk_node = WSNSinkNode(simulation_core, sink_node['id'], sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
+				cont = 0
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+
+				for sink_node in wsn['sink_nodes']:
+					cont += 1
+					sk_node = WSNSinkNode(simulation_core, cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
 					#simulation_core.appendSensorNodes(sk_node)
 					WSN_network_group.sink_list.add(sk_node)
 					time.sleep(interval)
 					sk_node.run()
 
 				for sensor_node in wsn['sensor_nodes']:
-
-					sr_node = WSNSensorNode(simulation_core, sensor_node['id'], sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					cont += 1
+					sr_node = WSNSensorNode(simulation_core, cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
 					#simulation_core.appendSensorNodes(sr_node)
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 					sr_node.run()
 
-
-				for d in WSN_network_group.sensors_list:
-					print(d)
 
 				

@@ -231,15 +231,17 @@ class WSNSensorNode(object):
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
 
-        self.name = name
-        self.id = id
+        self.name = name+'_'+str(id)
+        #self.id = id
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
         self.simulation_core.updateEventsCounter("Initializing sensor node")
         self.application.visual_component = self.visual_component
+        self.application.visual_component.coverage_area_radius = coverage_area_radius
         self.application.simulation_core = self.simulation_core
+        self.application.coverage_area_radius = coverage_area_radius
         
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
@@ -263,6 +265,7 @@ class WSNSensorNode(object):
         return all_nearby_device
     
     def run(self):
+        
         nearby_devices_list = self.get_nearby_devices_list()
         self.application.start(nearby_devices_list)
 
