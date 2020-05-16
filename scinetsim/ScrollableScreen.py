@@ -27,6 +27,9 @@ class ScrollableScreen(tkinter.Frame):
         self.canvas.create_text(50,10, anchor="nw", text="Events: ")
         self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
 
+        # Label to show position on screen - Rafael Sampaio
+        self.position_label = self.canvas.create_text(300,10, anchor="nw", text="0", tags=("position_label",))
+
         # This is what enables scrolling with the mouse:
         self.canvas.bind("<ButtonPress-2>", self.scroll_start)
         self.canvas.bind("<B2-Motion>", self.scroll_move)
@@ -39,6 +42,12 @@ class ScrollableScreen(tkinter.Frame):
         
         # Sets esc to close application - Rafael Sampaio
         root.bind('<Escape>', lambda e: self.on_closing())
+
+
+        root.bind("<Motion>", self.update_position_on_screen)
+
+    def  update_position_on_screen(self,event):
+        self.canvas.itemconfig(self.position_label, text=str(event.x)+'x'+str(event.y))
 
     def getCanvas(self):
      	return self.canvas
