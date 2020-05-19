@@ -9,15 +9,14 @@ class SensorApp(object):
         self.interval = 3
         self.simulation_core = None
         self.visual_component = None
-        #self.all_nearby_devices = set()
     
     def start(self, nearby_devices_list):
-        # A LISTA DE DISPOSITIVOS PROXIMOS JÁ ESTÁ SENDO PASSADA PARA ESTA FUNÇÃO.
-        # A PARTIR DAQUI SERÁ POSSIVEL MANIPULAR BUFFER DOS DISPOSITIVOS PROXIMOS SIMULANDO A ENTRGA DE PACOTES
-
+        
         # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
         self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.coverage_area_radius, self.visual_component.y+self.visual_component.coverage_area_radius, self.visual_component.x-self.visual_component.coverage_area_radius, self.visual_component.y-self.visual_component.coverage_area_radius)
+
+        self.print_node_connections(nearby_devices_list)
 
         self.collect_and_send_data()
 
@@ -27,8 +26,6 @@ class SensorApp(object):
 
         # putting data in device buffer - Rafael Sampaio
         self._buffer.add(data)
-        
-        print(self._buffer)
 
         # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
         for data in self._buffer.copy():
@@ -42,8 +39,16 @@ class SensorApp(object):
     def send_via_broadcast(self, data):
         #print(data)
         pass
-
-
+    
+    def print_node_connections(self, nearby_devices_list):
+        self_name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
+        print("=========", self_name ,"==========")
+        if len(nearby_devices_list) > 0:
+            for nearby_device in nearby_devices_list:
+                device_name = self.simulation_core.canvas.itemcget(nearby_device.application.visual_component.draggable_name, 'text')
+                if self_name != device_name:
+                    print(self_name, ' <-------> ', device_name)    
+        print("=============================")
 
 
 class SinkApp(object):

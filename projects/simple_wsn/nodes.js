@@ -113,8 +113,8 @@
                     "coverage_area_radius": 100,
                     "is_wireless": true,
                     "application": "applications.wsnapp.SinkApp",
-                    "x": 750,
-                    "y": 100
+                    "x": 1284,
+                    "y": 190
                 }
             ],
             "sensor_nodes": [
@@ -125,18 +125,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 750,
-                    "y": 200
-                },
-                {
-                    "id":0,
-                    "name": "sensor",
-                    "icon": "sensor_icon",
-                    "coverage_area_radius": 100,
-                    "application": "applications.wsnapp.SensorApp",
-                    "is_wireless": true,
-                    "x": 750,
-                    "y": 300
+                    "x": 1168,
+                    "y": 291
                 },
                 {
                     "id":0,
@@ -148,6 +138,17 @@
                     "x": 850,
                     "y": 200
                 },
+                {
+                    "id":0,
+                    "name": "sensor",
+                    "icon": "sensor_icon",
+                    "coverage_area_radius": 100,
+                    "application": "applications.wsnapp.SensorApp",
+                    "is_wireless": true,
+                    "x": 1152,
+                    "y": 391
+                },
+                
                 {
                     "id":0,
                     "name": "sensor",

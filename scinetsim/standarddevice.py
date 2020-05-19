@@ -213,7 +213,7 @@ class WirelessSensorNetwork(object):
                 if device.visual_component.draggable_img == icon_id:
                     founded_device = device
 
-            if founded_device:
+            if founded_device != None:
                 return founded_device
 
         except Exception as e:
@@ -260,7 +260,9 @@ class WSNSensorNode(object):
 
         for icon_id in nearby_devices_icon_list:
            device = self.WSN_network_group.get_wsn_device_by_icon(icon_id)
-           all_nearby_device.add(device)
+
+           if device != None:
+            all_nearby_device.add(device)
 
         return all_nearby_device
     

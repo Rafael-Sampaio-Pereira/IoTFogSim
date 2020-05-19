@@ -205,8 +205,7 @@ def load_nodes(project_name, simulation_core):
 					simulation_core.appendIoTNodes(iot)
 					time.sleep(interval)
 					iot.run()
-					
-					
+
 				else:
 					log.msg("Error: Type not found.")
 
@@ -214,24 +213,28 @@ def load_nodes(project_name, simulation_core):
 
 			for wsn in data['wireless_sensor_networks']:
 
-				cont = 0
+				sink_cont = 0
+				sensor_cont = 0
 				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
 
 				for sink_node in wsn['sink_nodes']:
-					cont += 1
-					sk_node = WSNSinkNode(simulation_core, cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
-					#simulation_core.appendSensorNodes(sk_node)
+					sink_cont += 1
+					sk_node = WSNSinkNode(simulation_core, sink_cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
 					WSN_network_group.sink_list.add(sk_node)
 					time.sleep(interval)
-					sk_node.run()
 
 				for sensor_node in wsn['sensor_nodes']:
-					cont += 1
-					sr_node = WSNSensorNode(simulation_core, cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
-					#simulation_core.appendSensorNodes(sr_node)
+					sensor_cont += 1
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
-					sr_node.run()
+
+				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
+				for deivce in WSN_network_group.sink_list:
+					deivce.run()
+
+				for deivce in WSN_network_group.sensors_list:
+					deivce.run()
 
 
 				
