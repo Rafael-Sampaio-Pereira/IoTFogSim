@@ -156,8 +156,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 850,
-                    "y": 300
+                    "x": 1133,
+                    "y": 487
                 },
                 {
                     "id":0,
@@ -166,8 +166,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 750,
-                    "y": 260
+                    "x": 617,
+                    "y": 604
                 },
                 {
                     "id":0,
@@ -176,8 +176,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 750,
-                    "y": 380
+                    "x": 624,
+                    "y": 510
                 },
                 {
                     "id":0,
@@ -186,8 +186,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 880,
-                    "y": 330
+                    "x": 870,
+                    "y": 680
                 },
                 {
                     "id":0,
@@ -196,8 +196,8 @@
                     "coverage_area_radius": 100,
                     "application": "applications.wsnapp.SensorApp",
                     "is_wireless": true,
-                    "x": 730,
-                    "y": 290
+                    "x": 887,
+                    "y": 591
                 },
                 {
                     "id":0,

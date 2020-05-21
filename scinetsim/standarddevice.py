@@ -219,7 +219,34 @@ class WirelessSensorNetwork(object):
         except Exception as e:
             pass
 
-class WSNSensorNode(object):
+
+class WSNNode(object):
+    def __init__(self):
+        pass
+    
+    def find_nearby_devices_icon(self): 
+        # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
+        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.coverage_area_radius, self.visual_component.y+self.coverage_area_radius, self.visual_component.x-self.coverage_area_radius, self.visual_component.y-self.coverage_area_radius)
+        return all_coveraged_devices
+
+    def get_nearby_devices_list(self):
+        all_nearby_device = set()
+        # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
+        nearby_devices_icon_list = self.find_nearby_devices_icon()
+
+        for icon_id in nearby_devices_icon_list:
+           device = self.WSN_network_group.get_wsn_device_by_icon(icon_id)
+
+           if device != None:
+            all_nearby_device.add(device)
+
+        return all_nearby_device
+
+
+
+
+
+class WSNSensorNode(WSNNode):
        
     def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, WSN_network_group):
 
@@ -248,36 +275,21 @@ class WSNSensorNode(object):
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     
-    def find_nearby_devices_icon(self): 
-        # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
-        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.coverage_area_radius, self.visual_component.y+self.coverage_area_radius, self.visual_component.x-self.coverage_area_radius, self.visual_component.y-self.coverage_area_radius)
-        return all_coveraged_devices
-
-    def get_nearby_devices_list(self):
-        all_nearby_device = set()
-        # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
-        nearby_devices_icon_list = self.find_nearby_devices_icon()
-
-        for icon_id in nearby_devices_icon_list:
-           device = self.WSN_network_group.get_wsn_device_by_icon(icon_id)
-
-           if device != None:
-            all_nearby_device.add(device)
-
-        return all_nearby_device
+    
     
     def run(self):
         
         nearby_devices_list = self.get_nearby_devices_list()
         self.application.start(nearby_devices_list)
 
-class WSNSinkNode(object):
+class WSNSinkNode(WSNNode):
        
     def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, WSN_network_group):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.WSN_network_group =  WSN_network_group
         self.is_wireless = is_wireless
+        self.coverage_area_radius = coverage_area_radius
 
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -297,4 +309,7 @@ class WSNSinkNode(object):
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
-        pass
+        nearby_devices_list = self.get_nearby_devices_list()
+        self.application.start(nearby_devices_list)
+
+
