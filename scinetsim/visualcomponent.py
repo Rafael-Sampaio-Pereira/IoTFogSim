@@ -27,7 +27,7 @@ class VisualComponent(object):
             self.draggable_coverage_area_circle = self.simulation_core.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="", outline="", width=1, stipple="gray12")
 
             # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
-            self.draggable_signal_circle = self.simulation_core.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,2))
+            self.draggable_signal_circle = self.simulation_core.canvas.create_oval(self.x, self.y, self.x, self.y, fill="", outline = "", dash=(4,3))
 
             simulation_core.canvas.tag_bind(self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)
             simulation_core.canvas.tag_bind(self.draggable_coverage_area_circle, '<ButtonRelease-1>', self.release) 

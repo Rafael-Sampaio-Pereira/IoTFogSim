@@ -273,9 +273,6 @@ class WSNSensorNode(WSNNode):
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
-
-    
-    
     
     def run(self):
         
@@ -300,7 +297,7 @@ class WSNSinkNode(WSNNode):
 
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
-        self.simulation_core.updateEventsCounter("Initializing sensor node")
+        self.simulation_core.updateEventsCounter("Initializing sink node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
         

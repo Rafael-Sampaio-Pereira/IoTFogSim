@@ -3,8 +3,26 @@ from scinetsim.dataproducers import *
 from twisted.internet import reactor
 import time
 import uuid
+import tkinter as tk
 
-class SensorApp(object):
+
+
+class WSNApp(object):
+    def propagate_signal(self):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+        if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+            # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+            self.visual_component.signal_radius += 10
+            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+        else:
+            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+            self.visual_component.signal_radius = 1
+        
+        reactor.callLater(0.1, self.propagate_signal)
+
+class SensorApp(WSNApp):
     def __init__(self):
         self._buffer = set()
         self.interval = 3
@@ -15,16 +33,14 @@ class SensorApp(object):
     def start(self, nearby_devices_list):
 
         self.nearby_devices_list = nearby_devices_list
-        
-        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.coverage_area_radius, self.visual_component.y+self.visual_component.coverage_area_radius, self.visual_component.x-self.visual_component.coverage_area_radius, self.visual_component.y-self.visual_component.coverage_area_radius)
-
+        self.propagate_signal()
         self.print_node_connections(nearby_devices_list)
 
         self.collect_and_send_data()
 
+
     def collect_and_send_data(self):
+        
         # collecting data - Rafael Sampaio
         data = energy_consumption_meter()
 
@@ -33,8 +49,6 @@ class SensorApp(object):
 
         # putting data in device buffer - Rafael Sampaio
         self._buffer.add(pack)
-
-        self.print_node_buffer()
 
         if len(self._buffer) > 0:
             self.temp_buffer = self._buffer.copy()
@@ -56,14 +70,18 @@ class SensorApp(object):
         if not package.was_forwarded:
             for destiny in package.destiny_list:
                 if destiny == package.source:
-                    print('NÃO É POSSIVEL ENVIAR PRA SI MESMO')
+                    # A device can not sent data to it self - Rafael Sampaio
+                    pass
                 else:
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
+                        # Drawing connection - Rafael Sampaio
+                        package.draw_connection_arrow(destiny)
+
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
                         package.was_forwarded = True
-    
+                            
     def print_node_connections(self, nearby_devices_list):
         self_name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         print("=========", self_name ,"==========")
@@ -84,7 +102,10 @@ class SensorApp(object):
         print('\n')
 
 
-class SinkApp(object):
+    
+
+
+class SinkApp(WSNApp):
     def __init__(self):
         self._buffer = set()
         self.simulation_core = None
@@ -92,8 +113,7 @@ class SinkApp(object):
         self.nearby_devices_list = None
     
     def start(self, nearby_devices_list):
-        pass
-
+        self.propagate_signal()
 
 class WSNPackage(object):
     
@@ -121,3 +141,15 @@ class WSNPackage(object):
         package = json.dumps(package)
 
         return package
+
+    def delete_connection_arrow(self, id):
+        self.source.simulation_core.canvas.delete(id)
+
+    def draw_connection_arrow(self, destiny):
+        x1 = self.source.visual_component.x
+        y1 = self.source.visual_component.y
+        x2 = destiny.visual_component.x
+        y2 = destiny.visual_component.y
+        id = self.source.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow=tk.LAST, width=3, dash=(4,2))
+
+        self.source.simulation_core.canvas.after(3, self.delete_connection_arrow, id)
