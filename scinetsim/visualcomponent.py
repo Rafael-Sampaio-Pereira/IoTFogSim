@@ -17,6 +17,7 @@ class VisualComponent(object):
         self.device = device
 
 
+
         self.is_wireless = is_wireless
 
         if self.is_wireless:
@@ -37,10 +38,10 @@ class VisualComponent(object):
         self.image_file = ImageTk.PhotoImage(file=file)
         self.draggable_img = self.simulation_core.canvas.create_image(x, y, image=self.image_file)
 
-        self.draggable_name = self.simulation_core.canvas.create_text(x,y+22,fill="black",font="Arial 7",
+        self.draggable_name = self.simulation_core.canvas.create_text(x,y+22, fill="black",font="Arial 7",
                         text=deviceName)
 
-        self.draggable_alert = self.simulation_core.canvas.create_text(x,y-22,fill="black",font="Times 7",
+        self.draggable_alert = self.simulation_core.canvas.create_text(x,y-22, fill="black",font="Times 7",
                         text="")
         # font="Times 9 italic bold"
         

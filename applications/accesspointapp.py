@@ -219,3 +219,122 @@ class ClientProtocol(StandardApplicationComponent):
  
 
  
+
+#################### new starts from here ####################################
+
+
+
+
+
+class AccessPointApp_temp(object):
+    def __init__(self):
+        self._buffer = set()
+        self.interval = 3
+        self.simulation_core = None
+        self.visual_component = None
+        self.nearby_devices_list = None
+    
+    def start(self, nearby_devices_list):
+
+        self.nearby_devices_list = nearby_devices_list
+        
+        # Sends beacon frame. - Rafael Sampaio
+        self.passive_scanning()
+
+        self.print_node_connections(nearby_devices_list)
+
+        self.collect_and_send_data()
+
+
+    def collect_and_send_data(self):
+        
+        # collecting data - Rafael Sampaio
+        data = energy_consumption_meter()
+
+        # Creating a new package - Rafael Sampaio
+        pack = WSNPackage(self, self.nearby_devices_list, data)
+
+        # putting data in device buffer - Rafael Sampaio
+        self._buffer.add(pack)
+
+        if len(self._buffer) > 0:
+            self.temp_buffer = self._buffer.copy()
+            # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
+            for _package in self.temp_buffer:
+                self.forward_package(_package)
+
+            def remove_sent_packages_from_buffer():
+                # after send, remove data from buffer - Rafael Sampaio    
+                self._buffer = self._buffer - self.temp_buffer
+
+            self.simulation_core.canvas.after(2, remove_sent_packages_from_buffer)
+            
+        self.print_node_buffer()
+        
+        reactor.callLater(self.interval, self.collect_and_send_data)
+
+    def forward_package(self, package):
+        if not package.was_forwarded:
+            for destiny in package.destiny_list:
+                if destiny == package.source:
+                    # A device can not sent data to it self - Rafael Sampaio
+                    pass
+                else:
+                    # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
+                    if not package in destiny.application._buffer:
+                        # Drawing connection - Rafael Sampaio
+                        package.draw_connection_arrow(destiny)
+
+                        # puting package in destiny device buffer - Rafael Sampaio
+                        destiny.application._buffer.add(package)
+                        package.was_forwarded = True
+                            
+    
+
+    
+     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+    def passive_scanning(self):
+        
+        #self.simulation_core.updateEventsCounter("Access Point BEACON")
+
+        #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="red")
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="<< beacon >>")
+
+        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        
+        # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+        if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+            # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+            self.visual_component.signal_radius += 33
+            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            
+            # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
+            all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            
+
+            # finding all the wifi devices on the canvas screen. - Rafael Sampaio
+            wifi_devices = self.simulation_core.canvas.find_withtag("wifi_device")
+            
+            # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
+            if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
+                # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
+                for device in all_coveraged_devices:
+                    if device in wifi_devices:
+                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
+                        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
+                    else:
+                        pass
+                        #log.msg("The device is not wireless based")
+            else:
+                log.msg("There is no wifi devices in this simulation or it is not in this wifi signal coverage area.")
+
+        else:
+            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+            self.visual_component.signal_radius = 1
+
+        self.simulation_core.canvas.update()
+        # Reactor will send an beacon frame using passive scanning method at each TBTT interval time. - Rafael Sampaio
+        reactor.callLater(self.TBTT, self.passive_scanning)
