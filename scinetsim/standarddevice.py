@@ -113,7 +113,7 @@ class Router(object):
         self.application.start(self.addr, self.port)
 
 
-class AccessPoint(object):
+class AccessPoint_old(object):
 
     def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
 
@@ -312,3 +312,49 @@ class WSNSinkNode(WirelessDevice):
         self.application.start(nearby_devices_list)
 
 
+
+class AccessPoint(WirelessDevice):
+    
+    def __init__(self, simulation_core,  base_device, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, coverage_area_radius):
+
+        self.base_device = base_device
+        self.application = import_and_instantiate_class_from_string(application)
+        self.application.base_device = self.base_device
+        
+        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
+        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
+        self.TBTT = TBTT or 0.3 #0.1024
+
+        # SSID maximum size is 32 characters. - Rafael Sampaio
+        self.SSID = SSID
+        self.name = self.SSID
+        self.WPA2_password = WPA2_password
+        self.is_wireless = is_wireless
+        self.coverage_area_radius = coverage_area_radius
+
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
+        
+        self.simulation_core = simulation_core
+        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
+        self.authenticated_devices = []
+        self.associated_devices = []
+        
+        self.visual_component.set_coverage_area_radius(self.coverage_area_radius)
+
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+        self.application.is_wireless = is_wireless
+        self.application.TBTT = self.TBTT
+        self.application.coverage_area_radius = coverage_area_radius
+
+
+        self.simulation_core.updateEventsCounter("Initializing Access Point")
+     
+    def run(self):
+        self.application.start()

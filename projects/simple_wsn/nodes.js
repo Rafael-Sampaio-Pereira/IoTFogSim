@@ -59,26 +59,7 @@
             "y": 380
         }
     ],
-    "access_points": [
-        { 
-            "id": 7,
-            "TBTT": 0.1024,
-            "SSID": "Rede privada 001",
-            "WPA2_password": "iotfogsim2019",
-            "simulation_ip": "192.121.0.1",
-            "real_ip": "127.0.0.1",
-            "port": 8082,
-            "icon": "ap_icon",
-            "coverage_area_radius": 50,
-            "router_addr": "127.0.0.1",
-            "router_port": 8081,
-            "application": "applications.accesspointapp.AccessPointApp",
-            "type": "access_point",
-            "is_wireless": true,
-            "x": 400,
-            "y": 300
-        }
-    ],
+    
     "routers": [
         { 
             "id": 3,
@@ -94,7 +75,22 @@
             "application": "applications.routerapp.RouterApp",
             "is_wireless": false,
             "x": 400,
-            "y": 200
+            "y": 200,
+            "access_points": [
+                { 
+                    "id": 7,
+                    "TBTT": 0.1024,
+                    "SSID": "Rede privada 001",
+                    "WPA2_password": "iotfogsim2019",
+                    "icon": "ap_icon",
+                    "coverage_area_radius": 200,
+                    "application": "applications.accesspointapp.AccessPointApp",
+                    "type": "access_point",
+                    "is_wireless": true,
+                    "x": 400,
+                    "y": 300
+                }
+            ]
         }
     ],
     "wireless_sensor_networks": [

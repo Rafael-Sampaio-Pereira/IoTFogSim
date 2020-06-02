@@ -1,0 +1,26 @@
+2020-06-01T21:52:45-0300 [-] Creating router ...
+2020-06-01T21:52:45-0300 [-] Initializing Router - Number of events: 1
+2020-06-01T21:52:46-0300 [-] RouterFactory starting on 8081
+2020-06-01T21:52:46-0300 [-] Creating AccessPoint station ...
+2020-06-01T21:52:46-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-01T21:52:46-0300 [stderr#error] Exception in Tkinter callback
+2020-06-01T21:52:46-0300 [stderr#error] Traceback (most recent call last):
+2020-06-01T21:52:46-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-06-01T21:52:46-0300 [stderr#error]     return self.func(*args)
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 106, in <lambda>
+2020-06-01T21:52:46-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 60, in open_project
+2020-06-01T21:52:46-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 152, in load_nodes
+2020-06-01T21:52:46-0300 [stderr#error]     ap.run()
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 360, in run
+2020-06-01T21:52:46-0300 [stderr#error]     self.application.start()
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 236, in start
+2020-06-01T21:52:46-0300 [stderr#error]     self.draw_connection_to_base_arrow()
+2020-06-01T21:52:46-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 292, in draw_connection_to_base_arrow
+2020-06-01T21:52:46-0300 [stderr#error]     self.simulation_core.canvas.after(10, self.update_connection_arrow, connection_id)
+2020-06-01T21:52:46-0300 [stderr#error] AttributeError: 'AccessPointApp' object has no attribute 'update_connection_arrow'
+2020-06-01T21:52:46-0300 [stdout#info] This divice have no simulation core instance
+2020-06-01T21:53:07-0300 [-] Received SIGINT, shutting down.
+2020-06-01T21:53:07-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-01T21:53:07-0300 [-] Main loop terminated.
