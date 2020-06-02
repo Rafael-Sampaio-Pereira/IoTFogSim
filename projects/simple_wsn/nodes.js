@@ -31,7 +31,7 @@
             "name": "Fog Broker Node", 
             "simulation_ip": "192.121.0.1",
             "real_ip": "127.0.0.1",
-            "icon": "server_icon",
+            "icon": "broker_icon",
             "type": "server",
             "port": 5100,
             "is_wireless": false,
