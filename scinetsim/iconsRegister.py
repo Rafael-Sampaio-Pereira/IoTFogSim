@@ -16,6 +16,7 @@ iconsList = {
 	"esp8266_icon": "iotfogsim_esp8266.png",
 	"esp8266_signal_icon": "iotfogsim_esp8266_signal.png",
 	"internet_icon": "iotfogsim_internet.png",
+	"notebook_icon": "iotfogsim_notebook.png",
 	"restfull_server_icon": "iotfogsim_restfull_server.png",
 	"router_icon": "iotfogsim_router.png",
 	"server_icon": "iotfogsim_server.png",

@@ -9,6 +9,7 @@ from scinetsim.standarddevice import Router
 from scinetsim.standarddevice import WSNSensorNode
 from scinetsim.standarddevice import WSNSinkNode
 from scinetsim.standarddevice import WirelessSensorNetwork
+from scinetsim.standarddevice import WirelessComputer
 
 from scinetsim.ScrollableScreen import ScrollableScreen
 from scinetsim.simulationcore import SimulationCore
@@ -235,6 +236,14 @@ def load_nodes(project_name, simulation_core):
 
 				for deivce in WSN_network_group.sensors_list:
 					deivce.run()
+
+			
+			for computer in data['wireless_computers']:
+    				
+				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+				#simulation_core.appendFogNodes(fog) 
+				time.sleep(interval)
+				comp.run()
 
 
 				

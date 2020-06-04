@@ -80,6 +80,8 @@ class StandardClientDevice(object):
         
 
 
+# ||||||||||||||||||||||| ROUTER ||||||||||||||||||||||||
+
 class Router(object):
 
     def __init__(self, simulation_core, port, real_ip, simulation_ip, id,name, icon, is_wireless, x, y, application, coverage_area_radius):
@@ -112,56 +114,10 @@ class Router(object):
 
         self.application.start(self.addr, self.port)
 
-
-class AccessPoint_old(object):
-
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
-
-        self.application = import_and_instantiate_class_from_string(application)
-        
-        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
-        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
-        self.TBTT = TBTT or 0.3 #0.1024
-        self.simulation_ip = simulation_ip
-        self.addr = real_ip
-        self.port = port
-
-        # SSID maximum size is 32 characters. - Rafael Sampaio
-        self.SSID = SSID
-        self.name = self.SSID
-        self.WPA2_password = WPA2_password
-        self.is_wireless = is_wireless
-
-        icon_file = getIconFileName(icon)
-        self.icon = ICONS_PATH+icon_file
-
-        # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
-
-        self.id = id
-        
-        self.simulation_core = simulation_core
-        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
-        self.authenticated_devices = []
-        self.associated_devices = []
-        
-        self.visual_component.set_coverage_area_radius(200)
-
-        self.application.visual_component = self.visual_component
-        self.application.simulation_core = self.simulation_core
-        self.application.is_wireless = is_wireless
-        self.application.TBTT = self.TBTT
-        self.application.router_addr = router_addr
-        self.application.router_port = router_port
-
-        self.simulation_core.updateEventsCounter("Initializing Access Point")
-     
-    def run(self):
-        self.application.start(self.addr, self.port)
+# ||||||||||||||||||||||| END ROUTER |||||||||||||||||||||||
 
 
-
-
+# ||||||||||||||||||||||| WIRELESS DEVICE ||||||||||||||||||
 
 class WirelessDevice(object):
     def __init__(self):
@@ -185,7 +141,11 @@ class WirelessDevice(object):
 
         return all_nearby_device
 
+# ||||||||||||||||||| END WIRELESS DEVICE  ||||||||||||||||||
 
+
+
+# |||||||||||||||||||||||| CONNECTION  ||||||||||||||||||||||
 
 class Connection(object):
 
@@ -209,8 +169,10 @@ class Connection(object):
         self.simulation_core.canvas.delete(self.id)
         self.create_connection(self.simulation_core, self.device1, self.device2)
 
+# ||||||||||||||||||||| END CONNECTION  |||||||||||||||||||
 
-        
+
+# |||||||||||||||||||||||||| WSN ||||||||||||||||||||||||||    
 
 class WirelessSensorNetwork(object):
     
@@ -240,12 +202,6 @@ class WirelessSensorNetwork(object):
 
         except Exception as e:
             pass
-
-
-
-
-
-
 
 
 class WSNSensorNode(WirelessDevice):
@@ -311,7 +267,10 @@ class WSNSinkNode(WirelessDevice):
         nearby_devices_list = self.get_nearby_devices_list()
         self.application.start(nearby_devices_list)
 
+# |||||||||||||||||||||||||| END WSN |||||||||||||||||||||||||| 
 
+
+# |||||||||||||||||||||||| ACCESS POINT  ||||||||||||||||||||||
 
 class AccessPoint(WirelessDevice):
     
@@ -358,3 +317,91 @@ class AccessPoint(WirelessDevice):
      
     def run(self):
         self.application.start()
+    
+# |||||||||||||||||||||||| END ACCESS POINT  ||||||||||||||||||||||
+
+
+# |||||||||||||||||||||||| WIRELESS COMPUTER  |||||||||||||||||||||
+
+class WirelessComputer(WirelessDevice):
+       
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+
+        self.application = import_and_instantiate_class_from_string(application)
+        self.is_wireless = is_wireless
+        self.coverage_area_radius = coverage_area_radius
+       
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        self.name = name+'_'+str(id)
+        #self.id = id
+        self.simulation_core = simulation_core
+
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
+        self.simulation_core.updateEventsCounter("Initializing sensor node")
+        self.application.visual_component = self.visual_component
+        self.application.visual_component.coverage_area_radius = coverage_area_radius
+        self.application.simulation_core = self.simulation_core
+        self.application.coverage_area_radius = coverage_area_radius
+        
+        if(self.is_wireless == True):
+            # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+    
+    def run(self):
+        self.application.start()
+
+# |||||||||||||||||||||||| END WIRELESS COMPUTER  |||||||||||||||||
+
+
+
+################################# old codes section ################################
+
+class AccessPoint_old(object):
+    
+    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
+
+        self.application = import_and_instantiate_class_from_string(application)
+        
+        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
+        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
+        self.TBTT = TBTT or 0.3 #0.1024
+        self.simulation_ip = simulation_ip
+        self.addr = real_ip
+        self.port = port
+
+        # SSID maximum size is 32 characters. - Rafael Sampaio
+        self.SSID = SSID
+        self.name = self.SSID
+        self.WPA2_password = WPA2_password
+        self.is_wireless = is_wireless
+
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        #self.id = uuid.uuid4().fields[-1]
+
+        self.id = id
+        
+        self.simulation_core = simulation_core
+        self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
+        self.authenticated_devices = []
+        self.associated_devices = []
+        
+        self.visual_component.set_coverage_area_radius(200)
+
+        self.application.visual_component = self.visual_component
+        self.application.simulation_core = self.simulation_core
+        self.application.is_wireless = is_wireless
+        self.application.TBTT = self.TBTT
+        self.application.router_addr = router_addr
+        self.application.router_port = router_port
+
+        self.simulation_core.updateEventsCounter("Initializing Access Point")
+     
+    def run(self):
+        self.application.start(self.addr, self.port)
+
