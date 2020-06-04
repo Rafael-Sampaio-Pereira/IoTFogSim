@@ -17,6 +17,11 @@ class WirelessComputerApp(object):
     
     def start(self):
         pass
+        #self.print_info()
+
+    def print_info(self):
+        print(self.associated_ap)
+        reactor.callLater(3, self.print_info)
 
 
     def collect_and_send_data(self):

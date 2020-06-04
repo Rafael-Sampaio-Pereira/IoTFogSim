@@ -1,0 +1,10 @@
+2020-06-04T11:39:00-0300 [-] Creating router ...
+2020-06-04T11:39:00-0300 [-] Initializing Router - Number of events: 1
+2020-06-04T11:39:01-0300 [-] RouterFactory starting on 8081
+2020-06-04T11:39:01-0300 [-] Creating AccessPoint station ...
+2020-06-04T11:39:01-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-04T11:39:01-0300 [-] Initializing Server - Number of events: 3
+2020-06-04T11:39:02-0300 [-] BrokerFactory starting on 5100
+2020-06-04T11:39:02-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-04T11:39:02-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-04T11:39:02-0300 [stdout#info] This divice have no simulation core instance

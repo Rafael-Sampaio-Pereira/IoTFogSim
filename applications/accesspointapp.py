@@ -228,6 +228,7 @@ class AccessPointApp:
         self.coverage_area_radius = None
         self.TBTT = None
         self._buffer = set()
+        self.associated_devices = set()
 
         # The base device can be a router or switch that use this access point as an input interface - Rafael Sampaio
         self.base_device = None
@@ -264,10 +265,13 @@ class AccessPointApp:
             # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
             if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
                 # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
-                for device in all_coveraged_devices:
-                    if device in wifi_devices:
+                for device_icon in all_coveraged_devices:
+                    # print(device_icon)
+                    if device_icon in wifi_devices:
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
+                        device = self.get_device_by_icon(device_icon)
+                        self.associate(device)
                     else:
                         pass
                         #log.msg("The device is not wireless based")
@@ -297,44 +301,27 @@ class AccessPointApp:
 
 
     def associate(self, device):
-        pass
-
-
-
-        # def get_nearby_devices_list(self):
-        #     all_nearby_device = set()
-        # # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
-        # nearby_devices_icon_list = self.find_nearby_devices_icon()
-
-        # for icon_id in nearby_devices_icon_list:
-        #    device = self.WSN_network_group.get_wsn_device_by_icon(icon_id)
-
-        #    if device != None:
-        #     all_nearby_device.add(device)
-
-        # return all_nearby_device
-
+        # esta associação está sendo feita de forma simples e precisa ser melhorada, incluido passos como autenticação. - Rafael Sampaio
+        if not device in self.associated_devices:
+            self.associated_devices.add(device)
+            device.application.associated_ap = self
+            self.print_associated_devices()
+            
 
     def get_device_by_icon(self, icon_id):
         try:
             founded_device = None
-            
-            for device in self.simulation_core.allCloudNodes:
+    
+            for device in self.simulation_core.allNodes:
                 if device.visual_component.draggable_img == icon_id:
                     founded_device = device
-            
-            for device in self.simulation_core.allFogNodes:
-                if device.visual_component.draggable_img == icon_id:
-                    founded_device = device
-
-            for device in self.simulation_core.allIoTNodes:
-                if device.visual_component.draggable_img == icon_id:
-                    founded_device = device
-            
-            
 
             if founded_device != None:
                 return founded_device
 
         except Exception as e:
             pass
+
+    def print_associated_devices(self):
+        for device in self.associated_devices:
+            print("Assossiated to :", device.name)

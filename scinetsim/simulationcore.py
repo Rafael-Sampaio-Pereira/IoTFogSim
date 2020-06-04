@@ -13,10 +13,11 @@ class SimulationCore(object):
 	def __init__(self):
 		# self.allWirelessConnections = defaultdict(list)
 		self.allConnections = set()
-		self.allFogNodes = defaultdict(list)
-		self.allCloudNodes = defaultdict(list)
+		self.allNodes = set()
+		# self.allFogNodes = defaultdict(list)
+		# self.allCloudNodes = defaultdict(list)
 		#self.allAccessPointNodes = defaultdict(list)
-		self.allIoTNodes = defaultdict(list)
+		# self.allIoTNodes = defaultdict(list)
 		# self.allRouterNodes = defaultdict(list)
 		# self.allSinkNodes = defaultdict(list)
 		# self.allSensorNodes = defaultdict(list)
@@ -40,19 +41,19 @@ class SimulationCore(object):
 		# Updates events counter value on screen - Rafael Sampaio
 		self.canvas.itemconfig(self.simulation_screen.events_counter_label, text=str(self.eventsCounter))
 
-	def getFogNodeById(self, id):
-		try:
-			filtered_list = self.allFogNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no fog node whith the id %i"%(id))
+	# def getFogNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allFogNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no fog node whith the id %i"%(id))
 
-	def getCloudNodeById(self, id):
-		try:
-			filtered_list = self.allCloudNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no cloud node whith the id %i"%(id))
+	# def getCloudNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allCloudNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no cloud node whith the id %i"%(id))
 
 	# def getAccessPointNodeById(self, id):
 	# 	try:
@@ -82,12 +83,12 @@ class SimulationCore(object):
 	# 	except Exception as e:
 	# 		log.msg("There is no sensor whith the id %i"%(id))
 
-	def getIoTNodeById(self, id):
-		try:
-			filtered_list = self.allIoTNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no IoT node whith the id %i"%(id))
+	# def getIoTNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allIoTNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no IoT node whith the id %i"%(id))
 
 	def getConnectionById(self, id):
 		try:
@@ -103,17 +104,17 @@ class SimulationCore(object):
 		except Exception as e:
 			log.msg("There is no wireless connection whith the id %i"%(id))
 
-	def appendFogNodes(self, fog_node):
-		self.allFogNodes[fog_node.id].append(fog_node)
+	# def appendFogNodes(self, fog_node):
+	# 	self.allFogNodes[fog_node.id].append(fog_node)
 
-	def appendCloudNodes(self, cloud_node):
-		self.allCloudNodes[cloud_node.id].append(cloud_node)
+	# def appendCloudNodes(self, cloud_node):
+	# 	self.allCloudNodes[cloud_node.id].append(cloud_node)
 
-	# def appendAccessPointNode(self, ap):
-	# 	self.allAccessPointNodes[ap.id].append(ap)
+	# # def appendAccessPointNode(self, ap):
+	# # 	self.allAccessPointNodes[ap.id].append(ap)
 
-	def appendIoTNodes(self, iot_node):
-		self.allIoTNodes[iot_node.id].append(iot_node)
+	# def appendIoTNodes(self, iot_node):
+	# 	self.allIoTNodes[iot_node.id].append(iot_node)
 
 	# def appendRouterNodes(self, router_node):
 	# 	self.allRouterNodes[router_node.id].append(router_node)
@@ -130,19 +131,19 @@ class SimulationCore(object):
 	# def appendWirelessConnections(self, wireless_connection):
 	# 	self.allwirelessConnections[wireless_connection.id].append(wireless_connection)
 
-	def getAnyDeviceById(self, id):
+	# def getAnyDeviceById(self, id):
 		
-		if self.getFogNodeById(id):
-			if self.getFogNodeById(id).id == id:
-				return self.allFogNodes[id][0]
+	# 	if self.getFogNodeById(id):
+	# 		if self.getFogNodeById(id).id == id:
+	# 			return self.allFogNodes[id][0]
 
-		elif self.getCloudNodeById(id):
-			if self.getCloudNodeById(id).id == id:
-				return self.allCloudNodes[id][0]
+		# elif self.getCloudNodeById(id):
+		# 	if self.getCloudNodeById(id).id == id:
+		# 		return self.allCloudNodes[id][0]
 
-		elif self.getIoTNodeById(id):
-			if self.getIoTNodeById(id).id == id:
-				return self.allIoTNodes[id][0]
+		# elif self.getIoTNodeById(id):
+		# 	if self.getIoTNodeById(id).id == id:
+		# 		return self.allIoTNodes[id][0]
 
 		# elif self.getAccessPointNodeById(id):
 		# 	if self.getAccessPointById(id).id == id:

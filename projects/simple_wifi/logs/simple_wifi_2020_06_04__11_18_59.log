@@ -1,0 +1,298 @@
+2020-06-04T11:18:59-0300 [-] Creating router ...
+2020-06-04T11:18:59-0300 [-] Initializing Router - Number of events: 1
+2020-06-04T11:18:59-0300 [-] RouterFactory starting on 8081
+2020-06-04T11:18:59-0300 [-] Creating AccessPoint station ...
+2020-06-04T11:18:59-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-04T11:19:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:00-0300 [-] Initializing Server - Number of events: 3
+2020-06-04T11:19:00-0300 [-] BrokerFactory starting on 5100
+2020-06-04T11:19:00-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-04T11:19:01-0300 [stdout#info] None
+2020-06-04T11:19:01-0300 [stdout#info] This divice have no simulation core instance
+2020-06-04T11:19:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:19:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:19:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:20:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:20:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:21:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:21:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:22:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:22:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:23:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:23:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:24:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:24:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:07-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:09-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:10-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:12-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:13-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:15-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:16-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:18-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:19-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:21-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:22-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:24-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:25-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:27-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:28-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:30-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:31-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:33-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:34-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:36-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:37-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:39-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:40-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:42-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:43-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:45-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:46-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:48-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:49-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:51-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:52-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:54-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:55-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:25:57-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:25:58-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:26:00-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:26:01-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:26:03-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:26:04-0300 [stdout#info] <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>
+2020-06-04T11:26:06-0300 [stdout#info] <bound method AccessPointApp.print_associated_devices of <applications.accesspointapp.AccessPointApp object at 0x7fe668ef1f60>>
+2020-06-04T11:26:07-0300 [-] Received SIGINT, shutting down.
+2020-06-04T11:26:07-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-04T11:26:07-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-04T11:26:07-0300 [-] Main loop terminated.
