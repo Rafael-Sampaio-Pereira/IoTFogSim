@@ -130,16 +130,17 @@ def load_nodes(project_name, simulation_core):
 	# Interval between nodes creation and nodes start(run)- Rafael Sampaio
 	interval=0.5
 
-	with open('projects/'+project_name+'/nodes.js') as nodes_file:
-		data = json.load(nodes_file)
+	with open('projects/'+project_name+'/nodes.js', 'r') as nodes_file:
+		data = json.loads(nodes_file.read())
 		
 		if data:
     		
-			for router in data['routers']:
-
+			################## LOADING FOG DEVICES - Rafael Sampaio ##################
+			for router in data['fog']['routers']:
+    				
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
-				simulation_core.appendRouterNodes(rt)
+				simulation_core.appendFogNodes(rt)
 				time.sleep(interval)
 				rt.run()
 
@@ -148,71 +149,26 @@ def load_nodes(project_name, simulation_core):
 					log.msg("Creating AccessPoint station ...")
 
 					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
-					simulation_core.appendAccessPointNode(ap)
+					simulation_core.appendFogNodes(ap)
 					time.sleep(interval)
 					ap.run()
-		
-			for fog_node in data['fog_nodes']:
-				
-				log.msg("Creating fog node ...")
-				
-				if(fog_node['type'] == 'server'):
-					fog = StandardServerDevice(simulation_core, fog_node['port'], fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'], fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'], fog_node['coverage_area_radius'])
-					simulation_core.appendFogNodes(fog)
-					time.sleep(interval)
-					fog.run()
+			
+			for server in data['fog']['servers']:
+								
+				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
+				simulation_core.appendFogNodes(sr)
+				time.sleep(interval)
+				sr.run()
+			
+			for client in data['fog']['clients']:
+								
+				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
+				simulation_core.appendFogNodes(cl)
+				time.sleep(interval)
+				cl.run()
 					
-				elif(fog_node['type'] == 'client'):
-					fog = StandardClientDevice(simulation_core, fog_node['real_ip'], fog_node['simulation_ip'], fog_node['id'],fog_node['name'], fog_node['icon'], fog_node['is_wireless'], fog_node['x'], fog_node['y'], fog_node['application'], fog_node['coverage_area_radius'])
-					simulation_core.appendFogNodes(fog)
-					time.sleep(interval)
-					fog.run()
-					
-				else:
-					log.msg("Error: Type not found.")
 
-			for cloud_node in data['cloud_nodes']:
-				
-				log.msg("Creating cloud node ...")
-				
-				if(cloud_node['type'] == 'server'):
-					cloud = StandardServerDevice(simulation_core, cloud_node['port'], cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'], cloud_node['coverage_area_radius'])
-					simulation_core.appendCloudNodes(cloud)
-					time.sleep(interval)
-					cloud.run()
-					
-				elif(cloud_node['type'] == 'client'):
-					cloud = StandardClientDevice(simulation_core, cloud_node['real_ip'], cloud_node['simulation_ip'], cloud_node['id'],cloud_node['name'], cloud_node['icon'], cloud_node['is_wireless'], cloud_node['x'], cloud_node['y'], cloud_node['application'], cloud_node['coverage_area_radius'])
-					simulation_core.appendCloudNodes(cloud)
-					time.sleep(interval)
-					cloud.run()
-					
-				else:
-					log.msg("Error: Type not found.")
-
-			for iot_node in data['iot_nodes']:
-				
-				log.msg("Creating iot node ...")
-				iot = None
-				
-				if(iot_node['type'] == 'server'):
-					iot = StandardServerDevice(simulation_core, iot_node['port'], iot_node['real_ip'], iot_node['simulation_ip'], iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'], iot_node['coverage_area_radius'])
-					simulation_core.appendIoTNodes(iot)
-					time.sleep(interval)
-					iot.run()
-					
-				elif(iot_node['type'] == 'client'):
-					iot = StandardClientDevice(simulation_core, iot_node['real_ip'], iot_node['simulation_ip'],  iot_node['id'],iot_node['name'], iot_node['icon'], iot_node['is_wireless'], iot_node['x'], iot_node['y'], iot_node['application'], iot_node['coverage_area_radius'])
-					simulation_core.appendIoTNodes(iot)
-					time.sleep(interval)
-					iot.run()
-
-				else:
-					log.msg("Error: Type not found.")
-
-
-
-			for wsn in data['wireless_sensor_networks']:
+			for wsn in data['fog']['wireless_sensor_networks']:
 
 				sink_cont = 0
 				sensor_cont = 0
@@ -238,12 +194,140 @@ def load_nodes(project_name, simulation_core):
 					deivce.run()
 
 			
-			for computer in data['wireless_computers']:
-    				
+			for computer in data['fog']['wireless_computers']:
+					
 				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
-				#simulation_core.appendFogNodes(fog) 
+				simulation_core.appendFogNodes(comp) 
 				time.sleep(interval)
 				comp.run()
+
+
+
+			
+			################## LOADING CLOUD DEVICES - Rafael Sampaio ##################
+			for router in data['cloud']['routers']:
+    				
+
+				log.msg("Creating router ...")
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
+				simulation_core.appendFogNodes(rt)
+				time.sleep(interval)
+				rt.run()
+
+				for access_point in router['access_points']:
+						
+					log.msg("Creating AccessPoint station ...")
+
+					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
+					simulation_core.appendFogNodes(ap)
+					time.sleep(interval)
+					ap.run()
+			
+			for server in data['cloud']['servers']:
+								
+				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
+				simulation_core.appendFogNodes(sr)
+				time.sleep(interval)
+				sr.run()
+					
+
+			for wsn in data['cloud']['wireless_sensor_networks']:
+
+				sink_cont = 0
+				sensor_cont = 0
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+
+				for sink_node in wsn['sink_nodes']:
+					sink_cont += 1
+					sk_node = WSNSinkNode(simulation_core, sink_cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
+					WSN_network_group.sink_list.add(sk_node)
+					time.sleep(interval)
+
+				for sensor_node in wsn['sensor_nodes']:
+					sensor_cont += 1
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					WSN_network_group.sensors_list.add(sr_node)
+					time.sleep(interval)
+
+				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
+				for deivce in WSN_network_group.sink_list:
+					deivce.run()
+
+				for deivce in WSN_network_group.sensors_list:
+					deivce.run()
+
+			
+			for computer in data['cloud']['wireless_computers']:
+					
+				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+				simulation_core.appendFogNodes(comp) 
+				time.sleep(interval)
+				comp.run()
+
+
+			################## LOADING IOT DEVICES - Rafael Sampaio ##################
+			for router in data['iot']['routers']:
+    				
+
+				log.msg("Creating router ...")
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
+				simulation_core.appendFogNodes(rt)
+				time.sleep(interval)
+				rt.run()
+
+				for access_point in router['access_points']:
+						
+					log.msg("Creating AccessPoint station ...")
+
+					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
+					simulation_core.appendFogNodes(ap)
+					time.sleep(interval)
+					ap.run()
+			
+			for server in data['iot']['servers']:
+								
+				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
+				simulation_core.appendFogNodes(sr)
+				time.sleep(interval)
+				sr.run()
+					
+
+			for wsn in data['iot']['wireless_sensor_networks']:
+
+				sink_cont = 0
+				sensor_cont = 0
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+
+				for sink_node in wsn['sink_nodes']:
+					sink_cont += 1
+					sk_node = WSNSinkNode(simulation_core, sink_cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
+					WSN_network_group.sink_list.add(sk_node)
+					time.sleep(interval)
+
+				for sensor_node in wsn['sensor_nodes']:
+					sensor_cont += 1
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					WSN_network_group.sensors_list.add(sr_node)
+					time.sleep(interval)
+
+				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
+				for deivce in WSN_network_group.sink_list:
+					deivce.run()
+
+				for deivce in WSN_network_group.sensors_list:
+					deivce.run()
+
+			
+			for computer in data['iot']['wireless_computers']:
+					
+				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+				simulation_core.appendFogNodes(comp) 
+				time.sleep(interval)
+				comp.run()
+
+
+				
+
 
 
 				

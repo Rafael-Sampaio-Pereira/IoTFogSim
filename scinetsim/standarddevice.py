@@ -119,6 +119,7 @@ class Router(object):
 
 # ||||||||||||||||||||||| WIRELESS DEVICE ||||||||||||||||||
 
+#this is only for wsn - Rafael Sampaio
 class WirelessDevice(object):
     def __init__(self):
         pass
@@ -272,7 +273,7 @@ class WSNSinkNode(WirelessDevice):
 
 # |||||||||||||||||||||||| ACCESS POINT  ||||||||||||||||||||||
 
-class AccessPoint(WirelessDevice):
+class AccessPoint(object):
     
     def __init__(self, simulation_core,  base_device, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, coverage_area_radius):
 
@@ -323,7 +324,7 @@ class AccessPoint(WirelessDevice):
 
 # |||||||||||||||||||||||| WIRELESS COMPUTER  |||||||||||||||||||||
 
-class WirelessComputer(WirelessDevice):
+class WirelessComputer(object):
        
     def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
@@ -334,8 +335,8 @@ class WirelessComputer(WirelessDevice):
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
 
-        self.name = name+'_'+str(id)
-        #self.id = id
+        self.name = name
+        self.id = id
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless

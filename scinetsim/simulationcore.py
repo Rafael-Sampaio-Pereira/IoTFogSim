@@ -15,9 +15,9 @@ class SimulationCore(object):
 		self.allConnections = set()
 		self.allFogNodes = defaultdict(list)
 		self.allCloudNodes = defaultdict(list)
-		self.allAccessPointNodes = defaultdict(list)
+		#self.allAccessPointNodes = defaultdict(list)
 		self.allIoTNodes = defaultdict(list)
-		self.allRouterNodes = defaultdict(list)
+		# self.allRouterNodes = defaultdict(list)
 		# self.allSinkNodes = defaultdict(list)
 		# self.allSensorNodes = defaultdict(list)
 		self.canvas = None
@@ -54,19 +54,19 @@ class SimulationCore(object):
 		except Exception as e:
 			log.msg("There is no cloud node whith the id %i"%(id))
 
-	def getAccessPointNodeById(self, id):
-		try:
-			filtered_list = self.allAccessPointNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no access point whith the id %i"%(id))
+	# def getAccessPointNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allAccessPointNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no access point whith the id %i"%(id))
 
-	def getRouterNodeById(self, id):
-		try:
-			filtered_list = self.allRouterNodes[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no router whith the id %i"%(id))
+	# def getRouterNodeById(self, id):
+	# 	try:
+	# 		filtered_list = self.allRouterNodes[id]
+	# 		return filtered_list[0]
+	# 	except Exception as e:
+	# 		log.msg("There is no router whith the id %i"%(id))
 	
 	# def getSinkNodeById(self, id):
 	# 	try:
@@ -109,14 +109,14 @@ class SimulationCore(object):
 	def appendCloudNodes(self, cloud_node):
 		self.allCloudNodes[cloud_node.id].append(cloud_node)
 
-	def appendAccessPointNode(self, ap):
-		self.allAccessPointNodes[ap.id].append(ap)
+	# def appendAccessPointNode(self, ap):
+	# 	self.allAccessPointNodes[ap.id].append(ap)
 
 	def appendIoTNodes(self, iot_node):
 		self.allIoTNodes[iot_node.id].append(iot_node)
 
-	def appendRouterNodes(self, router_node):
-		self.allRouterNodes[router_node.id].append(router_node)
+	# def appendRouterNodes(self, router_node):
+	# 	self.allRouterNodes[router_node.id].append(router_node)
 
 	# def appendSinkNodes(self, sink_node):
 	# 	self.allSinkNodes[sink_node.id].append(sink_node)
@@ -144,13 +144,13 @@ class SimulationCore(object):
 			if self.getIoTNodeById(id).id == id:
 				return self.allIoTNodes[id][0]
 
-		elif self.getAccessPointNodeById(id):
-			if self.getAccessPointById(id).id == id:
-				return self.allAccessPointNodes[id][0]
+		# elif self.getAccessPointNodeById(id):
+		# 	if self.getAccessPointById(id).id == id:
+		# 		return self.allAccessPointNodes[id][0]
 
-		elif self.getRouterNodeById(id):
-			if self.getRouterNodeById(id).id == id:
-				return self.allRouterNodes[id][0]
+		# elif self.getRouterNodeById(id):
+		# 	if self.getRouterNodeById(id).id == id:
+		# 		return self.allRouterNodes[id][0]
 		
 		# elif self.getSinkNodeById(id):
 		# 	if self.getSinkNodeById(id).id == id:

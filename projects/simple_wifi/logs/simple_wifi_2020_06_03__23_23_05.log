@@ -1,0 +1,13 @@
+2020-06-03T23:23:05-0300 [stderr#error] Exception in Tkinter callback
+2020-06-03T23:23:05-0300 [stderr#error] Traceback (most recent call last):
+2020-06-03T23:23:05-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-06-03T23:23:05-0300 [stderr#error]     return self.func(*args)
+2020-06-03T23:23:05-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 107, in <lambda>
+2020-06-03T23:23:05-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-06-03T23:23:05-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 61, in open_project
+2020-06-03T23:23:05-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-06-03T23:23:05-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 133, in load_nodes
+2020-06-03T23:23:05-0300 [stderr#error]     with open('projects/'+project_name+'/nodes.js', r) as nodes_file:
+2020-06-03T23:23:05-0300 [stderr#error] NameError: name 'r' is not defined
+2020-06-03T23:23:36-0300 [-] Received SIGINT, shutting down.
+2020-06-03T23:23:36-0300 [-] Main loop terminated.

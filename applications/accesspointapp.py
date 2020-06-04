@@ -295,3 +295,38 @@ class AccessPointApp:
         self.simulation_core.canvas.delete(id)
         self.draw_connection_to_base_arrow()
 
+
+    def associate(self, device):
+        pass
+
+        # def get_nearby_devices_list(self):
+        #     all_nearby_device = set()
+        # # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
+        # nearby_devices_icon_list = self.find_nearby_devices_icon()
+
+        # for icon_id in nearby_devices_icon_list:
+        #    device = self.WSN_network_group.get_wsn_device_by_icon(icon_id)
+
+        #    if device != None:
+        #     all_nearby_device.add(device)
+
+        # return all_nearby_device
+
+
+    # def get_device_by_icon(self, icon_id):
+    #     try:
+    #         founded_device = None
+            
+    #         for device in self.sensors_list:
+    #             if device.visual_component.draggable_img == icon_id:
+    #                 founded_device = device
+            
+    #         for device in self.sink_list:
+    #             if device.visual_component.draggable_img == icon_id:
+    #                 founded_device = device
+
+    #         if founded_device != None:
+    #             return founded_device
+
+    #     except Exception as e:
+    #         pass
