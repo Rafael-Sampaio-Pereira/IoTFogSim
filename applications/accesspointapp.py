@@ -299,6 +299,8 @@ class AccessPointApp:
     def associate(self, device):
         pass
 
+
+
         # def get_nearby_devices_list(self):
         #     all_nearby_device = set()
         # # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
@@ -313,20 +315,26 @@ class AccessPointApp:
         # return all_nearby_device
 
 
-    # def get_device_by_icon(self, icon_id):
-    #     try:
-    #         founded_device = None
+    def get_device_by_icon(self, icon_id):
+        try:
+            founded_device = None
             
-    #         for device in self.sensors_list:
-    #             if device.visual_component.draggable_img == icon_id:
-    #                 founded_device = device
+            for device in self.simulation_core.allCloudNodes:
+                if device.visual_component.draggable_img == icon_id:
+                    founded_device = device
             
-    #         for device in self.sink_list:
-    #             if device.visual_component.draggable_img == icon_id:
-    #                 founded_device = device
+            for device in self.simulation_core.allFogNodes:
+                if device.visual_component.draggable_img == icon_id:
+                    founded_device = device
 
-    #         if founded_device != None:
-    #             return founded_device
+            for device in self.simulation_core.allIoTNodes:
+                if device.visual_component.draggable_img == icon_id:
+                    founded_device = device
+            
+            
 
-    #     except Exception as e:
-    #         pass
+            if founded_device != None:
+                return founded_device
+
+        except Exception as e:
+            pass

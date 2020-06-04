@@ -210,7 +210,7 @@ def load_nodes(project_name, simulation_core):
 
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
-				simulation_core.appendFogNodes(rt)
+				simulation_core.appendCloudNodes(rt)
 				time.sleep(interval)
 				rt.run()
 
@@ -219,16 +219,23 @@ def load_nodes(project_name, simulation_core):
 					log.msg("Creating AccessPoint station ...")
 
 					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
-					simulation_core.appendFogNodes(ap)
+					simulation_core.appendCloudNodes(ap)
 					time.sleep(interval)
 					ap.run()
 			
 			for server in data['cloud']['servers']:
 								
 				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
-				simulation_core.appendFogNodes(sr)
+				simulation_core.appendCloudNodes(sr)
 				time.sleep(interval)
 				sr.run()
+
+			for client in data['cloud']['clients']:
+								
+				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
+				simulation_core.appendCloudNodes(cl)
+				time.sleep(interval)
+				cl.run()
 					
 
 			for wsn in data['cloud']['wireless_sensor_networks']:
@@ -260,7 +267,7 @@ def load_nodes(project_name, simulation_core):
 			for computer in data['cloud']['wireless_computers']:
 					
 				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
-				simulation_core.appendFogNodes(comp) 
+				simulation_core.appendCloudNodes(comp) 
 				time.sleep(interval)
 				comp.run()
 
@@ -271,7 +278,7 @@ def load_nodes(project_name, simulation_core):
 
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
-				simulation_core.appendFogNodes(rt)
+				simulation_core.appendIoTNodes(rt)
 				time.sleep(interval)
 				rt.run()
 
@@ -280,16 +287,23 @@ def load_nodes(project_name, simulation_core):
 					log.msg("Creating AccessPoint station ...")
 
 					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
-					simulation_core.appendFogNodes(ap)
+					simulation_core.appendIoTNodes(ap)
 					time.sleep(interval)
 					ap.run()
 			
 			for server in data['iot']['servers']:
 								
 				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
-				simulation_core.appendFogNodes(sr)
+				simulation_core.appendIoTNodes(sr)
 				time.sleep(interval)
 				sr.run()
+
+			for client in data['iot']['clients']:
+								
+				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
+				simulation_core.appendIoTNodes(cl)
+				time.sleep(interval)
+				cl.run()
 					
 
 			for wsn in data['iot']['wireless_sensor_networks']:
@@ -321,7 +335,7 @@ def load_nodes(project_name, simulation_core):
 			for computer in data['iot']['wireless_computers']:
 					
 				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
-				simulation_core.appendFogNodes(comp) 
+				simulation_core.appendIoTNodes(comp) 
 				time.sleep(interval)
 				comp.run()
 
