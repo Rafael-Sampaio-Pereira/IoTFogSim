@@ -299,12 +299,25 @@ class AccessPointApp:
         self.simulation_core.canvas.delete(id)
         self.draw_connection_to_base_arrow()
 
+    def draw_connection_to_associated_device_arrow(self, device):
+        x1 = self.visual_component.x
+        y1 = self.visual_component.y
+        x2 = device.visual_component.x
+        y2 = device.visual_component.y
+        connection_id = self.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow="both", width=1, dash=(4,2))
+        self.simulation_core.canvas.after(10, self.update_connection_to_associated_device_arrow, None, connection_id, device)
+
+    def update_connection_to_associated_device_arrow(self,event, id, device):
+        self.simulation_core.canvas.delete(id)
+        self.draw_connection_to_associated_device_arrow(device)
+
 
     def associate(self, device):
         # esta associação está sendo feita de forma simples e precisa ser melhorada, incluido passos como autenticação. - Rafael Sampaio
         if not device in self.associated_devices:
             self.associated_devices.add(device)
             device.application.associated_ap = self
+            self.draw_connection_to_associated_device_arrow(device)
             self.print_associated_devices()
             
 
