@@ -240,6 +240,11 @@ class AccessPointApp:
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
     def passive_scanning(self):
         
+        
+        print(self.base_device)
+
+
+
         #self.simulation_core.updateEventsCounter("Access Point BEACON")
 
         #log.msg("%s - Sending Wifi 802.11/* beacon broadcast message..."%(self.SSID))
@@ -314,9 +319,10 @@ class AccessPointApp:
 
     def associate(self, device):
         # esta associação está sendo feita de forma simples e precisa ser melhorada, incluido passos como autenticação. - Rafael Sampaio
-        if not device in self.associated_devices:
+        if not (device in self.associated_devices) and device.application.is_connected == False:
             self.associated_devices.add(device)
             device.application.associated_ap = self
+            device.application.is_connected = True
             self.draw_connection_to_associated_device_arrow(device)
             self.print_associated_devices()
             

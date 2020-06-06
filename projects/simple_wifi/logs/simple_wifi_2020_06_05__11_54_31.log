@@ -1,0 +1,28 @@
+2020-06-05T11:54:31-0300 [-] Creating router ...
+2020-06-05T11:54:31-0300 [-] Initializing Router - Number of events: 1
+2020-06-05T11:54:32-0300 [-] RouterFactory starting on 8081
+2020-06-05T11:54:32-0300 [-] Creating AccessPoint station ...
+2020-06-05T11:54:32-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-05T11:54:33-0300 [-] Initializing Server - Number of events: 3
+2020-06-05T11:54:33-0300 [-] BrokerFactory starting on 5100
+2020-06-05T11:54:33-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-05T11:54:34-0300 [stdout#info] Not connected
+2020-06-05T11:54:34-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-05T11:54:34-0300 [stdout#info] This divice have no simulation core instance
+2020-06-05T11:54:37-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	builtins.TypeError: verify_wireless_connection() missing 1 required positional argument: 'interval'
+	
+2020-06-05T11:54:55-0300 [-] Received SIGINT, shutting down.
+2020-06-05T11:54:55-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-05T11:54:55-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-05T11:54:55-0300 [-] Main loop terminated.

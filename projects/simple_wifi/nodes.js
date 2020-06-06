@@ -3,15 +3,15 @@
         "servers": [
             { 
                 "id": 2,
-                "name": "Fog Broker Node", 
+                "name": "Web Server", 
                 "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
-                "port": 5100,
+                "port": 8082,
                 "is_wireless": false,
                 "coverage_area_radius": 0,
-                "application": "applications.mqttapp.BrokerApp",
+                "application": "applications.httpapp.HttpServerApp",
                 "x": 250,
                 "y": 175
             }

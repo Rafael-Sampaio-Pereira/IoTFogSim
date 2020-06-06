@@ -2,8 +2,7 @@ from twisted.internet import protocol
 from twisted.python import log
 import json
 import codecs
-
-from scinetsim.functions import extract_package_contents
+from twisted.internet import reactor, protocol, endpoints
 
 
 class HttpClientApp(protocol.Protocol):
@@ -63,22 +62,46 @@ class HttpClientApp(protocol.Protocol):
         self.simulation_core.updateEventsCounter("Http response received")
 
 
-class HttpServerApp(protocol.Protocol):
+
+
+
+
+class HttpServerApp:
+    
+    def __init__(self):
+        self.visual_component = None
+        self.simulation_core =  None
+
+    def start(self, addr, port):
+        
+        server_factory = HttpServerAppFactory(self.visual_component, self.simulation_core)
+        server_factory.noisy = False
+        # starting http server - Rafael Sampaio
+        endpoints.serverFromString(reactor, "tcp:interface={}:{}".format(addr, port)).listen(server_factory)
+        # updating server name (ip:port) on screen - Rafael Sampaio
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(addr+":"+str(port))) 
+
+class HttpServerAppFactory(protocol.Factory):
+    def __init__(self, visual_component, simulation_core):
+        self.visual_component = visual_component
+        self.simulation_core = simulation_core
+
+    def buildProtocol(self, addr):
+        return HttpServerAppProtocol(self)
+
+class HttpServerAppProtocol(protocol.Protocol):
     
     def __init__(self):
         self.visual_component = None
         self.simulation_core = None
 
-        self.source_addr = "127.0.0.1"
-        self.source_port = 5000 
-
-        self.destiny_addr = None
-        self.destiny_port = None
+        self.source_addr = self.transport.getHost().host
+        self.source_port = self.transport.getHost().port
 
         self.router_addr = "127.0.0.1"
         self.router_port = 80
 
-        self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
+        #self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
     def connectionMade(self):
         self.simulation_core.updateEventsCounter("Connection received")
@@ -103,8 +126,8 @@ class HttpServerApp(protocol.Protocol):
         log.msg("Received from client %s"%(payload))
 
         package = {
-                        "destiny_addr": self.destiny_addr,
-                        "destiny_port": self.destiny_port,
+                        "destiny_addr": source_addr,
+                        "destiny_port": source_port,
                         "source_addr": self.source_addr,
                         "source_port": self.source_port,
                         "type": 'http',

@@ -1,0 +1,28 @@
+2020-06-06T12:25:14-0300 [-] Creating router ...
+2020-06-06T12:25:14-0300 [-] Initializing Router - Number of events: 1
+2020-06-06T12:25:15-0300 [-] RouterFactory starting on 8081
+2020-06-06T12:25:15-0300 [-] Creating AccessPoint station ...
+2020-06-06T12:25:15-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-06T12:25:15-0300 [stdout#info] inico set()
+2020-06-06T12:25:15-0300 [stdout#info] meio set()
+2020-06-06T12:25:15-0300 [-] Initializing Server - Number of events: 3
+2020-06-06T12:25:16-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-06T12:25:16-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-06T12:25:16-0300 [stdout#info] Not connected to a wireless access point
+2020-06-06T12:25:16-0300 [stdout#info] meio set()
+2020-06-06T12:25:16-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-06T12:25:16-0300 [stdout#info] This divice have no simulation core instance
+2020-06-06T12:25:16-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:16-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [stdout#info] meio {b'{"destiny_addr": "127.0.0.1", "destiny_port": "8082", "source_addr": "127.0.0.1", "source_port": "8888", "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-06T12:25:17-0300 [-] Received SIGINT, shutting down.
+2020-06-06T12:25:17-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-06T12:25:17-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-06T12:25:17-0300 [-] Main loop terminated.
