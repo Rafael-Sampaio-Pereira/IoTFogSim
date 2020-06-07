@@ -1,0 +1,76 @@
+2020-06-07T10:30:31-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T10:30:31-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T10:30:31-0300 [-] Creating router ...
+2020-06-07T10:30:31-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T10:30:32-0300 [-] RouterFactory starting on 8081
+2020-06-07T10:30:32-0300 [-] Creating AccessPoint station ...
+2020-06-07T10:30:32-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T10:30:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f3d3107f400>
+2020-06-07T10:30:32-0300 [stdout#info] sem entrada
+2020-06-07T10:30:32-0300 [stdout#info] sem saida
+2020-06-07T10:30:32-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T10:30:33-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T10:30:33-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T10:30:33-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:30:33-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:30:33-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:30:33-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/task.py", line 239, in __call__
+	    d = defer.maybeDeferred(self.f, *self.a, **self.kw)
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/wirelesscomputerapp.py", line 38, in main_app
+	    if not is_requested:
+	builtins.UnboundLocalError: local variable 'is_requested' referenced before assignment
+	
+2020-06-07T10:30:33-0300 [stdout#info] sem entrada
+2020-06-07T10:30:33-0300 [stdout#info] sem saida
+2020-06-07T10:30:34-0300 [stdout#info] sem entrada
+2020-06-07T10:30:34-0300 [stdout#info] sem saida
+2020-06-07T10:30:35-0300 [stdout#info] sem entrada
+2020-06-07T10:30:35-0300 [stdout#info] sem saida
+2020-06-07T10:30:36-0300 [stdout#info] sem entrada
+2020-06-07T10:30:36-0300 [stdout#info] sem saida
+2020-06-07T10:30:37-0300 [stdout#info] sem entrada
+2020-06-07T10:30:37-0300 [stdout#info] sem saida
+2020-06-07T10:30:38-0300 [stdout#info] sem entrada
+2020-06-07T10:30:38-0300 [stdout#info] sem saida
+2020-06-07T10:30:39-0300 [stdout#info] sem entrada
+2020-06-07T10:30:39-0300 [stdout#info] sem saida
+2020-06-07T10:30:40-0300 [stdout#info] sem entrada
+2020-06-07T10:30:40-0300 [stdout#info] sem saida
+2020-06-07T10:30:41-0300 [stdout#info] sem entrada
+2020-06-07T10:30:41-0300 [stdout#info] sem saida
+2020-06-07T10:30:42-0300 [stdout#info] sem entrada
+2020-06-07T10:30:42-0300 [stdout#info] sem saida
+2020-06-07T10:30:43-0300 [stdout#info] sem entrada
+2020-06-07T10:30:43-0300 [stdout#info] sem saida
+2020-06-07T10:30:44-0300 [stdout#info] sem entrada
+2020-06-07T10:30:44-0300 [stdout#info] sem saida
+2020-06-07T10:30:45-0300 [stdout#info] sem entrada
+2020-06-07T10:30:45-0300 [stdout#info] sem saida
+2020-06-07T10:30:46-0300 [stdout#info] sem entrada
+2020-06-07T10:30:46-0300 [stdout#info] sem saida
+2020-06-07T10:30:47-0300 [stdout#info] sem entrada
+2020-06-07T10:30:47-0300 [stdout#info] sem saida
+2020-06-07T10:30:48-0300 [stdout#info] sem entrada
+2020-06-07T10:30:48-0300 [stdout#info] sem saida
+2020-06-07T10:30:49-0300 [stdout#info] sem entrada
+2020-06-07T10:30:49-0300 [stdout#info] sem saida
+2020-06-07T10:30:50-0300 [stdout#info] sem entrada
+2020-06-07T10:30:50-0300 [stdout#info] sem saida
+2020-06-07T10:30:51-0300 [stdout#info] sem entrada
+2020-06-07T10:30:51-0300 [stdout#info] sem saida
+2020-06-07T10:30:52-0300 [-] Received SIGINT, shutting down.
+2020-06-07T10:30:52-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T10:30:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f3d3107f400>
+2020-06-07T10:30:52-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T10:30:52-0300 [-] Main loop terminated.

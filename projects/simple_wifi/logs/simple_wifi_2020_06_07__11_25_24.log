@@ -1,0 +1,190 @@
+2020-06-07T11:25:24-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T11:25:25-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T11:25:25-0300 [-] Creating router ...
+2020-06-07T11:25:25-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T11:25:25-0300 [-] RouterFactory starting on 8081
+2020-06-07T11:25:25-0300 [-] Creating AccessPoint station ...
+2020-06-07T11:25:25-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T11:25:26-0300 [stdout#info] sem entrada
+2020-06-07T11:25:26-0300 [stdout#info] sem saida
+2020-06-07T11:25:26-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T11:25:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T11:25:26-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T11:25:26-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:25:26-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:25:27-0300 [stdout#info] {b'{"destiny_addr": "127.0.0.1", "destiny_port": 8080, "source_addr": "127.0.0.1", "source_port": 8888, "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-07T11:25:27-0300 [stdout#info] <applications.accesspointapp.AccessPointAppProtocol object at 0x7fa5bf802390>
+2020-06-07T11:25:27-0300 [stdout#info] set()
+2020-06-07T11:25:27-0300 [stdout#info] sem saida
+2020-06-07T11:25:28-0300 [stdout#info] sem entrada
+2020-06-07T11:25:28-0300 [stdout#info] sem saida
+2020-06-07T11:25:29-0300 [stdout#info] sem entrada
+2020-06-07T11:25:29-0300 [stdout#info] sem saida
+2020-06-07T11:25:30-0300 [stdout#info] sem entrada
+2020-06-07T11:25:30-0300 [stdout#info] sem saida
+2020-06-07T11:25:31-0300 [stdout#info] sem entrada
+2020-06-07T11:25:31-0300 [stdout#info] sem saida
+2020-06-07T11:25:32-0300 [stdout#info] sem entrada
+2020-06-07T11:25:32-0300 [stdout#info] sem saida
+2020-06-07T11:25:33-0300 [stdout#info] sem entrada
+2020-06-07T11:25:33-0300 [stdout#info] sem saida
+2020-06-07T11:25:34-0300 [stdout#info] sem entrada
+2020-06-07T11:25:34-0300 [stdout#info] sem saida
+2020-06-07T11:25:35-0300 [stdout#info] sem entrada
+2020-06-07T11:25:35-0300 [stdout#info] sem saida
+2020-06-07T11:25:36-0300 [stdout#info] sem entrada
+2020-06-07T11:25:36-0300 [stdout#info] sem saida
+2020-06-07T11:25:37-0300 [stdout#info] sem entrada
+2020-06-07T11:25:37-0300 [stdout#info] sem saida
+2020-06-07T11:25:38-0300 [stdout#info] sem entrada
+2020-06-07T11:25:38-0300 [stdout#info] sem saida
+2020-06-07T11:25:39-0300 [stdout#info] sem entrada
+2020-06-07T11:25:39-0300 [stdout#info] sem saida
+2020-06-07T11:25:40-0300 [stdout#info] sem entrada
+2020-06-07T11:25:40-0300 [stdout#info] sem saida
+2020-06-07T11:25:41-0300 [stdout#info] sem entrada
+2020-06-07T11:25:41-0300 [stdout#info] sem saida
+2020-06-07T11:25:42-0300 [stdout#info] sem entrada
+2020-06-07T11:25:42-0300 [stdout#info] sem saida
+2020-06-07T11:25:43-0300 [stdout#info] sem entrada
+2020-06-07T11:25:43-0300 [stdout#info] sem saida
+2020-06-07T11:25:44-0300 [stdout#info] sem entrada
+2020-06-07T11:25:44-0300 [stdout#info] sem saida
+2020-06-07T11:25:45-0300 [stdout#info] sem entrada
+2020-06-07T11:25:45-0300 [stdout#info] sem saida
+2020-06-07T11:25:46-0300 [stdout#info] sem entrada
+2020-06-07T11:25:46-0300 [stdout#info] sem saida
+2020-06-07T11:25:47-0300 [stdout#info] sem entrada
+2020-06-07T11:25:47-0300 [stdout#info] sem saida
+2020-06-07T11:25:48-0300 [stdout#info] sem entrada
+2020-06-07T11:25:48-0300 [stdout#info] sem saida
+2020-06-07T11:25:49-0300 [stdout#info] sem entrada
+2020-06-07T11:25:49-0300 [stdout#info] sem saida
+2020-06-07T11:25:50-0300 [stdout#info] sem entrada
+2020-06-07T11:25:50-0300 [stdout#info] sem saida
+2020-06-07T11:25:51-0300 [stdout#info] sem entrada
+2020-06-07T11:25:51-0300 [stdout#info] sem saida
+2020-06-07T11:25:52-0300 [stdout#info] sem entrada
+2020-06-07T11:25:52-0300 [stdout#info] sem saida
+2020-06-07T11:25:53-0300 [stdout#info] sem entrada
+2020-06-07T11:25:53-0300 [stdout#info] sem saida
+2020-06-07T11:25:54-0300 [stdout#info] sem entrada
+2020-06-07T11:25:54-0300 [stdout#info] sem saida
+2020-06-07T11:25:55-0300 [stdout#info] sem entrada
+2020-06-07T11:25:55-0300 [stdout#info] sem saida
+2020-06-07T11:25:56-0300 [stdout#info] sem entrada
+2020-06-07T11:25:56-0300 [stdout#info] sem saida
+2020-06-07T11:25:57-0300 [stdout#info] sem entrada
+2020-06-07T11:25:57-0300 [stdout#info] sem saida
+2020-06-07T11:25:58-0300 [stdout#info] sem entrada
+2020-06-07T11:25:58-0300 [stdout#info] sem saida
+2020-06-07T11:25:59-0300 [stdout#info] sem entrada
+2020-06-07T11:25:59-0300 [stdout#info] sem saida
+2020-06-07T11:26:00-0300 [stdout#info] sem entrada
+2020-06-07T11:26:00-0300 [stdout#info] sem saida
+2020-06-07T11:26:01-0300 [stdout#info] sem entrada
+2020-06-07T11:26:01-0300 [stdout#info] sem saida
+2020-06-07T11:26:02-0300 [stdout#info] sem entrada
+2020-06-07T11:26:02-0300 [stdout#info] sem saida
+2020-06-07T11:26:03-0300 [stdout#info] sem entrada
+2020-06-07T11:26:03-0300 [stdout#info] sem saida
+2020-06-07T11:26:04-0300 [stdout#info] sem entrada
+2020-06-07T11:26:04-0300 [stdout#info] sem saida
+2020-06-07T11:26:05-0300 [stdout#info] sem entrada
+2020-06-07T11:26:05-0300 [stdout#info] sem saida
+2020-06-07T11:26:06-0300 [stdout#info] sem entrada
+2020-06-07T11:26:06-0300 [stdout#info] sem saida
+2020-06-07T11:26:07-0300 [stdout#info] sem entrada
+2020-06-07T11:26:07-0300 [stdout#info] sem saida
+2020-06-07T11:26:08-0300 [stdout#info] sem entrada
+2020-06-07T11:26:08-0300 [stdout#info] sem saida
+2020-06-07T11:26:09-0300 [stdout#info] sem entrada
+2020-06-07T11:26:09-0300 [stdout#info] sem saida
+2020-06-07T11:26:10-0300 [stdout#info] sem entrada
+2020-06-07T11:26:10-0300 [stdout#info] sem saida
+2020-06-07T11:26:11-0300 [stdout#info] sem entrada
+2020-06-07T11:26:11-0300 [stdout#info] sem saida
+2020-06-07T11:26:12-0300 [stdout#info] sem entrada
+2020-06-07T11:26:12-0300 [stdout#info] sem saida
+2020-06-07T11:26:13-0300 [stdout#info] sem entrada
+2020-06-07T11:26:13-0300 [stdout#info] sem saida
+2020-06-07T11:26:14-0300 [stdout#info] sem entrada
+2020-06-07T11:26:14-0300 [stdout#info] sem saida
+2020-06-07T11:26:15-0300 [stdout#info] sem entrada
+2020-06-07T11:26:15-0300 [stdout#info] sem saida
+2020-06-07T11:26:16-0300 [stdout#info] sem entrada
+2020-06-07T11:26:16-0300 [stdout#info] sem saida
+2020-06-07T11:26:17-0300 [stdout#info] sem entrada
+2020-06-07T11:26:17-0300 [stdout#info] sem saida
+2020-06-07T11:26:18-0300 [stdout#info] sem entrada
+2020-06-07T11:26:18-0300 [stdout#info] sem saida
+2020-06-07T11:26:19-0300 [stdout#info] sem entrada
+2020-06-07T11:26:19-0300 [stdout#info] sem saida
+2020-06-07T11:26:20-0300 [stdout#info] sem entrada
+2020-06-07T11:26:20-0300 [stdout#info] sem saida
+2020-06-07T11:26:21-0300 [stdout#info] sem entrada
+2020-06-07T11:26:21-0300 [stdout#info] sem saida
+2020-06-07T11:26:22-0300 [stdout#info] sem entrada
+2020-06-07T11:26:22-0300 [stdout#info] sem saida
+2020-06-07T11:26:23-0300 [stdout#info] sem entrada
+2020-06-07T11:26:23-0300 [stdout#info] sem saida
+2020-06-07T11:26:24-0300 [stdout#info] sem entrada
+2020-06-07T11:26:24-0300 [stdout#info] sem saida
+2020-06-07T11:26:25-0300 [stdout#info] sem entrada
+2020-06-07T11:26:25-0300 [stdout#info] sem saida
+2020-06-07T11:26:26-0300 [stdout#info] sem entrada
+2020-06-07T11:26:26-0300 [stdout#info] sem saida
+2020-06-07T11:26:27-0300 [stdout#info] sem entrada
+2020-06-07T11:26:27-0300 [stdout#info] sem saida
+2020-06-07T11:26:28-0300 [stdout#info] sem entrada
+2020-06-07T11:26:28-0300 [stdout#info] sem saida
+2020-06-07T11:26:29-0300 [stdout#info] sem entrada
+2020-06-07T11:26:29-0300 [stdout#info] sem saida
+2020-06-07T11:26:30-0300 [stdout#info] sem entrada
+2020-06-07T11:26:30-0300 [stdout#info] sem saida
+2020-06-07T11:26:31-0300 [stdout#info] sem entrada
+2020-06-07T11:26:31-0300 [stdout#info] sem saida
+2020-06-07T11:26:32-0300 [stdout#info] sem entrada
+2020-06-07T11:26:32-0300 [stdout#info] sem saida
+2020-06-07T11:26:33-0300 [stdout#info] sem entrada
+2020-06-07T11:26:33-0300 [stdout#info] sem saida
+2020-06-07T11:26:34-0300 [stdout#info] sem entrada
+2020-06-07T11:26:34-0300 [stdout#info] sem saida
+2020-06-07T11:26:35-0300 [stdout#info] sem entrada
+2020-06-07T11:26:35-0300 [stdout#info] sem saida
+2020-06-07T11:26:36-0300 [stdout#info] sem entrada
+2020-06-07T11:26:36-0300 [stdout#info] sem saida
+2020-06-07T11:26:37-0300 [stdout#info] sem entrada
+2020-06-07T11:26:37-0300 [stdout#info] sem saida
+2020-06-07T11:26:38-0300 [stdout#info] sem entrada
+2020-06-07T11:26:38-0300 [stdout#info] sem saida
+2020-06-07T11:26:39-0300 [stdout#info] sem entrada
+2020-06-07T11:26:39-0300 [stdout#info] sem saida
+2020-06-07T11:26:40-0300 [stdout#info] sem entrada
+2020-06-07T11:26:40-0300 [stdout#info] sem saida
+2020-06-07T11:26:41-0300 [stdout#info] sem entrada
+2020-06-07T11:26:41-0300 [stdout#info] sem saida
+2020-06-07T11:26:42-0300 [stdout#info] sem entrada
+2020-06-07T11:26:42-0300 [stdout#info] sem saida
+2020-06-07T11:26:43-0300 [stdout#info] sem entrada
+2020-06-07T11:26:43-0300 [stdout#info] sem saida
+2020-06-07T11:26:44-0300 [stdout#info] sem entrada
+2020-06-07T11:26:44-0300 [stdout#info] sem saida
+2020-06-07T11:26:45-0300 [stdout#info] sem entrada
+2020-06-07T11:26:45-0300 [stdout#info] sem saida
+2020-06-07T11:26:46-0300 [stdout#info] sem entrada
+2020-06-07T11:26:46-0300 [stdout#info] sem saida
+2020-06-07T11:26:47-0300 [stdout#info] sem entrada
+2020-06-07T11:26:47-0300 [stdout#info] sem saida
+2020-06-07T11:26:48-0300 [stdout#info] sem entrada
+2020-06-07T11:26:48-0300 [stdout#info] sem saida
+2020-06-07T11:26:49-0300 [stdout#info] sem entrada
+2020-06-07T11:26:49-0300 [stdout#info] sem saida
+2020-06-07T11:26:50-0300 [stdout#info] sem entrada
+2020-06-07T11:26:50-0300 [stdout#info] sem saida
+2020-06-07T11:26:51-0300 [stdout#info] sem entrada
+2020-06-07T11:26:51-0300 [stdout#info] sem saida
+2020-06-07T11:26:51-0300 [-] Received SIGINT, shutting down.
+2020-06-07T11:26:51-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T11:26:51-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T11:26:51-0300 [-] Main loop terminated.

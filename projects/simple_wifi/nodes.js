@@ -8,7 +8,7 @@
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
-                "port": 8082,
+                "port": 8080,
                 "is_wireless": false,
                 "coverage_area_radius": 0,
                 "application": "applications.httpapp.HttpServerApp",

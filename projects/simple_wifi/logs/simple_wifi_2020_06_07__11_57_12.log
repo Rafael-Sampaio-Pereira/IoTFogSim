@@ -1,0 +1,24 @@
+2020-06-07T11:57:12-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T11:57:13-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T11:57:13-0300 [-] Creating router ...
+2020-06-07T11:57:13-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T11:57:13-0300 [-] RouterFactory starting on 8081
+2020-06-07T11:57:13-0300 [-] Creating AccessPoint station ...
+2020-06-07T11:57:13-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T11:57:14-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T11:57:14-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T11:57:14-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T11:57:14-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:57:14-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:57:15-0300 [stdout#info] {b'{"destiny_addr": "127.0.0.1", "destiny_port": 8080, "source_addr": "127.0.0.1", "source_port": 8888, "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-07T11:57:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9f5d5852b0>
+2020-06-07T11:57:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9f5d5852b0>
+2020-06-07T11:57:18-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T11:57:18-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T11:57:41-0300 [-] Received SIGINT, shutting down.
+2020-06-07T11:57:41-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T11:57:41-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T11:57:41-0300 [-] Main loop terminated.

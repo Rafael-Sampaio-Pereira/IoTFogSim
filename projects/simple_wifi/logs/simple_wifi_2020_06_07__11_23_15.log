@@ -1,0 +1,34 @@
+2020-06-07T11:23:15-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T11:23:16-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T11:23:16-0300 [-] Creating router ...
+2020-06-07T11:23:16-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T11:23:16-0300 [-] RouterFactory starting on 8081
+2020-06-07T11:23:16-0300 [-] Creating AccessPoint station ...
+2020-06-07T11:23:16-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T11:23:17-0300 [stdout#info] sem entrada
+2020-06-07T11:23:17-0300 [stdout#info] sem saida
+2020-06-07T11:23:17-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T11:23:17-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T11:23:17-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T11:23:18-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:23:18-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:23:18-0300 [stdout#info] {b'{"destiny_addr": "127.0.0.1", "destiny_port": 8080, "source_addr": "127.0.0.1", "source_port": 8888, "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-07T11:23:18-0300 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "run_iotfogsim.py", line 23, in <module>
+	    reactor.run()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1283, in run
+	    self.mainLoop()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+	    self.runUntilCurrent()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 194, in forward_packages
+	    self.ap_protocol.send(package)
+	builtins.AttributeError: 'AccessPointApp' object has no attribute 'ap_protocol'
+	
+2020-06-07T11:24:02-0300 [-] Received SIGINT, shutting down.
+2020-06-07T11:24:02-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T11:24:02-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T11:24:02-0300 [-] Main loop terminated.

@@ -10,7 +10,6 @@ from twisted.internet.endpoints import connectProtocol
 
 class RouterApp:
 
-    
     protocol.ClientFactory.noisy = False
     TCP4ClientEndpoint.noisy = False
     
@@ -116,6 +115,7 @@ class RouterAppProtocol(StandardApplicationComponent):
     def connectionMade(self):
         # saving the router protocol that acts as input(i.e. this receives packages) - Rafael Sampaio
         self.save_protocol_in_simulation_core(self)
+        
     
     def connectionLost(self, reason):
         pass 
@@ -144,11 +144,13 @@ class ClientProtocol(StandardApplicationComponent):
     
     def __init__(self):
         self.simulation_core = None
+        self.visual_component = None
 
     def connectionMade(self):
         self.factory.server.client = self
         self.write(self.factory.server.buffer)
         self.factory.server.buffer = ''
+        
         
     def dataReceived(self, data):
         self.factory.server.write(data)

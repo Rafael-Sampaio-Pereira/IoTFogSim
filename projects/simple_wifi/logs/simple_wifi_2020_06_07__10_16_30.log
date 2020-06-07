@@ -1,0 +1,740 @@
+2020-06-07T10:16:30-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T10:16:31-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T10:16:31-0300 [-] Creating router ...
+2020-06-07T10:16:31-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T10:16:31-0300 [-] RouterFactory starting on 8081
+2020-06-07T10:16:31-0300 [-] Creating AccessPoint station ...
+2020-06-07T10:16:31-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T10:16:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6e358>
+2020-06-07T10:16:32-0300 [stdout#info] sem entrada
+2020-06-07T10:16:32-0300 [stdout#info] sem saida
+2020-06-07T10:16:32-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T10:16:32-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T10:16:32-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T10:16:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:16:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:16:33-0300 [stdout#info] sem saida
+2020-06-07T10:16:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667a87240>
+2020-06-07T10:16:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667a87240>
+2020-06-07T10:16:34-0300 [stdout#info] sem saida
+2020-06-07T10:16:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed68>
+2020-06-07T10:16:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed68>
+2020-06-07T10:16:35-0300 [stdout#info] sem saida
+2020-06-07T10:16:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd0b8>
+2020-06-07T10:16:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd0b8>
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:36-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:36-0300 [stdout#info] sem saida
+2020-06-07T10:16:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ee48>
+2020-06-07T10:16:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ee48>
+2020-06-07T10:16:37-0300 [stdout#info] sem saida
+2020-06-07T10:16:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd1d0>
+2020-06-07T10:16:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd1d0>
+2020-06-07T10:16:38-0300 [stdout#info] sem saida
+2020-06-07T10:16:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd668>
+2020-06-07T10:16:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd668>
+2020-06-07T10:16:39-0300 [stdout#info] sem saida
+2020-06-07T10:16:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fda20>
+2020-06-07T10:16:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fda20>
+2020-06-07T10:16:40-0300 [stdout#info] sem saida
+2020-06-07T10:16:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdda0>
+2020-06-07T10:16:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdda0>
+2020-06-07T10:16:41-0300 [stdout#info] sem saida
+2020-06-07T10:16:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d2b0>
+2020-06-07T10:16:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d2b0>
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:41-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:42-0300 [stdout#info] sem saida
+2020-06-07T10:16:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd320>
+2020-06-07T10:16:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd320>
+2020-06-07T10:16:43-0300 [stdout#info] sem saida
+2020-06-07T10:16:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd908>
+2020-06-07T10:16:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd908>
+2020-06-07T10:16:44-0300 [stdout#info] sem saida
+2020-06-07T10:16:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd198>
+2020-06-07T10:16:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd198>
+2020-06-07T10:16:45-0300 [stdout#info] sem saida
+2020-06-07T10:16:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd7f0>
+2020-06-07T10:16:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd7f0>
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:46-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:46-0300 [stdout#info] sem saida
+2020-06-07T10:16:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd7f0>
+2020-06-07T10:16:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd7f0>
+2020-06-07T10:16:47-0300 [stdout#info] sem saida
+2020-06-07T10:16:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdba8>
+2020-06-07T10:16:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdba8>
+2020-06-07T10:16:48-0300 [stdout#info] sem saida
+2020-06-07T10:16:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667a874e0>
+2020-06-07T10:16:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667a874e0>
+2020-06-07T10:16:49-0300 [stdout#info] sem saida
+2020-06-07T10:16:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ee80>
+2020-06-07T10:16:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ee80>
+2020-06-07T10:16:50-0300 [stdout#info] sem saida
+2020-06-07T10:16:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed68>
+2020-06-07T10:16:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed68>
+2020-06-07T10:16:51-0300 [stdout#info] sem saida
+2020-06-07T10:16:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d080>
+2020-06-07T10:16:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d080>
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:51-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:52-0300 [stdout#info] sem saida
+2020-06-07T10:16:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed30>
+2020-06-07T10:16:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ed30>
+2020-06-07T10:16:53-0300 [stdout#info] sem saida
+2020-06-07T10:16:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd550>
+2020-06-07T10:16:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd550>
+2020-06-07T10:16:54-0300 [stdout#info] sem saida
+2020-06-07T10:16:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d518>
+2020-06-07T10:16:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d518>
+2020-06-07T10:16:55-0300 [stdout#info] sem saida
+2020-06-07T10:16:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d898>
+2020-06-07T10:16:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d898>
+2020-06-07T10:16:56-0300 [stdout#info] sem saida
+2020-06-07T10:16:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720dc50>
+2020-06-07T10:16:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720dc50>
+2020-06-07T10:16:57-0300 [stdout#info] sem saida
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:16:57-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:16:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221048>
+2020-06-07T10:16:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221048>
+2020-06-07T10:16:58-0300 [stdout#info] sem saida
+2020-06-07T10:16:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d898>
+2020-06-07T10:16:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d898>
+2020-06-07T10:16:59-0300 [stdout#info] sem saida
+2020-06-07T10:16:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdc18>
+2020-06-07T10:16:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdc18>
+2020-06-07T10:17:00-0300 [stdout#info] sem saida
+2020-06-07T10:17:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221278>
+2020-06-07T10:17:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221278>
+2020-06-07T10:17:01-0300 [stdout#info] sem saida
+2020-06-07T10:17:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221630>
+2020-06-07T10:17:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221630>
+2020-06-07T10:17:02-0300 [stdout#info] sem saida
+2020-06-07T10:17:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221978>
+2020-06-07T10:17:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221978>
+2020-06-07T10:17:03-0300 [stdout#info] sem saida
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:03-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221c50>
+2020-06-07T10:17:03-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221c50>
+2020-06-07T10:17:04-0300 [stdout#info] sem saida
+2020-06-07T10:17:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d1d0>
+2020-06-07T10:17:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d1d0>
+2020-06-07T10:17:05-0300 [stdout#info] sem saida
+2020-06-07T10:17:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672217b8>
+2020-06-07T10:17:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672217b8>
+2020-06-07T10:17:06-0300 [stdout#info] sem saida
+2020-06-07T10:17:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221e80>
+2020-06-07T10:17:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221e80>
+2020-06-07T10:17:07-0300 [stdout#info] sem saida
+2020-06-07T10:17:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231198>
+2020-06-07T10:17:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231198>
+2020-06-07T10:17:08-0300 [stdout#info] sem saida
+2020-06-07T10:17:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231390>
+2020-06-07T10:17:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231390>
+2020-06-07T10:17:09-0300 [stdout#info] sem saida
+2020-06-07T10:17:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672316a0>
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:09-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672316a0>
+2020-06-07T10:17:10-0300 [stdout#info] sem saida
+2020-06-07T10:17:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd2b0>
+2020-06-07T10:17:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fd2b0>
+2020-06-07T10:17:11-0300 [stdout#info] sem saida
+2020-06-07T10:17:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672317f0>
+2020-06-07T10:17:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672317f0>
+2020-06-07T10:17:12-0300 [stdout#info] sem saida
+2020-06-07T10:17:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231ac8>
+2020-06-07T10:17:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231ac8>
+2020-06-07T10:17:13-0300 [stdout#info] sem saida
+2020-06-07T10:17:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231d68>
+2020-06-07T10:17:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231d68>
+2020-06-07T10:17:14-0300 [stdout#info] sem saida
+2020-06-07T10:17:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c21d0>
+2020-06-07T10:17:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c21d0>
+2020-06-07T10:17:15-0300 [stdout#info] sem saida
+2020-06-07T10:17:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2550>
+2020-06-07T10:17:15-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2550>
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:15-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:16-0300 [stdout#info] sem saida
+2020-06-07T10:17:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672214a8>
+2020-06-07T10:17:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672214a8>
+2020-06-07T10:17:17-0300 [stdout#info] sem saida
+2020-06-07T10:17:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231208>
+2020-06-07T10:17:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231208>
+2020-06-07T10:17:18-0300 [stdout#info] sem saida
+2020-06-07T10:17:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2278>
+2020-06-07T10:17:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2278>
+2020-06-07T10:17:19-0300 [stdout#info] sem saida
+2020-06-07T10:17:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2748>
+2020-06-07T10:17:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2748>
+2020-06-07T10:17:20-0300 [stdout#info] sem saida
+2020-06-07T10:17:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:21-0300 [stdout#info] sem saida
+2020-06-07T10:17:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2c50>
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:21-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2c50>
+2020-06-07T10:17:22-0300 [stdout#info] sem saida
+2020-06-07T10:17:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:23-0300 [stdout#info] sem saida
+2020-06-07T10:17:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2550>
+2020-06-07T10:17:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2550>
+2020-06-07T10:17:24-0300 [stdout#info] sem saida
+2020-06-07T10:17:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231630>
+2020-06-07T10:17:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231630>
+2020-06-07T10:17:25-0300 [stdout#info] sem saida
+2020-06-07T10:17:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ebe0>
+2020-06-07T10:17:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ebe0>
+2020-06-07T10:17:26-0300 [stdout#info] sem saida
+2020-06-07T10:17:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdb70>
+2020-06-07T10:17:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671fdb70>
+2020-06-07T10:17:27-0300 [stdout#info] sem saida
+2020-06-07T10:17:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d21d0>
+2020-06-07T10:17:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d21d0>
+2020-06-07T10:17:28-0300 [stdout#info] sem saida
+2020-06-07T10:17:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2320>
+2020-06-07T10:17:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2320>
+2020-06-07T10:17:29-0300 [stdout#info] sem saida
+2020-06-07T10:17:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2588>
+2020-06-07T10:17:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2588>
+2020-06-07T10:17:30-0300 [stdout#info] sem saida
+2020-06-07T10:17:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2748>
+2020-06-07T10:17:30-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2748>
+2020-06-07T10:17:31-0300 [stdout#info] sem saida
+2020-06-07T10:17:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2908>
+2020-06-07T10:17:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2908>
+2020-06-07T10:17:32-0300 [stdout#info] sem saida
+2020-06-07T10:17:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2a20>
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:32-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2a20>
+2020-06-07T10:17:33-0300 [stdout#info] sem saida
+2020-06-07T10:17:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221ac8>
+2020-06-07T10:17:33-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667221ac8>
+2020-06-07T10:17:34-0300 [stdout#info] sem saida
+2020-06-07T10:17:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672317f0>
+2020-06-07T10:17:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672317f0>
+2020-06-07T10:17:35-0300 [stdout#info] sem saida
+2020-06-07T10:17:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d9e8>
+2020-06-07T10:17:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d9e8>
+2020-06-07T10:17:36-0300 [stdout#info] sem saida
+2020-06-07T10:17:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c28d0>
+2020-06-07T10:17:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c28d0>
+2020-06-07T10:17:37-0300 [stdout#info] sem saida
+2020-06-07T10:17:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2278>
+2020-06-07T10:17:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2278>
+2020-06-07T10:17:38-0300 [stdout#info] sem saida
+2020-06-07T10:17:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2be0>
+2020-06-07T10:17:39-0300 [stdout#info] sem saida
+2020-06-07T10:17:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2b70>
+2020-06-07T10:17:39-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2b70>
+2020-06-07T10:17:40-0300 [stdout#info] sem saida
+2020-06-07T10:17:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2940>
+2020-06-07T10:17:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2940>
+2020-06-07T10:17:41-0300 [stdout#info] sem saida
+2020-06-07T10:17:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d25f8>
+2020-06-07T10:17:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d25f8>
+2020-06-07T10:17:42-0300 [stdout#info] sem saida
+2020-06-07T10:17:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d22e8>
+2020-06-07T10:17:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d22e8>
+2020-06-07T10:17:43-0300 [stdout#info] sem saida
+2020-06-07T10:17:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d20f0>
+2020-06-07T10:17:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d20f0>
+2020-06-07T10:17:44-0300 [stdout#info] sem saida
+2020-06-07T10:17:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2e48>
+2020-06-07T10:17:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2e48>
+2020-06-07T10:17:45-0300 [stdout#info] sem saida
+2020-06-07T10:17:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231358>
+2020-06-07T10:17:45-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd667231358>
+2020-06-07T10:17:46-0300 [stdout#info] sem saida
+2020-06-07T10:17:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9128>
+2020-06-07T10:17:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9128>
+2020-06-07T10:17:47-0300 [stdout#info] sem saida
+2020-06-07T10:17:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9400>
+2020-06-07T10:17:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9400>
+2020-06-07T10:17:48-0300 [stdout#info] sem saida
+2020-06-07T10:17:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e92e8>
+2020-06-07T10:17:48-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e92e8>
+2020-06-07T10:17:49-0300 [stdout#info] sem saida
+2020-06-07T10:17:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9710>
+2020-06-07T10:17:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9710>
+2020-06-07T10:17:50-0300 [stdout#info] sem saida
+2020-06-07T10:17:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9860>
+2020-06-07T10:17:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671e9860>
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:17:50-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:17:51-0300 [stdout#info] sem saida
+2020-06-07T10:17:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2f28>
+2020-06-07T10:17:51-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2f28>
+2020-06-07T10:17:52-0300 [stdout#info] sem saida
+2020-06-07T10:17:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2eb8>
+2020-06-07T10:17:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2eb8>
+2020-06-07T10:17:53-0300 [stdout#info] sem saida
+2020-06-07T10:17:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2160>
+2020-06-07T10:17:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2160>
+2020-06-07T10:17:54-0300 [stdout#info] sem saida
+2020-06-07T10:17:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d27b8>
+2020-06-07T10:17:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d27b8>
+2020-06-07T10:17:55-0300 [stdout#info] sem saida
+2020-06-07T10:17:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2b70>
+2020-06-07T10:17:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671d2b70>
+2020-06-07T10:17:56-0300 [stdout#info] sem saida
+2020-06-07T10:17:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2908>
+2020-06-07T10:17:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2908>
+2020-06-07T10:17:57-0300 [stdout#info] sem saida
+2020-06-07T10:17:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2320>
+2020-06-07T10:17:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2320>
+2020-06-07T10:17:58-0300 [stdout#info] sem saida
+2020-06-07T10:17:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2cc0>
+2020-06-07T10:17:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6671c2cc0>
+2020-06-07T10:17:59-0300 [stdout#info] sem saida
+2020-06-07T10:17:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d160>
+2020-06-07T10:17:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd66720d160>
+2020-06-07T10:18:00-0300 [stdout#info] sem saida
+2020-06-07T10:18:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672316d8>
+2020-06-07T10:18:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672316d8>
+2020-06-07T10:18:01-0300 [stdout#info] sem saida
+2020-06-07T10:18:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672313c8>
+2020-06-07T10:18:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd6672313c8>
+2020-06-07T10:18:02-0300 [stdout#info] sem saida
+2020-06-07T10:18:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ef60>
+2020-06-07T10:18:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6ef60>
+2020-06-07T10:18:02-0300 [-] Received SIGINT, shutting down.
+2020-06-07T10:18:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd665b6e358>
+2020-06-07T10:18:02-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T10:18:02-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T10:18:02-0300 [-] Main loop terminated.
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:18:02-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	Failure: twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 111: Connection refused.
+	

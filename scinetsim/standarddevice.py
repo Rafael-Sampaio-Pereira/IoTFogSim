@@ -277,9 +277,9 @@ class AccessPoint(object):
     
     def __init__(self, simulation_core,  base_device, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, coverage_area_radius):
 
-        self.base_device = base_device
+        # self.base_device = base_device
         self.application = import_and_instantiate_class_from_string(application)
-        self.application.base_device = self.base_device
+        # self.application.base_device = self.base_device
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio

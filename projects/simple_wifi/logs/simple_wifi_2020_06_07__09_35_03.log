@@ -1,0 +1,229 @@
+2020-06-07T09:35:03-0300 [-] Creating router ...
+2020-06-07T09:35:03-0300 [-] Initializing Router - Number of events: 1
+2020-06-07T09:35:03-0300 [-] RouterFactory starting on 8081
+2020-06-07T09:35:03-0300 [-] Creating AccessPoint station ...
+2020-06-07T09:35:03-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-07T09:35:04-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T09:35:04-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 320, in run
+	    self.application.start()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 268, in start
+	    self.connect_to_gateway()
+	  File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 419, in connect_to_gateway
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1535, in __init__
+	    if abstract.isIPv6Address(host):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 543, in isIPv6Address
+	    return isIPAddress(addr, AF_INET6)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/abstract.py", line 513, in isIPAddress
+	    addr = addr.split(u"%", 1)[0]
+	builtins.AttributeError: 'NoneType' object has no attribute 'split'
+	
+2020-06-07T09:35:04-0300 [stdout#info] sem entrada
+2020-06-07T09:35:04-0300 [stdout#info] sem saida
+2020-06-07T09:35:04-0300 [-] Initializing Server - Number of events: 3
+2020-06-07T09:35:04-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T09:35:04-0300 [-] invalid syntax (wirelesscomputerapp.py, line 42)
+2020-06-07T09:35:04-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T09:35:04-0300 [stderr#error] Exception in Tkinter callback
+2020-06-07T09:35:04-0300 [stderr#error] Traceback (most recent call last):
+2020-06-07T09:35:04-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-06-07T09:35:04-0300 [stderr#error]     return self.func(*args)
+2020-06-07T09:35:04-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 107, in <lambda>
+2020-06-07T09:35:04-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-06-07T09:35:04-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 61, in open_project
+2020-06-07T09:35:04-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-06-07T09:35:04-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 199, in load_nodes
+2020-06-07T09:35:04-0300 [stderr#error]     comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+2020-06-07T09:35:04-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 345, in __init__
+2020-06-07T09:35:04-0300 [stderr#error]     self.application.visual_component = self.visual_component
+2020-06-07T09:35:04-0300 [stderr#error] AttributeError: 'NoneType' object has no attribute 'visual_component'
+2020-06-07T09:35:04-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T09:35:05-0300 [stdout#info] sem entrada
+2020-06-07T09:35:05-0300 [stdout#info] sem saida
+2020-06-07T09:35:06-0300 [stdout#info] sem entrada
+2020-06-07T09:35:06-0300 [stdout#info] sem saida
+2020-06-07T09:35:07-0300 [stdout#info] sem entrada
+2020-06-07T09:35:07-0300 [stdout#info] sem saida
+2020-06-07T09:35:08-0300 [stdout#info] sem entrada
+2020-06-07T09:35:08-0300 [stdout#info] sem saida
+2020-06-07T09:35:09-0300 [stdout#info] sem entrada
+2020-06-07T09:35:09-0300 [stdout#info] sem saida
+2020-06-07T09:35:10-0300 [stdout#info] sem entrada
+2020-06-07T09:35:10-0300 [stdout#info] sem saida
+2020-06-07T09:35:11-0300 [stdout#info] sem entrada
+2020-06-07T09:35:11-0300 [stdout#info] sem saida
+2020-06-07T09:35:12-0300 [stdout#info] sem entrada
+2020-06-07T09:35:12-0300 [stdout#info] sem saida
+2020-06-07T09:35:13-0300 [stdout#info] sem entrada
+2020-06-07T09:35:13-0300 [stdout#info] sem saida
+2020-06-07T09:35:14-0300 [stdout#info] sem entrada
+2020-06-07T09:35:14-0300 [stdout#info] sem saida
+2020-06-07T09:35:15-0300 [stdout#info] sem entrada
+2020-06-07T09:35:15-0300 [stdout#info] sem saida
+2020-06-07T09:35:16-0300 [stdout#info] sem entrada
+2020-06-07T09:35:16-0300 [stdout#info] sem saida
+2020-06-07T09:35:17-0300 [stdout#info] sem entrada
+2020-06-07T09:35:17-0300 [stdout#info] sem saida
+2020-06-07T09:35:18-0300 [stdout#info] sem entrada
+2020-06-07T09:35:18-0300 [stdout#info] sem saida
+2020-06-07T09:35:19-0300 [stdout#info] sem entrada
+2020-06-07T09:35:19-0300 [stdout#info] sem saida
+2020-06-07T09:35:20-0300 [stdout#info] sem entrada
+2020-06-07T09:35:20-0300 [stdout#info] sem saida
+2020-06-07T09:35:21-0300 [stdout#info] sem entrada
+2020-06-07T09:35:21-0300 [stdout#info] sem saida
+2020-06-07T09:35:22-0300 [stdout#info] sem entrada
+2020-06-07T09:35:22-0300 [stdout#info] sem saida
+2020-06-07T09:35:23-0300 [stdout#info] sem entrada
+2020-06-07T09:35:23-0300 [stdout#info] sem saida
+2020-06-07T09:35:24-0300 [stdout#info] sem entrada
+2020-06-07T09:35:24-0300 [stdout#info] sem saida
+2020-06-07T09:35:25-0300 [stdout#info] sem entrada
+2020-06-07T09:35:25-0300 [stdout#info] sem saida
+2020-06-07T09:35:26-0300 [stdout#info] sem entrada
+2020-06-07T09:35:26-0300 [stdout#info] sem saida
+2020-06-07T09:35:27-0300 [stdout#info] sem entrada
+2020-06-07T09:35:27-0300 [stdout#info] sem saida
+2020-06-07T09:35:28-0300 [stdout#info] sem entrada
+2020-06-07T09:35:28-0300 [stdout#info] sem saida
+2020-06-07T09:35:29-0300 [stdout#info] sem entrada
+2020-06-07T09:35:29-0300 [stdout#info] sem saida
+2020-06-07T09:35:30-0300 [stdout#info] sem entrada
+2020-06-07T09:35:30-0300 [stdout#info] sem saida
+2020-06-07T09:35:31-0300 [stdout#info] sem entrada
+2020-06-07T09:35:31-0300 [stdout#info] sem saida
+2020-06-07T09:35:32-0300 [stdout#info] sem entrada
+2020-06-07T09:35:32-0300 [stdout#info] sem saida
+2020-06-07T09:35:33-0300 [stdout#info] sem entrada
+2020-06-07T09:35:33-0300 [stdout#info] sem saida
+2020-06-07T09:35:34-0300 [stdout#info] sem entrada
+2020-06-07T09:35:34-0300 [stdout#info] sem saida
+2020-06-07T09:35:35-0300 [stdout#info] sem entrada
+2020-06-07T09:35:35-0300 [stdout#info] sem saida
+2020-06-07T09:35:36-0300 [stdout#info] sem entrada
+2020-06-07T09:35:36-0300 [stdout#info] sem saida
+2020-06-07T09:35:37-0300 [stdout#info] sem entrada
+2020-06-07T09:35:37-0300 [stdout#info] sem saida
+2020-06-07T09:35:38-0300 [stdout#info] sem entrada
+2020-06-07T09:35:38-0300 [stdout#info] sem saida
+2020-06-07T09:35:39-0300 [stdout#info] sem entrada
+2020-06-07T09:35:39-0300 [stdout#info] sem saida
+2020-06-07T09:35:40-0300 [stdout#info] sem entrada
+2020-06-07T09:35:40-0300 [stdout#info] sem saida
+2020-06-07T09:35:41-0300 [stdout#info] sem entrada
+2020-06-07T09:35:41-0300 [stdout#info] sem saida
+2020-06-07T09:35:42-0300 [stdout#info] sem entrada
+2020-06-07T09:35:42-0300 [stdout#info] sem saida
+2020-06-07T09:35:43-0300 [stdout#info] sem entrada
+2020-06-07T09:35:43-0300 [stdout#info] sem saida
+2020-06-07T09:35:44-0300 [stdout#info] sem entrada
+2020-06-07T09:35:44-0300 [stdout#info] sem saida
+2020-06-07T09:35:45-0300 [stdout#info] sem entrada
+2020-06-07T09:35:45-0300 [stdout#info] sem saida
+2020-06-07T09:35:46-0300 [stdout#info] sem entrada
+2020-06-07T09:35:46-0300 [stdout#info] sem saida
+2020-06-07T09:35:47-0300 [stdout#info] sem entrada
+2020-06-07T09:35:47-0300 [stdout#info] sem saida
+2020-06-07T09:35:48-0300 [stdout#info] sem entrada
+2020-06-07T09:35:48-0300 [stdout#info] sem saida
+2020-06-07T09:35:49-0300 [stdout#info] sem entrada
+2020-06-07T09:35:49-0300 [stdout#info] sem saida
+2020-06-07T09:35:50-0300 [stdout#info] sem entrada
+2020-06-07T09:35:50-0300 [stdout#info] sem saida
+2020-06-07T09:35:51-0300 [stdout#info] sem entrada
+2020-06-07T09:35:51-0300 [stdout#info] sem saida
+2020-06-07T09:35:52-0300 [stdout#info] sem entrada
+2020-06-07T09:35:52-0300 [stdout#info] sem saida
+2020-06-07T09:35:53-0300 [stdout#info] sem entrada
+2020-06-07T09:35:53-0300 [stdout#info] sem saida
+2020-06-07T09:35:54-0300 [stdout#info] sem entrada
+2020-06-07T09:35:54-0300 [stdout#info] sem saida
+2020-06-07T09:35:55-0300 [stdout#info] sem entrada
+2020-06-07T09:35:55-0300 [stdout#info] sem saida
+2020-06-07T09:35:56-0300 [stdout#info] sem entrada
+2020-06-07T09:35:56-0300 [stdout#info] sem saida
+2020-06-07T09:35:57-0300 [stdout#info] sem entrada
+2020-06-07T09:35:57-0300 [stdout#info] sem saida
+2020-06-07T09:35:58-0300 [stdout#info] sem entrada
+2020-06-07T09:35:58-0300 [stdout#info] sem saida
+2020-06-07T09:35:59-0300 [stdout#info] sem entrada
+2020-06-07T09:35:59-0300 [stdout#info] sem saida
+2020-06-07T09:36:00-0300 [stdout#info] sem entrada
+2020-06-07T09:36:00-0300 [stdout#info] sem saida
+2020-06-07T09:36:01-0300 [stdout#info] sem entrada
+2020-06-07T09:36:01-0300 [stdout#info] sem saida
+2020-06-07T09:36:02-0300 [stdout#info] sem entrada
+2020-06-07T09:36:02-0300 [stdout#info] sem saida
+2020-06-07T09:36:03-0300 [stdout#info] sem entrada
+2020-06-07T09:36:03-0300 [stdout#info] sem saida
+2020-06-07T09:36:04-0300 [stdout#info] sem entrada
+2020-06-07T09:36:04-0300 [stdout#info] sem saida
+2020-06-07T09:36:05-0300 [stdout#info] sem entrada
+2020-06-07T09:36:05-0300 [stdout#info] sem saida
+2020-06-07T09:36:06-0300 [stdout#info] sem entrada
+2020-06-07T09:36:06-0300 [stdout#info] sem saida
+2020-06-07T09:36:07-0300 [stdout#info] sem entrada
+2020-06-07T09:36:07-0300 [stdout#info] sem saida
+2020-06-07T09:36:08-0300 [stdout#info] sem entrada
+2020-06-07T09:36:08-0300 [stdout#info] sem saida
+2020-06-07T09:36:09-0300 [stdout#info] sem entrada
+2020-06-07T09:36:09-0300 [stdout#info] sem saida
+2020-06-07T09:36:10-0300 [stdout#info] sem entrada
+2020-06-07T09:36:10-0300 [stdout#info] sem saida
+2020-06-07T09:36:11-0300 [stdout#info] sem entrada
+2020-06-07T09:36:11-0300 [stdout#info] sem saida
+2020-06-07T09:36:12-0300 [stdout#info] sem entrada
+2020-06-07T09:36:12-0300 [stdout#info] sem saida
+2020-06-07T09:36:13-0300 [stdout#info] sem entrada
+2020-06-07T09:36:13-0300 [stdout#info] sem saida
+2020-06-07T09:36:14-0300 [stdout#info] sem entrada
+2020-06-07T09:36:14-0300 [stdout#info] sem saida
+2020-06-07T09:36:15-0300 [stdout#info] sem entrada
+2020-06-07T09:36:15-0300 [stdout#info] sem saida
+2020-06-07T09:36:16-0300 [stdout#info] sem entrada
+2020-06-07T09:36:16-0300 [stdout#info] sem saida
+2020-06-07T09:36:17-0300 [stdout#info] sem entrada
+2020-06-07T09:36:17-0300 [stdout#info] sem saida
+2020-06-07T09:36:18-0300 [stdout#info] sem entrada
+2020-06-07T09:36:18-0300 [stdout#info] sem saida
+2020-06-07T09:36:19-0300 [stdout#info] sem entrada
+2020-06-07T09:36:19-0300 [stdout#info] sem saida
+2020-06-07T09:36:20-0300 [stdout#info] sem entrada
+2020-06-07T09:36:20-0300 [stdout#info] sem saida
+2020-06-07T09:36:21-0300 [stdout#info] sem entrada
+2020-06-07T09:36:21-0300 [stdout#info] sem saida
+2020-06-07T09:36:22-0300 [stdout#info] sem entrada
+2020-06-07T09:36:22-0300 [stdout#info] sem saida
+2020-06-07T09:36:23-0300 [stdout#info] sem entrada
+2020-06-07T09:36:23-0300 [stdout#info] sem saida
+2020-06-07T09:36:24-0300 [stdout#info] sem entrada
+2020-06-07T09:36:24-0300 [stdout#info] sem saida
+2020-06-07T09:36:25-0300 [stdout#info] sem entrada
+2020-06-07T09:36:25-0300 [stdout#info] sem saida
+2020-06-07T09:36:26-0300 [stdout#info] sem entrada
+2020-06-07T09:36:26-0300 [stdout#info] sem saida
+2020-06-07T09:36:27-0300 [stdout#info] sem entrada
+2020-06-07T09:36:27-0300 [stdout#info] sem saida
+2020-06-07T09:36:28-0300 [stdout#info] sem entrada
+2020-06-07T09:36:28-0300 [stdout#info] sem saida
+2020-06-07T09:36:29-0300 [stdout#info] sem entrada
+2020-06-07T09:36:29-0300 [stdout#info] sem saida
+2020-06-07T09:36:30-0300 [stdout#info] sem entrada
+2020-06-07T09:36:30-0300 [stdout#info] sem saida
+2020-06-07T09:36:31-0300 [stdout#info] sem entrada
+2020-06-07T09:36:31-0300 [stdout#info] sem saida
+2020-06-07T09:36:32-0300 [stdout#info] sem entrada
+2020-06-07T09:36:32-0300 [stdout#info] sem saida
+2020-06-07T09:36:33-0300 [-] Received SIGINT, shutting down.
+2020-06-07T09:36:33-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T09:36:33-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T09:36:33-0300 [-] Main loop terminated.

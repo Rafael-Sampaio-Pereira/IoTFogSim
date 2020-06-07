@@ -3,6 +3,7 @@ from twisted.python import log
 import json
 import codecs
 from twisted.internet import reactor, protocol, endpoints
+from applications.applicationcomponent import StandardApplicationComponent
 
 
 class HttpClientApp(protocol.Protocol):
@@ -89,24 +90,26 @@ class HttpServerAppFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return HttpServerAppProtocol(self)
 
-class HttpServerAppProtocol(protocol.Protocol):
+class HttpServerAppProtocol(StandardApplicationComponent):
     
-    def __init__(self):
-        self.visual_component = None
-        self.simulation_core = None
+    def __init__(self, factory):
+        self.visual_component = factory.visual_component
+        self.simulation_core = factory.simulation_core
+        self.factory = factory
 
-        self.source_addr = self.transport.getHost().host
-        self.source_port = self.transport.getHost().port
+        
 
         self.router_addr = "127.0.0.1"
-        self.router_port = 80
+        self.router_port = 8081
 
         #self.network_settings = "tcp:interface={}:{}".format(str(self.router_addr),self.router_port)
 
     def connectionMade(self):
+        self.source_addr = self.transport.getHost().host
+        self.source_port = self.transport.getHost().port
         self.simulation_core.updateEventsCounter("Connection received")
-        #self.send(b"test data")
-        
+        # self.create_connection_animation()
+        self.save_protocol_in_simulation_core(self)     
 
     def connectionFailed(self, reason):
         log.msg('connection failed:', reason.getErrorMessage())
@@ -120,7 +123,7 @@ class HttpServerAppProtocol(protocol.Protocol):
         self.transport.write(message)
 
     def dataReceived(self, data):
-        destiny_addr, destiny_port, source_addr, source_port, _type, payload = extract_package_contents(data)
+        destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
         # Print the received data on the sreen.  - Rafael Sampaio
         self.update_alert_message_on_screen(payload)
         log.msg("Received from client %s"%(payload))

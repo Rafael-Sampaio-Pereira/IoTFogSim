@@ -1,0 +1,29 @@
+2020-06-07T11:15:02-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T11:15:02-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T11:15:02-0300 [-] Creating router ...
+2020-06-07T11:15:02-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T11:15:03-0300 [-] RouterFactory starting on 8081
+2020-06-07T11:15:03-0300 [-] Creating AccessPoint station ...
+2020-06-07T11:15:03-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T11:15:03-0300 [stderr#error] Exception in Tkinter callback
+2020-06-07T11:15:03-0300 [stderr#error] Traceback (most recent call last):
+2020-06-07T11:15:03-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-06-07T11:15:03-0300 [stderr#error]     return self.func(*args)
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 107, in <lambda>
+2020-06-07T11:15:03-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 61, in open_project
+2020-06-07T11:15:03-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 161, in load_nodes
+2020-06-07T11:15:03-0300 [stderr#error]     ap.run()
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 320, in run
+2020-06-07T11:15:03-0300 [stderr#error]     self.application.start()
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 65, in start
+2020-06-07T11:15:03-0300 [stderr#error]     self.connect_to_gateway()
+2020-06-07T11:15:03-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/applications/accesspointapp.py", line 214, in connect_to_gateway
+2020-06-07T11:15:03-0300 [stderr#error]     factory = protocol.AccessPointAppFactory()
+2020-06-07T11:15:03-0300 [stderr#error] AttributeError: module 'twisted.internet.protocol' has no attribute 'AccessPointAppFactory'
+2020-06-07T11:15:03-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:15:40-0300 [-] Received SIGINT, shutting down.
+2020-06-07T11:15:40-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T11:15:40-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T11:15:40-0300 [-] Main loop terminated.

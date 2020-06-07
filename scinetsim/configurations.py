@@ -136,6 +136,8 @@ def load_nodes(project_name, simulation_core):
 		if data:
     		
 			################## LOADING FOG DEVICES - Rafael Sampaio ##################
+			
+
 			for router in data['fog']['routers']:
     				
 				log.msg("Creating router ...")
@@ -152,6 +154,7 @@ def load_nodes(project_name, simulation_core):
 					simulation_core.allNodes.add(ap)
 					time.sleep(interval)
 					ap.run()
+
 			
 			for server in data['fog']['servers']:
 								
@@ -159,6 +162,8 @@ def load_nodes(project_name, simulation_core):
 				simulation_core.allNodes.add(sr)
 				time.sleep(interval)
 				sr.run()
+			
+			
 			
 			for client in data['fog']['clients']:
 								

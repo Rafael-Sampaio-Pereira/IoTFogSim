@@ -1,0 +1,104 @@
+2020-06-07T10:07:17-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T10:07:18-0300 [-] HttpServerAppFactory starting on 8082
+2020-06-07T10:07:18-0300 [-] Creating router ...
+2020-06-07T10:07:18-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T10:07:18-0300 [-] RouterFactory starting on 8081
+2020-06-07T10:07:18-0300 [-] Creating AccessPoint station ...
+2020-06-07T10:07:18-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T10:07:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fb57ce74400>
+2020-06-07T10:07:19-0300 [stdout#info] sem entrada
+2020-06-07T10:07:19-0300 [stdout#info] sem saida
+2020-06-07T10:07:19-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T10:07:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T10:07:20-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T10:07:20-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:07:20-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T10:07:20-0300 [stdout#info] sem saida
+2020-06-07T10:07:21-0300 [stdout#info] sem saida
+2020-06-07T10:07:22-0300 [stdout#info] sem saida
+2020-06-07T10:07:22-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:07:22-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 102, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1533, in __init__
+	    raise error.ServiceNameUnknownError(string="%s (%r)" % (e, port))
+	twisted.internet.error.ServiceNameUnknownError: Service name given as port is unknown: service/proto not found ('8080').
+	
+2020-06-07T10:07:22-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:07:22-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 102, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1533, in __init__
+	    raise error.ServiceNameUnknownError(string="%s (%r)" % (e, port))
+	twisted.internet.error.ServiceNameUnknownError: Service name given as port is unknown: service/proto not found ('8080').
+	
+2020-06-07T10:07:23-0300 [stdout#info] sem saida
+2020-06-07T10:07:24-0300 [-] Received SIGINT, shutting down.
+2020-06-07T10:07:24-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8082 Closed)
+2020-06-07T10:07:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fb57ce74400>
+2020-06-07T10:07:24-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T10:07:24-0300 [-] Main loop terminated.
+2020-06-07T10:07:24-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:07:24-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 102, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1533, in __init__
+	    raise error.ServiceNameUnknownError(string="%s (%r)" % (e, port))
+	twisted.internet.error.ServiceNameUnknownError: Service name given as port is unknown: service/proto not found ('8080').
+	
+2020-06-07T10:07:24-0300 [twisted.internet.defer#critical] Unhandled error in Deferred:
+2020-06-07T10:07:24-0300 [twisted.internet.defer#critical] 
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 102, in dataReceived
+	    d = connectProtocol(point, cur_protocol)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 2097, in connectProtocol
+	    return endpoint.connect(OneShotFactory())
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/endpoints.py", line 580, in connect
+	    timeout=self._timeout, bindAddress=self._bindAddress)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 499, in connectTCP
+	    c = tcp.Connector(host, port, factory, timeout, bindAddress, self)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1533, in __init__
+	    raise error.ServiceNameUnknownError(string="%s (%r)" % (e, port))
+	twisted.internet.error.ServiceNameUnknownError: Service name given as port is unknown: service/proto not found ('8080').
+	

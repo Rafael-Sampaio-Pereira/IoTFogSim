@@ -1,0 +1,36 @@
+2020-06-07T11:59:50-0300 [-] Initializing Server - Number of events: 1
+2020-06-07T11:59:50-0300 [-] HttpServerAppFactory starting on 8080
+2020-06-07T11:59:50-0300 [-] Creating router ...
+2020-06-07T11:59:50-0300 [-] Initializing Router - Number of events: 2
+2020-06-07T11:59:51-0300 [-] RouterFactory starting on 8081
+2020-06-07T11:59:51-0300 [-] Creating AccessPoint station ...
+2020-06-07T11:59:51-0300 [-] Initializing Access Point - Number of events: 3
+2020-06-07T11:59:51-0300 [-] Initializing sensor node - Number of events: 4
+2020-06-07T11:59:52-0300 [stdout#info] Not connected to a wireless access point
+2020-06-07T11:59:52-0300 [stdout#info] Assossiated to : notebook 1
+2020-06-07T11:59:52-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:59:52-0300 [stdout#info] This divice have no simulation core instance
+2020-06-07T11:59:52-0300 [stdout#info] {b'{"destiny_addr": "127.0.0.1", "destiny_port": 8080, "source_addr": "127.0.0.1", "source_port": 8888, "type": "http", "payload": "HTTP 1.0 / GET request"}'}
+2020-06-07T11:59:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fa947fdb2b0>
+2020-06-07T11:59:52-0300 [applications.httpapp.HttpServerAppFactory] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 1427, in doRead
+	    self._buildAddr(addr))
+	  File "/home/rafael/iotfogsim/scinetsim/applications/httpapp.py", line 90, in buildProtocol
+	    return HttpServerAppProtocol(self)
+	builtins.TypeError: __init__() takes 1 positional argument but 2 were given
+	
+2020-06-07T11:59:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fa947fdb2b0>
+2020-06-07T12:00:36-0300 [-] Received SIGINT, shutting down.
+2020-06-07T12:00:36-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8080 Closed)
+2020-06-07T12:00:36-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-07T12:00:36-0300 [-] Main loop terminated.
