@@ -14,6 +14,7 @@ class AccessPointAppProtocol(StandardApplicationComponent):
     def __init__(self, simulation_core, visual_component):
         self.visual_component = visual_component
         self.simulation_core =  simulation_core
+        self._out_buffer = set()
 
     def connectionMade(self):
         self.transport.setTcpKeepAlive(1)
@@ -22,14 +23,22 @@ class AccessPointAppProtocol(StandardApplicationComponent):
 
     # This method is overhidding the dataReceived method in the StandardApplicationComponent class - Rafael Sampaio
     def dataReceived(self, data):
-        pass
-        
+        self.put_package_in_buffer(data)
+
     def connectionLost(self, reason):
         pass     
          
     def write(self, data):
         if data:
             self.transport.write(data)
+
+    # This method is overhidding the put_package_in_buffer method in the StandardApplicationComponent class - Rafael Sampaio
+    def put_package_in_buffer(self, data):
+        if data.endswith(b"\n"):
+            packages = data.split(b"\n")
+            for package in packages:
+                if package != b'':
+                    self._out_buffer.add(package)
 
 
 class AccessPointAppFactory(ClientFactory):
@@ -46,7 +55,7 @@ class AccessPointAppFactory(ClientFactory):
 
 
 
-class AccessPointApp:
+class AccessPointApp(StandardApplicationComponent):
 
     protocol.ClientFactory.noisy = False
     TCP4ClientEndpoint.noisy = False
@@ -57,7 +66,7 @@ class AccessPointApp:
         self.coverage_area_radius = None
         self.TBTT = None
         self._in_buffer = set() # stores packages received from wifi devices - Rafael Sampaio
-        self._out_buffer = set() # stores packages received from gateway(router/switch) - Rafael Sampaio
+        # self._out_buffer = set() # stores packages received from gateway(router/switch) - Rafael Sampaio
         self.associated_devices = set()
         self.gateway_addr = '127.0.0.1'
         self.gateway_port = 8081
@@ -158,6 +167,12 @@ class AccessPointApp:
     def print_associated_devices(self):
         for device in self.associated_devices:
             print("Assossiated to :", device.name)
+    
+    def get_associated_device_by_addr_and_port(self, device_addr, device_port):
+        if len(self.associated_devices) > 0:
+            for device in self.associated_devices:
+                if device.application.get_addr() == device_addr and device.application.get_port() == device_port:
+                    return device
 
 
     def verify_in_buffer(self):
@@ -167,10 +182,13 @@ class AccessPointApp:
             return False
 
     def verify_out_buffer(self):
-        if len(self._out_buffer) > 0:
-            return True
+        if self.ap_factory.running_protocol:
+            if len(self.ap_factory.running_protocol._out_buffer) > 0:
+                return True
+            else:
+                return False
         else:
-            return False
+                return False
 
     def forward_packages(self):
         if self.verify_in_buffer():
@@ -182,11 +200,13 @@ class AccessPointApp:
                     self._in_buffer.remove(package)
 
         if self.verify_out_buffer():
-            print('com saida')
-        else:
-            pass
-            # print('sem saida')
-        
+            for package in self.ap_factory.running_protocol._out_buffer.copy():
+                destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
+                destiny_device = self.get_associated_device_by_addr_and_port(destiny_addr, destiny_port)
+                if destiny_device:
+                    destiny_device.application._buffer.add(package)
+                    self.ap_factory.running_protocol._out_buffer.remove(package)
+                
         reactor.callLater(1, self.forward_packages)
 
 

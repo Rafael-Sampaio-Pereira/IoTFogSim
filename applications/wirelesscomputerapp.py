@@ -20,6 +20,12 @@ class WirelessComputerApp(StandardApplicationComponent):
         self.associated_ap = None
         self.is_connected = False
         self.controls = AppControls()
+
+    def get_addr(self):
+        return self.source_addr
+
+    def get_port(self):
+        return self.source_port
     
     def start(self):
         self.source_addr = '127.0.0.1'
@@ -41,14 +47,15 @@ class WirelessComputerApp(StandardApplicationComponent):
                 payload = 'HTTP 1.0 / GET request'
                 package = self.build_package(payload)
                 self.send(package)
-                
                 self.controls.is_first_request = False
-
-            # FALTA:
-            # AP DEVE TER UMA MANEIRA DE IDENTIFICAR OS DISPOSITIVOS CONECTADOS E ENTREGAR A ELES as mensagens recebidas do router
-
         else:
             print('Not connected to a wireless access point')
+
+        
+        for package in self._buffer:
+            _, _, _, _, _, payload = self.extract_package_contents(package)
+            # Print the received data on the sreen.  - Rafael Sampaio
+            self.update_alert_message_on_screen(payload)
 
     # this method is overhidding the send method in StandardApplicationComponent class - Rafael Sampaio
     def send(self, package):

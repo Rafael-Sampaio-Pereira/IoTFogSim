@@ -118,9 +118,6 @@ class HttpServerAppProtocol(StandardApplicationComponent):
     def connectionLost(self, reason):
         log.msg('connection lost:', reason.getErrorMessage())
         self.simulation_core.updateEventsCounter("connection lost")
-    
-    def send(self, message):
-        self.transport.write(message)
 
     def dataReceived(self, data):
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(data)
@@ -134,7 +131,7 @@ class HttpServerAppProtocol(StandardApplicationComponent):
                         "source_addr": self.source_addr,
                         "source_port": self.source_port,
                         "type": 'http',
-                        "payload": "reply test data"
+                        "payload": "HTTP 1.0 / GET response"
                     }
         package = json.dumps(package)
         msg_bytes, _ = codecs.escape_decode(package, 'utf8')
