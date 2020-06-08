@@ -30,7 +30,7 @@ class PublisherApp(StandardApplicationComponent):
         self.destiny_port = 5100 
 
         self.gateway_addr = "127.0.0.1"
-        self.gateway_port = 8082
+        self.gateway_port = 8081
 
         self.publish_interval = 5
 
