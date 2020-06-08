@@ -155,6 +155,14 @@ def load_nodes(project_name, simulation_core):
 					time.sleep(interval)
 					ap.run()
 
+
+			for computer in data['fog']['wireless_computers']:
+    					
+				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+				simulation_core.allNodes.add(comp) 
+				time.sleep(interval)
+				comp.run()
+
 			
 			for server in data['fog']['servers']:
 								
@@ -197,14 +205,6 @@ def load_nodes(project_name, simulation_core):
 
 				for deivce in WSN_network_group.sensors_list:
 					deivce.run()
-
-			
-			for computer in data['fog']['wireless_computers']:
-					
-				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
-				simulation_core.allNodes.add(comp) 
-				time.sleep(interval)
-				comp.run()
 
 
 

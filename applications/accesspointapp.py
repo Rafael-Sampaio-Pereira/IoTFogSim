@@ -6,6 +6,7 @@ from twisted.internet.endpoints import TCP4ClientEndpoint
 from twisted.internet.protocol import ClientFactory
 from twisted.internet.endpoints import connectProtocol
 import tkinter as tk
+from twisted.python import log
 
 
 # this protocol acts as a client to the router/switch - Rafael Sampaio
@@ -103,7 +104,7 @@ class AccessPointApp(StandardApplicationComponent):
             wifi_devices = self.simulation_core.canvas.find_withtag("wifi_device")
             
             # Verifys if are device coveraged by the wifi signal and if the wifi devices list has any object. - Rafael Sampaio         
-            if len(all_coveraged_devices) > 0 or len(wifi_devices) > 0:
+            if len(all_coveraged_devices) > 0 and len(wifi_devices) > 0:
                 # for each device into wifi signal coverage area, verify if this is an wifi device, then run any action. - Rafael Sampaio
                 for device_icon in all_coveraged_devices:
                     # print(device_icon)
@@ -111,7 +112,9 @@ class AccessPointApp(StandardApplicationComponent):
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, fill="green")
                         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text="Found devices")
                         device = self.get_device_by_icon(device_icon)
-                        self.associate(device)
+                        
+                        if device:
+                            self.associate(device)
                     else:
                         pass
                         #log.msg("The device is not wireless based")

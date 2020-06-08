@@ -26,7 +26,7 @@
                 "application": "applications.wirelesscomputerapp.WirelessComputerApp",
                 "is_wireless": true,
                 "x": 400,
-                "y": 370
+                "y": 870
             }
         ],
         "routers": [
