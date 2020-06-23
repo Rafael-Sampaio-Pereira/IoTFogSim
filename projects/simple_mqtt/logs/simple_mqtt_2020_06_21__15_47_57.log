@@ -1,0 +1,539 @@
+2020-06-21T15:47:57-0300 [-] Creating router ...
+2020-06-21T15:47:57-0300 [-] Initializing Router - Number of events: 1
+2020-06-21T15:47:58-0300 [-] RouterFactory starting on 8081
+2020-06-21T15:47:58-0300 [-] Initializing Server - Number of events: 2
+2020-06-21T15:47:58-0300 [-] BrokerFactory starting on 5100
+2020-06-21T15:47:58-0300 [-] Initializing Client - Number of events: 3
+2020-06-21T15:47:59-0300 [-] Initializing Client - Number of events: 4
+2020-06-21T15:47:59-0300 [-] Initializing Client - Number of events: 5
+2020-06-21T15:48:00-0300 [-] Initializing Client - Number of events: 6
+2020-06-21T15:48:00-0300 [-] Initializing Client - Number of events: 7
+2020-06-21T15:48:01-0300 [-] Initializing Client - Number of events: 8
+2020-06-21T15:48:01-0300 [-] Initializing Client - Number of events: 9
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [stdout#info] This divice have no simulation core instance
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51988 - Connected to mqtt broker - Number of events: 10
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51988 - sending MQTT SUBSCRIBE REQUEST - Number of events: 11
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51990 - Connected to mqtt broker - Number of events: 12
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51990 - sending MQTT SUBSCRIBE REQUEST - Number of events: 13
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51992 - Connected to mqtt broker - Number of events: 14
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 15
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51994 - Connected to mqtt broker - Number of events: 16
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 17
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51996 - Connected to mqtt broker - Number of events: 18
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 19
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51998 - Connected to mqtt broker - Number of events: 20
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 21
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:52000 - Connected to mqtt broker - Number of events: 22
+2020-06-21T15:48:02-0300 [Uninitialized] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 23
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434470>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434668>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434860>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434a58>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434c50>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434e48>
+2020-06-21T15:48:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43d198>
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39968, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39970, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39972, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39974, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39976, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39978, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39980, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51988, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK121076987080989"
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.89 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.99 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.71 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.23 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.37 Kwh"}}
+2020-06-21T15:48:02-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51990, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK236909111219792"
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.89 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.99 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.71 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.23 Kwh"}
+2020-06-21T15:48:02-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.37 Kwh"}}
+2020-06-21T15:48:02-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51992, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK19134026636219"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51994, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK31345318959602"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51996, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK166739681599452"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 51998, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK48582831011624"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:02-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 52000, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK54820795552871"}
+2020-06-21T15:48:02-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-06-21T15:48:07-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-06-21T15:48:07-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-06-21T15:48:07-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-06-21T15:48:07-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43da90>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43dd68>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd77416a278>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434860>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434a58>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434c50>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43da58>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448240>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434e48>
+2020-06-21T15:48:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43d198>
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39982, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:07-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39984, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:07-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39986, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:07-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39988, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:07-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39990, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:07-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.33 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.85 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.22 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.17 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.14 Kwh"}}
+2020-06-21T15:48:07-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:07-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.33 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.85 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.22 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.17 Kwh"}
+2020-06-21T15:48:07-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.14 Kwh"}}
+2020-06-21T15:48:07-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-06-21T15:48:12-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-06-21T15:48:12-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-06-21T15:48:12-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-06-21T15:48:12-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448898>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448a20>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43da90>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43dd68>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448630>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448d68>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448f60>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd77416a278>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43da58>
+2020-06-21T15:48:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448240>
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39992, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:12-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39994, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:12-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39996, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:12-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 39998, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:12-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40000, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:12-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.29 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.13 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.76 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.0 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.78 Kwh"}}
+2020-06-21T15:48:12-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:12-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.29 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.13 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.76 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.0 Kwh"}
+2020-06-21T15:48:12-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.78 Kwh"}}
+2020-06-21T15:48:12-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-06-21T15:48:17-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-06-21T15:48:17-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452208>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452710>
+2020-06-21T15:48:17-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-06-21T15:48:17-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448898>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448a20>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452438>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448630>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b4529e8>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452d68>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448d68>
+2020-06-21T15:48:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448f60>
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40002, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:17-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40004, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:17-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40006, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:17-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.65 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.42 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.32 Kwh"}}
+2020-06-21T15:48:17-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.65 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.42 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.32 Kwh"}}
+2020-06-21T15:48:17-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40008, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:17-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.82 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.18 Kwh"}}
+2020-06-21T15:48:17-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.82 Kwh"}
+2020-06-21T15:48:17-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.18 Kwh"}}
+2020-06-21T15:48:17-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:17-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40010, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:17-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-06-21T15:48:22-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-06-21T15:48:22-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b0b8>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452208>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b278>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b438>
+2020-06-21T15:48:22-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-06-21T15:48:22-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 43
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452710>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452438>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448b00>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448908>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b4529e8>
+2020-06-21T15:48:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452d68>
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40012, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:22-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40014, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:22-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40016, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:22-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.34 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.5 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.06 Kwh"}}
+2020-06-21T15:48:22-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.34 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.5 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.06 Kwh"}}
+2020-06-21T15:48:22-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40018, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:22-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40020, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:22-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.6 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.66 Kwh"}}
+2020-06-21T15:48:22-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:22-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.6 Kwh"}
+2020-06-21T15:48:22-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.66 Kwh"}}
+2020-06-21T15:48:22-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 44
+2020-06-21T15:48:27-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 45
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434208>
+2020-06-21T15:48:27-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 46
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b0b8>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b6d8>
+2020-06-21T15:48:27-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 47
+2020-06-21T15:48:27-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 48
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b278>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b9b0>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b438>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bbe0>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bda0>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448b00>
+2020-06-21T15:48:27-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448908>
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40022, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:27-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40024, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:27-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.08 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.04 Kwh"}}
+2020-06-21T15:48:27-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.08 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.04 Kwh"}}
+2020-06-21T15:48:27-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40026, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:27-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.57 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.37 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.89 Kwh"}}
+2020-06-21T15:48:27-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.57 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "16.37 Kwh"}
+2020-06-21T15:48:27-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.89 Kwh"}}
+2020-06-21T15:48:27-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40028, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:27-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:27-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40030, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:27-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 49
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd77283d6a0>
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434208>
+2020-06-21T15:48:32-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 50
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40032, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:32-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.99 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.99 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bb38>
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b6d8>
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40034, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:32-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.04 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.04 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 51
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc198>
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45b9b0>
+2020-06-21T15:48:32-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 52
+2020-06-21T15:48:32-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 53
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc3c8>
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bbe0>
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc5c0>
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40036, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:32-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bda0>
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.84 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.84 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40038, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:32-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40040, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:32-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.25 Kwh"}
+2020-06-21T15:48:32-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.67 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:32-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.25 Kwh"}
+2020-06-21T15:48:32-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.67 Kwh"}}
+2020-06-21T15:48:32-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 54
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc940>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd77283d6a0>
+2020-06-21T15:48:37-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 55
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafca90>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bb38>
+2020-06-21T15:48:37-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 56
+2020-06-21T15:48:37-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 57
+2020-06-21T15:48:37-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 58
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40042, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:37-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.19 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.19 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafca20>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafce48>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb0b8>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc198>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc3c8>
+2020-06-21T15:48:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc5c0>
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40044, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:37-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.4 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.4 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40046, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:37-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40048, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:37-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40050, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:37-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.29 Kwh"}
+2020-06-21T15:48:37-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.91 Kwh"}
+2020-06-21T15:48:37-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.82 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:37-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.29 Kwh"}
+2020-06-21T15:48:37-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.91 Kwh"}
+2020-06-21T15:48:37-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.82 Kwh"}}
+2020-06-21T15:48:37-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 59
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb588>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc940>
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40052, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:42-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.05 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.05 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 60
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb668>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafca90>
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40054, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:42-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.4 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.4 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 61
+2020-06-21T15:48:42-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 62
+2020-06-21T15:48:42-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 63
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb550>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafba58>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafbc50>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafca20>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafce48>
+2020-06-21T15:48:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb0b8>
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40056, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:42-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40058, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:42-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40060, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:42-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.23 Kwh"}
+2020-06-21T15:48:42-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.61 Kwh"}
+2020-06-21T15:48:42-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.42 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:42-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.23 Kwh"}
+2020-06-21T15:48:42-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.61 Kwh"}
+2020-06-21T15:48:42-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.42 Kwh"}}
+2020-06-21T15:48:42-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 64
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafbf60>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb588>
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40062, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:47-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.14 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.14 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 65
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f160>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb668>
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40064, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:47-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.82 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.82 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 66
+2020-06-21T15:48:47-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 67
+2020-06-21T15:48:47-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 68
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafcac8>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc4e0>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc198>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafb550>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafba58>
+2020-06-21T15:48:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafbc50>
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40066, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:47-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40068, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:47-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40070, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:47-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.86 Kwh"}
+2020-06-21T15:48:47-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.62 Kwh"}
+2020-06-21T15:48:47-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.6 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:47-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.86 Kwh"}
+2020-06-21T15:48:47-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.62 Kwh"}
+2020-06-21T15:48:47-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.6 Kwh"}}
+2020-06-21T15:48:47-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 69
+2020-06-21T15:48:52-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 70
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45ba90>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafbf60>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bbe0>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f160>
+2020-06-21T15:48:52-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 71
+2020-06-21T15:48:52-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 72
+2020-06-21T15:48:52-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 73
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd7728496a0>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43dba8>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43d8d0>
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40072, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:52-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafcac8>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc4e0>
+2020-06-21T15:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cafc198>
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40074, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:52-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.1 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.74 Kwh"}}
+2020-06-21T15:48:52-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.1 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.74 Kwh"}}
+2020-06-21T15:48:52-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40076, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:52-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40078, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:52-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40080, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:52-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.24 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.77 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.29 Kwh"}}
+2020-06-21T15:48:52-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:52-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.24 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.77 Kwh"}
+2020-06-21T15:48:52-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.29 Kwh"}}
+2020-06-21T15:48:52-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [-] 127.0.0.1:51992 - sending MQTT PUBLISH REQUEST - Number of events: 74
+2020-06-21T15:48:57-0300 [-] 127.0.0.1:51994 - sending MQTT PUBLISH REQUEST - Number of events: 75
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448be0>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452860>
+2020-06-21T15:48:57-0300 [-] 127.0.0.1:51996 - sending MQTT PUBLISH REQUEST - Number of events: 76
+2020-06-21T15:48:57-0300 [-] 127.0.0.1:51998 - sending MQTT PUBLISH REQUEST - Number of events: 77
+2020-06-21T15:48:57-0300 [-] 127.0.0.1:52000 - sending MQTT PUBLISH REQUEST - Number of events: 78
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45ba90>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b45bbe0>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f128>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f4a8>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f6a0>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd7728496a0>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43dba8>
+2020-06-21T15:48:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b43d8d0>
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40082, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:57-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40084, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:57-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.58 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.04 Kwh"}}
+2020-06-21T15:48:57-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51992, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.58 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51994, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.04 Kwh"}}
+2020-06-21T15:48:57-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40086, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:57-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40088, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:57-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 40090, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}
+2020-06-21T15:48:57-0300 [PublisherApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.57 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.52 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.83 Kwh"}}
+2020-06-21T15:48:57-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:48:57-0300 [stdout#info] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51996, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.57 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 51998, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.52 Kwh"}
+2020-06-21T15:48:57-0300 [stdout#info] "destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 52000, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.83 Kwh"}}
+2020-06-21T15:48:57-0300 [SubscriberApp,client] Extra data: line 1 column 4 (char 3)
+2020-06-21T15:49:02-0300 [-] Received SIGINT, shutting down.
+2020-06-21T15:49:02-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-21T15:49:02-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [SubscriberApp,client] connection lost - Number of events: 79
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost - Number of events: 80
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost - Number of events: 81
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b448be0>
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f128>
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434470>
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f4a8>
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost - Number of events: 82
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost - Number of events: 83
+2020-06-21T15:49:02-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [SubscriberApp,client] connection lost - Number of events: 84
+2020-06-21T15:49:02-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-21T15:49:02-0300 [PublisherApp,client] connection lost - Number of events: 85
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b434668>
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76cb0f6a0>
+2020-06-21T15:49:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd76b452860>
+2020-06-21T15:49:02-0300 [-] Main loop terminated.

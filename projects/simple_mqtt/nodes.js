@@ -128,19 +128,7 @@
             "x": 400,
             "y": 200,
             "access_points": [
-                { 
-                    "id": 7,
-                    "TBTT": 0.1024,
-                    "SSID": "Rede privada 001",
-                    "WPA2_password": "iotfogsim2019",
-                    "icon": "ap_icon",
-                    "coverage_area_radius": 200,
-                    "application": "applications.accesspointapp.AccessPointApp",
-                    "type": "access_point",
-                    "is_wireless": true,
-                    "x": 400,
-                    "y": 300
-                }
+               
             ]
         }
     ]

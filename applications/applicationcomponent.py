@@ -50,13 +50,23 @@ class StandardApplicationComponent(protocol.Protocol):
                 print(packages[0])
                 json_msg = packages[0]
 
+            # if "}}\n{" in package:
+            #     packages = package.replace("}}\n{","},{")
+
+            #     packages = json.dumps(packages)
+            #     print("um ou mais pacotes vão ser dropados, infelizmente ", packages)
+            #     print(packages[0])
+            #     json_msg = packages[0]
+
+                # TRABALAHNDO AQI TAMBEM
+
             else:
                 json_msg = json.loads(package)
 
             return json_msg["destiny_addr"], json_msg["destiny_port"], json_msg["source_addr"], json_msg["source_port"], json_msg["type"], json_msg["payload"]
         
         except Exception as e:
-            log.msg(package)
+            #log.msg(package)
             log.msg(e)
 
     def update_alert_message_on_screen(self, msg):

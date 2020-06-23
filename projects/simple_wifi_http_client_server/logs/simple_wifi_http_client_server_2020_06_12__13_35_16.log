@@ -1,0 +1,112 @@
+2020-06-12T13:35:16-0300 [-] Creating router ...
+2020-06-12T13:35:16-0300 [-] Initializing Router - Number of events: 1
+2020-06-12T13:35:16-0300 [-] RouterFactory starting on 8081
+2020-06-12T13:35:16-0300 [-] Creating AccessPoint station ...
+2020-06-12T13:35:16-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-12T13:35:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-12T13:35:17-0300 [-] Initializing sensor node - Number of events: 3
+2020-06-12T13:35:17-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:17-0300 [-] Initializing Server - Number of events: 4
+2020-06-12T13:35:18-0300 [-] HttpServerAppFactory starting on 8080
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] This divice have no simulation core instance
+2020-06-12T13:35:18-0300 [stdout#info] This divice have no simulation core instance
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:18-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:19-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:20-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:21-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:22-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:23-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:24-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:25-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:26-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:27-0300 [stdout#info] Not connected to a wireless access point
+2020-06-12T13:35:29-0300 [-] Closing IoTFogSim Application...
+2020-06-12T13:35:29-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-12T13:35:29-0300 [applications.httpapp.HttpServerAppFactory] (TCP Port 8080 Closed)
+2020-06-12T13:35:29-0300 [-] Main loop terminated.

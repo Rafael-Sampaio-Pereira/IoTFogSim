@@ -22,6 +22,7 @@ iconsList = {
 	"server_icon": "iotfogsim_server.png",
 	"sensor_icon": "iotfogsim_sensor_node.png",
 	"sensor_signal_icon": "iotfogsim_sensor_node_signal.png",
+	"sink_icon": "iotfogsim_sink.png",
 	"small_current_sensor_icon": "iotfogsim_small_current_sensor.png",
 	"smart_meter_icon": "iotfogsim_smart_meter.png",
 	"smart_meter_icon_signal": "iotfogsim_smart_meter_signal.png",

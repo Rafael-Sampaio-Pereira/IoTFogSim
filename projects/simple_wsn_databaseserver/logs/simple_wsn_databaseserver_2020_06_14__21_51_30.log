@@ -1,0 +1,124 @@
+2020-06-14T21:51:30-0300 [-] Creating router ...
+2020-06-14T21:51:30-0300 [-] Initializing Router - Number of events: 1
+2020-06-14T21:51:31-0300 [-] RouterFactory starting on 8081
+2020-06-14T21:51:31-0300 [-] Creating AccessPoint station ...
+2020-06-14T21:51:31-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-14T21:51:31-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-14T21:51:31-0300 [-] Initializing Server - Number of events: 3
+2020-06-14T21:51:32-0300 [-] BrokerFactory starting on 5100
+2020-06-14T21:51:32-0300 [-] Initializing Server - Number of events: 4
+2020-06-14T21:51:32-0300 [-] DatabaseServerAppFactory starting on 8083
+2020-06-14T21:51:32-0300 [-] Initializing Client - Number of events: 5
+2020-06-14T21:51:33-0300 [-] Initializing Client - Number of events: 6
+2020-06-14T21:51:33-0300 [-] Initializing sink node - Number of events: 7
+2020-06-14T21:51:34-0300 [-] Initializing sensor node - Number of events: 8
+2020-06-14T21:51:34-0300 [-] Initializing sensor node - Number of events: 9
+2020-06-14T21:51:35-0300 [-] Initializing sensor node - Number of events: 10
+2020-06-14T21:51:35-0300 [-] Initializing sensor node - Number of events: 11
+2020-06-14T21:51:36-0300 [-] Initializing sensor node - Number of events: 12
+2020-06-14T21:51:36-0300 [-] Initializing sensor node - Number of events: 13
+2020-06-14T21:51:37-0300 [-] Initializing sensor node - Number of events: 14
+2020-06-14T21:51:37-0300 [-] Initializing sensor node - Number of events: 15
+2020-06-14T21:51:38-0300 [-] Initializing sensor node - Number of events: 16
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_2 ==========
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_5 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_5  <------->  sensor_6
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 17
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 18
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_8 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_8  <------->  sensor_7
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 19
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 20
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_7 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_7  <------->  sensor_8
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 21
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 22
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_4 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_4  <------->  sensor_3
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 23
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 24
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_1 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2020-06-14T21:51:38-0300 [stdout#info] sensor_1  <------->  sensor_3
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 25
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 26
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 27
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 28
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 29
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 30
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_9 ==========
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_6 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_6  <------->  sensor_5
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 31
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 32
+2020-06-14T21:51:38-0300 [stdout#info] ========= sensor_3 ==========
+2020-06-14T21:51:38-0300 [stdout#info] sensor_3  <------->  sensor_4
+2020-06-14T21:51:38-0300 [stdout#info] sensor_3  <------->  sensor_1
+2020-06-14T21:51:38-0300 [stdout#info] =============================
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 33
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 34
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 35
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 36
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 37
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 38
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 39
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 40
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 41
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 42
+2020-06-14T21:51:38-0300 [-] wsn node send data - Number of events: 43
+2020-06-14T21:51:38-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T21:51:38-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T21:51:38-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T21:51:38-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T21:51:38-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T21:51:38-0300 [Uninitialized] 127.0.0.1:33008 - Connected to mqtt broker - Number of events: 44
+2020-06-14T21:51:38-0300 [Uninitialized] 127.0.0.1:33008 - sending MQTT SUBSCRIBE REQUEST - Number of events: 45
+2020-06-14T21:51:38-0300 [Uninitialized] 127.0.0.1:33010 - Connected to mqtt broker - Number of events: 46
+2020-06-14T21:51:38-0300 [Uninitialized] 127.0.0.1:33010 - sending MQTT SUBSCRIBE REQUEST - Number of events: 47
+2020-06-14T21:51:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5d60607f0>
+2020-06-14T21:51:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5d60607b8>
+2020-06-14T21:51:39-0300 [RouterAppProtocol,4,127.0.0.1] {"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 33012, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "id= 250751679752185 - sensor= sensor_1data= 17.57 Kwh"}}
+	{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 33012, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "id= 278769317801774 - sensor= sensor_1data= 17.57 Kwh"}}
+	{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 33012, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "id= 29207118138678 - sensor= sensor_1data= 17.57 Kwh"}}
+	
+2020-06-14T21:51:39-0300 [RouterAppProtocol,4,127.0.0.1] Extra data: line 2 column 1 (char 248)
+2020-06-14T21:51:39-0300 [RouterAppProtocol,4,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/posixbase.py", line 614, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 243, in doRead
+	    return self._dataReceived(data)
+	  File "/home/rafael/iotfogsim/vm/lib/python3.6/site-packages/twisted/internet/tcp.py", line 249, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/rafael/iotfogsim/scinetsim/applications/routerapp.py", line 76, in dataReceived
+	    destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
+	builtins.TypeError: 'NoneType' object is not iterable
+	
+2020-06-14T21:51:41-0300 [-] Received SIGINT, shutting down.
+2020-06-14T21:51:41-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-14T21:51:41-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-14T21:51:41-0300 [SubscriberApp,client] connection lost - Number of events: 48
+2020-06-14T21:51:41-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-14T21:51:41-0300 [SubscriberApp,client] connection lost - Number of events: 49
+2020-06-14T21:51:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5d60607b8>
+2020-06-14T21:51:41-0300 [applications.databaseserverapp.DatabaseServerAppFactory] (TCP Port 8083 Closed)
+2020-06-14T21:51:41-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-14T21:51:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7ff5d60607f0>
+2020-06-14T21:51:41-0300 [-] Main loop terminated.

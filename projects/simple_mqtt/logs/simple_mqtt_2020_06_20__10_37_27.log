@@ -1,0 +1,725 @@
+2020-06-20T10:37:27-0300 [-] Creating router ...
+2020-06-20T10:37:27-0300 [-] Initializing Router - Number of events: 1
+2020-06-20T10:37:27-0300 [-] RouterFactory starting on 8081
+2020-06-20T10:37:27-0300 [-] Creating AccessPoint station ...
+2020-06-20T10:37:27-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-20T10:37:28-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:28-0300 [-] Initializing Server - Number of events: 3
+2020-06-20T10:37:29-0300 [-] BrokerFactory starting on 5100
+2020-06-20T10:37:29-0300 [-] Initializing Client - Number of events: 4
+2020-06-20T10:37:29-0300 [-] Initializing Client - Number of events: 5
+2020-06-20T10:37:30-0300 [-] Initializing Client - Number of events: 6
+2020-06-20T10:37:30-0300 [-] Initializing Client - Number of events: 7
+2020-06-20T10:37:31-0300 [-] Initializing Client - Number of events: 8
+2020-06-20T10:37:31-0300 [-] Initializing Client - Number of events: 9
+2020-06-20T10:37:32-0300 [-] Initializing Client - Number of events: 10
+2020-06-20T10:37:32-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [stdout#info] This divice have no simulation core instance
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37862 - Connected to mqtt broker - Number of events: 11
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37862 - sending MQTT SUBSCRIBE REQUEST - Number of events: 12
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37864 - Connected to mqtt broker - Number of events: 13
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37864 - sending MQTT SUBSCRIBE REQUEST - Number of events: 14
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37866 - Connected to mqtt broker - Number of events: 15
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 16
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37868 - Connected to mqtt broker - Number of events: 17
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 18
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37870 - Connected to mqtt broker - Number of events: 19
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 20
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37872 - Connected to mqtt broker - Number of events: 21
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 22
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37874 - Connected to mqtt broker - Number of events: 23
+2020-06-20T10:37:32-0300 [Uninitialized] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 24
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc19eb8>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c0f0>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c2e8>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c4e0>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c6d8>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a149532b0>
+2020-06-20T10:37:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c9b0>
+2020-06-20T10:37:32-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:32-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 54074, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}\n'
+2020-06-20T10:37:32-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 54076, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK"}\n'
+2020-06-20T10:37:32-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 37862, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK267130518563960"}\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.19 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.74 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.04 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.75 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.03 Kwh"}}\n\n'
+2020-06-20T10:37:32-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:32-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 37864, "source_addr": "127.0.0.1", "source_port": 5100, "type": "http", "payload": "MQTT_ACK96925567229590"}\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.19 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.74 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.04 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.75 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.03 Kwh"}}\n\n'
+2020-06-20T10:37:32-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:32-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:33-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:34-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:35-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:36-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 25
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35390>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c2e8>
+2020-06-20T10:37:37-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 26
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35630>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c4e0>
+2020-06-20T10:37:37-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 27
+2020-06-20T10:37:37-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 28
+2020-06-20T10:37:37-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 29
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.71 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.71 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc357f0>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35a20>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35c18>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c6d8>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a149532b0>
+2020-06-20T10:37:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c9b0>
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.0 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.0 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.21 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "2.94 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.45 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:37-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.21 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "2.94 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.45 Kwh"}}\n\n'
+2020-06-20T10:37:37-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:37-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:38-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:39-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:40-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:41-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:42-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 30
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35eb8>
+2020-06-20T10:37:42-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 31
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35390>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5198>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35630>
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.16 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.16 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.8 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "6.8 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:42-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 32
+2020-06-20T10:37:42-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 33
+2020-06-20T10:37:42-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 34
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e50b8>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5588>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5780>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc357f0>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35a20>
+2020-06-20T10:37:42-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35c18>
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.61 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.61 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.95 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:42-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.61 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "20.61 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.95 Kwh"}}\n\n'
+2020-06-20T10:37:42-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:42-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:43-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:44-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:45-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:46-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 35
+2020-06-20T10:37:47-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 36
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5a58>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5c88>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc35eb8>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5198>
+2020-06-20T10:37:47-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 37
+2020-06-20T10:37:47-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 38
+2020-06-20T10:37:47-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 39
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ef0>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3128>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e50b8>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5588>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f30f0>
+2020-06-20T10:37:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5780>
+2020-06-20T10:37:47-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.73 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.97 Kwh"}}\n\n'
+2020-06-20T10:37:47-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:47-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.73 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "3.97 Kwh"}}\n\n'
+2020-06-20T10:37:47-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:47-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.18 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.19 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.6 Kwh"}}\n\n'
+2020-06-20T10:37:47-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:47-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.18 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.19 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.6 Kwh"}}\n\n'
+2020-06-20T10:37:47-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:47-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:49-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:50-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:51-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 40
+2020-06-20T10:37:52-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 41
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3668>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3828>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5a58>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5c88>
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.12 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.5 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.12 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.5 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:52-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 42
+2020-06-20T10:37:52-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 43
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ac8>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f39b0>
+2020-06-20T10:37:52-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 44
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ef0>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3128>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3be0>
+2020-06-20T10:37:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f30f0>
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.89 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "17.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.89 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.57 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:52-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "13.57 Kwh"}}\n\n'
+2020-06-20T10:37:52-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:52-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:53-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:55-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:56-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:57-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 45
+2020-06-20T10:37:57-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 46
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3e80>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3668>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3dd8>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3828>
+2020-06-20T10:37:57-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "2.5 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.57 Kwh"}}\n\n'
+2020-06-20T10:37:57-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:57-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "2.5 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.57 Kwh"}}\n\n'
+2020-06-20T10:37:57-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:57-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 47
+2020-06-20T10:37:57-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 48
+2020-06-20T10:37:57-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 49
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307240>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3074e0>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3076d8>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ac8>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f39b0>
+2020-06-20T10:37:57-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3be0>
+2020-06-20T10:37:57-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.18 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.65 Kwh"}}\n\n'
+2020-06-20T10:37:57-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:37:57-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "19.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.18 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.65 Kwh"}}\n\n'
+2020-06-20T10:37:57-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:37:57-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:58-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:37:59-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:00-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:01-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 50
+2020-06-20T10:38:02-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 51
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ac8>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3a58>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3e80>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3dd8>
+2020-06-20T10:38:02-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.38 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.14 Kwh"}}\n\n'
+2020-06-20T10:38:02-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:02-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.38 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "10.14 Kwh"}}\n\n'
+2020-06-20T10:38:02-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:02-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 52
+2020-06-20T10:38:02-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 53
+2020-06-20T10:38:02-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 54
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5d68>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3079e8>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307be0>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307240>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3074e0>
+2020-06-20T10:38:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3076d8>
+2020-06-20T10:38:02-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.21 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.11 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.78 Kwh"}}\n\n'
+2020-06-20T10:38:02-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:02-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.21 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "7.11 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "14.78 Kwh"}}\n\n'
+2020-06-20T10:38:02-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:02-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:03-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:04-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:05-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:06-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 55
+2020-06-20T10:38:07-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 56
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307da0>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307fd0>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5ac8>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f3a58>
+2020-06-20T10:38:07-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.79 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.12 Kwh"}}\n\n'
+2020-06-20T10:38:07-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:07-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.79 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.12 Kwh"}}\n\n'
+2020-06-20T10:38:07-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:07-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 57
+2020-06-20T10:38:07-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 58
+2020-06-20T10:38:07-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 59
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d1d0>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f39b0>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5d68>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d3079e8>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5cc0>
+2020-06-20T10:38:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307be0>
+2020-06-20T10:38:07-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.68 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.43 Kwh"}}\n\n'
+2020-06-20T10:38:07-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:07-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "18.68 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.57 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.43 Kwh"}}\n\n'
+2020-06-20T10:38:07-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:07-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:08-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:09-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:10-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:11-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 60
+2020-06-20T10:38:12-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 61
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d470>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d710>
+2020-06-20T10:38:12-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 62
+2020-06-20T10:38:12-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 63
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307da0>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d307fd0>
+2020-06-20T10:38:12-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 64
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d908>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31db00>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d1d0>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2f39b0>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d6d8>
+2020-06-20T10:38:12-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5cc0>
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.67 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.91 Kwh"}}\n\n'
+2020-06-20T10:38:12-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:12-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.67 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "21.91 Kwh"}}\n\n'
+2020-06-20T10:38:12-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:12-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.31 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.15 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.37 Kwh"}}\n\n'
+2020-06-20T10:38:12-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:12-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.31 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.15 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.37 Kwh"}}\n\n'
+2020-06-20T10:38:12-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:13-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:15-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:16-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 65
+2020-06-20T10:38:17-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 66
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5080>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d470>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b00f0>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d710>
+2020-06-20T10:38:17-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.32 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.5 Kwh"}}\n\n'
+2020-06-20T10:38:17-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:17-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.32 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.5 Kwh"}}\n\n'
+2020-06-20T10:38:17-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:17-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 67
+2020-06-20T10:38:17-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 68
+2020-06-20T10:38:17-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 69
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b02e8>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0518>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0710>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d908>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31db00>
+2020-06-20T10:38:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d31d6d8>
+2020-06-20T10:38:17-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.04 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.55 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.65 Kwh"}}\n\n'
+2020-06-20T10:38:17-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:17-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "12.04 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "15.55 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "11.65 Kwh"}}\n\n'
+2020-06-20T10:38:17-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:17-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:18-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:19-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:20-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:21-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:22-0300 [-] 127.0.0.1:37866 - sending MQTT PUBLISH REQUEST - Number of events: 70
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0a58>
+2020-06-20T10:38:22-0300 [-] 127.0.0.1:37868 - sending MQTT PUBLISH REQUEST - Number of events: 71
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2e5080>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0b70>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b00f0>
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.66 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37866, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "5.66 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.97 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37868, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "9.97 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:22-0300 [-] 127.0.0.1:37870 - sending MQTT PUBLISH REQUEST - Number of events: 72
+2020-06-20T10:38:22-0300 [-] 127.0.0.1:37872 - sending MQTT PUBLISH REQUEST - Number of events: 73
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0d68>
+2020-06-20T10:38:22-0300 [-] 127.0.0.1:37874 - sending MQTT PUBLISH REQUEST - Number of events: 74
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b02e8>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0eb8>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0518>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0128>
+2020-06-20T10:38:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0710>
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.38 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.35 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37870, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "4.38 Kwh"}}\n\n{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37872, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "22.35 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.65 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 155)
+2020-06-20T10:38:22-0300 [stdout#info] b'{"destiny_addr": "127.0.0.1", "destiny_port": 5100, "source_addr": "127.0.0.1", "source_port": 37874, "type": "http", "payload": {"action": "publish", "topic": "sensor_metering", "content": "8.65 Kwh"}}\n\n'
+2020-06-20T10:38:22-0300 [SubscriberApp,client] Extra data: line 2 column 1 (char 156)
+2020-06-20T10:38:22-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:23-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:24-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-20T10:38:25-0300 [-] Received SIGINT, shutting down.
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0128>
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0a58>
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc2c0f0>
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost - Number of events: 75
+2020-06-20T10:38:25-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost - Number of events: 76
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost - Number of events: 77
+2020-06-20T10:38:25-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [SubscriberApp,client] connection lost - Number of events: 78
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0b70>
+2020-06-20T10:38:25-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0d68>
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0d2b0eb8>
+2020-06-20T10:38:25-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [SubscriberApp,client] connection lost - Number of events: 79
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost - Number of events: 80
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-20T10:38:25-0300 [PublisherApp,client] connection lost - Number of events: 81
+2020-06-20T10:38:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f7a0bc19eb8>
+2020-06-20T10:38:25-0300 [-] Main loop terminated.

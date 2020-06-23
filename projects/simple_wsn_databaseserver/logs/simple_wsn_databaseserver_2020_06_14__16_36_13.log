@@ -1,0 +1,120 @@
+2020-06-14T16:36:13-0300 [-] Creating router ...
+2020-06-14T16:36:13-0300 [-] Initializing Router - Number of events: 1
+2020-06-14T16:36:13-0300 [-] RouterFactory starting on 8081
+2020-06-14T16:36:13-0300 [-] Creating AccessPoint station ...
+2020-06-14T16:36:13-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-14T16:36:14-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-14T16:36:14-0300 [-] Initializing Server - Number of events: 3
+2020-06-14T16:36:14-0300 [-] BrokerFactory starting on 5100
+2020-06-14T16:36:14-0300 [-] Initializing Server - Number of events: 4
+2020-06-14T16:36:15-0300 [-] DatabaseServerAppFactory starting on 8083
+2020-06-14T16:36:15-0300 [-] Initializing Client - Number of events: 5
+2020-06-14T16:36:15-0300 [-] Initializing Client - Number of events: 6
+2020-06-14T16:36:16-0300 [-] Initializing sink node - Number of events: 7
+2020-06-14T16:36:16-0300 [-] Initializing sensor node - Number of events: 8
+2020-06-14T16:36:17-0300 [-] Initializing sensor node - Number of events: 9
+2020-06-14T16:36:17-0300 [-] Initializing sensor node - Number of events: 10
+2020-06-14T16:36:18-0300 [-] Initializing sensor node - Number of events: 11
+2020-06-14T16:36:18-0300 [-] Initializing sensor node - Number of events: 12
+2020-06-14T16:36:19-0300 [-] Initializing sensor node - Number of events: 13
+2020-06-14T16:36:19-0300 [-] Initializing sensor node - Number of events: 14
+2020-06-14T16:36:20-0300 [-] Initializing sensor node - Number of events: 15
+2020-06-14T16:36:20-0300 [-] Initializing sensor node - Number of events: 16
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_3 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_3  <------->  sensor_4
+2020-06-14T16:36:21-0300 [stdout#info] sensor_3  <------->  sensor_1
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 162285044329219: sensor_3 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 17
+2020-06-14T16:36:21-0300 [stdout#info] 162285044329219: sensor_3 - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 18
+2020-06-14T16:36:21-0300 [stdout#info] 49187187318676: sensor_3 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 19
+2020-06-14T16:36:21-0300 [stdout#info] 49187187318676: sensor_3 - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 20
+2020-06-14T16:36:21-0300 [stdout#info] 209075285177908: sensor_3 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 21
+2020-06-14T16:36:21-0300 [stdout#info] 209075285177908: sensor_3 - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 22
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_6 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_6  <------->  sensor_5
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 129961329292135: sensor_6 - sensor_5
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 23
+2020-06-14T16:36:21-0300 [stdout#info] 175175022670013: sensor_6 - sensor_5
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 24
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_9 ==========
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_1 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2020-06-14T16:36:21-0300 [stdout#info] sensor_1  <------->  sensor_3
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 111106813704563: sensor_1 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 25
+2020-06-14T16:36:21-0300 [stdout#info] 111106813704563: sensor_1 - sensor_3 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 26
+2020-06-14T16:36:21-0300 [stdout#info] 258912655621100: sensor_1 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 27
+2020-06-14T16:36:21-0300 [stdout#info] 258912655621100: sensor_1 - sensor_3 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 28
+2020-06-14T16:36:21-0300 [stdout#info] 125187150647889: sensor_1 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 29
+2020-06-14T16:36:21-0300 [stdout#info] 125187150647889: sensor_1 - sensor_3 - wsn_sink
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 30
+2020-06-14T16:36:21-0300 [stdout#info] 162285044329219: sensor_3 - wsn_sink - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 31
+2020-06-14T16:36:21-0300 [stdout#info] 49187187318676: sensor_3 - wsn_sink - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 32
+2020-06-14T16:36:21-0300 [stdout#info] 209075285177908: sensor_3 - wsn_sink - sensor_1 - sensor_4
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 33
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_8 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_8  <------->  sensor_7
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 256515304769918: sensor_8 - sensor_7
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 34
+2020-06-14T16:36:21-0300 [stdout#info] 262899261166736: sensor_8 - sensor_7
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 35
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_2 ==========
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_5 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_5  <------->  sensor_6
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 99395697816597: sensor_5 - sensor_6
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 36
+2020-06-14T16:36:21-0300 [stdout#info] 250260817922225: sensor_5 - sensor_6
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 37
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_4 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_4  <------->  sensor_3
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 73187995019970: sensor_4 - sensor_3
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 38
+2020-06-14T16:36:21-0300 [stdout#info] 40852384731234: sensor_4 - sensor_3
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 39
+2020-06-14T16:36:21-0300 [stdout#info] ========= sensor_7 ==========
+2020-06-14T16:36:21-0300 [stdout#info] sensor_7  <------->  sensor_8
+2020-06-14T16:36:21-0300 [stdout#info] =============================
+2020-06-14T16:36:21-0300 [stdout#info] 93018122750658: sensor_7 - sensor_8
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 40
+2020-06-14T16:36:21-0300 [stdout#info] 51800115735082: sensor_7 - sensor_8
+2020-06-14T16:36:21-0300 [-] wsn node send data - Number of events: 41
+2020-06-14T16:36:21-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T16:36:21-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T16:36:21-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T16:36:21-0300 [stdout#info] This divice have no simulation core instance
+2020-06-14T16:36:21-0300 [Uninitialized] 127.0.0.1:57220 - Connected to mqtt broker - Number of events: 42
+2020-06-14T16:36:21-0300 [Uninitialized] 127.0.0.1:57220 - sending MQTT SUBSCRIBE REQUEST - Number of events: 43
+2020-06-14T16:36:21-0300 [Uninitialized] 127.0.0.1:57222 - Connected to mqtt broker - Number of events: 44
+2020-06-14T16:36:21-0300 [Uninitialized] 127.0.0.1:57222 - sending MQTT SUBSCRIBE REQUEST - Number of events: 45
+2020-06-14T16:36:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f48eb01d828>
+2020-06-14T16:36:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f48eafb3400>
+2020-06-14T16:36:23-0300 [-] Received SIGINT, shutting down.
+2020-06-14T16:36:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f48eafb3400>
+2020-06-14T16:36:23-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-14T16:36:23-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-14T16:36:23-0300 [SubscriberApp,client] connection lost - Number of events: 46
+2020-06-14T16:36:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f48eb01d828>
+2020-06-14T16:36:23-0300 [SubscriberApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-14T16:36:23-0300 [SubscriberApp,client] connection lost - Number of events: 47
+2020-06-14T16:36:23-0300 [applications.databaseserverapp.DatabaseServerAppFactory] (TCP Port 8083 Closed)
+2020-06-14T16:36:23-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-14T16:36:23-0300 [-] Main loop terminated.

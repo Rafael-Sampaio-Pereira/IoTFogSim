@@ -1,13 +1,16 @@
 
 from scinetsim.dataproducers import *
 from twisted.internet import reactor
+from twisted.internet.protocol import ClientFactory
 import time
 import uuid
+import json
 import tkinter as tk
+from applications.applicationcomponent import StandardApplicationComponent
 
 
 
-class WSNApp(object):
+class WSNApp(StandardApplicationComponent):
     def __init__(self):
         self._buffer = set()
         self.simulation_core = None
@@ -67,9 +70,10 @@ class SensorApp(WSNApp):
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
+        
     
     def start(self, nearby_devices_list):
-
+        self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
         self.propagate_signal()
         self.print_node_connections(nearby_devices_list)
@@ -87,7 +91,7 @@ class SensorApp(WSNApp):
             
         for device in self.nearby_devices_list:
             # Creating a new package - Rafael Sampaio
-            pack = WSNPackage(self, device, data)
+            pack = WSNPackage(source = self, destiny = device, payload = data)
 
             # putting this device in the generated package trace - Rafael Sampaio
             pack.put_in_trace(self)
@@ -116,38 +120,148 @@ class SensorApp(WSNApp):
     def forward_package(self, package):
         if len(package.trace) > 0:
 
-                for destiny in self.nearby_devices_list:
-                    if destiny == package.source:
-                        # A device can not sent data to it self - Rafael Sampaio
-                        pass
-                    elif package.verify_if_device_is_in_trace(destiny):
-                        # The package will not be send to devices that already in the package trace - Rafael Sampaio
-                        pass
-                    else:
-                        # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
-                        if not package in destiny.application._buffer:
-                            # Drawing connection - Rafael Sampaio
-                            self.draw_connection_arrow(destiny)
+            for destiny in self.nearby_devices_list:
+                if destiny == package.source:
+                    # A device can not sent data to it self - Rafael Sampaio
+                    pass
+                elif package.verify_if_device_is_in_trace(destiny):
+                    # The package will not be send to devices that already in the package trace - Rafael Sampaio
+                    pass
+                else:
+                    # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
+                    if not package in destiny.application._buffer:
+                        # Drawing connection - Rafael Sampaio
+                        self.draw_connection_arrow(destiny)
 
-                            # puting package in destiny device buffer - Rafael Sampaio
-                            destiny.application._buffer.add(package)
-                            
-                            package.put_in_trace(destiny)
-                            #package.print_trace()
+                        # puting package in destiny device buffer - Rafael Sampaio
+                        destiny.application._buffer.add(package)
+                        
+                        package.put_in_trace(destiny)
+                        #package.print_trace()
 
-                            self.simulation_core.updateEventsCounter("wsn node send data")
+                        self.simulation_core.updateEventsCounter("wsn node send data")
 
 
 
 class SinkApp(WSNApp):
     def __init__(self):
-        self._buffer = set()
+        self._buffer = set() # this buffer stores only data from the wsn sensors - Rafael Sampaio
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
-    
+        self.sink_factory = None
+        self.gateway_addr = '127.0.0.1'
+        self.gateway_port = 8081
+         # Destiny info (e.g. mqtt broker server addr and port) - Rafael Sampaio
+        self.destiny_addr = '127.0.0.1'
+        self.destiny_port = 5100
+        self.source_addr = None
+        self.source_port = None
+
     def start(self, nearby_devices_list):
         self.propagate_signal()
+        self.connect_to_gateway()
+        self.configure_source_info()
+        self.forward_packages()
+
+    # this method allow the sink to connect to router/switch - Rafael Sampaio
+    def connect_to_gateway(self):
+        # get start to connect to gateway - Rafael Sampaio
+        factory = SinkAppFactory(self.simulation_core, self.visual_component)
+        factory.noisy = False
+        reactor.connectTCP(self.gateway_addr, self.gateway_port, factory)
+        self.sink_factory = factory
+
+
+    def configure_source_info(self):
+        # get the network info from the sink protocol and using it to set the sink app network info - Rafael Sampaio 
+        if self.sink_factory:
+            if self.sink_factory.running_protocol:
+                if not self.source_addr:
+                    self.source_addr = self.sink_factory.running_protocol.source_addr
+                
+                if not self.source_port:
+                    self.source_port = self.sink_factory.running_protocol.source_port
+
+        # while the source info is not complete this function will be recursivelly called - Rafael Sampaio
+        if self.source_addr == None or self.source_port == None:
+            reactor.callLater(1, self.configure_source_info)
+
+
+
+    def forward_packages(self):
+        if self.verify_buffer():
+            if self.sink_factory.running_protocol and (self.source_addr != None and self.source_port != None):
+                # forwarding packages to the gateway - Rafael Sampaio
+                for wsn_package in self._buffer.copy():
+
+                    # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
+
+                    mqtt_msg = {
+                            "action": "publish",
+                            "topic": "sensor_metering",
+                            "content": "aaa"
+                        }
+                        # TRABALAHNDO AQI
+
+                    mqtt_package = self.build_package(mqtt_msg)
+
+                    # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
+                    self.sink_factory.running_protocol.send(mqtt_package)
+                    self._buffer.remove(wsn_package)
+        
+        reactor.callLater(1, self.forward_packages)
+
+    def verify_buffer(self):
+        if len(self._buffer) > 0:
+            return True
+        else:
+            return False   
+
+
+
+class SinkAppFactory(ClientFactory):
+    
+    def __init__(self, simulation_core, visual_component):
+        self.running_protocol = None
+        self.visual_component = visual_component
+        self.simulation_core =  simulation_core
+
+    def buildProtocol(self, address):
+        self.running_protocol = SinkAppProtocol(self.simulation_core, self.visual_component)
+        self.running_protocol.save_protocol_in_simulation_core(self.running_protocol) 
+        return self.running_protocol
+
+
+# this protocol acts as a client to the router/switch - Rafael Sampaio
+class SinkAppProtocol(StandardApplicationComponent):
+    
+    def __init__(self, simulation_core, visual_component):
+        self.visual_component = visual_component
+        self.simulation_core =  simulation_core
+        self._buffer = set() # this sink uses only one buffer, you need to pay atention when your application has top-down approachs - Rafael Sampaio
+        # the sink network info will be generated after the connection to a gateway such as router or switch - Rafael Sampaio
+        self.source_addr = None
+        self.source_port = None
+
+    def connectionMade(self):
+        self.source_addr = self.transport.getHost().host
+        self.source_port = self.transport.getHost().port
+        self.transport.setTcpKeepAlive(1)
+        self.terminateLater = None
+        self.create_connection_animation()
+
+    # This method is overhidding the dataReceived method in the StandardApplicationComponent class - Rafael Sampaio
+    def dataReceived(self, data):
+        # this sink uses the bottom-up approach and dont let us to use top-down messages/commands - Rafael Sampaio
+        pass
+
+    def connectionLost(self, reason):
+        pass     
+         
+    def write(self, data):
+        if data:
+            self.transport.write(data)
 
 
 
@@ -156,7 +270,7 @@ class WSNPackage(object):
     def __init__(self, source, destiny, payload):
         self.id = uuid.uuid4().fields[-1]
         self.source = source
-        self.destiny = destiny
+        # self.destiny = destiny
         self.payload = payload
         #self.was_forwarded = False
         self.trace = set()
@@ -168,10 +282,9 @@ class WSNPackage(object):
         all_destiny_names = ''
 
         package = {
-            id: self.id,
-            source: self.source.name,
-            destiny: destiny.name,
-            payload: self.payload
+            "id": str(self.id),
+            "source": self.source.name,
+            "payload": self.payload
         }
 
         package = json.dumps(package)
