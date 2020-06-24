@@ -41,25 +41,30 @@ class StandardApplicationComponent(protocol.Protocol):
             package = package.decode("utf-8")
             package = str(package)[0:]
 
+            #####################################################################################
+            # ESTE TRATAMENTOS SÃO PROVISORIOS ENQUANTO OS DISPOSITIVOS BASEADOS EM TWISTED NÃO #
+            # ESTÃO ARMAZENADNO OS DADOS RECEBIDOS EM UM BUFFER 23/06/2020 - Rafael Sampaio     #
+            #####################################################################################
+
             # this was add because mqtt application has detected two json objects in one packages and these was not sparated by comma - Rafael Sampaio
             if "}{" in package:
                 packages = package.replace("}{","},{")
 
                 packages = json.dumps(packages)
                 print("um pacote vai ser dropado, infelizmente ", packages)
-                print(packages[0])
-                json_msg = packages[0]
+                # print(packages[0])
+                json_msg = json.loads(packages[0])
 
-            # if "}}\n{" in package:
-            #     packages = package.replace("}}\n{","},{")
+            # this was add because the wsn sink has send data and router has received the sent data grouped in a single line - Rafael Sampaio
+            if "}}\n{" in package:
+                
+                packages = package.split("\n")
+                log.msg(packages[0])
 
-            #     packages = json.dumps(packages)
-            #     print("um ou mais pacotes vão ser dropados, infelizmente ", packages)
-            #     print(packages[0])
-            #     json_msg = packages[0]
-
-                # TRABALAHNDO AQI TAMBEM
-
+                print("um ou mais pacotes vão ser dropados, infelizmente ")
+            
+                json_msg = json.loads(packages[0])
+             
             else:
                 json_msg = json.loads(package)
 

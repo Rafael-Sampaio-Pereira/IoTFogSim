@@ -202,7 +202,6 @@ class SinkApp(WSNApp):
                             "topic": "sensor_metering",
                             "content": "aaa"
                         }
-                        # TRABALAHNDO AQI
 
                     mqtt_package = self.build_package(mqtt_msg)
 

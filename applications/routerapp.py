@@ -70,7 +70,7 @@ class RouterAppProtocol(StandardApplicationComponent):
     
     def dataReceived(self, package):
 
-        # print("OPACOTE É %s"%(package))
+        #print("OPACOTE É %s"%(package))
 
         # Extracting package contents - Rafael Sampaio
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
