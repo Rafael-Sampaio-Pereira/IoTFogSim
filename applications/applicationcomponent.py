@@ -59,8 +59,7 @@ class StandardApplicationComponent(protocol.Protocol):
             if "}}\n{" in package:
                 
                 packages = package.split("\n")
-                log.msg(packages[0])
-
+                
                 print("um ou mais pacotes vão ser dropados, infelizmente ")
             
                 json_msg = json.loads(packages[0])

@@ -47,7 +47,7 @@ class WSNApp(StandardApplicationComponent):
         self_name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         buffer_string = ''
         for package in self._buffer:
-            buffer_string += '|'+str(package.payload)
+            buffer_string += '|'+str(package.data)
         print(self_name, buffer_string)
         print('\n')
 
@@ -91,7 +91,7 @@ class SensorApp(WSNApp):
             
         for device in self.nearby_devices_list:
             # Creating a new package - Rafael Sampaio
-            pack = WSNPackage(source = self, destiny = device, payload = data)
+            pack = WSNPackage(source = self, destiny = device, data = data)
 
             # putting this device in the generated package trace - Rafael Sampaio
             pack.put_in_trace(self)
@@ -192,22 +192,32 @@ class SinkApp(WSNApp):
     def forward_packages(self):
         if self.verify_buffer():
             if self.sink_factory.running_protocol and (self.source_addr != None and self.source_port != None):
+                
+                data = "["
+
                 # forwarding packages to the gateway - Rafael Sampaio
                 for wsn_package in self._buffer.copy():
-
-                    # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
-
-                    mqtt_msg = {
-                            "action": "publish",
-                            "topic": "sensor_metering",
-                            "content": "aaa"
-                        }
-
-                    mqtt_package = self.build_package(mqtt_msg)
-
-                    # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
-                    self.sink_factory.running_protocol.send(mqtt_package)
+                    data += "{ source: " + wsn_package.source.name + ", data: " + wsn_package.data + " },"
                     self._buffer.remove(wsn_package)
+
+                data += "]"
+
+                data = data[:-2]
+
+                print(data)
+
+                # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
+                mqtt_msg = {
+                        "action": "publish",
+                        "topic": "sensor_metering",
+                        "content": data
+                    }
+
+                mqtt_package = self.build_package(mqtt_msg)
+
+                # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
+                self.sink_factory.running_protocol.send(mqtt_package)
+                
         
         reactor.callLater(1, self.forward_packages)
 
@@ -266,11 +276,11 @@ class SinkAppProtocol(StandardApplicationComponent):
 
 class WSNPackage(object):
     
-    def __init__(self, source, destiny, payload):
+    def __init__(self, source, destiny, data):
         self.id = uuid.uuid4().fields[-1]
         self.source = source
         # self.destiny = destiny
-        self.payload = payload
+        self.data = data
         #self.was_forwarded = False
         self.trace = set()
 
@@ -283,7 +293,7 @@ class WSNPackage(object):
         package = {
             "id": str(self.id),
             "source": self.source.name,
-            "payload": self.payload
+            "data": self.data
         }
 
         package = json.dumps(package)
