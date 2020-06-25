@@ -3,6 +3,8 @@ import tkinter
 from tkinter import messagebox
 from twisted.python import log
 from twisted.internet import reactor
+from tkinter import ALL, EventType
+
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root):
@@ -45,6 +47,32 @@ class ScrollableScreen(tkinter.Frame):
 
 
         root.bind("<Motion>", self.update_position_on_screen)
+
+        
+    # AS LINHAS ABAIXO SERÃO UTEIS NO CÓDIGO DE ZOOM
+        
+    #     #linux scroll
+    #     self.canvas.bind("<Button-4>", self.zoomerP)
+    #     self.canvas.bind("<Button-5>", self.zoomerM)
+    #     #windows scroll
+    #     self.canvas.bind("<MouseWheel>",self.zoomer)
+
+    # #linux zoom
+    # def zoomerP(self,event):
+    #     self.canvas.scale("all", event.x, event.y, 1.1, 1.1)
+    #     self.canvas.configure(scrollregion = self.canvas.bbox("all"))
+    # def zoomerM(self,event):
+    #     self.canvas.scale("all", event.x, event.y, 0.9, 0.9)
+    #     self.canvas.configure(scrollregion = self.canvas.bbox("all"))
+    # #windows zoom
+    # def zoomer(self,event):
+    #     if (event.delta > 0):
+    #         self.canvas.scale(ALL, event.x, event.y, 1.1, 1.1)
+    #     elif (event.delta < 0):
+    #         self.canvas.scale(ALL, event.x, event.y, 0.9, 0.9)
+    #     self.canvas.configure(scrollregion = self.canvas.bbox("all"))
+    
+
 
     def  update_position_on_screen(self,event):
         self.canvas.itemconfig(self.position_label, text=str(event.x)+'x'+str(event.y))

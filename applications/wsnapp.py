@@ -200,9 +200,8 @@ class SinkApp(WSNApp):
                     data += "{ source: " + wsn_package.source.name + ", data: " + wsn_package.data + " },"
                     self._buffer.remove(wsn_package)
 
+                data = data[:-1]
                 data += "]"
-
-                data = data[:-2]
 
                 print(data)
 
@@ -321,3 +320,67 @@ class WSNPackage(object):
                 trace_string += " - "+device
         
         print(trace_string)
+
+
+
+class SCADAApp(StandardApplicationComponent):
+    # This SCADA App is based on the simple mqtt subscriber App - Rafael Sampaio
+    
+    def __init__(self):
+        self.visual_component = None
+        self.simulation_core =  None
+        self.screen_name = None
+
+        self.source_addr = None
+        self.source_port = None
+
+        self.destiny_addr = "127.0.0.1"
+        self.destiny_port = 5100 
+
+        self.gateway_addr = "127.0.0.1"
+        self.gateway_port = 8081
+
+
+        self._buffer = []
+
+        self.network_settings = "tcp:{}:{}".format(self.gateway_addr,self.gateway_port)
+
+    def connectionMade(self):
+
+        self.screen_name = self.transport.getHost().host+":"+str(self.transport.getHost().port)
+        self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
+        self.source_addr = self.transport.getHost().host
+        self.source_port = self.transport.getHost().port
+        # After connect, send the subscribe request - Rafael Sampaio
+        self.subscribe()
+        self.update_name_on_screen(self.screen_name)
+        self.save_protocol_in_simulation_core(self) 
+
+        self.create_connection_animation()    
+
+    def subscribe(self):
+                
+        msg = {
+                "action": "subscribe",
+                "topic": "sensor_metering",
+                "content": "None"
+            }
+
+        self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT SUBSCRIBE REQUEST")
+        package = self.build_package(msg)
+        self.send(package)
+
+    def dataReceived(self, data):
+
+        self.put_package_in_buffer(data)
+        try:
+            for package in self._buffer:
+                destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
+                # Print the received data on the sreen.  - Rafael Sampaio
+                self.update_alert_message_on_screen(payload)
+                #self.simulation_core.updateEventsCounter("MQTT response received")
+                #if data in self._buffer:
+            
+            self._buffer.clear()
+        except:
+            pass

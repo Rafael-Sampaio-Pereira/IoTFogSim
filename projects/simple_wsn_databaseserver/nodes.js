@@ -26,36 +26,23 @@
                 "is_wireless": false,
                 "coverage_area_radius": 0,
                 "application": "applications.databaseserverapp.DatabaseServerApp",
-                "x": 550,
-                "y": 55
+                "x": 400,
+                "y": 75
             }
         ],
         "clients":[
             { 
                 "id": 1,
-                "name": "Fog Subscriber Node", 
+                "name": "SCADA System", 
                 "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
-                "icon": "server_icon",
+                "icon": "notebook_icon",
                 "type": "client",
                 "is_wireless": false,
                 "coverage_area_radius": 0,
-                "application": "applications.mqttapp.SubscriberApp",
-                "x": 550,
-                "y": 175
-            },
-            { 
-                "id": 1,
-                "name": "Fog Subscriber Node", 
-                "simulation_ip": "192.121.0.1",
-                "real_ip": "127.0.0.1",
-                "icon": "server_icon",
-                "type": "client",
-                "is_wireless": false,
-                "coverage_area_radius": 0,
-                "application": "applications.mqttapp.SubscriberApp",
-                "x": 400,
-                "y": 75
+                "application": "applications.wsnapp.SCADAApp",
+                "x": 582,
+                "y": 67
             }
         ],
         "wireless_computers": [],
