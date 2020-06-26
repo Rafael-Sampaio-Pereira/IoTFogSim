@@ -35,3 +35,20 @@ def configure_logger(log_file_path, project_name):
         textFileLogObserver(stdout),
         textFileLogObserver(logfile)])
     log = Logger()
+
+
+
+
+def create_csv_database_file(simulation_core):
+    from datetime import datetime, date
+    import os
+
+    file_path = "projects/"+simulation_core.project_name+"/"
+
+    # create databases directoy if it not exist - Rafael Sampaio
+    os.makedirs(file_path+"/databases/", exist_ok=True)
+    temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
+    file = file_path+"/databases/"+simulation_core.project_name+temp+".csv"
+    database = open(file, 'a')
+
+    return database

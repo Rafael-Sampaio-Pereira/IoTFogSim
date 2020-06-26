@@ -7,7 +7,7 @@ import uuid
 import json
 import tkinter as tk
 from applications.applicationcomponent import StandardApplicationComponent
-
+from scinetsim.functions import create_csv_database_file
 
 
 class WSNApp(StandardApplicationComponent):
@@ -340,12 +340,15 @@ class SCADAApp(StandardApplicationComponent):
         self.gateway_addr = "127.0.0.1"
         self.gateway_port = 8081
 
+        
 
         self._buffer = []
 
         self.network_settings = "tcp:{}:{}".format(self.gateway_addr,self.gateway_port)
 
     def connectionMade(self):
+        # creating and opening a csv database file - Rafael Sampaio
+        self.database = create_csv_database_file(self.simulation_core)
 
         self.screen_name = self.transport.getHost().host+":"+str(self.transport.getHost().port)
         self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
@@ -356,7 +359,9 @@ class SCADAApp(StandardApplicationComponent):
         self.update_name_on_screen(self.screen_name)
         self.save_protocol_in_simulation_core(self) 
 
-        self.create_connection_animation()    
+        self.create_connection_animation()
+
+        self.save_to_database()   
 
     def subscribe(self):
                 
@@ -371,16 +376,32 @@ class SCADAApp(StandardApplicationComponent):
         self.send(package)
 
     def dataReceived(self, data):
-
         self.put_package_in_buffer(data)
+
+
+    def save_to_database(self):
+
         try:
-            for package in self._buffer:
-                destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
-                # Print the received data on the sreen.  - Rafael Sampaio
-                self.update_alert_message_on_screen(payload)
-                #self.simulation_core.updateEventsCounter("MQTT response received")
-                #if data in self._buffer:
-            
-            self._buffer.clear()
+            if self.verify_buffer():
+                
+                for package in self._buffer.copy():
+                    destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
+                    # Print the received data on the sreen.  - Rafael Sampaio
+                    self.update_alert_message_on_screen(payload)
+                    #self.simulation_core.updateEventsCounter("MQTT response received")
+                    #if data in self._buffer:
+                    print(payload, file = self.database)
+
+                    self._buffer.remove(package)
+
         except:
             pass
+        
+        reactor.callLater(1, self.save_to_database)
+
+
+    def verify_buffer(self):
+        if len(self._buffer) > 0:
+            return True
+        else:
+            return False 

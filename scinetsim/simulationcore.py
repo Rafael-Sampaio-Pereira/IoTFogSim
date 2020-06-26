@@ -25,6 +25,7 @@ class SimulationCore(object):
 		self.simulation_screen = None
 		self.eventsCounter = 0
 		self.allProtocols = set()
+		self.project_name = None
 
 
 	def get_any_protocol_by_addr_and_port(self, addr, port):

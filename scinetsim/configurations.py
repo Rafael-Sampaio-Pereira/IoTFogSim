@@ -53,6 +53,8 @@ def initialization_screen(simulation_core):
 			selected_project_name = cmb_projects_list.get()
 			messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
 
+			simulation_core.project_name = selected_project_name
+
 			# Configuring log - Rafael Sampaio
 			log_path = "projects/"+selected_project_name+"/"
 			configure_logger(log_path, selected_project_name)
@@ -71,6 +73,8 @@ def initialization_screen(simulation_core):
 			# Configuring log - Rafael Sampaio
 			log_path = "projects/"+new_project_name+"/"
 			configure_logger(log_path, new_project_name)
+
+			simulation_core.project_name = new_project_name
 
 			# creating the nodes.js file into the project directory - Rafael Sampaio
 			nodes_file = "projects/%s/nodes.js"%(new_project_name)
