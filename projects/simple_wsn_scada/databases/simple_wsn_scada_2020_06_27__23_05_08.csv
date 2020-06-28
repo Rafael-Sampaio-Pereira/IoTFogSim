@@ -1,0 +1,23 @@
+MQTT_ACK
+MQTT_ACK158403624181501
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_1, data: 5.77 Kwh },{ source: sensor_3, data: 11.08 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 20.81 Kwh },{ source: sensor_3, data: 19.59 Kwh },{ source: sensor_1, data: 18.15 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_1, data: 11.2 Kwh },{ source: sensor_3, data: 21.75 Kwh },{ source: sensor_4, data: 15.5 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 13.94 Kwh },{ source: sensor_4, data: 12.91 Kwh },{ source: sensor_1, data: 20.93 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 7.71 Kwh },{ source: sensor_1, data: 11.46 Kwh },{ source: sensor_4, data: 9.82 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 12.81 Kwh },{ source: sensor_4, data: 18.32 Kwh },{ source: sensor_1, data: 2.72 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_1, data: 12.09 Kwh },{ source: sensor_4, data: 19.2 Kwh },{ source: sensor_3, data: 2.85 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 4.23 Kwh },{ source: sensor_3, data: 9.84 Kwh },{ source: sensor_1, data: 20.74 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 3.4 Kwh },{ source: sensor_1, data: 7.95 Kwh },{ source: sensor_3, data: 6.09 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 4.01 Kwh },{ source: sensor_1, data: 20.22 Kwh },{ source: sensor_3, data: 21.75 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 10.11 Kwh },{ source: sensor_1, data: 21.03 Kwh },{ source: sensor_4, data: 8.84 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 9.3 Kwh },{ source: sensor_4, data: 7.31 Kwh },{ source: sensor_1, data: 18.79 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_1, data: 16.18 Kwh },{ source: sensor_4, data: 3.64 Kwh },{ source: sensor_3, data: 14.05 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 18.17 Kwh },{ source: sensor_3, data: 3.34 Kwh },{ source: sensor_1, data: 12.31 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 20.15 Kwh },{ source: sensor_3, data: 13.95 Kwh },{ source: sensor_1, data: 2.89 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 16.66 Kwh },{ source: sensor_4, data: 15.95 Kwh },{ source: sensor_1, data: 13.03 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 18.9 Kwh },{ source: sensor_4, data: 8.78 Kwh },{ source: sensor_1, data: 20.57 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 17.17 Kwh },{ source: sensor_1, data: 5.37 Kwh },{ source: sensor_3, data: 14.37 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 22.28 Kwh },{ source: sensor_3, data: 15.04 Kwh },{ source: sensor_1, data: 10.31 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_4, data: 6.64 Kwh },{ source: sensor_3, data: 21.01 Kwh },{ source: sensor_1, data: 15.91 Kwh }]'}
+{'action': 'publish', 'topic': 'sensor_metering', 'content': '[{ source: sensor_3, data: 8.89 Kwh },{ source: sensor_1, data: 21.2 Kwh },{ source: sensor_4, data: 10.59 Kwh }]'}

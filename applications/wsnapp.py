@@ -87,19 +87,16 @@ class SensorApp(WSNApp):
         data = energy_consumption_meter()
 
 
-        # for each nearby device we need to build a diferent package, but the content (payload) can be same - Rafael Sampaio
-            
-        for device in self.nearby_devices_list:
-            # Creating a new package - Rafael Sampaio
-            pack = WSNPackage(source = self, destiny = device, data = data)
+        
+        # Creating a new package - Rafael Sampaio
+        pack = WSNPackage(source = self, data = data)
 
-            # putting this device in the generated package trace - Rafael Sampaio
-            pack.put_in_trace(self)
+        # putting this device in the generated package trace - Rafael Sampaio
+        pack.put_in_trace(self)
 
-            # putting data in device buffer - Rafael Sampaio
-            self._buffer.add(pack) 
+        # putting data in device buffer - Rafael Sampaio
+        self._buffer.add(pack) 
 
-        #self.print_node_buffer()
 
         def remove_sent_packages_from_buffer(_package):
             # after send, remove data from buffer - Rafael Sampaio    
@@ -112,8 +109,9 @@ class SensorApp(WSNApp):
             for _package in self.temp_buffer:
                 self.forward_package(_package)
                 
-                self.simulation_core.canvas.after(5, remove_sent_packages_from_buffer, _package)
+                # self.simulation_core.canvas.after(0.1, remove_sent_packages_from_buffer, _package)
                 
+                remove_sent_packages_from_buffer(_package)
     
         reactor.callLater(self.interval, self.collect_and_send_data)
 
@@ -194,16 +192,17 @@ class SinkApp(WSNApp):
             if self.sink_factory.running_protocol and (self.source_addr != None and self.source_port != None):
                 
                 data = "["
-
+                
                 # forwarding packages to the gateway - Rafael Sampaio
                 for wsn_package in self._buffer.copy():
+
+
                     data += "{ source: " + wsn_package.source.name + ", data: " + wsn_package.data + " },"
                     self._buffer.remove(wsn_package)
 
+
                 data = data[:-1]
                 data += "]"
-
-                print(data)
 
                 # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
                 mqtt_msg = {
@@ -275,7 +274,7 @@ class SinkAppProtocol(StandardApplicationComponent):
 
 class WSNPackage(object):
     
-    def __init__(self, source, destiny, data):
+    def __init__(self, source,  data):
         self.id = uuid.uuid4().fields[-1]
         self.source = source
         # self.destiny = destiny
@@ -390,7 +389,7 @@ class SCADAApp(StandardApplicationComponent):
                     self.update_alert_message_on_screen(payload)
                     #self.simulation_core.updateEventsCounter("MQTT response received")
                     #if data in self._buffer:
-                    print(payload, file = self.database)
+                    print(payload, file = self.database, flush=True)
 
                     self._buffer.remove(package)
 

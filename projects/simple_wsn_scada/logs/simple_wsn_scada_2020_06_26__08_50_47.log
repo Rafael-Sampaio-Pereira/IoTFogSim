@@ -1,0 +1,471 @@
+2020-06-26T08:50:47-0300 [-] Creating router ...
+2020-06-26T08:50:47-0300 [-] Initializing Router - Number of events: 1
+2020-06-26T08:50:48-0300 [-] RouterFactory starting on 8081
+2020-06-26T08:50:48-0300 [-] Creating AccessPoint station ...
+2020-06-26T08:50:48-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-26T08:50:48-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-26T08:50:48-0300 [-] Initializing Server - Number of events: 3
+2020-06-26T08:50:49-0300 [-] BrokerFactory starting on 5100
+2020-06-26T08:50:49-0300 [-] Initializing Client - Number of events: 4
+2020-06-26T08:50:49-0300 [-] Initializing sink node - Number of events: 5
+2020-06-26T08:50:50-0300 [-] Initializing sensor node - Number of events: 6
+2020-06-26T08:50:50-0300 [-] Initializing sensor node - Number of events: 7
+2020-06-26T08:50:51-0300 [-] Initializing sensor node - Number of events: 8
+2020-06-26T08:50:51-0300 [-] Initializing sensor node - Number of events: 9
+2020-06-26T08:50:52-0300 [-] Initializing sensor node - Number of events: 10
+2020-06-26T08:50:52-0300 [-] Initializing sensor node - Number of events: 11
+2020-06-26T08:50:53-0300 [-] Initializing sensor node - Number of events: 12
+2020-06-26T08:50:53-0300 [-] Initializing sensor node - Number of events: 13
+2020-06-26T08:50:54-0300 [-] Initializing sensor node - Number of events: 14
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_9 ==========
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_3 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_3  <------->  sensor_4
+2020-06-26T08:50:54-0300 [stdout#info] sensor_3  <------->  sensor_1
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 15
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 16
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 17
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 18
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 19
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 20
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_6 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_6  <------->  sensor_5
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 21
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 22
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_5 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_5  <------->  sensor_6
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 23
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 24
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_8 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_8  <------->  sensor_7
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 25
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 26
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_2 ==========
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_4 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_4  <------->  sensor_3
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 27
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 28
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_7 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_7  <------->  sensor_8
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 29
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 30
+2020-06-26T08:50:54-0300 [stdout#info] ========= sensor_1 ==========
+2020-06-26T08:50:54-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2020-06-26T08:50:54-0300 [stdout#info] sensor_1  <------->  sensor_3
+2020-06-26T08:50:54-0300 [stdout#info] =============================
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 31
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 32
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 33
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 34
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 35
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 36
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 37
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 38
+2020-06-26T08:50:54-0300 [-] wsn node send data - Number of events: 39
+2020-06-26T08:50:54-0300 [stdout#info] This divice have no simulation core instance
+2020-06-26T08:50:54-0300 [stdout#info] This divice have no simulation core instance
+2020-06-26T08:50:54-0300 [stdout#info] This divice have no simulation core instance
+2020-06-26T08:50:54-0300 [stdout#info] This divice have no simulation core instance
+2020-06-26T08:50:54-0300 [Uninitialized] 127.0.0.1:34228 - Connected to mqtt broker - Number of events: 40
+2020-06-26T08:50:54-0300 [Uninitialized] 127.0.0.1:34228 - sending MQTT SUBSCRIBE REQUEST - Number of events: 41
+2020-06-26T08:50:54-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe28524e0>
+2020-06-26T08:50:55-0300 [stdout#info] 204318228506672: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:55-0300 [stdout#info] 211830957667395: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:55-0300 [stdout#info] 203686274952369: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:55-0300 [stdout#info] 50163408290401: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:55-0300 [stdout#info] 65720477852765: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:55-0300 [stdout#info] 116733528616678: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe2852518>
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 42
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 43
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 44
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 45
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 46
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 47
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 48
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 49
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 50
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 51
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 52
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 53
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 54
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 55
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 56
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 57
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 58
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 59
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 60
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 61
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 62
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 63
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 64
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 65
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 66
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 67
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 68
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 69
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 70
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 71
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 72
+2020-06-26T08:50:57-0300 [-] wsn node send data - Number of events: 73
+2020-06-26T08:50:58-0300 [stdout#info] 130111938840210: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:58-0300 [stdout#info] 215494930597662: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:50:58-0300 [stdout#info] 585249827553: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:58-0300 [stdout#info] 196242879615663: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:58-0300 [stdout#info] 177368216014935: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:58-0300 [stdout#info] 170645993363367: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:50:58-0300 [stdout#info] 272901608291860: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:50:58-0300 [stdout#info] 33631814575016: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:50:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091ba20>
+2020-06-26T08:50:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe2852518>
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 74
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 75
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 76
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 77
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 78
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 79
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 80
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 81
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 82
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 83
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 84
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 85
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 86
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 87
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 88
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 89
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 90
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 91
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 92
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 93
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 94
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 95
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 96
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 97
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 98
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 99
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 100
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 101
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 102
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 103
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 104
+2020-06-26T08:51:00-0300 [-] wsn node send data - Number of events: 105
+2020-06-26T08:51:01-0300 [stdout#info] 136159253016411: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:01-0300 [stdout#info] 92366715879234: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:01-0300 [stdout#info] 20444225882300: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:01-0300 [stdout#info] 221769170868944: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:01-0300 [stdout#info] 73524232311194: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:01-0300 [stdout#info] 232608364503603: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:01-0300 [stdout#info] 273471686910510: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:01-0300 [stdout#info] 183230453509599: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b588>
+2020-06-26T08:51:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091ba20>
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 106
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 107
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 108
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 109
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 110
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 111
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 112
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 113
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 114
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 115
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 116
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 117
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 118
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 119
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 120
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 121
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 122
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 123
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 124
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 125
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 126
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 127
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 128
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 129
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 130
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 131
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 132
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 133
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 134
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 135
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 136
+2020-06-26T08:51:03-0300 [-] wsn node send data - Number of events: 137
+2020-06-26T08:51:04-0300 [stdout#info] 218365136136923: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:04-0300 [stdout#info] 92399749924220: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:04-0300 [stdout#info] 61760150336072: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:04-0300 [stdout#info] 225031489173735: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:04-0300 [stdout#info] 280865412118980: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:04-0300 [stdout#info] 65429073340722: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:04-0300 [stdout#info] 29280032168326: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:04-0300 [stdout#info] 16399010874309: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b940>
+2020-06-26T08:51:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b588>
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 138
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 139
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 140
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 141
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 142
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 143
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 144
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 145
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 146
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 147
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 148
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 149
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 150
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 151
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 152
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 153
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 154
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 155
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 156
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 157
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 158
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 159
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 160
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 161
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 162
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 163
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 164
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 165
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 166
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 167
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 168
+2020-06-26T08:51:06-0300 [-] wsn node send data - Number of events: 169
+2020-06-26T08:51:06-0300 [stdout#info] 75805694620753: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:06-0300 [stdout#info] 201795284936824: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:06-0300 [stdout#info] 243717101369458: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:06-0300 [stdout#info] 43226537658622: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:06-0300 [stdout#info] 147922352836516: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:06-0300 [stdout#info] 71933420915575: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:06-0300 [stdout#info] 161094645209969: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:06-0300 [stdout#info] 38150833349827: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091bf98>
+2020-06-26T08:51:06-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b940>
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 170
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 171
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 172
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 173
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 174
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 175
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 176
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 177
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 178
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 179
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 180
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 181
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 182
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 183
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 184
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 185
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 186
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 187
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 188
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 189
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 190
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 191
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 192
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 193
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 194
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 195
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 196
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 197
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 198
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 199
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 200
+2020-06-26T08:51:09-0300 [-] wsn node send data - Number of events: 201
+2020-06-26T08:51:09-0300 [stdout#info] 273804065094702: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:09-0300 [stdout#info] 268501089338423: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:09-0300 [stdout#info] 239124513201035: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:09-0300 [stdout#info] 16960354231560: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:09-0300 [stdout#info] 250279564775971: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:09-0300 [stdout#info] 171801469293629: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:09-0300 [stdout#info] 78738693730466: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:09-0300 [stdout#info] 193455551263594: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b7f0>
+2020-06-26T08:51:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091bf98>
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 202
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 203
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 204
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 205
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 206
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 207
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 208
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 209
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 210
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 211
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 212
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 213
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 214
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 215
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 216
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 217
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 218
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 219
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 220
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 221
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 222
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 223
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 224
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 225
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 226
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 227
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 228
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 229
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 230
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 231
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 232
+2020-06-26T08:51:12-0300 [-] wsn node send data - Number of events: 233
+2020-06-26T08:51:12-0300 [stdout#info] 244594823592288: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:12-0300 [stdout#info] 169307890778946: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:12-0300 [stdout#info] 67017488608070: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:12-0300 [stdout#info] 189333200388757: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:12-0300 [stdout#info] 249417449299344: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:12-0300 [stdout#info] 178598996175334: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:12-0300 [stdout#info] 90711969458928: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:12-0300 [stdout#info] 228954299983861: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac710>
+2020-06-26T08:51:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe091b7f0>
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 234
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 235
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 236
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 237
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 238
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 239
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 240
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 241
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 242
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 243
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 244
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 245
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 246
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 247
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 248
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 249
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 250
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 251
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 252
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 253
+2020-06-26T08:51:15-0300 [-] wsn node send data - Number of events: 254
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 255
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 256
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 257
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 258
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 259
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 260
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 261
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 262
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 263
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 264
+2020-06-26T08:51:16-0300 [-] wsn node send data - Number of events: 265
+2020-06-26T08:51:16-0300 [stdout#info] 247002019751117: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:16-0300 [stdout#info] 53945973396666: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:16-0300 [stdout#info] 121014295195693: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:16-0300 [stdout#info] 190482762770943: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:16-0300 [stdout#info] 204061220088016: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:16-0300 [stdout#info] 265745286113630: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:16-0300 [stdout#info] 142639277318094: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:16-0300 [stdout#info] 204732538443143: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac668>
+2020-06-26T08:51:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac710>
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 266
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 267
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 268
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 269
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 270
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 271
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 272
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 273
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 274
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 275
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 276
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 277
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 278
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 279
+2020-06-26T08:51:18-0300 [-] wsn node send data - Number of events: 280
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 281
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 282
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 283
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 284
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 285
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 286
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 287
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 288
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 289
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 290
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 291
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 292
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 293
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 294
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 295
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 296
+2020-06-26T08:51:19-0300 [-] wsn node send data - Number of events: 297
+2020-06-26T08:51:19-0300 [stdout#info] 187908653793962: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:19-0300 [stdout#info] 223205368218331: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:19-0300 [stdout#info] 128603604967506: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:19-0300 [stdout#info] 269966929038134: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:19-0300 [stdout#info] 6455409063794: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:19-0300 [stdout#info] 271061764677072: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:19-0300 [stdout#info] 188954107079381: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:19-0300 [stdout#info] 123410155908708: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08acda0>
+2020-06-26T08:51:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac668>
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 298
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 299
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 300
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 301
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 302
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 303
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 304
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 305
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 306
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 307
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 308
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 309
+2020-06-26T08:51:21-0300 [-] wsn node send data - Number of events: 310
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 311
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 312
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 313
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 314
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 315
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 316
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 317
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 318
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 319
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 320
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 321
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 322
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 323
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 324
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 325
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 326
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 327
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 328
+2020-06-26T08:51:22-0300 [-] wsn node send data - Number of events: 329
+2020-06-26T08:51:22-0300 [stdout#info] 228992017663557: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:22-0300 [stdout#info] 22040758746419: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:22-0300 [stdout#info] 215204929607942: sensor_1 - sensor_3 - wsn_sink
+2020-06-26T08:51:22-0300 [stdout#info] 106034741879178: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:22-0300 [stdout#info] 106003281469241: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:22-0300 [stdout#info] 188174180887017: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:22-0300 [stdout#info] 186569185308318: sensor_3 - sensor_1 - wsn_sink - sensor_4
+2020-06-26T08:51:22-0300 [stdout#info] 45831313685416: sensor_4 - sensor_3 - sensor_1 - wsn_sink
+2020-06-26T08:51:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac358>
+2020-06-26T08:51:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08acda0>
+2020-06-26T08:51:24-0300 [-] Received SIGINT, shutting down.
+2020-06-26T08:51:24-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-26T08:51:24-0300 [SCADAApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-26T08:51:24-0300 [SCADAApp,client] connection lost - Number of events: 330
+2020-06-26T08:51:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe28524e0>
+2020-06-26T08:51:24-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-26T08:51:24-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fdfe08ac358>
+2020-06-26T08:51:24-0300 [-] Main loop terminated.

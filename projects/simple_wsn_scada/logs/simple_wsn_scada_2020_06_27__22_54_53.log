@@ -1,0 +1,2213 @@
+2020-06-27T22:54:53-0300 [-] Creating router ...
+2020-06-27T22:54:53-0300 [-] Initializing Router - Number of events: 1
+2020-06-27T22:54:54-0300 [-] RouterFactory starting on 8081
+2020-06-27T22:54:54-0300 [-] Creating AccessPoint station ...
+2020-06-27T22:54:54-0300 [-] Initializing Access Point - Number of events: 2
+2020-06-27T22:54:54-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-06-27T22:54:54-0300 [-] Initializing Server - Number of events: 3
+2020-06-27T22:54:55-0300 [-] BrokerFactory starting on 5100
+2020-06-27T22:54:55-0300 [-] Initializing Client - Number of events: 4
+2020-06-27T22:54:55-0300 [-] Initializing sink node - Number of events: 5
+2020-06-27T22:54:56-0300 [-] Initializing sensor node - Number of events: 6
+2020-06-27T22:54:56-0300 [-] Initializing sensor node - Number of events: 7
+2020-06-27T22:54:57-0300 [-] Initializing sensor node - Number of events: 8
+2020-06-27T22:54:57-0300 [-] Initializing sensor node - Number of events: 9
+2020-06-27T22:54:58-0300 [-] Initializing sensor node - Number of events: 10
+2020-06-27T22:54:58-0300 [-] Initializing sensor node - Number of events: 11
+2020-06-27T22:54:59-0300 [-] Initializing sensor node - Number of events: 12
+2020-06-27T22:54:59-0300 [-] Initializing sensor node - Number of events: 13
+2020-06-27T22:55:00-0300 [-] Initializing sensor node - Number of events: 14
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_1 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_1  <------->  sensor_3
+2020-06-27T22:55:00-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 15
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 16
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_9 ==========
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_3 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_3  <------->  sensor_1
+2020-06-27T22:55:00-0300 [stdout#info] sensor_3  <------->  sensor_4
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 17
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 18
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 19
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_6 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_6  <------->  sensor_5
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 20
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_5 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_5  <------->  sensor_6
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 21
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_8 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_8  <------->  sensor_7
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 22
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_2 ==========
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_4 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_4  <------->  sensor_3
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 23
+2020-06-27T22:55:00-0300 [stdout#info] ========= sensor_7 ==========
+2020-06-27T22:55:00-0300 [stdout#info] sensor_7  <------->  sensor_8
+2020-06-27T22:55:00-0300 [stdout#info] =============================
+2020-06-27T22:55:00-0300 [-] wsn node send data - Number of events: 24
+2020-06-27T22:55:01-0300 [stdout#info] This divice have no simulation core instance
+2020-06-27T22:55:01-0300 [stdout#info] This divice have no simulation core instance
+2020-06-27T22:55:01-0300 [stdout#info] This divice have no simulation core instance
+2020-06-27T22:55:01-0300 [stdout#info] This divice have no simulation core instance
+2020-06-27T22:55:01-0300 [Uninitialized] 127.0.0.1:54380 - Connected to mqtt broker - Number of events: 25
+2020-06-27T22:55:01-0300 [Uninitialized] 127.0.0.1:54380 - sending MQTT SUBSCRIBE REQUEST - Number of events: 26
+2020-06-27T22:55:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348080>
+2020-06-27T22:55:01-0300 [stdout#info] {0}
+2020-06-27T22:55:01-0300 [stdout#info] 201045490341011 3.99 Kwh
+2020-06-27T22:55:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348940>
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 27
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 28
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 29
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 30
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 31
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 32
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 33
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 34
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 35
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 36
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 37
+2020-06-27T22:55:03-0300 [-] wsn node send data - Number of events: 38
+2020-06-27T22:55:04-0300 [stdout#info] {0}
+2020-06-27T22:55:04-0300 [stdout#info] 58420939382452 16.86 Kwh
+2020-06-27T22:55:04-0300 [stdout#info] {0, 58420939382452}
+2020-06-27T22:55:04-0300 [stdout#info] 217655676581380 12.44 Kwh
+2020-06-27T22:55:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348da0>
+2020-06-27T22:55:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348940>
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 39
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 40
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 41
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 42
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 43
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 44
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 45
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 46
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 47
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 48
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 49
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 50
+2020-06-27T22:55:06-0300 [-] wsn node send data - Number of events: 51
+2020-06-27T22:55:07-0300 [stdout#info] {0}
+2020-06-27T22:55:07-0300 [stdout#info] 71083864197317 10.68 Kwh
+2020-06-27T22:55:07-0300 [stdout#info] {0, 71083864197317}
+2020-06-27T22:55:07-0300 [stdout#info] 102067855247324 19.98 Kwh
+2020-06-27T22:55:07-0300 [stdout#info] {0, 102067855247324, 71083864197317}
+2020-06-27T22:55:07-0300 [stdout#info] 78913782977615 10.9 Kwh
+2020-06-27T22:55:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b80b8>
+2020-06-27T22:55:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348da0>
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 52
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 53
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 54
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 55
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 56
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 57
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 58
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 59
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 60
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 61
+2020-06-27T22:55:09-0300 [-] wsn node send data - Number of events: 62
+2020-06-27T22:55:09-0300 [stdout#info] {0}
+2020-06-27T22:55:09-0300 [stdout#info] 56065433934556 2.54 Kwh
+2020-06-27T22:55:09-0300 [stdout#info] {0, 56065433934556}
+2020-06-27T22:55:09-0300 [stdout#info] 51799767524753 12.61 Kwh
+2020-06-27T22:55:09-0300 [stdout#info] {0, 51799767524753, 56065433934556}
+2020-06-27T22:55:09-0300 [stdout#info] 33115326976985 16.16 Kwh
+2020-06-27T22:55:10-0300 [-] wsn node send data - Number of events: 63
+2020-06-27T22:55:10-0300 [-] wsn node send data - Number of events: 64
+2020-06-27T22:55:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b82e8>
+2020-06-27T22:55:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b80b8>
+2020-06-27T22:55:12-0300 [-] wsn node send data - Number of events: 65
+2020-06-27T22:55:12-0300 [-] wsn node send data - Number of events: 66
+2020-06-27T22:55:12-0300 [-] wsn node send data - Number of events: 67
+2020-06-27T22:55:12-0300 [-] wsn node send data - Number of events: 68
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 69
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 70
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 71
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 72
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 73
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 74
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 75
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 76
+2020-06-27T22:55:13-0300 [-] wsn node send data - Number of events: 77
+2020-06-27T22:55:13-0300 [stdout#info] {0}
+2020-06-27T22:55:13-0300 [stdout#info] 109418180894995 11.17 Kwh
+2020-06-27T22:55:13-0300 [stdout#info] {0, 109418180894995}
+2020-06-27T22:55:13-0300 [stdout#info] 208846649598534 17.63 Kwh
+2020-06-27T22:55:13-0300 [stdout#info] {0, 109418180894995, 208846649598534}
+2020-06-27T22:55:13-0300 [stdout#info] 183388443868920 8.34 Kwh
+2020-06-27T22:55:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b8198>
+2020-06-27T22:55:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b82e8>
+2020-06-27T22:55:15-0300 [-] wsn node send data - Number of events: 78
+2020-06-27T22:55:15-0300 [-] wsn node send data - Number of events: 79
+2020-06-27T22:55:15-0300 [-] wsn node send data - Number of events: 80
+2020-06-27T22:55:15-0300 [-] wsn node send data - Number of events: 81
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 82
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 83
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 84
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 85
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 86
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 87
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 88
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 89
+2020-06-27T22:55:16-0300 [-] wsn node send data - Number of events: 90
+2020-06-27T22:55:16-0300 [stdout#info] {0}
+2020-06-27T22:55:16-0300 [stdout#info] 122438520956219 16.45 Kwh
+2020-06-27T22:55:16-0300 [stdout#info] {0, 122438520956219}
+2020-06-27T22:55:16-0300 [stdout#info] 69928033310860 9.59 Kwh
+2020-06-27T22:55:16-0300 [stdout#info] {0, 122438520956219, 69928033310860}
+2020-06-27T22:55:16-0300 [stdout#info] 252389508805370 12.1 Kwh
+2020-06-27T22:55:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b83c8>
+2020-06-27T22:55:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b8198>
+2020-06-27T22:55:18-0300 [-] wsn node send data - Number of events: 91
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 92
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 93
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 94
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 95
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 96
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 97
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 98
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 99
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 100
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 101
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 102
+2020-06-27T22:55:19-0300 [-] wsn node send data - Number of events: 103
+2020-06-27T22:55:19-0300 [stdout#info] {0}
+2020-06-27T22:55:19-0300 [stdout#info] 20134922092957 15.82 Kwh
+2020-06-27T22:55:19-0300 [stdout#info] {0, 20134922092957}
+2020-06-27T22:55:19-0300 [stdout#info] 257295075834080 14.55 Kwh
+2020-06-27T22:55:19-0300 [stdout#info] {0, 20134922092957, 257295075834080}
+2020-06-27T22:55:19-0300 [stdout#info] 151912846410435 12.13 Kwh
+2020-06-27T22:55:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b8780>
+2020-06-27T22:55:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b83c8>
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 104
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 105
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 106
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 107
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 108
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 109
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 110
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 111
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 112
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 113
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 114
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 115
+2020-06-27T22:55:22-0300 [-] wsn node send data - Number of events: 116
+2020-06-27T22:55:22-0300 [stdout#info] {0}
+2020-06-27T22:55:22-0300 [stdout#info] 40063671725810 14.63 Kwh
+2020-06-27T22:55:22-0300 [stdout#info] {0, 40063671725810}
+2020-06-27T22:55:22-0300 [stdout#info] 260003810110046 11.75 Kwh
+2020-06-27T22:55:22-0300 [stdout#info] {0, 40063671725810, 260003810110046}
+2020-06-27T22:55:22-0300 [stdout#info] 51507071064488 7.04 Kwh
+2020-06-27T22:55:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b86d8>
+2020-06-27T22:55:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b8780>
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 117
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 118
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 119
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 120
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 121
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 122
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 123
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 124
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 125
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 126
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 127
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 128
+2020-06-27T22:55:25-0300 [-] wsn node send data - Number of events: 129
+2020-06-27T22:55:25-0300 [stdout#info] {0}
+2020-06-27T22:55:25-0300 [stdout#info] 22011897319785 12.8 Kwh
+2020-06-27T22:55:25-0300 [stdout#info] {0, 22011897319785}
+2020-06-27T22:55:25-0300 [stdout#info] 66298493278935 14.25 Kwh
+2020-06-27T22:55:25-0300 [stdout#info] {0, 22011897319785, 66298493278935}
+2020-06-27T22:55:25-0300 [stdout#info] 133053324605202 3.71 Kwh
+2020-06-27T22:55:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12048>
+2020-06-27T22:55:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b86d8>
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 130
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 131
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 132
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 133
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 134
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 135
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 136
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 137
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 138
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 139
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 140
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 141
+2020-06-27T22:55:28-0300 [-] wsn node send data - Number of events: 142
+2020-06-27T22:55:28-0300 [stdout#info] {0}
+2020-06-27T22:55:28-0300 [stdout#info] 123487279396673 7.46 Kwh
+2020-06-27T22:55:28-0300 [stdout#info] {0, 123487279396673}
+2020-06-27T22:55:28-0300 [stdout#info] 227370405788336 22.04 Kwh
+2020-06-27T22:55:28-0300 [stdout#info] {0, 123487279396673, 227370405788336}
+2020-06-27T22:55:28-0300 [stdout#info] 267869814304916 13.64 Kwh
+2020-06-27T22:55:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a123c8>
+2020-06-27T22:55:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12048>
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 143
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 144
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 145
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 146
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 147
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 148
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 149
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 150
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 151
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 152
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 153
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 154
+2020-06-27T22:55:31-0300 [-] wsn node send data - Number of events: 155
+2020-06-27T22:55:31-0300 [stdout#info] {0}
+2020-06-27T22:55:31-0300 [stdout#info] 57660179040463 14.53 Kwh
+2020-06-27T22:55:31-0300 [stdout#info] {0, 57660179040463}
+2020-06-27T22:55:31-0300 [stdout#info] 50767906936602 3.65 Kwh
+2020-06-27T22:55:31-0300 [stdout#info] {0, 50767906936602, 57660179040463}
+2020-06-27T22:55:31-0300 [stdout#info] 50400871768349 6.63 Kwh
+2020-06-27T22:55:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a125f8>
+2020-06-27T22:55:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a123c8>
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 156
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 157
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 158
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 159
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 160
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 161
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 162
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 163
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 164
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 165
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 166
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 167
+2020-06-27T22:55:34-0300 [-] wsn node send data - Number of events: 168
+2020-06-27T22:55:34-0300 [stdout#info] {0}
+2020-06-27T22:55:34-0300 [stdout#info] 99184990276110 20.31 Kwh
+2020-06-27T22:55:34-0300 [stdout#info] {0, 99184990276110}
+2020-06-27T22:55:34-0300 [stdout#info] 91813261394936 7.01 Kwh
+2020-06-27T22:55:34-0300 [stdout#info] {0, 91813261394936, 99184990276110}
+2020-06-27T22:55:34-0300 [stdout#info] 211128991493903 21.42 Kwh
+2020-06-27T22:55:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12198>
+2020-06-27T22:55:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a125f8>
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 169
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 170
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 171
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 172
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 173
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 174
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 175
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 176
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 177
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 178
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 179
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 180
+2020-06-27T22:55:37-0300 [-] wsn node send data - Number of events: 181
+2020-06-27T22:55:37-0300 [stdout#info] {0}
+2020-06-27T22:55:37-0300 [stdout#info] 246488919090713 20.62 Kwh
+2020-06-27T22:55:37-0300 [stdout#info] {0, 246488919090713}
+2020-06-27T22:55:37-0300 [stdout#info] 164932020774447 14.44 Kwh
+2020-06-27T22:55:37-0300 [stdout#info] {0, 246488919090713, 164932020774447}
+2020-06-27T22:55:37-0300 [stdout#info] 154851635801444 13.39 Kwh
+2020-06-27T22:55:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12320>
+2020-06-27T22:55:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12198>
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 182
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 183
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 184
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 185
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 186
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 187
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 188
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 189
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 190
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 191
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 192
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 193
+2020-06-27T22:55:40-0300 [-] wsn node send data - Number of events: 194
+2020-06-27T22:55:40-0300 [stdout#info] {0}
+2020-06-27T22:55:40-0300 [stdout#info] 261330450689408 10.5 Kwh
+2020-06-27T22:55:40-0300 [stdout#info] {0, 261330450689408}
+2020-06-27T22:55:40-0300 [stdout#info] 277204299441575 14.4 Kwh
+2020-06-27T22:55:40-0300 [stdout#info] {0, 261330450689408, 277204299441575}
+2020-06-27T22:55:40-0300 [stdout#info] 16285007191086 8.03 Kwh
+2020-06-27T22:55:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12860>
+2020-06-27T22:55:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12320>
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 195
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 196
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 197
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 198
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 199
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 200
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 201
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 202
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 203
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 204
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 205
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 206
+2020-06-27T22:55:43-0300 [-] wsn node send data - Number of events: 207
+2020-06-27T22:55:43-0300 [stdout#info] {0}
+2020-06-27T22:55:43-0300 [stdout#info] 262550590229052 20.97 Kwh
+2020-06-27T22:55:43-0300 [stdout#info] {0, 262550590229052}
+2020-06-27T22:55:43-0300 [stdout#info] 73895238120822 6.8 Kwh
+2020-06-27T22:55:43-0300 [stdout#info] {0, 262550590229052, 73895238120822}
+2020-06-27T22:55:43-0300 [stdout#info] 81599393652893 20.19 Kwh
+2020-06-27T22:55:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a122e8>
+2020-06-27T22:55:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a12860>
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 208
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 209
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 210
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 211
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 212
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 213
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 214
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 215
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 216
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 217
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 218
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 219
+2020-06-27T22:55:46-0300 [-] wsn node send data - Number of events: 220
+2020-06-27T22:55:46-0300 [stdout#info] {0}
+2020-06-27T22:55:46-0300 [stdout#info] 155238729269814 5.32 Kwh
+2020-06-27T22:55:46-0300 [stdout#info] {0, 155238729269814}
+2020-06-27T22:55:46-0300 [stdout#info] 251977085481096 11.77 Kwh
+2020-06-27T22:55:46-0300 [stdout#info] {0, 251977085481096, 155238729269814}
+2020-06-27T22:55:46-0300 [stdout#info] 186611379879389 17.7 Kwh
+2020-06-27T22:55:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c0b8>
+2020-06-27T22:55:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a122e8>
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 221
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 222
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 223
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 224
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 225
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 226
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 227
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 228
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 229
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 230
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 231
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 232
+2020-06-27T22:55:49-0300 [-] wsn node send data - Number of events: 233
+2020-06-27T22:55:49-0300 [stdout#info] {0}
+2020-06-27T22:55:49-0300 [stdout#info] 25868522295018 6.29 Kwh
+2020-06-27T22:55:49-0300 [stdout#info] {0, 25868522295018}
+2020-06-27T22:55:49-0300 [stdout#info] 214927441541252 7.35 Kwh
+2020-06-27T22:55:49-0300 [stdout#info] {0, 25868522295018, 214927441541252}
+2020-06-27T22:55:49-0300 [stdout#info] 249131029852267 5.22 Kwh
+2020-06-27T22:55:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c128>
+2020-06-27T22:55:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c0b8>
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 234
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 235
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 236
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 237
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 238
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 239
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 240
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 241
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 242
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 243
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 244
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 245
+2020-06-27T22:55:52-0300 [-] wsn node send data - Number of events: 246
+2020-06-27T22:55:52-0300 [stdout#info] {0}
+2020-06-27T22:55:52-0300 [stdout#info] 277453982778846 19.14 Kwh
+2020-06-27T22:55:52-0300 [stdout#info] {0, 277453982778846}
+2020-06-27T22:55:52-0300 [stdout#info] 238684348041131 14.69 Kwh
+2020-06-27T22:55:52-0300 [stdout#info] {0, 238684348041131, 277453982778846}
+2020-06-27T22:55:52-0300 [stdout#info] 199680472216820 3.28 Kwh
+2020-06-27T22:55:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c390>
+2020-06-27T22:55:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c128>
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 247
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 248
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 249
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 250
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 251
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 252
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 253
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 254
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 255
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 256
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 257
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 258
+2020-06-27T22:55:55-0300 [-] wsn node send data - Number of events: 259
+2020-06-27T22:55:55-0300 [stdout#info] {0}
+2020-06-27T22:55:55-0300 [stdout#info] 57110948321573 18.31 Kwh
+2020-06-27T22:55:55-0300 [stdout#info] {0, 57110948321573}
+2020-06-27T22:55:55-0300 [stdout#info] 178065591495278 6.55 Kwh
+2020-06-27T22:55:55-0300 [stdout#info] {0, 57110948321573, 178065591495278}
+2020-06-27T22:55:55-0300 [stdout#info] 237927381340187 14.33 Kwh
+2020-06-27T22:55:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c7f0>
+2020-06-27T22:55:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c390>
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 260
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 261
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 262
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 263
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 264
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 265
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 266
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 267
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 268
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 269
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 270
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 271
+2020-06-27T22:55:58-0300 [-] wsn node send data - Number of events: 272
+2020-06-27T22:55:58-0300 [stdout#info] {0}
+2020-06-27T22:55:58-0300 [stdout#info] 3298499685275 13.51 Kwh
+2020-06-27T22:55:58-0300 [stdout#info] {0, 3298499685275}
+2020-06-27T22:55:58-0300 [stdout#info] 129216758495698 17.28 Kwh
+2020-06-27T22:55:58-0300 [stdout#info] {0, 129216758495698, 3298499685275}
+2020-06-27T22:55:58-0300 [stdout#info] 122579432514646 19.3 Kwh
+2020-06-27T22:55:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c9e8>
+2020-06-27T22:55:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c7f0>
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 273
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 274
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 275
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 276
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 277
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 278
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 279
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 280
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 281
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 282
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 283
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 284
+2020-06-27T22:56:01-0300 [-] wsn node send data - Number of events: 285
+2020-06-27T22:56:01-0300 [stdout#info] {0}
+2020-06-27T22:56:01-0300 [stdout#info] 160674118769960 13.22 Kwh
+2020-06-27T22:56:01-0300 [stdout#info] {0, 160674118769960}
+2020-06-27T22:56:01-0300 [stdout#info] 200179889301923 10.81 Kwh
+2020-06-27T22:56:01-0300 [stdout#info] {0, 160674118769960, 200179889301923}
+2020-06-27T22:56:01-0300 [stdout#info] 224020061931925 13.99 Kwh
+2020-06-27T22:56:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c710>
+2020-06-27T22:56:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c9e8>
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 286
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 287
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 288
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 289
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 290
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 291
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 292
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 293
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 294
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 295
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 296
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 297
+2020-06-27T22:56:04-0300 [-] wsn node send data - Number of events: 298
+2020-06-27T22:56:04-0300 [stdout#info] {0}
+2020-06-27T22:56:04-0300 [stdout#info] 41831988237181 6.07 Kwh
+2020-06-27T22:56:04-0300 [stdout#info] {0, 41831988237181}
+2020-06-27T22:56:04-0300 [stdout#info] 57894479408014 17.11 Kwh
+2020-06-27T22:56:04-0300 [stdout#info] {0, 41831988237181, 57894479408014}
+2020-06-27T22:56:04-0300 [stdout#info] 222647665281550 5.13 Kwh
+2020-06-27T22:56:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1cda0>
+2020-06-27T22:56:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1c710>
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 299
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 300
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 301
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 302
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 303
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 304
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 305
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 306
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 307
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 308
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 309
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 310
+2020-06-27T22:56:07-0300 [-] wsn node send data - Number of events: 311
+2020-06-27T22:56:07-0300 [stdout#info] {0}
+2020-06-27T22:56:07-0300 [stdout#info] 207934254538506 18.63 Kwh
+2020-06-27T22:56:07-0300 [stdout#info] {0, 207934254538506}
+2020-06-27T22:56:07-0300 [stdout#info] 174716052934962 4.19 Kwh
+2020-06-27T22:56:07-0300 [stdout#info] {0, 207934254538506, 174716052934962}
+2020-06-27T22:56:07-0300 [stdout#info] 94229016676264 11.9 Kwh
+2020-06-27T22:56:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24080>
+2020-06-27T22:56:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a1cda0>
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 312
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 313
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 314
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 315
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 316
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 317
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 318
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 319
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 320
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 321
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 322
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 323
+2020-06-27T22:56:10-0300 [-] wsn node send data - Number of events: 324
+2020-06-27T22:56:10-0300 [stdout#info] {0}
+2020-06-27T22:56:10-0300 [stdout#info] 235129284244012 13.47 Kwh
+2020-06-27T22:56:10-0300 [stdout#info] {0, 235129284244012}
+2020-06-27T22:56:10-0300 [stdout#info] 233835581301252 14.98 Kwh
+2020-06-27T22:56:10-0300 [stdout#info] {0, 235129284244012, 233835581301252}
+2020-06-27T22:56:10-0300 [stdout#info] 135099799559215 7.2 Kwh
+2020-06-27T22:56:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24240>
+2020-06-27T22:56:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24080>
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 325
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 326
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 327
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 328
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 329
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 330
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 331
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 332
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 333
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 334
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 335
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 336
+2020-06-27T22:56:13-0300 [-] wsn node send data - Number of events: 337
+2020-06-27T22:56:13-0300 [stdout#info] {0}
+2020-06-27T22:56:13-0300 [stdout#info] 88856947760221 7.8 Kwh
+2020-06-27T22:56:13-0300 [stdout#info] {0, 88856947760221}
+2020-06-27T22:56:13-0300 [stdout#info] 178271842741 9.98 Kwh
+2020-06-27T22:56:13-0300 [stdout#info] {0, 88856947760221, 178271842741}
+2020-06-27T22:56:13-0300 [stdout#info] 265733113149012 4.36 Kwh
+2020-06-27T22:56:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24278>
+2020-06-27T22:56:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24240>
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 338
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 339
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 340
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 341
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 342
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 343
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 344
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 345
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 346
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 347
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 348
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 349
+2020-06-27T22:56:16-0300 [-] wsn node send data - Number of events: 350
+2020-06-27T22:56:16-0300 [stdout#info] {0}
+2020-06-27T22:56:16-0300 [stdout#info] 266145376367250 12.03 Kwh
+2020-06-27T22:56:16-0300 [stdout#info] {0, 266145376367250}
+2020-06-27T22:56:16-0300 [stdout#info] 91376465618718 14.74 Kwh
+2020-06-27T22:56:16-0300 [stdout#info] {0, 266145376367250, 91376465618718}
+2020-06-27T22:56:16-0300 [stdout#info] 16533191608863 18.74 Kwh
+2020-06-27T22:56:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24518>
+2020-06-27T22:56:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24278>
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 351
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 352
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 353
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 354
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 355
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 356
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 357
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 358
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 359
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 360
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 361
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 362
+2020-06-27T22:56:19-0300 [-] wsn node send data - Number of events: 363
+2020-06-27T22:56:19-0300 [stdout#info] {0}
+2020-06-27T22:56:19-0300 [stdout#info] 63273154455217 7.08 Kwh
+2020-06-27T22:56:19-0300 [stdout#info] {0, 63273154455217}
+2020-06-27T22:56:19-0300 [stdout#info] 59846124196377 7.48 Kwh
+2020-06-27T22:56:19-0300 [stdout#info] {0, 63273154455217, 59846124196377}
+2020-06-27T22:56:19-0300 [stdout#info] 100891582598853 7.16 Kwh
+2020-06-27T22:56:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a244a8>
+2020-06-27T22:56:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24518>
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 364
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 365
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 366
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 367
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 368
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 369
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 370
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 371
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 372
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 373
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 374
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 375
+2020-06-27T22:56:22-0300 [-] wsn node send data - Number of events: 376
+2020-06-27T22:56:22-0300 [stdout#info] {0}
+2020-06-27T22:56:22-0300 [stdout#info] 139823387654515 14.35 Kwh
+2020-06-27T22:56:22-0300 [stdout#info] {0, 139823387654515}
+2020-06-27T22:56:22-0300 [stdout#info] 168666709405663 15.98 Kwh
+2020-06-27T22:56:22-0300 [stdout#info] {0, 139823387654515, 168666709405663}
+2020-06-27T22:56:22-0300 [stdout#info] 76004382580474 6.59 Kwh
+2020-06-27T22:56:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a245c0>
+2020-06-27T22:56:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a244a8>
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 377
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 378
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 379
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 380
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 381
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 382
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 383
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 384
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 385
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 386
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 387
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 388
+2020-06-27T22:56:25-0300 [-] wsn node send data - Number of events: 389
+2020-06-27T22:56:25-0300 [stdout#info] {0}
+2020-06-27T22:56:25-0300 [stdout#info] 241261432160057 17.73 Kwh
+2020-06-27T22:56:25-0300 [stdout#info] {0, 241261432160057}
+2020-06-27T22:56:25-0300 [stdout#info] 135867977169110 3.25 Kwh
+2020-06-27T22:56:25-0300 [stdout#info] {0, 241261432160057, 135867977169110}
+2020-06-27T22:56:25-0300 [stdout#info] 215330553387162 8.11 Kwh
+2020-06-27T22:56:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24b38>
+2020-06-27T22:56:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a245c0>
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 390
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 391
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 392
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 393
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 394
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 395
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 396
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 397
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 398
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 399
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 400
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 401
+2020-06-27T22:56:28-0300 [-] wsn node send data - Number of events: 402
+2020-06-27T22:56:28-0300 [stdout#info] {0}
+2020-06-27T22:56:28-0300 [stdout#info] 205672040527076 20.2 Kwh
+2020-06-27T22:56:28-0300 [stdout#info] {0, 205672040527076}
+2020-06-27T22:56:28-0300 [stdout#info] 29286122418899 12.8 Kwh
+2020-06-27T22:56:28-0300 [stdout#info] {0, 29286122418899, 205672040527076}
+2020-06-27T22:56:28-0300 [stdout#info] 124180216782213 9.92 Kwh
+2020-06-27T22:56:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24e10>
+2020-06-27T22:56:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24b38>
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 403
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 404
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 405
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 406
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 407
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 408
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 409
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 410
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 411
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 412
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 413
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 414
+2020-06-27T22:56:31-0300 [-] wsn node send data - Number of events: 415
+2020-06-27T22:56:31-0300 [stdout#info] {0}
+2020-06-27T22:56:31-0300 [stdout#info] 74936908454192 19.43 Kwh
+2020-06-27T22:56:31-0300 [stdout#info] {0, 74936908454192}
+2020-06-27T22:56:31-0300 [stdout#info] 26686765616178 16.14 Kwh
+2020-06-27T22:56:31-0300 [stdout#info] {0, 74936908454192, 26686765616178}
+2020-06-27T22:56:31-0300 [stdout#info] 1011807772562 8.34 Kwh
+2020-06-27T22:56:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a341d0>
+2020-06-27T22:56:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a24e10>
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 416
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 417
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 418
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 419
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 420
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 421
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 422
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 423
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 424
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 425
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 426
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 427
+2020-06-27T22:56:34-0300 [-] wsn node send data - Number of events: 428
+2020-06-27T22:56:34-0300 [stdout#info] {0}
+2020-06-27T22:56:34-0300 [stdout#info] 76112193077204 8.98 Kwh
+2020-06-27T22:56:34-0300 [stdout#info] {0, 76112193077204}
+2020-06-27T22:56:34-0300 [stdout#info] 247835177389371 8.29 Kwh
+2020-06-27T22:56:34-0300 [stdout#info] {0, 247835177389371, 76112193077204}
+2020-06-27T22:56:34-0300 [stdout#info] 194475888722652 15.59 Kwh
+2020-06-27T22:56:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a343c8>
+2020-06-27T22:56:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a341d0>
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 429
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 430
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 431
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 432
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 433
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 434
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 435
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 436
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 437
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 438
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 439
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 440
+2020-06-27T22:56:37-0300 [-] wsn node send data - Number of events: 441
+2020-06-27T22:56:37-0300 [stdout#info] {0}
+2020-06-27T22:56:37-0300 [stdout#info] 158731127500095 8.31 Kwh
+2020-06-27T22:56:37-0300 [stdout#info] {0, 158731127500095}
+2020-06-27T22:56:37-0300 [stdout#info] 187619331052622 18.4 Kwh
+2020-06-27T22:56:37-0300 [stdout#info] {0, 187619331052622, 158731127500095}
+2020-06-27T22:56:37-0300 [stdout#info] 24686411725467 17.48 Kwh
+2020-06-27T22:56:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34668>
+2020-06-27T22:56:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a343c8>
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 442
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 443
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 444
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 445
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 446
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 447
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 448
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 449
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 450
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 451
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 452
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 453
+2020-06-27T22:56:40-0300 [-] wsn node send data - Number of events: 454
+2020-06-27T22:56:40-0300 [stdout#info] {0}
+2020-06-27T22:56:40-0300 [stdout#info] 157895775053362 19.83 Kwh
+2020-06-27T22:56:40-0300 [stdout#info] {0, 157895775053362}
+2020-06-27T22:56:40-0300 [stdout#info] 234519907955874 17.85 Kwh
+2020-06-27T22:56:40-0300 [stdout#info] {0, 157895775053362, 234519907955874}
+2020-06-27T22:56:40-0300 [stdout#info] 227788964200089 14.19 Kwh
+2020-06-27T22:56:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a348d0>
+2020-06-27T22:56:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34668>
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 455
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 456
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 457
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 458
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 459
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 460
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 461
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 462
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 463
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 464
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 465
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 466
+2020-06-27T22:56:43-0300 [-] wsn node send data - Number of events: 467
+2020-06-27T22:56:43-0300 [stdout#info] {0}
+2020-06-27T22:56:43-0300 [stdout#info] 246771293881338 19.12 Kwh
+2020-06-27T22:56:43-0300 [stdout#info] {0, 246771293881338}
+2020-06-27T22:56:43-0300 [stdout#info] 137612681845984 3.4 Kwh
+2020-06-27T22:56:43-0300 [stdout#info] {0, 246771293881338, 137612681845984}
+2020-06-27T22:56:43-0300 [stdout#info] 143095405494245 2.71 Kwh
+2020-06-27T22:56:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34b00>
+2020-06-27T22:56:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a348d0>
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 468
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 469
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 470
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 471
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 472
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 473
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 474
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 475
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 476
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 477
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 478
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 479
+2020-06-27T22:56:46-0300 [-] wsn node send data - Number of events: 480
+2020-06-27T22:56:46-0300 [stdout#info] {0}
+2020-06-27T22:56:46-0300 [stdout#info] 250261941842925 10.1 Kwh
+2020-06-27T22:56:46-0300 [stdout#info] {0, 250261941842925}
+2020-06-27T22:56:46-0300 [stdout#info] 60123847771105 9.4 Kwh
+2020-06-27T22:56:46-0300 [stdout#info] {0, 60123847771105, 250261941842925}
+2020-06-27T22:56:46-0300 [stdout#info] 197530245399555 18.8 Kwh
+2020-06-27T22:56:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34d30>
+2020-06-27T22:56:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34b00>
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 481
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 482
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 483
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 484
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 485
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 486
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 487
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 488
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 489
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 490
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 491
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 492
+2020-06-27T22:56:49-0300 [-] wsn node send data - Number of events: 493
+2020-06-27T22:56:49-0300 [stdout#info] {0}
+2020-06-27T22:56:49-0300 [stdout#info] 162570417474637 6.01 Kwh
+2020-06-27T22:56:49-0300 [stdout#info] {0, 162570417474637}
+2020-06-27T22:56:49-0300 [stdout#info] 169133227803576 18.73 Kwh
+2020-06-27T22:56:49-0300 [stdout#info] {0, 162570417474637, 169133227803576}
+2020-06-27T22:56:49-0300 [stdout#info] 170055868370247 4.91 Kwh
+2020-06-27T22:56:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348cf8>
+2020-06-27T22:56:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478a34d30>
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 494
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 495
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 496
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 497
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 498
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 499
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 500
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 501
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 502
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 503
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 504
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 505
+2020-06-27T22:56:52-0300 [-] wsn node send data - Number of events: 506
+2020-06-27T22:56:52-0300 [stdout#info] {0}
+2020-06-27T22:56:52-0300 [stdout#info] 22755269919091 11.93 Kwh
+2020-06-27T22:56:52-0300 [stdout#info] {0, 22755269919091}
+2020-06-27T22:56:52-0300 [stdout#info] 108926829065325 10.96 Kwh
+2020-06-27T22:56:52-0300 [stdout#info] {0, 22755269919091, 108926829065325}
+2020-06-27T22:56:52-0300 [stdout#info] 207650557295860 2.78 Kwh
+2020-06-27T22:56:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0198>
+2020-06-27T22:56:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348cf8>
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 507
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 508
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 509
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 510
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 511
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 512
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 513
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 514
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 515
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 516
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 517
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 518
+2020-06-27T22:56:55-0300 [-] wsn node send data - Number of events: 519
+2020-06-27T22:56:55-0300 [stdout#info] {0}
+2020-06-27T22:56:55-0300 [stdout#info] 21222630078983 14.44 Kwh
+2020-06-27T22:56:55-0300 [stdout#info] {0, 21222630078983}
+2020-06-27T22:56:55-0300 [stdout#info] 134386336443871 8.93 Kwh
+2020-06-27T22:56:55-0300 [stdout#info] {0, 134386336443871, 21222630078983}
+2020-06-27T22:56:55-0300 [stdout#info] 100912150752124 15.36 Kwh
+2020-06-27T22:56:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c00b8>
+2020-06-27T22:56:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0198>
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 520
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 521
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 522
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 523
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 524
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 525
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 526
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 527
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 528
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 529
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 530
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 531
+2020-06-27T22:56:58-0300 [-] wsn node send data - Number of events: 532
+2020-06-27T22:56:58-0300 [stdout#info] {0}
+2020-06-27T22:56:58-0300 [stdout#info] 225008031044812 10.96 Kwh
+2020-06-27T22:56:58-0300 [stdout#info] {0, 225008031044812}
+2020-06-27T22:56:58-0300 [stdout#info] 72011634247140 13.08 Kwh
+2020-06-27T22:56:58-0300 [stdout#info] {0, 225008031044812, 72011634247140}
+2020-06-27T22:56:58-0300 [stdout#info] 59554470314271 12.8 Kwh
+2020-06-27T22:56:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0630>
+2020-06-27T22:56:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c00b8>
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 533
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 534
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 535
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 536
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 537
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 538
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 539
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 540
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 541
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 542
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 543
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 544
+2020-06-27T22:57:01-0300 [-] wsn node send data - Number of events: 545
+2020-06-27T22:57:01-0300 [stdout#info] {0}
+2020-06-27T22:57:01-0300 [stdout#info] 274547557051961 9.3 Kwh
+2020-06-27T22:57:01-0300 [stdout#info] {0, 274547557051961}
+2020-06-27T22:57:01-0300 [stdout#info] 92873645851098 20.63 Kwh
+2020-06-27T22:57:01-0300 [stdout#info] {0, 274547557051961, 92873645851098}
+2020-06-27T22:57:01-0300 [stdout#info] 122754941072705 14.86 Kwh
+2020-06-27T22:57:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0898>
+2020-06-27T22:57:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0630>
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 546
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 547
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 548
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 549
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 550
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 551
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 552
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 553
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 554
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 555
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 556
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 557
+2020-06-27T22:57:04-0300 [-] wsn node send data - Number of events: 558
+2020-06-27T22:57:04-0300 [stdout#info] {0}
+2020-06-27T22:57:04-0300 [stdout#info] 189171219964014 10.98 Kwh
+2020-06-27T22:57:04-0300 [stdout#info] {0, 189171219964014}
+2020-06-27T22:57:04-0300 [stdout#info] 173869792333901 17.12 Kwh
+2020-06-27T22:57:04-0300 [stdout#info] {0, 173869792333901, 189171219964014}
+2020-06-27T22:57:04-0300 [stdout#info] 248374694034089 2.67 Kwh
+2020-06-27T22:57:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0b00>
+2020-06-27T22:57:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0898>
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 559
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 560
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 561
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 562
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 563
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 564
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 565
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 566
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 567
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 568
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 569
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 570
+2020-06-27T22:57:07-0300 [-] wsn node send data - Number of events: 571
+2020-06-27T22:57:07-0300 [stdout#info] {0}
+2020-06-27T22:57:07-0300 [stdout#info] 183146557562064 11.61 Kwh
+2020-06-27T22:57:07-0300 [stdout#info] {0, 183146557562064}
+2020-06-27T22:57:07-0300 [stdout#info] 155771185193159 16.14 Kwh
+2020-06-27T22:57:07-0300 [stdout#info] {0, 155771185193159, 183146557562064}
+2020-06-27T22:57:07-0300 [stdout#info] 42960194258579 7.86 Kwh
+2020-06-27T22:57:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0c50>
+2020-06-27T22:57:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0b00>
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 572
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 573
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 574
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 575
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 576
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 577
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 578
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 579
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 580
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 581
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 582
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 583
+2020-06-27T22:57:10-0300 [-] wsn node send data - Number of events: 584
+2020-06-27T22:57:10-0300 [stdout#info] {0}
+2020-06-27T22:57:10-0300 [stdout#info] 57636717853466 21.01 Kwh
+2020-06-27T22:57:10-0300 [stdout#info] {0, 57636717853466}
+2020-06-27T22:57:10-0300 [stdout#info] 237493564857520 3.7 Kwh
+2020-06-27T22:57:10-0300 [stdout#info] {0, 57636717853466, 237493564857520}
+2020-06-27T22:57:10-0300 [stdout#info] 134173114364273 5.47 Kwh
+2020-06-27T22:57:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0d68>
+2020-06-27T22:57:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0c50>
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 585
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 586
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 587
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 588
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 589
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 590
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 591
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 592
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 593
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 594
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 595
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 596
+2020-06-27T22:57:13-0300 [-] wsn node send data - Number of events: 597
+2020-06-27T22:57:13-0300 [stdout#info] {0}
+2020-06-27T22:57:13-0300 [stdout#info] 32133619964825 4.16 Kwh
+2020-06-27T22:57:13-0300 [stdout#info] {0, 32133619964825}
+2020-06-27T22:57:13-0300 [stdout#info] 49761412960816 13.41 Kwh
+2020-06-27T22:57:13-0300 [stdout#info] {0, 32133619964825, 49761412960816}
+2020-06-27T22:57:13-0300 [stdout#info] 64935753688313 6.3 Kwh
+2020-06-27T22:57:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9208>
+2020-06-27T22:57:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c0d68>
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 598
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 599
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 600
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 601
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 602
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 603
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 604
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 605
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 606
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 607
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 608
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 609
+2020-06-27T22:57:16-0300 [-] wsn node send data - Number of events: 610
+2020-06-27T22:57:16-0300 [stdout#info] {0}
+2020-06-27T22:57:16-0300 [stdout#info] 101469266284940 3.88 Kwh
+2020-06-27T22:57:16-0300 [stdout#info] {0, 101469266284940}
+2020-06-27T22:57:16-0300 [stdout#info] 79082594083483 16.03 Kwh
+2020-06-27T22:57:16-0300 [stdout#info] {0, 79082594083483, 101469266284940}
+2020-06-27T22:57:16-0300 [stdout#info] 155623290315439 12.66 Kwh
+2020-06-27T22:57:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9320>
+2020-06-27T22:57:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9208>
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 611
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 612
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 613
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 614
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 615
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 616
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 617
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 618
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 619
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 620
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 621
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 622
+2020-06-27T22:57:19-0300 [-] wsn node send data - Number of events: 623
+2020-06-27T22:57:19-0300 [stdout#info] {0}
+2020-06-27T22:57:19-0300 [stdout#info] 263637199160827 5.23 Kwh
+2020-06-27T22:57:19-0300 [stdout#info] {0, 263637199160827}
+2020-06-27T22:57:19-0300 [stdout#info] 73997390289612 5.41 Kwh
+2020-06-27T22:57:19-0300 [stdout#info] {0, 263637199160827, 73997390289612}
+2020-06-27T22:57:19-0300 [stdout#info] 79164619464649 12.01 Kwh
+2020-06-27T22:57:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9240>
+2020-06-27T22:57:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9320>
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 624
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 625
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 626
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 627
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 628
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 629
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 630
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 631
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 632
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 633
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 634
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 635
+2020-06-27T22:57:22-0300 [-] wsn node send data - Number of events: 636
+2020-06-27T22:57:22-0300 [stdout#info] {0}
+2020-06-27T22:57:22-0300 [stdout#info] 89062630683781 4.01 Kwh
+2020-06-27T22:57:22-0300 [stdout#info] {0, 89062630683781}
+2020-06-27T22:57:22-0300 [stdout#info] 279126672222734 14.97 Kwh
+2020-06-27T22:57:22-0300 [stdout#info] {0, 89062630683781, 279126672222734}
+2020-06-27T22:57:22-0300 [stdout#info] 33740586207924 9.75 Kwh
+2020-06-27T22:57:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9748>
+2020-06-27T22:57:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9240>
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 637
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 638
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 639
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 640
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 641
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 642
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 643
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 644
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 645
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 646
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 647
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 648
+2020-06-27T22:57:25-0300 [-] wsn node send data - Number of events: 649
+2020-06-27T22:57:25-0300 [stdout#info] {0}
+2020-06-27T22:57:25-0300 [stdout#info] 135525625683110 8.31 Kwh
+2020-06-27T22:57:25-0300 [stdout#info] {0, 135525625683110}
+2020-06-27T22:57:25-0300 [stdout#info] 23038857805948 3.89 Kwh
+2020-06-27T22:57:25-0300 [stdout#info] {0, 23038857805948, 135525625683110}
+2020-06-27T22:57:25-0300 [stdout#info] 84561825426020 14.88 Kwh
+2020-06-27T22:57:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c97f0>
+2020-06-27T22:57:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9748>
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 650
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 651
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 652
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 653
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 654
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 655
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 656
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 657
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 658
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 659
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 660
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 661
+2020-06-27T22:57:28-0300 [-] wsn node send data - Number of events: 662
+2020-06-27T22:57:28-0300 [stdout#info] {0}
+2020-06-27T22:57:28-0300 [stdout#info] 89165357430252 17.86 Kwh
+2020-06-27T22:57:28-0300 [stdout#info] {0, 89165357430252}
+2020-06-27T22:57:28-0300 [stdout#info] 268465598929201 20.39 Kwh
+2020-06-27T22:57:28-0300 [stdout#info] {0, 268465598929201, 89165357430252}
+2020-06-27T22:57:28-0300 [stdout#info] 50649087655941 12.59 Kwh
+2020-06-27T22:57:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9c18>
+2020-06-27T22:57:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c97f0>
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 663
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 664
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 665
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 666
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 667
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 668
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 669
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 670
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 671
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 672
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 673
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 674
+2020-06-27T22:57:31-0300 [-] wsn node send data - Number of events: 675
+2020-06-27T22:57:32-0300 [stdout#info] {0}
+2020-06-27T22:57:32-0300 [stdout#info] 175679261940952 12.79 Kwh
+2020-06-27T22:57:32-0300 [stdout#info] {0, 175679261940952}
+2020-06-27T22:57:32-0300 [stdout#info] 105963628095339 12.93 Kwh
+2020-06-27T22:57:32-0300 [stdout#info] {0, 105963628095339, 175679261940952}
+2020-06-27T22:57:32-0300 [stdout#info] 170864016284306 6.03 Kwh
+2020-06-27T22:57:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9978>
+2020-06-27T22:57:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9c18>
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 676
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 677
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 678
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 679
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 680
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 681
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 682
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 683
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 684
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 685
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 686
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 687
+2020-06-27T22:57:34-0300 [-] wsn node send data - Number of events: 688
+2020-06-27T22:57:35-0300 [stdout#info] {0}
+2020-06-27T22:57:35-0300 [stdout#info] 222613775738088 3.86 Kwh
+2020-06-27T22:57:35-0300 [stdout#info] {0, 222613775738088}
+2020-06-27T22:57:35-0300 [stdout#info] 44911966359550 7.74 Kwh
+2020-06-27T22:57:35-0300 [stdout#info] {0, 222613775738088, 44911966359550}
+2020-06-27T22:57:35-0300 [stdout#info] 166347196065273 8.97 Kwh
+2020-06-27T22:57:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2080>
+2020-06-27T22:57:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789c9978>
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 689
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 690
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 691
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 692
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 693
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 694
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 695
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 696
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 697
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 698
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 699
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 700
+2020-06-27T22:57:37-0300 [-] wsn node send data - Number of events: 701
+2020-06-27T22:57:38-0300 [stdout#info] {0}
+2020-06-27T22:57:38-0300 [stdout#info] 32572790642539 5.25 Kwh
+2020-06-27T22:57:38-0300 [stdout#info] {0, 32572790642539}
+2020-06-27T22:57:38-0300 [stdout#info] 195539903691283 3.79 Kwh
+2020-06-27T22:57:38-0300 [stdout#info] {0, 32572790642539, 195539903691283}
+2020-06-27T22:57:38-0300 [stdout#info] 204388637663609 4.62 Kwh
+2020-06-27T22:57:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2320>
+2020-06-27T22:57:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2080>
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 702
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 703
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 704
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 705
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 706
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 707
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 708
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 709
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 710
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 711
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 712
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 713
+2020-06-27T22:57:40-0300 [-] wsn node send data - Number of events: 714
+2020-06-27T22:57:41-0300 [stdout#info] {0}
+2020-06-27T22:57:41-0300 [stdout#info] 183894406180179 13.2 Kwh
+2020-06-27T22:57:41-0300 [stdout#info] {0, 183894406180179}
+2020-06-27T22:57:41-0300 [stdout#info] 179633940384034 4.84 Kwh
+2020-06-27T22:57:41-0300 [stdout#info] {0, 179633940384034, 183894406180179}
+2020-06-27T22:57:41-0300 [stdout#info] 143626102521457 9.57 Kwh
+2020-06-27T22:57:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2550>
+2020-06-27T22:57:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2320>
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 715
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 716
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 717
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 718
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 719
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 720
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 721
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 722
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 723
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 724
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 725
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 726
+2020-06-27T22:57:43-0300 [-] wsn node send data - Number of events: 727
+2020-06-27T22:57:44-0300 [stdout#info] {0}
+2020-06-27T22:57:44-0300 [stdout#info] 50706351132429 3.27 Kwh
+2020-06-27T22:57:44-0300 [stdout#info] {0, 50706351132429}
+2020-06-27T22:57:44-0300 [stdout#info] 252402188761400 2.94 Kwh
+2020-06-27T22:57:44-0300 [stdout#info] {0, 252402188761400, 50706351132429}
+2020-06-27T22:57:44-0300 [stdout#info] 33679283070114 13.13 Kwh
+2020-06-27T22:57:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d25f8>
+2020-06-27T22:57:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2550>
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 728
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 729
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 730
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 731
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 732
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 733
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 734
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 735
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 736
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 737
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 738
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 739
+2020-06-27T22:57:46-0300 [-] wsn node send data - Number of events: 740
+2020-06-27T22:57:47-0300 [stdout#info] {0}
+2020-06-27T22:57:47-0300 [stdout#info] 35268723765263 11.62 Kwh
+2020-06-27T22:57:47-0300 [stdout#info] {0, 35268723765263}
+2020-06-27T22:57:47-0300 [stdout#info] 244560202938089 13.43 Kwh
+2020-06-27T22:57:47-0300 [stdout#info] {0, 244560202938089, 35268723765263}
+2020-06-27T22:57:47-0300 [stdout#info] 221030599296659 21.46 Kwh
+2020-06-27T22:57:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d27f0>
+2020-06-27T22:57:47-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d25f8>
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 741
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 742
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 743
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 744
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 745
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 746
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 747
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 748
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 749
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 750
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 751
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 752
+2020-06-27T22:57:49-0300 [-] wsn node send data - Number of events: 753
+2020-06-27T22:57:50-0300 [stdout#info] {0}
+2020-06-27T22:57:50-0300 [stdout#info] 75674014959051 20.49 Kwh
+2020-06-27T22:57:50-0300 [stdout#info] {0, 75674014959051}
+2020-06-27T22:57:50-0300 [stdout#info] 279382946008865 19.51 Kwh
+2020-06-27T22:57:50-0300 [stdout#info] {0, 279382946008865, 75674014959051}
+2020-06-27T22:57:50-0300 [stdout#info] 219762669016806 16.94 Kwh
+2020-06-27T22:57:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d26a0>
+2020-06-27T22:57:50-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d27f0>
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 754
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 755
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 756
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 757
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 758
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 759
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 760
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 761
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 762
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 763
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 764
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 765
+2020-06-27T22:57:52-0300 [-] wsn node send data - Number of events: 766
+2020-06-27T22:57:53-0300 [stdout#info] {0}
+2020-06-27T22:57:53-0300 [stdout#info] 121774192369115 3.13 Kwh
+2020-06-27T22:57:53-0300 [stdout#info] {0, 121774192369115}
+2020-06-27T22:57:53-0300 [stdout#info] 213974992627626 16.44 Kwh
+2020-06-27T22:57:53-0300 [stdout#info] {0, 213974992627626, 121774192369115}
+2020-06-27T22:57:53-0300 [stdout#info] 227324164027288 19.55 Kwh
+2020-06-27T22:57:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2c50>
+2020-06-27T22:57:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d26a0>
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 767
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 768
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 769
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 770
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 771
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 772
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 773
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 774
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 775
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 776
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 777
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 778
+2020-06-27T22:57:55-0300 [-] wsn node send data - Number of events: 779
+2020-06-27T22:57:56-0300 [stdout#info] {0}
+2020-06-27T22:57:56-0300 [stdout#info] 174971378967569 12.64 Kwh
+2020-06-27T22:57:56-0300 [stdout#info] {0, 174971378967569}
+2020-06-27T22:57:56-0300 [stdout#info] 86599910377368 19.97 Kwh
+2020-06-27T22:57:56-0300 [stdout#info] {0, 174971378967569, 86599910377368}
+2020-06-27T22:57:56-0300 [stdout#info] 185426135367466 15.73 Kwh
+2020-06-27T22:57:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de048>
+2020-06-27T22:57:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789d2c50>
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 780
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 781
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 782
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 783
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 784
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 785
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 786
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 787
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 788
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 789
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 790
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 791
+2020-06-27T22:57:58-0300 [-] wsn node send data - Number of events: 792
+2020-06-27T22:57:59-0300 [stdout#info] {0}
+2020-06-27T22:57:59-0300 [stdout#info] 27180814214645 7.89 Kwh
+2020-06-27T22:57:59-0300 [stdout#info] {0, 27180814214645}
+2020-06-27T22:57:59-0300 [stdout#info] 269772135058536 14.89 Kwh
+2020-06-27T22:57:59-0300 [stdout#info] {0, 269772135058536, 27180814214645}
+2020-06-27T22:57:59-0300 [stdout#info] 125945534974891 16.92 Kwh
+2020-06-27T22:57:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de208>
+2020-06-27T22:57:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de048>
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 793
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 794
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 795
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 796
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 797
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 798
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 799
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 800
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 801
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 802
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 803
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 804
+2020-06-27T22:58:01-0300 [-] wsn node send data - Number of events: 805
+2020-06-27T22:58:02-0300 [stdout#info] {0}
+2020-06-27T22:58:02-0300 [stdout#info] 20962184275302 5.47 Kwh
+2020-06-27T22:58:02-0300 [stdout#info] {0, 20962184275302}
+2020-06-27T22:58:02-0300 [stdout#info] 171166459085656 3.45 Kwh
+2020-06-27T22:58:02-0300 [stdout#info] {0, 171166459085656, 20962184275302}
+2020-06-27T22:58:02-0300 [stdout#info] 108378993324728 12.25 Kwh
+2020-06-27T22:58:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de240>
+2020-06-27T22:58:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de208>
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 806
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 807
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 808
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 809
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 810
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 811
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 812
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 813
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 814
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 815
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 816
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 817
+2020-06-27T22:58:04-0300 [-] wsn node send data - Number of events: 818
+2020-06-27T22:58:05-0300 [stdout#info] {0}
+2020-06-27T22:58:05-0300 [stdout#info] 163835629407810 13.52 Kwh
+2020-06-27T22:58:05-0300 [stdout#info] {0, 163835629407810}
+2020-06-27T22:58:05-0300 [stdout#info] 275353712617466 22.02 Kwh
+2020-06-27T22:58:05-0300 [stdout#info] {0, 163835629407810, 275353712617466}
+2020-06-27T22:58:05-0300 [stdout#info] 233900684198804 19.8 Kwh
+2020-06-27T22:58:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de400>
+2020-06-27T22:58:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de240>
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 819
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 820
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 821
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 822
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 823
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 824
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 825
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 826
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 827
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 828
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 829
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 830
+2020-06-27T22:58:07-0300 [-] wsn node send data - Number of events: 831
+2020-06-27T22:58:08-0300 [stdout#info] {0}
+2020-06-27T22:58:08-0300 [stdout#info] 218974406005150 13.37 Kwh
+2020-06-27T22:58:08-0300 [stdout#info] {0, 218974406005150}
+2020-06-27T22:58:08-0300 [stdout#info] 25909437250098 4.53 Kwh
+2020-06-27T22:58:08-0300 [stdout#info] {0, 25909437250098, 218974406005150}
+2020-06-27T22:58:08-0300 [stdout#info] 183320440655249 3.52 Kwh
+2020-06-27T22:58:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de898>
+2020-06-27T22:58:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de400>
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 832
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 833
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 834
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 835
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 836
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 837
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 838
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 839
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 840
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 841
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 842
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 843
+2020-06-27T22:58:10-0300 [-] wsn node send data - Number of events: 844
+2020-06-27T22:58:11-0300 [stdout#info] {0}
+2020-06-27T22:58:11-0300 [stdout#info] 259009547164333 15.55 Kwh
+2020-06-27T22:58:11-0300 [stdout#info] {0, 259009547164333}
+2020-06-27T22:58:11-0300 [stdout#info] 9997294433408 14.96 Kwh
+2020-06-27T22:58:11-0300 [stdout#info] {0, 259009547164333, 9997294433408}
+2020-06-27T22:58:11-0300 [stdout#info] 263459422153698 9.53 Kwh
+2020-06-27T22:58:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de748>
+2020-06-27T22:58:11-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de898>
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 845
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 846
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 847
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 848
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 849
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 850
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 851
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 852
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 853
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 854
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 855
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 856
+2020-06-27T22:58:13-0300 [-] wsn node send data - Number of events: 857
+2020-06-27T22:58:14-0300 [stdout#info] {0}
+2020-06-27T22:58:14-0300 [stdout#info] 86337973584541 19.62 Kwh
+2020-06-27T22:58:14-0300 [stdout#info] {0, 86337973584541}
+2020-06-27T22:58:14-0300 [stdout#info] 99495532232811 5.96 Kwh
+2020-06-27T22:58:14-0300 [stdout#info] {0, 99495532232811, 86337973584541}
+2020-06-27T22:58:14-0300 [stdout#info] 204282889715457 8.85 Kwh
+2020-06-27T22:58:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789deda0>
+2020-06-27T22:58:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789de748>
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 858
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 859
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 860
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 861
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 862
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 863
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 864
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 865
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 866
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 867
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 868
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 869
+2020-06-27T22:58:16-0300 [-] wsn node send data - Number of events: 870
+2020-06-27T22:58:17-0300 [stdout#info] {0}
+2020-06-27T22:58:17-0300 [stdout#info] 26153203071904 7.54 Kwh
+2020-06-27T22:58:17-0300 [stdout#info] {0, 26153203071904}
+2020-06-27T22:58:17-0300 [stdout#info] 133731938077974 11.96 Kwh
+2020-06-27T22:58:17-0300 [stdout#info] {0, 26153203071904, 133731938077974}
+2020-06-27T22:58:17-0300 [stdout#info] 30402272788964 12.2 Kwh
+2020-06-27T22:58:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789dea90>
+2020-06-27T22:58:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789deda0>
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 871
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 872
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 873
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 874
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 875
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 876
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 877
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 878
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 879
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 880
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 881
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 882
+2020-06-27T22:58:19-0300 [-] wsn node send data - Number of events: 883
+2020-06-27T22:58:20-0300 [stdout#info] {0}
+2020-06-27T22:58:20-0300 [stdout#info] 239442333977952 18.83 Kwh
+2020-06-27T22:58:20-0300 [stdout#info] {0, 239442333977952}
+2020-06-27T22:58:20-0300 [stdout#info] 145765149485882 18.02 Kwh
+2020-06-27T22:58:20-0300 [stdout#info] {0, 145765149485882, 239442333977952}
+2020-06-27T22:58:20-0300 [stdout#info] 249569479983766 20.28 Kwh
+2020-06-27T22:58:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789def28>
+2020-06-27T22:58:20-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789dea90>
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 884
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 885
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 886
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 887
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 888
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 889
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 890
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 891
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 892
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 893
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 894
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 895
+2020-06-27T22:58:22-0300 [-] wsn node send data - Number of events: 896
+2020-06-27T22:58:23-0300 [stdout#info] {0}
+2020-06-27T22:58:23-0300 [stdout#info] 44463568517285 10.88 Kwh
+2020-06-27T22:58:23-0300 [stdout#info] {0, 44463568517285}
+2020-06-27T22:58:23-0300 [stdout#info] 169027226398429 3.14 Kwh
+2020-06-27T22:58:23-0300 [stdout#info] {0, 169027226398429, 44463568517285}
+2020-06-27T22:58:23-0300 [stdout#info] 173286650181659 19.23 Kwh
+2020-06-27T22:58:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3240>
+2020-06-27T22:58:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789def28>
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 897
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 898
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 899
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 900
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 901
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 902
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 903
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 904
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 905
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 906
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 907
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 908
+2020-06-27T22:58:25-0300 [-] wsn node send data - Number of events: 909
+2020-06-27T22:58:26-0300 [stdout#info] {0}
+2020-06-27T22:58:26-0300 [stdout#info] 212501067942272 13.93 Kwh
+2020-06-27T22:58:26-0300 [stdout#info] {0, 212501067942272}
+2020-06-27T22:58:26-0300 [stdout#info] 122100601319921 11.6 Kwh
+2020-06-27T22:58:26-0300 [stdout#info] {0, 122100601319921, 212501067942272}
+2020-06-27T22:58:26-0300 [stdout#info] 242561441421533 12.72 Kwh
+2020-06-27T22:58:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e32e8>
+2020-06-27T22:58:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3240>
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 910
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 911
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 912
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 913
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 914
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 915
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 916
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 917
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 918
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 919
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 920
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 921
+2020-06-27T22:58:28-0300 [-] wsn node send data - Number of events: 922
+2020-06-27T22:58:29-0300 [stdout#info] {0}
+2020-06-27T22:58:29-0300 [stdout#info] 133787154829200 6.4 Kwh
+2020-06-27T22:58:29-0300 [stdout#info] {0, 133787154829200}
+2020-06-27T22:58:29-0300 [stdout#info] 231599181683521 22.15 Kwh
+2020-06-27T22:58:29-0300 [stdout#info] {0, 231599181683521, 133787154829200}
+2020-06-27T22:58:29-0300 [stdout#info] 238330096956869 19.89 Kwh
+2020-06-27T22:58:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3828>
+2020-06-27T22:58:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e32e8>
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 923
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 924
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 925
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 926
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 927
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 928
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 929
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 930
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 931
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 932
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 933
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 934
+2020-06-27T22:58:31-0300 [-] wsn node send data - Number of events: 935
+2020-06-27T22:58:32-0300 [stdout#info] {0}
+2020-06-27T22:58:32-0300 [stdout#info] 19631375436761 13.57 Kwh
+2020-06-27T22:58:32-0300 [stdout#info] {0, 19631375436761}
+2020-06-27T22:58:32-0300 [stdout#info] 104881798424289 16.22 Kwh
+2020-06-27T22:58:32-0300 [stdout#info] {0, 19631375436761, 104881798424289}
+2020-06-27T22:58:32-0300 [stdout#info] 45261136996529 16.46 Kwh
+2020-06-27T22:58:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e36a0>
+2020-06-27T22:58:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3828>
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 936
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 937
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 938
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 939
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 940
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 941
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 942
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 943
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 944
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 945
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 946
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 947
+2020-06-27T22:58:34-0300 [-] wsn node send data - Number of events: 948
+2020-06-27T22:58:35-0300 [stdout#info] {0}
+2020-06-27T22:58:35-0300 [stdout#info] 105472014973491 4.83 Kwh
+2020-06-27T22:58:35-0300 [stdout#info] {0, 105472014973491}
+2020-06-27T22:58:35-0300 [stdout#info] 254969666717864 18.66 Kwh
+2020-06-27T22:58:35-0300 [stdout#info] {0, 105472014973491, 254969666717864}
+2020-06-27T22:58:35-0300 [stdout#info] 43611543615740 12.92 Kwh
+2020-06-27T22:58:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3198>
+2020-06-27T22:58:35-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e36a0>
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 949
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 950
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 951
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 952
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 953
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 954
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 955
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 956
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 957
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 958
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 959
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 960
+2020-06-27T22:58:37-0300 [-] wsn node send data - Number of events: 961
+2020-06-27T22:58:38-0300 [stdout#info] {0}
+2020-06-27T22:58:38-0300 [stdout#info] 266575865648842 13.99 Kwh
+2020-06-27T22:58:38-0300 [stdout#info] {0, 266575865648842}
+2020-06-27T22:58:38-0300 [stdout#info] 161407819365452 13.64 Kwh
+2020-06-27T22:58:38-0300 [stdout#info] {0, 266575865648842, 161407819365452}
+2020-06-27T22:58:38-0300 [stdout#info] 153007796543238 2.84 Kwh
+2020-06-27T22:58:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3358>
+2020-06-27T22:58:38-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3198>
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 962
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 963
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 964
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 965
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 966
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 967
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 968
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 969
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 970
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 971
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 972
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 973
+2020-06-27T22:58:40-0300 [-] wsn node send data - Number of events: 974
+2020-06-27T22:58:41-0300 [stdout#info] {0}
+2020-06-27T22:58:41-0300 [stdout#info] 188296647518193 22.44 Kwh
+2020-06-27T22:58:41-0300 [stdout#info] {0, 188296647518193}
+2020-06-27T22:58:41-0300 [stdout#info] 190852330083858 15.27 Kwh
+2020-06-27T22:58:41-0300 [stdout#info] {0, 188296647518193, 190852330083858}
+2020-06-27T22:58:41-0300 [stdout#info] 263911907722279 3.74 Kwh
+2020-06-27T22:58:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3b00>
+2020-06-27T22:58:41-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3358>
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 975
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 976
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 977
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 978
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 979
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 980
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 981
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 982
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 983
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 984
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 985
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 986
+2020-06-27T22:58:43-0300 [-] wsn node send data - Number of events: 987
+2020-06-27T22:58:44-0300 [stdout#info] {0}
+2020-06-27T22:58:44-0300 [stdout#info] 180098847046225 5.47 Kwh
+2020-06-27T22:58:44-0300 [stdout#info] {0, 180098847046225}
+2020-06-27T22:58:44-0300 [stdout#info] 182677591028836 21.21 Kwh
+2020-06-27T22:58:44-0300 [stdout#info] {0, 180098847046225, 182677591028836}
+2020-06-27T22:58:44-0300 [stdout#info] 89086824358860 4.68 Kwh
+2020-06-27T22:58:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e38d0>
+2020-06-27T22:58:44-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e3b00>
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 988
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 989
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 990
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 991
+2020-06-27T22:58:46-0300 [stdout#info] {0}
+2020-06-27T22:58:46-0300 [stdout#info] 211374896034330 2.54 Kwh
+2020-06-27T22:58:46-0300 [stdout#info] {0, 211374896034330}
+2020-06-27T22:58:46-0300 [stdout#info] 277367745841585 15.16 Kwh
+2020-06-27T22:58:46-0300 [stdout#info] {0, 277367745841585, 211374896034330}
+2020-06-27T22:58:46-0300 [stdout#info] 65758605345916 20.2 Kwh
+2020-06-27T22:58:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f25f8>
+2020-06-27T22:58:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789e38d0>
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 992
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 993
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 994
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 995
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 996
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 997
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 998
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 999
+2020-06-27T22:58:46-0300 [-] wsn node send data - Number of events: 1000
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1001
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1002
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1003
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1004
+2020-06-27T22:58:49-0300 [stdout#info] {0}
+2020-06-27T22:58:49-0300 [stdout#info] 216403613498875 20.21 Kwh
+2020-06-27T22:58:49-0300 [stdout#info] {0, 216403613498875}
+2020-06-27T22:58:49-0300 [stdout#info] 229627003712122 4.05 Kwh
+2020-06-27T22:58:49-0300 [stdout#info] {0, 229627003712122, 216403613498875}
+2020-06-27T22:58:49-0300 [stdout#info] 187918877220330 14.32 Kwh
+2020-06-27T22:58:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f2828>
+2020-06-27T22:58:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f25f8>
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1005
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1006
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1007
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1008
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1009
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1010
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1011
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1012
+2020-06-27T22:58:49-0300 [-] wsn node send data - Number of events: 1013
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1014
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1015
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1016
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1017
+2020-06-27T22:58:52-0300 [stdout#info] {0}
+2020-06-27T22:58:52-0300 [stdout#info] 222368658460646 9.86 Kwh
+2020-06-27T22:58:52-0300 [stdout#info] {0, 222368658460646}
+2020-06-27T22:58:52-0300 [stdout#info] 210032849301513 12.17 Kwh
+2020-06-27T22:58:52-0300 [stdout#info] {0, 210032849301513, 222368658460646}
+2020-06-27T22:58:52-0300 [stdout#info] 27910753642701 14.28 Kwh
+2020-06-27T22:58:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f29e8>
+2020-06-27T22:58:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f2828>
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1018
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1019
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1020
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1021
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1022
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1023
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1024
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1025
+2020-06-27T22:58:52-0300 [-] wsn node send data - Number of events: 1026
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1027
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1028
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1029
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1030
+2020-06-27T22:58:55-0300 [stdout#info] {0}
+2020-06-27T22:58:55-0300 [stdout#info] 260366563666738 18.43 Kwh
+2020-06-27T22:58:55-0300 [stdout#info] {0, 260366563666738}
+2020-06-27T22:58:55-0300 [stdout#info] 457470347175 12.7 Kwh
+2020-06-27T22:58:55-0300 [stdout#info] {0, 260366563666738, 457470347175}
+2020-06-27T22:58:55-0300 [stdout#info] 132052863822702 22.14 Kwh
+2020-06-27T22:58:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f2c18>
+2020-06-27T22:58:55-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f29e8>
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1031
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1032
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1033
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1034
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1035
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1036
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1037
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1038
+2020-06-27T22:58:55-0300 [-] wsn node send data - Number of events: 1039
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1040
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1041
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1042
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1043
+2020-06-27T22:58:58-0300 [stdout#info] {0}
+2020-06-27T22:58:58-0300 [stdout#info] 121168418436108 11.35 Kwh
+2020-06-27T22:58:58-0300 [stdout#info] {0, 121168418436108}
+2020-06-27T22:58:58-0300 [stdout#info] 174172930395981 4.66 Kwh
+2020-06-27T22:58:58-0300 [stdout#info] {0, 121168418436108, 174172930395981}
+2020-06-27T22:58:58-0300 [stdout#info] 62869551974689 8.68 Kwh
+2020-06-27T22:58:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f23c8>
+2020-06-27T22:58:58-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f2c18>
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1044
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1045
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1046
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1047
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1048
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1049
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1050
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1051
+2020-06-27T22:58:58-0300 [-] wsn node send data - Number of events: 1052
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1053
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1054
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1055
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1056
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1057
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1058
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1059
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1060
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1061
+2020-06-27T22:59:01-0300 [stdout#info] {0}
+2020-06-27T22:59:01-0300 [stdout#info] 266076335295231 16.75 Kwh
+2020-06-27T22:59:01-0300 [stdout#info] {0, 266076335295231}
+2020-06-27T22:59:01-0300 [stdout#info] 119586990607408 17.54 Kwh
+2020-06-27T22:59:01-0300 [stdout#info] {0, 119586990607408, 266076335295231}
+2020-06-27T22:59:01-0300 [stdout#info] 32086401806384 21.79 Kwh
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1062
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1063
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1064
+2020-06-27T22:59:01-0300 [-] wsn node send data - Number of events: 1065
+2020-06-27T22:59:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d080>
+2020-06-27T22:59:01-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789f23c8>
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1066
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1067
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1068
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1069
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1070
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1071
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1072
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1073
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1074
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1075
+2020-06-27T22:59:04-0300 [stdout#info] {0}
+2020-06-27T22:59:04-0300 [stdout#info] 206683467667223 18.52 Kwh
+2020-06-27T22:59:04-0300 [stdout#info] {0, 206683467667223}
+2020-06-27T22:59:04-0300 [stdout#info] 220319015408485 4.45 Kwh
+2020-06-27T22:59:04-0300 [stdout#info] {0, 220319015408485, 206683467667223}
+2020-06-27T22:59:04-0300 [stdout#info] 188003074428874 8.18 Kwh
+2020-06-27T22:59:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d2b0>
+2020-06-27T22:59:04-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d080>
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1076
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1077
+2020-06-27T22:59:04-0300 [-] wsn node send data - Number of events: 1078
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1079
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1080
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1081
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1082
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1083
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1084
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1085
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1086
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1087
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1088
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1089
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1090
+2020-06-27T22:59:07-0300 [-] wsn node send data - Number of events: 1091
+2020-06-27T22:59:07-0300 [stdout#info] {0}
+2020-06-27T22:59:07-0300 [stdout#info] 247544601078800 8.52 Kwh
+2020-06-27T22:59:07-0300 [stdout#info] {0, 247544601078800}
+2020-06-27T22:59:07-0300 [stdout#info] 135088906494957 7.49 Kwh
+2020-06-27T22:59:07-0300 [stdout#info] {0, 247544601078800, 135088906494957}
+2020-06-27T22:59:07-0300 [stdout#info] 86920906372407 5.24 Kwh
+2020-06-27T22:59:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d550>
+2020-06-27T22:59:07-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d2b0>
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1092
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1093
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1094
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1095
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1096
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1097
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1098
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1099
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1100
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1101
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1102
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1103
+2020-06-27T22:59:10-0300 [-] wsn node send data - Number of events: 1104
+2020-06-27T22:59:10-0300 [stdout#info] {0}
+2020-06-27T22:59:10-0300 [stdout#info] 176813630864467 5.75 Kwh
+2020-06-27T22:59:10-0300 [stdout#info] {0, 176813630864467}
+2020-06-27T22:59:10-0300 [stdout#info] 225149821703430 13.52 Kwh
+2020-06-27T22:59:10-0300 [stdout#info] {0, 176813630864467, 225149821703430}
+2020-06-27T22:59:10-0300 [stdout#info] 190697744859277 8.05 Kwh
+2020-06-27T22:59:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d240>
+2020-06-27T22:59:10-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d550>
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1105
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1106
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1107
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1108
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1109
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1110
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1111
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1112
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1113
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1114
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1115
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1116
+2020-06-27T22:59:13-0300 [-] wsn node send data - Number of events: 1117
+2020-06-27T22:59:13-0300 [stdout#info] {0}
+2020-06-27T22:59:13-0300 [stdout#info] 247017122446170 16.14 Kwh
+2020-06-27T22:59:13-0300 [stdout#info] {0, 247017122446170}
+2020-06-27T22:59:13-0300 [stdout#info] 251155327532387 20.96 Kwh
+2020-06-27T22:59:13-0300 [stdout#info] {0, 247017122446170, 251155327532387}
+2020-06-27T22:59:13-0300 [stdout#info] 1562883208749 15.25 Kwh
+2020-06-27T22:59:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d748>
+2020-06-27T22:59:13-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d240>
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1118
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1119
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1120
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1121
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1122
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1123
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1124
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1125
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1126
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1127
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1128
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1129
+2020-06-27T22:59:16-0300 [-] wsn node send data - Number of events: 1130
+2020-06-27T22:59:16-0300 [stdout#info] {0}
+2020-06-27T22:59:16-0300 [stdout#info] 146285692285415 13.66 Kwh
+2020-06-27T22:59:16-0300 [stdout#info] {0, 146285692285415}
+2020-06-27T22:59:16-0300 [stdout#info] 76825833663901 15.82 Kwh
+2020-06-27T22:59:16-0300 [stdout#info] {0, 76825833663901, 146285692285415}
+2020-06-27T22:59:16-0300 [stdout#info] 180303898081054 19.01 Kwh
+2020-06-27T22:59:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d7f0>
+2020-06-27T22:59:16-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d748>
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1131
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1132
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1133
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1134
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1135
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1136
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1137
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1138
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1139
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1140
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1141
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1142
+2020-06-27T22:59:19-0300 [-] wsn node send data - Number of events: 1143
+2020-06-27T22:59:19-0300 [stdout#info] {0}
+2020-06-27T22:59:19-0300 [stdout#info] 111342421450824 17.49 Kwh
+2020-06-27T22:59:19-0300 [stdout#info] {0, 111342421450824}
+2020-06-27T22:59:19-0300 [stdout#info] 104452621756943 14.78 Kwh
+2020-06-27T22:59:19-0300 [stdout#info] {0, 111342421450824, 104452621756943}
+2020-06-27T22:59:19-0300 [stdout#info] 218438439083717 20.23 Kwh
+2020-06-27T22:59:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d978>
+2020-06-27T22:59:19-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d7f0>
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1144
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1145
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1146
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1147
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1148
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1149
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1150
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1151
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1152
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1153
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1154
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1155
+2020-06-27T22:59:22-0300 [-] wsn node send data - Number of events: 1156
+2020-06-27T22:59:22-0300 [stdout#info] {0}
+2020-06-27T22:59:22-0300 [stdout#info] 68968264274649 12.47 Kwh
+2020-06-27T22:59:22-0300 [stdout#info] {0, 68968264274649}
+2020-06-27T22:59:22-0300 [stdout#info] 256747930877342 9.72 Kwh
+2020-06-27T22:59:22-0300 [stdout#info] {0, 68968264274649, 256747930877342}
+2020-06-27T22:59:22-0300 [stdout#info] 7142223201244 6.48 Kwh
+2020-06-27T22:59:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988080>
+2020-06-27T22:59:22-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947897d978>
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1157
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1158
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1159
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1160
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1161
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1162
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1163
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1164
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1165
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1166
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1167
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1168
+2020-06-27T22:59:25-0300 [-] wsn node send data - Number of events: 1169
+2020-06-27T22:59:25-0300 [stdout#info] {0}
+2020-06-27T22:59:25-0300 [stdout#info] 145289033966922 12.57 Kwh
+2020-06-27T22:59:25-0300 [stdout#info] {0, 145289033966922}
+2020-06-27T22:59:25-0300 [stdout#info] 244794489706270 21.13 Kwh
+2020-06-27T22:59:25-0300 [stdout#info] {0, 145289033966922, 244794489706270}
+2020-06-27T22:59:25-0300 [stdout#info] 203115194110261 6.55 Kwh
+2020-06-27T22:59:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789882e8>
+2020-06-27T22:59:25-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988080>
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1170
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1171
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1172
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1173
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1174
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1175
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1176
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1177
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1178
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1179
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1180
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1181
+2020-06-27T22:59:28-0300 [-] wsn node send data - Number of events: 1182
+2020-06-27T22:59:28-0300 [stdout#info] {0}
+2020-06-27T22:59:28-0300 [stdout#info] 208573624523229 18.53 Kwh
+2020-06-27T22:59:28-0300 [stdout#info] {0, 208573624523229}
+2020-06-27T22:59:28-0300 [stdout#info] 237176185538983 3.27 Kwh
+2020-06-27T22:59:28-0300 [stdout#info] {0, 208573624523229, 237176185538983}
+2020-06-27T22:59:28-0300 [stdout#info] 81189190015705 10.48 Kwh
+2020-06-27T22:59:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988048>
+2020-06-27T22:59:28-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789882e8>
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1183
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1184
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1185
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1186
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1187
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1188
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1189
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1190
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1191
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1192
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1193
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1194
+2020-06-27T22:59:31-0300 [-] wsn node send data - Number of events: 1195
+2020-06-27T22:59:31-0300 [stdout#info] {0}
+2020-06-27T22:59:31-0300 [stdout#info] 76244426515179 17.56 Kwh
+2020-06-27T22:59:31-0300 [stdout#info] {0, 76244426515179}
+2020-06-27T22:59:31-0300 [stdout#info] 256394602109554 8.08 Kwh
+2020-06-27T22:59:31-0300 [stdout#info] {0, 256394602109554, 76244426515179}
+2020-06-27T22:59:31-0300 [stdout#info] 148070733355123 9.42 Kwh
+2020-06-27T22:59:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988198>
+2020-06-27T22:59:31-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988048>
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1196
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1197
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1198
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1199
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1200
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1201
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1202
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1203
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1204
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1205
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1206
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1207
+2020-06-27T22:59:34-0300 [-] wsn node send data - Number of events: 1208
+2020-06-27T22:59:34-0300 [stdout#info] {0}
+2020-06-27T22:59:34-0300 [stdout#info] 248851900945158 19.59 Kwh
+2020-06-27T22:59:34-0300 [stdout#info] {0, 248851900945158}
+2020-06-27T22:59:34-0300 [stdout#info] 40197223219262 10.8 Kwh
+2020-06-27T22:59:34-0300 [stdout#info] {0, 40197223219262, 248851900945158}
+2020-06-27T22:59:34-0300 [stdout#info] 208335863223637 14.35 Kwh
+2020-06-27T22:59:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988518>
+2020-06-27T22:59:34-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988198>
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1209
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1210
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1211
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1212
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1213
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1214
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1215
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1216
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1217
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1218
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1219
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1220
+2020-06-27T22:59:37-0300 [-] wsn node send data - Number of events: 1221
+2020-06-27T22:59:37-0300 [stdout#info] {0}
+2020-06-27T22:59:37-0300 [stdout#info] 190914905152503 5.95 Kwh
+2020-06-27T22:59:37-0300 [stdout#info] {0, 190914905152503}
+2020-06-27T22:59:37-0300 [stdout#info] 255478489652795 19.39 Kwh
+2020-06-27T22:59:37-0300 [stdout#info] {0, 255478489652795, 190914905152503}
+2020-06-27T22:59:37-0300 [stdout#info] 182134005513848 10.85 Kwh
+2020-06-27T22:59:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988b38>
+2020-06-27T22:59:37-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988518>
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1222
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1223
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1224
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1225
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1226
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1227
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1228
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1229
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1230
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1231
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1232
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1233
+2020-06-27T22:59:40-0300 [-] wsn node send data - Number of events: 1234
+2020-06-27T22:59:40-0300 [stdout#info] {0}
+2020-06-27T22:59:40-0300 [stdout#info] 224941137828136 4.27 Kwh
+2020-06-27T22:59:40-0300 [stdout#info] {0, 224941137828136}
+2020-06-27T22:59:40-0300 [stdout#info] 181744985471096 18.17 Kwh
+2020-06-27T22:59:40-0300 [stdout#info] {0, 224941137828136, 181744985471096}
+2020-06-27T22:59:40-0300 [stdout#info] 137546215159204 14.73 Kwh
+2020-06-27T22:59:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988908>
+2020-06-27T22:59:40-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988b38>
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1235
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1236
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1237
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1238
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1239
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1240
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1241
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1242
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1243
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1244
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1245
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1246
+2020-06-27T22:59:43-0300 [-] wsn node send data - Number of events: 1247
+2020-06-27T22:59:43-0300 [stdout#info] {0}
+2020-06-27T22:59:43-0300 [stdout#info] 39689556787889 20.55 Kwh
+2020-06-27T22:59:43-0300 [stdout#info] {0, 39689556787889}
+2020-06-27T22:59:43-0300 [stdout#info] 79615157649732 13.4 Kwh
+2020-06-27T22:59:43-0300 [stdout#info] {0, 39689556787889, 79615157649732}
+2020-06-27T22:59:43-0300 [stdout#info] 87338245725556 21.07 Kwh
+2020-06-27T22:59:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988f98>
+2020-06-27T22:59:43-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988908>
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1248
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1249
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1250
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1251
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1252
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1253
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1254
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1255
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1256
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1257
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1258
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1259
+2020-06-27T22:59:46-0300 [-] wsn node send data - Number of events: 1260
+2020-06-27T22:59:46-0300 [stdout#info] {0}
+2020-06-27T22:59:46-0300 [stdout#info] 124855075286691 5.59 Kwh
+2020-06-27T22:59:46-0300 [stdout#info] {0, 124855075286691}
+2020-06-27T22:59:46-0300 [stdout#info] 116086642167512 22.0 Kwh
+2020-06-27T22:59:46-0300 [stdout#info] {0, 124855075286691, 116086642167512}
+2020-06-27T22:59:46-0300 [stdout#info] 37865225129893 20.77 Kwh
+2020-06-27T22:59:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed128>
+2020-06-27T22:59:46-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988f98>
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1261
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1262
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1263
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1264
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1265
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1266
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1267
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1268
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1269
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1270
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1271
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1272
+2020-06-27T22:59:49-0300 [-] wsn node send data - Number of events: 1273
+2020-06-27T22:59:49-0300 [stdout#info] {0}
+2020-06-27T22:59:49-0300 [stdout#info] 208167765066372 19.04 Kwh
+2020-06-27T22:59:49-0300 [stdout#info] {0, 208167765066372}
+2020-06-27T22:59:49-0300 [stdout#info] 187295129266673 10.23 Kwh
+2020-06-27T22:59:49-0300 [stdout#info] {0, 187295129266673, 208167765066372}
+2020-06-27T22:59:49-0300 [stdout#info] 135891462160961 13.03 Kwh
+2020-06-27T22:59:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b2400>
+2020-06-27T22:59:49-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed128>
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1274
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1275
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1276
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1277
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1278
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1279
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1280
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1281
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1282
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1283
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1284
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1285
+2020-06-27T22:59:52-0300 [-] wsn node send data - Number of events: 1286
+2020-06-27T22:59:52-0300 [stdout#info] {0}
+2020-06-27T22:59:52-0300 [stdout#info] 180653177324562 9.35 Kwh
+2020-06-27T22:59:52-0300 [stdout#info] {0, 180653177324562}
+2020-06-27T22:59:52-0300 [stdout#info] 237511721497593 8.52 Kwh
+2020-06-27T22:59:52-0300 [stdout#info] {0, 237511721497593, 180653177324562}
+2020-06-27T22:59:52-0300 [stdout#info] 7808850115549 13.88 Kwh
+2020-06-27T22:59:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed470>
+2020-06-27T22:59:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94772b2400>
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1287
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1288
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1289
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1290
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1291
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1292
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1293
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1294
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1295
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1296
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1297
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1298
+2020-06-27T22:59:55-0300 [-] wsn node send data - Number of events: 1299
+2020-06-27T22:59:56-0300 [stdout#info] {0}
+2020-06-27T22:59:56-0300 [stdout#info] 251022865921322 5.09 Kwh
+2020-06-27T22:59:56-0300 [stdout#info] {0, 251022865921322}
+2020-06-27T22:59:56-0300 [stdout#info] 63649668171880 19.99 Kwh
+2020-06-27T22:59:56-0300 [stdout#info] {0, 251022865921322, 63649668171880}
+2020-06-27T22:59:56-0300 [stdout#info] 24613720488755 19.06 Kwh
+2020-06-27T22:59:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed240>
+2020-06-27T22:59:56-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed470>
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1300
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1301
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1302
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1303
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1304
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1305
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1306
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1307
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1308
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1309
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1310
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1311
+2020-06-27T22:59:58-0300 [-] wsn node send data - Number of events: 1312
+2020-06-27T22:59:59-0300 [stdout#info] {0}
+2020-06-27T22:59:59-0300 [stdout#info] 70053780156954 4.96 Kwh
+2020-06-27T22:59:59-0300 [stdout#info] {0, 70053780156954}
+2020-06-27T22:59:59-0300 [stdout#info] 98229190643024 11.13 Kwh
+2020-06-27T22:59:59-0300 [stdout#info] {0, 70053780156954, 98229190643024}
+2020-06-27T22:59:59-0300 [stdout#info] 259920599597887 8.88 Kwh
+2020-06-27T22:59:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed358>
+2020-06-27T22:59:59-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed240>
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1313
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1314
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1315
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1316
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1317
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1318
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1319
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1320
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1321
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1322
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1323
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1324
+2020-06-27T23:00:01-0300 [-] wsn node send data - Number of events: 1325
+2020-06-27T23:00:02-0300 [stdout#info] {0}
+2020-06-27T23:00:02-0300 [stdout#info] 83239280030471 3.14 Kwh
+2020-06-27T23:00:02-0300 [stdout#info] {0, 83239280030471}
+2020-06-27T23:00:02-0300 [stdout#info] 13945601042045 8.55 Kwh
+2020-06-27T23:00:02-0300 [stdout#info] {0, 13945601042045, 83239280030471}
+2020-06-27T23:00:02-0300 [stdout#info] 71584868896307 16.22 Kwh
+2020-06-27T23:00:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789eda58>
+2020-06-27T23:00:02-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789ed358>
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1326
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1327
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1328
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1329
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1330
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1331
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1332
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1333
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1334
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1335
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1336
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1337
+2020-06-27T23:00:04-0300 [-] wsn node send data - Number of events: 1338
+2020-06-27T23:00:05-0300 [stdout#info] {0}
+2020-06-27T23:00:05-0300 [stdout#info] 215406645068057 7.51 Kwh
+2020-06-27T23:00:05-0300 [stdout#info] {0, 215406645068057}
+2020-06-27T23:00:05-0300 [stdout#info] 223763620867897 14.42 Kwh
+2020-06-27T23:00:05-0300 [stdout#info] {0, 215406645068057, 223763620867897}
+2020-06-27T23:00:05-0300 [stdout#info] 215030360745817 10.01 Kwh
+2020-06-27T23:00:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988d68>
+2020-06-27T23:00:05-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f94789eda58>
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1339
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1340
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1341
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1342
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1343
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1344
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1345
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1346
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1347
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1348
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1349
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1350
+2020-06-27T23:00:07-0300 [-] wsn node send data - Number of events: 1351
+2020-06-27T23:00:08-0300 [stdout#info] {0}
+2020-06-27T23:00:08-0300 [stdout#info] 193792473327167 10.73 Kwh
+2020-06-27T23:00:08-0300 [stdout#info] {0, 193792473327167}
+2020-06-27T23:00:08-0300 [stdout#info] 200305639725647 21.28 Kwh
+2020-06-27T23:00:08-0300 [stdout#info] {0, 200305639725647, 193792473327167}
+2020-06-27T23:00:08-0300 [stdout#info] 257006780797504 12.8 Kwh
+2020-06-27T23:00:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947899b080>
+2020-06-27T23:00:08-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9478988d68>
+2020-06-27T23:00:09-0300 [-] Received SIGINT, shutting down.
+2020-06-27T23:00:09-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-06-27T23:00:09-0300 [SCADAApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-27T23:00:09-0300 [SCADAApp,client] connection lost - Number of events: 1352
+2020-06-27T23:00:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f947899b080>
+2020-06-27T23:00:09-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-06-27T23:00:09-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f9477348080>
+2020-06-27T23:00:09-0300 [-] Main loop terminated.
