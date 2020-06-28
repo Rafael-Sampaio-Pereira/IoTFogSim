@@ -2,12 +2,15 @@
 from scinetsim.dataproducers import *
 from twisted.internet import reactor
 from twisted.internet.protocol import ClientFactory
+from twisted.python import log
 import time
 import uuid
 import json
 import tkinter as tk
 from applications.applicationcomponent import StandardApplicationComponent
 from scinetsim.functions import create_csv_database_file
+
+from applications.mqttapp import extract_mqtt_contents
 
 
 class WSNApp(StandardApplicationComponent):
@@ -385,16 +388,30 @@ class SCADAApp(StandardApplicationComponent):
                 
                 for package in self._buffer.copy():
                     destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
-                    # Print the received data on the sreen.  - Rafael Sampaio
-                    self.update_alert_message_on_screen(payload)
-                    #self.simulation_core.updateEventsCounter("MQTT response received")
-                    #if data in self._buffer:
-                    print(payload, file = self.database, flush=True)
+                                        
+                    payload = json.dumps(payload)
+                    
+                    if payload.startswith('{'):
+                        payload = json.loads(payload)
 
-                    self._buffer.remove(package)
+                        #print(payload['content'])
 
-        except:
-            pass
+                        print(payload['content'], file = self.database, flush=True)
+
+                        # Print the received data on the sreen.  - Rafael Sampaio
+                        self.update_alert_message_on_screen(payload['content'])
+
+                        self._buffer.remove(package)
+                    
+                    else:
+                        # Print the received data on the sreen.  - Rafael Sampaio
+                        self.update_alert_message_on_screen(payload)
+
+                        self._buffer.remove(package)
+
+
+        except Exception as e:
+            log.msg(e)
         
         reactor.callLater(1, self.save_to_database)
 
