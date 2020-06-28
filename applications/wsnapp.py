@@ -200,12 +200,14 @@ class SinkApp(WSNApp):
                 for wsn_package in self._buffer.copy():
 
 
-                    data += "{ source: " + wsn_package.source.name + ", data: " + wsn_package.data + " },"
+                    data += '{ "source": "' + wsn_package.source.name + '", "data": "' + wsn_package.data + '" },'
                     self._buffer.remove(wsn_package)
 
 
                 data = data[:-1]
                 data += "]"
+
+                data = json.loads(data)
 
                 # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
                 mqtt_msg = {
@@ -392,11 +394,14 @@ class SCADAApp(StandardApplicationComponent):
                     payload = json.dumps(payload)
                     
                     if payload.startswith('{'):
+
                         payload = json.loads(payload)
 
-                        #print(payload['content'])
-
-                        print(payload['content'], file = self.database, flush=True)
+                        to_file = ""
+                        for obj in payload['content']:
+                            to_file = obj['source']+","+ obj['data']
+                            
+                        print(to_file, file = self.database, flush=True)
 
                         # Print the received data on the sreen.  - Rafael Sampaio
                         self.update_alert_message_on_screen(payload['content'])
