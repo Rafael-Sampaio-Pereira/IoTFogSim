@@ -90,7 +90,7 @@
                     {
                         "id":0,
                         "name": "wsn_repeater",
-                        "icon": "esp8266_icon",
+                        "icon": "repeater_icon",
                         "coverage_area_radius": 150,
                         "is_wireless": true,
                         "application": "applications.wsnapp.RepeaterApp",
