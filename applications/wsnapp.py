@@ -112,8 +112,6 @@ class SensorApp(WSNApp):
             for _package in self.temp_buffer:
                 self.forward_package(_package)
                 
-                # self.simulation_core.canvas.after(0.1, remove_sent_packages_from_buffer, _package)
-                
                 remove_sent_packages_from_buffer(_package)
     
         reactor.callLater(self.interval, self.collect_and_send_data)
@@ -383,6 +381,9 @@ class SCADAApp(StandardApplicationComponent):
         self.put_package_in_buffer(data)
 
 
+    def extract_energy_content(self, payload):
+        pass
+
     def save_to_database(self):
 
         try:
@@ -398,6 +399,8 @@ class SCADAApp(StandardApplicationComponent):
                         payload = json.loads(payload)
 
                         to_file = ""
+
+                        # extract energy content - Rafael Sampaio
                         for obj in payload['content']:
                             to_file = obj['source']+","+ obj['data']
                             
@@ -426,3 +429,65 @@ class SCADAApp(StandardApplicationComponent):
             return True
         else:
             return False 
+
+
+
+
+class RepeaterApp(WSNApp):
+    def __init__(self):
+        self._buffer = set()
+        self.interval = 3
+        self.simulation_core = None
+        self.visual_component = None
+        self.nearby_devices_list = None
+        
+    
+    def start(self, nearby_devices_list):
+        self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
+        self.nearby_devices_list = nearby_devices_list
+        self.propagate_signal()
+        self.print_node_connections(nearby_devices_list)
+
+        self.route_packages()
+
+
+    def route_packages(self):
+        
+        def remove_sent_packages_from_buffer(_package):
+            # after send, remove data from buffer - Rafael Sampaio    
+            self._buffer.remove(_package)
+
+        if len(self._buffer) > 0:
+            self.temp_buffer = self._buffer.copy()
+            
+            # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
+            for _package in self.temp_buffer:
+                self.forward_package(_package)
+                            
+                remove_sent_packages_from_buffer(_package)
+    
+        reactor.callLater(self.interval, self.route_packages)
+
+    def forward_package(self, package):
+        if len(package.trace) > 0:
+
+            for destiny in self.nearby_devices_list:
+                if destiny == package.source:
+                    # A device can not sent data to it self - Rafael Sampaio
+                    pass
+                elif package.verify_if_device_is_in_trace(destiny):
+                    # The package will not be send to devices that already in the package trace - Rafael Sampaio
+                    pass
+                else:
+                    # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
+                    if not package in destiny.application._buffer:
+                        # Drawing connection - Rafael Sampaio
+                        self.draw_connection_arrow(destiny)
+
+                        # puting package in destiny device buffer - Rafael Sampaio
+                        destiny.application._buffer.add(package)
+                        
+                        package.put_in_trace(destiny)
+                        #package.print_trace()
+
+                        self.simulation_core.updateEventsCounter("wsn repeater node routing data")

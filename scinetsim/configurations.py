@@ -7,6 +7,7 @@ from scinetsim.standarddevice import StandardClientDevice
 from scinetsim.standarddevice import AccessPoint
 from scinetsim.standarddevice import Router
 from scinetsim.standarddevice import WSNSensorNode
+from scinetsim.standarddevice import WSNRepeaterNode
 from scinetsim.standarddevice import WSNSinkNode
 from scinetsim.standarddevice import WirelessSensorNetwork
 from scinetsim.standarddevice import WirelessComputer
@@ -188,6 +189,7 @@ def load_nodes(project_name, simulation_core):
 			for wsn in data['fog']['wireless_sensor_networks']:
 
 				sink_cont = 0
+				repeater_cont = 0
 				sensor_cont = 0
 				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
 
@@ -203,11 +205,21 @@ def load_nodes(project_name, simulation_core):
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
+				for repeater_node in wsn['repeater_nodes']:
+					repeater_cont += 1
+					rpt_node = WSNRepeaterNode(simulation_core, repeater_cont, repeater_node['name'], repeater_node['icon'], repeater_node['is_wireless'], repeater_node['x'], repeater_node['y'], repeater_node['application'], repeater_node['coverage_area_radius'],WSN_network_group)
+					WSN_network_group.repeater_list.add(rpt_node)
+					time.sleep(interval)
+
+
 				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
 				for deivce in WSN_network_group.sink_list:
 					deivce.run()
 
 				for deivce in WSN_network_group.sensors_list:
+					deivce.run()
+
+				for deivce in WSN_network_group.repeater_list:
 					deivce.run()
 
 
@@ -250,6 +262,7 @@ def load_nodes(project_name, simulation_core):
 			for wsn in data['cloud']['wireless_sensor_networks']:
 
 				sink_cont = 0
+				repeater_cont = 0
 				sensor_cont = 0
 				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
 
@@ -265,11 +278,20 @@ def load_nodes(project_name, simulation_core):
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
+				for repeater_node in wsn['repeater_nodes']:
+					repeater_cont += 1
+					rpt_node = WSNRepeaterNode(simulation_core, repeater_cont, repeater_node['name'], repeater_node['icon'], repeater_node['is_wireless'], repeater_node['x'], repeater_node['y'], repeater_node['application'], repeater_node['coverage_area_radius'],WSN_network_group)
+					WSN_network_group.repeater_list.add(rpt_node)
+					time.sleep(interval)
+
 				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
 				for deivce in WSN_network_group.sink_list:
 					deivce.run()
 
 				for deivce in WSN_network_group.sensors_list:
+					deivce.run()
+
+				for deivce in WSN_network_group.repeater_list:
 					deivce.run()
 
 			
@@ -318,6 +340,7 @@ def load_nodes(project_name, simulation_core):
 			for wsn in data['iot']['wireless_sensor_networks']:
 
 				sink_cont = 0
+				repeater_cont = 0
 				sensor_cont = 0
 				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
 
@@ -333,12 +356,23 @@ def load_nodes(project_name, simulation_core):
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
+				for repeater_node in wsn['repeater_nodes']:
+					repeater_cont += 1
+					rpt_node = WSNRepeaterNode(simulation_core, repeater_cont, repeater_node['name'], repeater_node['icon'], repeater_node['is_wireless'], repeater_node['x'], repeater_node['y'], repeater_node['application'], repeater_node['coverage_area_radius'],WSN_network_group)
+					WSN_network_group.repeater_list.add(rpt_node)
+					time.sleep(interval)
+    				
+
 				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
 				for deivce in WSN_network_group.sink_list:
 					deivce.run()
 
 				for deivce in WSN_network_group.sensors_list:
 					deivce.run()
+				
+				for deivce in WSN_network_group.repeater_list:
+					deivce.run()
+
 
 			
 			for computer in data['iot']['wireless_computers']:

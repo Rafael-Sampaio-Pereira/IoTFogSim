@@ -180,6 +180,7 @@ class WirelessSensorNetwork(object):
     def __init__(self, simulation_core, wireless_standard, network_layer_protocol):
         self.simulation_core = simulation_core
         self.sink_list = set()
+        self.repeater_list = set()
         self.sensors_list = set()
         self.network_layer_protocol = network_layer_protocol
         self.wireless_standard = wireless_standard
@@ -195,6 +196,10 @@ class WirelessSensorNetwork(object):
                     founded_device = device
             
             for device in self.sink_list:
+                if device.visual_component.draggable_img == icon_id:
+                    founded_device = device
+                
+            for device in self.repeater_list:
                 if device.visual_component.draggable_img == icon_id:
                     founded_device = device
 
@@ -237,6 +242,43 @@ class WSNSensorNode(WirelessDevice):
         
         nearby_devices_list = self.get_nearby_devices_list()
         self.application.start(nearby_devices_list)
+
+
+
+class WSNRepeaterNode(WirelessDevice):
+       
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, WSN_network_group):
+
+        self.application = import_and_instantiate_class_from_string(application)
+        self.WSN_network_group =  WSN_network_group
+        self.is_wireless = is_wireless
+        self.coverage_area_radius = coverage_area_radius
+       
+        icon_file = getIconFileName(icon)
+        self.icon = ICONS_PATH+icon_file
+
+        self.name = name+'_'+str(id)
+        #self.id = id
+        self.simulation_core = simulation_core
+
+        self.is_wireless = is_wireless
+        self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
+        self.simulation_core.updateEventsCounter("Initializing repeater node")
+        self.application.visual_component = self.visual_component
+        self.application.visual_component.coverage_area_radius = coverage_area_radius
+        self.application.simulation_core = self.simulation_core
+        self.application.coverage_area_radius = coverage_area_radius
+        
+        if(self.is_wireless == True):
+            # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio 
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_img, tags=("wifi_device",))
+    
+    def run(self):
+        
+        nearby_devices_list = self.get_nearby_devices_list()
+        self.application.start(nearby_devices_list)
+
+
 
 class WSNSinkNode(WirelessDevice):
        

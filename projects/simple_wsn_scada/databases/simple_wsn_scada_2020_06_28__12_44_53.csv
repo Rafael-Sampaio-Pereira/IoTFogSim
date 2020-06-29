@@ -1,6 +1,0 @@
-[{ source: sensor_1, data: 19.04 Kwh },{ source: sensor_3, data: 15.19 Kwh }]
-[{ source: sensor_4, data: 15.16 Kwh },{ source: sensor_3, data: 6.83 Kwh },{ source: sensor_1, data: 5.98 Kwh }]
-[{ source: sensor_4, data: 17.3 Kwh },{ source: sensor_3, data: 22.3 Kwh },{ source: sensor_1, data: 11.73 Kwh }]
-[{ source: sensor_4, data: 22.38 Kwh },{ source: sensor_3, data: 13.75 Kwh },{ source: sensor_1, data: 9.74 Kwh }]
-[{ source: sensor_3, data: 2.9 Kwh },{ source: sensor_4, data: 8.74 Kwh },{ source: sensor_1, data: 12.86 Kwh }]
-[{ source: sensor_3, data: 7.07 Kwh },{ source: sensor_1, data: 8.62 Kwh },{ source: sensor_4, data: 11.44 Kwh }]

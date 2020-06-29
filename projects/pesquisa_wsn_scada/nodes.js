@@ -96,6 +96,26 @@
                         "application": "applications.wsnapp.RepeaterApp",
                         "x": 975,
                         "y": 564
+                    },
+                    {
+                        "id":0,
+                        "name": "wsn_repeater",
+                        "icon": "esp8266_icon",
+                        "coverage_area_radius": 150,
+                        "is_wireless": true,
+                        "application": "applications.wsnapp.RepeaterApp",
+                        "x": 740,
+                        "y": 497
+                    },
+                    {
+                        "id":0,
+                        "name": "wsn_repeater",
+                        "icon": "esp8266_icon",
+                        "coverage_area_radius": 150,
+                        "is_wireless": true,
+                        "application": "applications.wsnapp.RepeaterApp",
+                        "x": 815,
+                        "y": 276
                     }
                 ],
                 "sensor_nodes": [
