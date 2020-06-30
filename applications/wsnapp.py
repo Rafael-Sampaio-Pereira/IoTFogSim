@@ -404,7 +404,7 @@ class SCADAApp(StandardApplicationComponent):
                         for obj in payload['content']:
                             to_file = obj['source']+","+ obj['data']
                             
-                        print(to_file, file = self.database, flush=True)
+                            print(to_file, file = self.database, flush=True)
 
                         # Print the received data on the sreen.  - Rafael Sampaio
                         self.update_alert_message_on_screen(payload['content'])
