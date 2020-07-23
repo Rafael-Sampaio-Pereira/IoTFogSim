@@ -201,7 +201,7 @@ def load_nodes(project_name, simulation_core):
 
 				for sensor_node in wsn['sensor_nodes']:
 					sensor_cont += 1
-					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sensor_node['coverage_area_radius'],WSN_network_group)
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
@@ -274,7 +274,7 @@ def load_nodes(project_name, simulation_core):
 
 				for sensor_node in wsn['sensor_nodes']:
 					sensor_cont += 1
-					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sensor_node['coverage_area_radius'],WSN_network_group)
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
@@ -352,7 +352,7 @@ def load_nodes(project_name, simulation_core):
 
 				for sensor_node in wsn['sensor_nodes']:
 					sensor_cont += 1
-					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sink_node['coverage_area_radius'],WSN_network_group)
+					sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node['x'], sensor_node['y'], sensor_node['application'], sensor_node['coverage_area_radius'],WSN_network_group)
 					WSN_network_group.sensors_list.add(sr_node)
 					time.sleep(interval)
 
