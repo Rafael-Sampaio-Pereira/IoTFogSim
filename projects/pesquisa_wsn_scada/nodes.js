@@ -148,6 +148,48 @@
                         "is_wireless": true,
                         "x": 500,
                         "y": 600
+                    },
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 1629,
+                        "y": 561
+                    },
+
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 294,
+                        "y": 743
+                    },
+
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 596,
+                        "y": 829
+                    },
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 1175,
+                        "y": 1010
                     }
                 ]
             }

@@ -70,7 +70,8 @@ class WSNApp(StandardApplicationComponent):
         y2 = destiny.visual_component.y
         connection_id = self.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow=tk.LAST, width=3, dash=(4,2))
 
-        self.simulation_core.canvas.after(2, self.delete_connection_arrow, connection_id)
+        #self.simulation_core.canvas.after(2, self.delete_connection_arrow, connection_id)
+        reactor.callLater(0.2, self.delete_connection_arrow, connection_id)
 
     def delete_connection_arrow(self, id):
         self.simulation_core.canvas.delete(id)
