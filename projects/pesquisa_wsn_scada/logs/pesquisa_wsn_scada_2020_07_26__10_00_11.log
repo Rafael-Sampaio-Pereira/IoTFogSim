@@ -1,0 +1,271 @@
+2020-07-26T10:00:11-0300 [-] Creating router ...
+2020-07-26T10:00:11-0300 [-] Initializing Router - Number of events: 1
+2020-07-26T10:00:11-0300 [-] RouterFactory starting on 8081
+2020-07-26T10:00:11-0300 [-] Creating AccessPoint station ...
+2020-07-26T10:00:11-0300 [-] Initializing Access Point - Number of events: 2
+2020-07-26T10:00:12-0300 [-] There is no wifi devices in this simulation or it is not in this wifi signal coverage area.
+2020-07-26T10:00:12-0300 [-] Initializing Server - Number of events: 3
+2020-07-26T10:00:13-0300 [-] BrokerFactory starting on 5100
+2020-07-26T10:00:13-0300 [-] Initializing Client - Number of events: 4
+2020-07-26T10:00:13-0300 [-] Initializing sink node - Number of events: 5
+2020-07-26T10:00:14-0300 [-] Initializing sensor node - Number of events: 6
+2020-07-26T10:00:14-0300 [-] Initializing sensor node - Number of events: 7
+2020-07-26T10:00:15-0300 [-] Initializing sensor node - Number of events: 8
+2020-07-26T10:00:15-0300 [-] Initializing sensor node - Number of events: 9
+2020-07-26T10:00:16-0300 [-] Initializing repeater node - Number of events: 10
+2020-07-26T10:00:16-0300 [-] Initializing repeater node - Number of events: 11
+2020-07-26T10:00:17-0300 [-] Initializing repeater node - Number of events: 12
+2020-07-26T10:00:17-0300 [stdout#info] ========= sensor_1 ==========
+2020-07-26T10:00:17-0300 [stdout#info] sensor_1  <------->  sensor_3
+2020-07-26T10:00:17-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2020-07-26T10:00:17-0300 [stdout#info] sensor_1  <------->  sensor_2
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 13
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 14
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 15
+2020-07-26T10:00:17-0300 [stdout#info] ========= sensor_3 ==========
+2020-07-26T10:00:17-0300 [stdout#info] sensor_3  <------->  sensor_1
+2020-07-26T10:00:17-0300 [stdout#info] sensor_3  <------->  wsn_sink
+2020-07-26T10:00:17-0300 [stdout#info] sensor_3  <------->  sensor_2
+2020-07-26T10:00:17-0300 [stdout#info] sensor_3  <------->  wsn_repeater_1
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 16
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 17
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 18
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 19
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 20
+2020-07-26T10:00:17-0300 [stdout#info] ========= sensor_2 ==========
+2020-07-26T10:00:17-0300 [stdout#info] sensor_2  <------->  sensor_1
+2020-07-26T10:00:17-0300 [stdout#info] sensor_2  <------->  sensor_3
+2020-07-26T10:00:17-0300 [stdout#info] sensor_2  <------->  wsn_sink
+2020-07-26T10:00:17-0300 [stdout#info] sensor_2  <------->  wsn_repeater_1
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 21
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 22
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 23
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 24
+2020-07-26T10:00:17-0300 [stdout#info] ========= sensor_4 ==========
+2020-07-26T10:00:17-0300 [stdout#info] sensor_4  <------->  wsn_repeater_2
+2020-07-26T10:00:17-0300 [stdout#info] sensor_4  <------->  wsn_repeater_1
+2020-07-26T10:00:17-0300 [stdout#info] sensor_4  <------->  wsn_repeater_3
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 25
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 26
+2020-07-26T10:00:17-0300 [-] wsn node send data - Number of events: 27
+2020-07-26T10:00:17-0300 [stdout#info] ========= wsn_repeater_2 ==========
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_2  <------->  sensor_4
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_2  <------->  wsn_repeater_1
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_2  <------->  wsn_repeater_3
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [stdout#info] ========= wsn_repeater_1 ==========
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_1  <------->  sensor_3
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_1  <------->  wsn_repeater_2
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_1  <------->  sensor_2
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_1  <------->  sensor_4
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 28
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 29
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 30
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 31
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 32
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 33
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 34
+2020-07-26T10:00:17-0300 [-] wsn repeater node routing data - Number of events: 35
+2020-07-26T10:00:17-0300 [stdout#info] ========= wsn_repeater_3 ==========
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_3  <------->  wsn_repeater_2
+2020-07-26T10:00:17-0300 [stdout#info] wsn_repeater_3  <------->  sensor_4
+2020-07-26T10:00:17-0300 [stdout#info] =============================
+2020-07-26T10:00:17-0300 [stdout#info] This divice have no simulation core instance
+2020-07-26T10:00:17-0300 [stdout#info] This divice have no simulation core instance
+2020-07-26T10:00:17-0300 [stdout#info] This divice have no simulation core instance
+2020-07-26T10:00:17-0300 [stdout#info] This divice have no simulation core instance
+2020-07-26T10:00:17-0300 [Uninitialized] 127.0.0.1:44028 - Connected to mqtt broker - Number of events: 36
+2020-07-26T10:00:17-0300 [Uninitialized] 127.0.0.1:44028 - sending MQTT SUBSCRIBE REQUEST - Number of events: 37
+2020-07-26T10:00:17-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d64f3748>
+2020-07-26T10:00:18-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba160>
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 38
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 39
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 40
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 41
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 42
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 43
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 44
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 45
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 46
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 47
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 48
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 49
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 50
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 51
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 52
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 53
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 54
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 55
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 56
+2020-07-26T10:00:20-0300 [-] wsn node send data - Number of events: 57
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 58
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 59
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 60
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 61
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 62
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 63
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 64
+2020-07-26T10:00:20-0300 [-] wsn repeater node routing data - Number of events: 65
+2020-07-26T10:00:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba6d8>
+2020-07-26T10:00:21-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba160>
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 66
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 67
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 68
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 69
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 70
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 71
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 72
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 73
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 74
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 75
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 76
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 77
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 78
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 79
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 80
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 81
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 82
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 83
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 84
+2020-07-26T10:00:23-0300 [-] wsn node send data - Number of events: 85
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 86
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 87
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 88
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 89
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 90
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 91
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 92
+2020-07-26T10:00:23-0300 [-] wsn repeater node routing data - Number of events: 93
+2020-07-26T10:00:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45bac18>
+2020-07-26T10:00:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba6d8>
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 94
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 95
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 96
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 97
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 98
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 99
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 100
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 101
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 102
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 103
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 104
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 105
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 106
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 107
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 108
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 109
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 110
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 111
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 112
+2020-07-26T10:00:26-0300 [-] wsn node send data - Number of events: 113
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 114
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 115
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 116
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 117
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 118
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 119
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 120
+2020-07-26T10:00:26-0300 [-] wsn repeater node routing data - Number of events: 121
+2020-07-26T10:00:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba4e0>
+2020-07-26T10:00:26-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45bac18>
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 122
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 123
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 124
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 125
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 126
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 127
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 128
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 129
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 130
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 131
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 132
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 133
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 134
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 135
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 136
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 137
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 138
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 139
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 140
+2020-07-26T10:00:29-0300 [-] wsn node send data - Number of events: 141
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 142
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 143
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 144
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 145
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 146
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 147
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 148
+2020-07-26T10:00:29-0300 [-] wsn repeater node routing data - Number of events: 149
+2020-07-26T10:00:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45bacc0>
+2020-07-26T10:00:29-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45ba4e0>
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 150
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 151
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 152
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 153
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 154
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 155
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 156
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 157
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 158
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 159
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 160
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 161
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 162
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 163
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 164
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 165
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 166
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 167
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 168
+2020-07-26T10:00:32-0300 [-] wsn node send data - Number of events: 169
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 170
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 171
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 172
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 173
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 174
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 175
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 176
+2020-07-26T10:00:32-0300 [-] wsn repeater node routing data - Number of events: 177
+2020-07-26T10:00:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d5c6b4a8>
+2020-07-26T10:00:32-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d45bacc0>
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 178
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 179
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 180
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 181
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 182
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 183
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 184
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 185
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 186
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 187
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 188
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 189
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 190
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 191
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 192
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 193
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 194
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 195
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 196
+2020-07-26T10:00:35-0300 [-] wsn node send data - Number of events: 197
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 198
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 199
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 200
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 201
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 202
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 203
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 204
+2020-07-26T10:00:35-0300 [-] wsn repeater node routing data - Number of events: 205
+2020-07-26T10:00:36-0300 [-] Closing IoTFogSim Application...
+2020-07-26T10:00:36-0300 [applications.mqttapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-07-26T10:00:36-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-07-26T10:00:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d64f3748>
+2020-07-26T10:00:36-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd0d5c6b4a8>
+2020-07-26T10:00:36-0300 [SCADAApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-07-26T10:00:36-0300 [SCADAApp,client] connection lost - Number of events: 206
+2020-07-26T10:00:36-0300 [-] Main loop terminated.

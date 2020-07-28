@@ -30,9 +30,18 @@ class WSNApp(StandardApplicationComponent):
         else:
             # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
-            self.visual_component.signal_radius = 1
+            self.visual_component.signal_radius = 10
         
         reactor.callLater(0.1, self.propagate_signal)
+
+    def show_signal(self):
+        self.visual_component.signal_radius = self.visual_component.coverage_area_radius
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle,
+                                            self.visual_component.x+self.visual_component.signal_radius, 
+                                            self.visual_component.y+self.visual_component.signal_radius, 
+                                            self.visual_component.x-self.visual_component.signal_radius, 
+                                            self.visual_component.y-self.visual_component.signal_radius)
 
     
     def print_node_connections(self, nearby_devices_list):
@@ -78,7 +87,8 @@ class SensorApp(WSNApp):
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
-        self.propagate_signal()
+        # self.propagate_signal()
+        self.show_signal()
         self.print_node_connections(nearby_devices_list)
 
         self.collect_and_send_data()
@@ -158,7 +168,8 @@ class SinkApp(WSNApp):
         self.source_port = None
 
     def start(self, nearby_devices_list):
-        self.propagate_signal()
+        #self.propagate_signal()
+        self.show_signal()
         self.connect_to_gateway()
         self.configure_source_info()
         self.forward_packages()
@@ -445,7 +456,8 @@ class RepeaterApp(WSNApp):
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
-        self.propagate_signal()
+        #self.propagate_signal()
+        self.show_signal()
         self.print_node_connections(nearby_devices_list)
 
         self.route_packages()

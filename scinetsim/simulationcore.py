@@ -176,6 +176,12 @@ class SimulationCore(object):
 		w_top_padding = 80
 		w_letf_padding = 100
 		window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
+		window.attributes("-fullscreen", True)
+		window.iconify()
+
+		window.bind("<F11>", lambda event: window.attributes("-fullscreen",
+                                    not window.attributes("-fullscreen")))
+		
 
 		# Setting window icon. - Rafael Sampaio
 		#window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
