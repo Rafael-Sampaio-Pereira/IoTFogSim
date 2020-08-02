@@ -75,7 +75,7 @@ class ScrollableScreen(tkinter.Frame):
 
 
     def  update_position_on_screen(self,event):
-        p = "Position:"+str(event.x)+'x'+str(event.y)
+        p = "Position: "+str(event.x)+'x'+str(event.y)
         self.canvas.itemconfig(self.position_label, text=p)
         self.menubar.entryconfigure(4, label=p)
 
@@ -103,6 +103,7 @@ class ScrollableScreen(tkinter.Frame):
         self.menubar.add_command(label="About Project", command=None)
         self.menubar.add_command(label="Help", command=None)
         self.menubar.add_command(label="Position:", command=None)
+        self.menubar.add_command(label="Events:", command=None)
         
         window.config(menu=self.menubar)
 
