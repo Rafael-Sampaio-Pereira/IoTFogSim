@@ -70,9 +70,10 @@
             { 
                 "id": 3,
                 "name": "energe_metering_wsn", 
-                "ip_standard": "6LowPan",
                 "network_layer_protocol": "UDP",
-                "wireless_standard": "IEEE_802.11",
+                "application_layer_protocol": "Wi-SUN",
+                "latency": "0.02",
+                "wireless_standard": "IEEE_802.15.4g",
                 "description": "Simple wsn for envirioment monitoring",
                 "sink_nodes": [
                     {

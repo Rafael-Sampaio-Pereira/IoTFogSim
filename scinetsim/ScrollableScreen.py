@@ -75,7 +75,9 @@ class ScrollableScreen(tkinter.Frame):
 
 
     def  update_position_on_screen(self,event):
-        self.canvas.itemconfig(self.position_label, text=str(event.x)+'x'+str(event.y))
+        p = "Position:"+str(event.x)+'x'+str(event.y)
+        self.canvas.itemconfig(self.position_label, text=p)
+        self.menubar.entryconfigure(4, label=p)
 
     def getCanvas(self):
      	return self.canvas
@@ -90,18 +92,19 @@ class ScrollableScreen(tkinter.Frame):
 
     def create_top_menu(self, window):
         # 'window' param is the 'root' param in ScrollableScreen __init__ method - Rafael Sampaio
-        menubar = tkinter.Menu(window)
+        self.menubar = tkinter.Menu(window)
         
-        mainmenu = tkinter.Menu(menubar, tearoff=0)
+        mainmenu = tkinter.Menu(self.menubar, tearoff=0)
         mainmenu.add_command(label="Opção 1", command=None)
         mainmenu.add_separator()  
         mainmenu.add_command(label="Exit", command=self.on_closing)
+
+        self.menubar.add_cascade(label="Main", menu=mainmenu)
+        self.menubar.add_command(label="About Project", command=None)
+        self.menubar.add_command(label="Help", command=None)
+        self.menubar.add_command(label="Position:", command=None)
         
-        menubar.add_cascade(label="Main", menu=mainmenu)
-        menubar.add_command(label="About Project", command=None)
-        menubar.add_command(label="Help", command=None)
-        
-        window.config(menu=menubar)
+        window.config(menu=self.menubar)
 
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):

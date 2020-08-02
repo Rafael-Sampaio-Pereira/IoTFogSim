@@ -150,6 +150,7 @@ def load_nodes(project_name, simulation_core):
 				simulation_core.allNodes.add(rt)
 				time.sleep(interval)
 				rt.run()
+				
 
 				for access_point in router['access_points']:
 						
@@ -191,7 +192,7 @@ def load_nodes(project_name, simulation_core):
 				sink_cont = 0
 				repeater_cont = 0
 				sensor_cont = 0
-				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'], wsn['application_layer_protocol'], wsn['latency'])
 
 				for sink_node in wsn['sink_nodes']:
 					sink_cont += 1
@@ -264,7 +265,7 @@ def load_nodes(project_name, simulation_core):
 				sink_cont = 0
 				repeater_cont = 0
 				sensor_cont = 0
-				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'], wsn['application_layer_protocol'], wsn['latency'])
 
 				for sink_node in wsn['sink_nodes']:
 					sink_cont += 1
@@ -342,7 +343,7 @@ def load_nodes(project_name, simulation_core):
 				sink_cont = 0
 				repeater_cont = 0
 				sensor_cont = 0
-				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'])
+				WSN_network_group = WirelessSensorNetwork(simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'], wsn['application_layer_protocol'], wsn['latency'])
 
 				for sink_node in wsn['sink_nodes']:
 					sink_cont += 1

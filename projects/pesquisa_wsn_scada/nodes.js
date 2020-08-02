@@ -58,9 +58,10 @@
             { 
                 "id": 3,
                 "name": "energe_metering_wsn", 
-                "ip_standard": "6LowPan",
                 "network_layer_protocol": "UDP",
-                "wireless_standard": "IEEE_802.11",
+                "application_layer_protocol": "Wi-SUN",
+                "latency": "0.02",
+                "wireless_standard": "IEEE_802.15.4g",
                 "description": "Simple wsn for envirioment monitoring",
                 "sink_nodes": [
                     {
@@ -190,7 +191,28 @@
                         "is_wireless": true,
                         "x": 1175,
                         "y": 1010
+                    },
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 1175,
+                        "y": 1260
+                    },
+                    {
+                        "id":0,
+                        "name": "sensor",
+                        "icon": "sensor_icon",
+                        "coverage_area_radius": 250,
+                        "application": "applications.wsnapp.SensorApp",
+                        "is_wireless": true,
+                        "x": 1428,
+                        "y": 978
                     }
+                    
                 ]
             }
         ]

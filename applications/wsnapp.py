@@ -43,6 +43,16 @@ class WSNApp(StandardApplicationComponent):
                                             self.visual_component.x-self.visual_component.signal_radius, 
                                             self.visual_component.y-self.visual_component.signal_radius)
 
+
+    def blink_signal(self, control):
+        if control%2 == 0:
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        else:
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
+        
+        reactor.callLater(1, self.blink_signal, control+1)
+
+
     
     def print_node_connections(self, nearby_devices_list):
         self_name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
@@ -90,6 +100,7 @@ class SensorApp(WSNApp):
         self.nearby_devices_list = nearby_devices_list
         # self.propagate_signal()
         self.show_signal()
+        self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
         self.collect_and_send_data()
@@ -171,6 +182,7 @@ class SinkApp(WSNApp):
     def start(self, nearby_devices_list):
         #self.propagate_signal()
         self.show_signal()
+        self.blink_signal(1)
         self.connect_to_gateway()
         self.configure_source_info()
         self.forward_packages()
@@ -459,6 +471,7 @@ class RepeaterApp(WSNApp):
         self.nearby_devices_list = nearby_devices_list
         #self.propagate_signal()
         self.show_signal()
+        self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
         self.route_packages()
