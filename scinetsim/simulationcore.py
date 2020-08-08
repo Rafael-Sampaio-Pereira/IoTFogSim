@@ -41,7 +41,7 @@ class SimulationCore(object):
 		self.eventsCounter = self.eventsCounter + 1
 		log.msg(event_description+" - Number of events: %i" %(self.eventsCounter))
 		# Updates events counter value on screen - Rafael Sampaio
-		self.canvas.itemconfig(self.simulation_screen.events_counter_label, text=str(self.eventsCounter))
+		# self.canvas.itemconfig(self.simulation_screen.events_counter_label, text=str(self.eventsCounter))
 		self.simulation_screen.menubar.entryconfigure(5, label="Events: "+str(self.eventsCounter))
 
 	# def getFogNodeById(self, id):

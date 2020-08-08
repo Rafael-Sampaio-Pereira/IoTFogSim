@@ -83,6 +83,7 @@ class WSNApp(StandardApplicationComponent):
         #self.simulation_core.canvas.after(2, self.delete_connection_arrow, connection_id)
         reactor.callLater(0.2, self.delete_connection_arrow, connection_id)
 
+
     def delete_connection_arrow(self, id):
         self.simulation_core.canvas.delete(id)
 
@@ -100,7 +101,7 @@ class SensorApp(WSNApp):
         self.nearby_devices_list = nearby_devices_list
         # self.propagate_signal()
         self.show_signal()
-        self.blink_signal(1)
+        # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
         self.collect_and_send_data()
@@ -182,7 +183,7 @@ class SinkApp(WSNApp):
     def start(self, nearby_devices_list):
         #self.propagate_signal()
         self.show_signal()
-        self.blink_signal(1)
+        # self.blink_signal(1)
         self.connect_to_gateway()
         self.configure_source_info()
         self.forward_packages()
@@ -244,7 +245,7 @@ class SinkApp(WSNApp):
                 self.sink_factory.running_protocol.send(mqtt_package)
                 
         
-        reactor.callLater(1, self.forward_packages)
+        reactor.callLater(5, self.forward_packages)
 
     def verify_buffer(self):
         if len(self._buffer) > 0:
@@ -471,7 +472,7 @@ class RepeaterApp(WSNApp):
         self.nearby_devices_list = nearby_devices_list
         #self.propagate_signal()
         self.show_signal()
-        self.blink_signal(1)
+        # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
         self.route_packages()

@@ -4,6 +4,8 @@ from tkinter import messagebox
 from twisted.python import log
 from twisted.internet import reactor
 from tkinter import ALL, EventType
+import datetime
+from datetime import datetime
 
 
 class ScrollableScreen(tkinter.Frame):
@@ -14,7 +16,7 @@ class ScrollableScreen(tkinter.Frame):
         self.screen_h = 2000
         
         
-        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#66BB6A', highlightthickness=0)
+        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#159eba', highlightthickness=0)
         self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
         self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
@@ -26,11 +28,11 @@ class ScrollableScreen(tkinter.Frame):
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        self.canvas.create_text(50,10, anchor="nw", text="Events: ")
-        self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
+        # self.canvas.create_text(50,10, anchor="nw", text="Events: ")
+        # self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
 
-        # Label to show position on screen - Rafael Sampaio
-        self.position_label = self.canvas.create_text(300,10, anchor="nw", text="0", tags=("position_label",))
+        # # Label to show position on screen - Rafael Sampaio
+        # self.position_label = self.canvas.create_text(300,10, anchor="nw", text="0", tags=("position_label",))
 
         # This is what enables scrolling with the mouse:
         self.canvas.bind("<ButtonPress-2>", self.scroll_start)
@@ -76,7 +78,7 @@ class ScrollableScreen(tkinter.Frame):
 
     def  update_position_on_screen(self,event):
         p = "Position: "+str(event.x)+'x'+str(event.y)
-        self.canvas.itemconfig(self.position_label, text=p)
+        # self.canvas.itemconfig(self.position_label, text=p)
         self.menubar.entryconfigure(4, label=p)
 
     def getCanvas(self):
@@ -102,9 +104,15 @@ class ScrollableScreen(tkinter.Frame):
         self.menubar.add_cascade(label="Main", menu=mainmenu)
         self.menubar.add_command(label="About Project", command=None)
         self.menubar.add_command(label="Help", command=None)
-        self.menubar.add_command(label="Position:", command=None)
-        self.menubar.add_command(label="Events:", command=None)
         
+        self.menubar.add_command(label="Position: 0", command=None)
+        self.menubar.add_command(label=" Events:", command=None)
+
+        self.menubar.add_command(label="Start Time: "+str(datetime.now().strftime('%H:%M:%S')), font=("Verdana", 10, "italic"), command=None)
+
+        self.menubar.entryconfig(4, foreground='blue')
+        self.menubar.entryconfig(5, foreground='blue')
+
         window.config(menu=self.menubar)
 
     # This method is called when close window button is press. - Rafael Sampaio

@@ -1,0 +1,21 @@
+2020-08-07T22:41:15-0300 [stderr#error] Exception in Tkinter callback
+2020-08-07T22:41:15-0300 [stderr#error] Traceback (most recent call last):
+2020-08-07T22:41:15-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-08-07T22:41:15-0300 [stderr#error]     return self.func(*args)
+2020-08-07T22:41:15-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 112, in <lambda>
+2020-08-07T22:41:15-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-08-07T22:41:15-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 63, in open_project
+2020-08-07T22:41:15-0300 [stderr#error]     simulation_core.create_simulation_canvas()
+2020-08-07T22:41:15-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/simulationcore.py", line 196, in create_simulation_canvas
+2020-08-07T22:41:15-0300 [stderr#error]     self.simulation_screen = ScrollableScreen(window)
+2020-08-07T22:41:15-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/ScrollableScreen.py", line 42, in __init__
+2020-08-07T22:41:15-0300 [stderr#error]     top_menu = self.create_top_menu(root)
+2020-08-07T22:41:15-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/ScrollableScreen.py", line 111, in create_top_menu
+2020-08-07T22:41:15-0300 [stderr#error]     self.menubar.add_command(label="Start Time: "+str(datetime.now().strftime('%H:%M:%S')), fill="black", command=None)
+2020-08-07T22:41:15-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 2890, in add_command
+2020-08-07T22:41:15-0300 [stderr#error]     self.add('command', cnf or kw)
+2020-08-07T22:41:15-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 2881, in add
+2020-08-07T22:41:15-0300 [stderr#error]     self._options(cnf, kw))
+2020-08-07T22:41:15-0300 [stderr#error] _tkinter.TclError: unknown option "-fill"
+2020-08-07T22:43:22-0300 [-] Received SIGINT, shutting down.
+2020-08-07T22:43:22-0300 [-] Main loop terminated.

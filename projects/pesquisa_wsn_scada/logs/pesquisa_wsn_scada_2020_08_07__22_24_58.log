@@ -1,0 +1,37 @@
+2020-08-07T22:24:58-0300 [-] Creating router ...
+2020-08-07T22:24:58-0300 [-] Initializing Router - Number of events: 1
+2020-08-07T22:24:59-0300 [-] RouterFactory starting on 8081
+2020-08-07T22:24:59-0300 [-] Initializing Server - Number of events: 2
+2020-08-07T22:24:59-0300 [-] BrokerFactory starting on 5100
+2020-08-07T22:24:59-0300 [-] Initializing Client - Number of events: 3
+2020-08-07T22:25:00-0300 [stderr#error] Exception in Tkinter callback
+2020-08-07T22:25:00-0300 [stderr#error] Traceback (most recent call last):
+2020-08-07T22:25:00-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 1708, in __call__
+2020-08-07T22:25:00-0300 [stderr#error]     return self.func(*args)
+2020-08-07T22:25:00-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 112, in <lambda>
+2020-08-07T22:25:00-0300 [stderr#error]     btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+2020-08-07T22:25:00-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 64, in open_project
+2020-08-07T22:25:00-0300 [stderr#error]     load_nodes(selected_project_name, simulation_core)
+2020-08-07T22:25:00-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/configurations.py", line 199, in load_nodes
+2020-08-07T22:25:00-0300 [stderr#error]     sk_node = WSNSinkNode(simulation_core, sink_cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'], sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
+2020-08-07T22:25:00-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/standarddevice.py", line 302, in __init__
+2020-08-07T22:25:00-0300 [stderr#error]     self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
+2020-08-07T22:25:00-0300 [stderr#error]   File "/home/rafael/iotfogsim/scinetsim/scinetsim/visualcomponent.py", line 28, in __init__
+2020-08-07T22:25:00-0300 [stderr#error]     self.draggable_coverage_area_circle = self.simulation_core.canvas.create_oval( self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="rgb(1,230,23)", outline="", width=1, stipple="gray50")
+2020-08-07T22:25:00-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 2498, in create_oval
+2020-08-07T22:25:00-0300 [stderr#error]     return self._create('oval', args, kw)
+2020-08-07T22:25:00-0300 [stderr#error]   File "/usr/lib/python3.6/tkinter/__init__.py", line 2483, in _create
+2020-08-07T22:25:00-0300 [stderr#error]     *(args + self._options(cnf, kw))))
+2020-08-07T22:25:00-0300 [stderr#error] _tkinter.TclError: unknown color name "rgb(1,230,23)"
+2020-08-07T22:25:00-0300 [stdout#info] This divice have no simulation core instance
+2020-08-07T22:25:00-0300 [stdout#info] This divice have no simulation core instance
+2020-08-07T22:25:00-0300 [Uninitialized] 127.0.0.1:51626 - Connected to mqtt broker - Number of events: 4
+2020-08-07T22:25:00-0300 [Uninitialized] 127.0.0.1:51626 - sending MQTT SUBSCRIBE REQUEST - Number of events: 5
+2020-08-07T22:25:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f28c41d4240>
+2020-08-07T22:29:14-0300 [-] Received SIGINT, shutting down.
+2020-08-07T22:29:14-0300 [SCADAApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-08-07T22:29:14-0300 [SCADAApp,client] connection lost - Number of events: 6
+2020-08-07T22:29:14-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f28c41d4240>
+2020-08-07T22:29:14-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2020-08-07T22:29:14-0300 [applications.pesquisaapp.BrokerFactory] (TCP Port 5100 Closed)
+2020-08-07T22:29:14-0300 [-] Main loop terminated.

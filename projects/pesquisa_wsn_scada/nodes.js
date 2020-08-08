@@ -11,9 +11,9 @@
                 "port": 5100,
                 "is_wireless": false,
                 "coverage_area_radius": 0,
-                "application": "applications.mqttapp.BrokerApp",
-                "x": 250,
-                "y": 175
+                "application": "applications.pesquisaapp.FogDataReducitonBrokerApp",
+                "x": 241,
+                "y": 221
             }
         ],
         "clients":[
@@ -22,13 +22,13 @@
                 "name": "SCADA System", 
                 "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
-                "icon": "notebook_icon",
+                "icon": "cloud_icon",
                 "type": "client",
                 "is_wireless": false,
                 "coverage_area_radius": 0,
                 "application": "applications.wsnapp.SCADAApp",
-                "x": 582,
-                "y": 67
+                "x": 532,
+                "y": 64
             }
         ],
         "wireless_computers": [],
@@ -46,8 +46,8 @@
                 "accesspoint_port": 8082,
                 "application": "applications.routerapp.RouterApp",
                 "is_wireless": false,
-                "x": 400,
-                "y": 200,
+                "x": 535,
+                "y": 217,
                 "access_points": [
                     
                 ]
