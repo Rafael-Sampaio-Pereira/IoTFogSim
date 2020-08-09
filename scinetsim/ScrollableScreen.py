@@ -77,8 +77,12 @@ class ScrollableScreen(tkinter.Frame):
 
 
     def  update_position_on_screen(self,event):
-        p = "Position: "+str(event.x)+'x'+str(event.y)
-        # self.canvas.itemconfig(self.position_label, text=p)
+        # sertting the coordinates to canvas relative. by default it is window realative and don't change when window is scrolled - Rafael Sampaio
+        x = self.canvas.canvasx(event.x)
+        y = self.canvas.canvasy(event.y)
+
+        p = "Position: "+str(x)+'x'+str(y)
+
         self.menubar.entryconfigure(4, label=p)
 
     def getCanvas(self):
