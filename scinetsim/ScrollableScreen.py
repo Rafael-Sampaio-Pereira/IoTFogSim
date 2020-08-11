@@ -81,7 +81,7 @@ class ScrollableScreen(tkinter.Frame):
         x = self.canvas.canvasx(event.x)
         y = self.canvas.canvasy(event.y)
 
-        p = "Position: "+str(x)+'x'+str(y)
+        p = "Position: "+str(x)+' x '+str(y)
 
         self.menubar.entryconfigure(4, label=p)
 

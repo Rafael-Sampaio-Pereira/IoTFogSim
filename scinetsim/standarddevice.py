@@ -126,7 +126,11 @@ class WirelessDevice(object):
     
     def find_nearby_devices_icon(self): 
         # getting all canvas objects in wifi signal coverage area - Rafael Sampaio
-        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(self.visual_component.x+self.coverage_area_radius, self.visual_component.y+self.coverage_area_radius, self.visual_component.x-self.coverage_area_radius, self.visual_component.y-self.coverage_area_radius)
+        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(
+                                                                            self.visual_component.x+self.coverage_area_radius,
+                                                                            self.visual_component.y+self.coverage_area_radius,
+                                                                            self.visual_component.x-self.coverage_area_radius,
+                                                                            self.visual_component.y-self.coverage_area_radius)
         return all_coveraged_devices
 
     def get_nearby_devices_list(self):

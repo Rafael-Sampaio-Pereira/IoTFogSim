@@ -87,6 +87,10 @@ class WSNApp(StandardApplicationComponent):
     def delete_connection_arrow(self, id):
         self.simulation_core.canvas.delete(id)
 
+
+    def simulate_network_latency(self):
+          time.sleep(float(self.visual_component.device.WSN_network_group.latency))
+
 class SensorApp(WSNApp):
     def __init__(self):
         self._buffer = set()
@@ -112,8 +116,6 @@ class SensorApp(WSNApp):
         # collecting data - Rafael Sampaio
         data = energy_consumption_meter()
 
-
-        
         # Creating a new package - Rafael Sampaio
         pack = WSNPackage(source = self, data = data)
 
@@ -154,6 +156,8 @@ class SensorApp(WSNApp):
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
                         self.draw_connection_arrow(destiny)
+
+                        self.simulate_network_latency()
 
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
@@ -511,6 +515,8 @@ class RepeaterApp(WSNApp):
                         # Drawing connection - Rafael Sampaio
                         self.draw_connection_arrow(destiny)
 
+                        self.simulate_network_latency()
+                        
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
                         

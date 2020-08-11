@@ -177,8 +177,8 @@
                         "coverage_area_radius": 250,
                         "application": "applications.wsnapp.SensorApp",
                         "is_wireless": true,
-                        "x": 1652,
-                        "y": 557
+                        "x": 1632,
+                        "y": 679
                     },
 
                     {
