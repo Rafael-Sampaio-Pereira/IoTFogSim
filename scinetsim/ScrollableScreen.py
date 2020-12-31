@@ -7,6 +7,9 @@ from tkinter import ALL, EventType
 import datetime
 from datetime import datetime
 
+import PIL
+from PIL import Image, ImageTk
+
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root):
@@ -14,9 +17,33 @@ class ScrollableScreen(tkinter.Frame):
 
         self.screen_w = 2000
         self.screen_h = 2000
+
+        background_image = PIL.Image.open("teste.png")
+        root.update()
+
+        # Resize the image to the constraints of the root window.
+        # win_width = int(root.winfo_width())
+        # win_height = int(root.winfo_height())
+        win_width =  self.screen_w
+        win_height = self.screen_h
+        
+        background_image = background_image.resize((win_width, win_height))
+        background_image_tk = ImageTk.PhotoImage(background_image)
+
+
         
         
         self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#159eba', highlightthickness=0)
+
+
+        # Create a label to hold the background image.
+        # canvas = Canvas(root, width=win_width, height=win_height)
+        self.canvas.place(x=0, y=0, anchor='nw')
+        self.canvas.create_image(0, 0, image=background_image_tk, anchor='nw')
+        self.canvas.image = background_image_tk
+
+
+
         self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
         self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
@@ -27,6 +54,7 @@ class ScrollableScreen(tkinter.Frame):
         self.canvas.grid(row=0, column=0, sticky="nsew")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
+
 
         # self.canvas.create_text(50,10, anchor="nw", text="Events: ")
         # self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))

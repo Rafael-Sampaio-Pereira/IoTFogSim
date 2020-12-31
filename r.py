@@ -1,121 +1,88 @@
-import tkinter as tk
+import PIL
+from PIL import Image, ImageTk
+from tkinter import *
+from tkinter import filedialog
+from tkinter import messagebox
 
-# --- constants ---
-
-WIDTH = 800
-HEIGHT = 1000
-
-# --- functions ---
-
-# for smooth move of platform
-
-def left_press(event):
-    global platform_left
-    platform_left = True
-
-def left_release(event):
-    global platform_left
-    platform_left = False
-
-def right_press(event):
-    global platform_right
-    platform_right = True
-
-def right_release(event):
-    global platform_right
-    platform_right = False
+root = Tk()
 
 
-def eventloop():
-    global xspeed
-    global yspeed
 
-    # move ball
-    canvas.move(ball, xspeed, yspeed)
-    ball_pos = canvas.coords(ball)
+class Window:
 
-    # move platform
-    if platform_left:
-        # move
-        canvas.move(platform, -20, 0)
-        platform_pos = canvas.coords(platform)
-        # check if not leave canvas
-        if platform_pos[0] < 0:
-            # move back
-            canvas.move(platform, 0-platform_pos[0], 0)
-    if platform_right:
-        # move
-        canvas.move(platform, 20, 0)
-        # check if not leave canvas
-        platform_pos = canvas.coords(platform)
-        if platform_pos[2] > 1200:
-            # move back
-            canvas.move(platform, -(platform_pos[2]-1200), 0)
+    def __init__(self, master=None):
+        tower = PIL.Image.open("teste.png")
+        master.update()
+        win_width = int(master.winfo_width())
+        win_height = int(master.winfo_height())
+        # Resize the image to the constraints of the root window.
+        tower = tower.resize((win_width, win_height))
+        tower_tk = ImageTk.PhotoImage(tower)
+        # Create a label to hold the background image.
+        canvas = Canvas(master, width=win_width, height=win_height)
+        canvas.place(x=0, y=0, anchor='nw')
+        canvas.create_image(0, 0, image=tower_tk, anchor='nw')
+        canvas.image = tower_tk
+        frame = Frame(master)
+        frame.place(x=win_width, y=win_height, anchor='se')
+        master.update()
+        w = Label(master, text="Send and receive files easily", anchor='w')
+        w.config(font=('times', 32))
+        w.place(x=0, y=0, anchor='nw')
 
-    # - collisions -
+        master.title("Bifrost v1.0")
+        self.img1 = PhotoImage(file="teste.png")
+        self.img2 = PhotoImage(file="teste.png")
 
-    # check collision with border
+        frame.grid_columnconfigure(0, weight=1)
+        sendButton = Button(frame, image=self.img2)
+        sendButton.grid(row=0, column=1)
+        sendButton.image = self.img2
+        receiveButton = Button(frame, image=self.img1)
+        receiveButton.grid(row=0, column=2)
+        receiveButton.image = self.img1
 
-    if ball_pos[3] >= 900 or ball_pos[1] <= 0: # y range
-        yspeed = -yspeed
-    if ball_pos[2] >= 1200 or ball_pos[0] <= 0: # x range
-        xspeed = -xspeed
+        menu = Menu(master)
+        master.config(menu=menu)
 
-    # check collisions with objects 
+        file = Menu(menu)
+        file.add_command(label='Exit', command=self.client_exit)
+        menu.add_cascade(label='File', menu=file)
 
-    collide = canvas.find_overlapping(*ball_pos)
+        edit = Menu(menu)
+        edit.add_command(label='abcd')
+        menu.add_cascade(label='Edit', menu=edit)
 
-    if platform in collide:
-        yspeed = -yspeed
+        help = Menu(menu)
 
-    remove = []
+        help.add_command(label='About Us', command=self.about)
+        menu.add_cascade(label='Help', menu=help)
 
-    # check collision with bricks
-    for brick in bricks:
-        if brick in collide:
-            remove.append(brick)
-            yspeed = -yspeed
+    def callback():
+        path = filedialog.askopenfilename()
+        e.delete(0, END)  # Remove current text in entry
+        e.insert(0, path)  # Insert the 'path'
+        # print path
 
-    # remove bricks
-    for brick in remove:
-        bricks.remove(brick)
-        canvas.delete(brick)
+        w = Label(root, text="File Path:")
+        e = Entry(root, text="")
+        b = Button(root, text="Browse", fg="#a1dbcd", bg="black", command=callback)
 
-    root.after(10, eventloop)
+        w.pack(side=TOP)
+        e.pack(side=TOP)
+        b.pack(side=TOP)
 
-# --- main ---
+    def client_exit(self):
+        exit()
 
-# - init -
+    def about(self):
+        message = "This is a project developed by Aditi,Sagar and"
+        message += "Suyash as the final year project."
+        messagebox.showinfo("Delete Theme", message)
 
-root = tk.Tk()
-root.title("Brick Breaker")
+root.resizable(0,0)
 
-canvas = tk.Canvas(root, width=1200, height=900)
-canvas.pack()
-
-# - objects -
-
-ball = canvas.create_oval(5, 5, 30, 30, fill="black")
-xspeed = 1 # gravity
-yspeed = 4
-
-platform = canvas.create_rectangle(5, 40, 250, 30, fill="black")
-platform_left = False
-platform_right = False
-root.bind('<Left>', left_press)
-root.bind('<KeyRelease-Left>', left_release)
-root.bind('<Right>', right_press)
-root.bind('<KeyRelease-Right>', right_release)
-
-bricks = []
-
-for i in range(10):
-    x = i*100
-    y = 700
-    brick = canvas.create_rectangle(x, y, x+50, y+30, fill="red")
-    bricks.append(brick)
-
-# - mainloop -
-
-root.after(100, eventloop)
+#size of the window
+root.geometry("700x400")
+app = Window(root)
 root.mainloop()
