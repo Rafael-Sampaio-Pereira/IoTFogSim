@@ -8,6 +8,8 @@ from config.settings import version
 from scinetsim.ScrollableScreen import ScrollableScreen
 
 
+
+
 class SimulationCore(object):
  	
 	def __init__(self):
@@ -191,12 +193,18 @@ class SimulationCore(object):
 		
 		# Setting window top text. - Rafael Sampaio
 		window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+
+
+
+		
 		
 		# Simulation area on screen. - Rafael Sampaio
-		self.simulation_screen = ScrollableScreen(window)
+		self.simulation_screen = ScrollableScreen(window, self.project_name)
 		self.simulation_screen.pack(fill="both", expand=True)
 		canvas = self.simulation_screen.getCanvas()
 
 		self.canvas = canvas
+
+		
 
 		return self.canvas

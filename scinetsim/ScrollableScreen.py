@@ -11,23 +11,29 @@ import PIL
 from PIL import Image, ImageTk
 
 
+
 class ScrollableScreen(tkinter.Frame):
-    def __init__(self, root):
+    def __init__(self, root, project_name):
         tkinter.Frame.__init__(self, root)
 
-        self.screen_w = 2000
-        self.screen_h = 2000
+        # os.path.isfile(fname) 
 
-        background_image = PIL.Image.open("teste.png")
+        bg_image_path = "projects/"+project_name+"/bg_image.png"
+        background_image = PIL.Image.open(bg_image_path)
+        bg_width, bg_height = background_image.size
+        
         root.update()
 
+        self.screen_w = bg_width or 2000
+        self.screen_h = bg_height or 2000
+
         # Resize the image to the constraints of the root window.
-        # win_width = int(root.winfo_width())
-        # win_height = int(root.winfo_height())
-        win_width =  self.screen_w
-        win_height = self.screen_h
-        
-        background_image = background_image.resize((win_width, win_height))
+        win_width = int(root.winfo_width())
+        win_height = int(root.winfo_height())
+        # win_width =  self.screen_w
+        # win_height = self.screen_h
+
+        # background_image = background_image.resize((win_width, win_height))
         background_image_tk = ImageTk.PhotoImage(background_image)
 
 
