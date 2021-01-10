@@ -68,7 +68,7 @@
                         "id":0,
                         "name": "wsn_sink",
                         "icon": "sink_icon",
-                        "coverage_area_radius": 250,
+                        "coverage_area_radius": 100,
                         "is_wireless": true,
                         "application": "applications.wsnapp.SinkApp",
                         "x": 1212,
