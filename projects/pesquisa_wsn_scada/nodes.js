@@ -73,6 +73,16 @@
                         "application": "applications.wsnapp.SinkApp",
                         "x": 1212,
                         "y": 216
+                    },
+                    {
+                        "id":0,
+                        "name": "wsn_sink",
+                        "icon": "sink_icon",
+                        "coverage_area_radius": 100,
+                        "is_wireless": true,
+                        "application": "applications.wsnapp.SinkApp",
+                        "x": 202,
+                        "y": 1152
                     }
                 ],
                 "repeater_nodes": [

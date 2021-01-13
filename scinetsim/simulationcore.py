@@ -174,6 +174,8 @@ class SimulationCore(object):
 		window = tkinter.Toplevel()
 		tksupport.install(window)
 
+
+
 		# Main window size and positions settings. - Rafael Sampaio
 		w_heigth = 600
 		w_width = 800

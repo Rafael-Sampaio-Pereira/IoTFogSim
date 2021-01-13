@@ -84,6 +84,9 @@ class ScrollableScreen(tkinter.Frame):
 
         root.bind("<Motion>", self.update_position_on_screen)
 
+
+        
+
         
     # AS LINHAS ABAIXO SERÃO UTEIS NO CÓDIGO DE ZOOM
         
