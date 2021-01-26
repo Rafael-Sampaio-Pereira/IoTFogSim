@@ -57,7 +57,7 @@
         "wireless_sensor_networks": [
             { 
                 "id": 3,
-                "name": "energe_metering_wsn", 
+                "name": "energy_metering_wsn", 
                 "network_layer_protocol": "UDP",
                 "application_layer_protocol": "Wi-SUN",
                 "latency": "0.02",
@@ -73,16 +73,6 @@
                         "application": "applications.wsnapp.SinkApp",
                         "x": 1212,
                         "y": 216
-                    },
-                    {
-                        "id":0,
-                        "name": "wsn_sink",
-                        "icon": "sink_icon",
-                        "coverage_area_radius": 100,
-                        "is_wireless": true,
-                        "application": "applications.wsnapp.SinkApp",
-                        "x": 202,
-                        "y": 1152
                     }
                 ],
                 "repeater_nodes": [

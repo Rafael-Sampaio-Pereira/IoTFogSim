@@ -13,12 +13,17 @@ from scinetsim.configurations import  load_nodes
 
 from threading import Thread
 
+import sys
+sys.dont_write_bytecode = True
+
+
 def main():
 
 	config()
 
 
 if __name__ == '__main__':
+    
     main()
     reactor.run()
 

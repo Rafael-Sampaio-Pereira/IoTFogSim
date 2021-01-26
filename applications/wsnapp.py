@@ -3,12 +3,14 @@ from scinetsim.dataproducers import *
 from twisted.internet import reactor
 from twisted.internet.protocol import ClientFactory
 from twisted.python import log
+import twisted
 import time
 import uuid
 import json
 import tkinter as tk
 from applications.applicationcomponent import StandardApplicationComponent
 from scinetsim.functions import create_csv_database_file
+from twisted.internet.task import LoopingCall
 
 from applications.mqttapp import extract_mqtt_contents
 
@@ -20,19 +22,19 @@ class WSNApp(StandardApplicationComponent):
         self.visual_component = None
         self.nearby_devices_list = None
 
-    def propagate_signal(self):
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-        # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-        if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-            # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-            self.visual_component.signal_radius += 10
-            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-        else:
-            # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
-            self.visual_component.signal_radius = 10
+    # def propagate_signal(self):
+    #     self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+    #     # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+    #     if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+    #         # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+    #         self.visual_component.signal_radius += 10
+    #         self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+    #     else:
+    #         # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
+    #         self.visual_component.signal_radius = 10
         
-        reactor.callLater(0.1, self.propagate_signal)
+    #     reactor.callLater(0.1, self.propagate_signal)
 
     def show_signal(self):
         self.visual_component.signal_radius = self.visual_component.coverage_area_radius
@@ -44,13 +46,47 @@ class WSNApp(StandardApplicationComponent):
                                             self.visual_component.y-self.visual_component.signal_radius)
 
 
-    def blink_signal(self, control):
-        if control%2 == 0:
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-        else:
-            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
+    # def blink_signal(self, control):
+    #     if control%2 == 0:
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+    #     else:
+    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
         
-        reactor.callLater(1, self.blink_signal, control+1)
+    #     reactor.callLater(1, self.blink_signal, control+1)
+
+    def set_signal_radius(self, radius):
+        self.visual_component.signal_radius = radius
+        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+        
+    
+    def clear_signal_radius(self, radius):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
+        self.visual_component.signal_radius = radius
+        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+
+
+    def _blink_signal(self):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        # reactor.callLater(0.1, self.set_signal_radius, radius=10)
+        # reactor.callLater(0.2, self.set_signal_radius, radius=20)
+        # # reactor.callLater(0.3, self.set_signal_radius, radius=30)
+        # reactor.callLater(0.4, self.set_signal_radius, radius=40)
+        # # reactor.callLater(0.5, self.set_signal_radius, radius=50)
+        # reactor.callLater(0.6, self.set_signal_radius, radius=60)
+        # # reactor.callLater(0.7, self.set_signal_radius, radius=70)
+        # reactor.callLater(0.8, self.set_signal_radius, radius=80)
+        # # reactor.callLater(0.9, self.set_signal_radius, radius=90)
+        self.simulation_core.canvas.after(15, self.set_signal_radius, self.visual_component.coverage_area_radius/10)
+        self.simulation_core.canvas.after(25, self.set_signal_radius, self.visual_component.coverage_area_radius/9)
+        self.simulation_core.canvas.after(35, self.set_signal_radius, self.visual_component.coverage_area_radius/8)
+        self.simulation_core.canvas.after(45, self.set_signal_radius, self.visual_component.coverage_area_radius/7)
+        self.simulation_core.canvas.after(55, self.set_signal_radius, self.visual_component.coverage_area_radius/6)
+        self.simulation_core.canvas.after(65, self.set_signal_radius, self.visual_component.coverage_area_radius/5)
+        self.simulation_core.canvas.after(75, self.set_signal_radius, self.visual_component.coverage_area_radius/4)
+        self.simulation_core.canvas.after(85, self.set_signal_radius, self.visual_component.coverage_area_radius/3)
+        self.simulation_core.canvas.after(95, self.set_signal_radius, self.visual_component.coverage_area_radius/2)
+        self.simulation_core.canvas.after(105, self.set_signal_radius, self.visual_component.coverage_area_radius)
+        self.simulation_core.canvas.after(200, self.clear_signal_radius, 0)
 
 
     
@@ -74,18 +110,22 @@ class WSNApp(StandardApplicationComponent):
         print('\n')
 
     def draw_connection_arrow(self, destiny):
+        self._blink_signal()
         x1 = self.visual_component.x
         y1 = self.visual_component.y
         x2 = destiny.visual_component.x
         y2 = destiny.visual_component.y
-        connection_id = self.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow=tk.LAST, width=3, dash=(4,2))
+        connection_id = self.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow=tk.LAST, width=2, dash=(4,2))
 
-        #self.simulation_core.canvas.after(2, self.delete_connection_arrow, connection_id)
-        reactor.callLater(0.2, self.delete_connection_arrow, connection_id)
+        self.simulation_core.canvas.after(5, self.delete_connection_arrow, connection_id)
+        # reactor.callLater(0.3, self.delete_connection_arrow, connection_id)
+        self.simulation_core.canvas.update()
+        # return connection_id
 
 
     def delete_connection_arrow(self, id):
         self.simulation_core.canvas.delete(id)
+        self.simulation_core.canvas.update()
 
 
     def simulate_network_latency(self):
@@ -94,7 +134,7 @@ class WSNApp(StandardApplicationComponent):
 class SensorApp(WSNApp):
     def __init__(self):
         self._buffer = set()
-        self.interval = 3
+        self.interval = 30
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
@@ -104,15 +144,18 @@ class SensorApp(WSNApp):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
         # self.propagate_signal()
-        self.show_signal()
+        # self.show_signal()
+        # self._propagate_signal()
         # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
-        self.collect_and_send_data()
+        # self.collect_and_send_data()
+        LoopingCall(self.collect_and_send_data).start(self.interval)
 
 
     def collect_and_send_data(self):
-        
+
+        # self._blink_signal()
         # collecting data - Rafael Sampaio
         data = energy_consumption_meter()
 
@@ -123,7 +166,9 @@ class SensorApp(WSNApp):
         pack.put_in_trace(self)
 
         # putting data in device buffer - Rafael Sampaio
-        self._buffer.add(pack) 
+        self._buffer.add(pack)
+
+        
 
 
         def remove_sent_packages_from_buffer(_package):
@@ -139,11 +184,12 @@ class SensorApp(WSNApp):
                 
                 remove_sent_packages_from_buffer(_package)
     
-        reactor.callLater(self.interval, self.collect_and_send_data)
+        # reactor.callLater(self.interval, self.collect_and_send_data)
 
     def forward_package(self, package):
-        if len(package.trace) > 0:
 
+        if len(package.trace) > 0:
+            # self._blink_signal()
             for destiny in self.nearby_devices_list:
                 if destiny == package.source:
                     # A device can not sent data to it self - Rafael Sampaio
@@ -155,9 +201,13 @@ class SensorApp(WSNApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-                        self.draw_connection_arrow(destiny)
 
-                        self.simulate_network_latency()
+                        # self.draw_connection_arrow(destiny)
+
+                        reactor.callFromThread(self.draw_connection_arrow, destiny)
+                        self.simulation_core.canvas.update()
+                        
+                        # self.simulate_network_latency()
 
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
@@ -167,6 +217,7 @@ class SensorApp(WSNApp):
 
                         self.simulation_core.updateEventsCounter("wsn node send data")
 
+                        
 
 
 class SinkApp(WSNApp):
@@ -186,11 +237,11 @@ class SinkApp(WSNApp):
 
     def start(self, nearby_devices_list):
         #self.propagate_signal()
-        self.show_signal()
+        # self.show_signal()
         # self.blink_signal(1)
         self.connect_to_gateway()
         self.configure_source_info()
-        self.forward_packages()
+        LoopingCall(self.forward_packages).start(3) #forwarding packages every 'x' secondes - Rafael Sampaio
 
     # this method allow the sink to connect to router/switch - Rafael Sampaio
     def connect_to_gateway(self):
@@ -219,6 +270,7 @@ class SinkApp(WSNApp):
 
     def forward_packages(self):
         if self.verify_buffer():
+          
             if self.sink_factory.running_protocol and (self.source_addr != None and self.source_port != None):
                 
                 data = "["
@@ -249,7 +301,7 @@ class SinkApp(WSNApp):
                 self.sink_factory.running_protocol.send(mqtt_package)
                 
         
-        reactor.callLater(5, self.forward_packages)
+        # reactor.callLater(5, self.forward_packages)
 
     def verify_buffer(self):
         if len(self._buffer) > 0:
@@ -392,7 +444,8 @@ class SCADAApp(StandardApplicationComponent):
 
         self.create_connection_animation()
 
-        self.save_to_database()   
+        # self.save_to_database()
+        LoopingCall(self.save_to_database).start(32)  
 
     def subscribe(self):
                 
@@ -450,7 +503,7 @@ class SCADAApp(StandardApplicationComponent):
         except Exception as e:
             log.msg(e)
         
-        reactor.callLater(1, self.save_to_database)
+        # reactor.callLater(1, self.save_to_database)
 
 
     def verify_buffer(self):
@@ -475,11 +528,12 @@ class RepeaterApp(WSNApp):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
         #self.propagate_signal()
-        self.show_signal()
+        # self.show_signal()
         # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
-        self.route_packages()
+        # self.route_packages()
+        LoopingCall(self.route_packages).start(self.interval)
 
 
     def route_packages(self):
@@ -497,10 +551,12 @@ class RepeaterApp(WSNApp):
                             
                 remove_sent_packages_from_buffer(_package)
     
-        reactor.callLater(self.interval, self.route_packages)
+        # reactor.callLater(self.interval, self.route_packages)
 
     def forward_package(self, package):
         if len(package.trace) > 0:
+
+            # self._blink_signal()
 
             for destiny in self.nearby_devices_list:
                 if destiny == package.source:
@@ -513,9 +569,12 @@ class RepeaterApp(WSNApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-                        self.draw_connection_arrow(destiny)
+                        # self.draw_connection_arrow(destiny)
 
-                        self.simulate_network_latency()
+                        reactor.callFromThread(self.draw_connection_arrow, destiny)
+                        self.simulation_core.canvas.update()
+
+                        # self.simulate_network_latency()
                         
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)

@@ -22,6 +22,13 @@ from config.settings import version
 
 from scinetsim.functions import configure_logger
 
+from twisted.internet import task
+
+from multiprocessing import Process
+
+from twisted.internet import reactor
+
+
 import time
 
 def config():
@@ -33,7 +40,9 @@ def config():
 
 	simulation_core = SimulationCore()
 
-	initialization_screen(simulation_core)
+	# initialization_screen(simulation_core)
+	reactor.callFromThread(initialization_screen,simulation_core)
+
 	
 	
 def initialization_screen(simulation_core):
@@ -128,6 +137,8 @@ def initialization_screen(simulation_core):
 
 
 def load_nodes(project_name, simulation_core):
+    	
+
 
 	allWirelessConnections = []
 	allConnections = []
@@ -148,8 +159,10 @@ def load_nodes(project_name, simulation_core):
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
 				simulation_core.allNodes.add(rt)
-				time.sleep(interval)
-				rt.run()
+				# time.sleep(interval)
+				# rt.run()
+
+				callID = reactor.callLater(interval, rt.run)
 				
 
 				for access_point in router['access_points']:
@@ -158,33 +171,43 @@ def load_nodes(project_name, simulation_core):
 
 					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
 					simulation_core.allNodes.add(ap)
-					time.sleep(interval)
-					ap.run()
+					# time.sleep(interval)
+					# ap.run()
+
+					callID = reactor.callLater(interval, ap.run)
 
 
 			for computer in data['fog']['wireless_computers']:
     					
 				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
 				simulation_core.allNodes.add(comp) 
-				time.sleep(interval)
-				comp.run()
+				# time.sleep(interval)
+				# comp.run()
+
+				callID = reactor.callLater(interval, comp.run)
 
 			
 			for server in data['fog']['servers']:
 								
 				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
 				simulation_core.allNodes.add(sr)
-				time.sleep(interval)
-				sr.run()
-			
+				# time.sleep(interval)
+				# sr.run()
+
+
+				callID = reactor.callLater(interval, sr.run)
+
+				
 			
 			
 			for client in data['fog']['clients']:
 								
 				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
 				simulation_core.allNodes.add(cl)
-				time.sleep(interval)
-				cl.run()
+				# time.sleep(interval)
+				# cl.run()
+
+				callID = reactor.callLater(interval, cl.run)
 					
 
 			for wsn in data['fog']['wireless_sensor_networks']:
@@ -215,13 +238,19 @@ def load_nodes(project_name, simulation_core):
 
 				# The devices needs to be started in separated function to allow the correct load of the nearby devices list - Rafael Sampaio
 				for deivce in WSN_network_group.sink_list:
-					deivce.run()
+					# deivce.run()
+					time.sleep(1)
+					callID = reactor.callLater(interval, deivce.run)
 
 				for deivce in WSN_network_group.sensors_list:
-					deivce.run()
+					# deivce.run()
+					time.sleep(1)
+					callID = reactor.callLater(interval, deivce.run)
 
 				for deivce in WSN_network_group.repeater_list:
-					deivce.run()
+					# deivce.run()
+					time.sleep(1)
+					callID = reactor.callLater(interval, deivce.run)
 
 
 
