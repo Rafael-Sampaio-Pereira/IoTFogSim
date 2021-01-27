@@ -11,7 +11,7 @@ import tkinter as tk
 from applications.applicationcomponent import StandardApplicationComponent
 from scinetsim.functions import create_csv_database_file
 from twisted.internet.task import LoopingCall
-
+from datetime import datetime
 from applications.mqttapp import extract_mqtt_contents
 
 
@@ -134,7 +134,7 @@ class WSNApp(StandardApplicationComponent):
 class SensorApp(WSNApp):
     def __init__(self):
         self._buffer = set()
-        self.interval = 30
+        self.interval = 30.0
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
@@ -183,6 +183,10 @@ class SensorApp(WSNApp):
                 self.forward_package(_package)
                 
                 remove_sent_packages_from_buffer(_package)
+
+
+                # O FATO DE OS PACOTES SEREM REAPASADOS(forward_package) AQUI PODE CAUSAR ATRASO NA ENTREGA DE UM
+                # PACOTE JÁ QUE ELE ESPERA O TEMPO DE COLETA PRA REPASSAR PACOTES DTERCEIROS JUNTAMENTE COM OS SEUS
     
         # reactor.callLater(self.interval, self.collect_and_send_data)
 
@@ -241,7 +245,7 @@ class SinkApp(WSNApp):
         # self.blink_signal(1)
         self.connect_to_gateway()
         self.configure_source_info()
-        LoopingCall(self.forward_packages).start(3) #forwarding packages every 'x' secondes - Rafael Sampaio
+        
 
     # this method allow the sink to connect to router/switch - Rafael Sampaio
     def connect_to_gateway(self):
@@ -265,6 +269,9 @@ class SinkApp(WSNApp):
         # while the source info is not complete this function will be recursivelly called - Rafael Sampaio
         if self.source_addr == None or self.source_port == None:
             reactor.callLater(1, self.configure_source_info)
+        else:
+            # the sink only starts to forward packages after connect to a router/gateway and get an network configurantion - Rafael Sampaio
+            LoopingCall(self.forward_packages).start(30.0) #forwarding packages every 'x' secondes - Rafael Sampaio
 
 
 
@@ -279,7 +286,7 @@ class SinkApp(WSNApp):
                 for wsn_package in self._buffer.copy():
 
 
-                    data += '{ "source": "' + wsn_package.source.name + '", "data": "' + wsn_package.data + '" },'
+                    data += '{ "id": "' + str(wsn_package.id) + '", "source": "' + wsn_package.source.name + '", "data": "' + wsn_package.data + '", "created_at": "' + wsn_package.created_at + '" },'
                     self._buffer.remove(wsn_package)
 
 
@@ -365,6 +372,7 @@ class WSNPackage(object):
         self.data = data
         #self.was_forwarded = False
         self.trace = set()
+        self.created_at = datetime.now().isoformat()
 
 
 
@@ -375,7 +383,8 @@ class WSNPackage(object):
         package = {
             "id": str(self.id),
             "source": self.source.name,
-            "data": self.data
+            "data": self.data,
+            "created_at": self.created_at
         }
 
         package = json.dumps(package)
@@ -433,7 +442,7 @@ class SCADAApp(StandardApplicationComponent):
         # creating and opening a csv database file - Rafael Sampaio
         self.database = create_csv_database_file(self.simulation_core)
 
-        self.screen_name = self.transport.getHost().host+":"+str(self.transport.getHost().port)
+        self.screen_name = "\n\n      SCADA\n"+self.transport.getHost().host+":"+str(self.transport.getHost().port)
         self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
@@ -445,7 +454,7 @@ class SCADAApp(StandardApplicationComponent):
         self.create_connection_animation()
 
         # self.save_to_database()
-        LoopingCall(self.save_to_database).start(32)  
+        LoopingCall(self.save_to_database).start(32.0)  
 
     def subscribe(self):
                 
@@ -484,12 +493,21 @@ class SCADAApp(StandardApplicationComponent):
 
                         # extract energy content - Rafael Sampaio
                         for obj in payload['content']:
-                            to_file = obj['source']+","+ obj['data']
+                            to_file = obj['id']+","+obj['source']+","+ obj['data']+","+ obj['created_at']+","+"stored_at:"+datetime.now().isoformat()
                             
                             print(to_file, file = self.database, flush=True)
 
+                            
+
                         # Print the received data on the sreen.  - Rafael Sampaio
-                        self.update_alert_message_on_screen(payload['content'])
+                        # self.update_alert_message_on_screen(payload['content'])
+
+                        format = "%d/%m/%Y - %H:%M:%S"
+                        now = datetime.now()
+                        now = now.strftime(format)
+
+                        # Print  on the sreen the last time that received any data.  - Rafael Sampaio
+                        self.update_alert_message_on_screen("Last received:"+now)
 
                         self._buffer.remove(package)
                     
@@ -498,6 +516,8 @@ class SCADAApp(StandardApplicationComponent):
                         self.update_alert_message_on_screen(payload)
 
                         self._buffer.remove(package)
+                
+                self.simulation_core.updateEventsCounter("SCADA - Saving to the database.")
 
 
         except Exception as e:
@@ -518,7 +538,7 @@ class SCADAApp(StandardApplicationComponent):
 class RepeaterApp(WSNApp):
     def __init__(self):
         self._buffer = set()
-        self.interval = 3
+        self.interval = 0.2
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None

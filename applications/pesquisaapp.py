@@ -93,7 +93,7 @@ class BrokerProtocol(StandardApplicationComponent):
         
         try:
             self.factory.total_received_bytes = self.factory.total_received_bytes+int(sys.getsizeof(package))
-            msg = "Received Total - "+str(self.factory.total_received_bytes)+" Bytes"+" / "+" Just Received - "+str(sys.getsizeof(package))+" Bytes"
+            msg = "Received Total - "+str(self.factory.total_received_bytes)+" Bytes\nJust Received - "+str(sys.getsizeof(package))+" Bytes\n\n\n"
             self.update_alert_message_on_screen(msg)
 
         except Exception as e:
