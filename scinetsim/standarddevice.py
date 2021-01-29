@@ -168,7 +168,8 @@ class Connection(object):
         x2 = self.device2.visual_component.x
         y2 = self.device2.visual_component.y
         self.id = self.simulation_core.canvas.create_line(x1,y1,x2,y2,arrow="both", width=1, dash=(4,2))
-        self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
+        # The follow line was commented be cause it makes a recursive call wich crashes the tcp conection - Rafael Sampaio
+        # self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
 
     def update_connection_arrow(self,event):
         self.simulation_core.canvas.delete(self.id)
