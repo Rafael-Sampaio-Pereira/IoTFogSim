@@ -157,7 +157,7 @@ class SensorApp(WSNApp):
 
         # self._blink_signal()
         # collecting data - Rafael Sampaio
-        data = distribution_secundary_voltage_fluctuation_meter()
+        data = distribution_secundary_voltage_fluctuation_meter_new_version()
 
         # Creating a new package - Rafael Sampaio
         pack = WSNPackage(source = self, data = data)

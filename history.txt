@@ -1,1 +1,0 @@
-03-06-2020 - [change] Now client and server (found at nodes.js file) refers to devices that uses real socket connection.

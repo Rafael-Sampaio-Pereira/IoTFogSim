@@ -1,0 +1,4 @@
+
+- COMMAND TO SAVE TCP PACKETS RELATEDS TO THE 127.0.0.1:5100 HOST AND PORT:
+
+    sudo tcpdump -i any -nn -A -w fog_received.pcap host 127.0.0.1 and port 5100 
