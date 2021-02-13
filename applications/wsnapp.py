@@ -157,7 +157,10 @@ class SensorApp(WSNApp):
 
         # self._blink_signal()
         # collecting data - Rafael Sampaio
-        data = distribution_secundary_voltage_fluctuation_meter_new_version()
+        voltage = distribution_secundary_voltage_fluctuation_meter_new_version()
+        frequency = energy_60hz_frequency_meter()
+
+        data = "{{'voltage': {}, 'frequency':{}}}".format(voltage, frequency)
 
         # Creating a new package - Rafael Sampaio
         pack = WSNPackage(source = self, data = data)
@@ -383,7 +386,7 @@ class WSNPackage(object):
         package = {
             "id": str(self.id),
             "source": self.source.name,
-            "data": self.data,
+            "data": json.loads(self.data),
             "created_at": self.created_at
         }
 
