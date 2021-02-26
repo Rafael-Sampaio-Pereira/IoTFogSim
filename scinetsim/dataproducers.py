@@ -5,8 +5,25 @@ def energy_consumption_meter():
     return str(round(random.uniform(2.5,22.5), 2))+" Kwh"
 
 def energy_60hz_frequency_meter():
-    # ANEEL Prodist shows that suitable values for frequenci in a 60 hz system, come from 59,9 Hz to 60,1 Hz
+    # ANEEL Prodist shows that suitable values for frequency in a 60 hz system, come from 59,9 Hz to 60,1 Hz - Rafael Sampaio
     return str(random.choice([59.9, 60.0, 60.1]))+"Hz"
+
+def energy_power_factor_meter():
+    # ANEEL Prodist shows that suitable values for power factor  come from 0.92 to 1 - Rafael Sampaio
+    return str(round(random.uniform(0.92, 1.0),2))
+
+
+def energy_distribution_active_and_aparent_power_meter(voltage, current):
+    # we consider a 300 KVA distribustion transformer - Rafael Sampaio
+    aparent_power = str(300)+"KVA"
+    voltage = float(voltage.replace('V','')) or 0
+    current = float(current.replace('A','')) or 0 
+    power = round(((voltage*current)/1000),2)
+    active_power = str(power) +"KW"
+    return active_power, aparent_power
+
+def energy_distribution_current_meter():
+    return str(round(random.uniform(1000.00, 1300.00),2))+"A"
 
 
 def distribution_secundary_voltage_fluctuation_meter():
@@ -30,7 +47,7 @@ def distribution_secundary_voltage_fluctuation_meter():
     weights = [60, 40]
     readed_value = choices(population, weights, k=1)
 
-    return str(readed_value[0])+"v"
+    return str(readed_value[0])+"V"
 
 
 
@@ -45,4 +62,4 @@ def distribution_secundary_voltage_fluctuation_meter_new_version():
     weights = [60, 40]
     readed_value = choices(population, weights, k=1)
 
-    return str(readed_value[0])+"v"
+    return str(readed_value[0])+"V"

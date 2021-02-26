@@ -51,7 +51,7 @@ class StandardApplicationComponent(protocol.Protocol):
                 packages = package.replace("}{","},{")
 
                 packages = json.dumps(packages)
-                print("um pacote vai ser dropado, infelizmente ", packages)
+                print("MQTT - um pacote vai ser dropado, infelizmente ", packages)
                 # print(packages[0])
                 json_msg = json.loads(packages[0])
 
@@ -60,7 +60,7 @@ class StandardApplicationComponent(protocol.Protocol):
                 
                 packages = package.split("\n")
                 
-                print("um ou mais pacotes vão ser dropados, infelizmente ")
+                print("TCP - um ou mais pacotes vão ser dropados, infelizmente ")
             
                 json_msg = json.loads(packages[0])
              

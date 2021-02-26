@@ -39,7 +39,7 @@ def configure_logger(log_file_path, project_name):
 
 
 
-def create_csv_database_file(simulation_core):
+def create_csv_database_file(simulation_core, description=""):
     from datetime import datetime, date
     import os
 
@@ -48,7 +48,7 @@ def create_csv_database_file(simulation_core):
     # create databases directoy if it not exist - Rafael Sampaio
     os.makedirs(file_path+"/databases/", exist_ok=True)
     temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
-    file = file_path+"/databases/"+simulation_core.project_name+temp+".csv"
+    file = file_path+"/databases/"+simulation_core.project_name+temp+"_"+description+".csv"
     database = open(file, 'a')
 
     return database

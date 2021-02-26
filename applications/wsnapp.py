@@ -22,20 +22,6 @@ class WSNApp(StandardApplicationComponent):
         self.visual_component = None
         self.nearby_devices_list = None
 
-    # def propagate_signal(self):
-    #     self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-    #     # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-    #     if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-    #         # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-    #         self.visual_component.signal_radius += 10
-    #         self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-    #     else:
-    #         # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline = "")
-    #         self.visual_component.signal_radius = 10
-        
-    #     reactor.callLater(0.1, self.propagate_signal)
-
     def show_signal(self):
         self.visual_component.signal_radius = self.visual_component.coverage_area_radius
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
@@ -45,14 +31,6 @@ class WSNApp(StandardApplicationComponent):
                                             self.visual_component.x-self.visual_component.signal_radius, 
                                             self.visual_component.y-self.visual_component.signal_radius)
 
-
-    # def blink_signal(self, control):
-    #     if control%2 == 0:
-    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-    #     else:
-    #         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
-        
-    #     reactor.callLater(1, self.blink_signal, control+1)
 
     def set_signal_radius(self, radius):
         self.visual_component.signal_radius = radius
@@ -67,15 +45,6 @@ class WSNApp(StandardApplicationComponent):
 
     def _blink_signal(self):
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
-        # reactor.callLater(0.1, self.set_signal_radius, radius=10)
-        # reactor.callLater(0.2, self.set_signal_radius, radius=20)
-        # # reactor.callLater(0.3, self.set_signal_radius, radius=30)
-        # reactor.callLater(0.4, self.set_signal_radius, radius=40)
-        # # reactor.callLater(0.5, self.set_signal_radius, radius=50)
-        # reactor.callLater(0.6, self.set_signal_radius, radius=60)
-        # # reactor.callLater(0.7, self.set_signal_radius, radius=70)
-        # reactor.callLater(0.8, self.set_signal_radius, radius=80)
-        # # reactor.callLater(0.9, self.set_signal_radius, radius=90)
         self.simulation_core.canvas.after(15, self.set_signal_radius, self.visual_component.coverage_area_radius/10)
         self.simulation_core.canvas.after(25, self.set_signal_radius, self.visual_component.coverage_area_radius/9)
         self.simulation_core.canvas.after(35, self.set_signal_radius, self.visual_component.coverage_area_radius/8)
@@ -143,10 +112,6 @@ class SensorApp(WSNApp):
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
-        # self.propagate_signal()
-        # self.show_signal()
-        # self._propagate_signal()
-        # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
 
         # self.collect_and_send_data()
@@ -159,8 +124,11 @@ class SensorApp(WSNApp):
         # collecting data - Rafael Sampaio
         voltage = distribution_secundary_voltage_fluctuation_meter_new_version()
         frequency = energy_60hz_frequency_meter()
+        power_factor = energy_power_factor_meter()
+        current = energy_distribution_current_meter()
+        active_power, aparent_power = energy_distribution_active_and_aparent_power_meter(voltage,current)
 
-        data = "{{'voltage': {}, 'frequency':{}}}".format(voltage, frequency)
+        data = '{"voltage": "'+voltage+'", "current": "'+current+'", "frequency": "'+frequency+'", "active_power": "'+active_power+'", "aparent_power": "'+aparent_power+'", "power_factor": "'+power_factor+'"}'
 
         # Creating a new package - Rafael Sampaio
         pack = WSNPackage(source = self, data = data)
@@ -170,8 +138,6 @@ class SensorApp(WSNApp):
 
         # putting data in device buffer - Rafael Sampaio
         self._buffer.add(pack)
-
-        
 
 
         def remove_sent_packages_from_buffer(_package):
@@ -184,14 +150,8 @@ class SensorApp(WSNApp):
             # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
             for _package in self.temp_buffer:
                 self.forward_package(_package)
-                
                 remove_sent_packages_from_buffer(_package)
 
-
-                # O FATO DE OS PACOTES SEREM REAPASADOS(forward_package) AQUI PODE CAUSAR ATRASO NA ENTREGA DE UM
-                # PACOTE JÁ QUE ELE ESPERA O TEMPO DE COLETA PRA REPASSAR PACOTES DTERCEIROS JUNTAMENTE COM OS SEUS
-    
-        # reactor.callLater(self.interval, self.collect_and_send_data)
 
     def forward_package(self, package):
 
@@ -208,8 +168,6 @@ class SensorApp(WSNApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-
-                        # self.draw_connection_arrow(destiny)
 
                         reactor.callFromThread(self.draw_connection_arrow, destiny)
                         self.simulation_core.canvas.update()
@@ -243,9 +201,6 @@ class SinkApp(WSNApp):
         self.source_port = None
 
     def start(self, nearby_devices_list):
-        #self.propagate_signal()
-        # self.show_signal()
-        # self.blink_signal(1)
         self.connect_to_gateway()
         self.configure_source_info()
         
@@ -288,8 +243,7 @@ class SinkApp(WSNApp):
                 # forwarding packages to the gateway - Rafael Sampaio
                 for wsn_package in self._buffer.copy():
 
-
-                    data += '{ "id": "' + str(wsn_package.id) + '", "source": "' + wsn_package.source.name + '", "data": "' + wsn_package.data + '", "created_at": "' + wsn_package.created_at + '" },'
+                    data += '{ "id": "' + str(wsn_package.id) + '", "source": "' + wsn_package.source.name + '", "data": ' + wsn_package.data + ', "created_at": "' + wsn_package.created_at + '" },'
                     self._buffer.remove(wsn_package)
 
 
@@ -309,9 +263,7 @@ class SinkApp(WSNApp):
 
                 # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
                 self.sink_factory.running_protocol.send(mqtt_package)
-                
-        
-        # reactor.callLater(5, self.forward_packages)
+
 
     def verify_buffer(self):
         if len(self._buffer) > 0:
@@ -378,7 +330,6 @@ class WSNPackage(object):
         self.created_at = datetime.now().isoformat()
 
 
-
     def get_package_as_json(self):
         
         all_destiny_names = ''
@@ -390,7 +341,11 @@ class WSNPackage(object):
             "created_at": self.created_at
         }
 
+        
+
         package = json.dumps(package)
+
+        print(package)
 
         return package
 
@@ -418,126 +373,6 @@ class WSNPackage(object):
 
 
 
-class SCADAApp(StandardApplicationComponent):
-    # This SCADA App is based on the simple mqtt subscriber App - Rafael Sampaio
-    
-    def __init__(self):
-        self.visual_component = None
-        self.simulation_core =  None
-        self.screen_name = None
-
-        self.source_addr = None
-        self.source_port = None
-
-        self.destiny_addr = "127.0.0.1"
-        self.destiny_port = 5100 
-
-        self.gateway_addr = "127.0.0.1"
-        self.gateway_port = 8081
-
-        
-
-        self._buffer = []
-
-        self.network_settings = "tcp:{}:{}".format(self.gateway_addr,self.gateway_port)
-
-    def connectionMade(self):
-        # creating and opening a csv database file - Rafael Sampaio
-        self.database = create_csv_database_file(self.simulation_core)
-
-        self.screen_name = "\n\n      SCADA\n"+self.transport.getHost().host+":"+str(self.transport.getHost().port)
-        self.simulation_core.updateEventsCounter(self.screen_name+" - Connected to mqtt broker")
-        self.source_addr = self.transport.getHost().host
-        self.source_port = self.transport.getHost().port
-        # After connect, send the subscribe request - Rafael Sampaio
-        self.subscribe()
-        self.update_name_on_screen(self.screen_name)
-        self.save_protocol_in_simulation_core(self) 
-
-        self.create_connection_animation()
-
-        # self.save_to_database()
-        LoopingCall(self.save_to_database).start(32.0)  
-
-    def subscribe(self):
-                
-        msg = {
-                "action": "subscribe",
-                "topic": "sensor_metering",
-                "content": "None"
-            }
-
-        self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT SUBSCRIBE REQUEST")
-        package = self.build_package(msg)
-        self.send(package)
-
-    def dataReceived(self, data):
-        self.put_package_in_buffer(data)
-
-
-    def extract_energy_content(self, payload):
-        pass
-
-    def save_to_database(self):
-
-        try:
-            if self.verify_buffer():
-                
-                for package in self._buffer.copy():
-                    destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package) 
-                                        
-                    payload = json.dumps(payload)
-                    
-                    if payload.startswith('{'):
-
-                        payload = json.loads(payload)
-
-                        to_file = ""
-
-                        # extract energy content - Rafael Sampaio
-                        for obj in payload['content']:
-                            to_file = obj['id']+","+obj['source']+","+ obj['data']+","+ obj['created_at']+","+"stored_at:"+datetime.now().isoformat()
-                            
-                            print(to_file, file = self.database, flush=True)
-
-                            
-
-                        # Print the received data on the sreen.  - Rafael Sampaio
-                        # self.update_alert_message_on_screen(payload['content'])
-
-                        format = "%d/%m/%Y - %H:%M:%S"
-                        now = datetime.now()
-                        now = now.strftime(format)
-
-                        # Print  on the sreen the last time that received any data.  - Rafael Sampaio
-                        self.update_alert_message_on_screen("Last received:"+now)
-
-                        self._buffer.remove(package)
-                    
-                    else:
-                        # Print the received data on the sreen.  - Rafael Sampaio
-                        self.update_alert_message_on_screen(payload)
-
-                        self._buffer.remove(package)
-                
-                self.simulation_core.updateEventsCounter("SCADA - Saving to the database.")
-
-
-        except Exception as e:
-            log.msg(e)
-        
-        # reactor.callLater(1, self.save_to_database)
-
-
-    def verify_buffer(self):
-        if len(self._buffer) > 0:
-            return True
-        else:
-            return False 
-
-
-
-
 class RepeaterApp(WSNApp):
     def __init__(self):
         self._buffer = set()
@@ -550,12 +385,7 @@ class RepeaterApp(WSNApp):
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
-        #self.propagate_signal()
-        # self.show_signal()
-        # self.blink_signal(1)
         self.print_node_connections(nearby_devices_list)
-
-        # self.route_packages()
         LoopingCall(self.route_packages).start(self.interval)
 
 
@@ -592,8 +422,6 @@ class RepeaterApp(WSNApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-                        # self.draw_connection_arrow(destiny)
-
                         reactor.callFromThread(self.draw_connection_arrow, destiny)
                         self.simulation_core.canvas.update()
 
@@ -603,6 +431,5 @@ class RepeaterApp(WSNApp):
                         destiny.application._buffer.add(package)
                         
                         package.put_in_trace(destiny)
-                        #package.print_trace()
-
+  
                         self.simulation_core.updateEventsCounter("wsn repeater node routing data")

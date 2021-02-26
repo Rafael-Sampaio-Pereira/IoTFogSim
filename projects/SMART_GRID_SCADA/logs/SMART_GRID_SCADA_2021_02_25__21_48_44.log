@@ -1,0 +1,69 @@
+2021-02-25T21:48:44-0300 [-] Creating router ...
+2021-02-25T21:48:44-0300 [-] Initializing Router - Number of events: 1
+2021-02-25T21:48:44-0300 [-] Initializing Server - Number of events: 2
+2021-02-25T21:48:44-0300 [-] Initializing Client - Number of events: 3
+2021-02-25T21:48:45-0300 [-] Initializing sink node - Number of events: 4
+2021-02-25T21:48:45-0300 [-] Initializing sensor node - Number of events: 5
+2021-02-25T21:48:46-0300 [-] Initializing sensor node - Number of events: 6
+2021-02-25T21:48:46-0300 [-] Initializing repeater node - Number of events: 7
+2021-02-25T21:48:47-0300 [-] Initializing repeater node - Number of events: 8
+2021-02-25T21:48:52-0300 [-] RouterFactory starting on 8081
+2021-02-25T21:48:52-0300 [-] BrokerFactory starting on 5100
+2021-02-25T21:48:52-0300 [stdout#info] ========= sensor_2 ==========
+2021-02-25T21:48:52-0300 [stdout#info] sensor_2  <------->  wsn_sink
+2021-02-25T21:48:52-0300 [stdout#info] sensor_2  <------->  sensor_1
+2021-02-25T21:48:52-0300 [stdout#info] sensor_2  <------->  wsn_repeater_1
+2021-02-25T21:48:52-0300 [stdout#info] =============================
+2021-02-25T21:48:52-0300 [-] wsn node send data - Number of events: 9
+2021-02-25T21:48:52-0300 [-] wsn node send data - Number of events: 10
+2021-02-25T21:48:52-0300 [-] wsn node send data - Number of events: 11
+2021-02-25T21:48:52-0300 [stdout#info] ========= sensor_1 ==========
+2021-02-25T21:48:52-0300 [stdout#info] sensor_1  <------->  sensor_2
+2021-02-25T21:48:52-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2021-02-25T21:48:52-0300 [stdout#info] =============================
+2021-02-25T21:48:52-0300 [-] wsn node send data - Number of events: 12
+2021-02-25T21:48:52-0300 [-] wsn node send data - Number of events: 13
+2021-02-25T21:48:52-0300 [stdout#info] ========= wsn_repeater_2 ==========
+2021-02-25T21:48:52-0300 [stdout#info] =============================
+2021-02-25T21:48:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-25T21:48:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-25T21:48:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-25T21:48:52-0300 [Uninitialized] 
+	
+	      SCADA
+	127.0.0.1:53768 - Connected to mqtt broker - Number of events: 14
+2021-02-25T21:48:52-0300 [Uninitialized] 
+	
+	      SCADA
+	127.0.0.1:53768 - sending MQTT SUBSCRIBE REQUEST - Number of events: 15
+2021-02-25T21:48:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b910f0>
+2021-02-25T21:48:53-0300 [stdout#info] ========= wsn_repeater_1 ==========
+2021-02-25T21:48:53-0300 [stdout#info] wsn_repeater_1  <------->  sensor_2
+2021-02-25T21:48:53-0300 [stdout#info] =============================
+2021-02-25T21:48:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b770f0>
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 16
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 17
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 18
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 19
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 20
+2021-02-25T21:49:22-0300 [-] wsn node send data - Number of events: 21
+2021-02-25T21:49:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b772e8>
+2021-02-25T21:49:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b770f0>
+2021-02-25T21:49:24-0300 [-] SCADA - Saving to the database. - Number of events: 22
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 23
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 24
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 25
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 26
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 27
+2021-02-25T21:49:52-0300 [-] wsn node send data - Number of events: 28
+2021-02-25T21:49:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b77b70>
+2021-02-25T21:49:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b772e8>
+2021-02-25T21:49:56-0300 [-] SCADA - Saving to the database. - Number of events: 29
+2021-02-25T21:50:00-0300 [-] Received SIGINT, shutting down.
+2021-02-25T21:50:00-0300 [applications.smartgridapp.BrokerFactory] (TCP Port 5100 Closed)
+2021-02-25T21:50:00-0300 [SCADAApp,client] connection lost: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2021-02-25T21:50:00-0300 [SCADAApp,client] connection lost - Number of events: 30
+2021-02-25T21:50:00-0300 [applications.routerapp.RouterFactory] (TCP Port 8081 Closed)
+2021-02-25T21:50:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b77b70>
+2021-02-25T21:50:00-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7f10b3b910f0>
+2021-02-25T21:50:00-0300 [-] Main loop terminated.

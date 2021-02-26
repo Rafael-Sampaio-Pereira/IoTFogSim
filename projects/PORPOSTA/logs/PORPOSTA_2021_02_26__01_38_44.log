@@ -1,0 +1,209 @@
+2021-02-26T01:38:44-0300 [-] Creating router ...
+2021-02-26T01:38:44-0300 [-] Initializing Router - Number of events: 1
+2021-02-26T01:38:44-0300 [-] Initializing Server - Number of events: 2
+2021-02-26T01:38:44-0300 [-] Initializing Client - Number of events: 3
+2021-02-26T01:38:44-0300 [-] Initializing sink node - Number of events: 4
+2021-02-26T01:38:44-0300 [-] Initializing sensor node - Number of events: 5
+2021-02-26T01:38:45-0300 [-] Initializing sensor node - Number of events: 6
+2021-02-26T01:38:45-0300 [-] Initializing repeater node - Number of events: 7
+2021-02-26T01:38:46-0300 [-] Initializing repeater node - Number of events: 8
+2021-02-26T01:38:52-0300 [-] RouterFactory starting on 8081
+2021-02-26T01:38:52-0300 [-] BrokerFactory starting on 5100
+2021-02-26T01:38:52-0300 [stdout#info] ========= sensor_2 ==========
+2021-02-26T01:38:52-0300 [stdout#info] sensor_2  <------->  wsn_repeater_1
+2021-02-26T01:38:52-0300 [stdout#info] sensor_2  <------->  sensor_1
+2021-02-26T01:38:52-0300 [stdout#info] sensor_2  <------->  wsn_sink
+2021-02-26T01:38:52-0300 [stdout#info] =============================
+2021-02-26T01:38:52-0300 [-] wsn node send data - Number of events: 9
+2021-02-26T01:38:52-0300 [-] wsn node send data - Number of events: 10
+2021-02-26T01:38:52-0300 [-] wsn node send data - Number of events: 11
+2021-02-26T01:38:52-0300 [stdout#info] ========= sensor_1 ==========
+2021-02-26T01:38:52-0300 [stdout#info] sensor_1  <------->  sensor_2
+2021-02-26T01:38:52-0300 [stdout#info] sensor_1  <------->  wsn_sink
+2021-02-26T01:38:52-0300 [stdout#info] =============================
+2021-02-26T01:38:52-0300 [-] wsn node send data - Number of events: 12
+2021-02-26T01:38:52-0300 [-] wsn node send data - Number of events: 13
+2021-02-26T01:38:52-0300 [stdout#info] ========= wsn_repeater_2 ==========
+2021-02-26T01:38:52-0300 [stdout#info] =============================
+2021-02-26T01:38:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-26T01:38:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-26T01:38:52-0300 [stdout#info] This divice have no simulation core instance
+2021-02-26T01:38:52-0300 [Uninitialized] 
+	
+	      SCADA
+	127.0.0.1:58450 - Connected to mqtt broker - Number of events: 14
+2021-02-26T01:38:52-0300 [Uninitialized] 
+	
+	      SCADA
+	127.0.0.1:58450 - sending MQTT SUBSCRIBE REQUEST - Number of events: 15
+2021-02-26T01:38:52-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae5cf28>
+2021-02-26T01:38:52-0300 [stdout#info] ========= wsn_repeater_1 ==========
+2021-02-26T01:38:52-0300 [stdout#info] wsn_repeater_1  <------->  sensor_2
+2021-02-26T01:38:52-0300 [stdout#info] =============================
+2021-02-26T01:38:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae57a90>
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 16
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 17
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 18
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 19
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 20
+2021-02-26T01:39:22-0300 [-] wsn node send data - Number of events: 21
+2021-02-26T01:39:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6b860>
+2021-02-26T01:39:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae57a90>
+2021-02-26T01:39:24-0300 [stdout#info] AQUI 0
+2021-02-26T01:39:24-0300 [stdout#info] AQUI 2
+2021-02-26T01:39:24-0300 [stdout#info] AQUI 2
+2021-02-26T01:39:24-0300 [-] SCADA - Saving to the database. - Number of events: 22
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 23
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 24
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 25
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 26
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 27
+2021-02-26T01:39:52-0300 [-] wsn node send data - Number of events: 28
+2021-02-26T01:39:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae579b0>
+2021-02-26T01:39:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6b860>
+2021-02-26T01:39:56-0300 [stdout#info] AQUI 0
+2021-02-26T01:39:56-0300 [stdout#info] AQUI 2
+2021-02-26T01:39:56-0300 [stdout#info] AQUI 2
+2021-02-26T01:39:56-0300 [-] SCADA - Saving to the database. - Number of events: 29
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 30
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 31
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 32
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 33
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 34
+2021-02-26T01:40:22-0300 [-] wsn node send data - Number of events: 35
+2021-02-26T01:40:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bbe0>
+2021-02-26T01:40:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae579b0>
+2021-02-26T01:40:28-0300 [stdout#info] AQUI 0
+2021-02-26T01:40:28-0300 [stdout#info] AQUI 2
+2021-02-26T01:40:28-0300 [stdout#info] AQUI 2
+2021-02-26T01:40:28-0300 [stdout#info] AQUI 2
+2021-02-26T01:40:28-0300 [stdout#info] AQUI 2
+2021-02-26T01:40:28-0300 [-] SCADA - Saving to the database. - Number of events: 36
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 37
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 38
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 39
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 40
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 41
+2021-02-26T01:40:52-0300 [-] wsn node send data - Number of events: 42
+2021-02-26T01:40:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bb38>
+2021-02-26T01:40:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bbe0>
+2021-02-26T01:41:00-0300 [stdout#info] AQUI 0
+2021-02-26T01:41:00-0300 [stdout#info] AQUI 2
+2021-02-26T01:41:00-0300 [stdout#info] AQUI 2
+2021-02-26T01:41:00-0300 [-] SCADA - Saving to the database. - Number of events: 43
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 44
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 45
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 46
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 47
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 48
+2021-02-26T01:41:22-0300 [-] wsn node send data - Number of events: 49
+2021-02-26T01:41:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bc88>
+2021-02-26T01:41:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bb38>
+2021-02-26T01:41:32-0300 [stdout#info] AQUI 0
+2021-02-26T01:41:32-0300 [stdout#info] AQUI 2
+2021-02-26T01:41:32-0300 [stdout#info] AQUI 2
+2021-02-26T01:41:32-0300 [-] SCADA - Saving to the database. - Number of events: 50
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 51
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 52
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 53
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 54
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 55
+2021-02-26T01:41:52-0300 [-] wsn node send data - Number of events: 56
+2021-02-26T01:41:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae57320>
+2021-02-26T01:41:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae6bc88>
+2021-02-26T01:42:04-0300 [stdout#info] AQUI 0
+2021-02-26T01:42:04-0300 [stdout#info] AQUI 2
+2021-02-26T01:42:04-0300 [stdout#info] AQUI 2
+2021-02-26T01:42:04-0300 [-] SCADA - Saving to the database. - Number of events: 57
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 58
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 59
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 60
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 61
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 62
+2021-02-26T01:42:22-0300 [-] wsn node send data - Number of events: 63
+2021-02-26T01:42:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7e9b0>
+2021-02-26T01:42:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae57320>
+2021-02-26T01:42:36-0300 [stdout#info] AQUI 0
+2021-02-26T01:42:36-0300 [stdout#info] AQUI 2
+2021-02-26T01:42:36-0300 [stdout#info] AQUI 2
+2021-02-26T01:42:36-0300 [-] SCADA - Saving to the database. - Number of events: 64
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 65
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 66
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 67
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 68
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 69
+2021-02-26T01:42:52-0300 [-] wsn node send data - Number of events: 70
+2021-02-26T01:42:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ea90>
+2021-02-26T01:42:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7e9b0>
+2021-02-26T01:43:08-0300 [stdout#info] AQUI 0
+2021-02-26T01:43:08-0300 [stdout#info] AQUI 2
+2021-02-26T01:43:08-0300 [stdout#info] AQUI 2
+2021-02-26T01:43:08-0300 [-] SCADA - Saving to the database. - Number of events: 71
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 72
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 73
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 74
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 75
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 76
+2021-02-26T01:43:22-0300 [-] wsn node send data - Number of events: 77
+2021-02-26T01:43:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ebe0>
+2021-02-26T01:43:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ea90>
+2021-02-26T01:43:40-0300 [stdout#info] AQUI 0
+2021-02-26T01:43:40-0300 [stdout#info] AQUI 2
+2021-02-26T01:43:40-0300 [stdout#info] AQUI 2
+2021-02-26T01:43:40-0300 [-] SCADA - Saving to the database. - Number of events: 78
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 79
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 80
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 81
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 82
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 83
+2021-02-26T01:43:52-0300 [-] wsn node send data - Number of events: 84
+2021-02-26T01:43:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ee80>
+2021-02-26T01:43:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ebe0>
+2021-02-26T01:44:12-0300 [stdout#info] AQUI 0
+2021-02-26T01:44:12-0300 [stdout#info] AQUI 2
+2021-02-26T01:44:12-0300 [stdout#info] AQUI 2
+2021-02-26T01:44:12-0300 [-] SCADA - Saving to the database. - Number of events: 85
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 86
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 87
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 88
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 89
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 90
+2021-02-26T01:44:22-0300 [-] wsn node send data - Number of events: 91
+2021-02-26T01:44:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8dda0>
+2021-02-26T01:44:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae7ee80>
+2021-02-26T01:44:44-0300 [stdout#info] AQUI 0
+2021-02-26T01:44:44-0300 [stdout#info] AQUI 2
+2021-02-26T01:44:44-0300 [stdout#info] AQUI 2
+2021-02-26T01:44:44-0300 [-] SCADA - Saving to the database. - Number of events: 92
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 93
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 94
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 95
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 96
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 97
+2021-02-26T01:44:52-0300 [-] wsn node send data - Number of events: 98
+2021-02-26T01:44:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8da58>
+2021-02-26T01:44:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8dda0>
+2021-02-26T01:45:16-0300 [stdout#info] AQUI 0
+2021-02-26T01:45:16-0300 [stdout#info] AQUI 2
+2021-02-26T01:45:16-0300 [stdout#info] AQUI 2
+2021-02-26T01:45:16-0300 [-] SCADA - Saving to the database. - Number of events: 99
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 100
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 101
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 102
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 103
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 104
+2021-02-26T01:45:22-0300 [-] wsn node send data - Number of events: 105
+2021-02-26T01:45:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8da20>
+2021-02-26T01:45:23-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8da58>
+2021-02-26T01:45:48-0300 [stdout#info] AQUI 0
+2021-02-26T01:45:48-0300 [stdout#info] AQUI 2
+2021-02-26T01:45:48-0300 [stdout#info] AQUI 2
+2021-02-26T01:45:48-0300 [-] SCADA - Saving to the database. - Number of events: 106
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 107
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 108
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 109
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 110
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 111
+2021-02-26T01:45:52-0300 [-] wsn node send data - Number of events: 112
+2021-02-26T01:45:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Starting factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8d048>
+2021-02-26T01:45:53-0300 [twisted.internet.endpoints.OneShotFactory#info] Stopping factory <twisted.internet.endpoints.connectProtocol.<locals>.OneShotFactory object at 0x7fd20ae8da20>

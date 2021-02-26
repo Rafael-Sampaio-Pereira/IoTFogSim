@@ -17,7 +17,7 @@ def get_total_size_from_pcap_file(file_path, label):
         try:
             (header, payload) = reader.next()
             total_packet_size = total_packet_size+header.getlen()
-            print(payload)
+            
         except pcapy.PcapError:
             break
     total_size = bitmath.Byte(bytes=total_packet_size).best_prefix().format("{value:.2f} {unit}")
