@@ -50,5 +50,5 @@ def create_csv_database_file(simulation_core, description=""):
     temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
     file = file_path+"/databases/"+simulation_core.project_name+temp+"_"+description+".csv"
     database = open(file, 'a')
-
+ 
     return database
