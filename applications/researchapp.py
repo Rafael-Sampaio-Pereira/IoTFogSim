@@ -18,19 +18,20 @@ from timeit import default_timer as timer
 from datetime import timedelta
 from datetime import datetime, date
 import os
-
+import random
+import time
 import schedule
 
-# 600.0 == 10 min / 900.0 == 15 min
+# 300.0 == 5 min / 600.0 == 10 min / 900.0 == 15 min
 simulation_duaration = 3660.0
 
 #==================================||
 
-read_interval = 900.0
+read_interval = 600.0
 # read_interval = 300.0
 
-algorithm = "proposta"
-# algorithm == "baseline"
+# algorithm = "proposta"
+algorithm = "baseline"
 
 #==================================||
 
@@ -344,6 +345,8 @@ class SCADAResearchApp(StandardApplicationComponent):
     def dataReceived(self, data):
         # prevent the SCADA to save packages such as "mqtt ack" to the buffer, due it dont has any measure compressed value - Rafael Sampaio 
         if not data.startswith(b'{"destin'):
+            # simulating latency - Rafael Sampaio
+            simulate_5g_latency_for_smart_grids()
             # saving the received time to the csv file - Rafael Sampaio
             print(datetime.now().isoformat()+","+str(data)[0:10]+" ... "+str(data)[-10:], file = self.receive_time_file, flush=True)  
 
@@ -525,3 +528,16 @@ def get_real_data_size_in_kilobytes(data):
 
 
 
+def simulate_5g_latency_for_smart_grids():
+    # the paper "A Survey on Low Latency Towards 5G: RAN, Core Network and Caching Solutions"(Parvaez, 2017) shows that
+    # latency requirements for smart grids under 5g networks is between 1 and 20ms - Rafael Sampaio
+    
+    suitable_latency_values = []
+    for i in range(1000):
+        x = random.gammavariate(0.001, 0.02)
+        x = round(x,2)     
+
+        suitable_latency_values.append(x)
+    
+    latency = random.choice(suitable_latency_values)
+    time.sleep(latency)

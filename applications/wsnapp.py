@@ -115,10 +115,12 @@ class SensorApp(WSNApp):
         self.print_node_connections(nearby_devices_list)
 
         # self.collect_and_send_data()
-        LoopingCall(self.collect_and_send_data).start(self.interval)
+        LoopingCall(self.collect_data).start(self.interval)
+        # all sensors forward/routes packages every seconds. its not data collection interval - Rafael Sampaio
+        LoopingCall(self.forward_packages).start(1.0)
 
 
-    def collect_and_send_data(self):
+    def collect_data(self):
 
         # self._blink_signal()
         # collecting data - Rafael Sampaio
@@ -140,6 +142,7 @@ class SensorApp(WSNApp):
         self._buffer.add(pack)
 
 
+    def forward_packages(self):
         def remove_sent_packages_from_buffer(_package):
             # after send, remove data from buffer - Rafael Sampaio    
             self._buffer.remove(_package)
