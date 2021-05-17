@@ -7,6 +7,8 @@ from tkinter import ALL, EventType
 import datetime
 from datetime import datetime
 
+import os.path
+
 import PIL
 from PIL import Image, ImageTk
 
@@ -17,10 +19,16 @@ class ScrollableScreen(tkinter.Frame):
         tkinter.Frame.__init__(self, root)
 
         # os.path.isfile(fname) 
+        bg_width = None
+        bg_height = None
+        background_image = None
 
         bg_image_path = "projects/"+project_name+"/bg_image.png"
-        background_image = PIL.Image.open(bg_image_path)
-        bg_width, bg_height = background_image.size
+        
+        # verify if the bg image exists - Rafael Sampaio
+        if os.path.isfile(bg_image_path):
+            background_image = PIL.Image.open(bg_image_path)
+            bg_width, bg_height = background_image.size
         
         root.update()
 
@@ -34,7 +42,8 @@ class ScrollableScreen(tkinter.Frame):
         # win_height = self.screen_h
 
         # background_image = background_image.resize((win_width, win_height))
-        background_image_tk = ImageTk.PhotoImage(background_image)
+        if background_image:
+            background_image_tk = ImageTk.PhotoImage(background_image)
 
 
         
@@ -44,9 +53,10 @@ class ScrollableScreen(tkinter.Frame):
 
         # Create a label to hold the background image.
         # canvas = Canvas(root, width=win_width, height=win_height)
-        self.canvas.place(x=0, y=0, anchor='nw')
-        self.canvas.create_image(0, 0, image=background_image_tk, anchor='nw')
-        self.canvas.image = background_image_tk
+        if background_image:
+            self.canvas.place(x=0, y=0, anchor='nw')
+            self.canvas.create_image(0, 0, image=background_image_tk, anchor='nw')
+            self.canvas.image = background_image_tk
 
 
 
