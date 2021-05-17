@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/rafael/scinetsim/vm"
+VIRTUAL_ENV="/home/rafael/core/vm"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

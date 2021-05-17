@@ -1,5 +1,5 @@
 
-from scinetsim.dataproducers import *
+from core.dataproducers import *
 from twisted.internet import reactor
 from twisted.internet.protocol import ClientFactory
 from twisted.python import log
@@ -9,7 +9,7 @@ import uuid
 import json
 import tkinter as tk
 from applications.applicationcomponent import StandardApplicationComponent
-from scinetsim.functions import create_csv_database_file
+from core.functions import create_csv_database_file
 from twisted.internet.task import LoopingCall
 from datetime import datetime
 from applications.mqttapp import extract_mqtt_contents

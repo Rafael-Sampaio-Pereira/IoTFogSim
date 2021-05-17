@@ -1,2 +1,2 @@
-# scinetsim
+# core
 

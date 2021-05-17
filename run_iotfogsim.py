@@ -8,8 +8,8 @@ import PIL
 from PIL import ImageTk, Image
 import random
 
-from scinetsim.configurations import config
-from scinetsim.configurations import  load_nodes
+from core.configurations import config
+from core.configurations import  load_nodes
 
 from threading import Thread
 

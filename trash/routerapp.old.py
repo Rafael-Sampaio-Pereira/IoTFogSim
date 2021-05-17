@@ -7,7 +7,7 @@ import time
 import codecs
 import json
 
-#from scinetsim.functions import extract_package_contents
+#from core.functions import extract_package_contents
 
 from applications.applicationcomponent import StandardApplicationComponent
 

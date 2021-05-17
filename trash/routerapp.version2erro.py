@@ -8,7 +8,7 @@ import time
 import codecs
 import json
 
-from scinetsim.networkcomponent import RouterNetworkComponent
+from core.networkcomponent import RouterNetworkComponent
 
 from applications.applicationcomponent import StandardApplicationComponent
 

@@ -2,7 +2,7 @@ from twisted.internet import protocol, reactor
 from twisted.python import log
 import json
 import codecs
-from scinetsim.standarddevice import Connection
+from core.standarddevice import Connection
 
 from twisted.internet.task import LoopingCall
 

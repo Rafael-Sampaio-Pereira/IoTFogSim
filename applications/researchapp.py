@@ -10,7 +10,7 @@ from twisted.protocols import basic
 from twisted.internet.task import LoopingCall
 from applications.applicationcomponent import StandardApplicationComponent
 
-from scinetsim.functions import create_csv_database_file
+from core.functions import create_csv_database_file
 
 from libs import lzw
 from libs import delta_encode as de

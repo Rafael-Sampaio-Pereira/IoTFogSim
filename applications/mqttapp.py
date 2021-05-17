@@ -12,7 +12,7 @@ from twisted.internet import reactor, protocol, endpoints
 from twisted.protocols import basic
 
 from applications.applicationcomponent import StandardApplicationComponent
-from scinetsim.dataproducers import energy_consumption_meter
+from core.dataproducers import energy_consumption_meter
 
 
 

@@ -1,4 +1,4 @@
-#!/home/rafael/scinetsim/vm/bin/python
+#!/home/rafael/core/vm/bin/python
 
 import sys
 import getopt
