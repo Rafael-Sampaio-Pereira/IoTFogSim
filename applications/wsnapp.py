@@ -103,7 +103,7 @@ class WSNApp(StandardApplicationComponent):
 class SensorApp(WSNApp):
     def __init__(self):
         self._buffer = set()
-        self.interval = 15.0
+        self.interval = 60.0
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None

@@ -27,11 +27,11 @@ simulation_duaration = 3660.0
 
 #==================================||
 
-read_interval = 600.0
-# read_interval = 300.0
+read_interval = 900.0
+# read_interval = 600.0
 
-# algorithm = "proposta"
-algorithm = "baseline"
+algorithm = "proposta"
+#algorithm = "baseline"
 
 #==================================||
 
