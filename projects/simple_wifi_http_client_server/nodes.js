@@ -11,7 +11,7 @@
                 "port": 8080,
                 "is_wireless": false,
                 "coverage_area_radius": 0,
-                "application": "applications.httpapp.HttpServerApp",
+                "application": "applications.httpapp.HTTPServerNewApp",
                 "x": 250,
                 "y": 175
             }

@@ -42,7 +42,7 @@ class StandardApplicationComponent(protocol.Protocol):
             package = str(package)[0:]
 
             #####################################################################################
-            # ESTE TRATAMENTOS SÃO PROVISORIOS ENQUANTO OS DISPOSITIVOS BASEADOS EM TWISTED NÃO #
+            # ESTES TRATAMENTOS SÃO PROVISORIOS ENQUANTO OS DISPOSITIVOS BASEADOS EM TWISTED NÃO #
             # ESTÃO ARMAZENADNO OS DADOS RECEBIDOS EM UM BUFFER 23/06/2020 - Rafael Sampaio     #
             #####################################################################################
 
