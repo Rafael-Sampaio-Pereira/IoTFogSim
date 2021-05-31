@@ -104,14 +104,17 @@ class StandardApplicationComponent(protocol.Protocol):
                     self._buffer.append(package)
 
     
-    def save_protocol_in_simulation_core(self, proto):
+    def save_protocol_in_simulation_core(self, proto, message=None):
         try:
             if self.simulation_core:
                 if self.simulation_core:
                     self.simulation_core.allProtocols.add(proto)
                     #print(self.simulation_core.allProtocols)
             else:
-                print("This divice have no simulation core instance")
+                if message:
+                    print("This divice have no simulation core instance - TRACK MESSAGE: "+str(message))
+                else:
+                    print("This divice have no simulation core instance")
         except NameError:
             log.msg("The requested simulation_core is no longer available")
         

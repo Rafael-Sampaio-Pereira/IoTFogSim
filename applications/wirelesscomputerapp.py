@@ -33,6 +33,8 @@ class WirelessComputerApp(StandardApplicationComponent):
         self.destiny_addr = '127.0.0.1'
         self.destiny_port = 8080
         main = LoopingCall(self.main_app)
+        # the client needs to wait a few seconds for the server start. If this not wait the connection arrow between router and server will not be draw.
+        time.sleep(1)
         main.start(0.1)  # run your own loop 10 times a second
 
     def main_app(self):

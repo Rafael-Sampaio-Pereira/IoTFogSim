@@ -154,27 +154,6 @@ def load_nodes(project_name, simulation_core):
 			################## LOADING FOG DEVICES - Rafael Sampaio ##################
 			
 
-			for router in data['fog']['routers']:
-    				
-				log.msg("Creating router ...")
-				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
-				simulation_core.allNodes.add(rt)
-				# time.sleep(interval)
-				# rt.run()
-
-				callID = reactor.callLater(interval, rt.run)
-				
-
-				for access_point in router['access_points']:
-						
-					log.msg("Creating AccessPoint station ...")
-
-					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
-					simulation_core.allNodes.add(ap)
-					# time.sleep(interval)
-					# ap.run()
-
-					callID = reactor.callLater(interval, ap.run)
 
 
 			for computer in data['fog']['wireless_computers']:
@@ -196,6 +175,31 @@ def load_nodes(project_name, simulation_core):
 
 
 				callID = reactor.callLater(interval, sr.run)
+
+
+			
+
+			for router in data['fog']['routers']:
+    				
+				log.msg("Creating router ...")
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
+				simulation_core.allNodes.add(rt)
+				# time.sleep(interval)
+				# rt.run()
+
+				callID = reactor.callLater(interval, rt.run)
+				
+
+				for access_point in router['access_points']:
+						
+					log.msg("Creating AccessPoint station ...")
+
+					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
+					simulation_core.allNodes.add(ap)
+					# time.sleep(interval)
+					# ap.run()
+
+					callID = reactor.callLater(interval, ap.run)
 
 				
 			
