@@ -92,13 +92,20 @@ def initialization_screen(simulation_core):
 
 			simulation_core.project_name = new_project_name
 
-			# creating the nodes.js file into the project directory - Rafael Sampaio
-			nodes_file = "projects/%s/nodes.js"%(new_project_name)
+			# creating the node.json file into the project directory - Rafael Sampaio
+			nodes_file = "projects/%s/nodes.json"%(new_project_name)
 			if not os.path.exists(nodes_file):
 				with open(nodes_file, 'w') as file:
 					print("{}", file=file)
+			
+			# creating the settings.json file into the project directory - Rafael Sampaio
+			settings_file = "projects/%s/settings.json"%(new_project_name)
+			if not os.path.exists(settings_file):
+				with open(settings_file, 'w') as file:
+					print('{"settings":{"resizeable": true}}', file=file)
 
-			simulation_core.create_simulation_canvas()
+			# default resizeable screen is true for new projects - Rafael Sampaio
+			simulation_core.create_simulation_canvas(resizeable=True)
 			load_nodes(new_project_name, simulation_core)
 			
 			window.destroy()
@@ -152,7 +159,7 @@ def load_nodes(project_name, simulation_core):
 	# Interval between nodes creation and nodes start(run)- Rafael Sampaio
 	interval=0.5
 
-	with open('projects/'+project_name+'/nodes.js', 'r') as nodes_file:
+	with open('projects/'+project_name+'/nodes.json', 'r') as nodes_file:
 		data = json.loads(nodes_file.read())
 		
 		if data:

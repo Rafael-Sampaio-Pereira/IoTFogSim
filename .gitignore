@@ -124,3 +124,5 @@ staticfiles/
 */logs/*
 */databases/*
 */experiments/*
+
+*.csv
