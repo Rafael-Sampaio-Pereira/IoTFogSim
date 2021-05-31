@@ -69,7 +69,13 @@ def initialization_screen(simulation_core):
 			log_path = "projects/"+selected_project_name+"/"
 			configure_logger(log_path, selected_project_name)
 
-			simulation_core.create_simulation_canvas()
+			resizable = None
+			with open('projects/'+selected_project_name+'/settings.json', 'r') as settings:
+				data = json.loads(settings.read())
+				settings = data['settings']
+				resizable = settings['resizeable']
+
+			simulation_core.create_simulation_canvas(resizable)
 			load_nodes(selected_project_name, simulation_core)
 			#load_connections(selected_project_name, simulation_core)
 

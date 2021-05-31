@@ -15,10 +15,9 @@ from PIL import Image, ImageTk
 
 
 class ScrollableScreen(tkinter.Frame):
-    def __init__(self, root, project_name):
+    def __init__(self, root, project_name, resizeable):
         tkinter.Frame.__init__(self, root)
 
-        # os.path.isfile(fname) 
         bg_width = None
         bg_height = None
         background_image = None
@@ -29,30 +28,33 @@ class ScrollableScreen(tkinter.Frame):
         if os.path.isfile(bg_image_path):
             background_image = PIL.Image.open(bg_image_path)
             bg_width, bg_height = background_image.size
+
+        print(bg_height)
         
         root.update()
 
         self.screen_w = bg_width or 2000
         self.screen_h = bg_height or 2000
 
+        
         # Resize the image to the constraints of the root window.
         win_width = int(root.winfo_width())
         win_height = int(root.winfo_height())
-        # win_width =  self.screen_w
-        # win_height = self.screen_h
 
-        # background_image = background_image.resize((win_width, win_height))
+
         if background_image:
             background_image_tk = ImageTk.PhotoImage(background_image)
 
-
+        if resizeable == False:
+            # configure window to the bg image size and desable the resize funciton - Rafael Sampaio
+            root.geometry(str(self.screen_w)+"x"+str(self.screen_h))
+            root.resizable(False, False)
         
         
         self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#159eba', highlightthickness=0)
 
 
         # Create a label to hold the background image.
-        # canvas = Canvas(root, width=win_width, height=win_height)
         if background_image:
             self.canvas.place(x=0, y=0, anchor='nw')
             self.canvas.create_image(0, 0, image=background_image_tk, anchor='nw')

@@ -168,7 +168,7 @@ class SimulationCore(object):
 
 		
 
-	def create_simulation_canvas(self):
+	def create_simulation_canvas(self, resizeable):
 			
 		# These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
 		window = tkinter.Toplevel()
@@ -182,7 +182,8 @@ class SimulationCore(object):
 		w_top_padding = 80
 		w_letf_padding = 100
 		window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
-		window.attributes("-fullscreen", True)
+		if resizeable != False:
+			window.attributes("-fullscreen", True)
 		window.iconify()
 
 		window.bind("<F11>", lambda event: window.attributes("-fullscreen",
@@ -201,7 +202,7 @@ class SimulationCore(object):
 		
 		
 		# Simulation area on screen. - Rafael Sampaio
-		self.simulation_screen = ScrollableScreen(window, self.project_name)
+		self.simulation_screen = ScrollableScreen(window, self.project_name, resizeable)
 		self.simulation_screen.pack(fill="both", expand=True)
 		canvas = self.simulation_screen.getCanvas()
 
