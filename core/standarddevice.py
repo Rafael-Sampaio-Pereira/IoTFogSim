@@ -12,6 +12,8 @@ from twisted.internet.endpoints import connectProtocol
 from core.iconsRegister import getIconFileName
 from core.functions import import_and_instantiate_class_from_string
 
+from bresenham import bresenham
+
 class StandardServerDevice(object):
     
     def __init__(self, simulation_core, port, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
@@ -171,6 +173,25 @@ class Connection(object):
         
         # The follow line was commented be cause it makes a recursive call wich crashes the tcp conection - Rafael Sampaio
         # self.simulation_core.canvas.after(10, self.update_connection_arrow, None)
+
+        self.ball = self.simulation_core.canvas.create_oval(x1, y1, x1+7, y1+7, fill="red")
+        self.all_coordinates = list(bresenham(x1, y1, x2,y2))
+        self.display_time = 9 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
+        self.package_speed = 1 # this must be interger and determines the velocity of the packet moving in the canvas - Rafael Sampaio
+
+        self.animate_package(x2,y2)
+
+
+    def animate_package(self, destiny_x, destiny_y):
+        cont = 100
+        for x, y in self.all_coordinates:
+            # verify if package ball just got its destiny - Rafael Sampaio
+            if x == destiny_x and y == destiny_y:
+                self.simulation_core.canvas.after(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+
+            self.simulation_core.canvas.after(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7) # 7 is the package ball size - Rafael Sampaio
+            cont = cont + self.package_speed
+
 
     def update_connection_arrow(self,event):
         self.simulation_core.canvas.delete(self.id)

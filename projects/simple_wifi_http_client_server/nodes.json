@@ -13,8 +13,8 @@
                 "is_wireless": false,
                 "coverage_area_radius": 0,
                 "application": "applications.httpapp.HttpServerApp",
-                "x": 250,
-                "y": 175
+                "x": 979,
+                "y": 148
             }
         ],
         "clients":[],
@@ -26,7 +26,7 @@
                 "coverage_area_radius": 100,
                 "application": "applications.wirelesscomputerapp.WirelessComputerApp",
                 "is_wireless": true,
-                "x": 400,
+                "x": 669,
                 "y": 570
             }
         ],
@@ -44,8 +44,8 @@
                 "accesspoint_port": 8082,
                 "application": "applications.routerapp.RouterApp",
                 "is_wireless": false,
-                "x": 400,
-                "y": 200,
+                "x": 131,
+                "y": 342,
                 "access_points": [
                     { 
                         "id": 7,
@@ -57,8 +57,8 @@
                         "application": "applications.accesspointapp.AccessPointApp",
                         "type": "access_point",
                         "is_wireless": true,
-                        "x": 400,
-                        "y": 300
+                        "x": 185,
+                        "y": 468
                     }
                 ]
             }

@@ -8,6 +8,8 @@ from twisted.internet.endpoints import connectProtocol
 import tkinter as tk
 from twisted.python import log
 
+from bresenham import bresenham
+
 
 # this protocol acts as a client to the router/switch - Rafael Sampaio
 class AccessPointAppProtocol(StandardApplicationComponent):
@@ -138,6 +140,19 @@ class AccessPointApp(StandardApplicationComponent):
         connection_id = self.simulation_core.canvas.create_line(x1,y1,x2,y2, arrow="both", width=1, dash=(4,2))
         self.simulation_core.canvas.after(10, self.update_connection_to_associated_device_arrow, None, connection_id, device)
 
+        
+
+
+    def animate_package(self, destiny_x, destiny_y):
+        cont = 100
+        for x, y in self.all_coordinates:
+            # verify if package ball just got its destiny - Rafael Sampaio
+            if x == destiny_x and y == destiny_y:
+                self.simulation_core.canvas.after(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+
+            self.simulation_core.canvas.after(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7) # 7 is the package ball size - Rafael Sampaio
+            cont = cont + self.package_speed
+
     def update_connection_to_associated_device_arrow(self,event, id, device):
         self.simulation_core.canvas.delete(id)
         self.draw_connection_to_associated_device_arrow(device)
@@ -151,6 +166,13 @@ class AccessPointApp(StandardApplicationComponent):
             device.application.is_connected = True
             self.draw_connection_to_associated_device_arrow(device)
             self.print_associated_devices()
+
+            self.ball = self.simulation_core.canvas.create_oval(self.visual_component.x, self.visual_component.y, self.visual_component.x+7, self.visual_component.y+7, fill="red")
+            self.all_coordinates = list(bresenham(self.visual_component.x, self.visual_component.y, device.visual_component.x, device.visual_component.y))
+            self.display_time = 9 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
+            self.package_speed = 1 # this determines the velocity of the packet moving in the canvas - Rafael Sampaio
+
+            self.animate_package(device.visual_component.x,device.visual_component.y)
             
 
     def get_device_by_icon(self, icon_id):
