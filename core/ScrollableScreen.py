@@ -28,8 +28,6 @@ class ScrollableScreen(tkinter.Frame):
         if os.path.isfile(bg_image_path):
             background_image = PIL.Image.open(bg_image_path)
             bg_width, bg_height = background_image.size
-
-        print(bg_height)
         
         root.update()
 
@@ -95,6 +93,39 @@ class ScrollableScreen(tkinter.Frame):
 
 
         root.bind("<Motion>", self.update_position_on_screen)
+
+        # Creating context menu - Rafael Sampaio
+        self.create_context_menu()
+
+    def create_context_menu(self):
+        self.contextMenu = tkinter.Menu(self, tearoff=0, background="#99ccff")
+        self.contextMenu.add_command(label="Add Cloud node", activebackground='#3399ff', activeforeground="white", command=self.add_cloud_menu)
+        self.contextMenu.add_command(label="Add Fog node", activebackground='#3399ff', activeforeground="white", command=self.add_fog_menu)
+        self.contextMenu.add_command(label="Add IoT node", activebackground='#3399ff', activeforeground="white", command=self.add_iot_menu)
+        self.contextMenu.add_separator()
+        self.contextMenu.add_command(label="Close", activebackground='#ff4d4d', activeforeground="white", font=("Verdana", 10, "bold"), command=self.closeContextMenu)
+        self.contextMenu.entryconfig(4, foreground='#b30000')
+
+        # Configure context menu on rigth click - Rafael Sampaio
+        self.canvas.bind("<Button-3>", self.openContextMenu)
+        
+    # Context menu functions - Rafael Sampaio
+    def add_cloud_menu(self):
+        print("Adding cloud node...")
+
+    def add_fog_menu(self):
+        print("Adding fog node...")
+
+    def add_iot_menu(self):
+        print ("Adding IoT node...")
+
+    def openContextMenu(self, event):
+        self.contextMenu.post(event.x_root, event.y_root)
+    
+    def closeContextMenu(self, event):
+        pass
+
+        
 
 
         
