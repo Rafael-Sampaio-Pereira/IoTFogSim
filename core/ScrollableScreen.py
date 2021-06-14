@@ -267,6 +267,16 @@ class ScrollableScreen(tkinter.Frame):
 
         self.menubar.add_cascade(label="Main", menu=mainmenu)
         self.menubar.add_command(label="About Project", command=None)
+
+        playmenu = tkinter.Menu(self.menubar, tearoff=0)
+        play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
+        play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
+        play_icon = ImageTk.PhotoImage(play_icon)
+        # self.playmenu.add_command(compound="center",image=play_icon, command=None)
+        self.menubar.add_cascade(compound="center",image=play_icon, menu=playmenu, command=None)
+        self.menubar.iconPhotoImage = play_icon
+
+
         self.menubar.add_command(label="Help", command=None)
         
         self.menubar.add_command(label="Position: 0", command=None)
