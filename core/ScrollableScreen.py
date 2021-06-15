@@ -98,56 +98,58 @@ class ScrollableScreen(tkinter.Frame):
         self.create_context_menu()
 
     def create_context_menu(self):
+        if self.canvas.simulation_core.is_running == False:
         
-        self.contextMenu = tkinter.Menu(self, tearoff=0)
-        self.contextMenu.config(bg="#99ccff", fg="black", activebackground='#3399ff', activeforeground="whitesmoke", activeborderwidth=1, font="Monaco 11")
+            self.contextMenu = tkinter.Menu(self, tearoff=0)
+            self.contextMenu.config(bg="#99ccff", fg="black", activebackground='#3399ff', activeforeground="whitesmoke", activeborderwidth=1, font="Monaco 11")
 
-        cloudMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-        cloudMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-        cloudMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('cloud','server'))
-        cloudMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('cloud','client'))
-        cloudMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('cloud','router'))
-        cloudMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('cloud','access_point'))
-        cloudMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('cloud','wireless_computer'))
-
-
-        fogMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-        fogMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-        fogMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('fog','server'))
-        fogMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('fog','client'))
-        fogMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('fog','router'))
-        fogMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('fog','access_point'))
-        fogMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('fog','wireless_computer'))
+            cloudMenu = tkinter.Menu(self.contextMenu, tearoff=0)
+            cloudMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
+            cloudMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('cloud','server'))
+            cloudMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('cloud','client'))
+            cloudMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('cloud','router'))
+            cloudMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('cloud','access_point'))
+            cloudMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('cloud','wireless_computer'))
 
 
-        iotMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-        iotMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-        iotMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('iot','server'))
-        iotMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('iot','client'))
-        iotMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('iot','router'))
-        iotMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('iot','access_point'))
-        iotMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('iot','wireless_computer'))
+            fogMenu = tkinter.Menu(self.contextMenu, tearoff=0)
+            fogMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
+            fogMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('fog','server'))
+            fogMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('fog','client'))
+            fogMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('fog','router'))
+            fogMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('fog','access_point'))
+            fogMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('fog','wireless_computer'))
+
+
+            iotMenu = tkinter.Menu(self.contextMenu, tearoff=0)
+            iotMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
+            iotMenu.add_command(label="New Server", command=lambda:self.add_new_node_modal_screen('iot','server'))
+            iotMenu.add_command(label="New Client", command=lambda:self.add_new_node_modal_screen('iot','client'))
+            iotMenu.add_command(label="New Router", command=lambda:self.add_new_node_modal_screen('iot','router'))
+            iotMenu.add_command(label="New Access Point", command=lambda:self.add_new_node_modal_screen('iot','access_point'))
+            iotMenu.add_command(label="New Wireless Computer", command=lambda:self.add_new_node_modal_screen('iot','wireless_computer'))
 
 
 
-        self.contextMenu.add_cascade(label="Add Cloud node", menu=cloudMenu)
-        self.contextMenu.add_cascade(label="Add Fog node", menu=fogMenu)
-        self.contextMenu.add_cascade(label="Add IoT node", menu=iotMenu)
-        
+            self.contextMenu.add_cascade(label="Add Cloud node", menu=cloudMenu)
+            self.contextMenu.add_cascade(label="Add Fog node", menu=fogMenu)
+            self.contextMenu.add_cascade(label="Add IoT node", menu=iotMenu)
+            
 
-        #  self.contextMenu.add_command(label="Add Cloud node", activebackground='#3399ff', activeforeground="white", command=self.add_cloud_menu)
-        # self.contextMenu.add_command(label="Add Fog node",  command=self.add_fog_menu)
-        # self.contextMenu.add_command(label="Add IoT node", activebackground='#3399ff', activeforeground="white", command=self.add_iot_menu)
-        self.contextMenu.add_separator()
-        self.contextMenu.add_command(label="Close", compound = tkinter.CENTER, activebackground='#ff4d4d', activeforeground="white", font=("Monaco", 11, "bold"), command=self.closeContextMenu)
-        self.contextMenu.entryconfig(4, foreground='#b30000')
+            #  self.contextMenu.add_command(label="Add Cloud node", activebackground='#3399ff', activeforeground="white", command=self.add_cloud_menu)
+            # self.contextMenu.add_command(label="Add Fog node",  command=self.add_fog_menu)
+            # self.contextMenu.add_command(label="Add IoT node", activebackground='#3399ff', activeforeground="white", command=self.add_iot_menu)
+            self.contextMenu.add_separator()
+            self.contextMenu.add_command(label="Close", compound = tkinter.CENTER, activebackground='#ff4d4d', activeforeground="white", font=("Monaco", 11, "bold"), command=self.closeContextMenu)
+            self.contextMenu.entryconfig(4, foreground='#b30000')
 
-        # Configure context menu on rigth click - Rafael Sampaio
-        self.canvas.bind("<Button-3>", self.openContextMenu)
+            # Configure context menu on rigth click - Rafael Sampaio
+            self.canvas.bind("<Button-3>", self.openContextMenu)
         
     # Context menu functions - Rafael Sampaio
     def openContextMenu(self, event):
-        self.contextMenu.post(event.x_root, event.y_root)
+        if self.canvas.simulation_core.is_running == False:
+            self.contextMenu.post(event.x_root, event.y_root)
     
     def closeContextMenu(self, event):
         pass
