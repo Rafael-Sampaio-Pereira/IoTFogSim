@@ -125,14 +125,14 @@ def initialization_screen(simulation_core):
 	x.place(relx="0.0",rely="0.0")
 	x.img = bg_image
 
-	cmb_projects_list = ttk.Combobox(window, width="10", values=projects_list)
+	cmb_projects_list = ttk.Combobox(window, width="20", values=projects_list)
 	cmb_projects_list.place(relx="0.1",rely="0.1")
 
 	label_one = tkinter.Label(window,text="Select a project to open:")
 	label_one.place(relx="0.1",rely="0.04")
 
 	btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
-	btn_open.place(relx="0.5",rely="0.1")
+	btn_open.place(relx="0.6",rely="0.1")
 
 	sep = ttk.Separator(window).place(relx="0.0", rely="0.2", relwidth=1)
 
@@ -164,14 +164,10 @@ def load_nodes(project_name, simulation_core):
 		
 		if data:
     		
-			################## LOADING FOG DEVICES - Rafael Sampaio ##################
+			################## LOADING DEVICES - Rafael Sampaio ##################
 
-			
 
-			
-			
-			
-			for router in data['fog']['routers']:
+			for router in data['routers']:
     				
 				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
@@ -186,25 +182,25 @@ def load_nodes(project_name, simulation_core):
 					simulation_core.allNodes.append(ap)
 
 			
-			for server in data['fog']['servers']:
+			for server in data['servers']:
 								
 				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
 				simulation_core.allNodes.append(sr)
 
 			
 			
-			for client in data['fog']['clients']:
+			for client in data['clients']:
 								
 				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
 				simulation_core.allNodes.append(cl)
 
-			for computer in data['fog']['wireless_computers']:
+			for computer in data['wireless_computers']:
     					
 				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
 				simulation_core.allNodes.append(comp) 
 	
 
-			for wsn in data['fog']['wireless_sensor_networks']:
+			for wsn in data['wireless_sensor_networks']:
 
 				sink_cont = 0
 				repeater_cont = 0
@@ -230,11 +226,3 @@ def load_nodes(project_name, simulation_core):
 					rpt_node = WSNRepeaterNode(simulation_core, repeater_cont, repeater_node['name'], repeater_node['icon'], repeater_node['is_wireless'], repeater_node['x'], repeater_node['y'], repeater_node['application'], repeater_node['coverage_area_radius'],WSN_network_group)
 					WSN_network_group.repeater_list.add(rpt_node)
 					simulation_core.allNodes.append(rpt_node)
-
-			
-			################## LOADING CLOUD DEVICES - Rafael Sampaio ##################
-			
-
-
-			################## LOADING IOT DEVICES - Rafael Sampaio ##################
-			

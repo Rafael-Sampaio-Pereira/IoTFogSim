@@ -1,6 +1,5 @@
 {
     
-    "fog": {
         "servers": [
             { 
                 "id": 2,
@@ -64,21 +63,5 @@
             }
         ],
         "wireless_sensor_networks": []
-    },
-    
-    "cloud": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    },
 
-    "iot": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    }
 }
