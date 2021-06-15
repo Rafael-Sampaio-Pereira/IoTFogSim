@@ -243,7 +243,7 @@ class ScrollableScreen(tkinter.Frame):
 
         p = "Position: "+str(x)+' x '+str(y)
 
-        self.menubar.entryconfigure(4, label=p)
+        self.menubar.entryconfigure(3, label=p)
 
     def getCanvas(self):
      	return self.canvas
@@ -266,51 +266,64 @@ class ScrollableScreen(tkinter.Frame):
         mainmenu.add_command(label="Exit", command=self.on_closing)
 
         self.menubar.add_cascade(label="Main", menu=mainmenu)
-        self.menubar.add_command(label="About Project", command=None)
+        
 
         self.playmenu = tkinter.Menu(self.menubar, tearoff=0)
         play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
         play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
         play_icon = ImageTk.PhotoImage(play_icon)
         self.menubar.add_command(image=play_icon, compound="center", command=self.play_or_stop_simulation)
-        # self.menubar.add_cascade(, image=play_icon, menu=self.playmenu, command=self.play_or_stop_simulation)
         self.menubar.iconPhotoImage = play_icon
 
 
-        self.menubar.add_command(label="Help", command=None)
+        
         
         self.menubar.add_command(label="Position: 0", command=None)
         self.menubar.add_command(label=" Events:", command=None)
 
-        self.menubar.add_command(label="Start Time: "+str(datetime.now().strftime('%H:%M:%S')), font=("Verdana", 10, "italic"), command=None)
+        self.start_time = '--:--:--'
 
+        self.menubar.add_command(label="Start Time: "+self.start_time, font=("Verdana", 10, "italic"), command=None)
+
+        self.menubar.entryconfig(3, foreground='blue')
         self.menubar.entryconfig(4, foreground='blue')
-        self.menubar.entryconfig(5, foreground='blue')
+
+        self.menubar.add_command(label="About Project", command=None)
+        self.menubar.add_command(label="Help", command=None)
 
         window.config(menu=self.menubar)
 
     def play_or_stop_simulation(self):
         is_running = self.canvas.simulation_core.is_running
 
-        print('clicouuu')
-
         if is_running == True:
             print('Stoping simulation...')
             self.canvas.simulation_core.is_running = False
-            play_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
+            play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
             play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
             play_icon = ImageTk.PhotoImage(play_icon)
-            self.menubar.entryconfig(3, image=play_icon)
+            self.menubar.entryconfig(2, image=play_icon)
             self.menubar.iconPhotoImage = play_icon
             self.on_closing()
         elif is_running == False:
+            if self.start_time == '--:--:--':
+                self.start_time = str(datetime.now().strftime('%H:%M:%S'))
+                self.menubar.entryconfig(5, label="Start Time: "+self.start_time)
+
             print('Start simulation...')
             self.canvas.simulation_core.is_running = True
+
             stop_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
             stop_icon = stop_icon.resize((17,17), Image.ANTIALIAS)
             stop_icon = ImageTk.PhotoImage(stop_icon)
-            self.menubar.entryconfig(3, image=stop_icon)
+            self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon
+            
+
+            for device in self.canvas.simulation_core.allNodes:
+                reactor.callLater(0.3, device.run)
+
+            
 
 
     # This method is called when close window button is press. - Rafael Sampaio
@@ -320,3 +333,11 @@ class ScrollableScreen(tkinter.Frame):
             # window.destroy() # it maybe not need. - Rafael Sampaio
             # reactor.stop()
             reactor.crash()
+
+        else:
+            self.canvas.simulation_core.is_running = True
+            stop_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
+            stop_icon = stop_icon.resize((17,17), Image.ANTIALIAS)
+            stop_icon = ImageTk.PhotoImage(stop_icon)
+            self.menubar.entryconfig(2, image=stop_icon)
+            self.menubar.iconPhotoImage = stop_icon

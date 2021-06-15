@@ -15,7 +15,8 @@ class SimulationCore(object):
 	def __init__(self):
 		# self.allWirelessConnections = defaultdict(list)
 		self.allConnections = set()
-		self.allNodes = set()
+		self.allNodes = []
+		# self.allServerNodes = set()
 		# self.allFogNodes = defaultdict(list)
 		# self.allCloudNodes = defaultdict(list)
 		#self.allAccessPointNodes = defaultdict(list)
@@ -45,7 +46,7 @@ class SimulationCore(object):
 		log.msg(event_description+" - Number of events: %i" %(self.eventsCounter))
 		# Updates events counter value on screen - Rafael Sampaio
 		# self.canvas.itemconfig(self.simulation_screen.events_counter_label, text=str(self.eventsCounter))
-		self.simulation_screen.menubar.entryconfigure(5, label="Events: "+str(self.eventsCounter))
+		self.simulation_screen.menubar.entryconfigure(4, label="Events: "+str(self.eventsCounter))
 
 	# def getFogNodeById(self, id):
 	# 	try:
