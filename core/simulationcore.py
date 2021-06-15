@@ -28,6 +28,7 @@ class SimulationCore(object):
 		self.eventsCounter = 0
 		self.allProtocols = set()
 		self.project_name = None
+		self.is_running = False
 
 
 
@@ -202,7 +203,7 @@ class SimulationCore(object):
 		
 		
 		# Simulation area on screen. - Rafael Sampaio
-		self.simulation_screen = ScrollableScreen(window, self.project_name, resizeable)
+		self.simulation_screen = ScrollableScreen(window, self.project_name, resizeable, self)
 		self.simulation_screen.pack(fill="both", expand=True)
 		canvas = self.simulation_screen.getCanvas()
 
