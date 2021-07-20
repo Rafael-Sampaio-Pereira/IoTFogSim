@@ -170,7 +170,7 @@ def load_nodes(project_name, simulation_core):
 			for router in data['routers']:
     				
 				log.msg("Creating router ...")
-				rt = Router(simulation_core, router['port'], router['real_ip'], router['simulation_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
 				simulation_core.allNodes.append(rt)
 				
 
@@ -184,14 +184,14 @@ def load_nodes(project_name, simulation_core):
 			
 			for server in data['servers']:
 								
-				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['simulation_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
+				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
 				simulation_core.allNodes.append(sr)
 
 			
 			
 			for client in data['clients']:
 								
-				cl = StandardClientDevice(simulation_core, client['real_ip'], client['simulation_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
+				cl = StandardClientDevice(simulation_core, client['real_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
 				simulation_core.allNodes.append(cl)
 
 			for computer in data['wireless_computers']:

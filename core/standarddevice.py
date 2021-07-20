@@ -16,12 +16,11 @@ from bresenham import bresenham
 
 class StandardServerDevice(object):
     
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
         self.port = port
-        self.simulation_ip = simulation_ip
         
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -49,11 +48,10 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, simulation_core, real_ip, simulation_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, real_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
-        self.simulation_ip = simulation_ip
 
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -86,14 +84,12 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id,name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, id,name, icon, is_wireless, x, y, application, coverage_area_radius):
         
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
         self.port = port
         self.simulation_core = simulation_core
-        
-        self.simulation_ip = simulation_ip
         self.name = name
         # generating an unic id for the instance object. - Rafael Sampaio.
         #self.id = uuid.uuid4().fields[-1]
@@ -433,14 +429,13 @@ class WirelessComputer(object):
 
 class AccessPoint_old(object):
     
-    def __init__(self, simulation_core, port, real_ip, simulation_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         
         # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
         # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
         self.TBTT = TBTT or 0.3 #0.1024
-        self.simulation_ip = simulation_ip
         self.addr = real_ip
         self.port = port
 
