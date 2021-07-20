@@ -49,7 +49,7 @@ def initialization_screen(simulation_core):
 	window = tkinter.Toplevel()
 	tksupport.install(window)
 	window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
-	window.geometry("400x551")
+	window.geometry("400x552")
 	window.resizable(False, False)
 
 	# Setting window icon. - Rafael Sampaio
@@ -131,7 +131,7 @@ def initialization_screen(simulation_core):
 	label_one = tkinter.Label(window,text="Select a project to open:")
 	label_one.place(relx="0.1",rely="0.04")
 
-	btn_open = ttk.Button(window, text="Open Project",command=lambda:open_project(window,simulation_core))
+	btn_open = ttk.Button(window, text="Open Project", command=lambda:open_project(window,simulation_core))
 	btn_open.place(relx="0.6",rely="0.1")
 
 	sep = ttk.Separator(window).place(relx="0.0", rely="0.2", relwidth=1)
