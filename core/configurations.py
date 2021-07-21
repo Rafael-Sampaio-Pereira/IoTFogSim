@@ -61,7 +61,7 @@ def initialization_screen(simulation_core):
 
 	def open_project(window, simulation_core):
 			selected_project_name = cmb_projects_list.get()
-			messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
+			# messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
 
 			simulation_core.project_name = selected_project_name
 

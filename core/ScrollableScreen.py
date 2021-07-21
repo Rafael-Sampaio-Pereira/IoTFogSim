@@ -177,24 +177,59 @@ class ScrollableScreen(tkinter.Frame):
 
 
         create_msg = tkinter.Label(window,text="Position:")
-        create_msg.place(relx="0.1",rely="0.16")
+        create_msg.place(relx="0.1",rely="0.18")
 
         x = window.winfo_pointerx()
         y = window.winfo_pointery()
 
         x_label = tkinter.Label(window,text="X")
-        x_label.place(relx="0.25",rely="0.16")
+        x_label.place(relx="0.25",rely="0.18")
 
         input_x = tkinter.Entry(window)
         input_x.insert(-1, x)
-        input_x.place(width="35", relx="0.29", rely="0.16")
+        input_x.place(width="35", relx="0.29", rely="0.18")
 
         y_label = tkinter.Label(window, text="Y")
-        y_label.place(relx="0.45",rely="0.16")
+        y_label.place(relx="0.45",rely="0.18")
 
         input_y = tkinter.Entry(window)
         input_y.insert(-1, y)
-        input_y.place(width="35", relx="0.49",rely="0.16")
+        input_y.place(width="35", relx="0.49",rely="0.18")
+
+        coverage_area_label = tkinter.Label(window,text="Coverage area:")
+        coverage_area_label.place(relx="0.1",rely="0.30")
+
+        input_coverage_area = tkinter.Entry(window, state='disabled')
+        input_coverage_area.place(width="124", relx="0.35",rely="0.30")
+
+        radio_button_controller = tkinter.IntVar()
+
+        def enableCoverage():
+            input_coverage_area.configure(state="normal")
+            input_coverage_area.update()
+
+        def disableCoverage():
+            input_coverage_area.configure(state="disabled")
+            input_coverage_area.update()
+
+        is_wireless_msg = tkinter.Label(window,text="Is wireless?")
+        is_wireless_msg.place(relx="0.1",rely="0.24")
+
+        yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="0", command=enableCoverage)
+        yes_button.place(relx="0.3",rely="0.24")
+
+        no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="1", command=disableCoverage)
+        no_button.place(relx="0.45",rely="0.24")
+
+
+
+
+
+        
+
+        
+
+
 
 
         if network_layer == 'cloud':
