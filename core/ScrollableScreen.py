@@ -155,7 +155,7 @@ class ScrollableScreen(tkinter.Frame):
         pass
 
 
-    def add_new_node_modal_screen(self,network_layer, node_type):
+    def add_new_node_modal_screen(self, network_layer, node_type):
         window = tkinter.Toplevel()
         tksupport.install(window)
         window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
@@ -164,6 +164,38 @@ class ScrollableScreen(tkinter.Frame):
 
         # Setting window icon. - Rafael Sampaio
         window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
+
+
+        create_msg = tkinter.Label(window,text="Create new "+node_type.replace("_"," ")+" at "+network_layer+" layer.")
+        create_msg.place(relx="0.1",rely="0.05")
+
+        name_label = tkinter.Label(window,text="Name:")
+        name_label.place(relx="0.1",rely="0.12")
+
+        input_name = tkinter.Entry(window)
+        input_name.place(relx="0.25",rely="0.12")
+
+
+        create_msg = tkinter.Label(window,text="Position:")
+        create_msg.place(relx="0.1",rely="0.16")
+
+        x = window.winfo_pointerx()
+        y = window.winfo_pointery()
+
+        x_label = tkinter.Label(window,text="X")
+        x_label.place(relx="0.25",rely="0.16")
+
+        input_x = tkinter.Entry(window)
+        input_x.insert(-1, x)
+        input_x.place(width="35", relx="0.29", rely="0.16")
+
+        y_label = tkinter.Label(window, text="Y")
+        y_label.place(relx="0.45",rely="0.16")
+
+        input_y = tkinter.Entry(window)
+        input_y.insert(-1, y)
+        input_y.place(width="35", relx="0.49",rely="0.16")
+
 
         if network_layer == 'cloud':
             if node_type == 'server':
