@@ -170,7 +170,7 @@ def load_nodes(project_name, simulation_core):
 			for router in data['routers']:
     				
 				log.msg("Creating router ...")
-				rt = Router(simulation_core, router['port'], router['real_ip'], router['id'],router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
+				rt = Router(simulation_core, router['port'], router['real_ip'], router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
 				simulation_core.allNodes.append(rt)
 				
 
@@ -178,25 +178,25 @@ def load_nodes(project_name, simulation_core):
 						
 					log.msg("Creating AccessPoint station ...")
 
-					ap = AccessPoint(simulation_core, rt, access_point['id'], access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
+					ap = AccessPoint(simulation_core, rt, access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
 					simulation_core.allNodes.append(ap)
 
 			
 			for server in data['servers']:
 								
-				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['id'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
+				sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['name'], server['icon'], server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
 				simulation_core.allNodes.append(sr)
 
 			
 			
 			for client in data['clients']:
 								
-				cl = StandardClientDevice(simulation_core, client['real_ip'], client['id'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
+				cl = StandardClientDevice(simulation_core, client['real_ip'], client['name'], client['icon'], client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
 				simulation_core.allNodes.append(cl)
 
 			for computer in data['wireless_computers']:
     					
-				comp = WirelessComputer(simulation_core, computer['id'], computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
+				comp = WirelessComputer(simulation_core, computer['name'], computer['icon'], computer['is_wireless'], computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
 				simulation_core.allNodes.append(comp) 
 	
 

@@ -2,7 +2,6 @@
 
     "servers": [
         { 
-            "id": 1,
             "name": "Fog Broker Node", 
             "real_ip": "127.0.0.1",
             "icon": "broker_icon",
@@ -17,7 +16,6 @@
     ],
     "clients":[
         { 
-            "id": 1,
             "name": "SCADA System", 
             "real_ip": "127.0.0.1",
             "icon": "cloud_icon",
@@ -32,7 +30,6 @@
     "wireless_computers": [],
     "routers": [
         { 
-            "id": 3,
             "name": "Router 001", 
             "real_ip": "127.0.0.1",
             "icon": "router_icon",
@@ -53,7 +50,6 @@
 
     "wireless_sensor_networks": [
         { 
-            "id": 3,
             "name": "energy_metering_wsn", 
             "network_layer_protocol": "UDP",
             "application_layer_protocol": "Wi-SUN",
@@ -74,7 +70,6 @@
             ],
             "repeater_nodes": [
                 {
-                    "id": 1,
                     "name": "wsn_repeater",
                     "icon": "repeater_icon",
                     "coverage_area_radius": 207,
@@ -84,7 +79,6 @@
                     "y": 770
                 },
                 {
-                    "id": 2,
                     "name": "wsn_repeater",
                     "icon": "repeater_icon",
                     "coverage_area_radius": 207,
@@ -96,7 +90,6 @@
             ],
             "sensor_nodes": [
                 {
-                    "id": 1,
                     "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 207,
@@ -106,7 +99,6 @@
                     "y": 456
                 },
                 {
-                    "id": 2,
                     "name": "sensor",
                     "icon": "sensor_icon",
                     "coverage_area_radius": 207,

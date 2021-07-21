@@ -16,7 +16,7 @@ from bresenham import bresenham
 
 class StandardServerDevice(object):
     
-    def __init__(self, simulation_core, port, real_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
@@ -26,9 +26,8 @@ class StandardServerDevice(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
+        self.id = uuid.uuid4().fields[-1]
 
-        self.id = id
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
@@ -48,7 +47,7 @@ class StandardServerDevice(object):
 
 class StandardClientDevice(object):
     
-    def __init__(self, simulation_core, real_ip, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, real_ip, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
@@ -57,9 +56,8 @@ class StandardClientDevice(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
+        self.id = uuid.uuid4().fields[-1]
 
-        self.id = id
         self.simulation_core = simulation_core
         self.name = name
         self.is_wireless = is_wireless
@@ -84,7 +82,7 @@ class StandardClientDevice(object):
 
 class Router(object):
 
-    def __init__(self, simulation_core, port, real_ip, id,name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, name, icon, is_wireless, x, y, application, coverage_area_radius):
         
         self.application = import_and_instantiate_class_from_string(application)
         self.addr = real_ip
@@ -92,9 +90,7 @@ class Router(object):
         self.simulation_core = simulation_core
         self.name = name
         # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
-
-        self.id = id
+        self.id = uuid.uuid4().fields[-1]
         
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -248,7 +244,6 @@ class WSNSensorNode(WirelessDevice):
         self.icon = ICONS_PATH+icon_file
 
         self.name = name+'_'+str(id)
-        #self.id = id
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
@@ -283,7 +278,6 @@ class WSNRepeaterNode(WirelessDevice):
         self.icon = ICONS_PATH+icon_file
 
         self.name = name+'_'+str(id)
-        #self.id = id
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
@@ -342,7 +336,7 @@ class WSNSinkNode(WirelessDevice):
 
 class AccessPoint(object):
     
-    def __init__(self, simulation_core,  base_device, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core,  base_device, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, coverage_area_radius):
 
         # self.base_device = base_device
         self.application = import_and_instantiate_class_from_string(application)
@@ -363,9 +357,7 @@ class AccessPoint(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
-
-        self.id = id
+        self.id = uuid.uuid4().fields[-1]
         
         self.simulation_core = simulation_core
         self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
@@ -393,7 +385,7 @@ class AccessPoint(object):
 
 class WirelessComputer(object):
        
-    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius):
+    def __init__(self, simulation_core, name, icon, is_wireless, x, y, application, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         self.is_wireless = is_wireless
@@ -403,7 +395,8 @@ class WirelessComputer(object):
         self.icon = ICONS_PATH+icon_file
 
         self.name = name
-        self.id = id
+        # generating an unic id for the instance object. - Rafael Sampaio.
+        self.id = uuid.uuid4().fields[-1]
         self.simulation_core = simulation_core
 
         self.is_wireless = is_wireless
@@ -429,7 +422,7 @@ class WirelessComputer(object):
 
 class AccessPoint_old(object):
     
-    def __init__(self, simulation_core, port, real_ip, id, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
+    def __init__(self, simulation_core, port, real_ip, TBTT, SSID, WPA2_password, icon, is_wireless, x, y, application, router_addr, router_port, coverage_area_radius):
 
         self.application = import_and_instantiate_class_from_string(application)
         
@@ -449,9 +442,7 @@ class AccessPoint_old(object):
         self.icon = ICONS_PATH+icon_file
 
         # generating an unic id for the instance object. - Rafael Sampaio.
-        #self.id = uuid.uuid4().fields[-1]
-
-        self.id = id
+        self.id = uuid.uuid4().fields[-1]
         
         self.simulation_core = simulation_core
         self.visual_component = VisualComponent(True, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)

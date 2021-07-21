@@ -2,7 +2,6 @@
 
         "servers": [
             { 
-                "id": 1,
                 "name": "Fog Broker Node", 
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
@@ -17,7 +16,6 @@
         ],
         "clients":[
             { 
-                "id": 1,
                 "name": "SCADA System", 
                 "real_ip": "127.0.0.1",
                 "icon": "cloud_icon",
@@ -32,7 +30,6 @@
         "wireless_computers": [],
         "routers": [
             { 
-                "id": 3,
                 "name": "Router 001", 
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
@@ -53,7 +50,6 @@
 
         "wireless_sensor_networks": [
             { 
-                "id": 3,
                 "name": "energy_metering_wsn", 
                 "network_layer_protocol": "UDP",
                 "application_layer_protocol": "Wi-SUN",
@@ -62,7 +58,6 @@
                 "description": "Simple wsn for envirioment monitoring",
                 "sink_nodes": [
                     {
-                        "id": 1,
                         "name": "wsn_sink",
                         "icon": "sink_icon",
                         "coverage_area_radius": 207,
@@ -74,7 +69,6 @@
                 ],
                 "repeater_nodes": [
                     {
-                        "id": 1,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -84,7 +78,6 @@
                         "y": 770
                     },
                     {
-                        "id": 2,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -94,7 +87,6 @@
                         "y": 368
                     },
                     {
-                        "id": 3,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -104,7 +96,6 @@
                         "y": 750
                     },
                     {
-                        "id": 4,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -114,7 +105,6 @@
                         "y": 1465
                     },
                     {
-                        "id": 5,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -124,7 +114,6 @@
                         "y": 1121
                     },
                     {
-                        "id": 6,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -134,7 +123,6 @@
                         "y": 820
                     },
                     {
-                        "id": 7,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 207,
@@ -147,7 +135,6 @@
                 ],
                 "sensor_nodes": [
                     {
-                        "id": 1,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -157,7 +144,6 @@
                         "y": 456
                     },
                     {
-                        "id": 2,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -167,7 +153,6 @@
                         "y": 621
                     },
                     {
-                        "id": 3,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -177,7 +162,6 @@
                         "y": 613
                     },
                     {
-                        "id": 4,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -187,7 +171,6 @@
                         "y": 881
                     },
                     {
-                        "id": 5,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -197,7 +180,6 @@
                         "y": 847
                     },
                     {
-                        "id": 6,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -207,7 +189,6 @@
                         "y": 500
                     },
                     {
-                        "id": 7,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -217,7 +198,6 @@
                         "y": 419
                     },
                     {
-                        "id": 8,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -227,7 +207,6 @@
                         "y": 441
                     },
                     {
-                        "id": 9,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -237,7 +216,6 @@
                         "y": 485
                     },
                     {
-                        "id": 10,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -247,7 +225,6 @@
                         "y": 429
                     },
                     {
-                        "id": 11,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -257,7 +234,6 @@
                         "y": 429
                     },
                     {
-                        "id": 12,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -267,7 +243,6 @@
                         "y": 397
                     },
                     {
-                        "id": 13,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -277,7 +252,6 @@
                         "y": 357
                     },
                     {
-                        "id": 14,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -287,7 +261,6 @@
                         "y": 397
                     },
                     {
-                        "id": 15,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -297,7 +270,6 @@
                         "y": 474
                     },
                     {
-                        "id": 16,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -307,7 +279,6 @@
                         "y": 657
                     },
                     {
-                        "id": 17,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -317,7 +288,6 @@
                         "y": 1061
                     },
                     {
-                        "id": 18,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -327,7 +297,6 @@
                         "y": 1074
                     },
                     {
-                        "id": 19,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -337,7 +306,6 @@
                         "y": 1123
                     },
                     {
-                        "id": 20,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -347,7 +315,6 @@
                         "y": 1199
                     },
                     {
-                        "id": 21,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -357,7 +324,6 @@
                         "y": 1257
                     },
                     {
-                        "id": 22,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -367,7 +333,6 @@
                         "y": 1286
                     },
                     {
-                        "id": 23,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -377,7 +342,6 @@
                         "y": 1383
                     },
                     {
-                        "id": 24,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -387,7 +351,6 @@
                         "y": 1347
                     },
                     {
-                        "id": 25,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -397,7 +360,6 @@
                         "y": 746
                     },
                     {
-                        "id": 26,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -407,7 +369,6 @@
                         "y": 828
                     },
                     {
-                        "id": 27,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -417,7 +378,6 @@
                         "y": 667
                     },
                     {
-                        "id": 28,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -427,7 +387,6 @@
                         "y": 597
                     },
                     {
-                        "id": 29,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -437,7 +396,6 @@
                         "y": 541
                     },
                     {
-                        "id": 30,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -447,7 +405,6 @@
                         "y": 284
                     },
                     {
-                        "id": 31,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -457,7 +414,6 @@
                         "y": 181
                     },
                     {
-                        "id": 32,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -467,7 +423,6 @@
                         "y": 239
                     },
                     {
-                        "id": 33,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -477,7 +432,6 @@
                         "y": 55
                     },
                     {
-                        "id": 34,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -487,7 +441,6 @@
                         "y": 622
                     },
                     {
-                        "id": 35,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -497,7 +450,6 @@
                         "y": 879
                     },
                     {
-                        "id": 36,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -507,7 +459,6 @@
                         "y": 1110
                     },
                     {
-                        "id": 37,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -517,7 +468,6 @@
                         "y": 1043
                     },
                     {
-                        "id": 38,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -527,7 +477,6 @@
                         "y": 1087
                     },
                     {
-                        "id": 39,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -537,7 +486,6 @@
                         "y": 1129
                     },
                     {
-                        "id": 40,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -547,7 +495,6 @@
                         "y": 1335
                     },
                     {
-                        "id": 41,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -557,7 +504,6 @@
                         "y": 1570
                     },
                     {
-                        "id": 42,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -567,7 +513,6 @@
                         "y": 1582
                     },
                     {
-                        "id": 43,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -577,7 +522,6 @@
                         "y": 1631
                     },
                     {
-                        "id": 44,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -587,7 +531,6 @@
                         "y": 835
                     },
                     {
-                        "id": 45,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -597,7 +540,6 @@
                         "y": 946
                     },
                     {
-                        "id": 46,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -607,7 +549,6 @@
                         "y": 950
                     },
                     {
-                        "id": 47,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -617,7 +558,6 @@
                         "y": 935
                     },
                     {
-                        "id": 48,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -627,7 +567,6 @@
                         "y": 902
                     },
                     {
-                        "id": 49,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -637,7 +576,6 @@
                         "y": 1152
                     },
                     {
-                        "id": 50,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -647,7 +585,6 @@
                         "y": 1181
                     },
                     {
-                        "id": 51,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -657,7 +594,6 @@
                         "y": 1234
                     },
                     {
-                        "id": 52,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -667,7 +603,6 @@
                         "y": 1284
                     },
                     {
-                        "id": 53,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -677,7 +612,6 @@
                         "y": 1259
                     },
                     {
-                        "id": 54,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -687,7 +621,6 @@
                         "y": 838
                     },
                     {
-                        "id": 55,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,
@@ -697,7 +630,6 @@
                         "y": 792
                     },
                     {
-                        "id": 56,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 207,

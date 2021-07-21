@@ -2,7 +2,6 @@
     
         "servers": [
             { 
-                "id": 2,
                 "name": "Web Server",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
@@ -18,7 +17,6 @@
         "clients":[],
         "wireless_computers": [
             {
-                "id":0,
                 "name": "notebook 1",
                 "icon": "notebook_icon",
                 "coverage_area_radius": 100,
@@ -30,7 +28,6 @@
         ],
         "routers": [
             { 
-                "id": 3,
                 "name": "Router 001", 
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
@@ -45,7 +42,6 @@
                 "y": 342,
                 "access_points": [
                     { 
-                        "id": 7,
                         "TBTT": 0.1024,
                         "SSID": "Rede privada 001",
                         "WPA2_password": "iotfogsim2019",

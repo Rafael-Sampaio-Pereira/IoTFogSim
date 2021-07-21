@@ -2,7 +2,6 @@
 
         "servers": [
             { 
-                "id": 1,
                 "name": "Fog Broker Node", 
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
@@ -17,7 +16,6 @@
         ],
         "clients":[
             { 
-                "id": 1,
                 "name": "SCADA System", 
                 "real_ip": "127.0.0.1",
                 "icon": "notebook_icon",
@@ -32,7 +30,6 @@
         "wireless_computers": [],
         "routers": [
             { 
-                "id": 3,
                 "name": "Router 001", 
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
@@ -47,7 +44,6 @@
                 "y": 200,
                 "access_points": [
                     { 
-                        "id": 7,
                         "TBTT": 0.1024,
                         "SSID": "Rede privada 001",
                         "WPA2_password": "iotfogsim2019",
@@ -65,7 +61,6 @@
 
         "wireless_sensor_networks": [
             { 
-                "id": 3,
                 "name": "energe_metering_wsn", 
                 "network_layer_protocol": "UDP",
                 "application_layer_protocol": "Wi-SUN",
@@ -74,7 +69,6 @@
                 "description": "Simple wsn for envirioment monitoring",
                 "sink_nodes": [
                     {
-                        "id":0,
                         "name": "wsn_sink",
                         "icon": "sink_icon",
                         "coverage_area_radius": 100,
@@ -86,7 +80,6 @@
                 ],
                 "repeater_nodes": [
                     {
-                        "id":0,
                         "name": "wsn_repeater",
                         "icon": "repeater_icon",
                         "coverage_area_radius": 150,
@@ -98,7 +91,6 @@
                 ],
                 "sensor_nodes": [
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -108,7 +100,6 @@
                         "y": 291
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -118,7 +109,6 @@
                         "y": 200
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -129,7 +119,6 @@
                     },
                     
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -139,7 +128,6 @@
                         "y": 487
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -149,7 +137,6 @@
                         "y": 604
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -159,7 +146,6 @@
                         "y": 510
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -169,7 +155,6 @@
                         "y": 680
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
@@ -179,7 +164,6 @@
                         "y": 591
                     },
                     {
-                        "id":0,
                         "name": "sensor",
                         "icon": "sensor_icon",
                         "coverage_area_radius": 100,
