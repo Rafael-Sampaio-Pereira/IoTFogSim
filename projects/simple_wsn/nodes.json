@@ -1,10 +1,9 @@
 {
-    "fog": {
+
         "servers": [
             { 
                 "id": 2,
                 "name": "Fog Broker Node", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
@@ -20,7 +19,6 @@
             { 
                 "id": 1,
                 "name": "Fog Subscriber Node", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "server_icon",
                 "type": "client",
@@ -33,7 +31,6 @@
             { 
                 "id": 1,
                 "name": "Fog Subscriber Node", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "server_icon",
                 "type": "client",
@@ -49,7 +46,6 @@
             { 
                 "id": 3,
                 "name": "Router 001", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
@@ -85,7 +81,9 @@
                 "name": "energe_metering_wsn", 
                 "ip_standard": "6LowPan",
                 "network_layer_protocol": "UDP",
-                "wireless_standard": "IEEE_802.11",
+                "application_layer_protocol": "ZigBee",
+                "wireless_standard": "IEEE_802.15",
+                "latency": "0.05",
                 "description": "Simple wsn for envirioment monitoring",
                 "sink_nodes": [
                     {
@@ -99,6 +97,7 @@
                         "y": 190
                     }
                 ],
+                "repeater_nodes": [],
                 "sensor_nodes": [
                     {
                         "id":0,
@@ -194,23 +193,5 @@
                 ]
             }
         ]
-},
-    
-    "cloud": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    },
 
-    "iot": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    }
-    
-    
 }

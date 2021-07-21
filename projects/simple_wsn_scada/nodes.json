@@ -1,10 +1,9 @@
 {
-    "fog": {
+
         "servers": [
             { 
                 "id": 1,
                 "name": "Fog Broker Node", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
@@ -20,13 +19,12 @@
             { 
                 "id": 1,
                 "name": "SCADA System", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "notebook_icon",
                 "type": "client",
                 "is_wireless": false,
                 "coverage_area_radius": 0,
-                "application": "applications.wsnapp.SCADAApp",
+                "application": "applications.smartgridapp.SCADAApp",
                 "x": 582,
                 "y": 67
             }
@@ -36,7 +34,6 @@
             { 
                 "id": 3,
                 "name": "Router 001", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
@@ -194,23 +191,6 @@
                 ]
             }
         ]
-},
-    
-    "cloud": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    },
 
-    "iot": {
-        "servers": [],
-        "clients":[],
-        "wireless_computers": [],
-        "routers": [],
-        "wireless_sensor_networks": []
-    }
-    
-    
+
 }

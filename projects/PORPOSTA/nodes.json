@@ -4,7 +4,6 @@
             { 
                 "id": 1,
                 "name": "Fog Broker Node", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
@@ -20,7 +19,6 @@
             { 
                 "id": 1,
                 "name": "SCADA System", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "cloud_icon",
                 "type": "client",
@@ -36,7 +34,6 @@
             { 
                 "id": 3,
                 "name": "Router 001", 
-                "simulation_ip": "192.121.0.1",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
