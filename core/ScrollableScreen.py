@@ -14,6 +14,8 @@ from PIL import Image, ImageTk
 from tkinter import PhotoImage
 from core.functions import get_all_app_classes_name
 from tkinter import ttk
+import pathlib
+from tkinter import filedialog
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
@@ -230,6 +232,33 @@ class ScrollableScreen(tkinter.Frame):
         cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
         cmb_app_list.place(relx="0.2",rely="0.36")
 
+
+        
+        img = Image.open(str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png')
+        img = img.resize((32, 32))
+        photo = ImageTk.PhotoImage(img)
+
+        icon_label = tkinter.Label(window, image=photo)
+        icon_label.image = photo 
+        icon_label.place(relx="0.4",rely="0.42")
+
+        def chooseIconDialog():
+            path = str(pathlib.Path.cwd())+'/graphics/icons/'
+            filename = filedialog.askopenfilename(initialdir =  path, title = "Change icon", filetypes =
+            [("png files","*.png")] )
+            
+            img = Image.open(filename)
+            img = img.resize((32, 32))
+            photo = ImageTk.PhotoImage(img)
+
+            icon_label.configure(image=photo)
+            icon_label.image = photo 
+            icon_label.update()
+
+        choose_icon_button = ttk.Button(window, text = "Choose a icon",command = chooseIconDialog)
+        choose_icon_button.place(relx="0.1",rely="0.42")
+
+        sep = ttk.Separator(window).place(relx="0.0", rely="0.50", relwidth=1)
 
 
         
