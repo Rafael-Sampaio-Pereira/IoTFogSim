@@ -1,6 +1,10 @@
 from twisted.python import log
 from importlib import import_module
 import json
+import inspect
+import importlib
+import sys
+import os
 
 def import_and_instantiate_class_from_string(class_path):
     
@@ -52,3 +56,17 @@ def create_csv_database_file(simulation_core, description=""):
     database = open(file, 'a')
  
     return database
+
+
+def get_all_app_classes_name():
+    directory = 'applications'
+
+    app_files = [f.name for f in os.scandir(directory) if f.is_file() ]
+    app_list = []
+    for file in app_files:
+        module = importlib.import_module('applications.'+file[:-3])
+        for name, obj in inspect.getmembers(module, inspect.isclass):
+            if(name.endswith('App')):
+                app_list.append(name)
+
+    return app_list

@@ -12,7 +12,8 @@ from config.settings import version
 import PIL
 from PIL import Image, ImageTk
 from tkinter import PhotoImage
-
+from core.functions import get_all_app_classes_name
+from tkinter import ttk
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
@@ -221,7 +222,13 @@ class ScrollableScreen(tkinter.Frame):
         no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="1", command=disableCoverage)
         no_button.place(relx="0.45",rely="0.24")
 
+        all_apps_list = get_all_app_classes_name()
 
+        all_app_list_label = tkinter.Label(window,text="App:")
+        all_app_list_label.place(relx="0.1",rely="0.36")
+
+        cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
+        cmb_app_list.place(relx="0.2",rely="0.36")
 
 
 
