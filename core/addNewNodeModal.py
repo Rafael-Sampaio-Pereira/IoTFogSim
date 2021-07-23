@@ -135,7 +135,7 @@ def add_new_node_modal_screen(network_layer, node_type):
                 ap_window = tkinter.Toplevel()
                 tksupport.install(ap_window)
                 ap_window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
-                ap_window.geometry("300x200")
+                ap_window.geometry("300x300")
                 ap_window.resizable(False, False)
 
                 # access point hearder message - Rafael Sampaio
@@ -144,35 +144,53 @@ def add_new_node_modal_screen(network_layer, node_type):
                 
                 # input for router access point addr- Rafael Sampaio
                 ap_real_ip_label = tkinter.Label(ap_window,text="Real IP:")
-                ap_real_ip_label.place(relx="0.1",rely="0.20")
+                ap_real_ip_label.place(relx="0.1",rely="0.15")
                 input_ap_real_ip = tkinter.Entry(ap_window)
                 input_ap_real_ip.insert(-1, '127.0.0.1')
-                input_ap_real_ip.place(relx="0.25", rely="0.20")
+                input_ap_real_ip.place(relx="0.25", rely="0.15")
 
                 # input for router access point port - Rafael Sampaio
                 ap_port_label = tkinter.Label(ap_window,text="Port:")
-                ap_port_label.place(relx="0.1",rely="0.35")
+                ap_port_label.place(relx="0.1",rely="0.25")
                 ap_input_port = tkinter.Entry(ap_window)
                 ap_input_port.insert(-1, str(randrange(8000, 8999)))
-                ap_input_port.place(width="50",relx="0.25",rely="0.35")
+                ap_input_port.place(width="50",relx="0.25",rely="0.25")
 
                 # access position on screen -Rafael Sampaio
                 ap_msg = tkinter.Label(ap_window,text="Position:")
-                ap_msg.place(relx="0.1",rely="0.50")
+                ap_msg.place(relx="0.1",rely="0.35")
                 ap_x_label = tkinter.Label(ap_window,text="X")
-                ap_x_label.place(relx="0.25",rely="0.50")
+                ap_x_label.place(relx="0.25",rely="0.35")
                 ap_input_x = tkinter.Entry(ap_window)
                 ap_input_x.insert(-1, int(x)+10)
-                ap_input_x.place(width="35", relx="0.29", rely="0.50")
+                ap_input_x.place(width="35", relx="0.29", rely="0.35")
                 ap_y_label = tkinter.Label(ap_window, text="Y")
-                ap_y_label.place(relx="0.45",rely="0.50")
+                ap_y_label.place(relx="0.45",rely="0.35")
                 ap_input_y = tkinter.Entry(ap_window)
                 ap_input_y.insert(-1, int(y)+10)
-                ap_input_y.place(width="35", relx="0.49",rely="0.50")
+                ap_input_y.place(width="35", relx="0.49",rely="0.35")
+
+                # input for access point addr TBTT- Rafael Sampaio
+                ap_tbtt_label = tkinter.Label(ap_window,text="TBTT:")
+                ap_tbtt_label.place(relx="0.1",rely="0.45")
+                input_ap_tbtt = tkinter.Entry(ap_window)
+                input_ap_tbtt.place(relx="0.25", rely="0.45")
+
+                # input for access point addr ssid- Rafael Sampaio
+                ap_ssid_label = tkinter.Label(ap_window,text="SSID:")
+                ap_ssid_label.place(relx="0.1",rely="0.55")
+                input_ap_ssid = tkinter.Entry(ap_window)
+                input_ap_ssid.place(relx="0.25", rely="0.55")
+
+                # input for access point addr wpa2- Rafael Sampaio
+                ap_wpa2_label = tkinter.Label(ap_window,text="WPA2:")
+                ap_wpa2_label.place(relx="0.1",rely="0.65")
+                input_ap_wpa2 = tkinter.Entry(ap_window)
+                input_ap_wpa2.place(relx="0.25", rely="0.65")
 
                 # button to save access point - Rafael Sampaio
                 save_ap_button = ttk.Button(ap_window, text = "Save", command = None)
-                save_ap_button.place(relx="0.35",rely="0.70")
+                save_ap_button.place(relx="0.35",rely="0.80")
 
             # button to open a modal to create access point - Rafael Sampaio
             ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
