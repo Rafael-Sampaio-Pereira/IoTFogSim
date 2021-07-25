@@ -401,7 +401,7 @@ class WirelessComputer(object):
 
         self.is_wireless = is_wireless
         self.visual_component = VisualComponent(self.is_wireless, self.simulation_core, self.name, self.icon, x, y, coverage_area_radius, self)
-        self.simulation_core.updateEventsCounter("Initializing sensor node")
+        self.simulation_core.updateEventsCounter("Initializing wireless computer")
         self.application.visual_component = self.visual_component
         self.application.visual_component.coverage_area_radius = coverage_area_radius
         self.application.simulation_core = self.simulation_core

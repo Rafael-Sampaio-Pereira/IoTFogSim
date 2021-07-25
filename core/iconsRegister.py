@@ -36,3 +36,8 @@ def getIconFileName(icon_name):
 	    if icon == icon_name:
 	    	return iconsList[icon]
 
+
+def getIconName(file_name):
+    for icon_name , icon_path in iconsList.items():
+	    if icon_path == file_name:
+	    	return icon_name

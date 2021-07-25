@@ -67,6 +67,6 @@ def get_all_app_classes_name():
         module = importlib.import_module('applications.'+file[:-3])
         for name, obj in inspect.getmembers(module, inspect.isclass):
             if(name.endswith('App')):
-                app_list.append(name)
+                app_list.append(file[:-3]+'.'+name)
 
     return app_list

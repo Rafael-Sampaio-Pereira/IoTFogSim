@@ -110,29 +110,29 @@ class ScrollableScreen(tkinter.Frame):
 
             cloudMenu = tkinter.Menu(self.contextMenu, tearoff=0)
             cloudMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            cloudMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen('cloud','server'))
-            cloudMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen('cloud','client'))
-            cloudMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen('cloud','router'))
-            # cloudMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen('cloud','access_point'))
-            cloudMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen('cloud','wireless_computer'))
+            cloudMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','server'))
+            cloudMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','client'))
+            cloudMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','router'))
+            # cloudMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','access_point'))
+            cloudMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','wireless_computer'))
 
 
             fogMenu = tkinter.Menu(self.contextMenu, tearoff=0)
             fogMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            fogMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen('fog','server'))
-            fogMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen('fog','client'))
-            fogMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen('fog','router'))
-            # fogMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen('fog','access_point'))
-            fogMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen('fog','wireless_computer'))
+            fogMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','server'))
+            fogMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','client'))
+            fogMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','router'))
+            # fogMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','access_point'))
+            fogMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','wireless_computer'))
 
 
             iotMenu = tkinter.Menu(self.contextMenu, tearoff=0)
             iotMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            iotMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen('iot','server'))
-            iotMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen('iot','client'))
-            iotMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen('iot','router'))
-            # iotMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen('iot','access_point'))
-            iotMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen('iot','wireless_computer'))
+            iotMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','server'))
+            iotMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','client'))
+            iotMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','router'))
+            # iotMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','access_point'))
+            iotMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','wireless_computer'))
 
 
 

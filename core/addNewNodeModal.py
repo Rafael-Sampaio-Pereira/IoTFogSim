@@ -9,9 +9,19 @@ from tkinter import PhotoImage
 from twisted.internet import tksupport
 from config.settings import version
 from core.functions import get_all_app_classes_name
+from core.standarddevice import StandardServerDevice
+from core.standarddevice import StandardClientDevice
+from core.standarddevice import AccessPoint
+from core.standarddevice import Router
+from core.standarddevice import WSNSensorNode
+from core.standarddevice import WSNRepeaterNode
+from core.standarddevice import WSNSinkNode
+from core.standarddevice import WirelessSensorNetwork
+from core.standarddevice import WirelessComputer
+from core.iconsRegister import getIconName
+import os
 
-
-def add_new_node_modal_screen(network_layer, node_type):
+def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         window = tkinter.Toplevel()
         tksupport.install(window)
         window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
@@ -50,7 +60,9 @@ def add_new_node_modal_screen(network_layer, node_type):
         # input for new node coverage area, deafult is disabled - Rafael Sampaio
         coverage_area_label = tkinter.Label(window,text="Coverage area:")
         coverage_area_label.place(relx="0.1",rely="0.30")
-        input_coverage_area = tkinter.Entry(window, state='disabled')
+        input_coverage_area = tkinter.Entry(window)
+        input_coverage_area.insert(-1, 0)
+        input_coverage_area.configure(state='disabled')
         input_coverage_area.place(width="124", relx="0.35",rely="0.30")
 
         # controller for radio buttons that enable and disable the coverage are input - Rafael Sampaio 
@@ -68,9 +80,9 @@ def add_new_node_modal_screen(network_layer, node_type):
         # radio buttons that enable and disable the coverage area input - Rafael Sampaio 
         is_wireless_msg = tkinter.Label(window,text="Is wireless?")
         is_wireless_msg.place(relx="0.1",rely="0.24")
-        yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="0", command=enableCoverage)
+        yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="1", command=enableCoverage)
         yes_button.place(relx="0.3",rely="0.24")
-        no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="1", command=disableCoverage)
+        no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="0", command=disableCoverage)
         no_button.place(relx="0.45",rely="0.24")
 
         # geting all apps in 'plications' folder files - Rafael Sampaio 
@@ -82,8 +94,12 @@ def add_new_node_modal_screen(network_layer, node_type):
         cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
         cmb_app_list.place(relx="0.2",rely="0.36")
 
+        filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png'
+
+        simulation_core.temp_node_icon_path = filename
+
         # label for the new node icon - Rafael Sampaio
-        img = Image.open(str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png')
+        img = Image.open(filename)
         img = img.resize((32, 32))
         photo = ImageTk.PhotoImage(img)
         icon_label = tkinter.Label(window, image=photo)
@@ -95,6 +111,7 @@ def add_new_node_modal_screen(network_layer, node_type):
             path = str(pathlib.Path.cwd())+'/graphics/icons/'
             filename = filedialog.askopenfilename(initialdir = path, title = "Choose a icon file", filetypes =
             [("png files","*.png")])
+            simulation_core.temp_node_icon_path = filename
             img = Image.open(filename)
             img = img.resize((32, 32))
             photo = ImageTk.PhotoImage(img)
@@ -196,6 +213,37 @@ def add_new_node_modal_screen(network_layer, node_type):
             ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
             ap_button.place(relx="0.1",rely="0.66")
         
+        
+
+
+        def save():
+            name = input_name.get()
+            icon_file_name = os.path.basename(simulation_core.temp_node_icon_path)
+            icon_name = getIconName(icon_file_name)
+            is_wireless = None
+            pos_x = input_x.get()
+            pos_y = input_y.get()
+            if radio_button_controller.get() == 1:
+                is_wireless = True
+            elif radio_button_controller.get() == 0:
+                is_wireless = False
+            app = 'applications.'+cmb_app_list.get()
+            covarage = input_coverage_area.get()
+
+            if (node_type == 'wireless_computer'):
+
+                comp = WirelessComputer(simulation_core,
+                name,
+                icon_name,
+                is_wireless,
+                int(pos_x),
+                int(pos_y),
+                app, 
+                int(covarage))
+                simulation_core.allNodes.append(comp)
+                comp.run()
+
+        
         # button to save the new node - Rafael Sampaio
-        save_node_button = ttk.Button(window, text = "Save", command = None)
+        save_node_button = ttk.Button(window, text = "Save", command = save)
         save_node_button.place(relx="0.4",rely="0.90")
