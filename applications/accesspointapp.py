@@ -71,8 +71,8 @@ class AccessPointApp(StandardApplicationComponent):
         self._in_buffer = set() # stores packages received from wifi devices - Rafael Sampaio
         # self._out_buffer = set() # stores packages received from gateway(router/switch) - Rafael Sampaio
         self.associated_devices = set()
-        self.gateway_addr = '127.0.0.1'
-        self.gateway_port = 8081
+        self.gateway_addr = '127.0.0.1' # this is the default value if nohting was setted - Rafael Sampaio
+        self.gateway_port = 8081 # this is the default value if nohting was setted - Rafael Sampaio
         self.ap_factory = None # this stores the factory used to connect to the gateway(router/switch) - Rafael Sampaio
 
     def start(self):

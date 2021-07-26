@@ -94,9 +94,20 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
         cmb_app_list.place(relx="0.2",rely="0.36")
 
-        filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png'
+        filename = filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png'
+
+        if node_type == 'wireless_computer':
+            filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_notebook.png'
+        elif node_type == 'router':
+            filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_router.png'
+        elif node_type == 'server':
+            filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png'
+        elif node_type == 'client':
+            filename = str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_client.png'
+
 
         simulation_core.temp_node_icon_path = filename
+        simulation_core.temp_new_ap_node = None
 
         # label for the new node icon - Rafael Sampaio
         img = Image.open(filename)
@@ -179,35 +190,61 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                 ap_x_label = tkinter.Label(ap_window,text="X")
                 ap_x_label.place(relx="0.25",rely="0.35")
                 ap_input_x = tkinter.Entry(ap_window)
-                ap_input_x.insert(-1, int(x)+10)
+                ap_input_x.insert(-1, int(x)+100)
                 ap_input_x.place(width="35", relx="0.29", rely="0.35")
                 ap_y_label = tkinter.Label(ap_window, text="Y")
                 ap_y_label.place(relx="0.45",rely="0.35")
                 ap_input_y = tkinter.Entry(ap_window)
-                ap_input_y.insert(-1, int(y)+10)
+                ap_input_y.insert(-1, int(y)+100)
                 ap_input_y.place(width="35", relx="0.49",rely="0.35")
 
                 # input for access point addr TBTT- Rafael Sampaio
                 ap_tbtt_label = tkinter.Label(ap_window,text="TBTT:")
                 ap_tbtt_label.place(relx="0.1",rely="0.45")
                 input_ap_tbtt = tkinter.Entry(ap_window)
+                input_ap_tbtt.insert(-1, '0.1024')
                 input_ap_tbtt.place(relx="0.25", rely="0.45")
 
                 # input for access point addr ssid- Rafael Sampaio
                 ap_ssid_label = tkinter.Label(ap_window,text="SSID:")
                 ap_ssid_label.place(relx="0.1",rely="0.55")
                 input_ap_ssid = tkinter.Entry(ap_window)
+                input_ap_ssid.insert(-1, 'Privated Network')
                 input_ap_ssid.place(relx="0.25", rely="0.55")
 
                 # input for access point addr wpa2- Rafael Sampaio
                 ap_wpa2_label = tkinter.Label(ap_window,text="WPA2:")
                 ap_wpa2_label.place(relx="0.1",rely="0.65")
                 input_ap_wpa2 = tkinter.Entry(ap_window)
+                input_ap_wpa2.insert(-1, '123@iotFogSim2021')
                 input_ap_wpa2.place(relx="0.25", rely="0.65")
 
+
+                # input for new node coverage area, deafult is disabled - Rafael Sampaio
+                ap_coverage_area_label = tkinter.Label(ap_window,text="Coverage area:")
+                ap_coverage_area_label.place(relx="0.1",rely="0.75")
+                input_ap_coverage_area = tkinter.Entry(ap_window)
+                input_ap_coverage_area.insert(-1, 200)
+                input_ap_coverage_area.place(width="124", relx="0.35",rely="0.75")
+
+                def save_ap():
+                    simulation_core.temp_new_ap_node = {
+                        'port': int(ap_input_port.get()),
+                        'real_ip': input_ap_real_ip.get(),
+                        'pos_x': int(ap_input_x.get()),
+                        'pos_y': int(ap_input_y.get()),
+                        'tbtt': float(input_ap_tbtt.get()),
+                        'ssid': input_ap_ssid.get(),
+                        'wpa2_password': input_ap_wpa2.get(),
+                        'coverage_area_radius': int(input_ap_coverage_area.get())
+                    }
+                
+                    ap_window.destroy()
+                    ap_window.update()
+
                 # button to save access point - Rafael Sampaio
-                save_ap_button = ttk.Button(ap_window, text = "Save", command = None)
-                save_ap_button.place(relx="0.35",rely="0.80")
+                save_ap_button = ttk.Button(ap_window, text = "Save", command = save_ap)
+                save_ap_button.place(relx="0.35",rely="0.85")
 
             # button to open a modal to create access point - Rafael Sampaio
             ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
@@ -230,7 +267,17 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             app = 'applications.'+cmb_app_list.get()
             covarage = input_coverage_area.get()
 
+            # atributtes only for routers, clients and servers - Rafael Sampaio
+            if (node_type == 'router' or node_type == 'client' or node_type == 'server'):
+                real_ip = input_real_ip.get()
+
+            # atributtes only for routers and servers - Rafael Sampaio
+            if (node_type == 'router'or node_type == 'server'):    
+                port = input_port.get()
+
             if (node_type == 'wireless_computer'):
+
+                is_wireless = True
 
                 comp = WirelessComputer(simulation_core,
                 name,
@@ -241,7 +288,72 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                 app, 
                 int(covarage))
                 simulation_core.allNodes.append(comp)
-                comp.run()
+                # comp.run()
+
+            if (node_type == 'server'):
+    
+                serv = StandardServerDevice(simulation_core,
+                int(port),
+                real_ip,
+                name,
+                icon_name,
+                is_wireless,
+                int(pos_x),
+                int(pos_y),
+                app, 
+                int(covarage))
+                simulation_core.allNodes.append(serv)
+                # serv.run()
+
+            if (node_type == 'client'):
+        
+                clt = StandardClientDevice(simulation_core,
+                real_ip,
+                name,
+                icon_name,
+                is_wireless,
+                int(pos_x),
+                int(pos_y),
+                app, 
+                int(covarage))
+                simulation_core.allNodes.append(clt)
+
+            if (node_type == 'router'):
+
+                is_wireless = False
+                rtr = Router(simulation_core,
+                int(port),
+                real_ip,
+                name,
+                icon_name,
+                is_wireless,
+                int(pos_x),
+                int(pos_y),
+                app, 
+                int(covarage))
+                simulation_core.allNodes.append(rtr)
+
+                if (simulation_core.temp_new_ap_node):
+                    application = "applications.accesspointapp.AccessPointApp"
+                    icon = "ap_icon"
+                    is_wireless = True
+                    ap = AccessPoint(simulation_core, 
+                    rtr, 
+                    simulation_core.temp_new_ap_node['tbtt'], 
+                    simulation_core.temp_new_ap_node['ssid'], 
+                    simulation_core.temp_new_ap_node['wpa2_password'], 
+                    icon, 
+                    is_wireless, 
+                    simulation_core.temp_new_ap_node['pos_x'], 
+                    simulation_core.temp_new_ap_node['pos_y'], 
+                    application, 
+                    simulation_core.temp_new_ap_node['coverage_area_radius'])
+                    ap.gateway_addr = rtr.addr
+                    ap.gateway_port = rtr.port
+                    simulation_core.allNodes.append(ap)
+
+            window.destroy()
+            window.update()
 
         
         # button to save the new node - Rafael Sampaio

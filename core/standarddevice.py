@@ -371,6 +371,8 @@ class AccessPoint(object):
         self.application.is_wireless = is_wireless
         self.application.TBTT = self.TBTT
         self.application.coverage_area_radius = coverage_area_radius
+        self.application.gateway_addr = base_device.addr
+        self.application.gateway_port = base_device.port
 
 
         self.simulation_core.updateEventsCounter("Initializing Access Point")

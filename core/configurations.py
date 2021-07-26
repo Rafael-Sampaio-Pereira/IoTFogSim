@@ -169,15 +169,12 @@ def load_nodes(project_name, simulation_core):
 
 			for router in data['routers']:
     				
-				log.msg("Creating router ...")
 				rt = Router(simulation_core, router['port'], router['real_ip'], router['name'], router['icon'], router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
 				simulation_core.allNodes.append(rt)
 				
 
 				for access_point in router['access_points']:
-						
-					log.msg("Creating AccessPoint station ...")
-
+    					
 					ap = AccessPoint(simulation_core, rt, access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'], access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
 					simulation_core.allNodes.append(ap)
 
