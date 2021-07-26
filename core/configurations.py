@@ -63,53 +63,59 @@ def initialization_screen(simulation_core):
 			selected_project_name = cmb_projects_list.get()
 			# messagebox.showinfo("IoTFogSim - %s"%(selected_project_name), "You're begin to start the %s simulation project. Just click the 'Ok' button." %(selected_project_name))
 
-			simulation_core.project_name = selected_project_name
+			if selected_project_name == '':
+				messagebox.showwarning('No project', 'Please, select a project!')
+			else:
+				simulation_core.project_name = selected_project_name
 
-			# Configuring log - Rafael Sampaio
-			log_path = "projects/"+selected_project_name+"/"
-			configure_logger(log_path, selected_project_name)
+				# Configuring log - Rafael Sampaio
+				log_path = "projects/"+selected_project_name+"/"
+				configure_logger(log_path, selected_project_name)
 
-			resizable = None
-			with open('projects/'+selected_project_name+'/settings.json', 'r') as settings:
-				data = json.loads(settings.read())
-				settings = data['settings']
-				resizable = settings['resizeable']
+				resizable = None
+				with open('projects/'+selected_project_name+'/settings.json', 'r') as settings:
+					data = json.loads(settings.read())
+					settings = data['settings']
+					resizable = settings['resizeable']
 
-			simulation_core.create_simulation_canvas(resizable)
-			load_nodes(selected_project_name, simulation_core)
-			#load_connections(selected_project_name, simulation_core)
+				simulation_core.create_simulation_canvas(resizable)
+				load_nodes(selected_project_name, simulation_core)
+				#load_connections(selected_project_name, simulation_core)
 
-			window.destroy()
-			window.update()
+				window.destroy()
+				window.update()
 
 	def creat_project(window,new_project_name, simulation_core):
 		try:
-			os.makedirs("projects/%s"%(new_project_name))
+			if new_project_name == '':
+				messagebox.showwarning('Invalid Project Name', 'Project name can not be empty!')
+			else:
+				os.makedirs("projects/%s"%(new_project_name))
 
-			# Configuring log - Rafael Sampaio
-			log_path = "projects/"+new_project_name+"/"
-			configure_logger(log_path, new_project_name)
+				# Configuring log - Rafael Sampaio
+				log_path = "projects/"+new_project_name+"/"
+				configure_logger(log_path, new_project_name)
 
-			simulation_core.project_name = new_project_name
+				simulation_core.project_name = new_project_name
 
-			# creating the node.json file into the project directory - Rafael Sampaio
-			nodes_file = "projects/%s/nodes.json"%(new_project_name)
-			if not os.path.exists(nodes_file):
-				with open(nodes_file, 'w') as file:
-					print("{}", file=file)
-			
-			# creating the settings.json file into the project directory - Rafael Sampaio
-			settings_file = "projects/%s/settings.json"%(new_project_name)
-			if not os.path.exists(settings_file):
-				with open(settings_file, 'w') as file:
-					print('{"settings":{"resizeable": true}}', file=file)
+				# creating the node.json file into the project directory - Rafael Sampaio
+				nodes_file = "projects/%s/nodes.json"%(new_project_name)
+				if not os.path.exists(nodes_file):
+					with open(nodes_file, 'w') as file:
+						print("{}", file=file)
+				
+				# creating the settings.json file into the project directory - Rafael Sampaio
+				settings_file = "projects/%s/settings.json"%(new_project_name)
+				if not os.path.exists(settings_file):
+					with open(settings_file, 'w') as file:
+						print('{"settings":{"resizeable": true}}', file=file)
 
-			# default resizeable screen is true for new projects - Rafael Sampaio
-			simulation_core.create_simulation_canvas(resizeable=True)
-			load_nodes(new_project_name, simulation_core)
-			
-			window.destroy()
-			window.update()
+				# default resizeable screen is true for new projects - Rafael Sampaio
+				simulation_core.create_simulation_canvas(resizeable=True)
+				load_nodes(new_project_name, simulation_core)
+				
+				window.destroy()
+				window.update()
 
 		except FileExistsError:
 		    # if the directory already exists - Rafael Sampaio
