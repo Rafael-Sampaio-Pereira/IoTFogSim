@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Simple Fog", 
+        "transmission_rate": "256kbit", 
+        "latency": "2000ms 500ms 25%",
+        "packet_loss": "1% 25%"
+    }
+]

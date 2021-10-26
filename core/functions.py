@@ -1,10 +1,10 @@
 from twisted.python import log
 from importlib import import_module
-import json
 import inspect
 import importlib
-import sys
 import os
+from fabric.api import local
+import netifaces
 
 def import_and_instantiate_class_from_string(class_path):
     
@@ -70,3 +70,12 @@ def get_all_app_classes_name():
                 app_list.append(file[:-3]+'.'+name)
 
     return app_list
+
+
+# getting the default interface name - Rafael Sampaio
+def get_default_interface():
+    return netifaces.gateways()['default'][netifaces.AF_INET][1]
+
+# clear all changes made in a given network interface - Rafael Sampaio
+def clear_network_changes(interface):
+    local(f"sudo tc qdisc del dev {interface} root")

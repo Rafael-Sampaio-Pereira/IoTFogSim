@@ -11,7 +11,7 @@ from twisted.internet.endpoints import TCP4ClientEndpoint
 from twisted.internet.endpoints import connectProtocol
 from core.iconsRegister import getIconFileName
 from core.functions import import_and_instantiate_class_from_string
-
+from fabric.api import local
 from bresenham import bresenham
 
 class StandardServerDevice(object):
@@ -43,6 +43,13 @@ class StandardServerDevice(object):
 
     def run(self):
         self.application.start(self.addr, self.port)
+        
+
+    def confirure_network_link(self, link, transmission_rate, latency, packet_loss, network_interface):
+        log.msg(f"Configuring the {link} to the serve on port {self.port} using {network_interface} interface")
+        local(f"sudo tc qdisc replace dev {network_interface} root handle 1: prio priomap 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0")
+        local(f"sudo tc qdisc replace dev {network_interface} parent 1:2 handle 20: netem delay {latency} rate {transmission_rate} loss {packet_loss} distribution pareto")
+        local(f"sudo tc filter replace dev {network_interface} parent 1:0 protocol ip u32 match ip dport {self.port} 0xffff flowid 1:2")
 
 
 class StandardClientDevice(object):
