@@ -1,8 +1,8 @@
 {
 
         "servers": [
-            { 
-                "name": "Fog Broker Node", 
+            {
+                "name": "Fog Broker Node",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
@@ -15,8 +15,8 @@
             }
         ],
         "clients":[
-            { 
-                "name": "Fog Subscriber Node", 
+            {
+                "name": "Fog Subscriber Node",
                 "real_ip": "127.0.0.1",
                 "icon": "server_icon",
                 "type": "client",
@@ -26,8 +26,8 @@
                 "x": 550,
                 "y": 175
             },
-            { 
-                "name": "Fog Subscriber Node", 
+            {
+                "name": "Fog Subscriber Node",
                 "real_ip": "127.0.0.1",
                 "icon": "server_icon",
                 "type": "client",
@@ -40,8 +40,8 @@
         ],
         "wireless_computers": [],
         "routers": [
-            { 
-                "name": "Router 001", 
+            {
+                "name": "Router 001",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
@@ -54,7 +54,7 @@
                 "x": 400,
                 "y": 200,
                 "access_points": [
-                    { 
+                    {
                         "TBTT": 0.1024,
                         "SSID": "Rede privada 001",
                         "WPA2_password": "iotfogsim2019",
@@ -69,10 +69,10 @@
                 ]
             }
         ],
-
+        "mobile_networks": [],
         "wireless_sensor_networks": [
-            { 
-                "name": "energe_metering_wsn", 
+            {
+                "name": "energe_metering_wsn",
                 "ip_standard": "6LowPan",
                 "network_layer_protocol": "UDP",
                 "application_layer_protocol": "ZigBee",
@@ -119,7 +119,6 @@
                         "x": 1152,
                         "y": 391
                     },
-                    
                     {
                         "name": "sensor",
                         "icon": "sensor_icon",

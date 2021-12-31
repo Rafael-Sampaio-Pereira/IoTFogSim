@@ -1,7 +1,7 @@
 {
-    
+
         "servers": [
-            { 
+            {
                 "name": "Web Server",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
@@ -28,8 +28,8 @@
             }
         ],
         "routers": [
-            { 
-                "name": "Router 001", 
+            {
+                "name": "Router 001",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
@@ -42,7 +42,7 @@
                 "x": 131,
                 "y": 342,
                 "access_points": [
-                    { 
+                    {
                         "TBTT": 0.1024,
                         "SSID": "Rede privada 001",
                         "WPA2_password": "iotfogsim2019",
@@ -57,6 +57,7 @@
                 ]
             }
         ],
-        "wireless_sensor_networks": []
+        "wireless_sensor_networks": [],
+        "mobile_networks": []
 
 }

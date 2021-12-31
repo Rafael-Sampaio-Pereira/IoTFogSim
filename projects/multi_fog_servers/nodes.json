@@ -96,6 +96,7 @@
                 ]
             }
         ],
-        "wireless_sensor_networks": []
+        "wireless_sensor_networks": [],
+        "mobile_networks": []
 
 }

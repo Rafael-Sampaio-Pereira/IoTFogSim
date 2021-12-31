@@ -56,7 +56,7 @@ class PublisherApp(StandardApplicationComponent):
                 
         msg = {
                 "action": "publish",
-                "topic": "sensor_metering",
+                "topic": "any",
                 "content": energy_consumption_meter()
             }
 
@@ -121,7 +121,7 @@ class SubscriberApp(StandardApplicationComponent):
                 
         msg = {
                 "action": "subscribe",
-                "topic": "sensor_metering",
+                "topic": "any",
                 "content": "None"
             }
 
@@ -239,6 +239,6 @@ def extract_mqtt_contents(package):
     except Exception as e:
         log.msg(e)
 
-MQTT_ACK = {"action": "response", "topic": "sensor_metering", "content": "MQTT_ACK"}
+MQTT_ACK = {"action": "response", "topic": "any", "content": "MQTT_ACK"}
 
 

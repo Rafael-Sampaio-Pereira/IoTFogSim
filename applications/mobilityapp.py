@@ -17,7 +17,10 @@ from applications.mqttapp import extract_mqtt_contents
 from bresenham import bresenham
 
 
-class WSNApp(StandardApplicationComponent):
+class MobileNodeApp(StandardApplicationComponent):
+    # This class is originated from the WSNApp, so new implementations are made to
+    # turn computational node to be mobile. This class can be used to create any mobile node such as
+    # vehicular node or smartphone. Gateway are based on a new class called BaseStation - Rafael Sampaio
     def __init__(self):
         self._buffer = set()
         self.simulation_core = None
@@ -37,8 +40,8 @@ class WSNApp(StandardApplicationComponent):
     def set_signal_radius(self, radius):
         self.visual_component.signal_radius = radius
         self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-        
-    
+
+
     def clear_signal_radius(self, radius):
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
         self.visual_component.signal_radius = radius
@@ -60,7 +63,6 @@ class WSNApp(StandardApplicationComponent):
         self.simulation_core.canvas.after(200, self.clear_signal_radius, 0)
 
 
-    
     def print_node_connections(self, nearby_devices_list):
         self_name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         print("=========", self_name ,"==========")
@@ -68,7 +70,7 @@ class WSNApp(StandardApplicationComponent):
             for nearby_device in nearby_devices_list:
                 device_name = self.simulation_core.canvas.itemcget(nearby_device.application.visual_component.draggable_name, 'text')
                 if self_name != device_name:
-                    print(self_name, ' <-------> ', device_name)    
+                    print(self_name, ' <-------> ', device_name)
         print("=============================")
         print('\n')
 
@@ -118,45 +120,38 @@ class WSNApp(StandardApplicationComponent):
 
 
     def simulate_network_latency(self):
-          time.sleep(float(self.visual_component.device.WSN_network_group.latency))
+          time.sleep(float(self.visual_component.device.mobile_network_group.latency))
 
-class SensorApp(WSNApp):
+class MobileProducerApp(MobileNodeApp):
     def __init__(self):
         self._buffer = set()
-        self.interval = 60.0
+        self.interval = 5.0
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
-        
-    
+
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
         self.print_node_connections(nearby_devices_list)
 
-        # self.collect_and_send_data()
         LoopingCall(self.collect_data).start(self.interval)
         # all sensors forward/routes packages every seconds. its not data collection interval - Rafael Sampaio
         LoopingCall(self.forward_packages).start(1.0)
 
 
     def collect_data(self):
-        # Default data collection are made about eletrics mensurements.
+        # Default data collection are made about veichulat mensurements.
         # User can change this method to retun any simulated values.
         # Data needs to be in JSON object stuct(i.e. Key-value) - Rafael Sampaio
 
-        # self._blink_signal()
         # collecting data - Rafael Sampaio
-        voltage = distribution_secundary_voltage_fluctuation_meter_new_version()
-        frequency = energy_60hz_frequency_meter()
-        power_factor = energy_power_factor_meter()
-        current = energy_distribution_current_meter()
-        active_power, aparent_power = energy_distribution_active_and_aparent_power_meter(voltage,current)
-
-        data = '{"voltage": "'+voltage+'", "current": "'+current+'", "frequency": "'+frequency+'", "active_power": "'+active_power+'", "aparent_power": "'+aparent_power+'", "power_factor": "'+power_factor+'"}'
+        speed = '20km'
+        coord = ['10','15']
+        data = '{"speed": "'+speed+'", "x": "'+coord[0]+'", "y": "'+coord[1]+'"}'
 
         # Creating a new package - Rafael Sampaio
-        pack = WSNPackage(source = self, data = data)
+        pack = MobilePackage(source = self, data = data)
 
         # putting this device in the generated package trace - Rafael Sampaio
         pack.put_in_trace(self)
@@ -194,7 +189,6 @@ class SensorApp(WSNApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-
                         reactor.callFromThread(self.draw_connection_arrow, destiny)
                         self.simulation_core.canvas.update()
                         
@@ -202,25 +196,21 @@ class SensorApp(WSNApp):
 
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
-                        
                         package.put_in_trace(destiny)
-                        #package.print_trace()
 
-                        self.simulation_core.updateEventsCounter("wsn node send data")
-
-                        
+                        self.simulation_core.updateEventsCounter("mobile data producer node send data")
 
 
-class SinkApp(WSNApp):
+class BaseStationApp(MobileNodeApp):
     def __init__(self):
-        self._buffer = set() # this buffer stores only data from the wsn sensors - Rafael Sampaio
+        self._buffer = set() # this buffer stores only data from the mobile data producer - Rafael Sampaio
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
-        self.sink_factory = None
+        self.base_station_factory = None
         self.gateway_addr = '127.0.0.1'
         self.gateway_port = 8081
-         # Destiny info (e.g. mqtt broker server addr and port) - Rafael Sampaio
+         # Destiny info (e.g. mqtt based server addr and port) - Rafael Sampaio
         self.destiny_addr = '127.0.0.1'
         self.destiny_port = 5100
         self.source_addr = None
@@ -231,47 +221,43 @@ class SinkApp(WSNApp):
         self.configure_source_info()
         
 
-    # this method allow the sink to connect to router/switch - Rafael Sampaio
+    # this method allow the BaseStation to connect to router/switch - Rafael Sampaio
     def connect_to_gateway(self):
         # get start to connect to gateway - Rafael Sampaio
-        factory = SinkAppFactory(self.simulation_core, self.visual_component)
+        factory = BaseStationAppFactory(self.simulation_core, self.visual_component)
         factory.noisy = False
         reactor.connectTCP(self.gateway_addr, self.gateway_port, factory)
-        self.sink_factory = factory
+        self.base_station_factory = factory
 
 
     def configure_source_info(self):
-        # get the network info from the sink protocol and using it to set the sink app network info - Rafael Sampaio 
-        if self.sink_factory:
-            if self.sink_factory.running_protocol:
+        # get the network info from the base station protocol and using it to set the base station app network info - Rafael Sampaio 
+        if self.base_station_factory:
+            if self.base_station_factory.running_protocol:
                 if not self.source_addr:
-                    self.source_addr = self.sink_factory.running_protocol.source_addr
+                    self.source_addr = self.base_station_factory.running_protocol.source_addr
                 
                 if not self.source_port:
-                    self.source_port = self.sink_factory.running_protocol.source_port
+                    self.source_port = self.base_station_factory.running_protocol.source_port
 
         # while the source info is not complete this function will be recursivelly called - Rafael Sampaio
         if self.source_addr == None or self.source_port == None:
             reactor.callLater(1, self.configure_source_info)
         else:
-            # the sink only starts to forward packages after connect to a router/gateway and get an network configurantion - Rafael Sampaio
+            # the base station only starts to forward packages after connect to a router/gateway and get an network configurantion - Rafael Sampaio
             LoopingCall(self.forward_packages).start(30.0) #forwarding packages every 'x' secondes - Rafael Sampaio
 
 
 
     def forward_packages(self):
         if self.verify_buffer():
-          
-            if self.sink_factory.running_protocol and (self.source_addr != None and self.source_port != None):
-                
+            if self.base_station_factory.running_protocol and (self.source_addr != None and self.source_port != None):
                 data = "["
-                
                 # forwarding packages to the gateway - Rafael Sampaio
-                for wsn_package in self._buffer.copy():
+                for mobile_package in self._buffer.copy():
 
-                    data += '{ "id": "' + str(wsn_package.id) + '", "source": "' + wsn_package.source.name + '", "data": ' + wsn_package.data + ', "created_at": "' + wsn_package.created_at + '" },'
-                    self._buffer.remove(wsn_package)
-
+                    data += '{ "id": "' + str(mobile_package.id) + '", "source": "' + mobile_package.source.name + '", "data": ' + mobile_package.data + ', "created_at": "' + mobile_package.created_at + '" },'
+                    self._buffer.remove(mobile_package)
 
                 data = data[:-1]
                 data += "]"
@@ -281,45 +267,45 @@ class SinkApp(WSNApp):
                 # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
                 mqtt_msg = {
                         "action": "publish",
-                        "topic": "sensor_metering",
+                        "topic": "vehicular_metering",
                         "content": data
                     }
 
                 mqtt_package = self.build_package(mqtt_msg)
 
                 # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
-                self.sink_factory.running_protocol.send(mqtt_package)
+                self.base_station_factory.running_protocol.send(mqtt_package)
 
 
     def verify_buffer(self):
         if len(self._buffer) > 0:
             return True
         else:
-            return False   
+            return False
 
 
 
-class SinkAppFactory(ClientFactory):
-    
+class BaseStationAppFactory(ClientFactory):
+
     def __init__(self, simulation_core, visual_component):
         self.running_protocol = None
         self.visual_component = visual_component
         self.simulation_core =  simulation_core
 
     def buildProtocol(self, address):
-        self.running_protocol = SinkAppProtocol(self.simulation_core, self.visual_component)
-        self.running_protocol.save_protocol_in_simulation_core(self.running_protocol) 
+        self.running_protocol = BaseStationAppProtocol(self.simulation_core, self.visual_component)
+        self.running_protocol.save_protocol_in_simulation_core(self.running_protocol)
         return self.running_protocol
 
 
 # this protocol acts as a client to the router/switch - Rafael Sampaio
-class SinkAppProtocol(StandardApplicationComponent):
-    
+class BaseStationAppProtocol(StandardApplicationComponent):
+
     def __init__(self, simulation_core, visual_component):
         self.visual_component = visual_component
         self.simulation_core =  simulation_core
-        self._buffer = set() # this sink uses only one buffer, you need to pay atention when your application has top-down approachs - Rafael Sampaio
-        # the sink network info will be generated after the connection to a gateway such as router or switch - Rafael Sampaio
+        self._buffer = set() # this base station uses only one buffer, you need to pay atention when your application has top-down approachs - Rafael Sampaio
+        # the base station network info will be generated after the connection to a gateway such as router or switch - Rafael Sampaio
         self.source_addr = None
         self.source_port = None
 
@@ -332,20 +318,20 @@ class SinkAppProtocol(StandardApplicationComponent):
 
     # This method is overhidding the dataReceived method in the StandardApplicationComponent class - Rafael Sampaio
     def dataReceived(self, data):
-        # this sink uses the bottom-up approach and dont let us to use top-down messages/commands - Rafael Sampaio
+        # this base station uses the bottom-up approach and dont let us to use top-down messages/commands - Rafael Sampaio
         pass
 
     def connectionLost(self, reason):
-        pass     
-         
+        pass
+
     def write(self, data):
         if data:
             self.transport.write(data)
 
 
 
-class WSNPackage(object):
-    
+class MobilePackage(object):
+
     def __init__(self, source,  data):
         self.id = uuid.uuid4().fields[-1]
         self.source = source
@@ -357,7 +343,6 @@ class WSNPackage(object):
 
 
     def get_package_as_json(self):
-        
         all_destiny_names = ''
 
         package = {
@@ -367,15 +352,10 @@ class WSNPackage(object):
             "created_at": self.created_at
         }
 
-        
-
         package = json.dumps(package)
-
-        print(package)
 
         return package
 
-    
     def put_in_trace(self, device):
         device_name = self.source.simulation_core.canvas.itemcget(device.visual_component.draggable_name, 'text')
         self.trace.add(device_name)
@@ -390,24 +370,22 @@ class WSNPackage(object):
     def print_trace(self):
         src = self.source.simulation_core.canvas.itemcget(self.source.visual_component.draggable_name, 'text')
         trace_string = str(self.id)+": "+src
-        
+
         for device in self.trace:
             if not device == src:
                 trace_string += " - "+device
-        
         print(trace_string)
 
 
 
-class RepeaterApp(WSNApp):
+class MobileRepeaterApp(MobileNodeApp):
     def __init__(self):
         self._buffer = set()
         self.interval = 0.2
         self.simulation_core = None
         self.visual_component = None
         self.nearby_devices_list = None
-        
-    
+
     def start(self, nearby_devices_list):
         self.name = self.simulation_core.canvas.itemcget(self.visual_component.draggable_name, 'text')
         self.nearby_devices_list = nearby_devices_list
@@ -416,27 +394,21 @@ class RepeaterApp(WSNApp):
 
 
     def route_packages(self):
-        
+
         def remove_sent_packages_from_buffer(_package):
-            # after send, remove data from buffer - Rafael Sampaio    
+            # after send, remove data from buffer - Rafael Sampaio
             self._buffer.remove(_package)
 
         if len(self._buffer) > 0:
             self.temp_buffer = self._buffer.copy()
-            
+
             # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
             for _package in self.temp_buffer:
                 self.forward_package(_package)
-                            
                 remove_sent_packages_from_buffer(_package)
-    
-        # reactor.callLater(self.interval, self.route_packages)
 
     def forward_package(self, package):
         if len(package.trace) > 0:
-
-            # self._blink_signal()
-
             for destiny in self.nearby_devices_list:
                 if destiny == package.source:
                     # A device can not sent data to it self - Rafael Sampaio
@@ -451,11 +423,7 @@ class RepeaterApp(WSNApp):
                         reactor.callFromThread(self.draw_connection_arrow, destiny)
                         self.simulation_core.canvas.update()
 
-                        # self.simulate_network_latency()
-                        
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
-                        
                         package.put_in_trace(destiny)
-  
-                        self.simulation_core.updateEventsCounter("wsn repeater node routing data")
+                        self.simulation_core.updateEventsCounter("Mobile repeater node routing data")

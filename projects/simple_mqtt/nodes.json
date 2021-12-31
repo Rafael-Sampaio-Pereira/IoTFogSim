@@ -1,8 +1,8 @@
 {
 
     "clients": [
-        { 
-            "name": "Fog Subscriber Node", 
+        {
+            "name": "Fog Subscriber Node",
             "real_ip": "127.0.0.1",
             "icon": "server_icon",
             "type": "client",
@@ -12,8 +12,8 @@
             "x": 550,
             "y": 175
         },
-        { 
-            "name": "Fog Subscriber Node", 
+        {
+            "name": "Fog Subscriber Node",
             "real_ip": "127.0.0.1",
             "icon": "server_icon",
             "type": "client",
@@ -24,7 +24,7 @@
             "y": 75
         },
         {
-            "name": "Arduino based sensor (publisher node)", 
+            "name": "Arduino based sensor (publisher node)",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
@@ -35,7 +35,7 @@
             "y": 380
         },
         {
-            "name": "Arduino based sensor (publisher node)", 
+            "name": "Arduino based sensor (publisher node)",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
@@ -46,7 +46,7 @@
             "y": 380
         },
         {
-            "name": "Arduino based sensor (publisher node)", 
+            "name": "Arduino based sensor (publisher node)",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
@@ -57,7 +57,7 @@
             "y": 380
         },
         {
-            "name": "Arduino based sensor (publisher node)", 
+            "name": "Arduino based sensor (publisher node)",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
@@ -68,7 +68,7 @@
             "y": 380
         },
         {
-            "name": "Arduino based sensor (publisher node)", 
+            "name": "Arduino based sensor (publisher node)",
             "real_ip": "127.0.0.1",
             "icon": "arduino_uno_icon",
             "type": "client",
@@ -80,8 +80,8 @@
         }
     ],
     "servers": [
-        { 
-            "name": "Fog Broker Node", 
+        {
+            "name": "Fog Broker Node",
             "real_ip": "127.0.0.1",
             "icon": "server_icon",
             "type": "server",
@@ -95,9 +95,10 @@
     ],
     "wireless_computers": [],
     "wireless_sensor_networks": [],
+    "mobile_networks": [],
     "routers": [
-        { 
-            "name": "Router 001", 
+        {
+            "name": "Router 001",
             "real_ip": "127.0.0.1",
             "icon": "router_icon",
             "type": "router",
@@ -110,7 +111,6 @@
             "x": 400,
             "y": 200,
             "access_points": [
-               
             ]
         }
     ]
