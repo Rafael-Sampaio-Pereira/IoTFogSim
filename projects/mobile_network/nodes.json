@@ -68,7 +68,7 @@
       "mobile_producer_nodes": [
         {
           "name": "car",
-          "icon": "sensor_icon",
+          "icon": "smartphone_icon",
           "coverage_area_radius": 100,
           "application": "applications.mobilityapp.MobileProducerApp",
           "is_wireless": true,
@@ -77,7 +77,7 @@
         },
         {
           "name": "car",
-          "icon": "sensor_icon",
+          "icon": "smartphone_icon",
           "coverage_area_radius": 100,
           "application": "applications.mobilityapp.MobileProducerApp",
           "is_wireless": true,
@@ -86,7 +86,7 @@
         },
         {
           "name": "car",
-          "icon": "sensor_icon",
+          "icon": "smartphone_icon",
           "coverage_area_radius": 100,
           "application": "applications.mobilityapp.MobileProducerApp",
           "is_wireless": true,

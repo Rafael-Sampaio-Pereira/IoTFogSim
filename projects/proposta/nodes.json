@@ -1,8 +1,8 @@
 {
 
         "servers": [
-            { 
-                "name": "Fog Broker Node", 
+            {
+                "name": "Fog Broker Node",
                 "real_ip": "127.0.0.1",
                 "icon": "broker_icon",
                 "type": "server",
@@ -15,8 +15,8 @@
             }
         ],
         "clients":[
-            { 
-                "name": "SCADA System", 
+            {
+                "name": "SCADA System",
                 "real_ip": "127.0.0.1",
                 "icon": "cloud_icon",
                 "type": "client",
@@ -29,8 +29,8 @@
         ],
         "wireless_computers": [],
         "routers": [
-            { 
-                "name": "Router 001", 
+            {
+                "name": "Router 001",
                 "real_ip": "127.0.0.1",
                 "icon": "router_icon",
                 "type": "router",
@@ -42,15 +42,13 @@
                 "is_wireless": false,
                 "x": 535,
                 "y": 217,
-                "access_points": [
-                    
-                ]
+                "access_points": []
             }
         ],
-
+        "mobile_networks": [],
         "wireless_sensor_networks": [
-            { 
-                "name": "energy_metering_wsn", 
+            {
+                "name": "energy_metering_wsn",
                 "network_layer_protocol": "UDP",
                 "application_layer_protocol": "Wi-SUN",
                 "latency": "0.02",
@@ -639,8 +637,7 @@
                         "y": 1153
                     }
 
-                ],
-                "mobile_networks": []
+                ]
             }
         ]
 }

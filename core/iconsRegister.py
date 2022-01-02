@@ -10,6 +10,7 @@ iconsList = {
 	"arduino_uno_icon": "iotfogsim_arduino_uno.png",
 	"arduino_uno_signal_icon": "iotfogsim_arduino_uno_signal.png",
 	"broker_icon": "iotfogsim_broker.png",
+	"car_icon": "iotfogsim_car.png",
 	"client_icon": "iotfogsim_client.png",
 	"cloud_icon": "iotfogsim_cloud.png",
 	"database_server_icon": "iotfogsim_database_server.png",
@@ -27,6 +28,7 @@ iconsList = {
 	"small_current_sensor_icon": "iotfogsim_small_current_sensor.png",
 	"smart_meter_icon": "iotfogsim_smart_meter.png",
 	"smart_meter_icon_signal": "iotfogsim_smart_meter_signal.png",
+	"smartphone_icon": "iotfogsim_smartphone.png",
 
 }
 
