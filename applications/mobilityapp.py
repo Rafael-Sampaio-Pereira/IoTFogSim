@@ -148,14 +148,19 @@ class MobileNodeApp(StandardApplicationComponent):
             direction = random.randint(1,4)
             reference = random.randint(1,100)
 
+
             if direction == 1: # up
-                self.visual_component.y = self.visual_component.y - reference
+                if not (self.visual_component.y - reference) < 1:
+                    self.visual_component.y = self.visual_component.y - reference
             elif direction == 2: # down
-                self.visual_component.y = self.visual_component.y + reference
+                if not (self.visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
+                    self.visual_component.y = self.visual_component.y + reference
             elif direction == 3: # left
-                self.visual_component.x =self.visual_component.x - reference
+                if not (self.visual_component.x - reference) < 1:
+                    self.visual_component.x = self.visual_component.x - reference
             elif direction == 4: # right
-                self.visual_component.x = self.visual_component.x + reference
+                if not (self.visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
+                    self.visual_component.x = self.visual_component.x + reference
 
             if self.visual_component.is_wireless:
                 self.simulation_core.canvas.moveto(self.visual_component.draggable_coverage_area_circle,
