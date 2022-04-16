@@ -56,7 +56,7 @@ class CloudStorageApp(StandardApplicationComponent):
             }
 
         self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT SUBSCRIBE REQUEST")
-        package = self.build_package(msg)
+        package = self.build_package(msg, 'mqtt')
         self.send(package)
 
     def dataReceived(self, data):

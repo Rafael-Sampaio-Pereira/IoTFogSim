@@ -1,5 +1,6 @@
 
 from core.dataproducers import *
+from core.mobiledevice import BaseStationNode
 from twisted.internet import reactor
 from twisted.internet.protocol import ClientFactory
 from twisted.python import log
@@ -25,7 +26,7 @@ class MobileNodeApp(StandardApplicationComponent):
         self._buffer = set()
         self.simulation_core = None
         self.visual_component = None
-        self.nearby_devices_list = None
+        # self.nearby_devices_list = None
 
     def show_signal(self):
         self.visual_component.signal_radius = self.visual_component.coverage_area_radius
@@ -74,18 +75,18 @@ class MobileNodeApp(StandardApplicationComponent):
             105, self.set_signal_radius, self.visual_component.coverage_area_radius)
         self.simulation_core.canvas.after(200, self.clear_signal_radius, 0)
 
-    def print_node_connections(self, nearby_devices_list):
-        self_name = self.simulation_core.canvas.itemcget(
-            self.visual_component.draggable_name, 'text')
-        print("=========", self_name, "==========")
-        if len(nearby_devices_list) > 0:
-            for nearby_device in nearby_devices_list:
-                device_name = self.simulation_core.canvas.itemcget(
-                    nearby_device.application.visual_component.draggable_name, 'text')
-                if self_name != device_name:
-                    print(self_name, ' <-------> ', device_name)
-        print("=============================")
-        print('\n')
+    # def print_node_connections(self, nearby_devices_list):
+    #     self_name = self.simulation_core.canvas.itemcget(
+    #         self.visual_component.draggable_name, 'text')
+    #     print("=========", self_name, "==========")
+    #     if len(nearby_devices_list) > 0:
+    #         for nearby_device in nearby_devices_list:
+    #             device_name = self.simulation_core.canvas.itemcget(
+    #                 nearby_device.application.visual_component.draggable_name, 'text')
+    #             if self_name != device_name:
+    #                 print(self_name, ' <-------> ', device_name)
+    #     print("=============================")
+    #     print('\n')
 
     def print_node_buffer(self):
         self_name = self.simulation_core.canvas.itemcget(
@@ -145,80 +146,113 @@ class MobileNodeApp(StandardApplicationComponent):
     def run_random_mobility(self):
         def move():
             # moving the device icon in canvas in random way - Rafael Sampaio
-            direction = random.randint(1,4)
-            reference = random.randint(1,100)
+            direction = random.randint(1, 4)
+            reference = random.randint(1, 100)
 
-
-            if direction == 1: # up
+            if direction == 1:  # up
                 if not (self.visual_component.y - reference) < 1:
                     self.visual_component.y = self.visual_component.y - reference
-            elif direction == 2: # down
+            elif direction == 2:  # down
                 if not (self.visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
                     self.visual_component.y = self.visual_component.y + reference
-            elif direction == 3: # left
+            elif direction == 3:  # left
                 if not (self.visual_component.x - reference) < 1:
                     self.visual_component.x = self.visual_component.x - reference
-            elif direction == 4: # right
+            elif direction == 4:  # right
                 if not (self.visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
                     self.visual_component.x = self.visual_component.x + reference
 
             if self.visual_component.is_wireless:
                 self.simulation_core.canvas.moveto(self.visual_component.draggable_coverage_area_circle,
-                    self.visual_component.x ,self.visual_component.y)
+                                                   self.visual_component.x, self.visual_component.y)
 
                 self.simulation_core.canvas.moveto(self.visual_component.draggable_signal_circle,
-                    self.visual_component.x ,self.visual_component.y)
+                                                   self.visual_component.x, self.visual_component.y)
 
             self.simulation_core.canvas.moveto(self.visual_component.draggable_name,
-                self.visual_component.x ,self.visual_component.y)
+                                               self.visual_component.x, self.visual_component.y)
 
             self.simulation_core.canvas.moveto(self.visual_component.draggable_alert,
-                self.visual_component.x ,self.visual_component.y)
+                                               self.visual_component.x, self.visual_component.y)
 
             self.simulation_core.canvas.moveto(self.visual_component.draggable_img,
-                self.visual_component.x ,self.visual_component.y)
+                                               self.visual_component.x, self.visual_component.y)
 
         LoopingCall(move).start(0.1)
 
 
 class MobileProducerApp(MobileNodeApp):
+    """
+    Acts as publish mqtt node - Rafael Sampaio
+    """
     def __init__(self):
         self._buffer = set()
         self.interval = 5.0
         self.simulation_core = None
         self.visual_component = None
-        self.nearby_devices_list = None
+        # self.nearby_devices_list = None
+        self.connected_basestations = set()
+        self.mobile_network_group = None
 
-    def start(self, nearby_devices_list):
+
+    def find_nearby_devices_icon(self):
+        # getting all canvas objects in wireless signal coverage area - Rafael Sampaio
+        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(
+            self.visual_component.x+self.coverage_area_radius,
+            self.visual_component.y+self.coverage_area_radius,
+            self.visual_component.x-self.coverage_area_radius,
+            self.visual_component.y-self.coverage_area_radius)
+        return all_coveraged_devices
+
+
+    def connect_to_nearby_basesatation(self):
+        # TO DO: needs to implement authorization and autetication methods for wireless tecnology such as 5g and wifi - Rafael Sampaio
+        # TO DO: needs to implement a disconect function to lose conection when node are far of basestation - Rafael Sampaio
+
+        # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
+        nearby_devices_icon_list = self.find_nearby_devices_icon()
+
+
+        for icon_id in nearby_devices_icon_list:
+            device = self.mobile_network_group.get_mobile_network_device_by_icon(
+                icon_id)
+            if type(device) == BaseStationNode and device not in self.connected_basestations:
+                self.simulation_core.updateEventsCounter("Mobile producer "+self.name+" connected to the Basestantion "+device.name)
+                self.connected_basestations.add(device)
+
+    def start(self):
         self.name = self.simulation_core.canvas.itemcget(
             self.visual_component.draggable_name, 'text')
-        self.nearby_devices_list = nearby_devices_list
-        self.print_node_connections(nearby_devices_list)
+        # self.nearby_devices_list = nearby_devices_list
+        # self.print_node_connections(nearby_devices_list)
+        LoopingCall(self.connect_to_nearby_basesatation).start(2.0)
 
         LoopingCall(self.collect_data).start(self.interval)
         # all sensors forward/routes packages every seconds. its not data collection interval - Rafael Sampaio
         LoopingCall(self.forward_packages).start(1.0)
         self.run_random_mobility()
 
+    def generate_data(self):
+        speed = '20km'
+        coord = ['10', '15']
+        data = '{"speed": "'+speed+'", "x": "' + \
+            coord[0]+'", "y": "'+coord[1]+'"}'
+        return data
+
     def collect_data(self):
         # Default data collection are made about veichulat mensurements.
         # User can change this method to retun any simulated values.
         # Data needs to be in JSON object stuct(i.e. Key-value) - Rafael Sampaio
 
-        # collecting data - Rafael Sampaio
-        speed = '20km'
-        coord = ['10', '15']
-        data = '{"speed": "'+speed+'", "x": "' + \
-            coord[0]+'", "y": "'+coord[1]+'"}'
-
         # Creating a new package - Rafael Sampaio
-        pack = MobilePackage(source=self, data=data)
+        pack = MobilePackage(source=self, data=self.generate_data())
 
         # putting this device in the generated package trace - Rafael Sampaio
         pack.put_in_trace(self)
 
         # putting data in device buffer - Rafael Sampaio
         self._buffer.add(pack)
+
 
     def forward_packages(self):
         def remove_sent_packages_from_buffer(_package):
@@ -237,7 +271,7 @@ class MobileProducerApp(MobileNodeApp):
 
         if len(package.trace) > 0:
             # self._blink_signal()
-            for destiny in self.nearby_devices_list:
+            for destiny in self.connected_basestations:
                 if destiny == package.source:
                     # A device can not sent data to it self - Rafael Sampaio
                     pass
@@ -254,21 +288,25 @@ class MobileProducerApp(MobileNodeApp):
 
                         # self.simulate_network_latency()
 
+                        package_id = json.loads(package.get_package_as_json())['id']
+                        print()
                         # puting package in destiny device buffer - Rafael Sampaio
                         destiny.application._buffer.add(package)
                         package.put_in_trace(destiny)
 
                         self.simulation_core.updateEventsCounter(
-                            "mobile data producer node send data")
+                            "%s --> Mobile data producer node send data - message id: %s"%(self.name,package_id))
 
 
 class BaseStationApp(MobileNodeApp):
+    """
+    Acts as concentrator mqtt node - Rafael Sampaio
+    """
     def __init__(self):
         # this buffer stores only data from the mobile data producer - Rafael Sampaio
         self._buffer = set()
         self.simulation_core = None
         self.visual_component = None
-        self.nearby_devices_list = None
         self.base_station_factory = None
         self.gateway_addr = '127.0.0.1'
         self.gateway_port = 8081
@@ -277,13 +315,13 @@ class BaseStationApp(MobileNodeApp):
         self.destiny_port = 5100
         self.source_addr = None
         self.source_port = None
+        self.mqtt_destiny_topic = None
 
-    def start(self, nearby_devices_list):
+    def start(self):
         self.connect_to_gateway()
         self.configure_source_info()
 
     # this method allow the BaseStation to connect to router/switch - Rafael Sampaio
-
     def connect_to_gateway(self):
         # get start to connect to gateway - Rafael Sampaio
         factory = BaseStationAppFactory(
@@ -330,11 +368,11 @@ class BaseStationApp(MobileNodeApp):
                 # this method is work into a mqtt context. to execute another scenario, pelase, change this method - Rafael Sampaio
                 mqtt_msg = {
                     "action": "publish",
-                    "topic": "vehicular_metering",
+                    "topic": self.mqtt_destiny_topic,
                     "content": data
                 }
 
-                mqtt_package = self.build_package(mqtt_msg)
+                mqtt_package = self.build_package(mqtt_msg, 'mqtt')
 
                 # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
                 self.base_station_factory.running_protocol.send(mqtt_package)
@@ -404,8 +442,6 @@ class MobilePackage(object):
         self.created_at = datetime.now().isoformat()
 
     def get_package_as_json(self):
-        all_destiny_names = ''
-
         package = {
             "id": str(self.id),
             "source": self.source.name,
@@ -439,56 +475,3 @@ class MobilePackage(object):
             if not device == src:
                 trace_string += " - "+device
         print(trace_string)
-
-
-class MobileRepeaterApp(MobileNodeApp):
-    def __init__(self):
-        self._buffer = set()
-        self.interval = 0.2
-        self.simulation_core = None
-        self.visual_component = None
-        self.nearby_devices_list = None
-
-    def start(self, nearby_devices_list):
-        self.name = self.simulation_core.canvas.itemcget(
-            self.visual_component.draggable_name, 'text')
-        self.nearby_devices_list = nearby_devices_list
-        self.print_node_connections(nearby_devices_list)
-        LoopingCall(self.route_packages).start(self.interval)
-
-    def route_packages(self):
-
-        def remove_sent_packages_from_buffer(_package):
-            # after send, remove data from buffer - Rafael Sampaio
-            self._buffer.remove(_package)
-
-        if len(self._buffer) > 0:
-            self.temp_buffer = self._buffer.copy()
-
-            # sending each data in buffer for all devices arround via broadcast- Rafael Sampaio
-            for _package in self.temp_buffer:
-                self.forward_package(_package)
-                remove_sent_packages_from_buffer(_package)
-
-    def forward_package(self, package):
-        if len(package.trace) > 0:
-            for destiny in self.nearby_devices_list:
-                if destiny == package.source:
-                    # A device can not sent data to it self - Rafael Sampaio
-                    pass
-                elif package.verify_if_device_is_in_trace(destiny):
-                    # The package will not be send to devices that already in the package trace - Rafael Sampaio
-                    pass
-                else:
-                    # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
-                    if not package in destiny.application._buffer:
-                        # Drawing connection - Rafael Sampaio
-                        reactor.callFromThread(
-                            self.draw_connection_arrow, destiny)
-                        self.simulation_core.canvas.update()
-
-                        # puting package in destiny device buffer - Rafael Sampaio
-                        destiny.application._buffer.add(package)
-                        package.put_in_trace(destiny)
-                        self.simulation_core.updateEventsCounter(
-                            "Mobile repeater node routing data")

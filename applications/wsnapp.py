@@ -285,7 +285,7 @@ class SinkApp(WSNApp):
                         "content": data
                     }
 
-                mqtt_package = self.build_package(mqtt_msg)
+                mqtt_package = self.build_package(mqtt_msg, 'mqtt')
 
                 # this uses the send method defined in the StandardApplicationComponent class - Rafael Sampaio
                 self.sink_factory.running_protocol.send(mqtt_package)

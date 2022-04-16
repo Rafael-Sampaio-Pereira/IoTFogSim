@@ -47,7 +47,7 @@ class WirelessComputerApp(StandardApplicationComponent):
             if self.controls.is_first_request:
                 # Creating a http package - Rafael Sampaio
                 payload = 'HTTP 1.0 / GET request'
-                package = self.build_package(payload)
+                package = self.build_package(payload, 'http')
                 self.send(package)
                 self.controls.is_first_request = False
         else:

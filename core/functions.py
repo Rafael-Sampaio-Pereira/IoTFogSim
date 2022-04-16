@@ -1,3 +1,4 @@
+import json
 from twisted.python import log
 from importlib import import_module
 import inspect
@@ -6,8 +7,9 @@ import os
 from fabric.api import local
 import netifaces
 
+
 def import_and_instantiate_class_from_string(class_path):
-    
+
     # the classPath needs to be = folder.file.class - Rafael Sampaio
 
     try:
@@ -41,8 +43,6 @@ def configure_logger(log_file_path, project_name):
     log = Logger()
 
 
-
-
 def create_csv_database_file(simulation_core, description=""):
     from datetime import datetime, date
     import os
@@ -52,16 +52,17 @@ def create_csv_database_file(simulation_core, description=""):
     # create databases directoy if it not exist - Rafael Sampaio
     os.makedirs(file_path+"/databases/", exist_ok=True)
     temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
-    file = file_path+"/databases/"+simulation_core.project_name+temp+"_"+description+".csv"
+    file = file_path+"/databases/" + \
+        simulation_core.project_name+temp+"_"+description+".csv"
     database = open(file, 'a')
- 
+
     return database
 
 
 def get_all_app_classes_name():
     directory = 'applications'
 
-    app_files = [f.name for f in os.scandir(directory) if f.is_file() ]
+    app_files = [f.name for f in os.scandir(directory) if f.is_file()]
     app_list = []
     for file in app_files:
         module = importlib.import_module('applications.'+file[:-3])
@@ -77,5 +78,17 @@ def get_default_interface():
     return netifaces.gateways()['default'][netifaces.AF_INET][1]
 
 # clear all changes made in a given network interface - Rafael Sampaio
+
+
 def clear_network_changes(interface):
     local(f"sudo tc qdisc del dev {interface} root")
+
+
+def extract_mqtt_contents(package):
+    try:
+        package = json.dumps(package)
+        package = str(package)[0:]
+        json_msg = json.loads(package)
+        return json_msg["action"], json_msg["topic"], json_msg["content"]
+    except Exception as e:
+        log.msg(e)

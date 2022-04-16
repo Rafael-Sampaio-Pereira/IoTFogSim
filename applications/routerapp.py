@@ -50,7 +50,7 @@ class RouterApp:
                 self.simulation_core.allProtocols.add(self.router_factory.listen_protocol)
 
             def ebConnectError(reason):
-                print("Error while try to connect to the router")
+                log.msg("Error while try to connect to the router")
 
             whenConnected.addCallbacks(cbConnected, ebConnectError)
 
@@ -67,10 +67,9 @@ class RouterAppProtocol(StandardApplicationComponent):
         self.client = None
         self.visual_component = None
         self.simulation_core =  None
-    
-    def dataReceived(self, package):
+        StandardApplicationComponent.__init__(self)
 
-        #print("OPACOTE É %s"%(package))
+    def dataReceived(self, package):
 
         # Extracting package contents - Rafael Sampaio
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
@@ -115,6 +114,7 @@ class RouterAppProtocol(StandardApplicationComponent):
     def connectionMade(self):
         # saving the router protocol that acts as input(i.e. this receives packages) - Rafael Sampaio
         self.save_protocol_in_simulation_core(self)
+        self.transport.logstr = '-'
         
     
     def connectionLost(self, reason):
@@ -150,6 +150,7 @@ class ClientProtocol(StandardApplicationComponent):
         self.factory.server.client = self
         self.write(self.factory.server.buffer)
         self.factory.server.buffer = ''
+        self.transport.logstr = '-'
         
         
     def dataReceived(self, data):

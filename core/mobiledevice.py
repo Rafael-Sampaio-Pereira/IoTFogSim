@@ -17,31 +17,6 @@ from bresenham import bresenham
 class MobileDevice(object):
     def __init__(self):
         pass
-
-    def find_nearby_devices_icon(self):
-        # getting all canvas objects in wireless signal coverage area - Rafael Sampaio
-        all_coveraged_devices = self.simulation_core.canvas.find_overlapping(
-            self.visual_component.x+self.coverage_area_radius,
-            self.visual_component.y+self.coverage_area_radius,
-            self.visual_component.x-self.coverage_area_radius,
-            self.visual_component.y-self.coverage_area_radius)
-        return all_coveraged_devices
-
-    def get_nearby_devices_list(self):
-        all_nearby_device = set()
-        # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
-        nearby_devices_icon_list = self.find_nearby_devices_icon()
-
-        for icon_id in nearby_devices_icon_list:
-            device = self.mobile_network_group.get_mobile_network_device_by_icon(
-                icon_id)
-
-            if device != None:
-                all_nearby_device.add(device)
-
-        return all_nearby_device
-
-
 class MobileNetwork(object):
 
     def __init__(self, simulation_core, wireless_standard, network_layer_protocol, application_layer_protocol, latency):
@@ -103,6 +78,7 @@ class MobileNode(MobileDevice):
         self.application.visual_component.coverage_area_radius = coverage_area_radius
         self.application.simulation_core = self.simulation_core
         self.application.coverage_area_radius = coverage_area_radius
+        self.application.mobile_network_group = self.mobile_network_group
 
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio
@@ -110,13 +86,12 @@ class MobileNode(MobileDevice):
                 self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
-        nearby_devices_list = self.get_nearby_devices_list()
-        self.application.start(nearby_devices_list)
+        self.application.start()
 
 
 class BaseStationNode(MobileDevice):
 
-    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, mobile_network_group):
+    def __init__(self, simulation_core, id, name, icon, is_wireless, x, y, application, coverage_area_radius, mobile_network_group, mqtt_destiny_topic):
 
         self.application = import_and_instantiate_class_from_string(
             application)
@@ -127,7 +102,7 @@ class BaseStationNode(MobileDevice):
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
 
-        self.name = name
+        self.name = name+'_'+str(id)
         self.id = id
         self.simulation_core = simulation_core
 
@@ -138,6 +113,7 @@ class BaseStationNode(MobileDevice):
             "Initializing mobile network base station node")
         self.application.visual_component = self.visual_component
         self.application.simulation_core = self.simulation_core
+        self.application.mqtt_destiny_topic = mqtt_destiny_topic
 
         if(self.is_wireless == True):
             # setting image tag as "wifi_device" it will be useful when we need to verify if one device under wireless signal can connect to that. - Rafael Sampaio
@@ -145,7 +121,6 @@ class BaseStationNode(MobileDevice):
                 self.visual_component.draggable_img, tags=("wifi_device",))
 
     def run(self):
-        nearby_devices_list = self.get_nearby_devices_list()
-        self.application.start(nearby_devices_list)
+        self.application.start()
 
 # |||||||||||||||||||||||||| END MOBILE NETWORK ||||||||||||||||||||||||||

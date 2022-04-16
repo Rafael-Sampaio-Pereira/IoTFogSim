@@ -18,20 +18,22 @@ class StandardApplicationComponent(protocol.Protocol):
         self.network_settings = None
         self.is_wireless = False
         self.wireless_signal_control_id = None
+        self.name = None
 
-        
-    def build_package(self, payload):
+    def connectionMade(self):
+        self.transport.logstr = '-'
+
+    def build_package(self, payload, type):
         package = {
                     "destiny_addr": self.destiny_addr,
                     "destiny_port": self.destiny_port,
                     "source_addr": self.source_addr,
                     "source_port": self.source_port,
-                    "type": 'http',
+                    "type": type,
                     "payload": payload
         }
 
         package = json.dumps(package)
-        package = package
         msg_bytes, _ = codecs.escape_decode(package, 'utf8')
         return msg_bytes
 
@@ -70,7 +72,7 @@ class StandardApplicationComponent(protocol.Protocol):
             return json_msg["destiny_addr"], json_msg["destiny_port"], json_msg["source_addr"], json_msg["source_port"], json_msg["type"], json_msg["payload"]
         
         except Exception as e:
-            #log.msg(package)
+            print('CAIU AQUI')
             log.msg(e)
 
     def update_alert_message_on_screen(self, msg):
@@ -94,7 +96,11 @@ class StandardApplicationComponent(protocol.Protocol):
             log.msg("The requested simulation_core is no longer available")
 
     def send(self, message):
-        self.transport.write(message+b"\n")
+        if self.transport:
+            self.transport.write(message+b"\n")
+        else:
+            decripition = (self.name if self.name else str(type(self).__name__))
+            log.msg("Info : - | %s - Unknow Device trying to send message, but the protocol is not connected"%decripition)
 
     def put_package_in_buffer(self, data):
         if data.endswith(b"\n"):
@@ -103,7 +109,6 @@ class StandardApplicationComponent(protocol.Protocol):
                 if package != b'':
                     self._buffer.append(package)
 
-    
     def save_protocol_in_simulation_core(self, proto, message=None):
         try:
             if self.simulation_core:
@@ -111,13 +116,13 @@ class StandardApplicationComponent(protocol.Protocol):
                     self.simulation_core.allProtocols.add(proto)
                     #print(self.simulation_core.allProtocols)
             else:
+                decripition = self.name if self.name else str(type(self).__name__)
                 if message:
-                    print("This divice have no simulation core instance - TRACK MESSAGE: "+str(message))
+                    log.msg("Info : - | %s This divice have no simulation core instance - TRACK MESSAGE: "+str(message)%decripition)
                 else:
-                    print("This divice have no simulation core instance")
+                    log.msg("Info : - | %s This divice have no simulation core instance"%decripition)
         except NameError:
             log.msg("The requested simulation_core is no longer available")
-        
 
     def create_connection_animation(self):
         # this method can only be called on the connectionMade method of the clients devices. do not use that in servers instances - Rafael Sampaio

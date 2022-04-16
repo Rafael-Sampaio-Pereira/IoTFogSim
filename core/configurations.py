@@ -231,11 +231,11 @@ def load_nodes(project_name, simulation_core):
                         log.msg("There is no links.json file in this project.")
                 else:
                     log.msg(
-                        f"The network link was not configured for the server on port {server['port']}")
-
+                        f"Info : - | The network link was not configured for the server on port {server['port']}")
+            client_cont = 0
             for client in data['clients']:
-
-                cl = StandardClientDevice(simulation_core, client['real_ip'], client['name'], client['icon'],
+                client_cont += 1
+                cl = StandardClientDevice(simulation_core, client['real_ip'], client['name']+str(client_cont), client['icon'],
                                           client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
                 simulation_core.allNodes.append(cl)
 
@@ -285,7 +285,7 @@ def load_nodes(project_name, simulation_core):
                 for base_station_node in mob_net['base_station_nodes']:
                     base_station_cont += 1
                     bs_node = BaseStationNode(simulation_core, base_station_cont, base_station_node['name'], base_station_node['icon'], base_station_node['is_wireless'], base_station_node[
-                                          'x'], base_station_node['y'], base_station_node['application'], base_station_node['coverage_area_radius'], mobile_network_group)
+                                          'x'], base_station_node['y'], base_station_node['application'], base_station_node['coverage_area_radius'], mobile_network_group, base_station_node['mqtt_destiny_topic'])
                     mobile_network_group.base_station_list.add(bs_node)
                     simulation_core.allNodes.append(bs_node)
 

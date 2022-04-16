@@ -419,7 +419,7 @@ class ScrollableScreen(tkinter.Frame):
         is_running = self.canvas.simulation_core.is_running
 
         if is_running == True:
-            print('Stoping simulation...')
+            log.msg("Info : - | Stoping simulation...")
             self.canvas.simulation_core.is_running = False
             play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
             play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
@@ -432,7 +432,7 @@ class ScrollableScreen(tkinter.Frame):
                 self.start_time = str(datetime.now().strftime('%H:%M:%S'))
                 self.menubar.entryconfig(5, label="Start Time: "+self.start_time)
 
-            print('Start simulation...')
+            log.msg("Info : - | Starting simulation...")
             self.canvas.simulation_core.is_running = True
 
             stop_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
@@ -451,9 +451,7 @@ class ScrollableScreen(tkinter.Frame):
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
-            log.msg("Closing IoTFogSim Application...")
-            # window.destroy() # it maybe not need. - Rafael Sampaio
-            # reactor.stop()
+            log.msg("Info : - | Closing IoTFogSim Application...")
             reactor.crash()
 
         else:

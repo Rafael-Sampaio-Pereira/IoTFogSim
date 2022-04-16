@@ -10,7 +10,7 @@ from twisted.protocols import basic
 from twisted.internet.task import LoopingCall
 from applications.applicationcomponent import StandardApplicationComponent
 
-from core.functions import create_csv_database_file
+from core.functions import create_csv_database_file, extract_mqtt_contents
 
 from libs import lzw
 from libs import delta_encode as de
@@ -80,7 +80,7 @@ class BrokerProtocol(StandardApplicationComponent):
         self.source_port = self.transport.getHost().port
         self.destiny_addr = self.transport.getPeer().host
         self.destiny_port = self.transport.getPeer().port
-        response_package = self.build_package("MQTT_ACK")
+        response_package = self.build_package("MQTT_ACK", 'mqtt')
         self.send(response_package)
         self.save_protocol_in_simulation_core(self)
 
@@ -137,7 +137,7 @@ class BrokerProtocol(StandardApplicationComponent):
         self.destiny_port = destiny_port
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
-        response_package = self.build_package("MQTT_ACK"+str(uuid.uuid4().fields[-1]))
+        response_package = self.build_package("MQTT_ACK"+str(uuid.uuid4().fields[-1]), 'mqtt')
         self.send(response_package)
 
 
@@ -262,16 +262,6 @@ class BrokerFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return BrokerProtocol(self)
 
-
-def extract_mqtt_contents(package):
-    try:
-        package = json.dumps(package)
-        package = str(package)[0:]
-        json_msg = json.loads(package)
-        return json_msg["action"], json_msg["topic"], json_msg["content"]
-    except Exception as e:
-        log.msg(e)
-
 MQTT_ACK = {"action": "response", "topic": "sensor_metering", "content": "MQTT_ACK"}
 
 
@@ -339,7 +329,7 @@ class SCADAResearchApp(StandardApplicationComponent):
             }
 
         self.simulation_core.updateEventsCounter(self.screen_name+" - sending MQTT SUBSCRIBE REQUEST")
-        package = self.build_package(msg)
+        package = self.build_package(msg, 'mqtt')
         self.send(package)
 
     def dataReceived(self, data):
