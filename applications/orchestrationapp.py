@@ -9,6 +9,7 @@ from twisted.internet import protocol, reactor
 from twisted.python import log
 import uuid
 import socket
+from operator import attrgetter
 
 from twisted.internet.protocol import Protocol
 from twisted.internet.endpoints import TCP4ClientEndpoint, connectProtocol
@@ -80,8 +81,7 @@ class ComputeApp(StandardApplicationComponent):
 
     def update_app_name_if_not_exists(self):
         if not self.name and self.visual_component:
-            self.name = self.simulation_core.canvas.itemcget(
-            self.visual_component.draggable_name, 'text')
+            self.name = self.visual_component.deviceName
 
     def compute_core(self):
         # Task are given in int MIPS values
@@ -92,32 +92,30 @@ class ComputeApp(StandardApplicationComponent):
         # The task MIPS size is wich determines the duration of each loop iteration
         # Rafael Sampaio
 
-        # update component name before use self.name variable - Rafael Sampaio
-        self.update_app_name_if_not_exists()
-
-        def perform_next_task_in_buffer(execution_time, task_size, task_id):
-            self.simulation_core.updateEventsCounter(self.name+' --> Task '+task_id+' with '+str(task_size)+' MIPS performed in '+str(execution_time)+'s')
-            self.send_task_result_to_orchestrator(execution_time, task_size, task_id)
+        def perform_next_task_in_buffer(execution_time, task):
+            task_size = int(task['data']['task'])
+            self.simulation_core.updateEventsCounter(self.visual_component.deviceName+' --> Task '+task['id']+' with '+str(task_size)+' MIPS performed in '+str(execution_time)+'s')
+            task['execution_time'] = execution_time
+            task['performed_at'] = datetime.now().isoformat()
+            self.send_task_result_to_orchestrator(task)
 
         # if there is tasks in buffer - Rafael Sampaio
         if len(self.task_buffer) > 0:
             # removing task from buffer, buffer size will not be user by controller.
             task = self.task_buffer.popleft()
-            task_size = int(task['data']['task'])
-            task_id = task['id']
 
             # getting time in seconds that will be wait for task be performed,
             # this simulates the processor delay - Rafael Sampaio
-            schedule_interval = task_size/1000
-            reactor.callLater(schedule_interval, perform_next_task_in_buffer,schedule_interval, task_size, task_id)
+            schedule_interval = int(task['data']['task'])/1000
+            reactor.callLater(schedule_interval, perform_next_task_in_buffer,schedule_interval, task)
 
 
     def connectionMade(self):
         self.transport.logstr = '-'
-        self.screen_name = self.transport.getHost().host+":" + \
+        self.screen_name = "\n\n"+self.visual_component.deviceName+"\n   "+self.transport.getHost().host+":" + \
             str(self.transport.getHost().port)
         self.simulation_core.updateEventsCounter(
-            self.screen_name+" - Connected to mqtt broker")
+            self.visual_component.deviceName+" - Connected to mqtt broker")
         self.source_addr = self.transport.getHost().host
         self.source_port = self.transport.getHost().port
         # After connect, send the subscribe request - Rafael Sampaio
@@ -134,7 +132,7 @@ class ComputeApp(StandardApplicationComponent):
         }
 
         self.simulation_core.updateEventsCounter(
-            self.screen_name+" - sending MQTT SUBSCRIBE REQUEST")
+            self.visual_component.deviceName+" - Sending MQTT subscribe request")
         package = self.build_package(msg, 'mqtt')
         self.send(package)
 
@@ -151,12 +149,12 @@ class ComputeApp(StandardApplicationComponent):
                             self.task_buffer.append(payload)
 
 
-    def send_task_result_to_orchestrator(self, execution_time, task_size, task_id):
+    def send_task_result_to_orchestrator(self, task):
         # Tells the broker the task result - Rafael Sampaio
         result_msg = {
             "action": "publish",
             "topic": "task_result",
-            "content": task_id
+            "content": task
         }
         package = self.build_package(result_msg, 'mqtt')
         # Uses commom socket to send mqtt publish message to broker, package format till same twisted - Rafael Sampaio
@@ -164,12 +162,8 @@ class ComputeApp(StandardApplicationComponent):
         s.connect((self.transport.getPeer().host, self.transport.getPeer().port))
         s.send(package)
         reactor.callLater(2, s.close)
-        decripition = (self.name if self.name else str(type(self).__name__))
-        self.simulation_core.updateEventsCounter(decripition+' --> Sending task '+task_id+' result to the broker ')
-
-
-        # falta verificar se o base line performa tarefas primeiro pra depois receber outras
-        # falta verificar pq está havendo estouro do limite de portas/sockets - seria o caso de o protocol está sendo persistido pelo lado do broker ao receber uma requisição publish?
+        decripition = (self.visual_component.deviceName  if self.visual_component.deviceName else str(type(self).__name__))
+        self.simulation_core.updateEventsCounter(decripition+' --> Sending task '+task['id']+' result to the broker ')
 
 class OrchestratorBrokerApp:
 
@@ -195,10 +189,9 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
 
     def connectionLost(self, reason):
         try:
-            # if self in self.factory.subscribers_dtos:
-            #     self.factory.subscribers_dtos.remove(self)
             for dto in self.factory.subscribers_dtos:
                 if dto.protocol == self:
+                    log.msg("Info : - | A subscribed device lose it connection to the Broker")
                     self.factory.subscribers_dtos.remove(dto)
         except NameError:
             pass
@@ -224,21 +217,29 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
     def send_task_to_computer_node(self):
         # Verify if there is task in buffer - Rafael Sampaio
         if len(self.factory.incoming_buffer) > 0:
-        #     verifica qual dos subscribers tem maior capacidade disponivel
-        #         verifica se a task tem tamanho em MIPS menor ou igual a disponibilidade do nó com maior capacidade de processamento disponivel
-        #             envia a task para o nó com maior capacidade
-        #             remove a task do buffer
+            # Verify if there is some compute node in subscribers list - Rafael Sampaio
+            if len(self.factory.subscribers_dtos) > 0:
+                # Getting the compute node in fog that is the greater capacity node - Rafael Sampaio
+                greater_capacity_node_dto = max(self.factory.subscribers_dtos.copy(), key=attrgetter('atual_capacity'))
 
-            # send next task in queue to the computer nodes - Rafael Sampaio
-            package = self.factory.incoming_buffer[-1]
-            _package = json.loads(package)
-
-            pk = self.build_package(_package, 'mqtt')
-            self.send_package_to_all_subscribers(pk)
-            self.factory.incoming_buffer.remove(package)
+                # getting next task in queue - Rafael Sampaio
+                package = self.factory.incoming_buffer[-1]
+                _package = json.loads(package)
+                task_size = int(_package['data']['task'])
+                # Verify if next task size is less than equals to the compute node atual capacity - Rafael Sampaio
+                if task_size <= greater_capacity_node_dto.atual_capacity:
+                    pk = self.build_package(_package, 'mqtt')
+                    self.send_package_to_one_subscriber(pk, greater_capacity_node_dto)
+                    # after send, remove task  from buffer - Rafael Sampaio
+                    self.factory.incoming_buffer.remove(package)
+                    # Adds the task to the running tasks list of the compute node - Rafal Sampaio
+                    greater_capacity_node_dto.running_tasks.append(_package)
+                    # subtracts the size of the task from the total size of the current computational capacity of the node - Rafael Sampaio
+                    greater_capacity_node_dto.decrease_capacity(task_size)
+                    destiny_as_string = greater_capacity_node_dto.protocol.destiny_addr+":"+str(greater_capacity_node_dto.protocol.destiny_port)
+                    self.simulation_core.updateEventsCounter(self.visual_component.deviceName+' --> Sending task %s to compute node %s at Fog tier'%(_package['id'], destiny_as_string))
 
     def send_package_to_all_subscribers(self, package):
-
         for subscriber in self.factory.subscribers_dtos:
             self.source_addr = subscriber.protocol.transport.getHost().host
             self.source_port = subscriber.protocol.transport.getHost().port
@@ -246,10 +247,16 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
             self.destiny_port = subscriber.protocol.transport.getPeer().port
             subscriber.protocol.send(package)
 
+    def send_package_to_one_subscriber(self, package, dto):
+        self.source_addr = dto.protocol.transport.getHost().host
+        self.source_port = dto.protocol.transport.getHost().port
+        self.destiny_addr = dto.protocol.transport.getPeer().host
+        self.destiny_port = dto.protocol.transport.getPeer().port
+        dto.protocol.send(package)
+
     def dataReceived(self, package):
 
         destiny_addr, destiny_port, source_addr, source_port, _type, payload = self.extract_package_contents(package)
-        # Print the received data on the sreen.  - Rafael Sampaio
 
         action, topic_title, content = extract_mqtt_contents(payload)
 
@@ -265,12 +272,34 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
             self.send_mqtt_acknowledgement(source_addr, source_port)
             if content:
                 for measue_values in content:
+                    decripition = (self.visual_component.deviceName  if self.visual_component.deviceName else str(type(self).__name__))
+                    self.simulation_core.updateEventsCounter(decripition+' --> Storing task %s in Broker buffer queue'%measue_values['id'])
                     self.factory.incoming_buffer.append(json.dumps(measue_values))
-
             self.update_last_package_received_time_on_screen()
-        else:
-            print(action, topic_title, content)
+
+        elif action == "publish" and topic_title == 'task_result':
+            self.simulation_core.updateEventsCounter(self.visual_component.deviceName+' --> Received task %s result from compute node at Fog tier'%content['id'])
+            dto = self.get_subscriber_dto_by_task_id(content['id'])
+            # Giving back the capacity used to perform taks - Rafael Sampaio
+            dto.increase_capacity(int(content['data']['task']))
+
+            # Saving the performed task to the performed tasks list of the dto - Rafael Sampaio
+            dto.performed_tasks.append(content)
+
+            # Removing perfomed task from running tasks list of the dto - Rafael Sampaio
+            to_be_removed = next((i for i in dto.running_tasks if i['id'] == content['id']), None)
+            if to_be_removed:
+                dto.running_tasks.remove(to_be_removed)
             self.send_mqtt_acknowledgement(source_addr, source_port)
+
+    def get_subscriber_dto_by_task_id(self, task_id):
+        # This returns a dto that have task id in running tasks list - Rafael Sampaio
+        def second_level_search_get_task_by_id(task_id, task_list):
+            task = next((i for i in task_list if i['id'] == task_id), None)
+            return task if task else {"id": None} # If task not found in current checked dto, just returns a empty struct - Rafael Sampaio
+
+        dto = next((i for i in self.factory.subscribers_dtos.copy() if (task_id == second_level_search_get_task_by_id(task_id, i.running_tasks.copy())['id'])), None)
+        return dto
 
     def send_mqtt_acknowledgement(self, destiny_addr, destiny_port):
         self.destiny_addr = destiny_addr
@@ -279,7 +308,7 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
         self.source_port = self.transport.getHost().port
         response_package = self.build_package("MQTT_ACK"+str(uuid.uuid4().fields[-1]), 'mqtt')
         self.send(response_package)
-        decripition = (self.name if self.name else str(type(self).__name__))
+        decripition = (self.visual_component.deviceName  if self.visual_component.deviceName else str(type(self).__name__))
         self.simulation_core.updateEventsCounter(decripition+' --> Sending acknowledgement to '+str(destiny_addr)+':'+str(destiny_port))
 
     def update_last_package_received_time_on_screen(self):
@@ -292,7 +321,7 @@ class OrchestratorBrokerProtocol(StandardApplicationComponent):
         if self.transport:
             self.transport.write(message+b"\n")
         else:
-            decripition = (self.name if self.name else str(type(self).__name__))
+            decripition = (self.visual_component.deviceName  if self.visual_component.deviceName else str(type(self).__name__))
             log.msg("Info : - | %s - Unknow Device trying to send message, but the protocol is not connected"%decripition)
 
 
@@ -321,26 +350,23 @@ class OrchestratorBrokerFactory(protocol.Factory):
 
 
 class SubscriberDTO(object):
+    """
+        This is just a Data Transfer Object
+        This contols task life cicles
+        This stores the states of the compute node subscribed
+    """
     def __init__(self) -> None:
         self.running_tasks = []
         self.performed_tasks = []
         self.protocol = None
-        self.status = "idle" # can be idle or busy - Rafael Sampaio
         self.initial_capacity = DEFAULT_FOG_NODE_MIPS_CAPACITY
         self.atual_capacity = self.initial_capacity
-
-    def toogle_status(self):
-        if self.status == "idle":
-            self.status = "busy"
-        else:
-            self.status = "idle"
 
     def increase_capacity(self, task_size):
         self.atual_capacity = self.atual_capacity+task_size
 
     def decrease_capacity(self, task_size):
         self.atual_capacity = self.atual_capacity-task_size
-
 
 
 MQTT_ACK = {"action": "response", "topic": "any", "content": "MQTT_ACK"}

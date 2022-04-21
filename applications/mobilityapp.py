@@ -416,6 +416,10 @@ class BaseStationAppProtocol(StandardApplicationComponent):
         self.transport.setTcpKeepAlive(1)
         self.terminateLater = None
         self.create_connection_animation()
+        self.transport.logstr = '-'
+        self.screen_name = self.transport.getHost().host+":" + \
+            str(self.transport.getHost().port)
+        self.update_name_on_screen(self.screen_name)
 
     # This method is overhidding the dataReceived method in the StandardApplicationComponent class - Rafael Sampaio
     def dataReceived(self, data):
@@ -426,6 +430,10 @@ class BaseStationAppProtocol(StandardApplicationComponent):
         pass
 
     def write(self, data):
+        # TWMPORARIO REMOVER APÓS TESTES
+        self.screen_name = self.transport.getHost().host+":" + \
+            str(self.transport.getHost().port)
+        self.update_name_on_screen(self.screen_name)
         if data:
             self.transport.write(data)
 

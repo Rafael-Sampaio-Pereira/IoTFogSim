@@ -11,6 +11,7 @@ class VisualComponent(object):
         self.x = x
         self.y = y
         self.move_flag = False
+        self.deviceName = deviceName
 
         # this refers to the equivalente device of this visual component - Rafael Sampaio
         # By using the 'device' atribute, is possible access any atibute of the device instance, such as application - Rafael Sampaio
