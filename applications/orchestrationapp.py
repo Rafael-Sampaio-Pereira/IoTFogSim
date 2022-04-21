@@ -97,7 +97,7 @@ class ComputeApp(StandardApplicationComponent):
             self.simulation_core.updateEventsCounter(self.visual_component.deviceName+' --> Task '+task['id']+' with '+str(task_size)+' MIPS performed in '+str(execution_time)+'s')
             task['execution_time'] = execution_time
             task['performed_at'] = datetime.now().isoformat()
-            self.send_task_result_to_orchestrator(task)
+            reactor.callFromThread(self.send_task_result_to_orchestrator, task)
 
         # if there is tasks in buffer - Rafael Sampaio
         if len(self.task_buffer) > 0:
@@ -123,6 +123,10 @@ class ComputeApp(StandardApplicationComponent):
         self.update_name_on_screen(self.screen_name)
         self.save_protocol_in_simulation_core(self)
         self.create_connection_animation()
+    
+    def close_socket(self, _socket):
+        _socket.shutdown(socket.SHUT_RDWR)
+        _socket.close()
 
     def subscribe(self):
         msg = {
@@ -161,7 +165,7 @@ class ComputeApp(StandardApplicationComponent):
         s = socket.socket()
         s.connect((self.transport.getPeer().host, self.transport.getPeer().port))
         s.send(package)
-        reactor.callLater(2, s.close)
+        reactor.callLater(2, self.close_socket, s)
         decripition = (self.visual_component.deviceName  if self.visual_component.deviceName else str(type(self).__name__))
         self.simulation_core.updateEventsCounter(decripition+' --> Sending task '+task['id']+' result to the broker ')
 

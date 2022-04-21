@@ -119,8 +119,8 @@ class StandardApplicationComponent(protocol.Protocol):
                 decripition = self.name if self.name else str(type(self).__name__)
                 if message:
                     log.msg("Info : - | %s This divice have no simulation core instance - TRACK MESSAGE: "+str(message)%decripition)
-                else:
-                    log.msg("Info : - | %s This divice have no simulation core instance"%decripition)
+                # else:
+                #     log.msg("Info : - | %s This divice have no simulation core instance"%decripition)
         except NameError:
             log.msg("The requested simulation_core is no longer available")
 
