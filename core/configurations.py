@@ -88,6 +88,9 @@ def initialization_screen(simulation_core):
                 resizable = settings['resizeable']
 
             simulation_core.create_simulation_canvas(resizable)
+            if 'scene_adapter' in settings:
+                simulation_core.build_scene_adapter(
+                    settings['scene_adapter'])
             load_nodes(selected_project_name, simulation_core)
             #load_connections(selected_project_name, simulation_core)
 
@@ -285,20 +288,20 @@ def load_nodes(project_name, simulation_core):
                 for base_station_node in mob_net['base_station_nodes']:
                     base_station_cont += 1
                     bs_node = BaseStationNode(simulation_core, base_station_cont, base_station_node['name'], base_station_node['icon'], base_station_node['is_wireless'], base_station_node[
-                                          'x'], base_station_node['y'], base_station_node['application'], base_station_node['coverage_area_radius'], mobile_network_group, base_station_node['mqtt_destiny_topic'])
+                        'x'], base_station_node['y'], base_station_node['application'], base_station_node['coverage_area_radius'], mobile_network_group, base_station_node['mqtt_destiny_topic'])
                     mobile_network_group.base_station_list.add(bs_node)
                     simulation_core.allNodes.append(bs_node)
 
                 for mobile_producer_node in mob_net['mobile_producer_nodes']:
                     mobile_producer_cont += 1
                     mp_node = MobileNode(simulation_core, mobile_producer_cont, mobile_producer_node['name'], mobile_producer_node['icon'], mobile_producer_node[
-                                            'is_wireless'], mobile_producer_node['x'], mobile_producer_node['y'], mobile_producer_node['application'], mobile_producer_node['coverage_area_radius'], mobile_network_group)
+                        'is_wireless'], mobile_producer_node['x'], mobile_producer_node['y'], mobile_producer_node['application'], mobile_producer_node['coverage_area_radius'], mobile_network_group)
                     mobile_network_group.mobile_producer_list.add(mp_node)
                     simulation_core.allNodes.append(mp_node)
 
                 for mobile_repeater_node in mob_net['mobile_repeater_nodes']:
                     mobile_repeater_cont += 1
                     mrpt_node = MobileNode(simulation_core, mobile_repeater_cont, mobile_repeater_node['name'], mobile_repeater_node['icon'], mobile_repeater_node[
-                                                'is_wireless'], mobile_repeater_node['x'], mobile_repeater_node['y'], mobile_repeater_node['application'], mobile_repeater_node['coverage_area_radius'], mobile_network_group)
+                        'is_wireless'], mobile_repeater_node['x'], mobile_repeater_node['y'], mobile_repeater_node['application'], mobile_repeater_node['coverage_area_radius'], mobile_network_group)
                     mobile_network_group.mobile_repeater_list.add(mrpt_node)
                     simulation_core.allNodes.append(mrpt_node)

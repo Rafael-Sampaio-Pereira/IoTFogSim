@@ -1,0 +1,6 @@
+{
+    "settings": {
+        "resizeable": true,
+        "scene_adapter": "applications.smarthomeapp.SmartHomeAdapter"
+    }
+}

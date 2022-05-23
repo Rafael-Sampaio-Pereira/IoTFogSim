@@ -6,209 +6,215 @@ from twisted.internet import tksupport
 from tkinter import PhotoImage
 from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
-
-
+from importlib import import_module
 
 
 class SimulationCore(object):
- 	
-	def __init__(self):
-		# self.allWirelessConnections = defaultdict(list)
-		self.allConnections = set()
-		self.allNodes = []
-		# self.allServerNodes = set()
-		# self.allFogNodes = defaultdict(list)
-		# self.allCloudNodes = defaultdict(list)
-		#self.allAccessPointNodes = defaultdict(list)
-		# self.allIoTNodes = defaultdict(list)
-		# self.allRouterNodes = defaultdict(list)
-		# self.allSinkNodes = defaultdict(list)
-		# self.allSensorNodes = defaultdict(list)
-		self.canvas = None
-		self.simulation_screen = None
-		self.eventsCounter = 0
-		self.allProtocols = set()
-		self.project_name = None
-		self.is_running = False
 
+    def __init__(self):
+        # self.allWirelessConnections = defaultdict(list)
+        self.allConnections = set()
+        self.allNodes = []
+        # self.allServerNodes = set()
+        # self.allFogNodes = defaultdict(list)
+        # self.allCloudNodes = defaultdict(list)
+        #self.allAccessPointNodes = defaultdict(list)
+        # self.allIoTNodes = defaultdict(list)
+        # self.allRouterNodes = defaultdict(list)
+        # self.allSinkNodes = defaultdict(list)
+        # self.allSensorNodes = defaultdict(list)
+        self.canvas = None
+        self.simulation_screen = None
+        self.eventsCounter = 0
+        self.allProtocols = set()
+        self.project_name = None
+        self.is_running = False
+        self.scene_adapter = None
 
+    def build_scene_adapter(self, scene_adapter_class) -> None:
+        # the classPath needs to be = folder.file.class - Rafael Sampaio
+        try:
+            paths = scene_adapter_class.split('.')
+            module_path = paths[0]+"."+paths[1]
+            class_name = paths[2]
+            module = import_module(module_path)
+            _class = getattr(module, class_name)
+            class_instance = _class(self)
+            self.scene_adapter = class_instance
 
-	def get_any_protocol_by_addr_and_port(self, addr, port):
-			try:
-				for proto in self.allProtocols:
-					if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
-						return proto
-			except:
-				pass
+        except Exception as e:
+            log.msg(e)
 
-	def updateEventsCounter(self, event_description):
-		self.eventsCounter = self.eventsCounter + 1
-		log.msg("Event: %i | " %(self.eventsCounter)+event_description)
-		# Updates events counter value on screen - Rafael Sampaio
-		self.simulation_screen.menubar.entryconfigure(4, label="Events: "+str(self.eventsCounter))
+    def get_any_protocol_by_addr_and_port(self, addr, port):
+        try:
+            for proto in self.allProtocols:
+                if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
+                    return proto
+        except:
+            pass
 
-	# def getFogNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allFogNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no fog node whith the id %i"%(id))
+    def updateEventsCounter(self, event_description):
+        self.eventsCounter = self.eventsCounter + 1
+        log.msg("Event: %i | " % (self.eventsCounter)+event_description)
+        # Updates events counter value on screen - Rafael Sampaio
+        self.simulation_screen.menubar.entryconfigure(
+            4, label="Events: "+str(self.eventsCounter))
 
-	# def getCloudNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allCloudNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no cloud node whith the id %i"%(id))
+    # def getFogNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allFogNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no fog node whith the id %i"%(id))
 
-	# def getAccessPointNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allAccessPointNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no access point whith the id %i"%(id))
+    # def getCloudNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allCloudNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no cloud node whith the id %i"%(id))
 
-	# def getRouterNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allRouterNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no router whith the id %i"%(id))
-	
-	# def getSinkNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allSinkNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no sink whith the id %i"%(id))
+    # def getAccessPointNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allAccessPointNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no access point whith the id %i"%(id))
 
-	# def getSensorNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allSensorNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no sensor whith the id %i"%(id))
+    # def getRouterNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allRouterNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no router whith the id %i"%(id))
 
-	# def getIoTNodeById(self, id):
-	# 	try:
-	# 		filtered_list = self.allIoTNodes[id]
-	# 		return filtered_list[0]
-	# 	except Exception as e:
-	# 		log.msg("There is no IoT node whith the id %i"%(id))
+    # def getSinkNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allSinkNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no sink whith the id %i"%(id))
 
-	def getConnectionById(self, id):
-		try:
-			filtered_list = self.allConnections[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no connection whith the id %i"%(id))
+    # def getSensorNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allSensorNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no sensor whith the id %i"%(id))
 
-	def getWirelessConnectionById(self, id):
-		try:
-			filtered_list = self.allWirelessConnections[id]
-			return filtered_list[0]
-		except Exception as e:
-			log.msg("There is no wireless connection whith the id %i"%(id))
+    # def getIoTNodeById(self, id):
+    # 	try:
+    # 		filtered_list = self.allIoTNodes[id]
+    # 		return filtered_list[0]
+    # 	except Exception as e:
+    # 		log.msg("There is no IoT node whith the id %i"%(id))
 
-	# def appendFogNodes(self, fog_node):
-	# 	self.allFogNodes[fog_node.id].append(fog_node)
+    def getConnectionById(self, id):
+        try:
+            filtered_list = self.allConnections[id]
+            return filtered_list[0]
+        except Exception as e:
+            log.msg("There is no connection whith the id %i" % (id))
 
-	# def appendCloudNodes(self, cloud_node):
-	# 	self.allCloudNodes[cloud_node.id].append(cloud_node)
+    def getWirelessConnectionById(self, id):
+        try:
+            filtered_list = self.allWirelessConnections[id]
+            return filtered_list[0]
+        except Exception as e:
+            log.msg("There is no wireless connection whith the id %i" % (id))
 
-	# # def appendAccessPointNode(self, ap):
-	# # 	self.allAccessPointNodes[ap.id].append(ap)
+    # def appendFogNodes(self, fog_node):
+    # 	self.allFogNodes[fog_node.id].append(fog_node)
 
-	# def appendIoTNodes(self, iot_node):
-	# 	self.allIoTNodes[iot_node.id].append(iot_node)
+    # def appendCloudNodes(self, cloud_node):
+    # 	self.allCloudNodes[cloud_node.id].append(cloud_node)
 
-	# def appendRouterNodes(self, router_node):
-	# 	self.allRouterNodes[router_node.id].append(router_node)
+    # # def appendAccessPointNode(self, ap):
+    # # 	self.allAccessPointNodes[ap.id].append(ap)
 
-	# def appendSinkNodes(self, sink_node):
-	# 	self.allSinkNodes[sink_node.id].append(sink_node)
+    # def appendIoTNodes(self, iot_node):
+    # 	self.allIoTNodes[iot_node.id].append(iot_node)
 
-	# def appendSensorNodes(self, sensor_node):
-	# 	self.allSensorNodes[sensor_node.id].append(sensor_node)
+    # def appendRouterNodes(self, router_node):
+    # 	self.allRouterNodes[router_node.id].append(router_node)
 
-	def appendConnections(self, connection):
-		self.allConnections[connection.id].append(connection)
+    # def appendSinkNodes(self, sink_node):
+    # 	self.allSinkNodes[sink_node.id].append(sink_node)
 
-	# def appendWirelessConnections(self, wireless_connection):
-	# 	self.allwirelessConnections[wireless_connection.id].append(wireless_connection)
+    # def appendSensorNodes(self, sensor_node):
+    # 	self.allSensorNodes[sensor_node.id].append(sensor_node)
 
-	# def getAnyDeviceById(self, id):
-		
-	# 	if self.getFogNodeById(id):
-	# 		if self.getFogNodeById(id).id == id:
-	# 			return self.allFogNodes[id][0]
+    def appendConnections(self, connection):
+        self.allConnections[connection.id].append(connection)
 
-		# elif self.getCloudNodeById(id):
-		# 	if self.getCloudNodeById(id).id == id:
-		# 		return self.allCloudNodes[id][0]
+    # def appendWirelessConnections(self, wireless_connection):
+    # 	self.allwirelessConnections[wireless_connection.id].append(wireless_connection)
 
-		# elif self.getIoTNodeById(id):
-		# 	if self.getIoTNodeById(id).id == id:
-		# 		return self.allIoTNodes[id][0]
+    # def getAnyDeviceById(self, id):
 
-		# elif self.getAccessPointNodeById(id):
-		# 	if self.getAccessPointById(id).id == id:
-		# 		return self.allAccessPointNodes[id][0]
+    # 	if self.getFogNodeById(id):
+    # 		if self.getFogNodeById(id).id == id:
+    # 			return self.allFogNodes[id][0]
 
-		# elif self.getRouterNodeById(id):
-		# 	if self.getRouterNodeById(id).id == id:
-		# 		return self.allRouterNodes[id][0]
-		
-		# elif self.getSinkNodeById(id):
-		# 	if self.getSinkNodeById(id).id == id:
-		# 		return self.allSinkNodes[id][0]
+        # elif self.getCloudNodeById(id):
+        # 	if self.getCloudNodeById(id).id == id:
+        # 		return self.allCloudNodes[id][0]
 
-		# elif self.getSensorNodeById(id):
-		# 	if self.getSensorNodeById(id).id == id:
-		# 		return self.allSensorNodes[id][0]
+        # elif self.getIoTNodeById(id):
+        # 	if self.getIoTNodeById(id).id == id:
+        # 		return self.allIoTNodes[id][0]
 
-		
+        # elif self.getAccessPointNodeById(id):
+        # 	if self.getAccessPointById(id).id == id:
+        # 		return self.allAccessPointNodes[id][0]
 
-	def create_simulation_canvas(self, resizeable):
-			
-		# These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
-		window = tkinter.Toplevel()
-		tksupport.install(window)
+        # elif self.getRouterNodeById(id):
+        # 	if self.getRouterNodeById(id).id == id:
+        # 		return self.allRouterNodes[id][0]
 
+        # elif self.getSinkNodeById(id):
+        # 	if self.getSinkNodeById(id).id == id:
+        # 		return self.allSinkNodes[id][0]
 
+        # elif self.getSensorNodeById(id):
+        # 	if self.getSensorNodeById(id).id == id:
+        # 		return self.allSensorNodes[id][0]
 
-		# Main window size and positions settings. - Rafael Sampaio
-		w_heigth = 600
-		w_width = 800
-		w_top_padding = 80
-		w_letf_padding = 100
-		window.geometry(str(w_width)+"x"+str(w_heigth)+"+"+str(w_letf_padding)+"+"+str(w_top_padding))
-		if resizeable != False:
-			window.attributes("-fullscreen", True)
-		window.iconify()
+    def create_simulation_canvas(self, resizeable):
 
-		window.bind("<F11>", lambda event: window.attributes("-fullscreen",
-                                    not window.attributes("-fullscreen")))
-		
+        # These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
+        window = tkinter.Toplevel()
+        tksupport.install(window)
 
-		# Setting window icon. - Rafael Sampaio
-		#window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
-		window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
-		
-		# Setting window top text. - Rafael Sampaio
-		window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+        # Main window size and positions settings. - Rafael Sampaio
+        w_heigth = 600
+        w_width = 800
+        w_top_padding = 80
+        w_letf_padding = 100
+        window.geometry(str(w_width)+"x"+str(w_heigth)+"+" +
+                        str(w_letf_padding)+"+"+str(w_top_padding))
+        if resizeable != False:
+            window.attributes("-fullscreen", True)
+        window.iconify()
 
+        window.bind("<F11>", lambda event: window.attributes("-fullscreen",
+                                                             not window.attributes("-fullscreen")))
 
+        # Setting window icon. - Rafael Sampaio
+        #window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
+        window.iconphoto(True, PhotoImage(
+            file='graphics/icons/iotfogsim_icon.png'))
 
-		
-		
-		# Simulation area on screen. - Rafael Sampaio
-		self.simulation_screen = ScrollableScreen(window, self.project_name, resizeable, self)
-		self.simulation_screen.pack(fill="both", expand=True)
-		canvas = self.simulation_screen.getCanvas()
+        # Setting window top text. - Rafael Sampaio
+        window.title(
+            "IoTFogSim %s - An Distributed Event-Driven Network Simulator" % (version))
 
-		self.canvas = canvas
+        # Simulation area on screen. - Rafael Sampaio
+        self.simulation_screen = ScrollableScreen(
+            window, self.project_name, resizeable, self)
+        self.simulation_screen.pack(fill="both", expand=True)
+        canvas = self.simulation_screen.getCanvas()
 
-		
+        self.canvas = canvas
 
-		return self.canvas
+        return self.canvas

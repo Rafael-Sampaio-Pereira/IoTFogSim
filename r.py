@@ -1,112 +1,50 @@
-import random
+# import random
+# import time
 
-import tkinter as tk
-
-# --- constants --- # UPPERCASE name
-
-RES_X = 800
-RES_Y = 600
-
-# --- classes --- # CamelCase name 
-
-class Enemy(object):
-    '''single enemy'''
-
-    def __init__(self, canvas):
-
-        # access to canvas
-        self.canvas = canvas
-
-        self.radius = 12.5 # random
-
-        self.color = random.choice( ('black', 'red', 'green', 'blue', 'yellow') )
-
-        self.x = random.uniform(self.radius, RES_X-self.radius)
-        self.y = random.uniform(self.radius, RES_Y-self.radius)
-
-        self.x1 = self.x-self.radius
-        self.y1 = self.y-self.radius
-
-        self.x2 = self.x+self.radius
-        self.y2 = self.y+self.radius
-
-        self.oval = self.canvas.create_oval(self.x1, self.y1, self.x2, self.y2, fill=self.color, outline=self.color)
-
-        self.moving = True
-
-        self.start()
+# import matplotlib.pyplot as plt
 
 
-    def start(self):
-        '''start moving'''
+# def simulate_5g_latency_for_smart_grids():
+#     # the paper "A Survey on Low Latency Towards 5G: RAN, Core Network and Caching Solutions"(Parvaez, 2017) shows that
+#     # latency requirements for smart grids under 5g networks is between 1 and 20ms - Rafael Sampaio
 
-        self.moving = True
+#     suitable_latency_values = []
 
-        # move this enemy after random time
-        random_time = random.randint(150, 3000)
-        root.after(random_time, self.move)
+#     # x = random.gammavariate(0.001, 0.02)
+#     x = random.gammavariate(0.1, 3)
+#     x = round(x, 3)
+#     print(x)
+#     suitable_latency_values.append(x)
+#     return x
+
+#     # latency = random.choice(suitable_latency_values)
+#     # time.sleep(latency)
 
 
-    def stop(self):
-        '''stop moving'''
+# suitable_latency_values = []
+# for i in range(1000):
+#     value = simulate_5g_latency_for_smart_grids()
+#     suitable_latency_values.append(value)
 
-        self.moving = False
+
+# # create plot of Gamma distribution
+# plt.plot(suitable_latency_values)
+
+# # display plot
+# plt.show()
 
 
-    def move(self):
+import numpy as np
+import scipy.stats as stats
+from matplotlib import pyplot as plt
 
-        if self.moving: # to stop root.after
+plt.rcParams["figure.figsize"] = [7.50, 3.50]
+plt.rcParams["figure.autolayout"] = True
 
-            direction = random.randint(1,4)
+x = np.linspace(0, 10)
+y = stats.gamma.pdf(x, a=5, scale=0.333)
+print(y)
+plt.plot(x, y, "ro-", label=(r'$\alpha=0, \beta=3$'))
+plt.legend(loc='upper right')
 
-            if direction == 1: # up
-                self.y -= self.radius
-                self.y1 -= self.radius
-                self.y2 -= self.radius
-            elif direction == 2: # down
-                self.y += self.radius
-                self.y1 += self.radius
-                self.y2 += self.radius
-            elif direction == 3: # left
-                self.x -= self.radius
-                self.x1 -= self.radius
-                self.x2 -= self.radius
-            elif direction == 4: # right
-                self.x += self.radius
-                self.x1 += self.radius
-                self.x2 += self.radius
-
-            self.canvas.coords(self.oval, self.x1, self.y1, self.x2, self.y2)
-            # move this enemy after random time
-            random_time = random.randint(150, 3000)
-            root.after(random_time, self.move)
-
-# --- functions --- # lower_case name 
-
-def add_new_enemy():
-
-    enemies.append(Enemy(canvas))
-
-    # add next enemy after random time
-    timer = random.randint(150, 3000)
-    root.after(random_time, add_new_enemy)
-
-# --- main ---
-
-root = tk.Tk()
-root.title("")
-
-canvas = tk.Canvas(root, width=RES_X, height=RES_Y, bg="white")
-canvas.pack()
-
-# 5 enemies at the beginning
-enemies = list()
-
-for _ in range(5):
-    enemies.append(Enemy(canvas))
-
-# add new enemy after random time
-random_time = random.randint(150, 3000)
-root.after(random_time, add_new_enemy)
-
-root.mainloop()
+plt.show()
