@@ -73,30 +73,48 @@ class PersonDataProducerApp(MobileProducerApp):
             if wall in collision_items:
                 blink_wall(wall)
 
-    # @override
+                return True
 
+        return False
+
+    # @override
     def run_random_mobility(self):
         def move():
             # moving the device icon in canvas in random way - Rafael Sampaio
             direction = random.randint(1, 4)
-            reference = random.randint(1, 100)
+            reference = random.randint(1, 9)
 
             if direction == 1:  # up
                 if not (self.visual_component.y - reference) < 1:
+                    old_y_pos = self.visual_component.y
                     self.visual_component.y = self.visual_component.y - reference
-                    self.verify_wall_collision()
+                    if self.verify_wall_collision():
+                        # if found a collision, then rolling back to old position
+                        self.visual_component.y = old_y_pos
+
             elif direction == 2:  # down
                 if not (self.visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
+                    old_y_pos = self.visual_component.y
                     self.visual_component.y = self.visual_component.y + reference
-                    self.verify_wall_collision()
+                    if self.verify_wall_collision():
+                        # if found a collision, then rolling back to old position
+                        self.visual_component.y = old_y_pos
+
             elif direction == 3:  # left
                 if not (self.visual_component.x - reference) < 1:
+                    old_x_pos = self.visual_component.x
                     self.visual_component.x = self.visual_component.x - reference
-                    self.verify_wall_collision()
+                    if self.verify_wall_collision():
+                        # if found a collision, then rolling back to old position
+                        self.visual_component.x = old_x_pos
+
             elif direction == 4:  # right
                 if not (self.visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
+                    old_x_pos = self.visual_component.x
                     self.visual_component.x = self.visual_component.x + reference
-                    self.verify_wall_collision()
+                    if self.verify_wall_collision():
+                        # if found a collision, then rolling back to old position
+                        self.visual_component.x = old_x_pos
 
             if self.visual_component.is_wireless:
                 self.simulation_core.canvas.moveto(self.visual_component.draggable_coverage_area_circle,
