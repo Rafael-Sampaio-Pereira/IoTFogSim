@@ -1,50 +1,40 @@
-# import random
-# import time
-
-# import matplotlib.pyplot as plt
+import tkinter as tk
+from tkinter.constants import *
 
 
-# def simulate_5g_latency_for_smart_grids():
-#     # the paper "A Survey on Low Latency Towards 5G: RAN, Core Network and Caching Solutions"(Parvaez, 2017) shows that
-#     # latency requirements for smart grids under 5g networks is between 1 and 20ms - Rafael Sampaio
+class MyClass:
+    def __init__(self, parent):
+        self.parent = parent
+        self.initUI()
 
-#     suitable_latency_values = []
+    def initUI(self):
+        self.canvas = tk.Canvas(self.parent)
+        self.canvas.pack()
+        self.canvas.bind("<Button-1>", self.find_closest)
 
-#     # x = random.gammavariate(0.001, 0.02)
-#     x = random.gammavariate(0.1, 3)
-#     x = round(x, 3)
-#     print(x)
-#     suitable_latency_values.append(x)
-#     return x
+       # Create dictionary mapping canvas object ids to a name.
+        self.object_names = {}
+        id = self.canvas.create_oval(50, 50, 60, 60, fill="Red")
+        self.object_names[id] = 'Red object'
+        id = self.canvas.create_oval(100, 100, 110, 110, fill="Blue")
+        self.object_names[id] = 'Blue object'
+        id = self.canvas.create_oval(150, 150, 160, 160, fill="Green")
+        self.object_names[id] = 'Green object'
 
-#     # latency = random.choice(suitable_latency_values)
-#     # time.sleep(latency)
+        self.name_lbl1 = tk.Label(self.parent, text='Closest object:')
+        self.name_lbl1.pack(side=LEFT)
 
+        self.name_var = tk.StringVar(value='')
+        self.name_lbl2 = tk.Label(self.parent, textvariable=self.name_var)
+        self.name_lbl2.pack(side=LEFT)
 
-# suitable_latency_values = []
-# for i in range(1000):
-#     value = simulate_5g_latency_for_smart_grids()
-#     suitable_latency_values.append(value)
-
-
-# # create plot of Gamma distribution
-# plt.plot(suitable_latency_values)
-
-# # display plot
-# plt.show()
+    def find_closest(self, event):
+        if (closest := self.canvas.find_closest(event.x, event.y)):
+            obj_id = closest[0]
+            self.name_var.set(self.object_names[obj_id])  # Updates lbl2.
 
 
-import numpy as np
-import scipy.stats as stats
-from matplotlib import pyplot as plt
-
-plt.rcParams["figure.figsize"] = [7.50, 3.50]
-plt.rcParams["figure.autolayout"] = True
-
-x = np.linspace(0, 10)
-y = stats.gamma.pdf(x, a=5, scale=0.333)
-print(y)
-plt.plot(x, y, "ro-", label=(r'$\alpha=0, \beta=3$'))
-plt.legend(loc='upper right')
-
-plt.show()
+if __name__ == '__main__':
+    root = tk.Tk()
+    instance = MyClass(root)
+    root.mainloop()
