@@ -90,7 +90,7 @@ class PersonDataProducerApp(MobileProducerApp):
             RIGHT = 4
             directions = [UP, DOWN, LEFT, RIGHT]
             direction = random.choice(directions)
-            reference = random.randint(1, 100)
+            reference = random.randint(50, 100)
 
             x1 = self.visual_component.x
             y1 = self.visual_component.y
@@ -143,4 +143,4 @@ class PersonDataProducerApp(MobileProducerApp):
                                     old_x, old_y)
                                 wall_was_found = True
 
-        LoopingCall(move).start(0.5)
+        LoopingCall(move).start(0.2)
