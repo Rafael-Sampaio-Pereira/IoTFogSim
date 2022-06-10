@@ -73,8 +73,8 @@
           "coverage_area_radius": 100,
           "application": "applications.smarthomeapp.PersonDataProducerApp",
           "is_wireless": true,
-          "x": 1168,
-          "y": 291
+          "x": 840,
+          "y": 540
         }
       ]
     }

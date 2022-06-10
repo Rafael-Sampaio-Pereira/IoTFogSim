@@ -6,6 +6,13 @@ import random
 from twisted.internet.task import LoopingCall
 from twisted.internet import reactor
 from bresenham import bresenham
+from twisted.internet.defer import inlineCallbacks
+from twisted.internet import reactor
+from twisted.internet.task import deferLater
+
+
+def sleep(secs):
+    return deferLater(reactor, secs, lambda: None)
 
 
 class SmartHomeAdapter(object):
@@ -96,15 +103,17 @@ class MobilityModel(object):
         self.area_max_width = 1000
         self.area_max_height = 1000
         self.all_mobility_points = []
+
         self.generate_distributed_random_points()
 
-    def draw_points(self):
+    def draw_points(self, point_size):
         """Draw all mobility points on canvas."""
         for point in self.all_mobility_points:
             # Drawing circles on canvas to represents every point coords - Rafael Sampaio
             self.simulation_core.canvas.create_oval(
-                point['x'], point['y'], point['x']+4, point['y']+4, fill="red", outline="")
+                point['x'], point['y'], point['x']+point_size, point['y']+point_size, outline="red", dash=(4, 3))
 
+    @inlineCallbacks
     def generate_distributed_random_points(self):
         """Distributes points using uniform distribution.
             n_points: num of points to be distributed into a given area
@@ -112,13 +121,22 @@ class MobilityModel(object):
             area_max_height: max height of desired area
             Rafael Sampaio
         """
+        # waiting for mobility model object get the simulation core - Rafael Sampaio
+        yield sleep(0.5)
+        point_size = 20
         for point in range(1, self.n_points+1):
             # Casting to int due uniform distribution returns float - Rafael Sampaio
             x = int(random.uniform(50, self.area_max_width))
             y = int(random.uniform(50, self.area_max_height))
+
+            # Avoiding to place points into walls - Rafael Sampaio
+            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance=point_size):
+                x += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
+                y += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
+
             self.all_mobility_points.append({"x": x, "y": y})
         # Drawing points in canvas - Rafael Sampaio
-        self.draw_points()
+        self.draw_points(point_size)
 
     def random_mobility(self, visual_component):
         """Move randomically a visual component icon on canvas.
@@ -196,6 +214,7 @@ class MobilityModel(object):
 
         self.random_waypoint_move(visual_component)
 
+    @inlineCallbacks
     def random_waypoint_move(self, visual_component):
         all_coordinates_between_two_points = []
         # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
@@ -219,6 +238,7 @@ class MobilityModel(object):
                             visual_component.move_on_screen(
                                 old_x, old_y)
                             wall_was_found = True
+                    yield sleep(0.01)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
             self.simulation_core.canvas.after(random.randint(
