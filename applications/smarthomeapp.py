@@ -12,6 +12,7 @@ class SmartHomeAdapter(object):
     def __init__(self, simulation_core) -> None:
         self.simulation_core = simulation_core
         self.ground_plan = SimpleGroundPlan(simulation_core)
+        self.mobility_model = MobilityModel(simulation_core)
 
 
 class SimpleGroundPlan(object):
@@ -81,33 +82,48 @@ class PersonDataProducerApp(MobileProducerApp):
 
     # @override
     def run_mobility(self):
+        # self.simulation_core.scene_adapter.mobility_model.random_mobility(
+        #     self.visual_component)
+        self.simulation_core.scene_adapter.mobility_model.random_waypoint_mobility(
+            self.visual_component)
 
-        reactor.callFromThread(self.random_waypoint_mobility)
 
-    def random_waypoint_mobility(self):
-        n_points = 33
-        area_max_width = 1000
-        area_max_height = 1000
-        all_waypoints = self.generate_distributed_random_waypoints(
-            n_points,
-            area_max_width,
-            area_max_height
-        )
+class MobilityModel(object):
 
-        self.draw_points(all_waypoints)
+    def __init__(self, simulation_core) -> None:
+        self.simulation_core = simulation_core
+        self.n_points = 33
+        self.area_max_width = 1000
+        self.area_max_height = 1000
+        self.all_mobility_points = []
+        self.generate_distributed_random_points()
 
-        def move():
-            self.simulation_core.canvas.after(random.randint(
-                10, 1000), move)
-        move()
-
-    def draw_points(self, all_points):
-        for point in all_points:
+    def draw_points(self):
+        """Draw all mobility points on canvas."""
+        for point in self.all_mobility_points:
             # Drawing circles on canvas to represents every point coords - Rafael Sampaio
             self.simulation_core.canvas.create_oval(
                 point['x'], point['y'], point['x']+4, point['y']+4, fill="red", outline="")
 
-    def random_mobility(self):
+    def generate_distributed_random_points(self):
+        """Distributes points using uniform distribution.
+            n_points: num of points to be distributed into a given area
+            area_max_width: max width of desired area
+            area_max_height: max height of desired area
+            Rafael Sampaio
+        """
+        for point in range(1, self.n_points+1):
+            # Casting to int due uniform distribution returns float - Rafael Sampaio
+            x = int(random.uniform(50, self.area_max_width))
+            y = int(random.uniform(50, self.area_max_height))
+            self.all_mobility_points.append({"x": x, "y": y})
+        # Drawing points in canvas - Rafael Sampaio
+        self.draw_points()
+
+    def random_mobility(self, visual_component):
+        """Move randomically a visual component icon on canvas.
+            visual_component: A component that contains icon and node info
+        """
         def move():
             # moving the device icon in canvas in random way - Rafael Sampaio
             UP = 1
@@ -118,71 +134,92 @@ class PersonDataProducerApp(MobileProducerApp):
             direction = random.choice(directions)
             reference = random.randint(50, 100)
 
-            x1 = self.visual_component.x
-            y1 = self.visual_component.y
+            x1 = visual_component.x
+            y1 = visual_component.y
             x2 = None
             y2 = None
             tolerance = 0
 
             if direction == UP:
                 # preventing to move out of screen canvas - Rafael Sampaio
-                if not (self.visual_component.y - reference) < 1:
+                if not (visual_component.y - reference) < 1:
                     y2 = y1 - reference
                     x2 = x1
 
             elif direction == DOWN:
                 # preventing to move out of screen canvas - Rafael Sampaio
-                if not (self.visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
+                if not (visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
                     y2 = y1 + reference
                     x2 = x1
                     # preventin icon cross down wall, adds icon height to prevet wall cross error - Rafael Sampaio
-                    tolerance = self.visual_component.height
+                    tolerance = visual_component.height
 
             elif direction == LEFT:
                 # preventing to move out of screen canvas - Rafael Sampaio
-                if not (self.visual_component.x - reference) < 1:
+                if not (visual_component.x - reference) < 1:
                     x2 = x1 - reference
                     y2 = y1
 
             elif direction == RIGHT:
                 # preventing to move out of screen canvas - Rafael Sampaio
-                if not (self.visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
+                if not (visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
                     x2 = x1 + reference
                     y2 = y1
                     # preventin icon cross right wall - Rafael Sampaio
-                    tolerance = self.visual_component.width
+                    tolerance = visual_component.width
 
             if x2 and y2:
                 all_coordinates_between_two_points = list(
                     bresenham(x1, y1, x2, y2))
                 wall_was_found = False
                 for x, y in all_coordinates_between_two_points:
-                    old_x = self.visual_component.x
-                    old_y = self.visual_component.y
+                    old_x = visual_component.x
+                    old_y = visual_component.y
                     if not wall_was_found:
                         # verify if object just got its destiny - Rafael Sampaio
                         if not(x == x2 and y == y2):
-                            self.visual_component.move_on_screen(x, y)
+                            visual_component.move_on_screen(x, y)
                             if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
                                 # if found a collision, then rolling back to old position - Rafael Sampaio
-                                self.visual_component.move_on_screen(
+                                visual_component.move_on_screen(
                                     old_x, old_y)
                                 wall_was_found = True
 
         LoopingCall(move).start(0.2)
 
-    def generate_distributed_random_waypoints(self, n_points, area_max_width, area_max_height):
-        """Distributes waypoints using uniform distribution.
-            n_points: num of waypoints to be distributed into a given area
-            area_max_width: max width of desired area
-            area_max_height: max height of desired area
-            Rafael Sampaio
+    def random_waypoint_mobility(self, visual_component):
+        """Move randomically a visual component icon on canvas using the random waypoint mobility model.
+            visual_component: A component that contains icon and node info
+            min_speed: Min value for mobility velocility
+            max_speed: Max value for mobility velocility
         """
-        waypoints = []
-        for point in range(1, n_points+1):
-            # Casting to int due uniform distribution returns float - Rafael Sampaio
-            x = int(random.uniform(50, area_max_width))
-            y = int(random.uniform(50, area_max_height))
-            waypoints.append({"x": x, "y": y})
-        # returns waypoints coords - Rafael Sampaio
-        return waypoints
+
+        self.random_waypoint_move(visual_component)
+
+    def random_waypoint_move(self, visual_component):
+        all_coordinates_between_two_points = []
+        # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
+        next_random_point = random.choice(self.all_mobility_points)
+        # Getting all coords between current node(visual_component) position and the selected next point - Rafael Sampaio
+        if next_random_point:
+            all_coordinates_between_two_points = list(
+                bresenham(visual_component.x, visual_component.y, next_random_point['x'], next_random_point['y']))
+
+            wall_was_found = False
+            for x, y in all_coordinates_between_two_points:
+                old_x = visual_component.x
+                old_y = visual_component.y
+                if not wall_was_found:
+                    # verify if object just got its destiny - Rafael Sampaio
+                    if not(x == next_random_point['x']) and not(y == next_random_point['y']):
+
+                        visual_component.move_on_screen(x, y)
+                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y):
+                            # if found a collision, then rolling back to old position - Rafael Sampaio
+                            visual_component.move_on_screen(
+                                old_x, old_y)
+                            wall_was_found = True
+
+            # Stay at point for a random period, so move again to another point - Rafael Sampaio
+            self.simulation_core.canvas.after(random.randint(
+                1000, 5000), self.random_waypoint_move, visual_component)

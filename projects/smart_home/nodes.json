@@ -75,24 +75,6 @@
           "is_wireless": true,
           "x": 1168,
           "y": 291
-        },
-        {
-          "name": "car",
-          "icon": "smartphone_icon",
-          "coverage_area_radius": 100,
-          "application": "applications.smarthomeapp.PersonDataProducerApp",
-          "is_wireless": true,
-          "x": 850,
-          "y": 200
-        },
-        {
-          "name": "car",
-          "icon": "smartphone_icon",
-          "coverage_area_radius": 100,
-          "application": "applications.smarthomeapp.PersonDataProducerApp",
-          "is_wireless": true,
-          "x": 1152,
-          "y": 391
         }
       ]
     }
