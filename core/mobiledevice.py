@@ -17,6 +17,8 @@ from bresenham import bresenham
 class MobileDevice(object):
     def __init__(self):
         pass
+
+
 class MobileNetwork(object):
 
     def __init__(self, simulation_core, wireless_standard, network_layer_protocol, application_layer_protocol, latency):
@@ -34,7 +36,6 @@ class MobileNetwork(object):
     def get_mobile_network_device_by_icon(self, icon_id):
         try:
             founded_device = None
-
             for device in self.mobile_producer_list:
                 if device.visual_component.draggable_img == icon_id:
                     founded_device = device
@@ -52,6 +53,23 @@ class MobileNetwork(object):
 
         except Exception as e:
             pass
+
+    def get_mobile_network_device_by_wireless_signal_id(self, wireless_signal_id):
+        founded_device = None
+        for device in self.mobile_producer_list:
+            if device.visual_component.draggable_signal_circle == wireless_signal_id:
+                founded_device = device
+
+        for device in self.base_station_list:
+            if device.visual_component.draggable_signal_circle == wireless_signal_id:
+                founded_device = device
+
+        for device in self.mobile_repeater_list:
+            if device.visual_component.draggable_signal_circle == wireless_signal_id:
+                founded_device = device
+
+        if founded_device != None:
+            return founded_device
 
 
 class MobileNode(MobileDevice):

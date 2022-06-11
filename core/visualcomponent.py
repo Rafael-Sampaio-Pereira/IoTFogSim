@@ -30,7 +30,7 @@ class VisualComponent(object):
 
             # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
             self.draggable_signal_circle = self.simulation_core.canvas.create_oval(
-                self.x, self.y, self.x, self.y, fill="", outline="", dash=(4, 3))
+                self.x, self.y, self.x, self.y, fill="", outline="", dash=(4, 3), tag="wireless_signal")
 
             simulation_core.canvas.tag_bind(
                 self.draggable_coverage_area_circle, '<Button1-Motion>', self.move)

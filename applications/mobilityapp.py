@@ -201,11 +201,18 @@ class MobileProducerApp(MobileNodeApp):
         # TO DO: needs to implement a disconect function to lose conection when node are far of basestation - Rafael Sampaio
 
         # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
-        nearby_devices_icon_list = self.find_nearby_devices_icon()
+        canvas_objects_in_coverage_area = self.find_nearby_devices_icon()
+        all_wireless_signals = self.simulation_core.canvas.find_withtag(
+            "wireless_signal")
+        nearby_signals = []
+        for obj in canvas_objects_in_coverage_area:
+            # verify if there is a wireless device signal in captured canvas objects in coverage area - Rafael Sampaio
+            if obj in all_wireless_signals:
+                nearby_signals.append(obj)
 
-        for icon_id in nearby_devices_icon_list:
-            device = self.mobile_network_group.get_mobile_network_device_by_icon(
-                icon_id)
+        for wireless_signal_id in nearby_signals:
+            device = self.mobile_network_group.get_mobile_network_device_by_wireless_signal_id(
+                wireless_signal_id)
             if type(device) == BaseStationNode and device not in self.connected_basestations:
                 self.simulation_core.updateEventsCounter(
                     "Mobile producer "+self.name+" connected to the Basestantion "+device.name)
@@ -400,8 +407,6 @@ class BaseStationApp(MobileNodeApp):
                 self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
                                                    self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             else:
-                print("AQUIIIIIIIIIIIIIIIII",
-                      self.visual_component.coverage_area_radius)
                 # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
                 self.simulation_core.canvas.itemconfig(
                     self.visual_component.draggable_signal_circle, outline="")
