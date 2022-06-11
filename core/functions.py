@@ -6,6 +6,17 @@ import importlib
 import os
 from fabric.api import local
 import netifaces
+from twisted.internet.task import deferLater
+from twisted.internet import reactor
+
+
+def sleep(secs):
+    """Provide a non-blocking sleep function.
+        any method that will use that function inside needs to use the @inlineCallbacks decorator.
+        Example: it can be use to control a for iteration time.
+        secs: float - Number of seconds to be waiting.
+    """
+    return deferLater(reactor, secs, lambda: None)
 
 
 def import_and_instantiate_class_from_string(class_path):
