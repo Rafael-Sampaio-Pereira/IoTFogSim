@@ -88,30 +88,31 @@ class MobileNodeApp(StandardApplicationComponent):
         print(self_name, buffer_string)
         print('\n')
 
+    @inlineCallbacks
     def draw_connection_arrow(self, destiny):
         self._blink_signal()
         x1 = self.visual_component.x
         y1 = self.visual_component.y
         x2 = destiny.visual_component.x
         y2 = destiny.visual_component.y
-        connection_id = self.simulation_core.canvas.create_line(
-            x1, y1, x2, y2, arrow=tk.LAST, width=2, dash=(4, 2))
-
-        self.simulation_core.canvas.after(
-            5, self.delete_connection_arrow, connection_id)
-        # reactor.callLater(0.3, self.delete_connection_arrow, connection_id)
-        self.simulation_core.canvas.update()
-        # return connection_id
 
         self.ball = self.simulation_core.canvas.create_oval(
-            x1, y1, x1+7, y1+7, fill="red")
+            x1, y1, x1+7, y1+7, fill="orange")
         self.all_coordinates = list(bresenham(x1, y1, x2, y2))
         # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
         self.display_time = 9
         # this must be interger and determines the velocity of the packet moving in the canvas - Rafael Sampaio
         self.package_speed = 1
-
         self.animate_package(x2, y2)
+
+        connection_id = self.simulation_core.canvas.create_line(
+            x1, y1, x2, y2, arrow=tk.LAST, width=1, dash=(4, 2))
+        yield sleep(0.2)
+
+        self.delete_connection_arrow(connection_id)
+        # reactor.callLater(0.3, self.delete_connection_arrow, connection_id)
+        self.simulation_core.canvas.update()
+        # return connection_id
 
     def animate_package(self, destiny_x, destiny_y):
         cont = 100
@@ -272,8 +273,7 @@ class MobileProducerApp(MobileNodeApp):
                     # Veryfing if the package already in the buffer (the nearby devices can send data back and its duplicates package in the buffer) - Rafael Sampaio
                     if not package in destiny.application._buffer:
                         # Drawing connection - Rafael Sampaio
-                        reactor.callFromThread(
-                            self.draw_connection_arrow, destiny)
+                        self.draw_connection_arrow(destiny)
                         self.simulation_core.canvas.update()
 
                         # self.simulate_network_latency()
