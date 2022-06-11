@@ -69,7 +69,7 @@
       "mobile_producer_nodes": [
         {
           "name": "car",
-          "icon": "smartphone_icon",
+          "icon": "human_icon",
           "coverage_area_radius": 100,
           "application": "applications.smarthomeapp.PersonDataProducerApp",
           "is_wireless": true,
