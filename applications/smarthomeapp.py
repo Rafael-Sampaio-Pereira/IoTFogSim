@@ -1,6 +1,7 @@
 from datetime import datetime
 import time
 from tkinter import RIGHT
+from turtle import right
 from applications.mobilityapp import MobileProducerApp
 import random
 from twisted.internet.task import LoopingCall
@@ -53,11 +54,14 @@ class SimpleGroundPlan(object):
 
     def blink_wall(self, wall):
         original_color = self.simulation_core.scene_adapter.ground_plan.wall_color
-        self.simulation_core.canvas.itemconfig(wall, fill="#141313")
+        self.simulation_core.canvas.itemconfig(wall, fill="red")
         reactor.callLater(
             0.7, self.simulation_core.canvas.itemconfig, wall, fill=original_color)
 
-    def verify_wall_collision(self, x, y, tolerance=0):
+    def verify_wall_collision(self, x, y, tolerance):
+        if not tolerance:
+            tolerance = 0
+
         # finding all the wifi devices on the canvas screen. - Rafael Sampaio
         all_wall = self.simulation_core.canvas.find_withtag("wall")
         collision_items = self.simulation_core.canvas.find_overlapping(
@@ -138,6 +142,22 @@ class MobilityModel(object):
         # Drawing points in canvas - Rafael Sampaio
         self.draw_points(point_size)
 
+    def find_directions_based_on_coords(self, visual_component, x, y):
+        """Return two direc tions based on coords."""
+        x_direction = None
+        y_direction = None
+        if x > visual_component.x:
+            x_direction = 'RIGHT'
+        else:
+            x_direction = 'LEFT'
+
+        if y > visual_component.y:
+            y_direction = 'DOWN'
+        else:
+            y_direction = 'UP'
+
+        return x_direction, y_direction
+
     def random_mobility(self, visual_component):
         """Move randomically a visual component icon on canvas.
             visual_component: A component that contains icon and node info
@@ -205,6 +225,7 @@ class MobilityModel(object):
 
         LoopingCall(move).start(0.2)
 
+    @inlineCallbacks
     def random_waypoint_mobility(self, visual_component):
         """Move randomically a visual component icon on canvas using the random waypoint mobility model.
             visual_component: A component that contains icon and node info
@@ -212,10 +233,6 @@ class MobilityModel(object):
             max_speed: Max value for mobility velocility
         """
 
-        self.random_waypoint_move(visual_component)
-
-    @inlineCallbacks
-    def random_waypoint_move(self, visual_component):
         all_coordinates_between_two_points = []
         # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
         next_random_point = random.choice(self.all_mobility_points)
@@ -225,21 +242,26 @@ class MobilityModel(object):
                 bresenham(visual_component.x, visual_component.y, next_random_point['x'], next_random_point['y']))
 
             wall_was_found = False
+            tolerance = None
             for x, y in all_coordinates_between_two_points:
                 old_x = visual_component.x
                 old_y = visual_component.y
+                # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
                 if not wall_was_found:
                     # verify if object just got its destiny - Rafael Sampaio
                     if not(x == next_random_point['x']) and not(y == next_random_point['y']):
-
+                        # preventing icon cross wall - Rafael Sampaio
+                        tolerance = 10
+                        # Moving icon on screen at - Rafael Sampaio
                         visual_component.move_on_screen(x, y)
-                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y):
+                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
                             # if found a collision, then rolling back to old position - Rafael Sampaio
                             visual_component.move_on_screen(
                                 old_x, old_y)
                             wall_was_found = True
+                            break
                     yield sleep(0.01)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
             self.simulation_core.canvas.after(random.randint(
-                1000, 5000), self.random_waypoint_move, visual_component)
+                1000, 2000), self.random_waypoint_mobility, visual_component)

@@ -55,14 +55,14 @@
       "description": "Simple mobile network for vehicular data collection.",
       "base_station_nodes": [
         {
-          "name": "base_station",
-          "icon": "sink_icon",
+          "name": "access_point",
+          "icon": "ap_icon",
           "coverage_area_radius": 100,
           "is_wireless": true,
           "application": "applications.mobilityapp.BaseStationApp",
           "mqtt_destiny_topic": "veichular_network",
-          "x": 1212,
-          "y": 216
+          "x": 250,
+          "y": 380
         }
       ],
       "mobile_repeater_nodes": [],
