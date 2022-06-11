@@ -96,7 +96,7 @@ class PersonDataProducerApp(MobileProducerApp):
         # self.simulation_core.scene_adapter.mobility_model.random_mobility(
         #     self.visual_component)
         self.simulation_core.scene_adapter.mobility_model.random_waypoint_mobility(
-            self.visual_component)
+            self.visual_component, 0.008, 0.02, 1000, 10000)
 
 
 class MobilityModel(object):
@@ -226,13 +226,21 @@ class MobilityModel(object):
         LoopingCall(move).start(0.2)
 
     @inlineCallbacks
-    def random_waypoint_mobility(self, visual_component):
+    def random_waypoint_mobility(
+        self,
+        visual_component,
+        min_speed: float,
+        max_speed: float,
+        min_pause: int,
+        max_pause: int
+    ) -> None:
         """Move randomically a visual component icon on canvas using the random waypoint mobility model.
             visual_component: A component that contains icon and node info
-            min_speed: Min value for mobility velocility
-            max_speed: Max value for mobility velocility
+            min_speed: float - Min value for mobility velocility
+            max_speed: float - Max value for mobility velocility
+            min_pause: int - Mix pause value for a node stay at a given waypoint
+            max_pause: int - Max pause value for a node stay at a given waypoint
         """
-
         all_coordinates_between_two_points = []
         # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
         next_random_point = random.choice(self.all_mobility_points)
@@ -241,6 +249,10 @@ class MobilityModel(object):
             all_coordinates_between_two_points = list(
                 bresenham(visual_component.x, visual_component.y, next_random_point['x'], next_random_point['y']))
 
+            self.simulation_core.updateEventsCounter(
+                f"Mobile Node Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+
+            step_speed = random.uniform(min_speed, max_speed)
             wall_was_found = False
             tolerance = None
             for x, y in all_coordinates_between_two_points:
@@ -260,8 +272,8 @@ class MobilityModel(object):
                                 old_x, old_y)
                             wall_was_found = True
                             break
-                    yield sleep(0.01)
+                    yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
             self.simulation_core.canvas.after(random.randint(
-                1000, 2000), self.random_waypoint_mobility, visual_component)
+                min_pause, max_pause), self.random_waypoint_mobility, visual_component, min_speed, max_speed, min_pause, max_pause)
