@@ -16,6 +16,10 @@ from datetime import datetime
 from applications.mqttapp import extract_mqtt_contents
 import random
 from bresenham import bresenham
+from twisted.internet.defer import inlineCallbacks
+from twisted.internet import reactor
+from twisted.internet.task import deferLater
+from core.functions import sleep
 
 
 class MobileNodeApp(StandardApplicationComponent):
@@ -315,6 +319,7 @@ class BaseStationApp(MobileNodeApp):
     def start(self):
         self.connect_to_gateway()
         self.configure_source_info()
+        self.passive_scanning()
 
     # this method allow the BaseStation to connect to router/switch - Rafael Sampaio
     def connect_to_gateway(self):
@@ -377,6 +382,41 @@ class BaseStationApp(MobileNodeApp):
             return True
         else:
             return False
+
+    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+    @inlineCallbacks
+    def passive_scanning(self):
+        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
+        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
+        TBTT = 0.1024
+
+        self.simulation_core.updateEventsCounter(
+            "BaseStation sending broadcast BEACON")
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_alert, fill="red")
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_alert, text="<< beacon >>")
+
+        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_signal_circle, outline="red")
+
+        for n in range(0, self.visual_component.coverage_area_radius):
+            # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+            if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+                # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
+                self.visual_component.signal_radius += 1
+                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
+                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            else:
+                # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+                self.simulation_core.canvas.itemconfig(
+                    self.visual_component.draggable_signal_circle, outline="")
+                self.visual_component.signal_radius = 1
+
+                self.simulation_core.canvas.update()
+                reactor.callLater(TBTT, self.passive_scanning)
+            yield sleep(0.001)
 
 
 class BaseStationAppFactory(ClientFactory):
