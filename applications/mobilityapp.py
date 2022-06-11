@@ -97,7 +97,7 @@ class MobileNodeApp(StandardApplicationComponent):
         y2 = destiny.visual_component.y
 
         self.ball = self.simulation_core.canvas.create_oval(
-            x1, y1, x1+7, y1+7, fill="orange")
+            self.visual_component.x, self.visual_component.y, self.visual_component.x+7, self.visual_component.y+7, fill="orange")
         self.all_coordinates = list(bresenham(x1, y1, x2, y2))
         # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
         self.display_time = 9
@@ -106,7 +106,7 @@ class MobileNodeApp(StandardApplicationComponent):
         self.animate_package(x2, y2)
 
         connection_id = self.simulation_core.canvas.create_line(
-            x1, y1, x2, y2, arrow=tk.LAST, width=1, dash=(4, 2))
+            self.visual_component.x, self.visual_component.y, x2, y2, arrow=tk.LAST, width=1, dash=(4, 2))
         yield sleep(0.2)
 
         self.delete_connection_arrow(connection_id)
