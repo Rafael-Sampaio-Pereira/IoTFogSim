@@ -68,7 +68,7 @@
       "mobile_repeater_nodes": [],
       "mobile_producer_nodes": [
         {
-          "name": "car",
+          "name": "John Due",
           "icon": "human_icon",
           "coverage_area_radius": 100,
           "application": "applications.smarthomeapp.PersonDataProducerApp",
