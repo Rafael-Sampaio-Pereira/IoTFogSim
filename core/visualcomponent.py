@@ -129,7 +129,7 @@ class VisualComponent(object):
 
         self.simulation_core.canvas.moveto(
             self.draggable_name,
-            x, y-10
+            x-10, y-15
         )
         self.simulation_core.canvas.moveto(
             self.draggable_alert,

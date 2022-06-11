@@ -204,17 +204,10 @@ class MobileProducerApp(MobileNodeApp):
 
         # putting all nearby devices icons in a list that will be use in future to send data across - Rafael Sampaio
         canvas_objects_in_coverage_area = self.find_nearby_devices_icon()
-        all_wireless_signals = self.simulation_core.canvas.find_withtag(
-            "wireless_signal")
-        nearby_signals = []
-        for obj in canvas_objects_in_coverage_area:
-            # verify if there is a wireless device signal in captured canvas objects in coverage area - Rafael Sampaio
-            if obj in all_wireless_signals:
-                nearby_signals.append(obj)
 
-        for wireless_signal_id in nearby_signals:
-            device = self.mobile_network_group.get_mobile_network_device_by_wireless_signal_id(
-                wireless_signal_id)
+        for obj in canvas_objects_in_coverage_area:
+            device = self.mobile_network_group.get_mobile_network_device_by_icon(
+                obj)
             if type(device) == BaseStationNode and device not in self.connected_basestations:
                 self.simulation_core.updateEventsCounter(
                     "Mobile producer "+self.name+" connected to the Basestantion "+device.name)

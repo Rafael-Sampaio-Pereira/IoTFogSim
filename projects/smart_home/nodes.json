@@ -9,8 +9,8 @@
       "is_wireless": false,
       "coverage_area_radius": 0,
       "application": "applications.mqttapp.BrokerApp",
-      "x": 250,
-      "y": 175
+      "x": 170,
+      "y": 850
     }
   ],
   "clients": [
@@ -22,8 +22,8 @@
       "is_wireless": false,
       "coverage_area_radius": 0,
       "application": "applications.cloudapp.CloudStorageApp",
-      "x": 582,
-      "y": 67
+      "x": 688,
+      "y": 153
     }
   ],
   "wireless_computers": [],
@@ -39,8 +39,8 @@
       "accesspoint_port": 8082,
       "application": "applications.routerapp.RouterApp",
       "is_wireless": false,
-      "x": 400,
-      "y": 200,
+      "x": 340,
+      "y": 420,
       "access_points": []
     }
   ],
@@ -61,8 +61,8 @@
           "is_wireless": true,
           "application": "applications.mobilityapp.BaseStationApp",
           "mqtt_destiny_topic": "veichular_network",
-          "x": 250,
-          "y": 380
+          "x": 340,
+          "y": 320
         }
       ],
       "mobile_repeater_nodes": [],
