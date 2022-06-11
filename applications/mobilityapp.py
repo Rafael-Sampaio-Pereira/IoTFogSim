@@ -90,7 +90,7 @@ class MobileNodeApp(StandardApplicationComponent):
 
     @inlineCallbacks
     def draw_connection_arrow(self, destiny):
-        self._blink_signal()
+        self.propagate_signal()
         x1 = self.visual_component.x
         y1 = self.visual_component.y
         x2 = destiny.visual_component.x
@@ -108,11 +108,8 @@ class MobileNodeApp(StandardApplicationComponent):
         connection_id = self.simulation_core.canvas.create_line(
             self.visual_component.x, self.visual_component.y, x2, y2, arrow=tk.LAST, width=1, dash=(4, 2))
         yield sleep(0.2)
-
         self.delete_connection_arrow(connection_id)
-        # reactor.callLater(0.3, self.delete_connection_arrow, connection_id)
         self.simulation_core.canvas.update()
-        # return connection_id
 
     def animate_package(self, destiny_x, destiny_y):
         cont = 100
@@ -174,6 +171,68 @@ class MobileNodeApp(StandardApplicationComponent):
 
     def run_mobility(self):
         self.run_random_mobility()
+
+    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+    @inlineCallbacks
+    def passive_scanning(self):
+        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
+        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
+        TBTT = 0.1024
+
+        self.simulation_core.updateEventsCounter(
+            "BaseStation sending broadcast BEACON")
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_alert, fill="red")
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_alert, text="<< beacon >>")
+
+        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_signal_circle, outline="red")
+
+        for n in range(0, self.visual_component.coverage_area_radius):
+            # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+            if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+                # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
+                self.visual_component.signal_radius += 1
+                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
+                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            else:
+                # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+                self.simulation_core.canvas.itemconfig(
+                    self.visual_component.draggable_signal_circle, outline="")
+                self.visual_component.signal_radius = 1
+                self.simulation_core.canvas.itemconfig(
+                    self.visual_component.draggable_alert, fill="black")
+                self.simulation_core.canvas.itemconfig(
+                    self.visual_component.draggable_alert, text="Waiting for devices")
+
+                self.simulation_core.canvas.update()
+                reactor.callLater(TBTT, self.passive_scanning)
+            yield sleep(0.001)
+
+    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
+
+    @inlineCallbacks
+    def propagate_signal(self):
+        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+        self.simulation_core.canvas.itemconfig(
+            self.visual_component.draggable_signal_circle, outline="red")
+
+        for n in range(0, self.visual_component.coverage_area_radius):
+            # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+            if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
+                # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
+                self.visual_component.signal_radius += 1
+                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
+                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+            else:
+                # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+                self.simulation_core.canvas.itemconfig(
+                    self.visual_component.draggable_signal_circle, outline="")
+                self.visual_component.signal_radius = 1
+                self.simulation_core.canvas.update()
+            yield sleep(0.001)
 
 
 class MobileProducerApp(MobileNodeApp):
@@ -375,41 +434,6 @@ class BaseStationApp(MobileNodeApp):
             return True
         else:
             return False
-
-    # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
-    @inlineCallbacks
-    def passive_scanning(self):
-        # Target Beacon Transmission Time - Defines the interval to access point send beacon message. - Rafael Sampaio
-        # IEEE standars defines default TBTT 100 TU = 102,00 mc = 102,4 ms = 0.01024 s. - Rafael Sampaio
-        TBTT = 0.1024
-
-        self.simulation_core.updateEventsCounter(
-            "BaseStation sending broadcast BEACON")
-        self.simulation_core.canvas.itemconfig(
-            self.visual_component.draggable_alert, fill="red")
-        self.simulation_core.canvas.itemconfig(
-            self.visual_component.draggable_alert, text="<< beacon >>")
-
-        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
-        self.simulation_core.canvas.itemconfig(
-            self.visual_component.draggable_signal_circle, outline="red")
-
-        for n in range(0, self.visual_component.coverage_area_radius):
-            # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
-            if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-                # the ssignal radius propagates at 10 units per time. - Rafael Sampaio
-                self.visual_component.signal_radius += 1
-                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
-                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
-            else:
-                # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-                self.simulation_core.canvas.itemconfig(
-                    self.visual_component.draggable_signal_circle, outline="")
-                self.visual_component.signal_radius = 1
-
-                self.simulation_core.canvas.update()
-                reactor.callLater(TBTT, self.passive_scanning)
-            yield sleep(0.001)
 
 
 class BaseStationAppFactory(ClientFactory):
