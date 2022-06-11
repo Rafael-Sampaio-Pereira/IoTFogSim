@@ -57,7 +57,7 @@
         {
           "name": "access_point",
           "icon": "ap_icon",
-          "coverage_area_radius": 500,
+          "coverage_area_radius": 100,
           "is_wireless": true,
           "application": "applications.mobilityapp.BaseStationApp",
           "mqtt_destiny_topic": "veichular_network",
