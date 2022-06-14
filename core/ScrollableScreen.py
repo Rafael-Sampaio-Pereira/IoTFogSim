@@ -19,6 +19,7 @@ from tkinter import filedialog
 from random import randrange
 from core.addNewNodeModal import add_new_node_modal_screen
 
+
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
         tkinter.Frame.__init__(self, root)
@@ -28,22 +29,20 @@ class ScrollableScreen(tkinter.Frame):
         background_image = None
 
         bg_image_path = "projects/"+project_name+"/bg_image.png"
-        
+
         # verify if the bg image exists - Rafael Sampaio
         if os.path.isfile(bg_image_path):
             background_image = PIL.Image.open(bg_image_path)
             bg_width, bg_height = background_image.size
-        
+
         root.update()
 
         self.screen_w = bg_width or 2000
         self.screen_h = bg_height or 2000
 
-        
         # Resize the image to the constraints of the root window.
         win_width = int(root.winfo_width())
         win_height = int(root.winfo_height())
-
 
         if background_image:
             background_image_tk = ImageTk.PhotoImage(background_image)
@@ -52,30 +51,32 @@ class ScrollableScreen(tkinter.Frame):
             # configure window to the bg image size and desable the resize funciton - Rafael Sampaio
             root.geometry(str(self.screen_w)+"x"+str(self.screen_h))
             root.resizable(False, False)
-        
-        
-        self.canvas = tkinter.Canvas(self, width= self.screen_w, height= self.screen_h, bg='#159eba', highlightthickness=0)
+
+        self.canvas = tkinter.Canvas(
+            self, width=self.screen_w, height=self.screen_h, bg='#ceebe3', highlightthickness=0)
         self.canvas.simulation_core = simulation_core
 
         # Create a label to hold the background image.
         if background_image:
             self.canvas.place(x=0, y=0, anchor='nw')
-            self.canvas.create_image(0, 0, image=background_image_tk, anchor='nw')
+            self.canvas.create_image(
+                0, 0, image=background_image_tk, anchor='nw')
             self.canvas.image = background_image_tk
 
-
-
-        self.xsb = tkinter.Scrollbar(self, orient="horizontal", command=self.canvas.xview)
-        self.ysb = tkinter.Scrollbar(self, orient="vertical", command=self.canvas.yview)
-        self.canvas.configure(yscrollcommand=self.ysb.set, xscrollcommand=self.xsb.set)
-        self.canvas.configure(scrollregion=(0,0,  self.screen_w,  self.screen_h))
+        self.xsb = tkinter.Scrollbar(
+            self, orient="horizontal", command=self.canvas.xview)
+        self.ysb = tkinter.Scrollbar(
+            self, orient="vertical", command=self.canvas.yview)
+        self.canvas.configure(yscrollcommand=self.ysb.set,
+                              xscrollcommand=self.xsb.set)
+        self.canvas.configure(scrollregion=(
+            0, 0,  self.screen_w,  self.screen_h))
 
         self.xsb.grid(row=1, column=0, sticky="ew")
         self.ysb.grid(row=0, column=1, sticky="ns")
         self.canvas.grid(row=0, column=0, sticky="nsew")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
-
 
         # self.canvas.create_text(50,10, anchor="nw", text="Events: ")
         # self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
@@ -90,12 +91,11 @@ class ScrollableScreen(tkinter.Frame):
         # Creating top menu
         top_menu = self.create_top_menu(root)
 
-        #Set action to the window close button. - Rafael Sampaio
+        # Set action to the window close button. - Rafael Sampaio
         root.protocol("WM_DELETE_WINDOW", self.on_closing)
-        
+
         # Sets esc to close application - Rafael Sampaio
         root.bind('<Escape>', lambda e: self.on_closing())
-
 
         root.bind("<Motion>", self.update_position_on_screen)
 
@@ -104,61 +104,73 @@ class ScrollableScreen(tkinter.Frame):
 
     def create_context_menu(self):
         if self.canvas.simulation_core.is_running == False:
-        
+
             self.contextMenu = tkinter.Menu(self, tearoff=0)
-            self.contextMenu.config(bg="#99ccff", fg="black", activebackground='#3399ff', activeforeground="whitesmoke", activeborderwidth=1, font="Monaco 11")
+            self.contextMenu.config(bg="#99ccff", fg="black", activebackground='#3399ff',
+                                    activeforeground="whitesmoke", activeborderwidth=1, font="Monaco 11")
 
             cloudMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-            cloudMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            cloudMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','server'))
-            cloudMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','client'))
-            cloudMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','router'))
+            cloudMenu.config(bg="white", fg="black", activebackground="#3399ff",
+                             activeforeground="whitesmoke", font="Monaco 11")
+            cloudMenu.add_command(label="New Server", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'cloud', 'server'))
+            cloudMenu.add_command(label="New Client", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'cloud', 'client'))
+            cloudMenu.add_command(label="New Router", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'cloud', 'router'))
             # cloudMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','access_point'))
-            cloudMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'cloud','wireless_computer'))
-
+            cloudMenu.add_command(label="New Wireless Computer", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'cloud', 'wireless_computer'))
 
             fogMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-            fogMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            fogMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','server'))
-            fogMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','client'))
-            fogMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','router'))
+            fogMenu.config(bg="white", fg="black", activebackground="#3399ff",
+                           activeforeground="whitesmoke", font="Monaco 11")
+            fogMenu.add_command(label="New Server", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'fog', 'server'))
+            fogMenu.add_command(label="New Client", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'fog', 'client'))
+            fogMenu.add_command(label="New Router", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'fog', 'router'))
             # fogMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','access_point'))
-            fogMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'fog','wireless_computer'))
-
+            fogMenu.add_command(label="New Wireless Computer", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'fog', 'wireless_computer'))
 
             iotMenu = tkinter.Menu(self.contextMenu, tearoff=0)
-            iotMenu.config(bg="white", fg="black", activebackground="#3399ff", activeforeground="whitesmoke", font="Monaco 11")
-            iotMenu.add_command(label="New Server", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','server'))
-            iotMenu.add_command(label="New Client", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','client'))
-            iotMenu.add_command(label="New Router", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','router'))
+            iotMenu.config(bg="white", fg="black", activebackground="#3399ff",
+                           activeforeground="whitesmoke", font="Monaco 11")
+            iotMenu.add_command(label="New Server", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'iot', 'server'))
+            iotMenu.add_command(label="New Client", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'iot', 'client'))
+            iotMenu.add_command(label="New Router", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'iot', 'router'))
             # iotMenu.add_command(label="New Access Point", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','access_point'))
-            iotMenu.add_command(label="New Wireless Computer", command=lambda:add_new_node_modal_screen(self.canvas.simulation_core,'iot','wireless_computer'))
+            iotMenu.add_command(label="New Wireless Computer", command=lambda: add_new_node_modal_screen(
+                self.canvas.simulation_core, 'iot', 'wireless_computer'))
 
-
-
-            self.contextMenu.add_cascade(label="Add Cloud node", menu=cloudMenu)
+            self.contextMenu.add_cascade(
+                label="Add Cloud node", menu=cloudMenu)
             self.contextMenu.add_cascade(label="Add Fog node", menu=fogMenu)
             self.contextMenu.add_cascade(label="Add IoT node", menu=iotMenu)
-            
 
             #  self.contextMenu.add_command(label="Add Cloud node", activebackground='#3399ff', activeforeground="white", command=self.add_cloud_menu)
             # self.contextMenu.add_command(label="Add Fog node",  command=self.add_fog_menu)
             # self.contextMenu.add_command(label="Add IoT node", activebackground='#3399ff', activeforeground="white", command=self.add_iot_menu)
             self.contextMenu.add_separator()
-            self.contextMenu.add_command(label="Close", compound = tkinter.CENTER, activebackground='#ff4d4d', activeforeground="white", font=("Monaco", 11, "bold"), command=self.closeContextMenu)
+            self.contextMenu.add_command(label="Close", compound=tkinter.CENTER, activebackground='#ff4d4d',
+                                         activeforeground="white", font=("Monaco", 11, "bold"), command=self.closeContextMenu)
             self.contextMenu.entryconfig(4, foreground='#b30000')
 
             # Configure context menu on rigth click - Rafael Sampaio
             self.canvas.bind("<Button-3>", self.openContextMenu)
-        
+
     # Context menu functions - Rafael Sampaio
     def openContextMenu(self, event):
         if self.canvas.simulation_core.is_running == False:
             self.contextMenu.post(event.x_root, event.y_root)
-    
+
     def closeContextMenu(self, event):
         pass
-
 
     # def add_new_node_modal_screen(self, network_layer, node_type):
     #     window = tkinter.Toplevel()
@@ -202,7 +214,7 @@ class ScrollableScreen(tkinter.Frame):
     #     input_coverage_area = tkinter.Entry(window, state='disabled')
     #     input_coverage_area.place(width="124", relx="0.35",rely="0.30")
 
-    #     # controller for radio buttons that enable and disable the coverage are input - Rafael Sampaio 
+    #     # controller for radio buttons that enable and disable the coverage are input - Rafael Sampaio
     #     radio_button_controller = tkinter.IntVar()
 
     #     # function to enable coverage area input - Rafael Sampaio
@@ -214,7 +226,7 @@ class ScrollableScreen(tkinter.Frame):
     #         input_coverage_area.configure(state="disabled")
     #         input_coverage_area.update()
 
-    #     # radio buttons that enable and disable the coverage area input - Rafael Sampaio 
+    #     # radio buttons that enable and disable the coverage area input - Rafael Sampaio
     #     is_wireless_msg = tkinter.Label(window,text="Is wireless?")
     #     is_wireless_msg.place(relx="0.1",rely="0.24")
     #     yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="0", command=enableCoverage)
@@ -222,7 +234,7 @@ class ScrollableScreen(tkinter.Frame):
     #     no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="1", command=disableCoverage)
     #     no_button.place(relx="0.45",rely="0.24")
 
-    #     # geting all apps in 'plications' folder files - Rafael Sampaio 
+    #     # geting all apps in 'plications' folder files - Rafael Sampaio
     #     all_apps_list = get_all_app_classes_name()
 
     #     # combox for apps list - Rafael Sampaio
@@ -236,7 +248,7 @@ class ScrollableScreen(tkinter.Frame):
     #     img = img.resize((32, 32))
     #     photo = ImageTk.PhotoImage(img)
     #     icon_label = tkinter.Label(window, image=photo)
-    #     icon_label.image = photo 
+    #     icon_label.image = photo
     #     icon_label.place(relx="0.5",rely="0.42")
 
     #     # function to allow the user choose another icon - Rafael Sampaio
@@ -248,7 +260,7 @@ class ScrollableScreen(tkinter.Frame):
     #         img = img.resize((32, 32))
     #         photo = ImageTk.PhotoImage(img)
     #         icon_label.configure(image=photo)
-    #         icon_label.image = photo 
+    #         icon_label.image = photo
     #         icon_label.update()
 
     #     # button for choose another icon - Rafael Sampaio
@@ -267,7 +279,6 @@ class ScrollableScreen(tkinter.Frame):
     #         input_real_ip.insert(-1, '127.0.0.1')
     #         input_real_ip.place(relx="0.25",rely="0.54")
 
-
     #     # atributtes only for routers and servers - Rafael Sampaio
     #     if (node_type == 'router' or node_type == 'server'):
     #         # New node port - Rafael Sampaio
@@ -279,7 +290,7 @@ class ScrollableScreen(tkinter.Frame):
 
     #     # atributtes only for routers - Rafael Sampaio
     #     if (node_type == 'router'):
-            
+
     #         def openAPWindow():
     #             ap_window = tkinter.Toplevel()
     #             tksupport.install(ap_window)
@@ -290,7 +301,7 @@ class ScrollableScreen(tkinter.Frame):
     #             # access point hearder message - Rafael Sampaio
     #             create_msg = tkinter.Label(ap_window,text="Access Point Info")
     #             create_msg.place(relx="0.1",rely="0.05")
-                
+
     #             # input for router access point addr- Rafael Sampaio
     #             ap_real_ip_label = tkinter.Label(ap_window,text="Real IP:")
     #             ap_real_ip_label.place(relx="0.1",rely="0.20")
@@ -326,15 +337,13 @@ class ScrollableScreen(tkinter.Frame):
     #         # button to open a modal to create access point - Rafael Sampaio
     #         ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
     #         ap_button.place(relx="0.1",rely="0.66")
-        
+
     #     # button to save the new node - Rafael Sampaio
     #     save_node_button = ttk.Button(window, text = "Save", command = None)
     #     save_node_button.place(relx="0.4",rely="0.90")
 
-
-
     # AS LINHAS ABAIXO SERÃO UTEIS NO CÓDIGO DE ZOOM
-        
+
     #     #linux scroll
     #     self.canvas.bind("<Button-4>", self.zoomerP)
     #     self.canvas.bind("<Button-5>", self.zoomerM)
@@ -355,10 +364,8 @@ class ScrollableScreen(tkinter.Frame):
     #     elif (event.delta < 0):
     #         self.canvas.scale(ALL, event.x, event.y, 0.9, 0.9)
     #     self.canvas.configure(scrollregion = self.canvas.bbox("all"))
-    
 
-
-    def  update_position_on_screen(self,event):
+    def update_position_on_screen(self, event):
         # sertting the coordinates to canvas relative. by default it is window realative and don't change when window is scrolled - Rafael Sampaio
         x = self.canvas.canvasx(event.x)
         y = self.canvas.canvasy(event.y)
@@ -368,7 +375,7 @@ class ScrollableScreen(tkinter.Frame):
         self.menubar.entryconfigure(3, label=p)
 
     def getCanvas(self):
-     	return self.canvas
+        return self.canvas
 
     def scroll_start(self, event):
         self.canvas.config(cursor='fleur')
@@ -381,31 +388,29 @@ class ScrollableScreen(tkinter.Frame):
     def create_top_menu(self, window):
         # 'window' param is the 'root' param in ScrollableScreen __init__ method - Rafael Sampaio
         self.menubar = tkinter.Menu(window)
-        
+
         mainmenu = tkinter.Menu(self.menubar, tearoff=0)
         mainmenu.add_command(label="Opção 1", command=None)
-        mainmenu.add_separator()  
+        mainmenu.add_separator()
         mainmenu.add_command(label="Exit", command=self.on_closing)
 
         self.menubar.add_cascade(label="Main", menu=mainmenu)
-        
 
         self.playmenu = tkinter.Menu(self.menubar, tearoff=0)
         play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
-        play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
+        play_icon = play_icon.resize((17, 17), Image.ANTIALIAS)
         play_icon = ImageTk.PhotoImage(play_icon)
-        self.menubar.add_command(image=play_icon, compound="center", command=self.play_or_stop_simulation)
+        self.menubar.add_command(
+            image=play_icon, compound="center", command=self.play_or_stop_simulation)
         self.menubar.iconPhotoImage = play_icon
 
-
-        
-        
         self.menubar.add_command(label="Position: 0", command=None)
         self.menubar.add_command(label=" Events:", command=None)
 
         self.start_time = '--:--:--'
 
-        self.menubar.add_command(label="Start Time: "+self.start_time, font=("Verdana", 10, "italic"), command=None)
+        self.menubar.add_command(
+            label="Start Time: "+self.start_time, font=("Verdana", 10, "italic"), command=None)
 
         self.menubar.entryconfig(3, foreground='blue')
         self.menubar.entryconfig(4, foreground='blue')
@@ -422,7 +427,7 @@ class ScrollableScreen(tkinter.Frame):
             log.msg("Info : - | Stoping simulation...")
             self.canvas.simulation_core.is_running = False
             play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
-            play_icon = play_icon.resize((17,17), Image.ANTIALIAS)
+            play_icon = play_icon.resize((17, 17), Image.ANTIALIAS)
             play_icon = ImageTk.PhotoImage(play_icon)
             self.menubar.entryconfig(2, image=play_icon)
             self.menubar.iconPhotoImage = play_icon
@@ -430,25 +435,23 @@ class ScrollableScreen(tkinter.Frame):
         elif is_running == False:
             if self.start_time == '--:--:--':
                 self.start_time = str(datetime.now().strftime('%H:%M:%S'))
-                self.menubar.entryconfig(5, label="Start Time: "+self.start_time)
+                self.menubar.entryconfig(
+                    5, label="Start Time: "+self.start_time)
 
             log.msg("Info : - | Starting simulation...")
             self.canvas.simulation_core.is_running = True
 
             stop_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
-            stop_icon = stop_icon.resize((17,17), Image.ANTIALIAS)
+            stop_icon = stop_icon.resize((17, 17), Image.ANTIALIAS)
             stop_icon = ImageTk.PhotoImage(stop_icon)
             self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon
-            
 
             for device in self.canvas.simulation_core.allNodes:
                 reactor.callLater(0.3, device.run)
 
-            
-
-
     # This method is called when close window button is press. - Rafael Sampaio
+
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
             log.msg("Info : - | Closing IoTFogSim Application...")
@@ -457,7 +460,7 @@ class ScrollableScreen(tkinter.Frame):
         else:
             self.canvas.simulation_core.is_running = True
             stop_icon = PIL.Image.open('graphics/icons/iotfogsim_stop.png')
-            stop_icon = stop_icon.resize((17,17), Image.ANTIALIAS)
+            stop_icon = stop_icon.resize((17, 17), Image.ANTIALIAS)
             stop_icon = ImageTk.PhotoImage(stop_icon)
             self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon

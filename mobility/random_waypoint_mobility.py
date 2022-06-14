@@ -5,6 +5,30 @@ from core.functions import sleep
 from mobility.mobility_models import MobilityModel
 
 
+"""
+Model introduction
+In mobility management, the random waypoint model is a random model that simulates the movement 
+of mobile users and how their position, speed, and acceleration change over time. When evaluating 
+new network protocols, mobility models are used for simulation purposes. Random Waypoint Model(RWP) 
+was originally proposed by Johnson and Maltz. Due to its simplicity and wide availability, it is 
+one of the most popular mobile models for evaluating mobile ad hoc network (MANET) routing 
+protocols. In the random-based mobility simulation model, mobile nodes move randomly and freely 
+without restriction. More specifically, the destination, speed, and direction are randomly selected 
+and independent of other nodes. This model has been used in many simulation studies. There are two 
+variants of RWP: random walk model (RW) and random direction model (RD). The following describes 
+RWP and its two variants.
+
+1.1 Random Waypoint Model
+In RWP, in the initial state, the nodes are uniformly distributed throughout the simulation area. 
+The nodes first randomly select a node from the two-dimensional simulation area as the destination,
+and then select [Vmin, Vmax] Randomly select a speed (subject to uniform distribution), and the 
+node will move to the destination at this speed. After reaching the destination, the node is at 
+[0, Pmax] Randomly select a period of stay time T, and then select the next destination.  
+
+found at: https://www.big-meter.com/opensource/en/5ff4abd139fb6523f2624e91.html
+"""
+
+
 class RandomWaypointMobility(MobilityModel):
     """Move randomically a visual component icon on canvas using the random waypoint mobility model.
                 visual_component: A component that contains icon and node info

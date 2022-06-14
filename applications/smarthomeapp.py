@@ -3,7 +3,7 @@ from applications.mobilityapp import MobileProducerApp
 from twisted.internet import reactor
 from twisted.internet import reactor
 from mobility.random_waypoint_mobility import RandomWaypointMobility
-from mobility.random_mobility import RandomMobility
+from mobility.random_walk_mobility import RandomWalkMobility
 
 
 class SmartHomeAdapter(object):
@@ -82,13 +82,16 @@ class PersonDataProducerApp(MobileProducerApp):
 
     # @override
     def run_mobility(self):
-        # RandomMobility(self.visual_component,
-        #                self.simulation_core)
-        RandomWaypointMobility(
+        RandomWalkMobility(
             self.visual_component,
             self.simulation_core,
-            0.008,
-            0.02,
-            1000,
-            10000
+            15
         )
+        # RandomWaypointMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     0.008,
+        #     0.02,
+        #     1000,
+        #     10000
+        # )
