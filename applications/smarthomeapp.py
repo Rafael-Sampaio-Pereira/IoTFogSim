@@ -2,7 +2,8 @@ from tkinter import RIGHT
 from applications.mobilityapp import MobileProducerApp
 from twisted.internet import reactor
 from twisted.internet import reactor
-from mobility.mobility_models import RandomWaypointMobility, RandomMobility
+from mobility.random_waypoint_mobility import RandomWaypointMobility
+from mobility.random_mobility import RandomMobility
 
 
 class SmartHomeAdapter(object):
