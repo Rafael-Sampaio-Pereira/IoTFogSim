@@ -91,8 +91,9 @@ class RandomWalkMobility(MobilityModel):
                     # verify if object just got its destiny - Rafael Sampaio
                     if not(x == x2 and y == y2):
                         self.visual_component.move_on_screen(x, y)
-                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                            # if found a collision, then rolling back to old position - Rafael Sampaio
-                            self.visual_component.move_on_screen(
-                                old_x, old_y)
-                            wall_was_found = True
+                        if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
+                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
+                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                self.visual_component.move_on_screen(
+                                    old_x, old_y)
+                                wall_was_found = True

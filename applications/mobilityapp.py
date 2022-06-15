@@ -20,6 +20,7 @@ from twisted.internet.defer import inlineCallbacks
 from twisted.internet import reactor
 from twisted.internet.task import deferLater
 from core.functions import sleep
+from mobility.random_walk_mobility import RandomWalkMobility
 
 
 class MobileNodeApp(StandardApplicationComponent):
@@ -132,45 +133,12 @@ class MobileNodeApp(StandardApplicationComponent):
         time.sleep(
             float(self.visual_component.device.mobile_network_group.latency))
 
-    def run_random_mobility(self):
-        def move():
-            # moving the device icon in canvas in random way - Rafael Sampaio
-            direction = random.randint(1, 4)
-            reference = random.randint(1, 100)
-
-            if direction == 1:  # up
-                if not (self.visual_component.y - reference) < 1:
-                    self.visual_component.y = self.visual_component.y - reference
-            elif direction == 2:  # down
-                if not (self.visual_component.y + reference) > self.simulation_core.canvas.winfo_height():
-                    self.visual_component.y = self.visual_component.y + reference
-            elif direction == 3:  # left
-                if not (self.visual_component.x - reference) < 1:
-                    self.visual_component.x = self.visual_component.x - reference
-            elif direction == 4:  # right
-                if not (self.visual_component.x + reference) > self.simulation_core.canvas.winfo_width():
-                    self.visual_component.x = self.visual_component.x + reference
-
-            if self.visual_component.is_wireless:
-                self.simulation_core.canvas.moveto(self.visual_component.draggable_coverage_area_circle,
-                                                   self.visual_component.x, self.visual_component.y)
-
-                self.simulation_core.canvas.moveto(self.visual_component.draggable_signal_circle,
-                                                   self.visual_component.x, self.visual_component.y)
-
-            self.simulation_core.canvas.moveto(self.visual_component.draggable_name,
-                                               self.visual_component.x, self.visual_component.y)
-
-            self.simulation_core.canvas.moveto(self.visual_component.draggable_alert,
-                                               self.visual_component.x, self.visual_component.y)
-
-            self.simulation_core.canvas.moveto(self.visual_component.draggable_img,
-                                               self.visual_component.x, self.visual_component.y)
-
-        LoopingCall(move).start(0.1)
-
     def run_mobility(self):
-        self.run_random_mobility()
+        RandomWalkMobility(
+            self.visual_component,
+            self.simulation_core,
+            15
+        )
 
     # when the wifi access point executes the passive scanning metho, it is sending an beacon frame(in broadcast mode) for every device around it. - Rafael Sampaio
     @inlineCallbacks
