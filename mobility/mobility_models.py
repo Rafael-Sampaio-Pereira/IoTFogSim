@@ -22,7 +22,7 @@ class MobilityModel(object):
 
     @inlineCallbacks
     def generate_area_border_points(self):
-        """Distributes points using of area border.
+        """Distributes points of area border.
             n_points: num of points to be distributed into a given area
             area_max_width: max width of desired area
             area_max_height: max height of desired area

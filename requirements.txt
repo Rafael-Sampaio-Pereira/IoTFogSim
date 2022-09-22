@@ -23,7 +23,9 @@ kiwisolver==1.3.1
 lazy-object-proxy==1.4.3
 matplotlib==3.3.4
 mccabe==0.6.1
+mobility-graph==0.0.5
 netifaces==0.11.0
+networkx==2.8.6
 numpy==1.19.5
 packaging==21.3
 paramiko==2.9.1
