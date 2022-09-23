@@ -66,13 +66,14 @@ class GraphRandomWaypointMobility(MobilityModel):
         
         # Getting all coords in shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
         if next_random_point:
-            print(trajectory_points)
+            first_trajectory_poitnt = None
             for idx, elem in enumerate(trajectory_points):
+                if not first_trajectory_poitnt:
+                    first_trajectory_poitnt = elem
+                
                 thiselem = elem
-                if idx < len(trajectory_points) - 1:
-                    nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
-                    print(thiselem, '-->',nextelem)
-                    
+                nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
+                if first_trajectory_poitnt != nextelem:
                     all_trajectory_coordinates.extend(
                         list(
                             bresenham(
@@ -83,7 +84,7 @@ class GraphRandomWaypointMobility(MobilityModel):
                             )
                         )
                     )
-                    
+          
             self.simulation_core.updateEventsCounter(
                 f"Mobile Node {self.visual_component.deviceName} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
@@ -108,6 +109,9 @@ class GraphRandomWaypointMobility(MobilityModel):
                                     old_x, old_y)
                                 wall_was_found = True
                                 break
+                    else:
+                        # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again - Rafael Sampaio
+                        self.visual_component.move_on_screen(x, y)
                     yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
@@ -122,7 +126,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         log.msg("Info : - | Generating graph mobility points...")
         # waiting for mobility model object get the simulation core - Rafael Sampaio
         yield sleep(0.5)
-        point_size = 40
+        point_size = 0
         self.add_graph_node("IN_1", x=124, y=180)
         self.add_graph_node("IN_2", x=765, y=824)
         
@@ -208,19 +212,10 @@ class GraphRandomWaypointMobility(MobilityModel):
         second_node = self.graph.nodes[second_node]
         dist = math.sqrt((second_node['x'] - fisrt_node['x'])**2 + (second_node['y'] - fisrt_node['y'])**2)
         self.graph.add_edge(fisrt_node_name, second_node_name, weight=dist)
-        self.simulation_core.canvas.create_line(int(fisrt_node['x']), int(fisrt_node['y']), int(second_node['x']), int(second_node['y']), arrow="both", width=3, fill='red')
+        # uncomment the line below to plot edge arrows on the canvas - rafael sampaio
+        #self.simulation_core.canvas.create_line(int(fisrt_node['x']), int(fisrt_node['y']), int(second_node['x']), int(second_node['y']), arrow="both", width=3, fill='red')
     
     def get_graph_node_by_coords(self, x, y):
         for node in self.graph.nodes(data=True):
             if node[1]['x'] == x and node[1]['y'] == y:
                 return node
-
-    
-
-
-
-    # result = nx.shortest_path(G, "A", "D", weight="weight")
-    # print(result)
-    # # print(G.nodes['B']['x'])
-
-    # _node = get_graph_node_by_coords(G, 1,5)
