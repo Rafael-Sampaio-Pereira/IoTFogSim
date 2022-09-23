@@ -40,7 +40,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.max_speed = max_speed
         self.min_pause = min_pause
         self.max_pause = max_pause
-        self.start()
+        
 
     @inlineCallbacks
     def start(self):
@@ -51,21 +51,46 @@ class GraphRandomWaypointMobility(MobilityModel):
     @inlineCallbacks
     def move(self) -> None:
 
-        all_coordinates_between_two_points = []
+        all_trajectory_coordinates = []
         # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
         next_random_point = random.choice(self.all_mobility_points)
-        # Getting all coords between current node(visual_component) position and the selected next point - Rafael Sampaio
+        
+        # Getting destiny graph node(i.e. vertice) - Rafael Sampaio
+        destiny_point = self.get_graph_node_by_coords(next_random_point['x'], next_random_point['y'])
+        
+        # Getting current position - Rafael Sampaio
+        current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
+        
+        # Getting shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
+        trajectory_points = nx.shortest_path(self.graph, current_point[0], destiny_point[0], weight="weight")
+        
+        # Getting all coords in shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
         if next_random_point:
-            all_coordinates_between_two_points = list(
-                bresenham(self.visual_component.x, self.visual_component.y, next_random_point['x'], next_random_point['y']))
-
+            print(trajectory_points)
+            for idx, elem in enumerate(trajectory_points):
+                thiselem = elem
+                if idx < len(trajectory_points) - 1:
+                    nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
+                    print(thiselem, '-->',nextelem)
+                    
+                    all_trajectory_coordinates.extend(
+                        list(
+                            bresenham(
+                                self.graph.nodes[thiselem]['x'],
+                                self.graph.nodes[thiselem]['y'],
+                                self.graph.nodes[nextelem]['x'],
+                                self.graph.nodes[nextelem]['y'],
+                            )
+                        )
+                    )
+                    
             self.simulation_core.updateEventsCounter(
                 f"Mobile Node {self.visual_component.deviceName} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
             step_speed = random.uniform(self.min_speed, self.max_speed)
             wall_was_found = False
             tolerance = None
-            for x, y in all_coordinates_between_two_points:
+            for x, y in all_trajectory_coordinates:
                 old_x = self.visual_component.x
                 old_y = self.visual_component.y
                 # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
@@ -76,12 +101,13 @@ class GraphRandomWaypointMobility(MobilityModel):
                         tolerance = 10
                         # Moving icon on screen at - Rafael Sampaio
                         self.visual_component.move_on_screen(x, y)
-                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                            # if found a collision, then rolling back to old position - Rafael Sampaio
-                            self.visual_component.move_on_screen(
-                                old_x, old_y)
-                            wall_was_found = True
-                            break
+                        if self.simulation_core.scene_adapter:
+                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
+                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                self.visual_component.move_on_screen(
+                                    old_x, old_y)
+                                wall_was_found = True
+                                break
                     yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
@@ -121,6 +147,10 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.add_graph_node("POINT_9", x=1024, y=180)
         self.add_graph_node("POINT_10", x=1024, y=696)
         
+        # Put icon in the fisrt node of the graph - Rafael Sampaio
+        self.visual_component.move_on_screen(
+                                    124, 180)
+        
         # Drawing points in canvas - Rafael Sampaio
         self.draw_points(point_size)
     
@@ -156,24 +186,6 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.add_graph_edge_with_dinamic_weight('POINT_8', 'DOOR_8')
         self.add_graph_edge_with_dinamic_weight('POINT_9', 'DOOR_7')
         self.add_graph_edge_with_dinamic_weight('POINT_10', 'DOOR_8')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
-        # self.add_graph_edge_with_dinamic_weight('C', 'D')
 
         
     def add_graph_node(self, name, x, y):
@@ -185,9 +197,8 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.generate_graph_points()
         yield sleep(1)
         self.generate_graph_edges()
-        
-        
-        
+        yield sleep(1)
+        self.start()
         
     def add_graph_edge_with_dinamic_weight(self, fisrt_node: str, second_node: str):
         # the edge weight will be added calculating the distance between the nodes -Rafael Sampaio
