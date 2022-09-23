@@ -34,13 +34,14 @@ class SimulationCore(object):
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class - Rafael Sampaio
         try:
-            paths = scene_adapter_class.split('.')
-            module_path = paths[0]+"."+paths[1]
-            class_name = paths[2]
-            module = import_module(module_path)
-            _class = getattr(module, class_name)
-            class_instance = _class(self)
-            self.scene_adapter = class_instance
+            if scene_adapter_class:
+                paths = scene_adapter_class.split('.')
+                module_path = paths[0]+"."+paths[1]
+                class_name = paths[2]
+                module = import_module(module_path)
+                _class = getattr(module, class_name)
+                class_instance = _class(self)
+                self.scene_adapter = class_instance
 
         except Exception as e:
             log.msg(e)

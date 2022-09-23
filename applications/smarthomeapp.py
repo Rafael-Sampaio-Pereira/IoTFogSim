@@ -90,16 +90,7 @@ class PersonDataProducerApp(MobileProducerApp):
         #     15
         # )
 
-        # RandomWaypointMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     0.008,
-        #     0.02,
-        #     1000,
-        #     10000
-        # )
-        
-        GraphRandomWaypointMobility(
+        RandomWaypointMobility(
             self.visual_component,
             self.simulation_core,
             0.008,
@@ -107,7 +98,7 @@ class PersonDataProducerApp(MobileProducerApp):
             1000,
             10000
         )
-
+        
         # RandomDirectionMobility(
         #     self.visual_component,
         #     self.simulation_core,
@@ -116,3 +107,16 @@ class PersonDataProducerApp(MobileProducerApp):
         #     1000,
         #     10000
         # )
+
+
+class PersonGraphDataProducerApp(PersonDataProducerApp):
+    # @override
+    def run_mobility(self):
+        GraphRandomWaypointMobility(
+            self.visual_component,
+            self.simulation_core,
+            0.008,
+            0.02,
+            1000,
+            10000
+        )

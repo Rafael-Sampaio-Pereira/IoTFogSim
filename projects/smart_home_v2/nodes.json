@@ -1,0 +1,82 @@
+{
+  "servers": [
+    {
+      "name": "Fog Broker Node",
+      "real_ip": "127.0.0.1",
+      "icon": "broker_icon",
+      "type": "server",
+      "port": 5100,
+      "is_wireless": false,
+      "coverage_area_radius": 0,
+      "application": "applications.mqttapp.BrokerApp",
+      "x": 170,
+      "y": 850
+    }
+  ],
+  "clients": [
+    {
+      "name": "SCADA System",
+      "real_ip": "127.0.0.1",
+      "icon": "notebook_icon",
+      "type": "client",
+      "is_wireless": false,
+      "coverage_area_radius": 0,
+      "application": "applications.cloudapp.CloudStorageApp",
+      "x": 688,
+      "y": 153
+    }
+  ],
+  "wireless_computers": [],
+  "routers": [
+    {
+      "name": "Router 001",
+      "real_ip": "127.0.0.1",
+      "icon": "router_icon",
+      "type": "router",
+      "port": 8081,
+      "coverage_area_radius": 0,
+      "accesspoint_addr": "127.0.0.1",
+      "accesspoint_port": 8082,
+      "application": "applications.routerapp.RouterApp",
+      "is_wireless": false,
+      "x": 340,
+      "y": 420,
+      "access_points": []
+    }
+  ],
+  "wireless_sensor_networks": [],
+  "mobile_networks": [
+    {
+      "name": "vehicular_data_collection",
+      "network_layer_protocol": "TCP",
+      "application_layer_protocol": "Ad Hoc",
+      "latency": "0.02",
+      "wireless_standard": "IEEE_802.11g",
+      "description": "Simple mobile network for smart home data collection.",
+      "base_station_nodes": [
+        {
+          "name": "access_point",
+          "icon": "ap_icon",
+          "coverage_area_radius": 500,
+          "is_wireless": true,
+          "application": "applications.mobilityapp.BaseStationApp",
+          "mqtt_destiny_topic": "veichular_network",
+          "x": 340,
+          "y": 320
+        }
+      ],
+      "mobile_repeater_nodes": [],
+      "mobile_producer_nodes": [
+        {
+          "name": "John Due",
+          "icon": "human_icon",
+          "coverage_area_radius": 100,
+          "application": "applications.smarthomeapp.PersonGraphDataProducerApp",
+          "is_wireless": true,
+          "x": 840,
+          "y": 540
+        }
+      ]
+    }
+  ]
+}
