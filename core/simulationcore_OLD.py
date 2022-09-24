@@ -12,50 +12,16 @@ from importlib import import_module
 class SimulationCore(object):
 
     def __init__(self):
-        self.all_links = set()
-        self.all_machines = set()
-        self.all_apps = set()
-        self.all_ipv6 = set()
+        # self.allWirelessConnections = defaultdict(list)
+        self.allConnections = set()
+        self.allNodes = []
         self.canvas = None
         self.simulation_screen = None
         self.eventsCounter = 0
+        self.allProtocols = set()
         self.project_name = None
         self.is_running = False
         self.scene_adapter = None
-        
-        
-    def get_link_by_id(self, id):
-        try:
-            filtered_list = self.all_links[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no link whith the id %i" % (id))
-
-    def append_link(self, link):
-        self.all_links[link.id].append(link)
-        
-    def get_machine_by_id(self, id):
-        try:
-            filtered_list = self.all_machines[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no machine whith the id %i" % (id))
-
-    def append_machine(self, machine):
-        self.all_machines[machine.id].append(machine)
-        
-    def get_app_by_id(self, id):
-        try:
-            filtered_list = self.all_apps[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no app whith the id %i" % (id))
-
-    def append_app(self, app):
-        self.all_apps[app.id].append(app)
-
-
-
 
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class - Rafael Sampaio
@@ -72,12 +38,37 @@ class SimulationCore(object):
         except Exception as e:
             log.msg(e)
 
+    def get_any_protocol_by_addr_and_port(self, addr, port):
+        try:
+            for proto in self.allProtocols:
+                if proto.transport.getHost().host == addr and proto.transport.getHost().port == port:
+                    return proto
+        except:
+            pass
+
     def updateEventsCounter(self, event_description):
         self.eventsCounter = self.eventsCounter + 1
         log.msg("Event: %i | " % (self.eventsCounter)+event_description)
         # Updates events counter value on screen - Rafael Sampaio
         self.simulation_screen.menubar.entryconfigure(
             4, label="Events: "+str(self.eventsCounter))
+
+    def getConnectionById(self, id):
+        try:
+            filtered_list = self.allConnections[id]
+            return filtered_list[0]
+        except Exception as e:
+            log.msg("There is no connection whith the id %i" % (id))
+
+    def getWirelessConnectionById(self, id):
+        try:
+            filtered_list = self.allWirelessConnections[id]
+            return filtered_list[0]
+        except Exception as e:
+            log.msg("There is no wireless connection whith the id %i" % (id))
+
+    def appendConnections(self, connection):
+        self.allConnections[connection.id].append(connection)
 
     def create_simulation_canvas(self, resizeable):
 

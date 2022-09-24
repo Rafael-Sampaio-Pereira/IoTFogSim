@@ -9,7 +9,6 @@ from PIL import ImageTk, Image
 import random
 
 from core.configurations import config
-from core.configurations import  load_nodes
 
 from threading import Thread
 

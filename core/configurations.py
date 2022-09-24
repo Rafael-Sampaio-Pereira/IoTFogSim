@@ -2,19 +2,8 @@ import tkinter
 from tkinter import PhotoImage
 from twisted.internet import tksupport
 from twisted.python import log
-from core.standarddevice import StandardServerDevice
-from core.standarddevice import StandardClientDevice
-from core.standarddevice import AccessPoint
-from core.standarddevice import Router
-from core.standarddevice import WSNSensorNode
-from core.standarddevice import WSNRepeaterNode
-from core.standarddevice import WSNSinkNode
-from core.standarddevice import WirelessSensorNetwork
-from core.standarddevice import WirelessComputer
-from core.mobiledevice import MobileNetwork
-from core.mobiledevice import MobileNode
-from core.mobiledevice import BaseStationNode
 
+from core.pre_start import load_nodes
 from core.ScrollableScreen import ScrollableScreen
 from core.simulationcore import SimulationCore
 import json
@@ -92,7 +81,6 @@ def initialization_screen(simulation_core):
                 simulation_core.build_scene_adapter(
                     settings['scene_adapter'])
             load_nodes(selected_project_name, simulation_core)
-            #load_connections(selected_project_name, simulation_core)
 
             window.destroy()
             window.update()
@@ -169,139 +157,3 @@ def initialization_screen(simulation_core):
     btn_new = ttk.Button(window, text="Create new project and start it", command=lambda: creat_project(
         window, input_new_project_name.get(), simulation_core))
     btn_new.place(relx="0.2", rely="0.4")
-
-
-def load_nodes(project_name, simulation_core):
-
-    allWirelessConnections = []
-    allConnections = []
-
-    # Interval between nodes creation and nodes start(run)- Rafael Sampaio
-    interval = 0.5
-
-    with open('projects/'+project_name+'/nodes.json', 'r') as nodes_file:
-        data = json.loads(nodes_file.read())
-
-        if data:
-
-            ################## LOADING DEVICES - Rafael Sampaio ##################
-
-            for router in data['routers']:
-
-                rt = Router(simulation_core, router['port'], router['real_ip'], router['name'], router['icon'],
-                            router['is_wireless'], router['x'], router['y'], router['application'], router['coverage_area_radius'])
-                simulation_core.allNodes.append(rt)
-
-                for access_point in router['access_points']:
-
-                    ap = AccessPoint(simulation_core, rt, access_point['TBTT'], access_point['SSID'], access_point['WPA2_password'], access_point['icon'],
-                                     access_point['is_wireless'], access_point['x'], access_point['y'], access_point['application'], access_point['coverage_area_radius'])
-                    simulation_core.allNodes.append(ap)
-
-            for server in data['servers']:
-
-                sr = StandardServerDevice(simulation_core, server['port'], server['real_ip'], server['name'], server['icon'],
-                                          server['is_wireless'], server['x'], server['y'], server['application'], server['coverage_area_radius'])
-                simulation_core.allNodes.append(sr)
-
-                links_file = "./projects/"+simulation_core.project_name+"/links.json"
-                # verify if user has configured an link for current server - Rafael Sampaio
-                if 'link' in server.keys():
-                    # verify if the links.json file exists - Rafael Sampaio
-                    if os.path.isfile(links_file):
-                        with open(links_file, 'r') as file:
-                            links = json.loads(file.read())
-                            for link in links:
-                                if server['link'] == link['name']:
-                                    # configure network settings in localhost(loopback) - Rafael Sampaio
-                                    sr.confirure_network_link(link['name'],
-                                                              link['transmission_rate'],
-                                                              link['latency'],
-                                                              link['packet_loss'],
-                                                              "lo")
-
-                                    # getting default network interface(e.g. eth0, wlp0) - Rafael Sampaio
-                                    default_interface = get_default_interface()
-
-                                    # configure network settings in default network interface - Rafael Sampaio
-                                    sr.confirure_network_link(link['name'],
-                                                              link['transmission_rate'],
-                                                              link['latency'],
-                                                              link['packet_loss'],
-                                                              default_interface)
-
-                    else:
-                        log.msg("There is no links.json file in this project.")
-                else:
-                    log.msg(
-                        f"Info : - | The network link was not configured for the server on port {server['port']}")
-            client_cont = 0
-            for client in data['clients']:
-                client_cont += 1
-                cl = StandardClientDevice(simulation_core, client['real_ip'], client['name']+str(client_cont), client['icon'],
-                                          client['is_wireless'], client['x'], client['y'], client['application'], client['coverage_area_radius'])
-                simulation_core.allNodes.append(cl)
-
-            for computer in data['wireless_computers']:
-
-                comp = WirelessComputer(simulation_core, computer['name'], computer['icon'], computer['is_wireless'],
-                                        computer['x'], computer['y'], computer['application'], computer['coverage_area_radius'])
-                simulation_core.allNodes.append(comp)
-
-            for wsn in data['wireless_sensor_networks']:
-
-                sink_cont = 0
-                repeater_cont = 0
-                sensor_cont = 0
-                WSN_network_group = WirelessSensorNetwork(
-                    simulation_core, wsn['wireless_standard'], wsn['network_layer_protocol'], wsn['application_layer_protocol'], wsn['latency'])
-
-                for sink_node in wsn['sink_nodes']:
-                    sink_cont += 1
-                    sk_node = WSNSinkNode(simulation_core, sink_cont, sink_node['name'], sink_node['icon'], sink_node['is_wireless'],
-                                          sink_node['x'], sink_node['y'], sink_node['application'], sink_node['coverage_area_radius'], WSN_network_group)
-                    WSN_network_group.sink_list.add(sk_node)
-                    simulation_core.allNodes.append(sk_node)
-
-                for sensor_node in wsn['sensor_nodes']:
-                    sensor_cont += 1
-                    sr_node = WSNSensorNode(simulation_core, sensor_cont, sensor_node['name'], sensor_node['icon'], sensor_node['is_wireless'], sensor_node[
-                                            'x'], sensor_node['y'], sensor_node['application'], sensor_node['coverage_area_radius'], WSN_network_group)
-                    WSN_network_group.sensors_list.add(sr_node)
-                    simulation_core.allNodes.append(sr_node)
-
-                for repeater_node in wsn['repeater_nodes']:
-                    repeater_cont += 1
-                    rpt_node = WSNRepeaterNode(simulation_core, repeater_cont, repeater_node['name'], repeater_node['icon'], repeater_node['is_wireless'], repeater_node[
-                                               'x'], repeater_node['y'], repeater_node['application'], repeater_node['coverage_area_radius'], WSN_network_group)
-                    WSN_network_group.repeater_list.add(rpt_node)
-                    simulation_core.allNodes.append(rpt_node)
-
-            for mob_net in data['mobile_networks']:
-
-                base_station_cont = 0
-                mobile_repeater_cont = 0
-                mobile_producer_cont = 0
-                mobile_network_group = MobileNetwork(
-                    simulation_core, mob_net['wireless_standard'], mob_net['network_layer_protocol'], mob_net['application_layer_protocol'], mob_net['latency'])
-
-                for base_station_node in mob_net['base_station_nodes']:
-                    base_station_cont += 1
-                    bs_node = BaseStationNode(simulation_core, base_station_cont, base_station_node['name'], base_station_node['icon'], base_station_node['is_wireless'], base_station_node[
-                        'x'], base_station_node['y'], base_station_node['application'], base_station_node['coverage_area_radius'], mobile_network_group, base_station_node['mqtt_destiny_topic'])
-                    mobile_network_group.base_station_list.add(bs_node)
-                    simulation_core.allNodes.append(bs_node)
-
-                for mobile_producer_node in mob_net['mobile_producer_nodes']:
-                    mobile_producer_cont += 1
-                    mp_node = MobileNode(simulation_core, mobile_producer_cont, mobile_producer_node['name'], mobile_producer_node['icon'], mobile_producer_node[
-                        'is_wireless'], mobile_producer_node['x'], mobile_producer_node['y'], mobile_producer_node['application'], mobile_producer_node['coverage_area_radius'], mobile_network_group)
-                    mobile_network_group.mobile_producer_list.add(mp_node)
-                    simulation_core.allNodes.append(mp_node)
-
-                for mobile_repeater_node in mob_net['mobile_repeater_nodes']:
-                    mobile_repeater_cont += 1
-                    mrpt_node = MobileNode(simulation_core, mobile_repeater_cont, mobile_repeater_node['name'], mobile_repeater_node['icon'], mobile_repeater_node[
-                        'is_wireless'], mobile_repeater_node['x'], mobile_repeater_node['y'], mobile_repeater_node['application'], mobile_repeater_node['coverage_area_radius'], mobile_network_group)
-                    mobile_network_group.mobile_repeater_list.add(mrpt_node)
-                    simulation_core.allNodes.append(mrpt_node)
