@@ -15,10 +15,21 @@ class BaseApp(object):
         pass
 
     def start(self):
-        self.simulation_core.updateEventsCounter(f"Info : - | {self.name} - Initializing app.")
+        self.simulation_core.updateEventsCounter(f"Info : - | {self.name}-{self.protocol} - Initializing app")
+        self.main()
 
     def send_packet(self):
         pass
+
+class SimpleWebClientApp(BaseApp):
+
+    def __init__(self):
+        super(SimpleWebClientApp, self).__init__() 
+    
+    def main(self):
+        super().main()
+        self.machine.connect_to_peer('192.168.1.1')
+
 
 class ServerApp(BaseApp):
     def __init__(self):
@@ -27,6 +38,7 @@ class ServerApp(BaseApp):
 class RouterApp(BaseApp):
     def __init__(self):
         super(RouterApp, self).__init__()
+        self.protocol = 'UDP'
 
 class RouterWithAccessPointApp(RouterApp):
     def __init__(self):

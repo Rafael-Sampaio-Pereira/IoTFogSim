@@ -12,10 +12,10 @@ from importlib import import_module
 class SimulationCore(object):
 
     def __init__(self):
-        self.all_links = set()
-        self.all_machines = set()
-        self.all_apps = set()
-        self.all_ipv6 = set()
+        self.all_links = []
+        self.all_machines = []
+        self.all_apps = []
+        self.all_ip = []
         self.canvas = None
         self.simulation_screen = None
         self.eventsCounter = 0
@@ -23,39 +23,9 @@ class SimulationCore(object):
         self.is_running = False
         self.scene_adapter = None
         
-        
-    def get_link_by_id(self, id):
-        try:
-            filtered_list = self.all_links[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no link whith the id %i" % (id))
-
-    def append_link(self, link):
-        self.all_links[link.id].append(link)
-        
-    def get_machine_by_id(self, id):
-        try:
-            filtered_list = self.all_machines[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no machine whith the id %i" % (id))
-
-    def append_machine(self, machine):
-        self.all_machines[machine.id].append(machine)
-        
-    def get_app_by_id(self, id):
-        try:
-            filtered_list = self.all_apps[id]
-            return filtered_list[0]
-        except Exception as e:
-            log.msg("There is no app whith the id %i" % (id))
-
-    def append_app(self, app):
-        self.all_apps[app.id].append(app)
-
-
-
+    def get_machine_by_ip(self, ip):
+        # filter list by machine ip, if not found, return None
+        return next(filter(lambda machine: machine.ip == ip,  self.all_machines), None)
 
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class - Rafael Sampaio

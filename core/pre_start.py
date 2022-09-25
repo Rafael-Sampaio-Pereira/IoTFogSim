@@ -13,6 +13,7 @@ def load_nodes(project_name, simulation_core):
                 _machine = Machine(
                         simulation_core,
                         machine['name'],
+                        machine['ip'],
                         machine['MIPS'],
                         machine['icon'],
                         machine['is_wireless'],
@@ -22,7 +23,10 @@ def load_nodes(project_name, simulation_core):
                         machine['type'],
                         machine['coverage_area_radius']
                     )
-                simulation_core.all_machines.add(_machine)
+                simulation_core.all_machines.append(_machine)
+    
+    for machine in simulation_core.all_machines:
+        machine.turn_on()
                 
 
 
