@@ -28,7 +28,8 @@ def load_nodes(project_name, simulation_core):
                         simulation_core,
                         network['name'],
                         network['is_wireless'],
-                        network['ip']
+                        network['ip'],
+                        _machine
                     )
                     _machine.network_interfaces.append(_interface)
                 simulation_core.all_machines.append(_machine)

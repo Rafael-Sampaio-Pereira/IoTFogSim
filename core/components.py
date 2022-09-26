@@ -9,12 +9,13 @@ from twisted.python import log
 from twisted.internet.task import LoopingCall
 
 class NetworkInterface(object):
-    def __init__(self, simulation_core, name, is_wireless, ip):
+    def __init__(self, simulation_core, name, is_wireless, ip, machine):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().hex
         self.name = name
         self.is_wireless = is_wireless
         self.ip = ip
+        self.machine = machine
         
 class Machine(object):
     def __init__(
@@ -62,8 +63,8 @@ class Machine(object):
             # verify if there is already a connection between the peer and the source
             if not self.verify_if_connection_link_already_exists(peer):
                 _link = FogWirelessLink(self.simulation_core)
-                _link.machine_1 = self
-                _link.machine_2 = peer
+                _link.network_interface_1 = self.network_interfaces[0]
+                _link.network_interface_2 = peer.network_interfaces[0]
                 peer.peers.append(self)
                 self.peers.append(peer)
                 self.simulation_core.all_links.append(_link)
@@ -75,7 +76,7 @@ class Machine(object):
             
     def verify_if_connection_link_already_exists(self, machine):
         """Verify if connection link already exists, if exists returns it"""
-        return next(filter(lambda link: link.machine_1 == machine or link.machine_2 == machine,  self.links), None)
+        return next(filter(lambda link: link.network_interface_1.machine == machine or link.network_interface_2.machine == machine,  self.links), None)
         
 class Link(object):
     def __init__(self, simulation_core):
@@ -85,8 +86,8 @@ class Link(object):
         self.bandwidth = '256kbps'
         self.latency = '0.02s'
         self.packet_loss_percentage = 10
-        self.machine_1 = None
-        self.machine_2 = None
+        self.network_interface_1 = None
+        self.network_interface_2 = None
         self.packets_queue =  []
         self.connection_arrow = None
         LoopingCall(self.transmission_channel).start(0.1)
@@ -99,27 +100,27 @@ class Link(object):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
                 source = self.simulation_core.get_machine_by_ip(packet.source_addr)
-                if source == self.machine_1:
-                    packet.trace.append(self.machine_2)
-                    self.machine_2.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.machine_1.type}({self.machine_1.network_interfaces[0].ip}) to {self.machine_2.type}({self.machine_2.network_interfaces[0].ip})")
+                if self.network_interface_1 in source.network_interfaces:
+                    packet.trace.append(self.network_interface_2)
+                    self.network_interface_2.machine.app.in_buffer.append(packet)
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
                 else:
-                    packet.trace.append(self.machine_1)
-                    self.machine_1.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.machine_2.type}({self.machine_2.network_interfaces[0].ip}) to {self.machine_1.type}({self.machine_1.network_interfaces[0].ip})")
+                    packet.trace.append(self.network_interface_1)
+                    self.network_interface_1.machine.app.in_buffer.append(packet)
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_2.machine.type}({self.network_interface_2.ip}) to {self.network_interface_1.machine.type}({self.network_interface_1.ip})")
                 self.packets_queue.remove(packet)
     
     def draw_connection_arrow(self):
         self.connection_arrow = self.simulation_core.canvas.create_line(
-            self.machine_1.visual_component.x,
-            self.machine_1.visual_component.y,
-            self.machine_2.visual_component.x,
-            self.machine_2.visual_component.y,
+            self.network_interface_1.machine.visual_component.x,
+            self.network_interface_1.machine.visual_component.y,
+            self.network_interface_2.machine.visual_component.x,
+            self.network_interface_2.machine.visual_component.y,
             arrow="both",
             width=1,
             dash=(4,2)
         )
-        self.simulation_core.updateEventsCounter(f"{self.name} - Connecting {self.machine_1.type}({self.machine_1.network_interfaces[0].ip}) to {self.machine_2.type}({self.machine_2.network_interfaces[0].ip})")
+        self.simulation_core.updateEventsCounter(f"{self.name} - Connecting {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
     
 class FogWirelessLink(Link):
     def __init__(self, simulation_core):

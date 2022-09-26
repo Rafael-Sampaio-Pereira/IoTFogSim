@@ -120,6 +120,24 @@ class RouterApp(BaseApp):
         destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
         destiny_link.packets_queue.append(packet)
         
+    # def connect_to_another_network(self, network_gateway_address):
+    #     # verify if there is a machine in simulation_core with this address
+    #     neighbor_gateway = self.simulation_core.get_machine_by_ip(peer_address)
+    #     if peer:
+    #         # verify if there is already a connection between the peer and the source
+    #         if not self.verify_if_connection_link_already_exists(peer):
+    #             _link = FogWirelessLink(self.simulation_core)
+    #             _link.machine_1 = self
+    #             _link.machine_2 = peer
+    #             peer.peers.append(self)
+    #             self.peers.append(peer)
+    #             self.simulation_core.all_links.append(_link)
+    #             self.links.append(_link)
+    #             peer.links.append(_link)
+    #             _link.draw_connection_arrow()
+    #         else:
+    #             log.msg(f"Info : - | {self.name}-{self.type} - Already connected to {peer_address}")
+        
 class AccessPointApp(RouterApp):
     def __init__(self):
         super(AccessPointApp, self).__init__() 
