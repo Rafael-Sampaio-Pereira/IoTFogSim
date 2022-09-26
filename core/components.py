@@ -1,10 +1,12 @@
-from platform import machine
+import datetime
 import uuid
 from core.functions import import_and_instantiate_class_from_string
 from config.settings import ICONS_PATH
 from core.visualcomponent import VisualComponent
 from core.iconsRegister import getIconFileName
 import tkinter as tk
+from twisted.python import log
+from twisted.internet.task import LoopingCall
 
 class Machine(object):
     def __init__(
@@ -42,7 +44,7 @@ class Machine(object):
         self.app.machine = self
 
     def turn_on(self):
-        self.simulation_core.updateEventsCounter(f"Info : - | {self.name} - Initializing machine")
+        self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}")
         self.app.start()
     
     def connect_to_peer(self, peer_address):
@@ -58,7 +60,7 @@ class Machine(object):
                 self.links.append(_link)
                 _link.draw_connection_arrow()
             else:
-                self.simulation_core.updateEventsCounter(f"Info : - | {self.name} - Already connected to {peer_address}")
+                log.msg(f"Info : - | {self.name}-{self.type} - Already connected to {peer_address}")
             
     def verify_if_connection_link_already_exists(self, machine):
         return next(filter(lambda link: link.machine_1 == machine or link.machine_2 == machine,  self.links), None)
@@ -76,9 +78,25 @@ class Link(object):
         self.machine_2 = None
         self.packets_queue =  []
         self.connection_arrow = None
+        LoopingCall(self.handle_packets).start(0.1)
+        
+    def transmission_channel(self):
+        # HERE NEEDS TO IMPLEMENTATION OF THE LATENCY, PACKET LOSS
+        self.handle_packets()
 
-    def handle_packet(self):
-        pass
+    def handle_packets(self):
+        if len(self.packets_queue) > 0:
+            for packet in self.packets_queue.copy():
+                source = self.simulation_core.get_machine_by_ip(packet.source_addr)
+                if source == self.machine_1:
+                    packet.trace.append(self.machine_2)
+                    self.machine_2.app.in_buffer.append(packet)
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.machine_1.type}({self.machine_1.ip}) to {self.machine_2.type}({self.machine_2.ip})")
+                else:
+                    packet.trace.append(self.machine_1)
+                    self.machine_1.app.in_buffer.append(packet)
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.machine_2.type}({self.machine_2.ip}) to {self.machine_1.type}({self.machine_1.ip})")
+                self.packets_queue.remove(packet)
     
     def draw_connection_arrow(self):
         self.connection_arrow = self.simulation_core.canvas.create_line(
@@ -90,7 +108,7 @@ class Link(object):
             width=1,
             dash=(4,2)
         )
-        self.simulation_core.updateEventsCounter(f"Info : - | {self.name} - Connecting {self.machine_1.ip} to {self.machine_2.ip}")
+        self.simulation_core.updateEventsCounter(f"{self.name} - Connecting {self.machine_1.type}({self.machine_1.ip}) to {self.machine_2.type}({self.machine_2.ip})")
     
 class FogWirelessLink(Link):
     def __init__(self, simulation_core):
@@ -113,7 +131,7 @@ class Packet(object):
             MIPS
         ):
         self.simulation_core = simulation_core
-        self.id = uuid.uuid4().hex
+        self.id = uuid.uuid4().fields[-1]
         self.MIPS = MIPS
         self.source_addr = source_addr
         self.source_port = source_port
@@ -121,3 +139,4 @@ class Packet(object):
         self.destiny_port = destiny_port
         self.payload = payload
         self.trace = []
+        self.created_at = datetime.datetime.now().isoformat()
