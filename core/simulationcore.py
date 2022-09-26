@@ -14,6 +14,7 @@ class SimulationCore(object):
     def __init__(self):
         self.all_links = []
         self.all_machines = []
+        self.all_gateways = []
         self.all_apps = []
         self.all_ip = []
         self.canvas = None
