@@ -1,4 +1,4 @@
-from core.components import Machine
+from core.components import Machine, NetworkInterface
 import json
 import os
 
@@ -13,7 +13,6 @@ def load_nodes(project_name, simulation_core):
                 _machine = Machine(
                         simulation_core,
                         machine['name'],
-                        machine['ip'],
                         machine['MIPS'],
                         machine['icon'],
                         machine['is_wireless'],
@@ -23,6 +22,15 @@ def load_nodes(project_name, simulation_core):
                         machine['type'],
                         machine['coverage_area_radius']
                     )
+
+                for network in machine['network_interfaces']:
+                    _interface = NetworkInterface(
+                        simulation_core,
+                        network['name'],
+                        network['is_wireless'],
+                        network['ip']
+                    )
+                    _machine.network_interfaces.append(_interface)
                 simulation_core.all_machines.append(_machine)
     
     for machine in simulation_core.all_machines:

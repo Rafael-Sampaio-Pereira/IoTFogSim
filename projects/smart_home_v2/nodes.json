@@ -2,39 +2,86 @@
   "machines": [
     {
       "name": "Fog Broker Node",
-      "ip": "192.168.1.10",
       "MIPS": 1024,
       "icon": "broker_icon",
       "type": "server",
       "is_wireless": false,
       "coverage_area_radius": 0,
       "application": "apps.base_app.SimpleWebServerApp",
+      "network_interfaces": [
+        {
+          "name": "eth0",
+          "is_wireless": false,
+          "ip": "192.168.0.3"
+        }
+      ],
       "x": 170,
       "y": 850
     }, 
     {
       "name": "SCADA System",
-      "ip": "192.168.1.11",
       "MIPS": 1024,
       "icon": "notebook_icon",
       "type": "client",
       "is_wireless": false,
       "coverage_area_radius": 0,
       "application": "apps.base_app.SimpleWebClientApp",
+      "network_interfaces": [
+        {
+          "name": "eth0",
+          "is_wireless": false,
+          "ip": "192.168.0.2"
+        }
+      ],
       "x": 688,
       "y": 153
     },
     {
       "name": "Router 001",
-      "ip": "192.168.1.1",
+      "ip": "192.168.0.1",
       "MIPS": 1024,
       "icon": "router_icon",
       "type": "router",
       "is_wireless": false,
       "coverage_area_radius": 0,
       "application": "apps.base_app.RouterApp",
+      "network_interfaces": [
+        {
+          "name": "eth0",
+          "is_wireless": false,
+          "ip": "192.168.0.1"
+        },
+        {
+          "name": "eth1",
+          "is_wireless": false,
+          "ip": "10.10.0.1"
+        }
+      ],
       "x": 340,
       "y": 420
+    },
+    {
+      "name": "Router 001",
+      "MIPS": 1024,
+      "icon": "router_icon",
+      "type": "router",
+      "is_wireless": false,
+      "coverage_area_radius": 0,
+      "application": "apps.base_app.RouterApp",
+      "network_interfaces": [
+        {
+          "name": "eth0",
+          "is_wireless": false,
+          "ip": "192.168.1.1"
+        },
+        {
+          "name": "eth1",
+          "is_wireless": false,
+          "ip": "10.10.0.1"
+        }
+      ],
+      "x": 785,
+      "y": 440
     }
   ]
 }

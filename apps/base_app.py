@@ -12,7 +12,7 @@ class BaseApp(object):
         self.id = uuid.uuid4().hex
         self.name = 'my_app'
         self.port = 8081
-        self.protocol = 'TCP' # can be UDP or TCP
+        self.protocol = 'TCP' # can be UDP or TCP must implements enum
         self.machine = None
         self.in_buffer = []
 
@@ -28,7 +28,7 @@ class BaseApp(object):
     def send_packet(self, destiny_addr, destiny_port, payload, MIPS):
         _packet = Packet(
             self.simulation_core,
-            self.machine.ip,
+            self.machine.network_interfaces[0].ip,
             self.port,
             destiny_addr,
             destiny_port,
@@ -36,12 +36,12 @@ class BaseApp(object):
             MIPS
         )
         _packet.trace.append(self)
-        self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.ip}) creating packet {_packet.id}")
+        self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id}")
         if len(self.machine.links) > 0:
             self.machine.links[0].packets_queue.append(_packet)
-            self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.ip}) sending packet {_packet.id} to {destiny_addr}")
+            self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) sending packet {_packet.id} to {destiny_addr}")
         else:
-            log.msg(f"Info : - | {self.machine.type}({self.machine.ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
+            log.msg(f"Info : - | {self.machine.type}({self.machine.network_interfaces[0].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
 
 class SimpleWebClientApp(BaseApp):
 
@@ -52,9 +52,9 @@ class SimpleWebClientApp(BaseApp):
     
     def main(self):
         super().main()
-        self.machine.connect_to_peer('192.168.1.1')
+        self.machine.connect_to_peer('192.168.0.1')
         self.send_packet(
-            '192.168.1.10',
+            '192.168.0.3',
             80,
             'HTTP 1.0 POST request',
             DEFAULT_MIPS
@@ -90,7 +90,7 @@ class SimpleWebServerApp(BaseApp):
 
     def main(self):
         super().main()
-        self.machine.connect_to_peer('192.168.1.1')
+        self.machine.connect_to_peer('192.168.0.1')
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
         LoopingCall(self.main_loop).start(0.1)
 
@@ -98,8 +98,28 @@ class RouterApp(BaseApp):
     def __init__(self):
         super(RouterApp, self).__init__()
         self.protocol = 'TCP'
-        # NEEDS TO IMPLEMENTS ROTERING PROTOCOL
 
-class RouterWithAccessPointApp(RouterApp):
+    def main_loop(self):
+        
+        if len(self.in_buffer) > 0:
+            for packet in self.in_buffer.copy():
+                destiny = self.simulation_core.get_machine_by_ip(packet.destiny_addr)
+                
+                # verify if destiny is connected peers list, link in ip routering table
+                if destiny and destiny in self.machine.peers:
+                    self.direct_forward_packet(packet, destiny)
+                
+                #se não estiver, descarta o pacote
+                self.in_buffer.remove(packet)
+        
+    def main(self):
+        super().main()
+        LoopingCall(self.main_loop).start(0.1)
+        
+    def direct_forward_packet(self, packet, destiny):
+        destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
+        destiny_link.packets_queue.append(packet)
+        
+class AccessPointApp(RouterApp):
     def __init__(self):
-        super(RouterWithAccessPointApp, self).__init__() 
+        super(AccessPointApp, self).__init__() 

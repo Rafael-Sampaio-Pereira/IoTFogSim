@@ -22,10 +22,10 @@ class SimulationCore(object):
         self.project_name = None
         self.is_running = False
         self.scene_adapter = None
-        
+
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None
-        return next(filter(lambda machine: machine.ip == ip,  self.all_machines), None)
+        return next(filter(lambda machine: machine.network_interfaces[0].ip == ip,  self.all_machines), None)
 
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class - Rafael Sampaio
