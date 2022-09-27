@@ -1,92 +1,118 @@
-{
-  "machines": [
+{ 
+  "networks": [
     {
-      "name": "Fog Broker Node",
-      "MIPS": 1024,
-      "icon": "broker_icon",
-      "type": "server",
-      "is_wireless": false,
-      "coverage_area_radius": 0,
-      "application": "apps.base_app.SimpleWebServerApp",
-      "connected_gateway_addr": "192.168.0.1",
-      "network_interfaces": [
+      "machines": [
         {
-          "name": "eth0",
+          "name": "Router 001",
+          "ip": "192.168.0.1",
+          "MIPS": 1024,
+          "icon": "router_icon",
+          "type": "router",
           "is_wireless": false,
-          "ip": "192.168.0.3"
-        }
-      ],
-      "x": 170,
-      "y": 850
-    }, 
-    {
-      "name": "SCADA System",
-      "MIPS": 1024,
-      "icon": "notebook_icon",
-      "type": "client",
-      "is_wireless": false,
-      "coverage_area_radius": 0,
-      "application": "apps.base_app.SimpleWebClientApp",
-      "connected_gateway_addr": "192.168.0.1",
-      "network_interfaces": [
-        {
-          "name": "eth0",
-          "is_wireless": false,
-          "ip": "192.168.0.2"
-        }
-      ],
-      "x": 688,
-      "y": 153
-    },
-    {
-      "name": "Router 002",
-      "MIPS": 1024,
-      "icon": "router_icon",
-      "type": "router",
-      "is_wireless": false,
-      "coverage_area_radius": 0,
-      "application": "apps.base_app.RouterApp",
-      "connected_gateway_addr": null,
-      "network_interfaces": [
-        {
-          "name": "eth0",
-          "is_wireless": false,
-          "ip": "192.168.1.1"
+          "coverage_area_radius": 0,
+          "application": "apps.base_app.RouterApp",
+          "connected_gateway_addr": null,
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.1"
+            },
+            {
+              "name": "eth1",
+              "is_wireless": false,
+              "ip": "10.10.0.1"
+            }
+          ],
+          "x": 340,
+          "y": 420
         },
         {
-          "name": "eth1",
+          "name": "Fog Broker Node",
+          "MIPS": 1024,
+          "icon": "broker_icon",
+          "type": "server",
           "is_wireless": false,
-          "ip": "10.10.0.2"
-        }
-      ],
-      "x": 785,
-      "y": 440
-    },
-    {
-      "name": "Router 001",
-      "ip": "192.168.0.1",
-      "MIPS": 1024,
-      "icon": "router_icon",
-      "type": "router",
-      "is_wireless": false,
-      "coverage_area_radius": 0,
-      "application": "apps.base_app.RouterApp",
-      "connected_gateway_addr": null,
-      "network_interfaces": [
-        {
-          "name": "eth0",
-          "is_wireless": false,
-          "ip": "192.168.0.1"
+          "coverage_area_radius": 0,
+          "application": "apps.base_app.SimpleWebServerApp",
+          "connected_gateway_addr": "192.168.0.1",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.2"
+            }
+          ],
+          "x": 170,
+          "y": 850
         },
         {
-          "name": "eth1",
+          "name": "SCADA System",
+          "MIPS": 1024,
+          "icon": "notebook_icon",
+          "type": "client",
           "is_wireless": false,
-          "ip": "10.10.0.1"
+          "coverage_area_radius": 0,
+          "application": "apps.base_app.SimpleWebClientApp",
+          "connected_gateway_addr": "192.168.0.1",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.3"
+            }
+          ],
+          "x": 688,
+          "y": 153
         }
-      ],
-      "x": 340,
-      "y": 420
+      ]
+    },
+    {
+      "machines": [
+        {
+          "name": "Router 002",
+          "MIPS": 1024,
+          "icon": "router_icon",
+          "type": "router",
+          "is_wireless": false,
+          "coverage_area_radius": 0,
+          "application": "apps.base_app.RouterApp",
+          "connected_gateway_addr": null,
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.1.1"
+            },
+            {
+              "name": "eth1",
+              "is_wireless": false,
+              "ip": "10.10.0.2"
+            }
+          ],
+          "x": 785,
+          "y": 440
+        },
+        {
+          "name": "Fog Broker Node",
+          "MIPS": 1024,
+          "icon": "broker_icon",
+          "type": "server",
+          "is_wireless": false,
+          "coverage_area_radius": 0,
+          "application": "apps.base_app.SimpleWebServerApp",
+          "connected_gateway_addr": "192.168.1.1",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.1.2"
+            }
+          ],
+          "x": 1010,
+          "y": 454
+        }
+      ]
     }
-    
   ]
 }

@@ -9,34 +9,35 @@ def load_nodes(project_name, simulation_core):
 
         if data:
             ################## LOADING DEVICES - Rafael Sampaio ##################
-            for machine in data['machines']:
-                _machine = Machine(
-                        simulation_core,
-                        machine['name'],
-                        machine['MIPS'],
-                        machine['icon'],
-                        machine['is_wireless'],
-                        machine['x'],
-                        machine['y'],
-                        machine['application'],
-                        machine['type'],
-                        machine['coverage_area_radius'],
-                        machine['connected_gateway_addr']
-                    )
+            for network in data['networks']:
+                for machine in network['machines']:
+                    _machine = Machine(
+                            simulation_core,
+                            machine['name'],
+                            machine['MIPS'],
+                            machine['icon'],
+                            machine['is_wireless'],
+                            machine['x'],
+                            machine['y'],
+                            machine['application'],
+                            machine['type'],
+                            machine['coverage_area_radius'],
+                            machine['connected_gateway_addr']
+                        )
 
-                for network in machine['network_interfaces']:
-                    _interface = NetworkInterface(
-                        simulation_core,
-                        network['name'],
-                        network['is_wireless'],
-                        network['ip'],
-                        _machine
-                    )
-                    _machine.network_interfaces.append(_interface)
-                simulation_core.all_machines.append(_machine)
-                if machine['type'] == 'router' or machine['type'] == 'switch':
-                    simulation_core.all_gateways.append(_machine)
-    
+                    for intf in machine['network_interfaces']:
+                        _interface = NetworkInterface(
+                            simulation_core,
+                            intf['name'],
+                            intf['is_wireless'],
+                            intf['ip'],
+                            _machine
+                        )
+                        _machine.network_interfaces.append(_interface)
+                    simulation_core.all_machines.append(_machine)
+                    if machine['type'] == 'router' or machine['type'] == 'switch':
+                        simulation_core.all_gateways.append(_machine)
+        
 
 
 

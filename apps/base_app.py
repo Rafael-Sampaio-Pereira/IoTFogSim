@@ -54,7 +54,7 @@ class SimpleWebClientApp(BaseApp):
         super().main()
         self.machine.connect_to_peer(self.machine.connected_gateway_addr)
         self.send_packet(
-            '192.168.0.3',
+            '192.168.0.2',
             80,
             'HTTP 1.0 POST request',
             DEFAULT_MIPS
@@ -68,7 +68,7 @@ class SimpleWebClientApp(BaseApp):
                 self.in_buffer.remove(packet)
                 
                 # self.send_packet(
-                #     '192.168.0.3',
+                #     '192.168.0.2',
                 #     80,
                 #     'HTTP 1.0 POST request',
                 #     DEFAULT_MIPS
