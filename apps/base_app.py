@@ -35,7 +35,7 @@ class BaseApp(object):
             payload,
             MIPS
         )
-        _packet.trace.append(self)
+        _packet.trace.append(self.machine.network_interfaces[0])
         self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id}")
         if len(self.machine.links) > 0:
             self.machine.links[0].packets_queue.append(_packet)
@@ -54,7 +54,7 @@ class SimpleWebClientApp(BaseApp):
         super().main()
         self.machine.connect_to_peer(self.machine.connected_gateway_addr)
         self.send_packet(
-            '192.168.0.2',
+            '192.168.1.2',
             80,
             'HTTP 1.0 POST request',
             DEFAULT_MIPS
