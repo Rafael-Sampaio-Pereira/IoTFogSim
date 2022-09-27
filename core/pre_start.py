@@ -20,7 +20,8 @@ def load_nodes(project_name, simulation_core):
                         machine['y'],
                         machine['application'],
                         machine['type'],
-                        machine['coverage_area_radius']
+                        machine['coverage_area_radius'],
+                        machine['connected_gateway_addr']
                     )
 
                 for network in machine['network_interfaces']:

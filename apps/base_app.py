@@ -5,7 +5,7 @@ from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet.task import LoopingCall
 
-DEFAULT_MIPS = 1025
+DEFAULT_MIPS = 1024
 class BaseApp(object):
     def __init__(self):
         self.simulation_core = None
@@ -52,7 +52,7 @@ class SimpleWebClientApp(BaseApp):
     
     def main(self):
         super().main()
-        self.machine.connect_to_peer('192.168.0.1')
+        self.machine.connect_to_peer(self.machine.connected_gateway_addr)
         self.send_packet(
             '192.168.0.3',
             80,
@@ -97,7 +97,7 @@ class SimpleWebServerApp(BaseApp):
 
     def main(self):
         super().main()
-        self.machine.connect_to_peer('192.168.0.1')
+        self.machine.connect_to_peer(self.machine.connected_gateway_addr)
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
         LoopingCall(self.main_loop).start(0.1)
 

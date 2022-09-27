@@ -31,7 +31,8 @@ class Machine(object):
             y,
             app,
             type,
-            coverage_area_radius
+            coverage_area_radius,
+            connected_gateway_addr
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().hex
@@ -51,8 +52,11 @@ class Machine(object):
         self.network_interfaces = []
         self.links = []
         
+        self.connected_gateway_addr = connected_gateway_addr
+        
         self.app.simulation_core = simulation_core
         self.app.machine = self
+        
 
     def turn_on(self):
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}")
