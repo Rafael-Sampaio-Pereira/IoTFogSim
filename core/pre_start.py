@@ -36,9 +36,7 @@ def load_nodes(project_name, simulation_core):
                 if machine['type'] == 'router' or machine['type'] == 'switch':
                     simulation_core.all_gateways.append(_machine)
     
-    for machine in simulation_core.all_machines:
-        machine.turn_on()
-                
+
 
 
 # links_file = "./projects/"+simulation_core.project_name+"/links.json"

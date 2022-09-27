@@ -7,6 +7,8 @@ from core.iconsRegister import getIconFileName
 import tkinter as tk
 from twisted.python import log
 from twisted.internet.task import LoopingCall
+from bresenham import bresenham
+
 
 class NetworkInterface(object):
     def __init__(self, simulation_core, name, is_wireless, ip, machine):
@@ -109,6 +111,21 @@ class Link(object):
                     self.network_interface_1.machine.app.in_buffer.append(packet)
                     self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_2.machine.type}({self.network_interface_2.ip}) to {self.network_interface_1.machine.type}({self.network_interface_1.ip})")
                 self.packets_queue.remove(packet)
+                
+                # by looking for last machine in packet trace we can find the sender
+                if len(packet.trace) > 0:
+                    sender = packet.trace[-1]
+                    receiver = None
+                    if sender == self.network_interface_1:
+                        receiver = self.network_interface_2
+                    elif sender == self.network_interface_2:
+                        receiver = self.network_interface_1
+                
+                    x1 = sender.machine.visual_component.x
+                    y1 = sender.machine.visual_component.y
+                    x2 = receiver.machine.visual_component.x
+                    y2 = receiver.machine.visual_component.y
+                    self.animate_package(x1,y1,x2,y2)
     
     def draw_connection_arrow(self):
         self.connection_arrow = self.simulation_core.canvas.create_line(
@@ -121,6 +138,25 @@ class Link(object):
             dash=(4,2)
         )
         self.simulation_core.updateEventsCounter(f"{self.name} - Connecting {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
+    
+    def animate_package(self, x1, y1, x2, y2):
+        self.ball = self.simulation_core.canvas.create_oval(
+            x1, y1, x1+7, y1+7, fill="red"
+        )
+        self.all_coordinates = list(bresenham(
+            x1, y1, x2, y2
+        ))
+        self.display_time = 9 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
+        self.package_speed = 1 # this must be interger and determines the velocity of the packet moving in the canvas - Rafael Sampaio
+
+        cont = 100
+        for x, y in self.all_coordinates:
+            # verify if package ball just got its destiny - Rafael Sampaio
+            if x == x2 and y == y2:
+                self.simulation_core.canvas.after(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+
+            self.simulation_core.canvas.after(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7) # 7 is the package ball size - Rafael Sampaio
+            cont = cont + self.package_speed
     
 class FogWirelessLink(Link):
     def __init__(self, simulation_core):

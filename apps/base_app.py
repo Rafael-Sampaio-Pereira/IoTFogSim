@@ -67,6 +67,13 @@ class SimpleWebClientApp(BaseApp):
                 self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id} with {packet.MIPS} MIPS. Payload: {packet.payload}")
                 self.in_buffer.remove(packet)
                 
+                # self.send_packet(
+                #     '192.168.0.3',
+                #     80,
+                #     'HTTP 1.0 POST request',
+                #     DEFAULT_MIPS
+                # )
+                
 class SimpleWebServerApp(BaseApp):
     def __init__(self):
         super(SimpleWebServerApp, self).__init__()
@@ -112,6 +119,7 @@ class RouterApp(BaseApp):
                 # if are not connected to destiny, try to find a route and send the packet
                 else:
                     pass
+                    # IMPLEMENTAR AQUI ROTEAMENTO DE PACOTES DESINADOS A OUTRAS REDES
                 
                 # if are not connected to destiny and dont found any route to forward packets, 
                 # or packet was successfully forwarded
