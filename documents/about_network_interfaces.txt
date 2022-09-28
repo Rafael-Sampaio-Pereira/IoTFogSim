@@ -1,0 +1,2 @@
+network_interfaces[0] will ever representes local network interfaces, 
+above network_interfaces[1] representes out interfaces such as internet

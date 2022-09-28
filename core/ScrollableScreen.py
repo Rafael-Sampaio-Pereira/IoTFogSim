@@ -447,8 +447,12 @@ class ScrollableScreen(tkinter.Frame):
             self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon
 
+            for gateway in self.canvas.simulation_core.all_gateways:
+                reactor.callLater(0.1, gateway.turn_on)
+                    
             for machine in self.canvas.simulation_core.all_machines:
-                reactor.callLater(0.3, machine.turn_on)
+                if machine.type != 'router' and machine.type != 'switch':
+                    reactor.callLater(0.3, machine.turn_on)
 
 
     # This method is called when close window button is press. - Rafael Sampaio
