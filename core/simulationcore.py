@@ -16,6 +16,7 @@ class SimulationCore(object):
         self.all_gateway_to_gateway_links = []
         self.all_machines = []
         self.all_gateways = []
+        self.all_servers = []
         self.all_apps = []
         self.all_ip = []
         self.canvas = None

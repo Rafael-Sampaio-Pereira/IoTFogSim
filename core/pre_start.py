@@ -35,8 +35,12 @@ def load_nodes(project_name, simulation_core):
                         )
                         _machine.network_interfaces.append(_interface)
                     simulation_core.all_machines.append(_machine)
+                    
                     if machine['type'] == 'router' or machine['type'] == 'switch':
                         simulation_core.all_gateways.append(_machine)
+                        
+                    if machine['type'] == 'server':
+                        simulation_core.all_servers.append(_machine)
         
 
 

@@ -28,7 +28,7 @@
           "y": 420
         },
         {
-          "name": "Fog Broker Node",
+          "name": "Fog Broker Node 1",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",
@@ -94,7 +94,7 @@
           "y": 440
         },
         {
-          "name": "Fog Broker Node",
+          "name": "Fog Broker Node 2",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",
@@ -141,7 +141,7 @@
           "y": 615
         },
         {
-          "name": "Fog Broker Node",
+          "name": "Fog Broker Node 3",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",

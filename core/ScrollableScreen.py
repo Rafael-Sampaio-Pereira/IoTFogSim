@@ -18,7 +18,8 @@ import pathlib
 from tkinter import filedialog
 from random import randrange
 from core.addNewNodeModal import add_new_node_modal_screen
-
+from twisted.internet.defer import inlineCallbacks
+from core.functions import sleep
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
@@ -420,6 +421,7 @@ class ScrollableScreen(tkinter.Frame):
 
         window.config(menu=self.menubar)
 
+    # @inlineCallbacks
     def play_or_stop_simulation(self):
         is_running = self.canvas.simulation_core.is_running
 
@@ -449,9 +451,12 @@ class ScrollableScreen(tkinter.Frame):
 
             for gateway in self.canvas.simulation_core.all_gateways:
                 reactor.callLater(0.1, gateway.turn_on)
-                    
+            # yield sleep(0.5)
+            for server in self.canvas.simulation_core.all_servers:
+                reactor.callLater(0.1, server.turn_on)
+            # yield sleep(0.5)   
             for machine in self.canvas.simulation_core.all_machines:
-                if machine.type != 'router' and machine.type != 'switch':
+                if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server':
                     reactor.callLater(0.3, machine.turn_on)
 
 
