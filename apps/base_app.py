@@ -46,7 +46,7 @@ class BaseApp(object):
                 peer=self.machine.links[0].network_interface_1
             else:
                 peer=self.machine.links[0].network_interface_2
-            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[0].ip} \u27FC   \u2344 \u27F6  {peer.ip} - [ packet: {_packet.id} ]")
+            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[0].ip} \u27FC   \u2344 \u27F6  {peer.ip} - packet: {_packet.id}")
         else:
             log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[0].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
 
@@ -196,13 +196,13 @@ class RouterApp(BaseApp):
         LoopingCall(self.main_loop).start(0.1)
         
     def direct_forward_packet(self, packet, destiny):
-        self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - [ packet: {packet.id} ]")
+        self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - packet: {packet.id}")
         destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
         destiny_link.packets_queue.append(packet)
             
     def forward_packet_to_another_gateway(self, packet, destiny):
         if destiny.network_interfaces[1] not in packet.trace:
-            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[1].ip} - [ packet: {packet.id} ]")
+            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[1].ip} - packet: {packet.id}")
             destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
             destiny_link.packets_queue.append(packet)
 

@@ -111,12 +111,12 @@ class Link(object):
                     self.animate_package(packet)
                     packet.trace.append(self.network_interface_2)
                     self.network_interface_2.machine.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
                 elif packet.trace[-1] == self.network_interface_2:
                     self.animate_package(packet)
                     packet.trace.append(self.network_interface_1)
                     self.network_interface_1.machine.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_2.machine.type}({self.network_interface_2.ip}) to {self.network_interface_1.machine.type}({self.network_interface_1.ip})")
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
                 
                 self.packets_queue.remove(packet)
                 
