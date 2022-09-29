@@ -167,17 +167,16 @@ class RouterApp(BaseApp):
                     self.direct_forward_packet(packet, destiny)
                 # if are not connected to destiny, try to find a route and send the packet
                 else:
+                    packet.trace.append(self.machine.network_interfaces[1])
                     destiny_addr_prefix = self.extract_ip_prefix(packet.destiny_addr)
                     route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
                     
                     # if there is hops, we can send the packet to the first hop in the list
                     if route_hops:
                         if len(route_hops) > 0 :
-                            if route_hops[0] not in packet.trace:
-                                packet.trace.append(self.machine.network_interfaces[1])
-                                self.forward_packet_to_another_gateway(packet, route_hops[0])
-                        else:
-                            log.msg(f"Info : - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
+                            self.forward_packet_to_another_gateway(packet, route_hops[0])
+                    else:
+                        log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
                 
                 # if are not connected to destiny
                 # or dont found any route to forward packets,
