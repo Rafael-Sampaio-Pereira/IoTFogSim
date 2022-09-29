@@ -43,13 +43,14 @@ class Machine(object):
         self.is_wireless = is_wireless
         self.type = type
         self.app = import_and_instantiate_class_from_string(app)
+        self.network_interfaces = []
         self.visual_component = VisualComponent(
             self.is_wireless,
             self.simulation_core,
             self.name, self.icon, x, y, coverage_area_radius, self)
         self.peers = []
         
-        self.network_interfaces = []
+        
         self.links = []
         
         self.connected_gateway_addrs = connected_gateway_addrs
@@ -60,6 +61,7 @@ class Machine(object):
 
     def turn_on(self):
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}")
+        self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
         self.app.start()
     
     def connect_to_peer(self, peer_address):
@@ -78,16 +80,19 @@ class Machine(object):
                 peer.links.append(_link)
                 _link.draw_connection_arrow()
             else:
-                log.msg(f"Info : - | {self.name}-{self.type} - Already connected to {peer_address}")
+                log.msg(f"Info :  - | {self.name}-{self.type} - Already connected to {peer_address}")
             
     def verify_if_connection_link_already_exists(self, machine):
         """Verify if connection link already exists, if exists returns it"""
         return next(filter(lambda link: link.network_interface_1.machine == machine or link.network_interface_2.machine == machine,  self.links), None)
+    
+    def update_name_on_screen(self, msg):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(msg))
         
 class Link(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.id = uuid.uuid4().hex
+        self.id = uuid.uuid4().fields[-1]
         self.name = f'Link {self.id}'
         self.bandwidth = '256kbps'
         self.latency = '0.02s'
@@ -105,19 +110,6 @@ class Link(object):
     def handle_packets(self):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
-                source = self.simulation_core.get_machine_by_ip(packet.source_addr)
-                # if self.network_interface_1 in source.network_interfaces:
-                #     self.animate_package(packet)
-                #     packet.trace.append(self.network_interface_2)
-                #     self.network_interface_2.machine.app.in_buffer.append(packet)
-                #     print(self.network_interface_1.ip, self.network_interface_2.ip, self.network_interface_2.machine.app.in_buffer)
-                #     self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
-                # else:
-                #     self.animate_package(packet)
-                #     packet.trace.append(self.network_interface_1)
-                #     self.network_interface_1.machine.app.in_buffer.append(packet)
-                #     print(self.network_interface_2.ip, self.network_interface_1.ip, self.network_interface_1.machine.app.in_buffer)
-                #     self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} from {self.network_interface_2.machine.type}({self.network_interface_2.ip}) to {self.network_interface_1.machine.type}({self.network_interface_1.ip})")
 
                 if packet.trace[-1] == self.network_interface_1:
                     self.animate_package(packet)
