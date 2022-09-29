@@ -12,7 +12,7 @@ class BaseApp(object):
     def __init__(self):
         self.simulation_core = None
         self.id = uuid.uuid4().hex
-        self.name = 'my_app'
+        self.name = 'BaseApp'
         self.port = 8081
         self.protocol = 'TCP' # can be UDP or TCP must implements enum
         self.machine = None
@@ -61,7 +61,7 @@ class SimpleWebClientApp(BaseApp):
         super().main()
         self.machine.connect_to_peer(self.machine.connected_gateway_addrs[0])
         self.send_packet(
-            '172.148.0.2',
+            '192.168.1.2',
             80,
             'HTTP 1.0 POST request',
             DEFAULT_MIPS
@@ -114,6 +114,7 @@ class RouterApp(BaseApp):
         self.protocol = 'TCP'
         self.neighbor_gateways = []
         self.routing_table = {}
+        self.name = f'RouterApp'
         
     def find_route_hops(self, gateway, packet, destiny_addr_prefix):
         """

@@ -459,7 +459,6 @@ class ScrollableScreen(tkinter.Frame):
                 if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server':
                     reactor.callLater(0.3, machine.turn_on)
 
-
     # This method is called when close window button is press. - Rafael Sampaio
 
     def on_closing(self):
