@@ -23,7 +23,7 @@ class BaseApp(object):
     
     @inlineCallbacks 
     def start(self):
-        self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Initializing app")
+        self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Starting app...")
         yield sleep(0.5)
         self.main()
 
@@ -41,9 +41,14 @@ class BaseApp(object):
         self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id}")
         if len(self.machine.links) > 0:
             self.machine.links[0].packets_queue.append(_packet)
-            self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) sending packet {_packet.id} to {destiny_addr}")
+            peer = None
+            if self.machine.network_interfaces[0] != self.machine.links[0].network_interface_1:
+                peer=self.machine.links[0].network_interface_1
+            else:
+                peer=self.machine.links[0].network_interface_2
+            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[0].ip} \u27FC   \u2344 \u27F6  {peer.ip} - [ packet: {_packet.id} ]")
         else:
-            log.msg(f"Info : - | {self.machine.type}({self.machine.network_interfaces[0].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
+            log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[0].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
 
 class SimpleWebClientApp(BaseApp):
 
@@ -191,13 +196,13 @@ class RouterApp(BaseApp):
         LoopingCall(self.main_loop).start(0.1)
         
     def direct_forward_packet(self, packet, destiny):
-        log.msg(f"Info :  - | {self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - [ packet: {packet.id} ]")
+        self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - [ packet: {packet.id} ]")
         destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
         destiny_link.packets_queue.append(packet)
             
     def forward_packet_to_another_gateway(self, packet, destiny):
         if destiny.network_interfaces[1] not in packet.trace:
-            log.msg(f"Info :  - | {self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[1].ip} - [ packet: {packet.id} ]")
+            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[1].ip} - [ packet: {packet.id} ]")
             destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
             destiny_link.packets_queue.append(packet)
 

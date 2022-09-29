@@ -49,18 +49,14 @@ class Machine(object):
             self.simulation_core,
             self.name, self.icon, x, y, coverage_area_radius, self)
         self.peers = []
-        
-        
         self.links = []
-        
         self.connected_gateway_addrs = connected_gateway_addrs
-        
         self.app.simulation_core = simulation_core
         self.app.machine = self
         
 
     def turn_on(self):
-        self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}")
+        self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}...")
         self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
         self.app.start()
     
@@ -134,7 +130,7 @@ class Link(object):
             width=1,
             dash=(4,2)
         )
-        self.simulation_core.updateEventsCounter(f"{self.name} - Connecting {self.network_interface_1.machine.type}({self.network_interface_1.ip}) to {self.network_interface_2.machine.type}({self.network_interface_2.ip})")
+        self.simulation_core.updateEventsCounter(f"{self.name} - {self.network_interface_1.machine.type}({self.network_interface_1.ip})\u27F5 \u27F6  ({self.network_interface_2.ip}){self.network_interface_2.machine.type}")
     
     def animate_package(self, packet):
         # by looking for last machine in packet trace we can find the sender
