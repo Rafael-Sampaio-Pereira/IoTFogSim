@@ -224,55 +224,14 @@ class RouterApp(BaseApp):
                     else:
                         log.msg(f"Info :  - | {self.machine.name}-{self.machine.type} - Already connected to {network_gateway_address}")
         
-class AccessPointApp(RouterApp):
+class AccessPointApp(BaseApp):
     def __init__(self):
         super(AccessPointApp, self).__init__()
         self.protocol = 'TCP'
         self.neighbor_gateways = []
         self.name = f'AccessPointApp'
+        self.base_gateway = None # can be router or switch
         
-    def find_route_hops(self, gateway, packet, destiny_addr_prefix):
-        """
-        Esta função utiliza a busca em largura para encontrar quais os saltos (gateways)
-        que estão no caminho entre duas redes, isto é, quando um gateway(i.e. roteador ou switch)
-        encontram um ip com prefixo desconhecido, ou seja, que não está na mesma rede que ele (utilizando a network_interfaces[0])
-        ele procura através dos gateways vizinhos (utilizando a network_interfaces[1]) quem porventura conhece aquele prefixo.
-        Quando o prefixo desejado é encontrado, o próximo salto na rota até ele é retornado em uma lista, se o prefixo desejado
-        não for encontrado, retorna uma lista vazia.
-        """
-        
-        visited=[]
-        queue=[]
-        visited.append(gateway)
-        queue.append(gateway)
-        route=[]
-        
-        while queue:
-            
-            current_gateway=queue.pop(0)
-            
-            for neighbor_gateway in current_gateway.app.neighbor_gateways:
-                
-                if neighbor_gateway not in visited:
-                    visited.append(neighbor_gateway)
-                    queue.append(neighbor_gateway)
-                    
-                    if neighbor_gateway.network_interfaces[1] not in packet.trace:
-                        if current_gateway.network_interfaces[1] not in packet.trace:
-                            route.append(current_gateway)
-                        else:
-                            route.append(neighbor_gateway)
-                        if neighbor_gateway.network_interfaces[0].ip.startswith(destiny_addr_prefix):
-                            return route
-            
-            route = []
-                            
-        return []
-    
-    
-    
-    
-
     def main_loop(self):
         if len(self.in_buffer) > 0:
             for packet in self.in_buffer.copy():
@@ -281,19 +240,11 @@ class AccessPointApp(RouterApp):
                 if destiny and destiny in self.machine.peers:
                     packet.trace.append(self.machine.network_interfaces[0])
                     self.direct_forward_packet(packet, destiny)
-                # if are not connected to destiny, try to find a route and send the packet
+                # if are not connected to destiny, send the packet to the base gateway
                 else:
                     packet.trace.append(self.machine.network_interfaces[1])
-                    destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
-                    route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
-                    
-                    # if there is hops, we can send the packet to the first hop in the list
-                    if route_hops:
-                        if len(route_hops) > 0 :
-                            self.forward_packet_to_another_gateway(packet, route_hops[0])
-                    else:
-                        log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
-                
+                    self.forward_packet_to_another_gateway(packet, self.base_gateway)
+
                 # if are not connected to destiny
                 # or dont found any route to forward packets,
                 # or packet was successfully forwarded
@@ -303,7 +254,7 @@ class AccessPointApp(RouterApp):
     def main(self):
         super().main()
         for gtw_addr in self.machine.connected_gateway_addrs:
-            self.connect_to_another_network(gtw_addr)
+            self.connect_to_base_gateway(gtw_addr)
         LoopingCall(self.main_loop).start(0.1)
         
     def direct_forward_packet(self, packet, destiny):
@@ -317,8 +268,8 @@ class AccessPointApp(RouterApp):
             destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
             destiny_link.packets_queue.append(packet)
 
-    def connect_to_another_network(self, network_gateway_address):
-        """Connect to another network through a given network gateway e.g router or switch"""
+    def connect_to_base_gateway(self, network_gateway_address):
+        """Connect to gateway e.g router or switch"""
         if network_gateway_address != self.machine.network_interfaces[1].ip:
             # verify if there is a machine in simulation_core with this address using the second network interface
             neighbor_gateway = next(filter(lambda machine: machine.network_interfaces[1].ip == network_gateway_address,  self.simulation_core.all_gateways), None)
@@ -326,6 +277,7 @@ class AccessPointApp(RouterApp):
                 if neighbor_gateway.type == 'router' or neighbor_gateway.type == 'switch':
                     # verify if there is already a connection between the peer and the source
                     if not self.machine.verify_if_connection_link_already_exists(neighbor_gateway):
+                        self.base_gateway = neighbor_gateway
                         _link = FogWirelessLink(self.simulation_core)
                         _link.network_interface_1 = self.machine.network_interfaces[1]
                         _link.network_interface_2 = neighbor_gateway.network_interfaces[1]
