@@ -3,7 +3,7 @@
     {
       "machines": [
         {
-          "name": "Router 001",
+          "name": "Router 1",
           "MIPS": 1024,
           "icon": "router_icon",
           "type": "router",
@@ -25,6 +25,30 @@
           ],
           "x": 340,
           "y": 420
+        },
+        {
+          "name": "Access Point 1",
+          "MIPS": 1024,
+          "icon": "ap_icon",
+          "type": "access_point",
+          "is_wireless": true,
+          "coverage_area_radius": 200,
+          "application": "apps.base_app.AccessPointApp",
+          "connected_gateway_addrs": ["10.10.0.1"],
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.3"
+            },
+            {
+              "name": "eth1",
+              "is_wireless": false,
+              "ip": "201.168.0.1"
+            }
+          ],
+          "x": 333,
+          "y": 195
         },
         {
           "name": "Fog Broker Node 1",
@@ -50,15 +74,15 @@
           "MIPS": 1024,
           "icon": "notebook_icon",
           "type": "client",
-          "is_wireless": false,
+          "is_wireless": true,
           "coverage_area_radius": 0,
           "application": "apps.base_app.SimpleWebClientApp",
-          "connected_gateway_addrs": ["192.168.0.1"],
+          "connected_gateway_addrs": ["192.168.0.3"],
           "network_interfaces": [
             {
               "name": "eth0",
               "is_wireless": false,
-              "ip": "192.168.0.3"
+              "ip": "192.168.0.4"
             }
           ],
           "x": 688,
@@ -69,7 +93,7 @@
     {
       "machines": [
         {
-          "name": "Router 002",
+          "name": "Router 2",
           "MIPS": 1024,
           "icon": "router_icon",
           "type": "router",
@@ -116,7 +140,7 @@
     {
       "machines": [
         {
-          "name": "Router 003",
+          "name": "Router 3",
           "MIPS": 1024,
           "icon": "router_icon",
           "type": "router",

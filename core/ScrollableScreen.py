@@ -456,14 +456,13 @@ class ScrollableScreen(tkinter.Frame):
                 reactor.callLater(0.1, server.turn_on)
             # yield sleep(0.5)   
             for machine in self.canvas.simulation_core.all_machines:
-                if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server':
+                if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server' or machine.type != 'access_point':
                     reactor.callLater(0.3, machine.turn_on)
 
     # This method is called when close window button is press. - Rafael Sampaio
-
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
-            log.msg("Info : - | Closing IoTFogSim Application...")
+            log.msg("Info :  - | Closing IoTFogSim Application...")
             reactor.crash()
 
         else:
