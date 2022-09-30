@@ -4,7 +4,7 @@ from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet.task import LoopingCall
-
+from core.engine.network import extract_ip_prefix
 
 
 DEFAULT_MIPS = 1024
@@ -168,7 +168,7 @@ class RouterApp(BaseApp):
                 # if are not connected to destiny, try to find a route and send the packet
                 else:
                     packet.trace.append(self.machine.network_interfaces[1])
-                    destiny_addr_prefix = self.extract_ip_prefix(packet.destiny_addr)
+                    destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
                     route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
                     
                     # if there is hops, we can send the packet to the first hop in the list
@@ -183,11 +183,7 @@ class RouterApp(BaseApp):
                 # or packet was successfully forwarded
                 # just drop packets from in_buffer
                 self.in_buffer.remove(packet)
-                
-    def extract_ip_prefix(self, ip):
-        l = ip.split('.')
-        return f"{l[0]}.{l[1]}.{l[2]}"
-        
+                        
     def main(self):
         super().main()
         for gtw_addr in self.machine.connected_gateway_addrs:
@@ -288,7 +284,7 @@ class AccessPointApp(RouterApp):
                 # if are not connected to destiny, try to find a route and send the packet
                 else:
                     packet.trace.append(self.machine.network_interfaces[1])
-                    destiny_addr_prefix = self.extract_ip_prefix(packet.destiny_addr)
+                    destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
                     route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
                     
                     # if there is hops, we can send the packet to the first hop in the list
@@ -303,11 +299,7 @@ class AccessPointApp(RouterApp):
                 # or packet was successfully forwarded
                 # just drop packets from in_buffer
                 self.in_buffer.remove(packet)
-                
-    def extract_ip_prefix(self, ip):
-        l = ip.split('.')
-        return f"{l[0]}.{l[1]}.{l[2]}"
-        
+
     def main(self):
         super().main()
         for gtw_addr in self.machine.connected_gateway_addrs:

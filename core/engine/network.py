@@ -1,6 +1,10 @@
 import numpy as np
 
 
+def extract_ip_prefix(ip):
+    l = ip.split('.')
+    return f"{l[0]}.{l[1]}.{l[2]}"
+
 def drop_packet(loss_rate: float) -> bool:
     """
     IoTFogSim Packet Loss Module
