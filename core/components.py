@@ -108,7 +108,7 @@ class Link(object):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
                 sender = packet.trace[-1]
-                if not drop_packet(self.packet_loss_rate):
+                if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
                     if sender == self.network_interface_1:
                         self.animate_package(packet)
                         packet.trace.append(self.network_interface_2)

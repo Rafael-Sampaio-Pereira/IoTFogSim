@@ -1,6 +1,7 @@
 {
     "settings": {
         "resizeable": true,
-        "scene_adapter": null
+        "scene_adapter": null,
+        "global_seed": null
     }
 }

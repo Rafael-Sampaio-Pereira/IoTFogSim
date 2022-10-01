@@ -1,6 +1,7 @@
 {
     "settings": {
         "resizeable": false,
-        "scene_adapter": null
+        "scene_adapter": null,
+        "global_seed": 390293
     }
 }

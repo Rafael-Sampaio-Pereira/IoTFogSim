@@ -75,11 +75,17 @@ def initialization_screen(simulation_core):
                 data = json.loads(settings.read())
                 settings = data['settings']
                 resizable = settings['resizeable']
+            
+            if 'global_seed' in settings:
+                simulation_core.global_seed = settings['global_seed']
+            else:
+                simulation_core.global_seed = 999
 
             simulation_core.create_simulation_canvas(resizable)
             if 'scene_adapter' in settings:
                 simulation_core.build_scene_adapter(
                     settings['scene_adapter'])
+            
             load_nodes(selected_project_name, simulation_core)
 
             window.destroy()

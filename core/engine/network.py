@@ -5,7 +5,7 @@ def extract_ip_prefix(ip):
     l = ip.split('.')
     return f"{l[0]}.{l[1]}.{l[2]}"
 
-def drop_packet(loss_rate: float) -> bool:
+def drop_packet(loss_rate: float, global_seed) -> bool:
     """
     IoTFogSim Packet Loss Module
     Author: Rafael Sampaio
@@ -46,6 +46,9 @@ def drop_packet(loss_rate: float) -> bool:
         if res:
             do your drop code here
     """
+    
+    if global_seed:
+        np.random.seed(global_seed)
     # Indicates the total chance of a given packet be dropped. For 1 of 100 packets use 1/100, so rate is 0.01
     rand_value = np.random.uniform(0, 1)
     if rand_value <= loss_rate:

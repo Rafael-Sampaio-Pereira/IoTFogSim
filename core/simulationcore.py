@@ -25,7 +25,8 @@ class SimulationCore(object):
         self.project_name = None
         self.is_running = False
         self.scene_adapter = None
-
+        self.global_seed = None
+        
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None
         return next(filter(lambda machine: machine.network_interfaces[0].ip == ip,  self.all_machines), None)
