@@ -56,7 +56,8 @@ class SimpleWebClientApp(BaseApp):
         super(SimpleWebClientApp, self).__init__()
         self.port = 80
         self.name ='WEBClient'
-    
+        
+        
     def main(self):
         super().main()
         self.machine.connect_to_peer(self.machine.connected_gateway_addrs[0])
@@ -74,31 +75,38 @@ class SimpleWebClientApp(BaseApp):
                 self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id} with {packet.MIPS} MIPS. Payload: {packet.payload}")
                 self.in_buffer.remove(packet)
                 
-                # self.send_packet(
-                #     '192.168.0.2',
-                #     80,
-                #     'HTTP 1.0 POST request',
-                #     DEFAULT_MIPS
-                # )
-                
 class SimpleWebServerApp(BaseApp):
     def __init__(self):
         super(SimpleWebServerApp, self).__init__()
         self.port = 80
         self.name ='WEBServer'
+
     
     def main_loop(self):
         if len(self.in_buffer) > 0:
             for packet in self.in_buffer.copy():
-                self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id} with {packet.MIPS} MIPS. Payload: {packet.payload}")
-                self.in_buffer.remove(packet)
-                self.send_http_200_response(packet.source_addr, packet.source_port, 'HTTP 1.0 response', DEFAULT_MIPS)
+                if packet.destiny_port == self.port:
+                    self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id} with {packet.MIPS} MIPS. Payload: {packet.payload}")
+                    self.in_buffer.remove(packet)
+                    self.send_http_200_response(packet.source_addr, packet.source_port, 'HTTP 1.0 response', DEFAULT_MIPS)
+                else:
+                    self.in_buffer.remove(packet)
+                    self.send_http_404_response(packet.source_addr, packet.source_port, DEFAULT_MIPS)
+                    
         
     def send_http_200_response(self, destiny_addr, destiny_port, response,  MIPS):
         self.send_packet(
             destiny_addr,
             destiny_port,
             response,
+            MIPS
+        )
+        
+    def send_http_404_response(self, destiny_addr, destiny_port, MIPS):
+        self.send_packet(
+            destiny_addr,
+            destiny_port,
+            'HTTP 1.0 404 - NOT FOUND',
             MIPS
         )
 
@@ -114,6 +122,7 @@ class RouterApp(BaseApp):
         self.protocol = 'TCP'
         self.neighbor_gateways = []
         self.name = f'RouterApp'
+        
         
     def find_route_hops(self, gateway, packet, destiny_addr_prefix):
         """
@@ -226,11 +235,12 @@ class RouterApp(BaseApp):
         
 class AccessPointApp(BaseApp):
     def __init__(self):
-        super(AccessPointApp, self).__init__()
         self.protocol = 'TCP'
+        super(AccessPointApp, self).__init__()
         self.neighbor_gateways = []
         self.name = f'AccessPointApp'
         self.base_gateway = None # can be router or switch
+        
         
     def main_loop(self):
         if len(self.in_buffer) > 0:

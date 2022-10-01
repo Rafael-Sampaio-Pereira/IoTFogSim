@@ -4,6 +4,7 @@ from core.functions import import_and_instantiate_class_from_string
 from config.settings import ICONS_PATH
 from core.visualcomponent import VisualComponent
 from core.iconsRegister import getIconFileName
+from core.engine.network import drop_packet
 import tkinter as tk
 from twisted.python import log
 from twisted.internet.task import LoopingCall
@@ -92,7 +93,7 @@ class Link(object):
         self.name = f'Link {self.id}'
         self.bandwidth = '256kbps'
         self.latency = '0.02s'
-        self.packet_loss_percentage = 10
+        self.packet_loss_rate = 0.5
         self.network_interface_1 = None
         self.network_interface_2 = None
         self.packets_queue =  []
@@ -100,26 +101,35 @@ class Link(object):
         LoopingCall(self.transmission_channel).start(0.1)
         
     def transmission_channel(self):
-        # HERE NEEDS TO IMPLEMENTATION OF THE LATENCY, PACKET LOSS
+        # HERE NEEDS TO IMPLEMENTATION OF THE LATENCY
         self.handle_packets()
 
     def handle_packets(self):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
+                sender = packet.trace[-1]
+                if not drop_packet(self.packet_loss_rate):
+                    if sender == self.network_interface_1:
+                        self.animate_package(packet)
+                        packet.trace.append(self.network_interface_2)
+                        self.network_interface_2.machine.app.in_buffer.append(packet)
+                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
+                    elif sender == self.network_interface_2:
+                        self.animate_package(packet)
+                        packet.trace.append(self.network_interface_1)
+                        self.network_interface_1.machine.app.in_buffer.append(packet)
+                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
+                    
+                    self.packets_queue.remove(packet)
+                else:
+                    self.simulation_core.updateEventsCounter(f"{self.name} - Failed to transmiting packet {packet.id}. Packet was dropped")
+                    if sender.machine.app.protocol == 'TCP':
+                        log.msg(f"Info :  - | {self.name} - Packet {packet.id} will be retransmitted due sender protocol is TCP")
+                    else:
+                        # if sender app protocol is not tcp, it will drop the packet and don't care about retransmissions
+                        self.packets_queue.remove(packet)
+                        print("Não vai reenviar", sender.machine.app.protocol)
 
-                if packet.trace[-1] == self.network_interface_1:
-                    self.animate_package(packet)
-                    packet.trace.append(self.network_interface_2)
-                    self.network_interface_2.machine.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
-                elif packet.trace[-1] == self.network_interface_2:
-                    self.animate_package(packet)
-                    packet.trace.append(self.network_interface_1)
-                    self.network_interface_1.machine.app.in_buffer.append(packet)
-                    self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
-                
-                self.packets_queue.remove(packet)
-                
     def draw_connection_arrow(self):
         self.connection_arrow = self.simulation_core.canvas.create_line(
             self.network_interface_1.machine.visual_component.x,
@@ -171,7 +181,8 @@ class FogWirelessLink(Link):
         super(FogWirelessLink, self).__init__(simulation_core)
         self.bandwidth = '256kbps'
         self.latency = '0.02s'
-        self.packet_loss_percentage = 10
+        self.packet_loss_rate = 0.10
+        
 
 class Packet(object):
     def __init__(
