@@ -13,6 +13,9 @@ class VisualComponent(object):
         self.y = y
         self.move_flag = False
         self.deviceName = deviceName
+        self.draggable_signal_circle = None
+        self.coverage_area_radius = coverage_area_radius
+        self.signal_radius = None
 
         # this refers to the equivalente device of this visual component - Rafael Sampaio
         # By using the 'device' atribute, is possible access any atibute of the device instance, such as application - Rafael Sampaio

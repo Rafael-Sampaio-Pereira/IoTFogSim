@@ -38,7 +38,7 @@
           "network_interfaces": [
             {
               "name": "eth0",
-              "is_wireless": false,
+              "is_wireless": true,
               "ip": "192.168.0.3"
             },
             {
@@ -70,18 +70,18 @@
           "y": 850
         },
         {
-          "name": "SCADA System",
+          "name": "Notebook 1",
           "MIPS": 1024,
           "icon": "notebook_icon",
           "type": "client",
           "is_wireless": true,
-          "coverage_area_radius": 0,
+          "coverage_area_radius": 200,
           "application": "apps.base_app.SimpleWebClientApp",
           "connected_gateway_addrs": ["192.168.0.3"],
           "network_interfaces": [
             {
               "name": "eth0",
-              "is_wireless": false,
+              "is_wireless": true,
               "ip": "192.168.0.4"
             }
           ],

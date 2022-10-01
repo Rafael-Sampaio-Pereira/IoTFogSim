@@ -54,6 +54,31 @@ class Machine(object):
         self.connected_gateway_addrs = connected_gateway_addrs
         self.app.simulation_core = simulation_core
         self.app.machine = self
+    
+    def set_signal_radius(self, radius):
+        self.visual_component.signal_radius = radius
+        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+        
+    
+    def clear_signal_radius(self, radius):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="")
+        self.visual_component.signal_radius = radius
+        self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y+self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+
+
+    def blink_signal(self):
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_signal_circle, outline="red")
+        self.simulation_core.canvas.after(15, self.set_signal_radius, self.visual_component.coverage_area_radius/10)
+        self.simulation_core.canvas.after(25, self.set_signal_radius, self.visual_component.coverage_area_radius/9)
+        self.simulation_core.canvas.after(35, self.set_signal_radius, self.visual_component.coverage_area_radius/8)
+        self.simulation_core.canvas.after(45, self.set_signal_radius, self.visual_component.coverage_area_radius/7)
+        self.simulation_core.canvas.after(55, self.set_signal_radius, self.visual_component.coverage_area_radius/6)
+        self.simulation_core.canvas.after(65, self.set_signal_radius, self.visual_component.coverage_area_radius/5)
+        self.simulation_core.canvas.after(75, self.set_signal_radius, self.visual_component.coverage_area_radius/4)
+        self.simulation_core.canvas.after(85, self.set_signal_radius, self.visual_component.coverage_area_radius/3)
+        self.simulation_core.canvas.after(95, self.set_signal_radius, self.visual_component.coverage_area_radius/2)
+        self.simulation_core.canvas.after(105, self.set_signal_radius, self.visual_component.coverage_area_radius)
+        self.simulation_core.canvas.after(200, self.clear_signal_radius, 0)
         
 
     def turn_on(self):
