@@ -79,7 +79,7 @@ def initialization_screen(simulation_core):
             if 'global_seed' in settings:
                 simulation_core.global_seed = settings['global_seed']
             else:
-                simulation_core.global_seed = 999
+                simulation_core.global_seed = None
 
             simulation_core.create_simulation_canvas(resizable)
             if 'scene_adapter' in settings:
