@@ -25,15 +25,14 @@ class BaseApp(object):
         yield sleep(0.5)
         self.main()
 
-    def send_packet(self, destiny_addr, destiny_port, payload, MIPS):
+    def send_packet(self, destiny_addr, destiny_port, payload):
         _packet = Packet(
             self.simulation_core,
             self.machine.network_interfaces[0].ip,
             self.port,
             destiny_addr,
             destiny_port,
-            payload,
-            MIPS
+            payload
         )
         _packet.trace.append(self.machine.network_interfaces[0])
         self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id}")

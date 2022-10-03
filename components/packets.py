@@ -10,12 +10,10 @@ class Packet(object):
             source_port,
             destiny_addr,
             destiny_port,
-            payload,
-            MIPS
+            payload
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().fields[-1]
-        self.MIPS = MIPS
         self.source_addr = source_addr
         self.source_port = source_port
         self.destiny_addr = destiny_addr
