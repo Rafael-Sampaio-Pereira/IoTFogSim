@@ -9,7 +9,7 @@
           "type": "router",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.RouterApp",
+          "application": "apps.router.RouterApp",
           "connected_gateway_addrs": ["10.10.0.2"],
           "network_interfaces": [
             {
@@ -33,7 +33,7 @@
           "type": "server",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.SimpleWebServerApp",
+          "application": "apps.http.SimpleWebServerApp",
           "connected_gateway_addrs": ["192.168.0.1"],
           "network_interfaces": [
             {
@@ -52,7 +52,7 @@
           "type": "client",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.SimpleWebClientApp",
+          "application": "apps.http.SimpleWebClientApp",
           "connected_gateway_addrs": ["192.168.0.1"],
           "network_interfaces": [
             {
@@ -75,7 +75,7 @@
           "type": "router",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.RouterApp",
+          "application": "apps.router.RouterApp",
           "connected_gateway_addrs": ["10.10.0.1", "10.10.0.3"],
           "network_interfaces": [
             {
@@ -99,7 +99,7 @@
           "type": "server",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.SimpleWebServerApp",
+          "application": "apps.http.SimpleWebServerApp",
           "connected_gateway_addrs": ["192.168.1.1"],
           "network_interfaces": [
             {
@@ -122,7 +122,7 @@
           "type": "router",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.RouterApp",
+          "application": "apps.router.RouterApp",
           "connected_gateway_addrs": ["10.10.0.2"],
           "network_interfaces": [
             {
@@ -146,7 +146,7 @@
           "type": "server",
           "is_wireless": false,
           "coverage_area_radius": 0,
-          "application": "apps.base_app.SimpleWebServerApp",
+          "application": "apps.http.SimpleWebServerApp",
           "connected_gateway_addrs": ["172.148.0.1"],
           "network_interfaces": [
             {

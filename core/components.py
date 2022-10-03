@@ -68,7 +68,7 @@ class Machine(object):
             # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
             if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
                 # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
-                self.visual_component.signal_radius += 1
+                self.visual_component.signal_radius += 2
                 self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
                                                    self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             else:
