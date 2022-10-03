@@ -1,4 +1,5 @@
-from core.components import Machine, NetworkInterface
+from components.machines import Machine
+from components.peripherals import NetworkInterface
 import json
 import os
 

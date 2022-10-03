@@ -1,4 +1,4 @@
-from core.components import FogWirelessLink
+from components.links import FogWirelessLink
 from twisted.python import log
 from twisted.internet.task import LoopingCall
 from core.engine.network import extract_ip_prefix
