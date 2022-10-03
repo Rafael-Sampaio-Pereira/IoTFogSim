@@ -18,7 +18,7 @@ class Link(object):
         self.network_interface_2 = None
         self.packets_queue =  []
         self.connection_arrow = None
-        LoopingCall(self.transmission_channel).start(0.1)
+        LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
     def transmission_channel(self):
         # HERE NEEDS TO IMPLEMENTATION OF THE LATENCY
