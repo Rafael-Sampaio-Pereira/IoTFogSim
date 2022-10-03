@@ -9,15 +9,6 @@ from tkinter import PhotoImage
 from twisted.internet import tksupport
 from config.settings import version
 from core.functions import get_all_app_classes_name
-from core.standarddevice import StandardServerDevice
-from core.standarddevice import StandardClientDevice
-from core.standarddevice import AccessPoint
-from core.standarddevice import Router
-from core.standarddevice import WSNSensorNode
-from core.standarddevice import WSNRepeaterNode
-from core.standarddevice import WSNSinkNode
-from core.standarddevice import WirelessSensorNetwork
-from core.standarddevice import WirelessComputer
 from core.iconsRegister import getIconName
 import os
 
