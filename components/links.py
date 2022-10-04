@@ -20,6 +20,9 @@ class Link(object):
         self.network_interface_2 = None
         self.packets_queue =  []
         self.connection_arrow = None
+        self.sent_packets = []
+        self.dropped_packets = []
+        self.all_delays = []
         LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
     def transmission_channel(self):
@@ -30,23 +33,25 @@ class Link(object):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
                 sender = packet.trace[-1]
-                delay = simulate_network_delay(200, 60, 70, 10)
 
                 if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
-                    # yield sleep(delay)
+                    delay = simulate_network_delay(200, 60, 70, 10)
+                    self.all_delays.append(delay)
+                    self.sent_packets.append(packet)
                     if sender == self.network_interface_1:
                         self.animate_package(packet)
                         packet.trace.append(self.network_interface_2)
                         reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
-                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
+                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     elif sender == self.network_interface_2:
                         self.animate_package(packet)
                         packet.trace.append(self.network_interface_1)
                         reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
-                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
+                        self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     
                     self.packets_queue.remove(packet)
                 else:
+                    self.dropped_packets.append(packet)
                     self.simulation_core.updateEventsCounter(f"{self.name} - Failed to transmiting packet {packet.id}. Packet was dropped")
                     if sender.machine.app.protocol == 'TCP':
                         log.msg(f"Info :  - | {self.name} - Packet {packet.id} will be retransmitted due sender protocol is TCP")
