@@ -1,10 +1,12 @@
 import uuid
-from core.engine.network import drop_packet
+from core.engine.network import drop_packet, simulate_network_delay
 from twisted.python import log
 from twisted.internet.task import LoopingCall
 from bresenham import bresenham
-
-
+from twisted.internet.defer import inlineCallbacks
+from core.functions import sleep
+from twisted.internet import reactor
+        
         
 class Link(object):
     def __init__(self, simulation_core):
@@ -28,16 +30,19 @@ class Link(object):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
                 sender = packet.trace[-1]
+                delay = simulate_network_delay(200, 60, 70, 10)
+
                 if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
+                    # yield sleep(delay)
                     if sender == self.network_interface_1:
                         self.animate_package(packet)
                         packet.trace.append(self.network_interface_2)
-                        self.network_interface_2.machine.app.in_buffer.append(packet)
+                        reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
                     elif sender == self.network_interface_2:
                         self.animate_package(packet)
                         packet.trace.append(self.network_interface_1)
-                        self.network_interface_1.machine.app.in_buffer.append(packet)
+                        reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id}")
                     
                     self.packets_queue.remove(packet)
