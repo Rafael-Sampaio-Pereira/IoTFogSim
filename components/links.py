@@ -13,8 +13,7 @@ class Link(object):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().fields[-1]
         self.name = f'Link {self.id}'
-        self.bandwidth = '256kbps'
-        self.latency = '0.02s'
+        self.bandwidth = 256 #kbps
         self.packet_loss_rate = 0.5
         self.network_interface_1 = None
         self.network_interface_2 = None
@@ -23,10 +22,13 @@ class Link(object):
         self.sent_packets = []
         self.dropped_packets = []
         self.all_delays = []
+        self.delay_upper_bound = None
+        self.delay_lower_bound = None
+        self.delay_mean = None
+        self.delay_standard_deviation = None
         LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
     def transmission_channel(self):
-        # HERE NEEDS TO IMPLEMENTATION OF THE LATENCY
         self.handle_packets()
 
     def handle_packets(self):
@@ -35,7 +37,12 @@ class Link(object):
                 sender = packet.trace[-1]
 
                 if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
-                    delay = simulate_network_delay(200, 60, 70, 10)
+                    delay = simulate_network_delay(
+                        self.delay_upper_bound,
+                        self.delay_lower_bound,
+                        self.delay_mean,
+                        self.delay_standard_deviation
+                    )
                     self.all_delays.append(delay)
                     self.sent_packets.append(packet)
                     if sender == self.network_interface_1:
@@ -58,7 +65,7 @@ class Link(object):
                     else:
                         # if sender app protocol is not tcp, it will drop the packet and don't care about retransmissions
                         self.packets_queue.remove(packet)
-                        print("Não vai reenviar", sender.machine.app.protocol)
+
 
     def draw_connection_arrow(self):
         self.connection_arrow = self.simulation_core.canvas.create_line(
@@ -109,7 +116,10 @@ class Link(object):
 class FogWirelessLink(Link):
     def __init__(self, simulation_core):
         super(FogWirelessLink, self).__init__(simulation_core)
-        self.bandwidth = '256kbps'
-        self.latency = '0.02s'
+        self.bandwidth = 256 # kbps
         self.packet_loss_rate = 0.10
+        self.delay_upper_bound = 200 # ms
+        self.delay_lower_bound = 60 # ms
+        self.delay_mean = 70 # ms
+        self.delay_standard_deviation = 10 # ms
         

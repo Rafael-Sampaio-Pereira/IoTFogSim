@@ -10,7 +10,8 @@ class Packet(object):
             source_port,
             destiny_addr,
             destiny_port,
-            payload
+            payload,
+            length
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().fields[-1]
@@ -20,4 +21,5 @@ class Packet(object):
         self.destiny_port = destiny_port
         self.payload = payload
         self.trace = []
+        self.length = length
         self.created_at = datetime.datetime.now().isoformat()
