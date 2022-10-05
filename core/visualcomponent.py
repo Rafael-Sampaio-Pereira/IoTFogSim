@@ -7,12 +7,12 @@ from PIL import ImageTk, Image
 
 class VisualComponent(object):
 
-    def __init__(self, is_wireless, simulation_core, deviceName, file, x, y, coverage_area_radius, device):
+    def __init__(self, is_wireless, simulation_core, name, file, x, y, coverage_area_radius, device):
         self.simulation_core = simulation_core
         self.x = x
         self.y = y
         self.move_flag = False
-        self.deviceName = deviceName
+        self.name = name
         self.draggable_signal_circle = None
         self.coverage_area_radius = coverage_area_radius
         self.signal_radius = None
@@ -51,7 +51,7 @@ class VisualComponent(object):
             x, y, image=self.image_file, tag="icon")
 
         self.draggable_name = self.simulation_core.canvas.create_text(x, y+22, fill="black", font="Arial 7",
-                                                                      text=deviceName)
+                                                                      text=name)
 
         self.draggable_alert = self.simulation_core.canvas.create_text(x, y-22, fill="black", font="Times 7",
                                                                        text="")

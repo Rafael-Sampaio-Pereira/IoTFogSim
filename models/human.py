@@ -6,6 +6,7 @@ from config.settings import ICONS_PATH
 from twisted.python import log
 from PIL import ImageTk, Image
 from core.iconsRegister import getIconFileName
+from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
 
 
 class Human(object):
@@ -24,6 +25,20 @@ class Human(object):
             self.simulation_core,
             self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
+        
+    
+    def start(self):
+        self.run_mobility()
+        
+    def run_mobility(self):
+        GraphRandomWaypointMobility(
+            self.visual_component,
+            self.simulation_core,
+            0.008,
+            0.02,
+            1000,
+            10000
+        )
         
 
 

@@ -86,7 +86,7 @@ class GraphRandomWaypointMobility(MobilityModel):
                     )
           
             self.simulation_core.updateEventsCounter(
-                f"Mobile Node {self.visual_component.deviceName} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+                f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
             step_speed = random.uniform(self.min_speed, self.max_speed)
             wall_was_found = False
