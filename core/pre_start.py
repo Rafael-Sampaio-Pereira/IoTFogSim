@@ -2,6 +2,7 @@ from components.machines import Machine
 from components.peripherals import NetworkInterface
 import json
 import os
+from models.human import Human
 
 def load_nodes(project_name, simulation_core):
 
@@ -43,37 +44,21 @@ def load_nodes(project_name, simulation_core):
                     if machine['type'] == 'server':
                         simulation_core.all_servers.append(_machine)
         
+def load_humans(project_name, simulation_core):
 
+    with open('projects/'+project_name+'/humans.json', 'r') as humans_file:
+        data = json.loads(humans_file.read())
 
-
-# links_file = "./projects/"+simulation_core.project_name+"/links.json"
-# # verify if user has configured an link for current server - Rafael Sampaio
-# if 'link' in server.keys():
-#     # verify if the links.json file exists - Rafael Sampaio
-#     if os.path.isfile(links_file):
-#         with open(links_file, 'r') as file:
-#             links = json.loads(file.read())
-#             for link in links:
-#                 if server['link'] == link['name']:
-#                     # configure network settings in localhost(loopback) - Rafael Sampaio
-#                     sr.confirure_network_link(link['name'],
-#                                                 link['transmission_rate'],
-#                                                 link['latency'],
-#                                                 link['packet_loss'],
-#                                                 "lo")
-
-#                     # getting default network interface(e.g. eth0, wlp0) - Rafael Sampaio
-#                     default_interface = get_default_interface()
-
-#                     # configure network settings in default network interface - Rafael Sampaio
-#                     sr.confirure_network_link(link['name'],
-#                                                 link['transmission_rate'],
-#                                                 link['latency'],
-#                                                 link['packet_loss'],
-#                                                 default_interface)
-
-#     else:
-#         log.msg("There is no links.json file in this project.")
-# else:
-#     log.msg(
-#         f"Info : - | The network link was not configured for the server on port {server['port']}")
+        if data:
+            for human in data:
+                _human = Human(
+                    name=human['name'],
+                    age=human['age'],
+                    icon=human['icon'],
+                    x=human['x'],
+                    y=human['y'],
+                    weight=human['weight'],
+                    height=human['height'],
+                    simulation_core=simulation_core,
+                )
+                simulation_core.all_humans.append(_human)

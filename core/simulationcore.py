@@ -13,6 +13,7 @@ class SimulationCore(object):
 
     def __init__(self):
         self.all_links = []
+        self.all_humans = []
         self.all_gateway_to_gateway_links = []
         self.all_machines = []
         self.all_gateways = []

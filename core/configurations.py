@@ -3,7 +3,7 @@ from tkinter import PhotoImage
 from twisted.internet import tksupport
 from twisted.python import log
 
-from core.pre_start import load_nodes
+from core.pre_start import load_nodes, load_humans
 from core.ScrollableScreen import ScrollableScreen
 from core.simulationcore import SimulationCore
 import json
@@ -87,6 +87,7 @@ def initialization_screen(simulation_core):
                     settings['scene_adapter'])
             
             load_nodes(selected_project_name, simulation_core)
+            load_humans(selected_project_name, simulation_core)
 
             window.destroy()
             window.update()
