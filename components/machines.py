@@ -22,7 +22,8 @@ class Machine(object):
             app,
             type,
             coverage_area_radius,
-            connected_gateway_addrs
+            connected_gateway_addrs,
+            power_watts
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().hex
@@ -44,6 +45,8 @@ class Machine(object):
         self.app.simulation_core = simulation_core
         self.app.machine = self
         self.is_turned_on = False
+        self.consumed_energy = 0
+        self.power_watts = power_watts
         
     
     @inlineCallbacks
