@@ -24,7 +24,7 @@ class Machine(object):
             type,
             coverage_area_radius,
             connected_gateway_addrs,
-            power_kw
+            power_watts
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().hex
@@ -46,17 +46,25 @@ class Machine(object):
         self.app.simulation_core = simulation_core
         self.app.machine = self
         self.is_turned_on = False
-        self.power_kw = power_kw
+        self.power_watts = power_watts
         self.active_time = 0 # expressed in seconds
         
     def get_consumed_energy(self):
-        pass
+        """
+            https://www.youtube.com/watch?v=U9Tm7Bmr-i4
+        """
+        base_second = 0.000277778 # 1 second means 0,000277778 hour
+        active_hours = base_second * self.active_time
+        kw = self.power_watts/1000
+        consumed_energy = str(round((kw * active_hours),5))+" Kwh"
+        return consumed_energy
         
     def calculate_active_time(self):
         """Calculate active time in seconds. Each seconds increases the active time"""
         def time_conter():
             if self.is_turned_on:
                 self.active_time += 1
+                print(self.get_consumed_energy())
         LoopingCall(time_conter).start(1.0, now=True)
     
     @inlineCallbacks
