@@ -123,7 +123,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         """Distributes of a desired graph.
             Rafael Sampaio
         """
-        log.msg("Info : - | Generating graph mobility points...")
+        log.msg("Info :  - | Generating graph mobility points...")
         # waiting for mobility model object get the simulation core - Rafael Sampaio
         yield sleep(0.5)
         point_size = 0

@@ -25,7 +25,7 @@ def load_nodes(project_name, simulation_core):
                             machine['type'],
                             machine['coverage_area_radius'],
                             machine['connected_gateway_addrs'],
-                            machine['power_watts']
+                            machine['power_kw']
                         )
 
                     for intf in machine['network_interfaces']:
