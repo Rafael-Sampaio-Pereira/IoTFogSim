@@ -7,6 +7,7 @@ from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from components.links import FogWirelessLink
+from twisted.internet.task import LoopingCall
 
 
 class Machine(object):
@@ -45,9 +46,18 @@ class Machine(object):
         self.app.simulation_core = simulation_core
         self.app.machine = self
         self.is_turned_on = False
-        self.consumed_energy = 0
         self.power_kw = power_kw
+        self.active_time = 0 # expressed in seconds
         
+    def get_consumed_energy(self):
+        pass
+        
+    def calculate_active_time(self):
+        """Calculate active time in seconds. Each seconds increases the active time"""
+        def time_conter():
+            if self.is_turned_on:
+                self.active_time += 1
+        LoopingCall(time_conter).start(1.0, now=True)
     
     @inlineCallbacks
     def propagate_signal(self):
@@ -72,6 +82,7 @@ class Machine(object):
         
     def turn_on(self):
         self.is_turned_on = True
+        self.calculate_active_time()
         self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
         self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
         self.app.start()
