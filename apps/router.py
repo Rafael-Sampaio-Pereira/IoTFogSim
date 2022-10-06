@@ -56,31 +56,32 @@ class RouterApp(BaseApp):
     
 
     def main_loop(self):
-        if len(self.in_buffer) > 0:
-            for packet in self.in_buffer.copy():
-                destiny = self.simulation_core.get_machine_by_ip(packet.destiny_addr)
-                # verify if destiny is connected peers list, link in ip routering table
-                if destiny and destiny in self.machine.peers:
-                    packet.trace.append(self.machine.network_interfaces[0])
-                    self.direct_forward_packet(packet, destiny)
-                # if are not connected to destiny, try to find a route and send the packet
-                else:
-                    packet.trace.append(self.machine.network_interfaces[1])
-                    destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
-                    route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
-                    
-                    # if there is hops, we can send the packet to the first hop in the list
-                    if route_hops:
-                        if len(route_hops) > 0 :
-                            self.forward_packet_to_another_gateway(packet, route_hops[0])
+        if self.machine.is_turned_on:
+            if len(self.in_buffer) > 0:
+                for packet in self.in_buffer.copy():
+                    destiny = self.simulation_core.get_machine_by_ip(packet.destiny_addr)
+                    # verify if destiny is connected peers list, link in ip routering table
+                    if destiny and destiny in self.machine.peers:
+                        packet.trace.append(self.machine.network_interfaces[0])
+                        self.direct_forward_packet(packet, destiny)
+                    # if are not connected to destiny, try to find a route and send the packet
                     else:
-                        log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
-                
-                # if are not connected to destiny
-                # or dont found any route to forward packets,
-                # or packet was successfully forwarded
-                # just drop packets from in_buffer
-                self.in_buffer.remove(packet)
+                        packet.trace.append(self.machine.network_interfaces[1])
+                        destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
+                        route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
+                        
+                        # if there is hops, we can send the packet to the first hop in the list
+                        if route_hops:
+                            if len(route_hops) > 0 :
+                                self.forward_packet_to_another_gateway(packet, route_hops[0])
+                        else:
+                            log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
+                    
+                    # if are not connected to destiny
+                    # or dont found any route to forward packets,
+                    # or packet was successfully forwarded
+                    # just drop packets from in_buffer
+                    self.in_buffer.remove(packet)
                         
     def main(self):
         super().main()

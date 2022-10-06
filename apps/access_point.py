@@ -14,27 +14,28 @@ class AccessPointApp(BaseApp):
         
         
     def main_loop(self):
-        if len(self.in_buffer) > 0:
-            for packet in self.in_buffer.copy():
-                destiny = self.simulation_core.get_machine_by_ip(packet.destiny_addr)
-                # verify if destiny is connected peers list, link in ip routering table
-                if destiny and destiny in self.machine.peers:
-                    if self.machine.network_interfaces[0].is_wireless:
-                        self.machine.propagate_signal()
-                    packet.trace.append(self.machine.network_interfaces[0])
-                    self.direct_forward_packet(packet, destiny)
-                # if are not connected to destiny, send the packet to the base gateway
-                else:
-                    if self.machine.network_interfaces[1].is_wireless:
-                        self.machine.propagate_signal()
-                    packet.trace.append(self.machine.network_interfaces[1])
-                    self.forward_packet_to_another_gateway(packet, self.base_gateway)
+        if self.machine.is_turned_on:
+            if len(self.in_buffer) > 0:
+                for packet in self.in_buffer.copy():
+                    destiny = self.simulation_core.get_machine_by_ip(packet.destiny_addr)
+                    # verify if destiny is connected peers list, link in ip routering table
+                    if destiny and destiny in self.machine.peers:
+                        if self.machine.network_interfaces[0].is_wireless:
+                            self.machine.propagate_signal()
+                        packet.trace.append(self.machine.network_interfaces[0])
+                        self.direct_forward_packet(packet, destiny)
+                    # if are not connected to destiny, send the packet to the base gateway
+                    else:
+                        if self.machine.network_interfaces[1].is_wireless:
+                            self.machine.propagate_signal()
+                        packet.trace.append(self.machine.network_interfaces[1])
+                        self.forward_packet_to_another_gateway(packet, self.base_gateway)
 
-                # if are not connected to destiny
-                # or dont found any route to forward packets,
-                # or packet was successfully forwarded
-                # just drop packets from in_buffer
-                self.in_buffer.remove(packet)
+                    # if are not connected to destiny
+                    # or dont found any route to forward packets,
+                    # or packet was successfully forwarded
+                    # just drop packets from in_buffer
+                    self.in_buffer.remove(packet)
 
     def main(self):
         super().main()

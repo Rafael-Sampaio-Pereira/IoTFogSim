@@ -43,6 +43,7 @@ class Machine(object):
         self.connected_gateway_addrs = connected_gateway_addrs
         self.app.simulation_core = simulation_core
         self.app.machine = self
+        self.is_turned_on = False
         
     
     @inlineCallbacks
@@ -66,12 +67,16 @@ class Machine(object):
                 self.simulation_core.canvas.update()
             yield sleep(0.001)
         
-
     def turn_on(self):
-        self.simulation_core.updateEventsCounter(f"{self.name} - Initializing {self.type}...")
+        self.is_turned_on = True
+        self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
         self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
         self.app.start()
-    
+        
+    def turn_off(self):
+        self.is_turned_on = False
+        self.simulation_core.updateEventsCounter(f"{self.name} - Turning off {self.type}...")
+        
     def connect_to_peer(self, peer_address):
         # verify if there is a machine in simulation_core with this address
         peer = self.simulation_core.get_machine_by_ip(peer_address)

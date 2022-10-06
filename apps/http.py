@@ -24,10 +24,11 @@ class SimpleWebClientApp(BaseApp):
         LoopingCall(self.main_loop).start(0.1)
         
     def main_loop(self):
-        if len(self.in_buffer) > 0:
-            for packet in self.in_buffer.copy():
-                self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
-                self.in_buffer.remove(packet)
+        if self.machine.is_turned_on:
+            if len(self.in_buffer) > 0:
+                for packet in self.in_buffer.copy():
+                    self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
+                    self.in_buffer.remove(packet)
            
                 
 class SimpleWebServerApp(BaseApp):
@@ -38,16 +39,17 @@ class SimpleWebServerApp(BaseApp):
 
     
     def main_loop(self):
-        if len(self.in_buffer) > 0:
-            for packet in self.in_buffer.copy():
-                if packet.destiny_port == self.port:
-                    self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
-                    self.in_buffer.remove(packet)
-                    self.send_http_200_response(packet.source_addr, packet.source_port, 'HTTP 1.0 response', DEFAULT_PACKET_LENGTH)
-                else:
-                    self.in_buffer.remove(packet)
-                    self.send_http_404_response(packet.source_addr, packet.source_port, DEFAULT_PACKET_LENGTH)
-                    
+        if self.machine.is_turned_on:
+            if len(self.in_buffer) > 0:
+                for packet in self.in_buffer.copy():
+                    if packet.destiny_port == self.port:
+                        self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
+                        self.in_buffer.remove(packet)
+                        self.send_http_200_response(packet.source_addr, packet.source_port, 'HTTP 1.0 response', DEFAULT_PACKET_LENGTH)
+                    else:
+                        self.in_buffer.remove(packet)
+                        self.send_http_404_response(packet.source_addr, packet.source_port, DEFAULT_PACKET_LENGTH)
+                        
         
     def send_http_200_response(self, destiny_addr, destiny_port, response, length):
         self.send_packet(

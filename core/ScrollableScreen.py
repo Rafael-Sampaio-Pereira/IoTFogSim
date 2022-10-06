@@ -426,7 +426,7 @@ class ScrollableScreen(tkinter.Frame):
         is_running = self.canvas.simulation_core.is_running
 
         if is_running == True:
-            log.msg("Info : - | Stoping simulation...")
+            log.msg("Info :  - | Stoping simulation...")
             self.canvas.simulation_core.is_running = False
             play_icon = PIL.Image.open('graphics/icons/iotfogsim_play.png')
             play_icon = play_icon.resize((17, 17), Image.ANTIALIAS)
@@ -465,6 +465,9 @@ class ScrollableScreen(tkinter.Frame):
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
+            if len(self.canvas.simulation_core.all_machines) > 0:
+                for machine in self.canvas.simulation_core.all_machines:
+                    machine.turn_off()
             log.msg("Info :  - | Closing IoTFogSim Application...")
             reactor.crash()
 
