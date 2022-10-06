@@ -64,7 +64,6 @@ class Machine(object):
         def time_conter():
             if self.is_turned_on:
                 self.active_time += 1
-                print(self.get_consumed_energy())
         LoopingCall(time_conter).start(1.0, now=True)
     
     @inlineCallbacks
