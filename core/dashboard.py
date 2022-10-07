@@ -10,8 +10,13 @@ class DashboardScreen(tkinter.Frame):
     def __init__(self, project_name, simulation_core):
         root = tkinter.Toplevel()
         tksupport.install(root)
-        root.geometry("700x900")
-        root.resizable(False, False)
+        w_heigth = 300
+        w_width = 700
+        w_top_padding = 900
+        w_letf_padding = 1000
+        root.geometry(str(w_width)+"x"+str(w_heigth)+"+" +
+                        str(w_letf_padding)+"+"+str(w_top_padding))
+        root.resizable(False, True)
         root.iconify()
         tkinter.Frame.__init__(self, root)
         
@@ -29,6 +34,7 @@ class DashboardScreen(tkinter.Frame):
         self.canvas.simulation_core = simulation_core
         
         self.ball = self.canvas.create_oval(10, 10, 40, 40, fill="black")
+        
     
     def getCanvas(self):
         return self.canvas
