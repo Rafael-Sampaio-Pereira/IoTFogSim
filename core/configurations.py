@@ -45,7 +45,7 @@ def initialization_screen(simulation_core):
     window = tkinter.Toplevel()
     tksupport.install(window)
     window.title(
-        "IoTFogSim %s - An Distributed Event-Driven Network Simulator" % (version))
+        "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
     window.geometry("400x552")
     window.resizable(False, False)
 

@@ -97,7 +97,7 @@ class SimulationCore(object):
 
         # Setting window top text. - Rafael Sampaio
         window.title(
-            "IoTFogSim %s - An Distributed Event-Driven Network Simulator" % (version))
+            "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
 
         # Simulation area on screen. - Rafael Sampaio
         self.simulation_screen = ScrollableScreen(

@@ -176,7 +176,7 @@ class ScrollableScreen(tkinter.Frame):
     # def add_new_node_modal_screen(self, network_layer, node_type):
     #     window = tkinter.Toplevel()
     #     tksupport.install(window)
-    #     window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+    #     window.title("IoTFogSim %s - An Event-Driven Network Simulator"%(version))
     #     window.geometry("400x551")
     #     window.resizable(False, False)
 
@@ -295,7 +295,7 @@ class ScrollableScreen(tkinter.Frame):
     #         def openAPWindow():
     #             ap_window = tkinter.Toplevel()
     #             tksupport.install(ap_window)
-    #             ap_window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+    #             ap_window.title("IoTFogSim %s - An Event-Driven Network Simulator"%(version))
     #             ap_window.geometry("300x200")
     #             ap_window.resizable(False, False)
 
@@ -486,7 +486,7 @@ class ScrollableScreen(tkinter.Frame):
         window = tkinter.Toplevel()
         tksupport.install(window)
         window.title(
-            "IoTFogSim %s - An Distributed Event-Driven Network Simulator" % (version))
+            "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
         window.geometry("700x900")
         window.resizable(False, False)
 

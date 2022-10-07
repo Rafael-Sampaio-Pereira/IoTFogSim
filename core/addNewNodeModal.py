@@ -15,7 +15,7 @@ import os
 def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         window = tkinter.Toplevel()
         tksupport.install(window)
-        window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+        window.title("IoTFogSim %s - An Event-Driven Network Simulator"%(version))
         window.geometry("400x551")
         window.resizable(False, False)
 
@@ -153,7 +153,7 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             def openAPWindow():
                 ap_window = tkinter.Toplevel()
                 tksupport.install(ap_window)
-                ap_window.title("IoTFogSim %s - An Distributed Event-Driven Network Simulator"%(version))
+                ap_window.title("IoTFogSim %s - An Event-Driven Network Simulator"%(version))
                 ap_window.geometry("300x300")
                 ap_window.resizable(False, False)
 
