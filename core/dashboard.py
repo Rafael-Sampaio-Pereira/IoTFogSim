@@ -12,13 +12,13 @@ class DashboardScreen(tkinter.Frame):
     def __init__(self, project_name, simulation_core):
         self.root = tkinter.Toplevel()
         tksupport.install(self.root)
-        w_heigth = 300
-        w_width = 700
+        self.w_heigth = 300
+        self.w_width = 700
         w_top_padding = 900
         w_letf_padding = 1000
-        self.scrollable_height = w_heigth + 200
-        self.scrollable_width = w_width
-        self.root.geometry(str(w_width)+"x"+str(w_heigth)+"+" +
+        self.scrollable_height = self.w_heigth
+        self.scrollable_width = self.w_width
+        self.root.geometry(str(self.w_width)+"x"+str(self.w_heigth)+"+" +
                         str(w_letf_padding)+"+"+str(w_top_padding))
         self.root.resizable(False, True)
         self.root.iconify()
@@ -77,7 +77,8 @@ class DashboardScreen(tkinter.Frame):
     def update_dashboard(self):
         before_padding = 10
         last_height = 60
-
+        self.all_icons = []
+        self.scrollable_height = self.w_heigth + 200
         for index, machine in enumerate(self.simulation_core.all_machines):
             image_file = ImageTk.PhotoImage(file=machine.icon)
             temp_height = image_file.height()+before_padding
