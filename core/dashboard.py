@@ -4,6 +4,8 @@ import tkinter
 from twisted.internet import tksupport
 from config.settings import version
 from tkinter import PhotoImage
+from twisted.internet.task import LoopingCall
+from PIL import ImageTk
 
 
 class DashboardScreen(tkinter.Frame):
@@ -49,18 +51,17 @@ class DashboardScreen(tkinter.Frame):
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        # self.canvas.create_text(50,10, anchor="nw", text="Events: ")
-        # self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
-
-        # # Label to show position on screen - Rafael Sampaio
-        # self.position_label = self.canvas.create_text(300,10, anchor="nw", text="0", tags=("position_label",))
-
         # This is what enables scrolling with the mouse:
         self.canvas.bind("<ButtonPress-2>", self.scroll_start)
         self.canvas.bind("<B2-Motion>", self.scroll_move)
         
-        self.ball = self.canvas.create_oval(100, 400, 150, 450, fill="red")
+        self.all_icons = []
+        self.default_icon = None
         
+        update_interval = 1
+        LoopingCall(self.update_dashboard).start(update_interval, now=True)
+        
+       
     def scroll_start(self, event):
         self.canvas.config(cursor='fleur')
         self.canvas.scan_mark(event.x, event.y)
@@ -72,21 +73,15 @@ class DashboardScreen(tkinter.Frame):
     
     def getCanvas(self):
         return self.canvas
-        
-
-
-# def dashboard(self):
-#     window = tkinter.Toplevel()
-#     tksupport.install(window)
-#     window.title(
-#         "IoTFogSim %s - An Event-Driven Network Simulator - Dashboard" % (version))
-#     window.geometry("700x900")
-#     window.resizable(False, True)
-
-#     # Setting window icon. - Rafael Sampaio
-#     window.iconphoto(True, PhotoImage(
-#         file='graphics/icons/iotfogsim_icon.png'))
     
-
-#     self.dashboard_canvas = tkinter.Canvas(
-#         window, width=500, height=400, bg='#263238', highlightthickness=0)
+    def update_dashboard(self):
+        before_padding = 10
+        last_height = 60
+        for machine in self.simulation_core.all_machines:
+            image_file = ImageTk.PhotoImage(file=machine.icon)
+            temp_height = image_file.height()+before_padding
+            self.scrollable_height += temp_height
+            self.default_icon  = self.canvas.create_image(
+                50, last_height, image=image_file, tag="icon")
+            self.all_icons.append(image_file)
+            last_height += 60

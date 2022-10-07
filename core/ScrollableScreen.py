@@ -20,6 +20,7 @@ from random import randrange
 from core.addNewNodeModal import add_new_node_modal_screen
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
+from core.dashboard import DashboardScreen
 
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
@@ -461,6 +462,11 @@ class ScrollableScreen(tkinter.Frame):
                     
             for human in self.canvas.simulation_core.all_humans:
                 reactor.callLater(0.3, human.start)
+                
+            self.dashboard_screen = DashboardScreen(
+            self.canvas.simulation_core.project_name, self.canvas.simulation_core)
+            self.dashboard_screen.pack(fill="both", expand=True)
+            self.canvas.simulation_core.dashboard_canvas = self.dashboard_screen.getCanvas()
 
 
     # This method is called when close window button is press. - Rafael Sampaio
