@@ -4,7 +4,6 @@ from twisted.internet import tksupport
 from twisted.python import log
 
 from core.pre_start import load_nodes, load_humans
-from core.ScrollableScreen import ScrollableScreen
 from core.simulationcore import SimulationCore
 import json
 import os

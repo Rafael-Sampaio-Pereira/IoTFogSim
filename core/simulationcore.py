@@ -6,6 +6,7 @@ from twisted.internet import tksupport
 from tkinter import PhotoImage
 from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
+from core.dashboard import DashboardScreen
 from importlib import import_module
 
 
@@ -21,7 +22,9 @@ class SimulationCore(object):
         self.all_apps = []
         self.all_ip = []
         self.canvas = None
+        self.dashboard_canvas = None
         self.simulation_screen = None
+        self.dashboard_screen = None
         self.eventsCounter = 0
         self.project_name = None
         self.is_running = False
@@ -90,5 +93,10 @@ class SimulationCore(object):
         canvas = self.simulation_screen.getCanvas()
 
         self.canvas = canvas
+        
+        
+        self.dashboard_screen = DashboardScreen(
+            self.project_name, self)
+        self.dashboard_screen.pack(fill="both", expand=True)
+        self.dashboard_canvas = self.dashboard_screen.getCanvas()
 
-        return self.canvas

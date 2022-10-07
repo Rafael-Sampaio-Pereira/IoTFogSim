@@ -461,8 +461,7 @@ class ScrollableScreen(tkinter.Frame):
                     
             for human in self.canvas.simulation_core.all_humans:
                 reactor.callLater(0.3, human.start)
-                
-            self.dashboard()
+
 
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):
@@ -480,16 +479,3 @@ class ScrollableScreen(tkinter.Frame):
             stop_icon = ImageTk.PhotoImage(stop_icon)
             self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon
-            
-    
-    def dashboard(self):
-        window = tkinter.Toplevel()
-        tksupport.install(window)
-        window.title(
-            "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
-        window.geometry("700x900")
-        window.resizable(False, True)
-
-        # Setting window icon. - Rafael Sampaio
-        window.iconphoto(True, PhotoImage(
-            file='graphics/icons/iotfogsim_icon.png'))
