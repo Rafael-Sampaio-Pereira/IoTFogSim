@@ -17,6 +17,8 @@ iconsList = {
     "human_icon": "iotfogsim_human.png",
     "internet_icon": "iotfogsim_internet.png",
     "notebook_icon": "iotfogsim_notebook.png",
+    "off_button_icon": "iotfogsim_off_button.png",
+    "on_button_icon": "iotfogsim_on_button.png",
     "repeater_icon": "iotfogsim_repeater.png",
     "restfull_server_icon": "iotfogsim_restfull_server.png",
     "router_icon": "iotfogsim_router.png",
