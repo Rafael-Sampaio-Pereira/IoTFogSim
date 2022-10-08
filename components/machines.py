@@ -47,23 +47,23 @@ class Machine(object):
         self.app.machine = self
         self.is_turned_on = False
         self.power_watts = power_watts
-        self.active_time = 0 # expressed in seconds
+        self.up_time = 0 # expressed in seconds
         
     def get_consumed_energy(self):
         """
             https://www.youtube.com/watch?v=U9Tm7Bmr-i4
         """
         base_second = 0.000277778 # 1 second means 0,000277778 hour
-        active_hours = base_second * self.active_time
+        active_hours = base_second * self.up_time
         kw = self.power_watts/1000
         consumed_energy = str(round((kw * active_hours),5))+" Kwh"
         return consumed_energy
         
-    def calculate_active_time(self):
+    def calculate_up_time(self):
         """Calculate active time in seconds. Each seconds increases the active time"""
         def time_conter():
             if self.is_turned_on:
-                self.active_time += 1
+                self.up_time += 1
         LoopingCall(time_conter).start(1.0, now=True)
     
     @inlineCallbacks
@@ -89,7 +89,7 @@ class Machine(object):
         
     def turn_on(self):
         self.is_turned_on = True
-        self.calculate_active_time()
+        self.calculate_up_time()
         self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
         self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
         self.app.start()

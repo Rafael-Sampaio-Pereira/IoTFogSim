@@ -7,6 +7,7 @@ from tkinter import PhotoImage
 from twisted.internet.task import LoopingCall
 from PIL import ImageTk
 from tkinter import ttk
+import datetime
 
 
 class DashboardScreen(tkinter.Frame):
@@ -93,24 +94,29 @@ class DashboardScreen(tkinter.Frame):
             power = self.canvas.create_text(265, last_height-10, anchor="nw", text=f"{machine.power_watts}W", fill="white")
             kwh = self.canvas.create_text(320, last_height-10, anchor="nw", text=f"{machine.get_consumed_energy()}", fill="white")
             state = None
+
             if machine.is_turned_on:
                 state = self.canvas.create_text(420, last_height-10, anchor="nw", text=f"ON", fill="green", font='bold')
             else:
                 state = self.canvas.create_text(420, last_height-10, anchor="nw", text=f"OFF", fill="red", font='bold')
-                        
+            
+            up_time = self.canvas.create_text(460, last_height-10, anchor="nw", text=f"{str(datetime.timedelta(seconds=machine.up_time))}", fill="white")
+            
+            line = self.canvas.create_line(0,last_height+30,self.w_width,last_height+30, width=1, fill="#37474F")
+            line2 = self.canvas.create_line(0,last_height+31,self.w_width,last_height+31, width=1, fill="#212121")
+            
             last_height += 60
             
             # delete old displayed items
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, _type)
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, icon)
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, ip)
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, kwh)
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, power)
-            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, state)
-            
-            
-            
-            
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, _type)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, icon)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, ip)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, kwh)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, power)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, state)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, up_time)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, line)
+            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, line2)
             
         
         self.canvas.configure(scrollregion=(
