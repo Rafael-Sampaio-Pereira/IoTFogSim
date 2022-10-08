@@ -8,6 +8,7 @@ from twisted.internet.task import LoopingCall
 from PIL import ImageTk
 from tkinter import ttk
 import datetime
+from twisted.internet import reactor
 
 
 class DashboardScreen(tkinter.Frame):
@@ -110,17 +111,17 @@ class DashboardScreen(tkinter.Frame):
             last_height += 60
             
             # delete old displayed items
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, _type)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, icon)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, ip)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, kwh)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, power)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, state)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, up_time)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, billing_amount)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, line)
-            self.simulation_core.canvas.after(self.update_interval*1000, self.canvas.delete, line2)
-            
+            reactor.callLater(self.update_interval, self.canvas.delete, _type)
+            reactor.callLater(self.update_interval, self.canvas.delete, icon)
+            reactor.callLater(self.update_interval, self.canvas.delete, ip)
+            reactor.callLater(self.update_interval, self.canvas.delete, kwh)
+            reactor.callLater(self.update_interval, self.canvas.delete, power)
+            reactor.callLater(self.update_interval, self.canvas.delete, state)
+            reactor.callLater(self.update_interval, self.canvas.delete, up_time)
+            reactor.callLater(self.update_interval, self.canvas.delete, billing_amount)
+            reactor.callLater(self.update_interval, self.canvas.delete, line)
+            reactor.callLater(self.update_interval, self.canvas.delete, line2)
+        
         
         self.canvas.configure(scrollregion=(
             0, 0,  self.scrollable_width,  self.scrollable_height))
