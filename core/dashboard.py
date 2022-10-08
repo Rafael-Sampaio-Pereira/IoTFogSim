@@ -6,6 +6,7 @@ from config.settings import version
 from tkinter import PhotoImage
 from twisted.internet.task import LoopingCall
 from PIL import ImageTk
+from tkinter import ttk
 
 
 class DashboardScreen(tkinter.Frame):
@@ -58,8 +59,8 @@ class DashboardScreen(tkinter.Frame):
         
         self.all_icons = []
         
-        update_interval = 1
-        LoopingCall(self.update_dashboard).start(update_interval, now=True)
+        self.update_interval = 1
+        LoopingCall(self.update_dashboard).start(self.update_interval, now=True)
         
        
     def scroll_start(self, event):
@@ -78,15 +79,39 @@ class DashboardScreen(tkinter.Frame):
         before_padding = 10
         last_height = 60
         self.all_icons = []
-        self.scrollable_height = self.w_heigth + 200
+        self.scrollable_height = self.w_heigth
         for index, machine in enumerate(self.simulation_core.all_machines):
             image_file = ImageTk.PhotoImage(file=machine.icon)
             temp_height = image_file.height()+before_padding
             self.scrollable_height += temp_height
-            self.canvas.create_image(
+            icon = self.canvas.create_image(
                 50, last_height, image=image_file, tag="icon")
             self.all_icons.append(image_file)
+            
+            _type = self.canvas.create_text(120, last_height-10, anchor="nw", text=f"{machine.type}" if len(machine.type) <= 6 else f"{machine.type[:4 or None]}...", fill="white")
+            ip = self.canvas.create_text(170, last_height-10, anchor="nw", text=f"{machine.network_interfaces[0].ip}", fill="white")
+            power = self.canvas.create_text(265, last_height-10, anchor="nw", text=f"{machine.power_watts}W", fill="white")
+            kwh = self.canvas.create_text(320, last_height-10, anchor="nw", text=f"{machine.get_consumed_energy()}", fill="white")
+            state = None
+            if machine.is_turned_on:
+                state = self.canvas.create_text(420, last_height-10, anchor="nw", text=f"ON", fill="green", font='bold')
+            else:
+                state = self.canvas.create_text(420, last_height-10, anchor="nw", text=f"OFF", fill="red", font='bold')
+                        
             last_height += 60
+            
+            # delete old displayed items
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, _type)
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, icon)
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, ip)
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, kwh)
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, power)
+            self.simulation_core.canvas.after(self.update_interval+1000, self.canvas.delete, state)
+            
+            
+            
+            
+            
         
         self.canvas.configure(scrollregion=(
             0, 0,  self.scrollable_width,  self.scrollable_height))
