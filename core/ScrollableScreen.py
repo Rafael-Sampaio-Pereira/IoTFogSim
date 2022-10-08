@@ -458,7 +458,7 @@ class ScrollableScreen(tkinter.Frame):
             # yield sleep(0.5)   
             for machine in self.canvas.simulation_core.all_machines:
                 if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server' or machine.type != 'access_point':
-                    reactor.callLater(0.3, machine.turn_on)
+                    reactor.callLater(0.1, machine.turn_on)
                     
             for human in self.canvas.simulation_core.all_humans:
                 reactor.callLater(0.3, human.start)
