@@ -1,3 +1,4 @@
+from typing_extensions import Self
 import uuid
 from core.functions import import_and_instantiate_class_from_string
 from config.settings import ICONS_PATH
@@ -48,6 +49,11 @@ class Machine(object):
         self.is_turned_on = False
         self.power_watts = power_watts
         self.up_time = 0 # expressed in seconds
+        self.currency_prefix = "R$"
+        self.kwh_price = 1.20
+        
+    def get_billable_amount(self):
+        return self.currency_prefix+str(round(float(self.get_consumed_energy()[:-4])*self.kwh_price,3))
         
     def get_consumed_energy(self):
         """
