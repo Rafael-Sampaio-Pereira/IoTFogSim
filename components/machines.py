@@ -53,7 +53,7 @@ class Machine(object):
         self.kwh_price = 1.20
         
     def get_billable_amount(self):
-        return self.currency_prefix+str(round(float(self.get_consumed_energy()[:-4])*self.kwh_price,3))
+        return self.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.kwh_price,3))
         
     def get_consumed_energy(self):
         """
