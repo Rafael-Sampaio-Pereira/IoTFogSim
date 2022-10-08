@@ -125,13 +125,4 @@ class DashboardScreen(tkinter.Frame):
         
         self.canvas.configure(scrollregion=(
             0, 0,  self.scrollable_width,  self.scrollable_height))
-        
-
-            
-            # self.canvas.columnconfigure(0) # making the columns responsive
-            # self.canvas.rowconfigure(index) # making the rows responsive
-            # # b = tkinter.Entry(self.root,label=image_file)
-            # label = tkinter.Label(self.canvas, image = image_file)
-            # label.image = image_file
-            # label.grid(row=index,column=0,sticky=tkinter.NSEW)
 
