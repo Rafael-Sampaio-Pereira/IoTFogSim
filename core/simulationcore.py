@@ -29,6 +29,8 @@ class SimulationCore(object):
         self.is_running = False
         self.scene_adapter = None
         self.global_seed = None
+        self.currency_prefix = "R$"
+        self.kwh_price = 1.20
         
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None

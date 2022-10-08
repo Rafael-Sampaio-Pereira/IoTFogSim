@@ -49,11 +49,9 @@ class Machine(object):
         self.is_turned_on = False
         self.power_watts = power_watts
         self.up_time = 0 # expressed in seconds
-        self.currency_prefix = "R$"
-        self.kwh_price = 1.20
-        
+                
     def get_billable_amount(self):
-        return self.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.kwh_price,3))
+        return self.simulation_core.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.simulation_core.kwh_price,3))
         
     def get_consumed_energy(self):
         """
