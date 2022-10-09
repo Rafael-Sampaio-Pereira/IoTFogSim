@@ -3,6 +3,7 @@ from bresenham import bresenham
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from mobility.mobility_models import MobilityModel
+from twisted.internet import reactor
 
 
 """
@@ -97,5 +98,5 @@ class RandomWaypointMobility(MobilityModel):
                     yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
-            self.simulation_core.canvas.after(random.randint(
+            reactor.callLater(random.randint(
                 self.min_pause, self.max_pause), self.move)

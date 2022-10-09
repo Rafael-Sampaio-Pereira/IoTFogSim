@@ -36,8 +36,8 @@ class Human(object):
             self.simulation_core,
             0.008,
             0.02,
-            1000,
-            10000
+            10,
+            100
         )
         
 

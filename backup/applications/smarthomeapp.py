@@ -95,8 +95,8 @@ class PersonDataProducerApp(MobileProducerApp):
             self.simulation_core,
             0.008,
             0.02,
-            1000,
-            10000
+            10,
+            100
         )
         
         # RandomDirectionMobility(
@@ -104,8 +104,8 @@ class PersonDataProducerApp(MobileProducerApp):
         #     self.simulation_core,
         #     0.008,
         #     0.02,
-        #     1000,
-        #     10000
+        #     10,
+        #     100
         # )
 
 
@@ -117,6 +117,6 @@ class PersonGraphDataProducerApp(PersonDataProducerApp):
             self.simulation_core,
             0.008,
             0.02,
-            1000,
-            10000
+            10,
+            100
         )
