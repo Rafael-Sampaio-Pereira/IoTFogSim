@@ -9,7 +9,20 @@
         "coverage_area_radius": 0,
         "application": "apps.refrigerator.RefrigeratorApp",
         "network_interfaces": [],
+        "x": 364,
+        "y": 120
+    },
+    {
+        "name": "Smart TV",
+        "MIPS": 1024,
+        "icon": "smart_tv_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 55,
+        "coverage_area_radius": 0,
+        "application": "apps.smarttv.SmartTVApp",
+        "network_interfaces": [],
         "x": 1084,
-        "y": 84
+        "y": 120
     }
 ]
