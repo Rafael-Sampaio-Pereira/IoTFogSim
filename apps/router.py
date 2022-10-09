@@ -89,4 +89,5 @@ class RouterApp(BaseApp):
         if destiny.network_interfaces[1] not in packet.trace:
             self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[1].ip} - packet: {packet.id}")
             destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
-            destiny_link.packets_queue.append(packet)
+            if destiny_link:
+                destiny_link.packets_queue.append(packet)

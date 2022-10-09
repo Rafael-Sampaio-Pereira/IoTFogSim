@@ -11,7 +11,6 @@ def load_nodes(project_name, simulation_core):
         data = json.loads(nodes_file.read())
 
         if data:
-            ################## LOADING DEVICES - Rafael Sampaio ##################
             for network in data['networks']:
                 for machine in network['machines']:
                     _machine = Machine(
