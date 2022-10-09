@@ -8,6 +8,8 @@ import networkx as nx
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.python import log
+from twisted.internet import reactor
+from twisted.internet.task import cooperate
 
 
 """
@@ -46,7 +48,8 @@ class GraphRandomWaypointMobility(MobilityModel):
     def start(self):
         # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list - Rafael Sampaio
         yield sleep(0.5)
-        self.move()
+        
+        reactor.callFromThread(self.move)
 
     @inlineCallbacks
     def move(self) -> None:
@@ -101,12 +104,11 @@ class GraphRandomWaypointMobility(MobilityModel):
                         # preventing icon cross wall - Rafael Sampaio
                         tolerance = 10
                         # Moving icon on screen at - Rafael Sampaio
-                        self.visual_component.move_on_screen(x, y)
+                        cooperate(self.visual_component.move_on_screen(x, y))
                         if self.simulation_core.scene_adapter:
                             if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
                                 # if found a collision, then rolling back to old position - Rafael Sampaio
-                                self.visual_component.move_on_screen(
-                                    old_x, old_y)
+                                reactor.callFromThread(self.visual_component.move_on_screen, old_x, old_y)
                                 wall_was_found = True
                                 break
                     else:
@@ -152,11 +154,10 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.add_graph_node("POINT_10", x=1024, y=696)
         
         # Put icon in the fisrt node of the graph - Rafael Sampaio
-        self.visual_component.move_on_screen(
-                                    124, 180)
+        self.visual_component.move_on_screen(124, 180)
         
         # Drawing points in canvas - Rafael Sampaio
-        self.draw_points(point_size)
+        # self.draw_points(point_size)
     
     @inlineCallbacks  
     def generate_graph_edges(self):
@@ -202,7 +203,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         yield sleep(1)
         self.generate_graph_edges()
         yield sleep(1)
-        self.start()
+        cooperate(self.start())
         
     def add_graph_edge_with_dinamic_weight(self, fisrt_node: str, second_node: str):
         # the edge weight will be added calculating the distance between the nodes -Rafael Sampaio

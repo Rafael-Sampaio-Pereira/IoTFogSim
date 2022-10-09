@@ -39,24 +39,23 @@ class ContinuosRequetWebClientApp(BaseApp):
         self.port = 80
         self.name ='WEBClient'
         self.servers_address = ['192.168.0.2', '192.168.1.2', '172.148.0.2']
+        # self.servers_address = ['192.168.0.2']
         
         
     def main(self):
         super().main()
-        LoopingCall(self.main_loop).start(1)
+        LoopingCall(self.main_loop).start(10)
         
     def main_loop(self):
         cont=0
-        for server_addr in self.servers_address:
-            cont+=1
-            reactor.callLater(cont*10, self.send_packet, server_addr, 80, 'HTTP 1.0 POST request', DEFAULT_PACKET_LENGTH)
-            
         if self.machine.is_turned_on:
+            for server_addr in self.servers_address:
+                cont+=1
+                reactor.callLater(cont*10.0, self.send_packet, server_addr, 80, 'HTTP 1.0 POST request', DEFAULT_PACKET_LENGTH)
             if len(self.in_buffer) > 0:
                 for packet in self.in_buffer.copy():
                     self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
                     self.in_buffer.remove(packet)
-           
                 
 class SimpleWebServerApp(BaseApp):
     def __init__(self):

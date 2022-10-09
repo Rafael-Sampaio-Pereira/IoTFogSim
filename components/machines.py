@@ -8,6 +8,7 @@ from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet.task import LoopingCall
+from twisted.internet import reactor
 
 
 class Machine(object):
@@ -91,11 +92,12 @@ class Machine(object):
             yield sleep(0.001)
         
     def turn_on(self, event=None):
-        self.is_turned_on = True
-        self.calculate_up_time()
-        self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
-        self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
-        self.app.start()
+        if not self.is_turned_on:
+            self.is_turned_on = True
+            reactor.callFromThread(self.calculate_up_time)
+            self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
+            self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
+            reactor.callFromThread(self.app.start)
         
     def turn_off(self, event=None):
         self.is_turned_on = False

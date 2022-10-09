@@ -6,6 +6,7 @@ from bresenham import bresenham
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet import reactor
+from twisted.internet.task import cooperate
         
         
 class Link(object):
@@ -29,8 +30,8 @@ class Link(object):
         LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
     def transmission_channel(self):
-        self.handle_packets()
-
+        reactor.callFromThread(self.handle_packets)
+        
     def handle_packets(self):
         if len(self.packets_queue) > 0:
             for packet in self.packets_queue.copy():
@@ -68,12 +69,18 @@ class Link(object):
 
 
     def draw_connection_arrow(self):
+        arrow_color = None
+        if self.network_interface_1.is_wireless == True or self.network_interface_2.is_wireless == True:
+            arrow_color = "#CFD8DC"
+        else:
+            arrow_color = "#263238"
         self.connection_arrow = self.simulation_core.canvas.create_line(
             self.network_interface_1.machine.visual_component.x,
             self.network_interface_1.machine.visual_component.y,
             self.network_interface_2.machine.visual_component.x,
             self.network_interface_2.machine.visual_component.y,
             arrow="both",
+            fill=arrow_color,
             width=1,
             dash=(4,2)
         )
@@ -101,14 +108,14 @@ class Link(object):
             self.all_coordinates = list(bresenham(
                 x1, y1, x2, y2
             ))
-            self.display_time = 9 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
-            self.package_speed = 1 # this must be interger and determines the velocity of the packet moving in the canvas - Rafael Sampaio
+            self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
+            self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas - Rafael Sampaio
 
-            cont = 100
+            cont = 0.001
             for x, y in self.all_coordinates:
                 # verify if package ball just got its destiny - Rafael Sampaio
                 if x == x2 and y == y2:
-                    self.simulation_core.canvas.after(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+                    reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
 
-                self.simulation_core.canvas.after(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7) # 7 is the package ball size - Rafael Sampaio
+                cooperate(reactor.callLater(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7))
                 cont = cont + self.package_speed

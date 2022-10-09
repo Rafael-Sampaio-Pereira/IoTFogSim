@@ -2,6 +2,7 @@ from twisted.python import log
 from twisted.internet.task import LoopingCall
 from core.engine.network import extract_ip_prefix
 from apps.base_app import BaseApp
+from twisted.internet import reactor
 
 
 class RouterApp(BaseApp):
@@ -66,7 +67,7 @@ class RouterApp(BaseApp):
                         # if there is hops, we can send the packet to the first hop in the list
                         if route_hops:
                             if len(route_hops) > 0 :
-                                self.forward_packet_to_another_gateway(packet, route_hops[0])
+                                reactor.callFromThread(self.forward_packet_to_another_gateway, packet, route_hops[0])
                         else:
                             log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[1].ip}) could not find a route to {destiny_addr_prefix} subnetwork")
                     

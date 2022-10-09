@@ -3,6 +3,7 @@ from components.packets import Packet
 from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
+from twisted.internet import reactor
 
 
 
@@ -23,7 +24,7 @@ class BaseApp(object):
     def start(self):
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Starting app...")
         yield sleep(0.5)
-        self.main()
+        reactor.callFromThread(self.main)
 
     def send_packet(self, destiny_addr, destiny_port, payload, length):
         _packet = Packet(
