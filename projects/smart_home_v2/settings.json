@@ -2,6 +2,8 @@
     "settings": {
         "resizeable": true,
         "scene_adapter": null,
-        "global_seed": null
+        "global_seed": null,
+        "currency_prefix": "R$",
+        "kwh_price": 1.20
     }
 }

@@ -79,6 +79,16 @@ def initialization_screen(simulation_core):
                 simulation_core.global_seed = settings['global_seed']
             else:
                 simulation_core.global_seed = None
+                
+            if 'currency_prefix' in settings:
+                simulation_core.currency_prefix = settings['currency_prefix']
+            else:
+                simulation_core.currency_prefix = "USD"
+                
+            if 'kwh_price' in settings:
+                simulation_core.kwh_price = settings['kwh_price']
+            else:
+                simulation_core.kwh_price = 0.99
 
             simulation_core.create_simulation_canvas(resizable)
             if 'scene_adapter' in settings:
