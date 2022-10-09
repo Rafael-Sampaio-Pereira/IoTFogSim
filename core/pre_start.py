@@ -97,3 +97,39 @@ def load_links(project_name, simulation_core):
                         if (itf1.machine.type == 'router' or itf1.machine.type == 'switch' or itf1.machine.type == 'access_point') and (itf2.machine.type == 'router' or itf2.machine.type == 'switch' or itf2.machine.type == 'access_point'):
                             itf1.machine.app.neighbor_gateways.append(itf2.machine)
                             itf2.machine.app.neighbor_gateways.append(itf1.machine)
+                            
+                            
+                            
+def load_appliances(project_name, simulation_core):
+
+    with open('projects/'+project_name+'/appliances.json', 'r') as appliances_file:
+        data = json.loads(appliances_file.read())
+
+        if data:
+            for machine in data:
+                _machine = Machine(
+                        simulation_core,
+                        machine['name'],
+                        machine['MIPS'],
+                        machine['icon'],
+                        machine['is_wireless'],
+                        machine['x'],
+                        machine['y'],
+                        machine['application'],
+                        machine['type'],
+                        machine['coverage_area_radius'],
+                        machine['connected_gateway_addrs'],
+                        machine['power_watts']
+                    )
+
+                for intf in machine['network_interfaces']:
+                    _interface = NetworkInterface(
+                        simulation_core,
+                        intf['name'],
+                        intf['is_wireless'],
+                        intf['ip'],
+                        _machine
+                    )
+                    _machine.network_interfaces.append(_interface)
+                    simulation_core.all_network_interfaces.append(_interface)
+                simulation_core.all_machines.append(_machine)

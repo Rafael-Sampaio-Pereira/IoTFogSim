@@ -96,7 +96,10 @@ class Machine(object):
             self.is_turned_on = True
             reactor.callFromThread(self.calculate_up_time)
             self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
-            self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
+            if len(self.network_interfaces)>0:
+                self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
+            else:
+                self.update_name_on_screen(self.name)
             reactor.callFromThread(self.app.start)
         
     def turn_off(self, event=None):
@@ -108,4 +111,5 @@ class Machine(object):
         return next(filter(lambda link: link.network_interface_1.machine == machine or link.network_interface_2.machine == machine,  self.links), None)
     
     def update_name_on_screen(self, msg):
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(msg))
+        if msg:
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(msg))
