@@ -7,7 +7,6 @@ from core.iconsRegister import getIconFileName
 from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
-from components.links import FogWirelessLink
 from twisted.internet.task import LoopingCall
 
 
@@ -101,25 +100,7 @@ class Machine(object):
     def turn_off(self, event=None):
         self.is_turned_on = False
         self.simulation_core.updateEventsCounter(f"{self.name} - Turning off {self.type}...")
-        
-    def connect_to_peer(self, peer_address):
-        # verify if there is a machine in simulation_core with this address
-        peer = self.simulation_core.get_machine_by_ip(peer_address)
-        if peer:
-            # verify if there is already a connection between the peer and the source
-            if not self.verify_if_connection_link_already_exists(peer):
-                _link = FogWirelessLink(self.simulation_core)
-                _link.network_interface_1 = self.network_interfaces[0]
-                _link.network_interface_2 = peer.network_interfaces[0]
-                peer.peers.append(self)
-                self.peers.append(peer)
-                self.simulation_core.all_links.append(_link)
-                self.links.append(_link)
-                peer.links.append(_link)
-                _link.draw_connection_arrow()
-            else:
-                log.msg(f"Info :  - | {self.name}-{self.type} - Already connected to {peer_address}")
-            
+                
     def verify_if_connection_link_already_exists(self, machine):
         """Verify if connection link already exists, if exists returns it"""
         return next(filter(lambda link: link.network_interface_1.machine == machine or link.network_interface_2.machine == machine,  self.links), None)

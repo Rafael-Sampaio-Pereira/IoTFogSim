@@ -14,8 +14,8 @@ class SimulationCore(object):
     def __init__(self):
         self.all_links = []
         self.all_humans = []
-        self.all_gateway_to_gateway_links = []
         self.all_machines = []
+        self.all_network_interfaces = []
         self.all_gateways = []
         self.all_servers = []
         self.all_apps = []
@@ -35,6 +35,10 @@ class SimulationCore(object):
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None
         return next(filter(lambda machine: machine.network_interfaces[0].ip == ip,  self.all_machines), None)
+    
+    def get_network_interface_by_ip(self, ip):
+        # filter list by network_interface ip, if not found, return None
+        return next(filter(lambda interface: interface.ip == ip,  self.all_network_interfaces), None)
 
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class - Rafael Sampaio

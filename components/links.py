@@ -112,14 +112,3 @@ class Link(object):
 
                 self.simulation_core.canvas.after(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7) # 7 is the package ball size - Rafael Sampaio
                 cont = cont + self.package_speed
-    
-class FogWirelessLink(Link):
-    def __init__(self, simulation_core):
-        super(FogWirelessLink, self).__init__(simulation_core)
-        self.bandwidth = 256 # kbps
-        self.packet_loss_rate = 0.10
-        self.delay_upper_bound = 200 # ms
-        self.delay_lower_bound = 60 # ms
-        self.delay_mean = 70 # ms
-        self.delay_standard_deviation = 10 # ms
-        

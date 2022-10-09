@@ -14,7 +14,6 @@ class SimpleWebClientApp(BaseApp):
         
     def main(self):
         super().main()
-        self.machine.connect_to_peer(self.machine.connected_gateway_addrs[0])
         self.send_packet(
             '192.168.1.2',
             80,
@@ -69,6 +68,5 @@ class SimpleWebServerApp(BaseApp):
 
     def main(self):
         super().main()
-        self.machine.connect_to_peer(self.machine.connected_gateway_addrs[0])
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
         LoopingCall(self.main_loop).start(0.1)

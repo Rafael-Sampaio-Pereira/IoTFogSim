@@ -22,6 +22,8 @@ from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from core.dashboard import DashboardScreen
 
+from core.pre_start import load_links
+
 class ScrollableScreen(tkinter.Frame):
     def __init__(self, root, project_name, resizeable, simulation_core):
         tkinter.Frame.__init__(self, root)
@@ -449,6 +451,8 @@ class ScrollableScreen(tkinter.Frame):
             stop_icon = ImageTk.PhotoImage(stop_icon)
             self.menubar.entryconfig(2, image=stop_icon)
             self.menubar.iconPhotoImage = stop_icon
+            
+            load_links(self.canvas.simulation_core.project_name, self.canvas.simulation_core)
 
             for gateway in self.canvas.simulation_core.all_gateways:
                 reactor.callLater(0.1, gateway.turn_on)
