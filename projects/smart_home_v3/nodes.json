@@ -11,7 +11,6 @@
           "power_watts": 12,
           "coverage_area_radius": 0,
           "application": "apps.router.RouterApp",
-          "connected_gateway_addrs": ["10.10.0.2"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -36,7 +35,6 @@
           "power_watts": 10.5,
           "coverage_area_radius": 200,
           "application": "apps.access_point.AccessPointApp",
-          "connected_gateway_addrs": ["10.10.0.1"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -61,7 +59,6 @@
           "power_watts": 375,
           "coverage_area_radius": 0,
           "application": "apps.http.SimpleWebServerApp",
-          "connected_gateway_addrs": ["192.168.0.1"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -81,7 +78,6 @@
           "power_watts": 65,
           "coverage_area_radius": 200,
           "application": "apps.http.ContinuosRequetWebClientApp",
-          "connected_gateway_addrs": ["192.168.0.3"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -105,7 +101,6 @@
           "power_watts": 12,
           "coverage_area_radius": 0,
           "application": "apps.router.RouterApp",
-          "connected_gateway_addrs": ["10.10.0.1", "10.10.0.3"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -130,7 +125,6 @@
           "power_watts": 375,
           "coverage_area_radius": 0,
           "application": "apps.http.SimpleWebServerApp",
-          "connected_gateway_addrs": ["192.168.1.1"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -154,7 +148,6 @@
           "power_watts": 12,
           "coverage_area_radius": 0,
           "application": "apps.router.RouterApp",
-          "connected_gateway_addrs": ["10.10.0.2"],
           "network_interfaces": [
             {
               "name": "eth0",
@@ -179,7 +172,6 @@
           "power_watts": 375,
           "coverage_area_radius": 0,
           "application": "apps.http.SimpleWebServerApp",
-          "connected_gateway_addrs": ["172.148.0.1"],
           "network_interfaces": [
             {
               "name": "eth0",

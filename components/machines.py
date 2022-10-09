@@ -24,7 +24,6 @@ class Machine(object):
             app,
             type,
             coverage_area_radius,
-            connected_gateway_addrs,
             power_watts
         ):
         self.simulation_core = simulation_core
@@ -43,7 +42,6 @@ class Machine(object):
             self.name, self.icon, x, y, coverage_area_radius, self)
         self.peers = []
         self.links = []
-        self.connected_gateway_addrs = connected_gateway_addrs
         self.app.simulation_core = simulation_core
         self.app.machine = self
         self.is_turned_on = False

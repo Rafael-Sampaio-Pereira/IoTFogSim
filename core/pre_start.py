@@ -24,7 +24,6 @@ def load_nodes(project_name, simulation_core):
                             machine['application'],
                             machine['type'],
                             machine['coverage_area_radius'],
-                            machine['connected_gateway_addrs'],
                             machine['power_watts']
                         )
 
@@ -118,7 +117,6 @@ def load_appliances(project_name, simulation_core):
                         machine['application'],
                         machine['type'],
                         machine['coverage_area_radius'],
-                        machine['connected_gateway_addrs'],
                         machine['power_watts']
                     )
 

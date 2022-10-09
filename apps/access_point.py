@@ -38,9 +38,10 @@ class AccessPointApp(BaseApp):
 
     def main(self):
         super().main()
-        if len(self.machine.connected_gateway_addrs) > 0:
+        if len(self.neighbor_gateways ) > 0:
             # first gateway in connected list will be the base gateway
-            itf = self.simulation_core.get_network_interface_by_ip(self.machine.connected_gateway_addrs[0])
+            print(type(self.neighbor_gateways[0]))
+            itf = self.simulation_core.get_network_interface_by_ip(self.neighbor_gateways[0].network_interfaces[1].ip)
             if itf:
                 self.base_gateway = itf.machine
         LoopingCall(self.main_loop).start(0.1)
