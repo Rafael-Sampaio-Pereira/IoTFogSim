@@ -7,6 +7,7 @@ from tkinter import PhotoImage
 from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
 from importlib import import_module
+from core.functions import create_csv_results_file
 
 
 class SimulationCore(object):
@@ -32,6 +33,17 @@ class SimulationCore(object):
         self.global_seed = None
         self.currency_prefix = None
         self.kwh_price = None
+        self.links_results = None
+        self.machine_reults = None
+        
+    def generate_results(self):
+        log.msg("Info :  - | Generating simulation results...")
+        if len(self.canvas.simulation_core.all_machines) > 0:
+                for machine in self.canvas.simulation_core.all_machines:
+                    machine.turn_off()
+        self.links_results = create_csv_results_file(self, "links_results")
+        self.machine_reults = create_csv_results_file(self, "machine_results")
+        log.msg("Info :  - | Closing IoTFogSim Application...")
         
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None

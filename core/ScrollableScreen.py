@@ -465,7 +465,7 @@ class ScrollableScreen(tkinter.Frame):
                     reactor.callLater(0.1, machine.turn_on)
                     
             for human in self.canvas.simulation_core.all_humans:
-                reactor.callLater(0.3, human.start)
+                reactor.callLater(0.1, human.start)
                 
             self.dashboard_screen = DashboardScreen(
             self.canvas.simulation_core.project_name, self.canvas.simulation_core)
@@ -476,10 +476,7 @@ class ScrollableScreen(tkinter.Frame):
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
-            if len(self.canvas.simulation_core.all_machines) > 0:
-                for machine in self.canvas.simulation_core.all_machines:
-                    machine.turn_off()
-            log.msg("Info :  - | Closing IoTFogSim Application...")
+            self.canvas.simulation_core.generate_results()
             reactor.crash()
 
         else:

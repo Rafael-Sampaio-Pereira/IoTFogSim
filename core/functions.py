@@ -71,6 +71,22 @@ def create_csv_database_file(simulation_core, description=""):
     return database
 
 
+def create_csv_results_file(simulation_core, description=""):
+    from datetime import datetime, date
+    import os
+
+    file_path = "projects/"+simulation_core.project_name+"/"
+
+    # create results directoy if it not exist - Rafael Sampaio
+    os.makedirs(file_path+"/results/", exist_ok=True)
+    temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
+    file = file_path+"/results/" + \
+        simulation_core.project_name+temp+"_"+description+".csv"
+    database = open(file, 'a')
+
+    return database
+
+
 def get_all_app_classes_name():
     directory = 'applications'
 

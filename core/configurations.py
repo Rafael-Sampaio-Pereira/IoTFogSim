@@ -38,6 +38,9 @@ def config():
 
     # initialization_screen(simulation_core)
     reactor.callFromThread(initialization_screen, simulation_core)
+    
+    # generates results when reactor stopped via command line (CRTL+C)
+    reactor.addSystemEventTrigger('before', 'shutdown', simulation_core.generate_results)
 
 
 def initialization_screen(simulation_core):

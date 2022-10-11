@@ -123,6 +123,7 @@ staticfiles/
 */vm/*
 */logs/*
 */databases/*
+*/results/*
 */experiments/*
 
 *.csv
