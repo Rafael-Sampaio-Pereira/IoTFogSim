@@ -1,5 +1,6 @@
 
 from collections import defaultdict
+import datetime
 from twisted.python import log
 import tkinter
 from twisted.internet import tksupport
@@ -34,15 +35,32 @@ class SimulationCore(object):
         self.currency_prefix = None
         self.kwh_price = None
         self.links_results = None
-        self.machine_reults = None
+        self.machines_results = None
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")
+        self.links_results = create_csv_results_file(self, "links_results")
+        
+        self.machines_results = create_csv_results_file(self, "machine_results")
+        machines_results_csv_header = 'name, ip, power watts, consumed energy, up time, billable amount'
+        print(machines_results_csv_header, file = self.machines_results, flush=True)
         if len(self.canvas.simulation_core.all_machines) > 0:
                 for machine in self.canvas.simulation_core.all_machines:
                     machine.turn_off()
-        self.links_results = create_csv_results_file(self, "links_results")
-        self.machine_reults = create_csv_results_file(self, "machine_results")
+                    result_line = ''
+                    result_line +=machine.name+','
+                    if len(machine.network_interfaces) > 0:
+                        result_line += machine.network_interfaces[0].ip+','
+                    else:
+                        result_line += 'not connected,'
+                    result_line += f'{machine.power_watts}W,'
+                    result_line += machine.get_consumed_energy()+','
+                    result_line += f'{str(datetime.timedelta(seconds=machine.up_time))},'
+                    result_line += machine.get_billable_amount()
+                    
+                    print(result_line, file = self.machines_results, flush=True)
+                    
+        
         log.msg("Info :  - | Closing IoTFogSim Application...")
         
     def get_machine_by_ip(self, ip):
