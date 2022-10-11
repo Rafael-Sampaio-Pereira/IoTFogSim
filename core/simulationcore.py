@@ -39,7 +39,6 @@ class SimulationCore(object):
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")
-        self.links_results = create_csv_results_file(self, "links_results")
         
         self.machines_results = create_csv_results_file(self, "machine_results")
         machines_results_csv_header = 'name, ip, power watts, consumed energy, up time, billable amount'
@@ -59,6 +58,23 @@ class SimulationCore(object):
                     result_line += machine.get_billable_amount()
                     
                     print(result_line, file = self.machines_results, flush=True)
+                    
+        self.links_results = create_csv_results_file(self, "links_results")
+        links_results_csv_header = 'name, machine 1, machine 2, delay mean, delay min, delay max, total sent packets, total dropped packets'
+        print(links_results_csv_header, file = self.links_results, flush=True)
+        if len(self.canvas.simulation_core.all_links) > 0:
+                for link in self.canvas.simulation_core.all_links:
+                    result_line = ''
+                    result_line += link.name+','
+                    result_line += link.network_interface_1.ip+','
+                    result_line += link.network_interface_2.ip+','
+                    result_line += str(round(link.get_delay_mean(),3))+'ms,'
+                    result_line += str(min(link.all_delays  or [0]))+','
+                    result_line += str(max(link.all_delays or [0]))+','
+                    result_line += str(len(link.sent_packets))+','
+                    result_line += str(len(link.dropped_packets))+','
+                    
+                    print(result_line, file = self.links_results, flush=True)
                     
         
         log.msg("Info :  - | Closing IoTFogSim Application...")

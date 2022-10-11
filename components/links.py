@@ -29,6 +29,12 @@ class Link(object):
         self.delay_standard_deviation = None
         LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
+        
+    def get_delay_mean(self):
+        if len(self.all_delays) > 0:
+            return sum(self.all_delays)/len(self.all_delays)
+        return 0.00
+        
     def transmission_channel(self):
         reactor.callFromThread(self.handle_packets)
         
