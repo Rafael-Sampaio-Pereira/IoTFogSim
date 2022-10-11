@@ -65,6 +65,11 @@ class DashboardScreen(tkinter.Frame):
         self.btn_on_icon = getIconFileName('on_button_icon')
         self.btn_off_icon = getIconFileName('off_button_icon')
         
+        tag_name = "btn"
+
+        self.canvas.tag_bind(tag_name, "<Enter>", lambda event: self.check_hand_enter())
+        self.canvas.tag_bind(tag_name, "<Leave>", lambda event: self.check_hand_leave())
+        
         self.update_interval = 1
         reactor.callFromThread(self.start_panel)
         
@@ -84,6 +89,13 @@ class DashboardScreen(tkinter.Frame):
     
     def getCanvas(self):
         return self.canvas
+    
+    def check_hand_enter(self):
+        self.canvas.config(cursor="hand2")
+
+
+    def check_hand_leave(self):
+        self.canvas.config(cursor="")
     
     def update_dashboard(self):
         before_padding = 10
