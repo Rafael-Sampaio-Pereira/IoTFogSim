@@ -63,10 +63,10 @@ class Machine(object):
         
     def calculate_up_time(self):
         """Calculate active time in seconds. Each seconds increases the active time"""
-        def time_conter():
+        def time_counter():
             if self.is_turned_on:
                 self.up_time += 1
-        LoopingCall(time_conter).start(1)
+        LoopingCall(time_counter).start(1)
         
         
     
