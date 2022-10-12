@@ -2,6 +2,7 @@ from twisted.python import log
 from twisted.internet.task import LoopingCall
 from apps.base_app import BaseApp
 from twisted.internet.task import cooperate
+from twisted.internet import reactor
 
 class AccessPointApp(BaseApp):
     def __init__(self):
@@ -20,13 +21,13 @@ class AccessPointApp(BaseApp):
                     # verify if destiny is connected peers list, link in ip routering table
                     if destiny and destiny in self.machine.peers:
                         if self.machine.network_interfaces[0].is_wireless:
-                            cooperate(self.machine.propagate_signal())
+                            reactor.callFromThread(self.machine.propagate_signal)
                         packet.trace.append(self.machine.network_interfaces[0])
                         self.direct_forward_packet(packet, destiny)
                     # if are not connected to destiny, send the packet to the base gateway
                     else:
                         if self.machine.network_interfaces[1].is_wireless:
-                            cooperate(self.machine.propagate_signal())
+                            reactor.callFromThread(self.machine.propagate_signal)
                         packet.trace.append(self.machine.network_interfaces[1])
                         self.forward_packet_to_another_gateway(packet, self.base_gateway)
 

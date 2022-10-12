@@ -124,7 +124,7 @@
           "is_wireless": false,
           "power_watts": 375,
           "coverage_area_radius": 0,
-          "application": "apps.http.SimpleWebServerApp",
+          "application": "apps.stream.StreamServerApp",
           "network_interfaces": [
             {
               "name": "eth0",
