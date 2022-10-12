@@ -5,6 +5,7 @@ from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet import reactor
 from twisted.internet.task import LoopingCall
+from twisted.internet.task import cooperate
 
 
 class BaseApp(object):
@@ -46,7 +47,7 @@ class BaseApp(object):
         self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id} with {length}")
         if len(self.machine.links) > 0:
             if self.machine.network_interfaces[0].is_wireless:
-                self.machine.propagate_signal()
+                cooperate(self.machine.propagate_signal())
             self.machine.links[0].packets_queue.append(_packet)
             peer = None
             if self.machine.network_interfaces[0] != self.machine.links[0].network_interface_1:

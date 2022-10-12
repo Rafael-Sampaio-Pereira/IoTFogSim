@@ -68,8 +68,6 @@ class Machine(object):
                 self.up_time += 1
         LoopingCall(time_counter).start(1)
         
-        
-    
     @inlineCallbacks
     def propagate_signal(self):
         # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
@@ -80,7 +78,7 @@ class Machine(object):
             # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
             if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
                 # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
-                self.visual_component.signal_radius += 2
+                self.visual_component.signal_radius += 1
                 self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
                                                    self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
             else:
@@ -89,7 +87,7 @@ class Machine(object):
                     self.visual_component.draggable_signal_circle, outline="")
                 self.visual_component.signal_radius = 1
                 self.simulation_core.canvas.update()
-            yield sleep(0.001)
+            yield sleep(0.0004)
         
     def turn_on(self, event=None):
         if not self.is_turned_on:
