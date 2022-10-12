@@ -66,7 +66,9 @@ class Machine(object):
         def time_conter():
             if self.is_turned_on:
                 self.up_time += 1
-        LoopingCall(time_conter).start(2)
+        LoopingCall(time_conter).start(1)
+        
+        
     
     @inlineCallbacks
     def propagate_signal(self):

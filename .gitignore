@@ -128,3 +128,4 @@ staticfiles/
 
 *.csv
 *.csv#
+*.~lock*
