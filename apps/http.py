@@ -38,8 +38,8 @@ class ContinuosRequetWebClientApp(BaseApp):
         super(ContinuosRequetWebClientApp, self).__init__()
         self.port = 80
         self.name ='WEBClient'
-        self.servers_address = ['192.168.0.2', '192.168.1.2', '172.148.0.2']
-        # self.servers_address = ['192.168.0.2']
+        # self.servers_address = ['192.168.0.2', '192.168.1.2', '172.148.0.2']
+        self.servers_address = ['192.168.0.2']
         
     def main(self):
         super().main()

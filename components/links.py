@@ -7,6 +7,7 @@ from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet import reactor
 from twisted.internet.task import cooperate
+from core.functions import get_random_color
         
         
 class Link(object):
@@ -109,7 +110,7 @@ class Link(object):
             y2 = receiver.machine.visual_component.y
                     
             self.ball = self.simulation_core.canvas.create_oval(
-                x1, y1, x1+7, y1+7, fill="red"
+                x1, y1, x1+7, y1+7, fill=get_random_color()
             )
             self.all_coordinates = list(bresenham(
                 x1, y1, x2, y2
