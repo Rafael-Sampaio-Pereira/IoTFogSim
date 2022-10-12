@@ -21,7 +21,13 @@
         "power_watts": 55,
         "coverage_area_radius": 0,
         "application": "apps.smarttv.SmartTVApp",
-        "network_interfaces": [],
+        "network_interfaces": [
+            {
+                "name": "eth0",
+                "is_wireless": false,
+                "ip": "192.168.1.3"
+            }
+        ],
         "x": 1084,
         "y": 120
     }

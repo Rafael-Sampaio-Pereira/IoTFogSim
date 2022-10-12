@@ -4,7 +4,7 @@ from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet import reactor
-
+from twisted.internet.task import LoopingCall
 
 
 class BaseApp(object):
@@ -16,6 +16,12 @@ class BaseApp(object):
         self.protocol = 'TCP' # can be UDP or TCP must implements enum
         self.machine = None
         self.in_buffer = []
+        
+    def check_in_buffer(self):
+        if len(self.in_buffer) > 0:
+            for packet in self.in_buffer.copy():
+                self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
+                self.in_buffer.remove(packet)
 
     def main(self):
         pass

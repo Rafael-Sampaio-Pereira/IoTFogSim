@@ -51,7 +51,7 @@
           "y": 195
         },
         {
-          "name": "Fog Broker Node 1",
+          "name": "HTTP server",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",
@@ -70,7 +70,7 @@
           "y": 850
         },
         {
-          "name": "Notebook 1",
+          "name": "Notebook 1 - HTTP Client",
           "MIPS": 1024,
           "icon": "notebook_icon",
           "type": "client",
@@ -117,7 +117,7 @@
           "y": 440
         },
         {
-          "name": "Fog Broker Node 2",
+          "name": "Stream Server",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",
