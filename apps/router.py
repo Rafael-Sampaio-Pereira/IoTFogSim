@@ -46,7 +46,7 @@ class RouterApp(BaseApp):
                             route.append(neighbor_gateway)
                         if neighbor_gateway.network_interfaces[0].ip.startswith(destiny_addr_prefix):
                             return route
-            route = []
+                        route = []
         return []
     
 
@@ -63,7 +63,8 @@ class RouterApp(BaseApp):
                     else:
                         packet.trace.append(self.machine.network_interfaces[1])
                         destiny_addr_prefix = extract_ip_prefix(packet.destiny_addr)
-                        route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)                        
+                        route_hops = self.find_route_hops(self.machine, packet, destiny_addr_prefix)
+                        
                         # if there is hops, we can send the packet to the first hop in the list
                         if route_hops:
                             if len(route_hops) > 0 :
