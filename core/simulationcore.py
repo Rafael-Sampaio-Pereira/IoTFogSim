@@ -81,7 +81,7 @@ class SimulationCore(object):
         
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None
-        return next(filter(lambda machine: machine.network_interfaces[0].ip == ip,  self.all_machines), None)
+        return next(filter(lambda machine: machine.network_interfaces[0].ip == ip if len(machine.network_interfaces)>0 else None,  self.all_machines), None)
     
     def get_network_interface_by_ip(self, ip):
         # filter list by network_interface ip, if not found, return None

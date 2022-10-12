@@ -93,18 +93,3 @@ class SimpleWebServerApp(BaseApp):
         super().main()
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
         LoopingCall(self.main_loop).start(0.07)
-
-
-# {
-#         "name": "Refrigerator",
-#         "MIPS": 1024,
-#         "icon": "refrigerator_icon",
-#         "type": "appliance",
-#         "is_wireless": false,
-#         "power_watts": 57,
-#         "coverage_area_radius": 0,
-#         "application": "apps.refrigerator.RefrigeratorApp",
-#         "network_interfaces": [],
-#         "x": 364,
-#         "y": 120
-#     },

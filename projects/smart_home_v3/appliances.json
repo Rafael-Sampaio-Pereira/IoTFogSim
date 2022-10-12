@@ -1,5 +1,17 @@
 [
-    
+    {
+        "name": "Refrigerator",
+        "MIPS": 1024,
+        "icon": "refrigerator_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.refrigerator.RefrigeratorApp",
+        "network_interfaces": [],
+        "x": 364,
+        "y": 120
+    },    
     {
         "name": "Smart TV",
         "MIPS": 1024,
