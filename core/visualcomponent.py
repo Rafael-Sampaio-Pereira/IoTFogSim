@@ -50,7 +50,7 @@ class VisualComponent(object):
         self.draggable_img = self.simulation_core.canvas.create_image(
             x, y, image=self.image_file, tag="icon")
 
-        self.draggable_name = self.simulation_core.canvas.create_text(x, y+22, fill="black", font="Arial 7",
+        self.draggable_name = self.simulation_core.canvas.create_text(x, y+self.height+3, fill="black", font="Arial 7",
                                                                       text=name)
 
         self.draggable_alert = self.simulation_core.canvas.create_text(x, y-22, fill="black", font="Times 7",
