@@ -48,7 +48,7 @@ def initialization_screen(simulation_core):
     tksupport.install(window)
     window.title(
         "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
-    window.geometry("400x552")
+    window.geometry("833x469")
     window.resizable(False, False)
 
     # Setting window icon. - Rafael Sampaio
@@ -148,32 +148,32 @@ def initialization_screen(simulation_core):
     projects_list = load_projects("projects")
 
     # configure backgroud image - Rafael Sampaio
-    bg_image = PhotoImage(file="graphics/images/background1.png")
+    bg_image = PhotoImage(file="graphics/images/background2.png")
     x = tkinter.Label(window, image=bg_image)
     x.place(relx="0.0", rely="0.0")
     x.img = bg_image
 
     cmb_projects_list = ttk.Combobox(window, width="20", values=projects_list)
-    cmb_projects_list.place(relx="0.1", rely="0.1")
+    cmb_projects_list.place(relx="0.1", rely="0.35")
 
     label_one = tkinter.Label(window, text="Select a project to open:")
-    label_one.place(relx="0.1", rely="0.04")
+    label_one.place(relx="0.1", rely="0.3")
 
     btn_open = ttk.Button(window, text="Open Project",
                           command=lambda: open_project(window, simulation_core))
-    btn_open.place(relx="0.6", rely="0.1")
+    btn_open.place(relx="0.32", rely="0.34")
 
-    sep = ttk.Separator(window).place(relx="0.0", rely="0.2", relwidth=1)
+    sep = ttk.Separator(window).place(relx="0.0", rely="0.45", relwidth=1)
 
     label_two = tkinter.Label(window, text="Or create a new one and start.")
-    label_two.place(relx="0.1", rely="0.23")
+    label_two.place(relx="0.1", rely="0.5")
 
     label_three = tkinter.Label(window, text="Project name:")
-    label_three.place(relx="0.1", rely="0.3")
+    label_three.place(relx="0.1", rely="0.55")
 
     input_new_project_name = tkinter.Entry(window)
-    input_new_project_name.place(relx="0.4", rely="0.3")
+    input_new_project_name.place(relx="0.1", rely="0.6")
 
     btn_new = ttk.Button(window, text="Create new project and start it", command=lambda: creat_project(
         window, input_new_project_name.get(), simulation_core))
-    btn_new.place(relx="0.2", rely="0.4")
+    btn_new.place(relx="0.1", rely="0.65")
