@@ -87,6 +87,25 @@
           ],
           "x": 688,
           "y": 153
+        },
+        {
+          "name": "SmartPhone",
+          "MIPS": 1024,
+          "icon": "smartphone_icon",
+          "type": "client",
+          "is_wireless": true,
+          "power_watts": 65,
+          "coverage_area_radius": 200,
+          "application": "apps.cctv.CCTVClientApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": true,
+              "ip": "192.168.0.5"
+            }
+          ],
+          "x": 688,
+          "y": 353
         }
       ]
     },
@@ -164,14 +183,14 @@
           "y": 615
         },
         {
-          "name": "Fog Broker Node 3",
+          "name": "CCTV Server",
           "MIPS": 1024,
           "icon": "broker_icon",
           "type": "server",
           "is_wireless": false,
           "power_watts": 375,
           "coverage_area_radius": 0,
-          "application": "apps.http.SimpleWebServerApp",
+          "application": "apps.cctv.CCTVServerApp",
           "network_interfaces": [
             {
               "name": "eth0",

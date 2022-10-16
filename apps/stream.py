@@ -45,6 +45,7 @@ class StreamServerApp(BaseApp):
         self.stream_client_address = None
         self.stream_client_port = None
         self.data_frame_counter = 0
+        self.protocol = 'UDP'
 
     @inlineCallbacks
     def main_loop(self):
