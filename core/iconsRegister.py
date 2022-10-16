@@ -8,6 +8,7 @@ iconsList = {
     "arduino_uno_icon": "iotfogsim_arduino_uno.png",
     "arduino_uno_signal_icon": "iotfogsim_arduino_uno_signal.png",
     "broker_icon": "iotfogsim_broker.png",
+    "camera_icon": "iotfogsim_camera.png",
     "car_icon": "iotfogsim_car.png",
     "client_icon": "iotfogsim_client.png",
     "cloud_icon": "iotfogsim_cloud.png",
