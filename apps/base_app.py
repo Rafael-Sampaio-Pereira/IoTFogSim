@@ -17,6 +17,7 @@ class BaseApp(object):
         self.protocol = 'TCP' # can be UDP or TCP must implements enum
         self.machine = None
         self.in_buffer = []
+        self.is_running = False
         
     def check_in_buffer(self):
         if len(self.in_buffer) > 0:
@@ -29,9 +30,11 @@ class BaseApp(object):
     
     @inlineCallbacks 
     def start(self):
-        self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Starting app...")
-        yield sleep(0.5)
-        reactor.callFromThread(self.main)
+        if not self.is_running:
+            self.is_running = True
+            self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Starting app...")
+            yield sleep(0.5)
+            reactor.callFromThread(self.main)
 
     def send_packet(self, destiny_addr, destiny_port, payload, length):
         _packet = Packet(
