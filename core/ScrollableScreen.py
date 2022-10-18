@@ -411,10 +411,8 @@ class ScrollableScreen(tkinter.Frame):
         self.menubar.add_command(label="Position: 0", command=None)
         self.menubar.add_command(label=" Events:", command=None)
 
-        self.start_time = '--:--:--'
-
         self.menubar.add_command(
-            label="Start Time: "+self.start_time, font=("Verdana", 10, "italic"), command=None)
+            label="Simulation clock: 0:00:00", font=("Verdana", 10, "italic"), command=None)
 
         self.menubar.entryconfig(3, foreground='blue')
         self.menubar.entryconfig(4, foreground='blue')
@@ -438,10 +436,10 @@ class ScrollableScreen(tkinter.Frame):
             self.menubar.iconPhotoImage = play_icon
             self.on_closing()
         elif is_running == False:
-            if self.start_time == '--:--:--':
-                self.start_time = str(datetime.now().strftime('%H:%M:%S'))
-                self.menubar.entryconfig(
-                    5, label="Start Time: "+self.start_time)
+            # if self.start_time == '--:--:--':
+            #     self.start_time = str(datetime.now().strftime('%H:%M:%S'))
+            #     self.menubar.entryconfig(
+            #         5, label="Start Time: "+self.start_time)
 
             log.msg("Info : - | Starting simulation...")
             self.canvas.simulation_core.is_running = True

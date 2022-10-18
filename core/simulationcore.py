@@ -9,6 +9,7 @@ from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
 from importlib import import_module
 from core.functions import create_csv_results_file
+from twisted.internet.task import LoopingCall
 
 
 class SimulationCore(object):
@@ -36,6 +37,17 @@ class SimulationCore(object):
         self.kwh_price = None
         self.links_results = None
         self.machines_results = None
+        self.time_multiplier = 1
+        self.clock = 0 # elapsed time in seconds
+        
+        
+    def start_clock(self):
+        """Calculate elapsed time in seconds. Each seconds increases the elapsed time using the time_multiplier parameter"""
+        def time_counter():
+            if self.is_running:
+                self.clock += 1*self.time_multiplier
+                self.update_clock()
+        LoopingCall(time_counter).start(1)
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")
@@ -78,6 +90,7 @@ class SimulationCore(object):
                     
         
         log.msg("Info :  - | Closing IoTFogSim Application...")
+        log.msg(f"Info :  - | Simulation Final Clock: {str(datetime.timedelta(seconds=self.clock))}")
         
     def get_machine_by_ip(self, ip):
         # filter list by machine ip, if not found, return None
@@ -108,6 +121,11 @@ class SimulationCore(object):
         # Updates events counter value on screen - Rafael Sampaio
         self.simulation_screen.menubar.entryconfigure(
             4, label="Events: "+str(self.eventsCounter))
+        
+    def update_clock(self):
+        # Updates clock on screen - Rafael Sampaio
+        self.simulation_screen.menubar.entryconfigure(
+            5, label="Simulation clock: "+f"{str(datetime.timedelta(seconds=self.clock))}",)
 
     def create_simulation_canvas(self, resizeable):
 
