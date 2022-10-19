@@ -444,10 +444,9 @@ class ScrollableScreen(tkinter.Frame):
             self.menubar.iconPhotoImage = play_icon
             self.on_closing()
         elif is_running == False:
-            # if self.start_time == '--:--:--':
-            #     self.start_time = str(datetime.now().strftime('%H:%M:%S'))
-            #     self.menubar.entryconfig(
-            #         5, label="Start Time: "+self.start_time)
+
+            # disabling spped menu after start
+            self.menubar.entryconfig(6, state="disabled")
 
             log.msg("Info : - | Starting simulation...")
             self.canvas.simulation_core.is_running = True

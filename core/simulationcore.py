@@ -32,9 +32,18 @@ class InternalClock(object):
             self.time_speed_multiplier = new_time_speed_multiplier
             self.main_loop.stop()
             self.start()
+            self.update_speed_menu_label()
+            
+    def get_time_unit(self, original_seconds):
+        """Returns the time unit(i.e. one second considering the time speed multiplier"""
+        return original_seconds/self.time_speed_multiplier
         
     def get_humanized_time(self):
         return f"{str(datetime.timedelta(seconds=self.elapsed_seconds))}"
+    
+    def update_speed_menu_label(self):
+        self.simulation_core.simulation_screen.menubar.entryconfigure(
+            6, label="Speed: x"+str(self.time_speed_multiplier),)
         
     def update_clock_menu_bar(self):
         # Updates clock on screen - Rafael Sampaio
