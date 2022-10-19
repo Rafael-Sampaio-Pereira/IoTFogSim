@@ -15,14 +15,23 @@ class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
         self.elapsed_seconds = 0
+        self.time_speed_multiplier = 1
+        self.main_loop = None
         
     def start(self):
         """Calculate elapsed time in seconds. Each seconds increases the elapsed time using the time_multiplier parameter"""
         def time_counter():
             if self.simulation_core.is_running:
-                self.elapsed_seconds += 1*self.simulation_core.time_speed_multiplier
+                self.elapsed_seconds += 1
                 self.update_clock_menu_bar()
-        LoopingCall(time_counter).start(1)
+        self.main_loop = LoopingCall(time_counter)
+        self.main_loop.start(1/self.time_speed_multiplier)
+    
+    def change_speed(self, new_time_speed_multiplier: int):
+        if new_time_speed_multiplier != self.time_speed_multiplier:
+            self.time_speed_multiplier = new_time_speed_multiplier
+            self.main_loop.stop()
+            self.start()
         
     def get_humanized_time(self):
         return f"{str(datetime.timedelta(seconds=self.elapsed_seconds))}"
@@ -58,7 +67,7 @@ class SimulationCore(object):
         self.links_results = None
         self.machines_results = None
         self.clock = None
-        self.time_speed_multiplier = 1
+        
         
     def start_clock(self):
         self.clock = InternalClock(self)
