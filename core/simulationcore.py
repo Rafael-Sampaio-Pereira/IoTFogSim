@@ -34,7 +34,7 @@ class InternalClock(object):
             self.start()
             self.update_speed_menu_label()
             
-    def get_time_unit(self, original_seconds):
+    def get_internal_time_unit(self, original_seconds):
         """Returns the time unit(i.e. one second considering the time speed multiplier"""
         return original_seconds/self.time_speed_multiplier
         
