@@ -29,7 +29,7 @@ class CCTVClientApp(BaseApp):
             'Connect to Camera Request',
             DEFAULT_PACKET_LENGTH
         )
-        LoopingCall(self.main_loop).start(0.7)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.7))
         
     def main_loop(self):
         if self.machine.is_turned_on:
@@ -53,7 +53,7 @@ class CameraApp(BaseApp):
         
     def main(self):
         super().main()
-        LoopingCall(self.main_loop).start(0.7)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.7))
         
     def send_stream_data_frame(self, destiny_addr, destiny_port, length):
         self.data_frame_counter += 1
@@ -127,4 +127,4 @@ class CCTVServerApp(BaseApp):
     def main(self):
         super().main()
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
-        LoopingCall(self.main_loop).start(0.7)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.7))
