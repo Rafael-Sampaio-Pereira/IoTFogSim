@@ -44,7 +44,7 @@ class AccessPointApp(BaseApp):
             itf = self.simulation_core.get_network_interface_by_ip(self.neighbor_gateways[0].network_interfaces[1].ip)
             if itf:
                 self.base_gateway = itf.machine
-        LoopingCall(self.main_loop).start(0.1)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.1))
         
     def direct_forward_packet(self, packet, destiny):
         self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - packet: {packet.id}")
