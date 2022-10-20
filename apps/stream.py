@@ -25,7 +25,7 @@ class StreamClientApp(BaseApp):
             'Open Session Request',
             DEFAULT_PACKET_LENGTH
         )
-        LoopingCall(self.main_loop).start(0.1)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.1))
         
     def main_loop(self):
         if self.machine.is_turned_on:
@@ -61,7 +61,7 @@ class StreamServerApp(BaseApp):
                             self.has_started_streaming = True
                             self.stream_client_address = packet.source_addr
                             self.stream_client_port = packet.source_port
-                            yield sleep(3)
+                            yield sleep(self.simulation_core.clock.get_internal_time_unit(3))
                             
                     else:
                         self.in_buffer.remove(packet)
@@ -89,4 +89,4 @@ class StreamServerApp(BaseApp):
     def main(self):
         super().main()
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
-        LoopingCall(self.main_loop).start(0.7)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.7))
