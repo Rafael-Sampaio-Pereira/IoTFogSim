@@ -82,7 +82,6 @@ class DashboardScreen(tkinter.Frame):
     def start_panel(self):
         LoopingCall(self.update_dashboard).start(self.update_interval, now=True)
         
-       
     def scroll_start(self, event):
         self.canvas.config(cursor='fleur')
         self.canvas.scan_mark(event.x, event.y)

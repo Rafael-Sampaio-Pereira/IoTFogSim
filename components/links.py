@@ -8,7 +8,8 @@ from core.functions import sleep
 from twisted.internet import reactor
 from twisted.internet.task import cooperate
 from core.functions import get_random_color
-        
+import itertools
+
         
 class Link(object):
     def __init__(self, simulation_core):
@@ -95,35 +96,47 @@ class Link(object):
         self.simulation_core.updateEventsCounter(f"{self.name} - {self.network_interface_1.machine.type}({self.network_interface_1.ip})\u27F5 \u27F6  ({self.network_interface_2.ip}){self.network_interface_2.machine.type}")
     
     def animate_package(self, packet):
-        # by looking for last machine in packet trace we can find the sender
-        if len(packet.trace) > 0:
-            sender = packet.trace[-1]
-            receiver = None
-            
-            if sender == self.network_interface_1:
-                receiver = self.network_interface_2
-            elif sender == self.network_interface_2:
-                receiver = self.network_interface_1
 
-            x1 = sender.machine.visual_component.x
-            y1 = sender.machine.visual_component.y
-            x2 = receiver.machine.visual_component.x
-            y2 = receiver.machine.visual_component.y
-                    
-            self.ball = self.simulation_core.canvas.create_oval(
-                x1, y1, x1+7, y1+7, fill=get_random_color()
-            )
-            self.all_coordinates = list(bresenham(
-                x1, y1, x2, y2
-            ))
-            self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
-            self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas - Rafael Sampaio
+            # by looking for last machine in packet trace we can find the sender
+            if len(packet.trace) > 0:
+                sender = packet.trace[-1]
+                receiver = None
+                
+                if sender == self.network_interface_1:
+                    receiver = self.network_interface_2
+                elif sender == self.network_interface_2:
+                    receiver = self.network_interface_1
 
-            cont = 0.001
-            for x, y in self.all_coordinates:
-                # verify if package ball just got its destiny - Rafael Sampaio
-                if x == x2 and y == y2:
-                    reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+                x1 = sender.machine.visual_component.x
+                y1 = sender.machine.visual_component.y
+                x2 = receiver.machine.visual_component.x
+                y2 = receiver.machine.visual_component.y
+                        
+                self.ball = self.simulation_core.canvas.create_oval(
+                    x1, y1, x1+7, y1+7, fill=get_random_color()
+                )
+                self.all_coordinates = list(bresenham(
+                    x1, y1, x2, y2
+                ))
+                self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
+                self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas - Rafael Sampaio
 
-                cooperate(reactor.callLater(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7))
-                cont = cont + self.package_speed
+                cont = 0.001
+                if self.simulation_core.clock.time_speed_multiplier <= 10:
+                    print('aqui')
+                    for x, y in self.all_coordinates:
+                        # verify if package ball just got its destiny - Rafael Sampaio
+                        if x == x2 and y == y2:
+                            reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+                            
+                        cooperate(reactor.callLater(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7))
+                        cont = cont + self.package_speed
+
+                else:
+                    for x, y in itertools.islice(self.all_coordinates , 0, 10):
+                        # verify if package ball just got its destiny - Rafael Sampaio
+                        if x == x2 and y == y2:
+                            reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
+
+                        cooperate(reactor.callLater(cont, self.simulation_core.canvas.coords, self.ball, x, y, x+7, y+7))
+                        cont = cont + self.package_speed
