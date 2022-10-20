@@ -80,7 +80,7 @@ class RouterApp(BaseApp):
                         
     def main(self):
         super().main()
-        LoopingCall(self.main_loop).start(0.1)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.1))
         
     def direct_forward_packet(self, packet, destiny):
         self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[1].ip} \u27FC   \u2344 \u27F6  {destiny.network_interfaces[0].ip} - packet: {packet.id}")
@@ -93,39 +93,3 @@ class RouterApp(BaseApp):
             destiny_link = self.machine.verify_if_connection_link_already_exists(destiny)
             if destiny_link:
                 destiny_link.packets_queue.append(packet)
-
-# ,
-#         {
-#           "name": "SmartPhone",
-#           "MIPS": 1024,
-#           "icon": "smartphone_icon",
-#           "type": "client",
-#           "is_wireless": true,
-#           "power_watts": 65,
-#           "coverage_area_radius": 200,
-#           "application": "apps.cctv.CCTVClientApp",
-#           "network_interfaces": [
-#             {
-#               "name": "eth0",
-#               "is_wireless": true,
-#               "ip": "192.168.0.5"
-#             }
-#           ],
-#           "x": 688,
-#           "y": 353
-#         }
-
-
-
-#  ,
-#     {
-#         "name": "smartphone1 <----------> ap1",
-#         "bandwidth": 256,
-#         "packet_loss_rate": 0.10,
-#         "network_interface_1": "192.168.0.5",
-#         "network_interface_2": "192.168.0.3",
-#         "delay_upper_bound": 200,
-#         "delay_lower_bound": 60,
-#         "delay_mean": 70,
-#         "delay_standard_deviation": 10
-#     }
