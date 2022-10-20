@@ -52,6 +52,7 @@ class Link(object):
                         self.delay_standard_deviation
                     )
                     self.all_delays.append(delay)
+                    delay = self.simulation_core.clock.get_internal_time_unit(delay)
                     self.sent_packets.append(packet)
                     if sender == self.network_interface_1:
                         self.animate_package(packet)
