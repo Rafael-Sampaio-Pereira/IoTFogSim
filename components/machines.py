@@ -66,7 +66,7 @@ class Machine(object):
         def time_counter():
             if self.is_turned_on:
                 self.up_time += 1
-        LoopingCall(time_counter).start(1)
+        LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         
     @inlineCallbacks
     def propagate_signal(self):
@@ -87,7 +87,7 @@ class Machine(object):
                     self.visual_component.draggable_signal_circle, outline="")
                 self.visual_component.signal_radius = 1
                 self.simulation_core.canvas.update()
-            yield sleep(0.0004)
+            yield sleep(self.simulation_core.clock.get_internal_time_unit(0.0004))
         
     def turn_on(self, event=None):
         if not self.is_turned_on:
