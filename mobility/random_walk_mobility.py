@@ -35,7 +35,7 @@ class RandomWalkMobility(MobilityModel):
     def start(self):
         # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before scene be mounted - Rafael Sampaio
         yield sleep(0.5)
-        LoopingCall(self.move).start(0.2)
+        LoopingCall(self.move).start(self.simulation_core.clock.get_internal_time_unit(0.2))
 
     def move(self):
         # moving the device icon in canvas in random way - Rafael Sampaio

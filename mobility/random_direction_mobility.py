@@ -64,6 +64,7 @@ class RandomDirectionMobility(MobilityModel):
                 f"Mobile Node {self.visual_component.deviceName} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
             step_speed = random.uniform(self.min_speed, self.max_speed)
+            step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
             wall_was_found = False
             tolerance = None
             for x, y in all_coordinates_between_two_points:
@@ -86,5 +87,6 @@ class RandomDirectionMobility(MobilityModel):
                     yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
-            reactor.callLater(random.randint(
-                self.min_pause, self.max_pause), self.move)
+            pause_time = random.randint(self.min_pause, self.max_pause)
+            pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
+            reactor.callLater(pause_time, self.move)
