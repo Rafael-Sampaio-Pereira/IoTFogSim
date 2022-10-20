@@ -68,26 +68,29 @@ class Machine(object):
                 self.up_time += 1
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         
-    @inlineCallbacks
-    def propagate_signal(self):
+    def colorize_signal(self):
         # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
         self.simulation_core.canvas.itemconfig(
             self.visual_component.draggable_signal_circle, outline="red")
-
+        
+    @inlineCallbacks
+    def propagate_signal(self):
         for n in range(0, self.visual_component.coverage_area_radius):
             # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
             if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
                 # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
-                self.visual_component.signal_radius += 1
-                self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
-                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+                self.visual_component.signal_radius += 10
+                
             else:
                 # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
-                self.simulation_core.canvas.itemconfig(
-                    self.visual_component.draggable_signal_circle, outline="")
-                self.visual_component.signal_radius = 1
-                self.simulation_core.canvas.update()
-            yield sleep(self.simulation_core.clock.get_internal_time_unit(0.0004))
+                self.visual_component.signal_radius = -1
+                
+            self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +
+                                                   self.visual_component.signal_radius, self.visual_component.x-self.visual_component.signal_radius, self.visual_component.y-self.visual_component.signal_radius)
+
+            yield sleep(self.simulation_core.clock.get_internal_time_unit(0.005))
+        self.visual_component.signal_radius = 1
+        
         
     def turn_on(self, event=None):
         if not self.is_turned_on:
@@ -98,6 +101,9 @@ class Machine(object):
                 self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
             else:
                 self.update_name_on_screen(self.name)
+            
+            if self.is_wireless:
+                self.colorize_signal()
             reactor.callFromThread(self.app.start)
         
     def turn_off(self, event=None):
