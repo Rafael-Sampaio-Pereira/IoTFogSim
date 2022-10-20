@@ -421,9 +421,12 @@ class ScrollableScreen(tkinter.Frame):
         speed_menu.add_command(label="x100 - Express", command=lambda: self.canvas.simulation_core.clock.change_speed(100))
         speed_menu_label = "Speed: x"+str(self.canvas.simulation_core.clock.time_speed_multiplier)
         self.menubar.add_cascade(label=speed_menu_label, menu=speed_menu)
+        
+        self.menubar.add_command(label="Dashboard", command=self.open_dashboard) # item 7 on menu
 
         self.menubar.entryconfig(3, foreground='blue')
         self.menubar.entryconfig(4, foreground='blue')
+        self.menubar.entryconfig(7, foreground='red')
 
         self.menubar.add_command(label="About Project", command=None)
         self.menubar.add_command(label="Help", command=None)
@@ -471,7 +474,8 @@ class ScrollableScreen(tkinter.Frame):
                     
             for human in self.canvas.simulation_core.all_humans:
                 reactor.callLater(0.1, human.start)
-                
+    
+    def open_dashboard(self):
             self.dashboard_screen = DashboardScreen(
             self.canvas.simulation_core.project_name, self.canvas.simulation_core)
             self.dashboard_screen.pack(fill="both", expand=True)

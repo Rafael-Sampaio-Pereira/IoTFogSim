@@ -16,6 +16,8 @@ class DashboardScreen(tkinter.Frame):
     def __init__(self, project_name, simulation_core):
         self.root = tkinter.Toplevel()
         tksupport.install(self.root)
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.begin_close = None
         self.w_heigth = 300
         self.w_width = 650
         w_top_padding = 900
@@ -73,6 +75,9 @@ class DashboardScreen(tkinter.Frame):
         self.update_interval = 1
         reactor.callFromThread(self.start_panel)
         
+    def on_closing(self):
+        self.begin_close = True
+        self.root.after(1000, self.root.destroy)
     
     def start_panel(self):
         LoopingCall(self.update_dashboard).start(self.update_interval, now=True)
@@ -98,58 +103,59 @@ class DashboardScreen(tkinter.Frame):
         self.canvas.config(cursor="")
     
     def update_dashboard(self):
-        before_padding = 10
-        last_height = 60
-        self.all_icons = []
-        self.scrollable_height = self.w_heigth
-        for index, machine in enumerate(self.simulation_core.all_machines):
-            image_file = ImageTk.PhotoImage(file=machine.icon)
-            temp_height = image_file.height()+before_padding
-            self.scrollable_height += temp_height
-            icon = self.canvas.create_image(
-                50, last_height, image=image_file, tag="icon")
-            self.all_icons.append(image_file)
+        if not self.begin_close:
+            before_padding = 10
+            last_height = 60
+            self.all_icons = []
+            self.scrollable_height = self.w_heigth
+            for index, machine in enumerate(self.simulation_core.all_machines):
+                image_file = ImageTk.PhotoImage(file=machine.icon)
+                temp_height = image_file.height()+before_padding
+                self.scrollable_height += temp_height
+                icon = self.canvas.create_image(
+                    50, last_height, image=image_file, tag="icon")
+                self.all_icons.append(image_file)
+                
+                _type = self.canvas.create_text(120, last_height-10, anchor="nw", text=f"{machine.type}" if len(machine.type) <= 6 else f"{machine.type[:4 or None]}...", fill="white")
+                ip = self.canvas.create_text(170, last_height-10, anchor="nw", text=f"{machine.network_interfaces[0].ip}" if len(machine.network_interfaces)>0 else machine.name, fill="white")
+                power = self.canvas.create_text(265, last_height-10, anchor="nw", text=f"{machine.power_watts}W", fill="white")
+                kwh = self.canvas.create_text(320, last_height-10, anchor="nw", text=f"{machine.get_consumed_energy()}", fill="white")
+                power_btn_image = None
+                power_icon = None
+                if machine.is_turned_on:
+                    power_btn_image = ImageTk.PhotoImage(file=ICONS_PATH+self.btn_on_icon)
+                    self.all_icons.append(power_btn_image)
+                    power_icon = self.canvas.create_image(
+                        440, last_height, image=power_btn_image, tag="btn")
+                    self.canvas.tag_bind(power_icon, '<Button-1>', machine.turn_off)
+                else:
+                    power_btn_image = ImageTk.PhotoImage(file=ICONS_PATH+self.btn_off_icon)
+                    self.all_icons.append(power_btn_image)
+                    power_icon = self.canvas.create_image(
+                        440, last_height, image=power_btn_image, tag="btn")
+                    self.canvas.tag_bind(power_icon, '<Button-1>', machine.turn_on)
+                
+                up_time = self.canvas.create_text(480, last_height-10, anchor="nw", text=f"{str(datetime.timedelta(seconds=machine.up_time))}", fill="white")
+                billing_amount = self.canvas.create_text(540, last_height-10, anchor="nw", text=f"{machine.get_billable_amount()}", fill="white")
+                
+                line = self.canvas.create_line(0,last_height+30,self.w_width,last_height+30, width=1, fill="#37474F")
+                line2 = self.canvas.create_line(0,last_height+31,self.w_width,last_height+31, width=1, fill="#212121")
+                            
+                last_height += 60
+                
+                # delete old displayed items
+                reactor.callLater(self.update_interval, self.canvas.delete, _type)
+                reactor.callLater(self.update_interval, self.canvas.delete, icon)
+                reactor.callLater(self.update_interval, self.canvas.delete, ip)
+                reactor.callLater(self.update_interval, self.canvas.delete, kwh)
+                reactor.callLater(self.update_interval, self.canvas.delete, power)
+                reactor.callLater(self.update_interval, self.canvas.delete, up_time)
+                reactor.callLater(self.update_interval, self.canvas.delete, billing_amount)
+                reactor.callLater(self.update_interval, self.canvas.delete, power_icon)
+                reactor.callLater(self.update_interval, self.canvas.delete, line)
+                reactor.callLater(self.update_interval, self.canvas.delete, line2)
             
-            _type = self.canvas.create_text(120, last_height-10, anchor="nw", text=f"{machine.type}" if len(machine.type) <= 6 else f"{machine.type[:4 or None]}...", fill="white")
-            ip = self.canvas.create_text(170, last_height-10, anchor="nw", text=f"{machine.network_interfaces[0].ip}" if len(machine.network_interfaces)>0 else machine.name, fill="white")
-            power = self.canvas.create_text(265, last_height-10, anchor="nw", text=f"{machine.power_watts}W", fill="white")
-            kwh = self.canvas.create_text(320, last_height-10, anchor="nw", text=f"{machine.get_consumed_energy()}", fill="white")
-            power_btn_image = None
-            power_icon = None
-            if machine.is_turned_on:
-                power_btn_image = ImageTk.PhotoImage(file=ICONS_PATH+self.btn_on_icon)
-                self.all_icons.append(power_btn_image)
-                power_icon = self.canvas.create_image(
-                    440, last_height, image=power_btn_image, tag="btn")
-                self.canvas.tag_bind(power_icon, '<Button-1>', machine.turn_off)
-            else:
-                power_btn_image = ImageTk.PhotoImage(file=ICONS_PATH+self.btn_off_icon)
-                self.all_icons.append(power_btn_image)
-                power_icon = self.canvas.create_image(
-                    440, last_height, image=power_btn_image, tag="btn")
-                self.canvas.tag_bind(power_icon, '<Button-1>', machine.turn_on)
             
-            up_time = self.canvas.create_text(480, last_height-10, anchor="nw", text=f"{str(datetime.timedelta(seconds=machine.up_time))}", fill="white")
-            billing_amount = self.canvas.create_text(540, last_height-10, anchor="nw", text=f"{machine.get_billable_amount()}", fill="white")
-            
-            line = self.canvas.create_line(0,last_height+30,self.w_width,last_height+30, width=1, fill="#37474F")
-            line2 = self.canvas.create_line(0,last_height+31,self.w_width,last_height+31, width=1, fill="#212121")
-                        
-            last_height += 60
-            
-            # delete old displayed items
-            reactor.callLater(self.update_interval, self.canvas.delete, _type)
-            reactor.callLater(self.update_interval, self.canvas.delete, icon)
-            reactor.callLater(self.update_interval, self.canvas.delete, ip)
-            reactor.callLater(self.update_interval, self.canvas.delete, kwh)
-            reactor.callLater(self.update_interval, self.canvas.delete, power)
-            reactor.callLater(self.update_interval, self.canvas.delete, up_time)
-            reactor.callLater(self.update_interval, self.canvas.delete, billing_amount)
-            reactor.callLater(self.update_interval, self.canvas.delete, power_icon)
-            reactor.callLater(self.update_interval, self.canvas.delete, line)
-            reactor.callLater(self.update_interval, self.canvas.delete, line2)
-        
-        
-        self.canvas.configure(scrollregion=(
-            0, 0,  self.scrollable_width,  self.scrollable_height))
+            self.canvas.configure(scrollregion=(
+                0, 0,  self.scrollable_width,  self.scrollable_height))
 
