@@ -22,7 +22,7 @@ class SimpleWebClientApp(BaseApp):
             'HTTP 1.0 POST request',
             DEFAULT_PACKET_LENGTH
         )
-        LoopingCall(self.main_loop).start(0.1)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.1))
         
     def main_loop(self):
         if self.machine.is_turned_on:
@@ -43,15 +43,16 @@ class ContinuosRequetWebClientApp(BaseApp):
         
     def main(self):
         super().main()
-        LoopingCall(self.check_in_buffer).start(0.3)
-        LoopingCall(self.main_loop).start(10)
+        LoopingCall(self.check_in_buffer).start(self.simulation_core.clock.get_internal_time_unit(0.3))
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(10))
         
     def main_loop(self):
         cont=0
         if self.machine.is_turned_on:
             for server_addr in self.servers_address:
                 cont+=1
-                reactor.callLater(cont*10.0, self.send_packet, server_addr, 80, 'HTTP 1.0 POST request', DEFAULT_PACKET_LENGTH)
+                interval = self.simulation_core.clock.get_internal_time_unit(cont*10.0)
+                reactor.callLater(interval, self.send_packet, server_addr, 80, 'HTTP 1.0 POST request', DEFAULT_PACKET_LENGTH)
                 
 class SimpleWebServerApp(BaseApp):
     def __init__(self):
@@ -92,4 +93,4 @@ class SimpleWebServerApp(BaseApp):
     def main(self):
         super().main()
         self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - Start listen on port {self.port}")
-        LoopingCall(self.main_loop).start(0.07)
+        LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(0.07))
