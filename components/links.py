@@ -67,6 +67,7 @@ class Link(object):
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     
                     self.packets_queue.remove(packet)
+                    del packet
                 else:
                     self.dropped_packets.append(packet)
                     self.simulation_core.updateEventsCounter(f"{self.name} - Failed to transmiting packet {packet.id}. Packet was dropped")
@@ -75,6 +76,7 @@ class Link(object):
                     else:
                         # if sender app protocol is not tcp, it will drop the packet and don't care about retransmissions
                         self.packets_queue.remove(packet)
+                        del packet
 
 
     def draw_connection_arrow(self):

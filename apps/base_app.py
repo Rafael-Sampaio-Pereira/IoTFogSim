@@ -24,6 +24,7 @@ class BaseApp(object):
             for packet in self.in_buffer.copy():
                 self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
                 self.in_buffer.remove(packet)
+                del packet
 
     def main(self):
         pass

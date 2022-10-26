@@ -37,6 +37,7 @@ class CCTVClientApp(BaseApp):
                 for packet in self.in_buffer.copy():
                     self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
                     self.in_buffer.remove(packet)
+                    del packet
                     
 
 class CameraApp(BaseApp):
@@ -101,6 +102,7 @@ class CCTVServerApp(BaseApp):
                                     self.send_packet(client['addr'],  client['port'], packet.payload, packet.length)
                             
                         self.in_buffer.remove(packet)
+                        del packet
                     else:
                         self.in_buffer.remove(packet)
                         self.send_http_404_response(packet.source_addr, packet.source_port, DEFAULT_PACKET_LENGTH)       

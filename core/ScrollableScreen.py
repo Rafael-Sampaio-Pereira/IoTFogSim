@@ -418,7 +418,7 @@ class ScrollableScreen(tkinter.Frame):
         speed_menu.add_command(label="x1 - Normal", command=lambda: self.canvas.simulation_core.clock.change_speed(1))
         speed_menu.add_command(label="x2 - soft incrase", command=lambda: self.canvas.simulation_core.clock.change_speed(2))
         speed_menu.add_command(label="x10 - Fast", command=lambda: self.canvas.simulation_core.clock.change_speed(10))
-        speed_menu.add_command(label="x100 - Express", command=lambda: self.canvas.simulation_core.clock.change_speed(100))
+        speed_menu.add_command(label="x50 - Express", command=lambda: self.canvas.simulation_core.clock.change_speed(50))
         speed_menu_label = "Speed: x"+str(self.canvas.simulation_core.clock.time_speed_multiplier)
         self.menubar.add_cascade(label=speed_menu_label, menu=speed_menu)
         
@@ -473,7 +473,7 @@ class ScrollableScreen(tkinter.Frame):
                     reactor.callLater(0.1, machine.turn_on)
                     
             for human in self.canvas.simulation_core.all_humans:
-                reactor.callLater(0.1, human.start)
+                reactor.callFromThread(human.start)
     
     def open_dashboard(self):
             self.dashboard_screen = DashboardScreen(

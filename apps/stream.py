@@ -33,6 +33,7 @@ class StreamClientApp(BaseApp):
                 for packet in self.in_buffer.copy():
                     self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
                     self.in_buffer.remove(packet)
+                    del packet
                     
                 
                 
@@ -62,6 +63,7 @@ class StreamServerApp(BaseApp):
                             self.stream_client_address = packet.source_addr
                             self.stream_client_port = packet.source_port
                             yield sleep(self.simulation_core.clock.get_internal_time_unit(3))
+                        del packet
                             
                     else:
                         self.in_buffer.remove(packet)
