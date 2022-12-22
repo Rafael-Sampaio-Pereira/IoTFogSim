@@ -76,6 +76,7 @@ class SimulationCore(object):
         self.links_results = None
         self.machines_results = None
         self.clock = None
+        self.smart_hub = None
         
         
     def start_clock(self):

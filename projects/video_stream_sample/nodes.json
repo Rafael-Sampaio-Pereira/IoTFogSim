@@ -25,25 +25,6 @@
           ],
           "x": 785,
           "y": 440
-        },
-        {
-          "name": "Stream Server",
-          "MIPS": 1024,
-          "icon": "broker_icon",
-          "type": "server",
-          "is_wireless": false,
-          "power_watts": 375,
-          "coverage_area_radius": 0,
-          "application": "apps.stream.StreamServerApp",
-          "network_interfaces": [
-            {
-              "name": "eth0",
-              "is_wireless": false,
-              "ip": "192.168.1.2"
-            }
-          ],
-          "x": 1010,
-          "y": 454
         }
       ]
     }
