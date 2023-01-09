@@ -62,6 +62,7 @@ class SimulationCore(object):
         self.all_apps = []
         self.all_appliances = []
         self.all_ip = []
+        self.all_subprocesses = []
         self.canvas = None
         self.dashboard_canvas = None
         self.simulation_screen = None
@@ -82,6 +83,17 @@ class SimulationCore(object):
     def start_clock(self):
         self.clock = InternalClock(self)
         self.clock.start()
+    
+    def kill_all_subprocesses(self):
+        log.msg("Info :  - | Killing all subprocesses...")
+        # complete the processes
+        for proc in self.all_subprocesses:
+            proc.join()
+        
+
+    def before_close(self):
+        log.msg("Info :  - | Getting ready to close the simulation...")
+        self.generate_results()
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")

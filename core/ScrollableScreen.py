@@ -485,7 +485,7 @@ class ScrollableScreen(tkinter.Frame):
     # This method is called when close window button is press. - Rafael Sampaio
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
-            self.canvas.simulation_core.generate_results()
+            self.canvas.simulation_core.before_close()
             reactor.crash()
 
         else:

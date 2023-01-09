@@ -25,11 +25,10 @@ class Human(object):
             self.simulation_core,
             self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
-        
-    
+
     def start(self):
         self.run_mobility()
-        
+
     def run_mobility(self):
         GraphRandomWaypointMobility(
             self.visual_component,
@@ -39,8 +38,6 @@ class Human(object):
             10,
             100
         )
-        
-
 
 
 class HumanVisualComponent(object):
