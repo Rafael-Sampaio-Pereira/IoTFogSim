@@ -28,7 +28,7 @@ from pathlib import Path
 import multiprocessing
 
 
-class CoreConfig():
+class CoreConfig(multiprocessing.Process):
     def __init__(self):
         multiprocessing.Process.__init__(self)
         # para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
