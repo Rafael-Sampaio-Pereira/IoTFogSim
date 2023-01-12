@@ -125,7 +125,6 @@ class Link(object):
 
                 cont = 0.001
                 if self.simulation_core.clock.time_speed_multiplier <= 10:
-                    print('aqui')
                     for x, y in self.all_coordinates:
                         # verify if package ball just got its destiny - Rafael Sampaio
                         if x == x2 and y == y2:

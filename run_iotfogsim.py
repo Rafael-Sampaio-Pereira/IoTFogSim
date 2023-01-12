@@ -8,7 +8,7 @@ import PIL
 from PIL import ImageTk, Image
 import random
 
-from core.configurations import config
+from core.configurations import CoreConfig
 
 from threading import Thread
 
@@ -27,13 +27,14 @@ import subprocess
 #     subprocess.Popen('xdg-screensaver resume ' + window_id, shell=True)
 
 
-def main():
-    # suspend_screensaver()
-    config()
 
 
 if __name__ == '__main__':
-    main()
-    reactor.run()
+    from multiprocessing import Process
+    
+    CoreConfig()
+    proc2 = Process(target=reactor.run)
+    proc2.start()
+
 
 

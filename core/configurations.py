@@ -25,23 +25,30 @@ import time
 
 
 from pathlib import Path
+import multiprocessing
 
 
-def config():
-    # para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
-    # que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
-    root = tkinter.Tk()
-    # escondendo a instancia vazia de tk() para evitar a exibição desnecessária - Rafael Sampaio
-    root.withdraw()
+class CoreConfig():
+    def __init__(self):
+        multiprocessing.Process.__init__(self)
+        # para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
+        # que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
+        root = tkinter.Tk()
+        # escondendo a instancia vazia de tk() para evitar a exibição desnecessária - Rafael Sampaio
+        root.withdraw()
 
-    simulation_core = SimulationCore()
-    simulation_core.start_clock()
+        simulation_core = SimulationCore()
+        reactor.callFromThread(simulation_core.start_clock)
+        simulation_core.all_subprocesses.append(self)
 
-    # initialization_screen(simulation_core)
-    reactor.callFromThread(initialization_screen, simulation_core)
+        # initialization_screen(simulation_core)
+        reactor.callFromThread(initialization_screen, simulation_core)
+        
+        # generates results when reactor stopped via command line (CRTL+C)
+        reactor.addSystemEventTrigger('before', 'shutdown', simulation_core.before_close)
     
-    # generates results when reactor stopped via command line (CRTL+C)
-    reactor.addSystemEventTrigger('before', 'shutdown', simulation_core.before_close)
+
+
 
 
 def initialization_screen(simulation_core):
