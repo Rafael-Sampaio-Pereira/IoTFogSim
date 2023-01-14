@@ -102,17 +102,6 @@ def get_all_app_classes_name():
     return app_list
 
 
-# getting the default interface name - Rafael Sampaio
-def get_default_interface():
-    return netifaces.gateways()['default'][netifaces.AF_INET][1]
-
-# clear all changes made in a given network interface - Rafael Sampaio
-
-
-def clear_network_changes(interface):
-    local(f"sudo tc qdisc del dev {interface} root")
-
-
 def extract_mqtt_contents(package):
     try:
         package = json.dumps(package)

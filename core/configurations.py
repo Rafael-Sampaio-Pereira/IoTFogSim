@@ -12,7 +12,6 @@ from tkinter import messagebox
 from config.settings import version
 
 from core.functions import configure_logger
-from core.functions import get_default_interface
 
 from twisted.internet import task
 
