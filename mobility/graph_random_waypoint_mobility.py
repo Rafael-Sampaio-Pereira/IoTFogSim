@@ -11,6 +11,8 @@ from twisted.python import log
 from twisted.internet import reactor
 from twisted.internet.task import cooperate
 
+from twisted.internet.task import LoopingCall
+
 
 """
 Model introduction
@@ -42,86 +44,89 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.max_speed = max_speed
         self.min_pause = min_pause
         self.max_pause = max_pause
+        self.state = 'STOPED'
         
 
     @inlineCallbacks
     def start(self):
         # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list - Rafael Sampaio
         yield sleep(0.5)
-        
-        reactor.callFromThread(self.move)
+        LoopingCall(self.move).start(0.1)
 
     @inlineCallbacks
     def move(self) -> None:
-
-        all_trajectory_coordinates = []
-        # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
-        next_random_point = random.choice(self.all_mobility_points)
-        
-        # Getting destiny graph node(i.e. vertice) - Rafael Sampaio
-        destiny_point = self.get_graph_node_by_coords(next_random_point['x'], next_random_point['y'])
-        
-        # Getting current position - Rafael Sampaio
-        current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
-        
-        # Getting shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
-        trajectory_points = nx.shortest_path(self.graph, current_point[0], destiny_point[0], weight="weight")
-        
-        # Getting all coords in shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
-        if next_random_point:
-            first_trajectory_poitnt = None
-            for idx, elem in enumerate(trajectory_points):
-                if not first_trajectory_poitnt:
-                    first_trajectory_poitnt = elem
-                
-                thiselem = elem
-                nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
-                if first_trajectory_poitnt != nextelem:
-                    all_trajectory_coordinates.extend(
-                        list(
-                            bresenham(
-                                self.graph.nodes[thiselem]['x'],
-                                self.graph.nodes[thiselem]['y'],
-                                self.graph.nodes[nextelem]['x'],
-                                self.graph.nodes[nextelem]['y'],
+        if not self.state == 'MOVING' or not self.state == 'PAUSED':
+            self.state = 'MOVING'
+            all_trajectory_coordinates = []
+            # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
+            next_random_point = random.choice(self.all_mobility_points)
+            
+            # Getting destiny graph node(i.e. vertice) - Rafael Sampaio
+            destiny_point = self.get_graph_node_by_coords(next_random_point['x'], next_random_point['y'])
+            
+            # Getting current position - Rafael Sampaio
+            current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
+            
+            # Getting shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
+            trajectory_points = nx.shortest_path(self.graph, current_point[0], destiny_point[0], weight="weight")
+            
+            # Getting all coords in shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
+            if next_random_point:
+                first_trajectory_poitnt = None
+                for idx, elem in enumerate(trajectory_points):
+                    if not first_trajectory_poitnt:
+                        first_trajectory_poitnt = elem
+                    
+                    thiselem = elem
+                    nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
+                    if first_trajectory_poitnt != nextelem:
+                        all_trajectory_coordinates.extend(
+                            list(
+                                bresenham(
+                                    self.graph.nodes[thiselem]['x'],
+                                    self.graph.nodes[thiselem]['y'],
+                                    self.graph.nodes[nextelem]['x'],
+                                    self.graph.nodes[nextelem]['y'],
+                                )
                             )
                         )
-                    )
-          
-            self.simulation_core.updateEventsCounter(
-                f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
-
-            step_speed = random.uniform(self.min_speed, self.max_speed)
-            step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
-            wall_was_found = False
-            tolerance = None
-            for x, y in all_trajectory_coordinates:
-                old_x = self.visual_component.x
-                old_y = self.visual_component.y
-                # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
-                if not wall_was_found:
-                    # verify if object just got its destiny - Rafael Sampaio
-                    if not(x == next_random_point['x']) and not(y == next_random_point['y']):
-                        # preventing icon cross wall - Rafael Sampaio
-                        tolerance = 10
-                        # Moving icon on screen at - Rafael Sampaio
-                        cooperate(self.visual_component.move_on_screen(x, y))
-                        if self.simulation_core.scene_adapter:
-                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                # if found a collision, then rolling back to old position - Rafael Sampaio
-                                reactor.callFromThread(self.visual_component.move_on_screen, old_x, old_y)
-                                wall_was_found = True
-                                break
-                    else:
-                        # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again - Rafael Sampaio
-                        self.visual_component.move_on_screen(x, y)
-                    yield sleep(step_speed)
-
-            # Stay at point for a random period, so move again to another point - Rafael Sampaio
-            pause_time = random.randint(self.min_pause, self.max_pause)
-            pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
-            reactor.callLater(pause_time, self.move)
             
+                self.simulation_core.updateEventsCounter(
+                    f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+
+                step_speed = random.uniform(self.min_speed, self.max_speed)
+                step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
+                wall_was_found = False
+                tolerance = None
+                for x, y in all_trajectory_coordinates:
+                    old_x = self.visual_component.x
+                    old_y = self.visual_component.y
+                    # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
+                    if not wall_was_found:
+                        # verify if object just got its destiny - Rafael Sampaio
+                        if not(x == next_random_point['x']) and not(y == next_random_point['y']):
+                            # preventing icon cross wall - Rafael Sampaio
+                            tolerance = 10
+                            # Moving icon on screen at - Rafael Sampaio
+                            cooperate(self.visual_component.move_on_screen(x, y))
+                            if self.simulation_core.scene_adapter:
+                                if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
+                                    # if found a collision, then rolling back to old position - Rafael Sampaio
+                                    reactor.callFromThread(self.visual_component.move_on_screen, old_x, old_y)
+                                    wall_was_found = True
+                                    break
+                        else:
+                            # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again - Rafael Sampaio
+                            self.visual_component.move_on_screen(x, y)
+                            # Stay at point for a random period, so move again to another point - Rafael Sampaio
+                            pause_time = random.randint(self.min_pause, self.max_pause)
+                            pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
+                            self.state = 'PAUSED'
+                            yield sleep(pause_time)
+                            self.state = 'IDLE'
+                        yield sleep(step_speed)
+
+
     @inlineCallbacks 
     def generate_graph_points(self):
         """Distributes of a desired graph.

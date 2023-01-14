@@ -163,7 +163,8 @@ class SimulationCore(object):
 
     def updateEventsCounter(self, event_description):
         self.eventsCounter = self.eventsCounter + 1
-        log.msg("Event: %i | " % (self.eventsCounter)+event_description)
+        message = "Event: %i | " % (self.eventsCounter)+event_description
+        log.msg(message)
         # Updates events counter value on screen - Rafael Sampaio
         self.simulation_screen.menubar.entryconfigure(
             4, label="Events: "+str(self.eventsCounter))
