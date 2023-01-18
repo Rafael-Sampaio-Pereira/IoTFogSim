@@ -129,7 +129,7 @@ class GraphRandomWaypointMobility(MobilityModel):
 
     @inlineCallbacks 
     def generate_graph_points(self):
-        """Distributes of a desired graph.
+        """Distributes the verticies of a desired graph.
             Rafael Sampaio
         """
         log.msg("Info :  - | Generating graph mobility points...")
