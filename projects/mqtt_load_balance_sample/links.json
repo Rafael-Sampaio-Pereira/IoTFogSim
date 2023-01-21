@@ -1,0 +1,90 @@
+[
+    {
+        "name": "ap1 <----------> router1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "201.168.0.1",
+        "network_interface_2": "10.10.0.1",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "broker <----------> router1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.0.2",
+        "network_interface_2": "192.168.0.1",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "broker <----------> router2",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "10.10.0.2",
+        "network_interface_2": "10.10.0.3",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "Fog1 <----------> router1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.0.6",
+        "network_interface_2": "192.168.0.1",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "Fog2 <----------> router1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.0.7",
+        "network_interface_2": "192.168.0.1",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "sensor 1 <----------> ap1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.0.4",
+        "network_interface_2": "192.168.0.3",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "cloud <----------> router2",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.1.2",
+        "network_interface_2": "192.168.1.1",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    },
+    {
+        "name": "sensor 2 <----------> ap1",
+        "bandwidth": 256,
+        "packet_loss_rate": 0.10,
+        "network_interface_1": "192.168.0.5",
+        "network_interface_2": "192.168.0.3",
+        "delay_upper_bound": 200,
+        "delay_lower_bound": 60,
+        "delay_mean": 70,
+        "delay_standard_deviation": 10
+    }
+]
