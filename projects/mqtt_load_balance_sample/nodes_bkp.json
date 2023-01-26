@@ -111,6 +111,44 @@
           ],
           "x": 688,
           "y": 353
+        },
+        {
+          "name": "Fog Task Performer Server 1",
+          "MIPS": 1024,
+          "icon": "server_icon",
+          "type": "server",
+          "is_wireless": false,
+          "power_watts": 375,
+          "coverage_area_radius": 0,
+          "application": "apps.mqtt.SubscriberApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.6"
+            }
+          ],
+          "x": 140,
+          "y": 520
+        },
+        {
+          "name": "Fog Task Performer Server 2",
+          "MIPS": 1024,
+          "icon": "server_icon",
+          "type": "server",
+          "is_wireless": false,
+          "power_watts": 375,
+          "coverage_area_radius": 0,
+          "application": "apps.mqtt.SubscriberApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.7"
+            }
+          ],
+          "x": 500,
+          "y": 510
         }
       ]
     },

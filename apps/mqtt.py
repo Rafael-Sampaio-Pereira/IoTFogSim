@@ -57,21 +57,7 @@ class BaseMQTT(BaseApp):
                 DEFAULT_PACKET_LENGTH
             )
 
-    def check_if_has_subscription(self):
-        if not self.has_subscription:
-            if len(self.in_buffer) > 0:
-                for packet in self.in_buffer.copy():
-                    if 'accepted' in packet.payload:
-                        if packet.payload['accepted'] is True:
-                            self.has_subscription = True
-                            self.simulation_core.updateEventsCounter(
-                                f"{self.name}-{self.protocol} - "+
-                                    "Subscribed Successfuly "+
-                                    f"packet {packet.id}. Payload: "+
-                                    f"{packet.payload}"
-                            )
-                            self.in_buffer.remove(packet)
-                            del packet
+    
 
 
 class PublisherApp(BaseMQTT):
@@ -87,26 +73,23 @@ class PublisherApp(BaseMQTT):
     def main_loop(self):
         cont=0
         if self.machine.is_turned_on:
-            if self.has_subscription:
-                for broker_addr in self.broker_addresses:
-                    broker_ip, broker_port = broker_addr.split(':')
-                    cont+=1
-                    interval = self.simulation_core.\
-                    clock.get_internal_time_unit(
-                        cont*10.0
-                    )
-                    # Continuosly send tasks to broker
-                    reactor.callLater(
-                        interval,
-                        self.send_packet,
-                        broker_ip,
-                        int(broker_port),
-                        generate_task(),
-                        DEFAULT_PACKET_LENGTH
-                    )
-            else:
-                self.check_for_hardware_MIPS()
-                self.check_if_has_subscription()
+            for broker_addr in self.broker_addresses:
+                broker_ip, broker_port = broker_addr.split(':')
+                cont+=1
+                interval = self.simulation_core.\
+                clock.get_internal_time_unit(
+                    cont*10.0
+                )
+                # Continuosly send tasks to broker
+                reactor.callLater(
+                    interval,
+                    self.send_packet,
+                    broker_ip,
+                    int(broker_port),
+                    generate_task(),
+                    DEFAULT_PACKET_LENGTH
+                )
+
 
 
 class SubscriberApp(BaseMQTT):
@@ -187,6 +170,23 @@ class SubscriberApp(BaseMQTT):
                 },
                 DEFAULT_PACKET_LENGTH
             )
+    
+    def check_if_has_subscription(self):
+        if not self.has_subscription:
+            
+            if len(self.in_buffer) > 0:
+                for packet in self.in_buffer.copy():
+                    if 'accepted' in packet.payload:
+                        if packet.payload['accepted'] is True:
+                            self.has_subscription = True
+                            self.simulation_core.updateEventsCounter(
+                                f"{self.name}-{self.protocol} - "+
+                                    "Subscribed Successfuly "+
+                                    f"packet {packet.id}. Payload: "+
+                                    f"{packet.payload}"
+                            )
+                            self.in_buffer.remove(packet)
+                            del packet
 
 class Topic(object):
     def __init__(self, name, broker):
@@ -204,7 +204,7 @@ class LoadBalanceBrokerApp(BaseApp):
             Topic('task_performers', self),
             Topic('resource_availability', self)
         ]
-        
+        self.topics_names = [topic.name for topic in self.topics]
 
     def main_loop(self):
         if self.machine.is_turned_on:
@@ -217,31 +217,32 @@ class LoadBalanceBrokerApp(BaseApp):
                             f"Payload: {packet.payload}"
                         )
                         if 'subscribe' in packet.payload['action']:
-                            for topic in self.topics:
-                                if topic.name == packet.payload['topic']:
-                                    topic.subscriber_list.append(
-                                        f"{packet.source_addr}:"+
-                                        f"{packet.source_port}"
-                                    )
-                                    self.send_packet(
-                                        packet.source_addr,
-                                        packet.source_port,
-                                        {
-                                            "action": "response",
-                                            "accepted": True
-                                        },
-                                        DEFAULT_PACKET_LENGTH
-                                    )
-                                else:
-                                    self.send_packet(
-                                        packet.source_addr,
-                                        packet.source_port,
-                                        {
-                                            "action": "response",
-                                            "accepted": False
-                                        },
-                                        DEFAULT_PACKET_LENGTH
-                                    )
+                            if packet.payload['topic'] in self.topics_names:
+                                for topic in self.topics:
+                                    
+                                    if topic.name == packet.payload['topic']:
+                                        topic.subscriber_list.append(
+                                            f"{packet.source_addr}:"+
+                                            f"{packet.source_port}"
+                                        )
+                                        self.send_packet(
+                                            packet.source_addr,
+                                            packet.source_port,
+                                            {
+                                                "topic": topic.name,
+                                                "action": "response",
+                                                "accepted": True
+                                            },
+                                            DEFAULT_PACKET_LENGTH
+                                        )
+                            else:
+                                self.send_http_response(
+                                    404,
+                                    'Not Found',
+                                    packet.source_addr,
+                                    packet.source_port,
+                                    DEFAULT_PACKET_LENGTH
+                                )
                         elif 'publish' in packet.payload['action']:
                             pass
                         else:
@@ -254,7 +255,6 @@ class LoadBalanceBrokerApp(BaseApp):
                             )
                         
                     else:
-                        self.in_buffer.remove(packet)
                         self.send_http_response(
                             404,
                             'Not Found',
@@ -283,3 +283,6 @@ class LoadBalanceBrokerApp(BaseApp):
             f'HTTP 1.0 {status_code} - {message}',
             length
         )
+        
+        
+# cloud não tem está com o has_subscription == true mesmo depois de enviar a request
