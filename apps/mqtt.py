@@ -233,7 +233,8 @@ class LoadBalanceBrokerApp(BaseApp):
                                                 "action": "response",
                                                 "accepted": True
                                             },
-                                            DEFAULT_PACKET_LENGTH
+                                            DEFAULT_PACKET_LENGTH,
+                                            packet.last_link
                                         )
                             else:
                                 self.send_http_response(

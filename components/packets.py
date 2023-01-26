@@ -23,3 +23,4 @@ class Packet(object):
         self.trace = []
         self.length = length
         self.created_at = datetime.datetime.now().isoformat()
+        self.last_link = None

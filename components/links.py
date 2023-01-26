@@ -46,6 +46,7 @@ class Link(object):
                 sender = packet.trace[-1]
 
                 if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
+                    packet.last_link=self
                     delay = simulate_network_delay(
                         self.delay_upper_bound,
                         self.delay_lower_bound,

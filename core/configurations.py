@@ -10,26 +10,15 @@ import os
 from tkinter import ttk
 from tkinter import messagebox
 from config.settings import version
-
 from core.functions import configure_logger
-
 from twisted.internet import task
-
-from multiprocessing import Process
-
 from twisted.internet import reactor
-
-
 import time
-
-
 from pathlib import Path
-import multiprocessing
 
 
-class CoreConfig(multiprocessing.Process):
+class CoreConfig():
     def __init__(self):
-        multiprocessing.Process.__init__(self)
         # para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
         # que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
         root = tkinter.Tk()
@@ -38,7 +27,6 @@ class CoreConfig(multiprocessing.Process):
 
         simulation_core = SimulationCore()
         reactor.callFromThread(simulation_core.start_clock)
-        simulation_core.all_subprocesses.append(self)
 
         # initialization_screen(simulation_core)
         reactor.callFromThread(initialization_screen, simulation_core)
