@@ -33,10 +33,10 @@ class Human(object):
         GraphRandomWaypointMobility(
             self.visual_component,
             self.simulation_core,
-            0.008,
             0.02,
-            10,
-            100
+            0.08,
+            2,
+            10
         )
 
 
@@ -125,17 +125,20 @@ class HumanVisualComponent(object):
         self.x = x
         self.y = y
 
-        self.simulation_core.canvas.moveto(
-            self.draggable_name,
-            x-10, y-15
-        )
-        self.simulation_core.canvas.moveto(
-            self.draggable_alert,
-            x, y
-        )
-        self.simulation_core.canvas.moveto(
-            self.draggable_img,
-            x, y
-        )
+        # self.simulation_core.canvas.moveto(
+        #     self.draggable_name,
+        #     x-10, y-15
+        # )
+        # self.simulation_core.canvas.moveto(
+        #     self.draggable_alert,
+        #     x, y
+        # )
+        # self.simulation_core.canvas.moveto(
+        #     self.draggable_img,
+        #     x, y
+        # )
 
+        self.simulation_core.canvas.coords(self.draggable_name, x-10, y-15)
+        self.simulation_core.canvas.coords(self.draggable_alert, x, y)
+        self.simulation_core.canvas.coords(self.draggable_img, x, y)
         
