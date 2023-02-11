@@ -38,7 +38,7 @@ class BaseApp(object):
             reactor.callFromThread(self.main)
 
     def send_packet(
-        self, destiny_addr, destiny_port, payload, length, last_link=None):
+        self, destiny_addr, destiny_port, payload, length, last_link=None, color=None):
         """ Send a packet. Use last_link parameter to send back a response
             using same link/connection that has been used to receive the
             request packet
@@ -50,7 +50,8 @@ class BaseApp(object):
             destiny_addr,
             destiny_port,
             payload,
-            length
+            length,
+            color= color or None
         )
         _packet.trace.append(self.machine.network_interfaces[0])
         self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id} with {length}")

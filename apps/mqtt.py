@@ -1,4 +1,5 @@
 import json
+from queue import Queue
 from twisted.internet.task import LoopingCall
 from twisted.python import log
 from apps.base_app import BaseApp
@@ -8,21 +9,16 @@ import random
 import uuid
 
 
+
 DEFAULT_PACKET_LENGTH = 1024
 
+# Task sizes based on fognetsim++ models
 TASK_SIZE_CHOICES = {
     'large': 1500,
     'medium': 900,
     'small': 200,
     'random': randint(200, 1500)
 }
-
-def generate_task():
-    return {
-        "action": "publish",
-        "task_id": str(uuid.uuid4().fields[-1]),
-        "MI": str(TASK_SIZE_CHOICES.get('small') or 0)
-    }
 
 
 class BaseMQTT(BaseApp):
@@ -32,6 +28,7 @@ class BaseMQTT(BaseApp):
         self.broker_addresses = []
         self.has_subscription = False
         self.target_topics =  None
+        self.listen_topics = None
         
     def main(self):
         super().main()
@@ -45,17 +42,19 @@ class BaseMQTT(BaseApp):
             self.available_MPIS = self.machine.MIPS
 
     def send_subscribe_request(self):
-        for broker_addr in self.broker_addresses:
-            broker_ip, broker_port = broker_addr.split(':')
-            self.send_packet(
-                broker_ip,
-                int(broker_port),
-                {
-                    "action": "subscribe",
-                    "topic": self.target_topics[0]
-                },
-                DEFAULT_PACKET_LENGTH
-            )
+        if len(self.listen_topics):
+            for broker_addr in self.broker_addresses:
+                broker_ip, broker_port = broker_addr.split(':')
+                for topic in self.listen_topics:
+                    self.send_packet(
+                        broker_ip,
+                        int(broker_port),
+                        {
+                            "action": "subscribe",
+                            "topic": topic
+                        },
+                        DEFAULT_PACKET_LENGTH
+                    )
 
     
 
@@ -68,7 +67,18 @@ class PublisherApp(BaseMQTT):
         self.name = 'MQTT Publisher'
         # self.servers_address = ['192.168.0.2', '192.168.1.2', '172.148.0.2']
         self.target_topics = ['task_performers']
+        self.listen_topics = []
         self.broker_addresses = ['192.168.0.2:5800']
+        
+    def generate_task(self):
+        if self.simulation_core.global_seed:
+            random.seed(self.simulation_core.global_seed)
+        return {
+            "topic": self.target_topics[0],
+            "action": "publish",
+            "task_id": str(uuid.uuid4().fields[-1]),
+            "MI": str(random.choice(list(TASK_SIZE_CHOICES.values())) or 0)
+        }
 
     def main_loop(self):
         cont=0
@@ -86,7 +96,7 @@ class PublisherApp(BaseMQTT):
                     self.send_packet,
                     broker_ip,
                     int(broker_port),
-                    generate_task(),
+                    self.generate_task(),
                     DEFAULT_PACKET_LENGTH
                 )
 
@@ -118,7 +128,7 @@ class SubscriberApp(BaseMQTT):
         if len(self.in_buffer) > 0:
             next_packet = self.in_buffer[(0 + 1) % len(self.in_buffer)]
 
-            if 'MI' in next_packet.payload:
+            if 'MI' in next_packet.payload.keys():
                 next_task_size = int(next_packet.payload['MI'])
 
                 # Verify if there is MIPS capability available
@@ -192,7 +202,23 @@ class Topic(object):
     def __init__(self, name, broker):
         self.name = name
         self.broker = broker
-        self.subscriber_list = []
+        self.subscribers_list = []
+        self.message_queue = []
+        LoopingCall(self.handle_message_queue).start(0.2)
+
+    def handle_message_queue(self):
+        if len(self.message_queue) > 0:
+            if len(self.subscribers_list) > 0:
+                message = self.message_queue.pop(0)
+                for subscriber in self.subscribers_list:
+                    destny_addr, destiny_port = subscriber.split(':')
+                    self.broker.send_packet(
+                        destny_addr,
+                        destiny_port,
+                        message,
+                        DEFAULT_PACKET_LENGTH
+                    )
+                
 
 class LoadBalanceBrokerApp(BaseApp):
     def __init__(self):
@@ -221,7 +247,7 @@ class LoadBalanceBrokerApp(BaseApp):
                                 for topic in self.topics:
                                     
                                     if topic.name == packet.payload['topic']:
-                                        topic.subscriber_list.append(
+                                        topic.subscribers_list.append(
                                             f"{packet.source_addr}:"+
                                             f"{packet.source_port}"
                                         )
@@ -234,6 +260,27 @@ class LoadBalanceBrokerApp(BaseApp):
                                                 "accepted": True
                                             },
                                             DEFAULT_PACKET_LENGTH,
+                                            packet.last_link,
+                                            'red'
+                                        )
+                            else:
+                                self.send_http_response(
+                                    404,
+                                    'Not Found',
+                                    packet.source_addr,
+                                    packet.source_port,
+                                    DEFAULT_PACKET_LENGTH,
+                                    packet.last_link
+                                )
+                        elif 'publish' in packet.payload['action']:
+                            if packet.payload['topic'] in self.topics_names:
+                                for topic in self.topics:
+                                    if topic.name == packet.payload['topic']:
+                                        # Send packet to topic message queue
+                                        topic.message_queue.append(packet)
+                                        self.send_ack(
+                                            packet.source_addr,
+                                            packet.source_port,
                                             packet.last_link
                                         )
                             else:
@@ -242,17 +289,17 @@ class LoadBalanceBrokerApp(BaseApp):
                                     'Not Found',
                                     packet.source_addr,
                                     packet.source_port,
-                                    DEFAULT_PACKET_LENGTH
+                                    DEFAULT_PACKET_LENGTH,
+                                    packet.last_link
                                 )
-                        elif 'publish' in packet.payload['action']:
-                            pass
                         else:
                             self.send_http_response(
                                 403,
                                 'Bad Request',
                                 packet.source_addr,
                                 packet.source_port,
-                                DEFAULT_PACKET_LENGTH
+                                DEFAULT_PACKET_LENGTH,
+                                packet.last_link
                             )
                         
                     else:
@@ -261,12 +308,13 @@ class LoadBalanceBrokerApp(BaseApp):
                             'Not Found',
                             packet.source_addr,
                             packet.source_port,
-                            DEFAULT_PACKET_LENGTH
+                            DEFAULT_PACKET_LENGTH,
+                            packet.last_link
                         )
                     # After proccessing request it packet from buffer
                     self.in_buffer.remove(packet)
                     del packet
-                        
+
     def main(self):
         super().main()
         self.simulation_core.updateEventsCounter(
@@ -277,13 +325,24 @@ class LoadBalanceBrokerApp(BaseApp):
         )
 
     def send_http_response(
-        self, status_code, message, destiny_addr, destiny_port, length):
+        self, status_code, message, destiny_addr, destiny_port, length, last_link=None):
         self.send_packet(
             destiny_addr,
             destiny_port,
             f'HTTP 1.0 {status_code} - {message}',
-            length
+            length,
+            last_link
         )
-        
-        
-# cloud não tem está com o has_subscription == true mesmo depois de enviar a request
+    
+    def send_ack(self, destiny_addr, destiny_port, last_link):
+        self.send_packet(
+            destiny_addr,
+            destiny_port,
+            {
+                "action": "response",
+                "ack": str(uuid.uuid4().fields[-1])
+            },
+            DEFAULT_PACKET_LENGTH,
+            last_link,
+            'red'
+        )

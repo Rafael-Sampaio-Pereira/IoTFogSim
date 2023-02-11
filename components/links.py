@@ -116,7 +116,7 @@ class Link(object):
                 y2 = receiver.machine.visual_component.y
                         
                 self.ball = self.simulation_core.canvas.create_oval(
-                    x1, y1, x1+7, y1+7, fill=get_random_color()
+                    x1, y1, x1+7, y1+7, fill=packet.color or get_random_color()
                 )
                 self.all_coordinates = list(bresenham(
                     x1, y1, x2, y2

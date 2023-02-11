@@ -11,7 +11,8 @@ class Packet(object):
             destiny_addr,
             destiny_port,
             payload,
-            length
+            length,
+            color=None
         ):
         self.simulation_core = simulation_core
         self.id = uuid.uuid4().fields[-1]
@@ -24,3 +25,4 @@ class Packet(object):
         self.length = length
         self.created_at = datetime.datetime.now().isoformat()
         self.last_link = None
+        self.color = color
