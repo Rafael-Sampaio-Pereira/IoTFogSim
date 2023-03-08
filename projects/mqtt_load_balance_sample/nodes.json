@@ -149,6 +149,82 @@
           ],
           "x": 500,
           "y": 510
+        },
+        {
+          "name": "Fog Task Performer Server 3",
+          "MIPS": 1024,
+          "icon": "server_icon",
+          "type": "server",
+          "is_wireless": false,
+          "power_watts": 375,
+          "coverage_area_radius": 0,
+          "application": "apps.mqtt.SubscriberApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.8"
+            }
+          ],
+          "x": 700,
+          "y": 510
+        },
+        {
+          "name": "MQTT Sensor Publisher 3",
+          "MIPS": 1024,
+          "icon": "smartphone_icon",
+          "type": "client",
+          "is_wireless": true,
+          "power_watts": 65,
+          "coverage_area_radius": 200,
+          "application": "apps.mqtt.PublisherApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": true,
+              "ip": "192.168.0.9"
+            }
+          ],
+          "x": 588,
+          "y": 253
+        },
+        {
+          "name": "MQTT Sensor Publisher 4",
+          "MIPS": 1024,
+          "icon": "smartphone_icon",
+          "type": "client",
+          "is_wireless": true,
+          "power_watts": 65,
+          "coverage_area_radius": 200,
+          "application": "apps.mqtt.PublisherApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": true,
+              "ip": "192.168.0.10"
+            }
+          ],
+          "x": 755,
+          "y": 245
+        },
+        {
+          "name": "MQTT Sensor Publisher 5",
+          "MIPS": 1024,
+          "icon": "smartphone_icon",
+          "type": "client",
+          "is_wireless": true,
+          "power_watts": 65,
+          "coverage_area_radius": 200,
+          "application": "apps.mqtt.PublisherApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": true,
+              "ip": "192.168.0.11"
+            }
+          ],
+          "x": 540,
+          "y": 380
         }
       ]
     },
@@ -180,13 +256,13 @@
         },
         {
           "name": "Cloud Task Performer Server",
-          "MIPS": 1024,
+          "MIPS": 6144,
           "icon": "broker_icon",
           "type": "server",
           "is_wireless": false,
           "power_watts": 375,
           "coverage_area_radius": 0,
-          "application": "apps.mqtt.SubscriberApp",
+          "application": "apps.mqtt.CloudTaskPerformServerApp",
           "network_interfaces": [
             {
               "name": "eth0",

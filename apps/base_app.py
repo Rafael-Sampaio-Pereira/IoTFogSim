@@ -38,14 +38,14 @@ class BaseApp(object):
             reactor.callFromThread(self.main)
 
     def send_packet(
-        self, destiny_addr, destiny_port, payload, length, last_link=None, color=None):
+        self, destiny_addr, destiny_port, payload, length, last_link=None, color=None, network_interface_indice=0):
         """ Send a packet. Use last_link parameter to send back a response
             using same link/connection that has been used to receive the
             request packet
         """
         _packet = Packet(
             self.simulation_core,
-            self.machine.network_interfaces[0].ip,
+            self.machine.network_interfaces[network_interface_indice].ip,
             self.port,
             destiny_addr,
             destiny_port,
@@ -53,29 +53,29 @@ class BaseApp(object):
             length,
             color= color or None
         )
-        _packet.trace.append(self.machine.network_interfaces[0])
-        self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[0].ip}) creating packet {_packet.id} with {length}")
+        _packet.trace.append(self.machine.network_interfaces[network_interface_indice])
+        self.simulation_core.updateEventsCounter(f"{self.machine.type}({self.machine.network_interfaces[network_interface_indice].ip}) creating packet {_packet.id} with {length}")
         if len(self.machine.links) > 0:
             peer = None
-            if self.machine.network_interfaces[0].is_wireless:
+            if self.machine.network_interfaces[network_interface_indice].is_wireless:
                 reactor.callFromThread(self.machine.propagate_signal)
 
             # Used for send response back to origin peer with same used link
             if last_link:
                 last_link.packets_queue.append(_packet)
-                if self.machine.network_interfaces[0] != last_link.network_interface_1:
+                if self.machine.network_interfaces[network_interface_indice] != last_link.network_interface_1:
                     peer=last_link.network_interface_1
                 else:
                     peer=last_link.network_interface_2
             
             # Used when is starting a new conversation
             else:
-                self.machine.links[0].packets_queue.append(_packet)
-                if self.machine.network_interfaces[0] != self.machine.links[0].network_interface_1:
-                    peer=self.machine.links[0].network_interface_1
+                self.machine.links[network_interface_indice].packets_queue.append(_packet)
+                if self.machine.network_interfaces[network_interface_indice] != self.machine.links[network_interface_indice].network_interface_1:
+                    peer=self.machine.links[network_interface_indice].network_interface_1
                 else:
-                    peer=self.machine.links[0].network_interface_2
+                    peer=self.machine.links[network_interface_indice].network_interface_2
                     
-            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[0].ip} \u27FC   \u2344 \u27F6  {peer.ip} - packet: {_packet.id}")
+            self.simulation_core.updateEventsCounter(f"{self.machine.network_interfaces[network_interface_indice].ip} \u27FC   \u2344 \u27F6  {peer.ip} - packet: {_packet.id}")
         else:
-            log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[0].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
+            log.msg(f"Info :  - | {self.machine.type}({self.machine.network_interfaces[network_interface_indice].ip}) are not connected to a peer. Packet {_packet.id} can not be sent")
