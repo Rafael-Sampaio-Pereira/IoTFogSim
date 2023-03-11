@@ -9,8 +9,11 @@ from twisted.internet import reactor
 from twisted.internet.task import cooperate
 from core.functions import get_random_color
 import itertools
+from memory_profiler import profile
+import random
 
-        
+
+    
 class Link(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
@@ -22,47 +25,58 @@ class Link(object):
         self.network_interface_2 = None
         self.packets_queue =  []
         self.connection_arrow = None
-        self.sent_packets = []
-        self.dropped_packets = []
-        self.all_delays = []
+        self.sent_packets = 0
+        self.dropped_packets = 0
+        # self.all_delays = []
+        self.min_delay = 0
+        self.max_delay = 0
+        self.delay_amount = 0
+        self.delay_average = 0
         self.delay_upper_bound = None
         self.delay_lower_bound = None
         self.delay_mean = None
         self.delay_standard_deviation = None
+        self.arrow_color = None
         LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
         
         
-    def get_delay_mean(self):
-        if len(self.all_delays) > 0:
-            return sum(self.all_delays)/len(self.all_delays)
-        return 0.00
-        
     def transmission_channel(self):
         reactor.callFromThread(self.handle_packets)
-        
+    
+    # @profile  
     def handle_packets(self):
         if len(self.packets_queue) > 0:
-            for packet in self.packets_queue.copy():
+            for index, packet in enumerate(self.packets_queue.copy()):
                 sender = packet.trace[-1]
 
                 if not drop_packet(self.packet_loss_rate, self.simulation_core.global_seed):
                     packet.last_link=self
+                    self.sent_packets = self.sent_packets + 1
                     delay = simulate_network_delay(
                         self.delay_upper_bound,
                         self.delay_lower_bound,
                         self.delay_mean,
                         self.delay_standard_deviation
                     )
-                    self.all_delays.append(delay)
+                    self.delay_amount += delay
+                    if delay > self.max_delay:
+                        self.max_delay = delay
+                    
+                    if delay < self.min_delay or self.min_delay == 0:
+                        self.min_delay = delay
+                    
+                    self.delay_average = self.delay_amount/self.sent_packets
                     delay = self.simulation_core.clock.get_internal_time_unit(delay)
-                    self.sent_packets.append(packet)
+                    
                     if sender == self.network_interface_1:
-                        self.animate_package(packet)
+                        # self.animate_package(packet)
+                        self.blink_arrow()
                         packet.trace.append(self.network_interface_2)
                         reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     elif sender == self.network_interface_2:
-                        self.animate_package(packet)
+                        # self.animate_package(packet)
+                        self.blink_arrow()
                         packet.trace.append(self.network_interface_1)
                         reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
@@ -70,7 +84,7 @@ class Link(object):
                     self.packets_queue.remove(packet)
                     del packet
                 else:
-                    self.dropped_packets.append(packet)
+                    self.dropped_packets = self.dropped_packets + 1
                     self.simulation_core.updateEventsCounter(f"{self.name} - Failed to transmiting packet {packet.id}. Packet was dropped")
                     if sender.machine.app.protocol == 'TCP':
                         log.msg(f"Info :  - | {self.name} - Packet {packet.id} will be retransmitted due sender protocol is TCP")
@@ -81,22 +95,37 @@ class Link(object):
 
 
     def draw_connection_arrow(self):
-        arrow_color = None
+        
         if self.network_interface_1.is_wireless == True or self.network_interface_2.is_wireless == True:
-            arrow_color = "#CFD8DC"
+            self.arrow_color = "#CFD8DC"
         else:
-            arrow_color = "#263238"
+            self.arrow_color = "#263238"
         self.connection_arrow = self.simulation_core.canvas.create_line(
             self.network_interface_1.machine.visual_component.x,
             self.network_interface_1.machine.visual_component.y,
             self.network_interface_2.machine.visual_component.x,
             self.network_interface_2.machine.visual_component.y,
             arrow="both",
-            fill=arrow_color,
+            fill=self.arrow_color,
             width=1,
             dash=(4,2)
         )
         self.simulation_core.updateEventsCounter(f"{self.name} - {self.network_interface_1.machine.type}({self.network_interface_1.ip})\u27F5 \u27F6  ({self.network_interface_2.ip}){self.network_interface_2.machine.type}")
+    
+    def restore_arrow(self):
+        self.simulation_core.canvas.itemconfig(
+            self.connection_arrow,
+            fill=self.arrow_color,
+            dash=(3,2)
+        )
+    
+    def blink_arrow(self):
+        self.simulation_core.canvas.itemconfig(
+            self.connection_arrow,
+            fill='#ff9933',
+            dash=(4,3)
+        )
+        reactor.callLater(0.5, self.restore_arrow)
     
     def animate_package(self, packet):
 
@@ -125,6 +154,16 @@ class Link(object):
                 self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas - Rafael Sampaio
 
                 cont = 0.001
+                
+                # THIS BLOCK REMOVES ABOUT 60% OF ALL POINTS IN PACKET BALL WAY
+                final_pos = self.all_coordinates[-1]
+                n_elements = int(len(self.all_coordinates) * 0.6)
+                self.all_coordinates = random.sample(
+                    self.all_coordinates,
+                    n_elements
+                )
+                self.all_coordinates.append(final_pos)
+                
                 if self.simulation_core.clock.time_speed_multiplier <= 10:
                     for x, y in self.all_coordinates:
                         # verify if package ball just got its destiny - Rafael Sampaio

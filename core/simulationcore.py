@@ -118,11 +118,11 @@ class SimulationCore(object):
                     result_line += link.name+','
                     result_line += link.network_interface_1.ip+','
                     result_line += link.network_interface_2.ip+','
-                    result_line += str(round(link.get_delay_mean(),3))+'ms,'
-                    result_line += str(min(link.all_delays  or [0]))+','
-                    result_line += str(max(link.all_delays or [0]))+','
-                    result_line += str(len(link.sent_packets))+','
-                    result_line += str(len(link.dropped_packets))+','
+                    result_line += str(round(link.delay_average,3))+'ms,'
+                    result_line += str(link.min_delay  or [0])+','
+                    result_line += str(link.max_delay or [0])+','
+                    result_line += str(link.sent_packets)+','
+                    result_line += str(link.dropped_packets)+','
                     
                     print(result_line, file = self.links_results, flush=True)
                     

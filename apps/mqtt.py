@@ -144,11 +144,8 @@ class SubscriberApp(BaseMQTT):
                 self.check_if_has_subscription()
                 
     def incrase_available_MIPS(self, value):
-        print("INCRASE CHAMADO")
-        print(self.available_MIPS)
         self.available_MIPS += value
-        print(self.available_MIPS)
-        
+
     def perform_all_task_in_packet_buffer(self):
         """ Performs the task into next packet in the buffer """
         if len(self.in_buffer) > 0:
@@ -247,12 +244,7 @@ class Topic(object):
                 message = self.message_queue.pop(0)
                 
                 major_capacity_resource = max(self.resource_list, key=attrgetter("available_capacity"))
-                print("MAJOR ", 'FOG', major_capacity_resource.name.split(' ')[4], major_capacity_resource.available_capacity[0], message['MI'], message['task_id'])
-                
-
-                # if major_capacity_resource.available_capacity[0] >=  int(message['MI']) or int(message['MI']) > self.broker.max_capacity:
                 if major_capacity_resource.available_capacity[0] >=  int(message['MI']):
-                    print(major_capacity_resource.available_capacity[0] ,int(message['MI']))
                     self.broker.send_packet(
                         major_capacity_resource.addr,
                         major_capacity_resource.port,
@@ -260,7 +252,6 @@ class Topic(object):
                         DEFAULT_PACKET_LENGTH
                     )
                 else:
-                    print("Sending task to cloud")
                     # if major available capacity resource can not perform task
                     # Send it to the Cloud Task Perform Service
                     self.broker.send_packet(
@@ -295,9 +286,7 @@ class LoadBalanceBrokerApp(BaseApp):
             Topic('task_performers', self),
         ]
         self.topics_names = [topic.name for topic in self.topics]
-        
         self.resources_list = []
-        self.max_fog_capacity = 0
         
     def put_resurce_in_topics_based_on_subscriber_ip_and_port(self, ip, port, resource):
         for topic in self.topics:
@@ -371,7 +360,6 @@ class LoadBalanceBrokerApp(BaseApp):
                                 packet.source_addr
                             )
                             if resource:
-                                print('AQUI', packet.payload['name'], packet.payload['available_capacity'])
                                 # If the resource already mapped, just update
                                 resource.available_capacity = packet.payload['available_capacity'],
                                 resource.last_update = datetime.now()
@@ -390,8 +378,6 @@ class LoadBalanceBrokerApp(BaseApp):
                                 self.put_resurce_in_topics_based_on_subscriber_ip_and_port(
                                     packet.source_addr, packet.source_port, res
                                 )
-                                if packet.payload['max_capacity'] > self.max_fog_capacity:
-                                    self.max_fog_capacity = packet.payload['max_capacity']
                         else:
                             self.send_http_response(
                                 403,
@@ -475,13 +461,9 @@ class CloudTaskPerformServerApp(BaseMQTT):
         """ Performs the task into next packet in the buffer """
         if len(self.in_buffer) > 0:
             next_packet = self.in_buffer[(0 + 1) % len(self.in_buffer)]
-            
-            print("TASK IN CLOUD", next_packet)
 
             if 'MI' in next_packet.payload:
-                next_task_size = int(next_packet.payload['MI'])
-                print("CLOUDEX", self.machine.name, next_packet.payload['task_id'])
-                
+                next_task_size = int(next_packet.payload['MI'])                
                 try:
                     # Removing task from buffer
                     packet = self.in_buffer.pop(0)
