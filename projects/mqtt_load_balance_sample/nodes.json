@@ -23,8 +23,8 @@
               "ip": "10.10.0.1"
             }
           ],
-          "x": 340,
-          "y": 420
+          "x": 910,
+          "y": 530
         },
         {
           "name": "Access Point 1",
@@ -47,8 +47,8 @@
               "ip": "201.168.0.1"
             }
           ],
-          "x": 333,
-          "y": 195
+          "x": 910,
+          "y": 730
         },
         {
           "name": "MQTT Load Balance Broker",
@@ -71,8 +71,8 @@
               "ip": "10.10.0.3"
             }
           ],
-          "x": 170,
-          "y": 850
+          "x": 910,
+          "y": 440
         },
         {
           "name": "MQTT Sensor Publisher 1",
@@ -90,8 +90,8 @@
               "ip": "192.168.0.4"
             }
           ],
-          "x": 688,
-          "y": 153
+          "x": 910,
+          "y": 860
         },
         {
           "name": "MQTT Sensor Publisher 2",
@@ -109,8 +109,8 @@
               "ip": "192.168.0.5"
             }
           ],
-          "x": 688,
-          "y": 353
+          "x": 750,
+          "y": 860
         },
         {
           "name": "Fog Task Performer Server 1",
@@ -128,8 +128,8 @@
               "ip": "192.168.0.6"
             }
           ],
-          "x": 140,
-          "y": 520
+          "x": 650,
+          "y": 600
         },
         {
           "name": "Fog Task Performer Server 2",
@@ -147,8 +147,8 @@
               "ip": "192.168.0.7"
             }
           ],
-          "x": 500,
-          "y": 510
+          "x": 800,
+          "y": 600
         },
         {
           "name": "Fog Task Performer Server 3",
@@ -166,8 +166,8 @@
               "ip": "192.168.0.8"
             }
           ],
-          "x": 700,
-          "y": 510
+          "x": 1000,
+          "y": 600
         },
         {
           "name": "MQTT Sensor Publisher 3",
@@ -185,8 +185,8 @@
               "ip": "192.168.0.9"
             }
           ],
-          "x": 588,
-          "y": 253
+          "x": 1050,
+          "y": 860
         },
         {
           "name": "MQTT Sensor Publisher 4",
@@ -204,8 +204,8 @@
               "ip": "192.168.0.10"
             }
           ],
-          "x": 755,
-          "y": 245
+          "x": 1230,
+          "y": 860
         },
         {
           "name": "MQTT Sensor Publisher 5",
@@ -224,7 +224,26 @@
             }
           ],
           "x": 540,
-          "y": 380
+          "y": 860
+        },
+        {
+          "name": "Fog Task Performer Server 4",
+          "MIPS": 1024,
+          "icon": "server_icon",
+          "type": "server",
+          "is_wireless": false,
+          "power_watts": 375,
+          "coverage_area_radius": 0,
+          "application": "apps.mqtt.SubscriberApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.12"
+            }
+          ],
+          "x": 1150,
+          "y": 600
         }
       ]
     },
@@ -251,13 +270,13 @@
               "ip": "10.10.0.2"
             }
           ],
-          "x": 785,
-          "y": 440
+          "x": 910,
+          "y": 300
         },
         {
           "name": "Cloud Task Performer Server",
           "MIPS": 6144,
-          "icon": "broker_icon",
+          "icon": "cloud_icon",
           "type": "server",
           "is_wireless": false,
           "power_watts": 375,
@@ -270,8 +289,8 @@
               "ip": "192.168.1.2"
             }
           ],
-          "x": 1010,
-          "y": 454
+          "x": 910,
+          "y": 50
         }
       ]
     }

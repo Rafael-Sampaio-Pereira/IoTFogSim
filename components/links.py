@@ -70,13 +70,13 @@ class Link(object):
                     
                     if sender == self.network_interface_1:
                         # self.animate_package(packet)
-                        self.blink_arrow()
+                        self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_2)
                         reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     elif sender == self.network_interface_2:
                         # self.animate_package(packet)
-                        self.blink_arrow()
+                        self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_1)
                         reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
@@ -119,10 +119,10 @@ class Link(object):
             dash=(3,2)
         )
     
-    def blink_arrow(self):
+    def blink_arrow(self, color):
         self.simulation_core.canvas.itemconfig(
             self.connection_arrow,
-            fill='#ff9933',
+            fill= color if color else '#ff9933',
             dash=(4,3)
         )
         reactor.callLater(0.5, self.restore_arrow)
