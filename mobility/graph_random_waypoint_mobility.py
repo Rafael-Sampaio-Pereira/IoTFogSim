@@ -90,8 +90,17 @@ class GraphRandomWaypointMobility(MobilityModel):
                                             )
                                         )
                                     )
-                        
-                        
+                                    
+                                    # reducing points quantities based on simulation speed
+                                    if self.simulation_core.clock.time_speed_multiplier != 1:
+                                        final_pos = all_trajectory_coordinates[-1]
+                                        n_elements = int(len(all_trajectory_coordinates) * self.simulation_core.clock.time_speed_multiplier/100)
+                                        all_trajectory_coordinates = random.sample(
+                                            all_trajectory_coordinates,
+                                            n_elements
+                                        )
+                                        all_trajectory_coordinates.append(final_pos)
+            
                             coords_data ={
                                 'source_point': source_point,
                                 'destination_point': destination_point,
@@ -111,32 +120,6 @@ class GraphRandomWaypointMobility(MobilityModel):
         # Getting current position - Rafael Sampaio
         current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
         
-        # if current_point and destiny_point:
-        #     # Getting shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
-        #     trajectory_points = nx.shortest_path(self.graph, current_point[0], destiny_point[0], weight="weight")
-            
-        #     # Getting all coords in shortest path trajectory between current node(visual_component) position and the selected next point - Rafael Sampaio
-        #     if next_random_point:
-        #         first_trajectory_poitnt = None
-        #         for idx, elem in enumerate(trajectory_points):
-        #             if not first_trajectory_poitnt:
-        #                 first_trajectory_poitnt = elem
-                    
-        #             thiselem = elem
-        #             nextelem = trajectory_points[(idx + 1) % len(trajectory_points)]
-        #             if first_trajectory_poitnt != nextelem:
-        #                 all_trajectory_coordinates.extend(
-        #                     list(
-        #                         bresenham(
-        #                             self.graph.nodes[thiselem]['x'],
-        #                             self.graph.nodes[thiselem]['y'],
-        #                             self.graph.nodes[nextelem]['x'],
-        #                             self.graph.nodes[nextelem]['y'],
-        #                         )
-        #                     )
-        #                 )
-        
-        # getting trajectory data based on 2 points
         trajectory_data = next(filter(
                                 lambda data: data['source_point'] == current_point and data['destination_point'] == destiny_point,
                                 self.all_path_trajectory_coordinates), None)
