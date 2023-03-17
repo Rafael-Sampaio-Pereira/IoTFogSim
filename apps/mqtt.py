@@ -279,6 +279,7 @@ class LoadBalanceBrokerApp(BaseApp):
         super(LoadBalanceBrokerApp, self).__init__()
         self.port = 5800
         self.name ='Load Balance Broker'
+        self.main_interval = 1
         self.cloud_addr = '192.168.1.2'
         self.cloud_port = 3000
         self.topics = [
@@ -446,6 +447,7 @@ class CloudTaskPerformServerApp(BaseMQTT):
         super(CloudTaskPerformServerApp, self).__init__()
         self.port = 3000
         self.name ='Cloud Task Perform Service'
+        self.main_interval = 1
         
     def main(self):
         LoopingCall(self.main_loop).start(
