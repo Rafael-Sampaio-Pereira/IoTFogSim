@@ -56,7 +56,9 @@ class Link(object):
                         self.delay_upper_bound,
                         self.delay_lower_bound,
                         self.delay_mean,
-                        self.delay_standard_deviation
+                        self.delay_standard_deviation,
+                        packet_size=packet.length,
+                        bandwidth=self.bandwidth
                     )
                     self.delay_amount += delay
                     if delay > self.max_delay:

@@ -58,7 +58,7 @@ def drop_packet(loss_rate: float, global_seed) -> bool:
 
 
 
-def simulate_network_delay(upper_bound, lower_bound, mean, standard_deviation, global_seed=None):
+def simulate_network_delay(upper_bound, lower_bound, mean, standard_deviation, global_seed=None, packet_size=None, bandwidth=None):
     """
     this function was based on the below stackoverflow answer, consider that 
     omnet++ inet framework has proved that truncnorm distribution can be used 
@@ -121,4 +121,7 @@ def simulate_network_delay(upper_bound, lower_bound, mean, standard_deviation, g
 
     sample = random.choice(samples)
     delay = float(round((sample/1000),3))
+    if bandwidth and packet_size:
+        # Adds bandwidth delay to the network latency randomiclly generated - Rafael Sampaio
+        delay += packet_size/bandwidth
     return delay
