@@ -165,6 +165,11 @@ class SubscriberApp(BaseMQTT):
                             # set processor busy time for this task perform
                             schedule_interval = self.simulation_core.\
                             clock.get_internal_time_unit(5)
+                            
+                            # schedule_interval = self.simulation_core.\
+                            # clock.get_internal_time_unit(
+                            #      packet_task_size/self.machine.MIPS
+                            #)
 
                             # After process time, give back the subtracted
                             # value to the available MIPS by using sum() function
