@@ -136,5 +136,18 @@ def load_appliances(project_name, simulation_core):
 
 
 def load_environments(project_name, simulation_core):
-    
-    env = Environment(simulation_core)
+    file_path = 'projects/'+project_name+'/environments.json'
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as appliances_file:
+            data = json.loads(appliances_file.read())
+            if data:
+                for env in data:
+                    _env = Environment(
+                            simulation_core,
+                            env['name'],
+                            env['x1'],
+                            env['y1'],
+                            env['x2'],
+                            env['y2'],
+                        )
+                    simulation_core.all_environments.append(_env)

@@ -62,6 +62,7 @@ class SimulationCore(object):
         self.all_apps = []
         self.all_appliances = []
         self.all_ip = []
+        self.all_environments = []
         self.canvas = None
         self.dashboard_canvas = None
         self.simulation_screen = None

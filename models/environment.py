@@ -3,15 +3,15 @@
 
 class Environment(object):
 
-    def __init__(self, simulation_core):
+    def __init__(self, simulation_core, name, x1, y1, x2, y2):
         self.simulation_core = simulation_core
-        self.name = None
+        self.name = name
         self.devices_list = []
         self.human_list = []
-        self.x1 = 78
-        self.y1 = 72
-        self.x2 = 460
-        self.y2 = 388
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
         self.limits_area = None
         self.draw_limits_area()
         
