@@ -81,10 +81,11 @@ class MobilityModel(object):
             x = int(random.uniform(left_padding, self.area_max_width))
             y = int(random.uniform(top_padding, self.area_max_height))
 
-            # Avoiding to place points into walls - Rafael Sampaio
-            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance=point_size):
-                x += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
-                y += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
+            if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
+                # Avoiding to place points into walls - Rafael Sampaio
+                if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance=point_size):
+                    x += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
+                    y += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
 
             self.all_mobility_points.append({"x": x, "y": y})
         # Drawing points in canvas - Rafael Sampaio

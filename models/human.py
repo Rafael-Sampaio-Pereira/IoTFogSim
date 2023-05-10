@@ -3,6 +3,9 @@ import uuid
 from core.visualcomponent import VisualComponent
 import tkinter
 from config.settings import ICONS_PATH
+from mobility.random_direction_mobility import RandomDirectionMobility
+from mobility.random_walk_mobility import RandomWalkMobility
+from mobility.random_waypoint_mobility import RandomWaypointMobility
 from twisted.python import log
 from PIL import ImageTk, Image
 from core.iconsRegister import getIconFileName
@@ -30,7 +33,31 @@ class Human(object):
         self.run_mobility()
 
     def run_mobility(self):
-        GraphRandomWaypointMobility(
+        # GraphRandomWaypointMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     0.02,
+        #     0.08,
+        #     2,
+        #     10
+        # )
+        
+        # RandomDirectionMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     0.02,
+        #     0.08,
+        #     2,
+        #     10
+        # )
+
+        # RandomWalkMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     10
+        # )
+        
+        RandomWaypointMobility(
             self.visual_component,
             self.simulation_core,
             0.02,
@@ -38,7 +65,6 @@ class Human(object):
             2,
             10
         )
-
 
 class HumanVisualComponent(object):
 

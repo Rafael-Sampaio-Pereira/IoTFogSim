@@ -72,8 +72,19 @@ class RandomWaypointMobility(MobilityModel):
             all_coordinates_between_two_points = list(
                 bresenham(self.visual_component.x, self.visual_component.y, next_random_point['x'], next_random_point['y']))
 
+            # reducing points quantities based on simulation speed
+            if self.simulation_core.clock.time_speed_multiplier != 1:
+                final_pos = all_coordinates_between_two_points[-1]
+                n_elements = int(len(all_coordinates_between_two_points) * self.simulation_core.clock.time_speed_multiplier/100)
+                all_coordinates_between_two_points = random.sample(
+                    all_coordinates_between_two_points,
+                    n_elements
+                )
+                all_coordinates_between_two_points.append(final_pos)
+
+
             self.simulation_core.updateEventsCounter(
-                f"Mobile Node {self.visual_component.deviceName} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+                f"Mobile Node {self.visual_component.name} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
             step_speed = random.uniform(self.min_speed, self.max_speed)
             step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
@@ -90,12 +101,13 @@ class RandomWaypointMobility(MobilityModel):
                         tolerance = 10
                         # Moving icon on screen at - Rafael Sampaio
                         self.visual_component.move_on_screen(x, y)
-                        if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                            # if found a collision, then rolling back to old position - Rafael Sampaio
-                            self.visual_component.move_on_screen(
-                                old_x, old_y)
-                            wall_was_found = True
-                            break
+                        if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
+                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
+                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                self.visual_component.move_on_screen(
+                                    old_x, old_y)
+                                wall_was_found = True
+                                break
                     yield sleep(step_speed)
 
             # Stay at point for a random period, so move again to another point - Rafael Sampaio
