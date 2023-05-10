@@ -4,6 +4,7 @@ from components.links import Link
 import json
 import os
 from models.human import Human
+from models.environment import Environment
 
 def load_nodes(project_name, simulation_core):
     file_path = 'projects/'+project_name+'/nodes.json'
@@ -132,3 +133,8 @@ def load_appliances(project_name, simulation_core):
                         _machine.network_interfaces.append(_interface)
                         simulation_core.all_network_interfaces.append(_interface)
                     simulation_core.all_machines.append(_machine)
+
+
+def load_environments(project_name, simulation_core):
+    
+    env = Environment(simulation_core)

@@ -3,7 +3,12 @@ from tkinter import PhotoImage
 from twisted.internet import tksupport
 from twisted.python import log
 
-from core.pre_start import load_nodes, load_humans, load_appliances
+from core.pre_start import (
+    load_nodes,
+    load_humans,
+    load_appliances,
+    load_environments
+)
 from core.simulationcore import SimulationCore
 import json
 import os
@@ -93,9 +98,11 @@ def initialization_screen(simulation_core):
                 simulation_core.build_scene_adapter(
                     settings['scene_adapter'])
             
+            load_environments(selected_project_name, simulation_core)
             load_nodes(selected_project_name, simulation_core)
             load_appliances(selected_project_name, simulation_core)
             load_humans(selected_project_name, simulation_core)
+            
 
             window.destroy()
             window.update()
