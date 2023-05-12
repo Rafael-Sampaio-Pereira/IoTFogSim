@@ -24,7 +24,9 @@ class Environment(object):
             fill=None,
             dash=(4,3),
             outline='red',
-            width=2
+            width=2,
+            # tag="env_"+str(self.name),
+            tags=("env","env_"+str(self.name))
         )
         
     def change_limits_area_color(self, color) -> None:

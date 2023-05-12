@@ -10,7 +10,7 @@ from twisted.python import log
 from PIL import ImageTk, Image
 from core.iconsRegister import getIconFileName
 from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
-
+from twisted.internet.task import LoopingCall
 
 class Human(object):
     def __init__(self, simulation_core, name, age, weight, height, icon, x, y, mobility_model_class=None):
@@ -21,6 +21,7 @@ class Human(object):
         self.height = height
         self.x = x
         self.y = y
+        self.current_environment = None
         self.simulation_core = simulation_core
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -31,8 +32,47 @@ class Human(object):
 
     def start(self):
         self.run_mobility()
+        
+
+    
+    def main(self):
+        self.check_current_environment()
+    
+    def check_current_environment(self):
+        env = self.simulation_core.canvas.find_withtag('env')
+        human = self.simulation_core.canvas.find_withtag(
+            "human_"+str(self.name)
+        )
+        env_id = env[0]
+        env = self.simulation_core.canvas.bbox(env_id)
+        human = self.simulation_core.canvas.bbox(human[0])
+        
+        # First we make sure we compare things in the right order
+        # You can skip that part if you are sure that in all cases x1 < x2 and y1 < y2
+        env_xmin = min(env[0], env[2])
+        env_xmax = max(env[0], env[2])
+        env_ymin = min(env[1], env[3])
+        env_ymax = max(env[1], env[3])
+
+        # We compute the center of the person:
+        human_xcenter = (human[0]+human[2])/2
+        human_ycenter = (human[1]+human[3])/2
+        
+        # Then you perform your checks.
+
+        in_range_along_x = human_xcenter < env_xmax and env_xmin < human_xcenter
+        in_range_along_y = human_ycenter < env_ymax and env_ymin < human_ycenter
+        if in_range_along_x and in_range_along_y:
+            self.current_environment = env_id
+            print(True)
+            return True
+        else:
+            print(False)
+            return False
+
 
     def run_mobility(self):
+        LoopingCall(self.main).start(0.1)
         # GraphRandomWaypointMobility(
         #     self.visual_component,
         #     self.simulation_core,
@@ -81,13 +121,13 @@ class HumanVisualComponent(object):
         self.height = self.image_file.height()
         self.width = self.image_file.width()
         self.draggable_img = self.simulation_core.canvas.create_image(
-            x, y, image=self.image_file, tag="icon")
+            x, y, image=self.image_file, tags=("icon", "human_"+str(self.name)))
 
-        self.draggable_name = self.simulation_core.canvas.create_text(x, y+22, fill="black", font="Arial 7",
-                                                                      text=name)
+        self.draggable_name = self.simulation_core.canvas.create_text(
+            x, y+22, fill="black", font="Arial 7", text=name)
 
-        self.draggable_alert = self.simulation_core.canvas.create_text(x, y-22, fill="black", font="Times 7",
-                                                                       text="")
+        self.draggable_alert = self.simulation_core.canvas.create_text(
+            x, y-22, fill="black", font="Times 7", text="")
         # font="Times 9 italic bold"
 
         simulation_core.canvas.tag_bind(
