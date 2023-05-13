@@ -9,8 +9,8 @@ class MobilityModel(object):
     def __init__(self, simulation_core) -> None:
         self.simulation_core = simulation_core
         self.n_points = 33
-        self.area_max_width = 1000
-        self.area_max_height = 1000
+        self.area_max_width = simulation_core.simulation_screen.screen_w
+        self.area_max_height = simulation_core.simulation_screen.screen_h
         self.all_mobility_points = []
 
     def draw_points(self, point_size):

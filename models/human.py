@@ -64,10 +64,9 @@ class Human(object):
         in_range_along_y = human_ycenter < env_ymax and env_ymin < human_ycenter
         if in_range_along_x and in_range_along_y:
             self.current_environment = env_id
-            print(True)
+            self.simulation_core.canvas.itemconfig(env_id, outline='green')
             return True
         else:
-            print(False)
             return False
 
 
