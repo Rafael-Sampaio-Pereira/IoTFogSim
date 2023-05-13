@@ -39,72 +39,54 @@ class Human(object):
         self.interact_to_current_environment_machines()
         
     def interact_to_current_environment_machines(self):
+        self.check_current_environment()
         if self.current_environment:
-            if self.simulation_core.global_seed:
-                random.seed(self.simulation_core.global_seed)
+            # if self.simulation_core.global_seed:
+            #     random.seed(self.simulation_core.global_seed)
+            
+            if len(self.current_environment.machine_list) > 0:
                 
-            # Select a machine randomly from environment machines list
-            selected_machine = random.choice(self.current_environment.machine_list)
-            
-            # turn on or off the selected machine founded inside environment
-            selected_machine.toggle_power_state()
-            
-
+                random.shuffle(self.current_environment.machine_list)
+                # Select a machine randomly from environment machines list
+                selected_machine = random.choice(self.current_environment.machine_list)
+                
+                # turn on or off the selected machine founded inside environment
+                selected_machine.toggle_power_state()
     
-    # def check_current_environment(self):
-    #     if self.current_environment:
-    #         print(self.current_environment.name, self.current_environment.machine_list)
-    #         # print(self.current_environment.name)
+    def check_current_environment(self):
+        if self.current_environment:
+            
+            human = self.visual_component.draggable_img
+            human = self.simulation_core.canvas.bbox(human)
 
+            # We compute the center of the person:
+            human_xcenter = (human[0]+human[2])/2
+            human_ycenter = (human[1]+human[3])/2
+            
+            env = self.current_environment.limits_area           
+            env = self.simulation_core.canvas.bbox(env)
+            
+            # First we make sure we compare things in the right order
+            # You can skip that part if you are sure that in all cases x1 < x2 and y1 < y2
+            env_xmin = min(env[0], env[2])
+            env_xmax = max(env[0], env[2])
+            env_ymin = min(env[1], env[3])
+            env_ymax = max(env[1], env[3])
 
-        # all_envs = self.simulation_core.canvas.find_withtag('env')
-        # human = self.simulation_core.canvas.find_withtag(
-        #     "human_"+str(self.name)
-        # )
-        
-        # human = self.simulation_core.canvas.bbox(human[0])
+            # Then you perform your checks.
 
-        # # We compute the center of the person:
-        # human_xcenter = (human[0]+human[2])/2
-        # human_ycenter = (human[1]+human[3])/2
-        
-        # near_objects = self.simulation_core.canvas.find_overlapping(human[0], human[1], human[2], human[3])
+            in_range_along_x = human_xcenter < env_xmax and env_xmin < human_xcenter
+            in_range_along_y = human_ycenter < env_ymax and env_ymin < human_ycenter
 
-        # near_env = None
-        # for item in near_objects:
-        #     if item in all_envs:
-        #         near_env = item
-        #         break
-
-        # if near_env:
-        #         env = self.simulation_core.canvas.bbox(near_env)
-                
-        #         # First we make sure we compare things in the right order
-        #         # You can skip that part if you are sure that in all cases x1 < x2 and y1 < y2
-        #         env_xmin = min(env[0], env[2])
-        #         env_xmax = max(env[0], env[2])
-        #         env_ymin = min(env[1], env[3])
-        #         env_ymax = max(env[1], env[3])
-
-        #         # Then you perform your checks.
-
-        #         in_range_along_x = human_xcenter < env_xmax and env_xmin < human_xcenter
-        #         in_range_along_y = human_ycenter < env_ymax and env_ymin < human_ycenter
-
-        #         # verify if human is into env range
-        #         if in_range_along_x and in_range_along_y:
-        #             self.current_environment = near_env
-        #             if not self.last_environment:
-        #                 self.last_environment = near_env
-        #             self.simulation_core.canvas.itemconfig(near_env, outline='green')
-        #         else:
-        #             if self.last_environment != self.current_environment:
-        #                 self.simulation_core.canvas.itemconfig(self.last_environment, outline='red')
-        #             self.last_environment = self.current_environment
+            # verify if human is into env range
+            if in_range_along_x and in_range_along_y:
+                pass
+            else:
+                self.current_environment = None
 
 
     def run_mobility(self):
-        LoopingCall(self.main).start(0)
+        LoopingCall(self.main).start(0.5)
         GraphRandomWaypointMobility(
             self.visual_component,
             self.simulation_core,
