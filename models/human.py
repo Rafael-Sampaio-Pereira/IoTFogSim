@@ -2,6 +2,7 @@
 import uuid
 from core.visualcomponent import VisualComponent
 import tkinter
+import random
 from config.settings import ICONS_PATH
 from mobility.random_direction_mobility import RandomDirectionMobility
 from mobility.random_walk_mobility import RandomWalkMobility
@@ -35,12 +36,25 @@ class Human(object):
         self.run_mobility()
         
     def main(self):
-        self.check_current_environment()
-    
-    def check_current_environment(self):
+        self.interact_to_current_environment_machines()
+        
+    def interact_to_current_environment_machines(self):
         if self.current_environment:
-            print(self.current_environment.name, self.current_environment.machine_list)
-            # print(self.current_environment.name)
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
+                
+            # Select a machine randomly from environment machines list
+            selected_machine = random.choice(self.current_environment.machine_list)
+            
+            # turn on or off the selected machine founded inside environment
+            selected_machine.toggle_power_state()
+            
+
+    
+    # def check_current_environment(self):
+    #     if self.current_environment:
+    #         print(self.current_environment.name, self.current_environment.machine_list)
+    #         # print(self.current_environment.name)
 
 
         # all_envs = self.simulation_core.canvas.find_withtag('env')

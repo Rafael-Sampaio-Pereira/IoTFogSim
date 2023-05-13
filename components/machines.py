@@ -118,3 +118,9 @@ class Machine(object):
     def update_name_on_screen(self, msg):
         if msg:
             self.simulation_core.canvas.itemconfig(self.visual_component.draggable_name, text=str(msg))
+            
+    def toggle_power_state(self):
+        if self.is_turned_on:
+            self.turn_off()
+        else:
+            self.turn_on()
