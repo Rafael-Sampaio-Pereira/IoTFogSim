@@ -19,20 +19,20 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         window.geometry("400x551")
         window.resizable(False, False)
 
-        # Setting window icon. - Rafael Sampaio
+        # Setting window icon.
         window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
 
-        # hearder message - Rafael Sampaio
+        # hearder message
         create_msg = tkinter.Label(window,text="Create new "+node_type.replace("_"," ")+" at "+network_layer+" layer.")
         create_msg.place(relx="0.1",rely="0.05")
 
-        # New node Name - Rafael Sampaio
+        # New node Name
         name_label = tkinter.Label(window,text="Name:")
         name_label.place(relx="0.1",rely="0.12")
         input_name = tkinter.Entry(window)
         input_name.place(relx="0.25",rely="0.12")
 
-        # New node position on screen -Rafael Sampaio
+        # New node position on screen
         create_msg = tkinter.Label(window,text="Position:")
         create_msg.place(relx="0.1",rely="0.18")
         x = window.winfo_pointerx()
@@ -48,7 +48,7 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         input_y.insert(-1, y)
         input_y.place(width="35", relx="0.49",rely="0.18")
 
-        # input for new node coverage area, deafult is disabled - Rafael Sampaio
+        # input for new node coverage area, deafult is disabled
         coverage_area_label = tkinter.Label(window,text="Coverage area:")
         coverage_area_label.place(relx="0.1",rely="0.30")
         input_coverage_area = tkinter.Entry(window)
@@ -56,19 +56,19 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         input_coverage_area.configure(state='disabled')
         input_coverage_area.place(width="124", relx="0.35",rely="0.30")
 
-        # controller for radio buttons that enable and disable the coverage are input - Rafael Sampaio 
+        # controller for radio buttons that enable and disable the coverage are input 
         radio_button_controller = tkinter.IntVar()
 
-        # function to enable coverage area input - Rafael Sampaio
+        # function to enable coverage area input
         def enableCoverage():
             input_coverage_area.configure(state="normal")
             input_coverage_area.update()
-        # function to desable coverage area input - Rafael Sampaio
+        # function to desable coverage area input
         def disableCoverage():
             input_coverage_area.configure(state="disabled")
             input_coverage_area.update()
 
-        # radio buttons that enable and disable the coverage area input - Rafael Sampaio 
+        # radio buttons that enable and disable the coverage area input 
         is_wireless_msg = tkinter.Label(window,text="Is wireless?")
         is_wireless_msg.place(relx="0.1",rely="0.24")
         yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="1", command=enableCoverage)
@@ -76,10 +76,10 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="0", command=disableCoverage)
         no_button.place(relx="0.45",rely="0.24")
 
-        # geting all apps in 'plications' folder files - Rafael Sampaio 
+        # geting all apps in 'plications' folder files 
         all_apps_list = get_all_app_classes_name()
 
-        # combox for apps list - Rafael Sampaio
+        # combox for apps list
         all_app_list_label = tkinter.Label(window,text="App:")
         all_app_list_label.place(relx="0.1",rely="0.36")
         cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
@@ -100,7 +100,7 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         simulation_core.temp_node_icon_path = filename
         simulation_core.temp_new_ap_node = None
 
-        # label for the new node icon - Rafael Sampaio
+        # label for the new node icon
         img = Image.open(filename)
         img = img.resize((32, 32))
         photo = ImageTk.PhotoImage(img)
@@ -108,7 +108,7 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
         icon_label.image = photo 
         icon_label.place(relx="0.5",rely="0.42")
 
-        # function to allow the user choose another icon - Rafael Sampaio
+        # function to allow the user choose another icon
         def chooseIconDialog():
             path = str(pathlib.Path.cwd())+'/graphics/icons/'
             filename = filedialog.askopenfilename(initialdir = path, title = "Choose a icon file", filetypes =
@@ -121,16 +121,16 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             icon_label.image = photo 
             icon_label.update()
 
-        # button for choose another icon - Rafael Sampaio
+        # button for choose another icon
         choose_icon_button = ttk.Button(window, text = "Choose another icon",command = chooseIconDialog)
         choose_icon_button.place(relx="0.1",rely="0.42")
 
-        # just a screen separator - Rafael Sampaio
+        # just a screen separator
         sep = ttk.Separator(window).place(relx="0.0", rely="0.50", relwidth=1)
 
-        # atributtes only for routers, clients and servers - Rafael Sampaio
+        # atributtes only for routers, clients and servers
         if (node_type == 'router' or node_type == 'client' or node_type == 'server'):
-            # New node real ip addr - Rafael Sampaio
+            # New node real ip addr
             real_ip_label = tkinter.Label(window,text="Real IP:")
             real_ip_label.place(relx="0.1",rely="0.54")
             input_real_ip = tkinter.Entry(window)
@@ -138,16 +138,16 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             input_real_ip.place(relx="0.25",rely="0.54")
 
 
-        # atributtes only for routers and servers - Rafael Sampaio
+        # atributtes only for routers and servers
         if (node_type == 'router' or node_type == 'server'):
-            # New node port - Rafael Sampaio
+            # New node port
             port_label = tkinter.Label(window,text="Port:")
             port_label.place(relx="0.1",rely="0.60")
             input_port = tkinter.Entry(window)
             input_port.insert(-1, str(randrange(8000, 8999)))
             input_port.place(width="50",relx="0.25",rely="0.60")
 
-        # atributtes only for routers - Rafael Sampaio
+        # atributtes only for routers
         if (node_type == 'router'):
             
             def openAPWindow():
@@ -157,25 +157,25 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                 ap_window.geometry("300x300")
                 ap_window.resizable(False, False)
 
-                # access point hearder message - Rafael Sampaio
+                # access point hearder message
                 create_msg = tkinter.Label(ap_window,text="Access Point Info")
                 create_msg.place(relx="0.1",rely="0.05")
                 
-                # input for router access point addr- Rafael Sampaio
+                # input for router access point addr
                 ap_real_ip_label = tkinter.Label(ap_window,text="Real IP:")
                 ap_real_ip_label.place(relx="0.1",rely="0.15")
                 input_ap_real_ip = tkinter.Entry(ap_window)
                 input_ap_real_ip.insert(-1, '127.0.0.1')
                 input_ap_real_ip.place(relx="0.25", rely="0.15")
 
-                # input for router access point port - Rafael Sampaio
+                # input for router access point port
                 ap_port_label = tkinter.Label(ap_window,text="Port:")
                 ap_port_label.place(relx="0.1",rely="0.25")
                 ap_input_port = tkinter.Entry(ap_window)
                 ap_input_port.insert(-1, str(randrange(8000, 8999)))
                 ap_input_port.place(width="50",relx="0.25",rely="0.25")
 
-                # access position on screen -Rafael Sampaio
+                # access position on screen
                 ap_msg = tkinter.Label(ap_window,text="Position:")
                 ap_msg.place(relx="0.1",rely="0.35")
                 ap_x_label = tkinter.Label(ap_window,text="X")
@@ -189,21 +189,21 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                 ap_input_y.insert(-1, int(y)+100)
                 ap_input_y.place(width="35", relx="0.49",rely="0.35")
 
-                # input for access point addr TBTT- Rafael Sampaio
+                # input for access point addr TBTT
                 ap_tbtt_label = tkinter.Label(ap_window,text="TBTT:")
                 ap_tbtt_label.place(relx="0.1",rely="0.45")
                 input_ap_tbtt = tkinter.Entry(ap_window)
                 input_ap_tbtt.insert(-1, '0.1024')
                 input_ap_tbtt.place(relx="0.25", rely="0.45")
 
-                # input for access point addr ssid- Rafael Sampaio
+                # input for access point addr ssid
                 ap_ssid_label = tkinter.Label(ap_window,text="SSID:")
                 ap_ssid_label.place(relx="0.1",rely="0.55")
                 input_ap_ssid = tkinter.Entry(ap_window)
                 input_ap_ssid.insert(-1, 'Privated Network')
                 input_ap_ssid.place(relx="0.25", rely="0.55")
 
-                # input for access point addr wpa2- Rafael Sampaio
+                # input for access point addr wpa2
                 ap_wpa2_label = tkinter.Label(ap_window,text="WPA2:")
                 ap_wpa2_label.place(relx="0.1",rely="0.65")
                 input_ap_wpa2 = tkinter.Entry(ap_window)
@@ -211,7 +211,7 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                 input_ap_wpa2.place(relx="0.25", rely="0.65")
 
 
-                # input for new node coverage area, deafult is disabled - Rafael Sampaio
+                # input for new node coverage area, deafult is disabled
                 ap_coverage_area_label = tkinter.Label(ap_window,text="Coverage area:")
                 ap_coverage_area_label.place(relx="0.1",rely="0.75")
                 input_ap_coverage_area = tkinter.Entry(ap_window)
@@ -233,11 +233,11 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
                     ap_window.destroy()
                     ap_window.update()
 
-                # button to save access point - Rafael Sampaio
+                # button to save access point
                 save_ap_button = ttk.Button(ap_window, text = "Save", command = save_ap)
                 save_ap_button.place(relx="0.35",rely="0.85")
 
-            # button to open a modal to create access point - Rafael Sampaio
+            # button to open a modal to create access point
             ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
             ap_button.place(relx="0.1",rely="0.66")
         
@@ -258,11 +258,11 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             app = 'applications.'+cmb_app_list.get()
             covarage = input_coverage_area.get()
 
-            # atributtes only for routers, clients and servers - Rafael Sampaio
+            # atributtes only for routers, clients and servers
             if (node_type == 'router' or node_type == 'client' or node_type == 'server'):
                 real_ip = input_real_ip.get()
 
-            # atributtes only for routers and servers - Rafael Sampaio
+            # atributtes only for routers and servers
             if (node_type == 'router'or node_type == 'server'):    
                 port = input_port.get()
 
@@ -347,6 +347,6 @@ def add_new_node_modal_screen(simulation_core, network_layer, node_type):
             window.update()
 
         
-        # button to save the new node - Rafael Sampaio
+        # button to save the new node
         save_node_button = ttk.Button(window, text = "Save", command = save)
         save_node_button.place(relx="0.4",rely="0.90")

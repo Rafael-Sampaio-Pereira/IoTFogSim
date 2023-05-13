@@ -34,7 +34,7 @@ class ScrollableScreen(tkinter.Frame):
 
         bg_image_path = "projects/"+project_name+"/bg_image.png"
 
-        # verify if the bg image exists - Rafael Sampaio
+        # verify if the bg image exists
         if os.path.isfile(bg_image_path):
             background_image = PIL.Image.open(bg_image_path)
             bg_width, bg_height = background_image.size
@@ -52,7 +52,7 @@ class ScrollableScreen(tkinter.Frame):
             background_image_tk = ImageTk.PhotoImage(background_image)
 
         if resizeable == False:
-            # configure window to the bg image size and desable the resize funciton - Rafael Sampaio
+            # configure window to the bg image size and desable the resize funciton
             root.geometry(str(self.screen_w)+"x"+str(self.screen_h))
             root.resizable(False, False)
 
@@ -85,7 +85,7 @@ class ScrollableScreen(tkinter.Frame):
         # self.canvas.create_text(50,10, anchor="nw", text="Events: ")
         # self.events_counter_label = self.canvas.create_text(102,10, anchor="nw", text="0", tags=("events_counter_label",))
 
-        # # Label to show position on screen - Rafael Sampaio
+        # # Label to show position on screen
         # self.position_label = self.canvas.create_text(300,10, anchor="nw", text="0", tags=("position_label",))
 
         # This is what enables scrolling with the mouse:
@@ -95,15 +95,15 @@ class ScrollableScreen(tkinter.Frame):
         # Creating top menu
         top_menu = self.create_top_menu(root)
 
-        # Set action to the window close button. - Rafael Sampaio
+        # Set action to the window close button.
         root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
-        # Sets esc to close application - Rafael Sampaio
+        # Sets esc to close application
         root.bind('<Escape>', lambda e: self.on_closing())
 
         root.bind("<Motion>", self.update_position_on_screen)
 
-        # Creating context menu - Rafael Sampaio
+        # Creating context menu
         self.create_context_menu()
 
     def create_context_menu(self):
@@ -165,10 +165,10 @@ class ScrollableScreen(tkinter.Frame):
                                          activeforeground="white", font=("Monaco", 11, "bold"), command=self.closeContextMenu)
             self.contextMenu.entryconfig(4, foreground='#b30000')
 
-            # Configure context menu on rigth click - Rafael Sampaio
+            # Configure context menu on rigth click
             self.canvas.bind("<Button-3>", self.openContextMenu)
 
-    # Context menu functions - Rafael Sampaio
+    # Context menu functions
     def openContextMenu(self, event):
         if self.canvas.simulation_core.is_running == False:
             self.contextMenu.post(event.x_root, event.y_root)
@@ -183,20 +183,20 @@ class ScrollableScreen(tkinter.Frame):
     #     window.geometry("400x551")
     #     window.resizable(False, False)
 
-    #     # Setting window icon. - Rafael Sampaio
+    #     # Setting window icon.
     #     window.iconphoto(True, PhotoImage(file='graphics/icons/iotfogsim_icon.png'))
 
-    #     # hearder message - Rafael Sampaio
+    #     # hearder message
     #     create_msg = tkinter.Label(window,text="Create new "+node_type.replace("_"," ")+" at "+network_layer+" layer.")
     #     create_msg.place(relx="0.1",rely="0.05")
 
-    #     # New node Name - Rafael Sampaio
+    #     # New node Name
     #     name_label = tkinter.Label(window,text="Name:")
     #     name_label.place(relx="0.1",rely="0.12")
     #     input_name = tkinter.Entry(window)
     #     input_name.place(relx="0.25",rely="0.12")
 
-    #     # New node position on screen -Rafael Sampaio
+    #     # New node position on screen
     #     create_msg = tkinter.Label(window,text="Position:")
     #     create_msg.place(relx="0.1",rely="0.18")
     #     x = window.winfo_pointerx()
@@ -212,25 +212,25 @@ class ScrollableScreen(tkinter.Frame):
     #     input_y.insert(-1, y)
     #     input_y.place(width="35", relx="0.49",rely="0.18")
 
-    #     # input for new node coverage area, deafult is disabled - Rafael Sampaio
+    #     # input for new node coverage area, deafult is disabled
     #     coverage_area_label = tkinter.Label(window,text="Coverage area:")
     #     coverage_area_label.place(relx="0.1",rely="0.30")
     #     input_coverage_area = tkinter.Entry(window, state='disabled')
     #     input_coverage_area.place(width="124", relx="0.35",rely="0.30")
 
-    #     # controller for radio buttons that enable and disable the coverage are input - Rafael Sampaio
+    #     # controller for radio buttons that enable and disable the coverage are input
     #     radio_button_controller = tkinter.IntVar()
 
-    #     # function to enable coverage area input - Rafael Sampaio
+    #     # function to enable coverage area input
     #     def enableCoverage():
     #         input_coverage_area.configure(state="normal")
     #         input_coverage_area.update()
-    #     # function to desable coverage area input - Rafael Sampaio
+    #     # function to desable coverage area input
     #     def disableCoverage():
     #         input_coverage_area.configure(state="disabled")
     #         input_coverage_area.update()
 
-    #     # radio buttons that enable and disable the coverage area input - Rafael Sampaio
+    #     # radio buttons that enable and disable the coverage area input
     #     is_wireless_msg = tkinter.Label(window,text="Is wireless?")
     #     is_wireless_msg.place(relx="0.1",rely="0.24")
     #     yes_button = tkinter.Radiobutton(window, text="Yes", variable=radio_button_controller, value="0", command=enableCoverage)
@@ -238,16 +238,16 @@ class ScrollableScreen(tkinter.Frame):
     #     no_button = tkinter.Radiobutton(window, text="No", variable=radio_button_controller, value="1", command=disableCoverage)
     #     no_button.place(relx="0.45",rely="0.24")
 
-    #     # geting all apps in 'plications' folder files - Rafael Sampaio
+    #     # geting all apps in 'plications' folder files
     #     all_apps_list = get_all_app_classes_name()
 
-    #     # combox for apps list - Rafael Sampaio
+    #     # combox for apps list
     #     all_app_list_label = tkinter.Label(window,text="App:")
     #     all_app_list_label.place(relx="0.1",rely="0.36")
     #     cmb_app_list = ttk.Combobox(window, width="21", values=all_apps_list)
     #     cmb_app_list.place(relx="0.2",rely="0.36")
 
-    #     # label for the new node icon - Rafael Sampaio
+    #     # label for the new node icon
     #     img = Image.open(str(pathlib.Path.cwd())+'/graphics/icons/iotfogsim_server.png')
     #     img = img.resize((32, 32))
     #     photo = ImageTk.PhotoImage(img)
@@ -255,7 +255,7 @@ class ScrollableScreen(tkinter.Frame):
     #     icon_label.image = photo
     #     icon_label.place(relx="0.5",rely="0.42")
 
-    #     # function to allow the user choose another icon - Rafael Sampaio
+    #     # function to allow the user choose another icon
     #     def chooseIconDialog():
     #         path = str(pathlib.Path.cwd())+'/graphics/icons/'
     #         filename = filedialog.askopenfilename(initialdir = path, title = "Choose a icon file", filetypes =
@@ -267,32 +267,32 @@ class ScrollableScreen(tkinter.Frame):
     #         icon_label.image = photo
     #         icon_label.update()
 
-    #     # button for choose another icon - Rafael Sampaio
+    #     # button for choose another icon
     #     choose_icon_button = ttk.Button(window, text = "Choose another icon",command = chooseIconDialog)
     #     choose_icon_button.place(relx="0.1",rely="0.42")
 
-    #     # just a screen separator - Rafael Sampaio
+    #     # just a screen separator
     #     sep = ttk.Separator(window).place(relx="0.0", rely="0.50", relwidth=1)
 
-    #     # atributtes only for routers, clients and servers - Rafael Sampaio
+    #     # atributtes only for routers, clients and servers
     #     if (node_type == 'router' or node_type == 'client' or node_type == 'server'):
-    #         # New node real ip addr - Rafael Sampaio
+    #         # New node real ip addr
     #         real_ip_label = tkinter.Label(window,text="Real IP:")
     #         real_ip_label.place(relx="0.1",rely="0.54")
     #         input_real_ip = tkinter.Entry(window)
     #         input_real_ip.insert(-1, '127.0.0.1')
     #         input_real_ip.place(relx="0.25",rely="0.54")
 
-    #     # atributtes only for routers and servers - Rafael Sampaio
+    #     # atributtes only for routers and servers
     #     if (node_type == 'router' or node_type == 'server'):
-    #         # New node port - Rafael Sampaio
+    #         # New node port
     #         port_label = tkinter.Label(window,text="Port:")
     #         port_label.place(relx="0.1",rely="0.60")
     #         input_port = tkinter.Entry(window)
     #         input_port.insert(-1, str(randrange(8000, 8999)))
     #         input_port.place(width="50",relx="0.25",rely="0.60")
 
-    #     # atributtes only for routers - Rafael Sampaio
+    #     # atributtes only for routers
     #     if (node_type == 'router'):
 
     #         def openAPWindow():
@@ -302,25 +302,25 @@ class ScrollableScreen(tkinter.Frame):
     #             ap_window.geometry("300x200")
     #             ap_window.resizable(False, False)
 
-    #             # access point hearder message - Rafael Sampaio
+    #             # access point hearder message
     #             create_msg = tkinter.Label(ap_window,text="Access Point Info")
     #             create_msg.place(relx="0.1",rely="0.05")
 
-    #             # input for router access point addr- Rafael Sampaio
+    #             # input for router access point addr
     #             ap_real_ip_label = tkinter.Label(ap_window,text="Real IP:")
     #             ap_real_ip_label.place(relx="0.1",rely="0.20")
     #             input_ap_real_ip = tkinter.Entry(ap_window)
     #             input_ap_real_ip.insert(-1, '127.0.0.1')
     #             input_ap_real_ip.place(relx="0.25", rely="0.20")
 
-    #             # input for router access point port - Rafael Sampaio
+    #             # input for router access point port
     #             ap_port_label = tkinter.Label(ap_window,text="Port:")
     #             ap_port_label.place(relx="0.1",rely="0.35")
     #             ap_input_port = tkinter.Entry(ap_window)
     #             ap_input_port.insert(-1, str(randrange(8000, 8999)))
     #             ap_input_port.place(width="50",relx="0.25",rely="0.35")
 
-    #             # access position on screen -Rafael Sampaio
+    #             # access position on screen
     #             ap_msg = tkinter.Label(ap_window,text="Position:")
     #             ap_msg.place(relx="0.1",rely="0.50")
     #             ap_x_label = tkinter.Label(ap_window,text="X")
@@ -334,15 +334,15 @@ class ScrollableScreen(tkinter.Frame):
     #             ap_input_y.insert(-1, int(y)+10)
     #             ap_input_y.place(width="35", relx="0.49",rely="0.50")
 
-    #             # button to save access point - Rafael Sampaio
+    #             # button to save access point
     #             save_ap_button = ttk.Button(ap_window, text = "Save", command = None)
     #             save_ap_button.place(relx="0.35",rely="0.70")
 
-    #         # button to open a modal to create access point - Rafael Sampaio
+    #         # button to open a modal to create access point
     #         ap_button = ttk.Button(window, text = "Add Access Point", command = openAPWindow)
     #         ap_button.place(relx="0.1",rely="0.66")
 
-    #     # button to save the new node - Rafael Sampaio
+    #     # button to save the new node
     #     save_node_button = ttk.Button(window, text = "Save", command = None)
     #     save_node_button.place(relx="0.4",rely="0.90")
 
@@ -370,7 +370,7 @@ class ScrollableScreen(tkinter.Frame):
     #     self.canvas.configure(scrollregion = self.canvas.bbox("all"))
 
     def update_position_on_screen(self, event):
-        # sertting the coordinates to canvas relative. by default it is window realative and don't change when window is scrolled - Rafael Sampaio
+        # sertting the coordinates to canvas relative. by default it is window realative and don't change when window is scrolled
         x = self.canvas.canvasx(event.x)
         y = self.canvas.canvasy(event.y)
 
@@ -390,7 +390,7 @@ class ScrollableScreen(tkinter.Frame):
         self.canvas.scan_dragto(event.x, event.y, gain=1)
 
     def create_top_menu(self, window):
-        # 'window' param is the 'root' param in ScrollableScreen __init__ method - Rafael Sampaio
+        # 'window' param is the 'root' param in ScrollableScreen __init__ method
         self.menubar = tkinter.Menu(window)
 
         mainmenu = tkinter.Menu(self.menubar, tearoff=0)
@@ -482,7 +482,7 @@ class ScrollableScreen(tkinter.Frame):
             self.canvas.simulation_core.dashboard_canvas = self.dashboard_screen.getCanvas()
 
 
-    # This method is called when close window button is press. - Rafael Sampaio
+    # This method is called when close window button is press.
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you really want to quit?", icon='warning'):
             self.canvas.simulation_core.before_close()

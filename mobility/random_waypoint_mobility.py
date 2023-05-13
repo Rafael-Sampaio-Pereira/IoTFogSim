@@ -57,7 +57,7 @@ class RandomWaypointMobility(MobilityModel):
 
     @inlineCallbacks
     def start(self):
-        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list - Rafael Sampaio
+        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list
         yield sleep(0.5)
         self.move()
 
@@ -65,9 +65,9 @@ class RandomWaypointMobility(MobilityModel):
     def move(self) -> None:
 
         all_coordinates_between_two_points = []
-        # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
+        # Choosing randomically a waypoint in all_mobility_points list
         next_random_point = random.choice(self.all_mobility_points)
-        # Getting all coords between current node(visual_component) position and the selected next point - Rafael Sampaio
+        # Getting all coords between current node(visual_component) position and the selected next point
         if next_random_point:
             all_coordinates_between_two_points = list(
                 bresenham(self.visual_component.x, self.visual_component.y, next_random_point['x'], next_random_point['y']))
@@ -93,24 +93,24 @@ class RandomWaypointMobility(MobilityModel):
             for x, y in all_coordinates_between_two_points:
                 old_x = self.visual_component.x
                 old_y = self.visual_component.y
-                # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
+                # Due it is a loop, verify if last movement has resulted in a wall collision
                 if not wall_was_found:
-                    # verify if object just got its destiny - Rafael Sampaio
+                    # verify if object just got its destiny
                     if not(x == next_random_point['x']) and not(y == next_random_point['y']):
-                        # preventing icon cross wall - Rafael Sampaio
+                        # preventing icon cross wall
                         tolerance = 10
-                        # Moving icon on screen at - Rafael Sampaio
+                        # Moving icon on screen at
                         self.visual_component.move_on_screen(x, y)
                         if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
                             if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                # if found a collision, then rolling back to old position
                                 self.visual_component.move_on_screen(
                                     old_x, old_y)
                                 wall_was_found = True
                                 break
                     yield sleep(step_speed)
 
-            # Stay at point for a random period, so move again to another point - Rafael Sampaio
+            # Stay at point for a random period, so move again to another point
             pause_time = random.randint(self.min_pause, self.max_pause)
             pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
             reactor.callLater(pause_time, self.move)

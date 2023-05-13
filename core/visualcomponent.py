@@ -17,8 +17,8 @@ class VisualComponent(object):
         self.coverage_area_radius = coverage_area_radius
         self.signal_radius = None
 
-        # this refers to the equivalente device of this visual component - Rafael Sampaio
-        # By using the 'device' atribute, is possible access any atibute of the device instance, such as application - Rafael Sampaio
+        # this refers to the equivalente device of this visual component
+        # By using the 'device' atribute, is possible access any atibute of the device instance, such as application
         self.device = device
 
         self.is_wireless = is_wireless
@@ -26,12 +26,12 @@ class VisualComponent(object):
         if self.is_wireless:
             self.signal_radius = 1
             self.coverage_area_radius = coverage_area_radius
-            # The signal circle object to show wifi coverage area. - Rafael Sampaio
-            # coverage are need not to be visible. - Rafael Sampaio
+            # The signal circle object to show wifi coverage area.
+            # coverage are need not to be visible.
             self.draggable_coverage_area_circle = self.simulation_core.canvas.create_oval(
                 self.x+self.coverage_area_radius, self.y+self.coverage_area_radius, self.x-self.coverage_area_radius, self.y-self.coverage_area_radius, fill="", outline="", width=1, stipple="gray12")
 
-            # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method. - Rafael Sampaio
+            # The signal circle object starts with no fill and no outline colors, these colors will be set in the propagate_signal method.
             self.draggable_signal_circle = self.simulation_core.canvas.create_oval(
                 self.x, self.y, self.x, self.y, fill="", outline="", dash=(4, 3), tag="wireless_signal")
 

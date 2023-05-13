@@ -51,27 +51,27 @@ class GraphRandomWaypointMobility(MobilityModel):
 
     @inlineCallbacks
     def start(self):
-        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list - Rafael Sampaio
+        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list
         yield sleep(0.5)
         LoopingCall(self.move).start(0.1)
         
     def generate_all_path_coords_points_between_two_points(self):
         
         for source in self.all_mobility_points:
-            # Getting source graph node(i.e. vertice) - Rafael Sampaio
+            # Getting source graph node(i.e. vertice)
             source_point = self.get_graph_node_by_coords(source['x'], source['y'])
             
             for destination in self.all_mobility_points:
                 if source != destination:
-                    # Getting destiny graph node(i.e. vertice) - Rafael Sampaio
+                    # Getting destiny graph node(i.e. vertice)
                     destination_point = self.get_graph_node_by_coords(destination['x'], destination['y'])
                     
                     if source_point and destination_point:
                         all_trajectory_coordinates = []
-                        # Getting shortest path trajectory between 2 positions and - Rafael Sampaio
+                        # Getting shortest path trajectory between 2 positions and
                         trajectory_points = nx.shortest_path(self.graph, source_point[0], destination_point[0], weight="weight")
                         
-                        # Getting all coords in shortest path trajectory between 2 positions - Rafael Sampaio
+                        # Getting all coords in shortest path trajectory between 2 positions
                         if destination:
                             first_trajectory_poitnt = None
                             for idx, elem in enumerate(trajectory_points):
@@ -112,13 +112,13 @@ class GraphRandomWaypointMobility(MobilityModel):
     @inlineCallbacks
     def move(self) -> None:
         all_trajectory_coordinates = None
-        # Choosing randomically a waypoint in all_mobility_points list - Rafael Sampaio
+        # Choosing randomically a waypoint in all_mobility_points list
         next_random_point = random.choice(self.all_mobility_points)
         
-        # Getting destiny graph node(i.e. vertice) - Rafael Sampaio
+        # Getting destiny graph node(i.e. vertice)
         destiny_point = self.get_graph_node_by_coords(next_random_point['x'], next_random_point['y'])
         
-        # Getting current position - Rafael Sampaio
+        # Getting current position
         current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
         
         trajectory_data = next(filter(
@@ -136,26 +136,26 @@ class GraphRandomWaypointMobility(MobilityModel):
             for x, y in all_trajectory_coordinates:
                 old_x = self.visual_component.x
                 old_y = self.visual_component.y
-                # Due it is a loop, verify if last movement has resulted in a wall collision - Rafael Sampaio
+                # Due it is a loop, verify if last movement has resulted in a wall collision
                 if not wall_was_found:
-                    # verify if object just got its destiny - Rafael Sampaio
+                    # verify if object just got its destiny
                     if not(x == next_random_point['x']) and not(y == next_random_point['y']):
-                        # preventing icon cross wall - Rafael Sampaio
+                        # preventing icon cross wall
                         tolerance = 10
-                        # Moving icon on screen at - Rafael Sampaio
+                        # Moving icon on screen at
                         cooperate(self.visual_component.move_on_screen(x, y))
                         if self.simulation_core.scene_adapter:
                             if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                # if found a collision, then rolling back to old position
                                 reactor.callFromThread(self.visual_component.move_on_screen, old_x, old_y)
                                 wall_was_found = True
                                 break
                     else:
-                        # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again - Rafael Sampaio
+                        # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again
                         self.visual_component.move_on_screen(x, y)
                     yield sleep(step_speed)
 
-            # Stay at point for a random period, so move again to another point - Rafael Sampaio
+            # Stay at point for a random period, so move again to another point
             pause_time = random.randint(self.min_pause, self.max_pause)
             pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
             reactor.callLater(pause_time, self.move)
@@ -163,11 +163,9 @@ class GraphRandomWaypointMobility(MobilityModel):
 
     @inlineCallbacks 
     def generate_graph_points(self):
-        """Distributes the verticies of a desired graph.
-            Rafael Sampaio
-        """
+        """Distributes the verticies of a desired graph."""
         log.msg("Info :  - | Generating graph mobility points...")
-        # waiting for mobility model object get the simulation core - Rafael Sampaio
+        # waiting for mobility model object get the simulation core
         yield sleep(0.5)
         point_size = 20
         first_vertice = None
@@ -182,10 +180,10 @@ class GraphRandomWaypointMobility(MobilityModel):
                             first_vertice = vertice
                         self.add_graph_node(vertice['name'], vertice['x'], vertice['y'])
 
-        # Put icon in the fisrt node of the graph - Rafael Sampaio
+        # Put icon in the fisrt node of the graph
         self.visual_component.move_on_screen(first_vertice['x'], first_vertice['y'])
         
-        # Drawing points in canvas - Rafael Sampaio
+        # Drawing points in canvas
         self.draw_points(point_size)
     
     @inlineCallbacks  
@@ -216,14 +214,14 @@ class GraphRandomWaypointMobility(MobilityModel):
         cooperate(self.start())
         
     def add_graph_edge_with_dinamic_weight(self, fisrt_node: str, second_node: str):
-        # the edge weight will be added calculating the distance between the nodes -Rafael Sampaio
+        # the edge weight will be added calculating the distance between the nodes
         fisrt_node_name = fisrt_node
         second_node_name = second_node
         fisrt_node = self.graph.nodes[fisrt_node]
         second_node = self.graph.nodes[second_node]
         dist = math.sqrt((second_node['x'] - fisrt_node['x'])**2 + (second_node['y'] - fisrt_node['y'])**2)
         self.graph.add_edge(fisrt_node_name, second_node_name, weight=dist)
-        # uncomment the line below to plot edge arrows on the canvas - rafael sampaio
+        # uncomment the line below to plot edge arrows on the canvas
         #self.simulation_core.canvas.create_line(int(fisrt_node['x']), int(fisrt_node['y']), int(second_node['x']), int(second_node['y']), arrow="both", width=3, fill='red')
     
     def get_graph_node_by_coords(self, x, y):

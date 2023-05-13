@@ -46,7 +46,7 @@ class InternalClock(object):
             6, label="Speed: x"+str(self.time_speed_multiplier),)
         
     def update_clock_menu_bar(self):
-        # Updates clock on screen - Rafael Sampaio
+        # Updates clock on screen
         self.simulation_core.simulation_screen.menubar.entryconfigure(
             5, label="Simulation clock: "+self.get_humanized_time(),)
 
@@ -140,7 +140,7 @@ class SimulationCore(object):
         return next(filter(lambda interface: interface.ip == ip,  self.all_network_interfaces), None)
 
     def build_scene_adapter(self, scene_adapter_class) -> None:
-        # the classPath needs to be = folder.file.class - Rafael Sampaio
+        # the classPath needs to be = folder.file.class
         try:
             if scene_adapter_class:
                 paths = scene_adapter_class.split('.')
@@ -158,18 +158,18 @@ class SimulationCore(object):
         self.eventsCounter = self.eventsCounter + 1
         message = "Event: %i | " % (self.eventsCounter)+event_description
         log.msg(message)
-        # Updates events counter value on screen - Rafael Sampaio
+        # Updates events counter value on screen
         self.simulation_screen.menubar.entryconfigure(
             4, label="Events: "+str(self.eventsCounter))
         
 
     def create_simulation_canvas(self, resizeable):
 
-        # These lines allows reactor suports tkinter, both runs in loop application. - Rafael Sampaio
+        # These lines allows reactor suports tkinter, both runs in loop application.
         window = tkinter.Toplevel()
         tksupport.install(window)
 
-        # Main window size and positions settings. - Rafael Sampaio
+        # Main window size and positions settings.
         w_heigth = 600
         w_width = 800
         w_top_padding = 80
@@ -183,16 +183,16 @@ class SimulationCore(object):
         window.bind("<F11>", lambda event: window.attributes("-fullscreen",
                                                              not window.attributes("-fullscreen")))
 
-        # Setting window icon. - Rafael Sampaio
+        # Setting window icon.
         #window.tk.call('wm', 'iconphoto', window._w, PhotoImage(master=window,file='graphics/icons/iotfogsim_icon.png'))
         window.iconphoto(True, PhotoImage(
             file='graphics/icons/iotfogsim_icon.png'))
 
-        # Setting window top text. - Rafael Sampaio
+        # Setting window top text.
         window.title(
             "IoTFogSim %s - An Event-Driven Network Simulator" % (version))
 
-        # Simulation area on screen. - Rafael Sampaio
+        # Simulation area on screen.
         self.simulation_screen = ScrollableScreen(
             window, self.project_name, resizeable, self)
         self.simulation_screen.pack(fill="both", expand=True)

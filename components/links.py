@@ -152,8 +152,8 @@ class Link(object):
                 self.all_coordinates = list(bresenham(
                     x1, y1, x2, y2
                 ))
-                self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion - Rafael Sampaio
-                self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas - Rafael Sampaio
+                self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion
+                self.package_speed = 0.001 # determines the velocity of the packet moving in the canvas
 
                 cont = 0.001
                 
@@ -168,7 +168,7 @@ class Link(object):
                 
                 if self.simulation_core.clock.time_speed_multiplier <= 10:
                     for x, y in self.all_coordinates:
-                        # verify if package ball just got its destiny - Rafael Sampaio
+                        # verify if package ball just got its destiny
                         if x == x2 and y == y2:
                             reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
                             
@@ -177,7 +177,7 @@ class Link(object):
 
                 else:
                     for x, y in itertools.islice(self.all_coordinates , 0, 10):
-                        # verify if package ball just got its destiny - Rafael Sampaio
+                        # verify if package ball just got its destiny
                         if x == x2 and y == y2:
                             reactor.callLater(cont+self.display_time,self.simulation_core.canvas.delete, self.ball)
 

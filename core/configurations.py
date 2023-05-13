@@ -25,9 +25,9 @@ from pathlib import Path
 class CoreConfig():
     def __init__(self):
         # para que uma aplicação com tkinter possa usar varias janelas é preciso uma instancia de tkinter.Tk()
-        # que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel() - Rafael Sampaio
+        # que será o pai. As janelas(filhas) devem ser cirdas com tkinter.Toplevel()
         root = tkinter.Tk()
-        # escondendo a instancia vazia de tk() para evitar a exibição desnecessária - Rafael Sampaio
+        # escondendo a instancia vazia de tk() para evitar a exibição desnecessária
         root.withdraw()
 
         simulation_core = SimulationCore()
@@ -51,11 +51,11 @@ def initialization_screen(simulation_core):
     window.geometry("833x469")
     window.resizable(False, False)
 
-    # Setting window icon. - Rafael Sampaio
+    # Setting window icon.
     window.iconphoto(True, PhotoImage(
         file='graphics/icons/iotfogsim_icon.png'))
 
-    # returns a list with all the subdirectoys in a folder -  Rafael Sampaio
+    # returns a list with all the subdirectoys in a folder
     def load_projects(directory):
         return [f.name for f in os.scandir(directory) if f.is_dir()]
 
@@ -68,7 +68,7 @@ def initialization_screen(simulation_core):
         else:
             simulation_core.project_name = selected_project_name
 
-            # Configuring log - Rafael Sampaio
+            # Configuring log
             log_path = "projects/"+selected_project_name+"/"
             configure_logger(log_path, selected_project_name)
 
@@ -115,26 +115,26 @@ def initialization_screen(simulation_core):
             else:
                 os.makedirs("projects/%s" % (new_project_name))
 
-                # Configuring log - Rafael Sampaio
+                # Configuring log
                 log_path = "projects/"+new_project_name+"/"
                 configure_logger(log_path, new_project_name)
 
                 simulation_core.project_name = new_project_name
 
-                # creating the node.json file into the project directory - Rafael Sampaio
+                # creating the node.json file into the project directory
                 nodes_file = "projects/%s/nodes.json" % (new_project_name)
                 if not os.path.exists(nodes_file):
                     with open(nodes_file, 'w') as file:
                         print("{}", file=file)
 
-                # creating the settings.json file into the project directory - Rafael Sampaio
+                # creating the settings.json file into the project directory
                 settings_file = "projects/%s/settings.json" % (
                     new_project_name)
                 if not os.path.exists(settings_file):
                     with open(settings_file, 'w') as file:
                         print('{"settings":{"resizeable": true}}', file=file)
 
-                # default resizeable screen is true for new projects - Rafael Sampaio
+                # default resizeable screen is true for new projects
                 simulation_core.create_simulation_canvas(resizeable=True)
                 load_nodes(new_project_name, simulation_core)
 
@@ -142,14 +142,14 @@ def initialization_screen(simulation_core):
                 window.update()
 
         except FileExistsError:
-            # if the directory already exists - Rafael Sampaio
+            # if the directory already exists
             messagebox.showerror("IoTFogSim - Error while create project",
                                  "The project %s already exists!" % (new_project_name))
 
-    # Getting all projects folders name from the directory 'projects' and saving it on a list - Rafael Sampaio
+    # Getting all projects folders name from the directory 'projects' and saving it on a list
     projects_list = load_projects("projects")
 
-    # configure backgroud image - Rafael Sampaio
+    # configure backgroud image
     bg_image = PhotoImage(file="graphics/images/background2.png")
     x = tkinter.Label(window, image=bg_image)
     x.place(relx="0.0", rely="0.0")

@@ -69,7 +69,7 @@ class Machine(object):
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         
     def colorize_signal(self):
-        # setting the color of signal(circle border) from transparent to red. - Rafael Sampaio
+        # setting the color of signal(circle border) from transparent to red.
         self.simulation_core.canvas.itemconfig(
             self.visual_component.draggable_signal_circle, outline="red")
         
@@ -77,13 +77,13 @@ class Machine(object):
     def propagate_signal(self):
         if self.simulation_core.clock.time_speed_multiplier <= 10:
             for n in range(0, self.visual_component.coverage_area_radius):
-                # The circle signal starts with raio 1 and propagates to raio 100. - Rafael Sampaio
+                # The circle signal starts with raio 1 and propagates to raio 100.
                 if self.visual_component.signal_radius > 0 and self.visual_component.signal_radius < self.visual_component.coverage_area_radius:
-                    # the ssignal radius propagates at 1 units per time. - Rafael Sampaio
+                    # the ssignal radius propagates at 1 units per time.
                     self.visual_component.signal_radius += 10
                     
                 else:
-                    # Cleaning propagated signal for restore the signal draw. - Rafael Sampaio
+                    # Cleaning propagated signal for restore the signal draw.
                     self.visual_component.signal_radius = -1
                     
                 self.simulation_core.canvas.coords(self.visual_component.draggable_signal_circle, self.visual_component.x+self.visual_component.signal_radius, self.visual_component.y +

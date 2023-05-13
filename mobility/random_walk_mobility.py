@@ -33,12 +33,12 @@ class RandomWalkMobility(MobilityModel):
 
     @inlineCallbacks
     def start(self):
-        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before scene be mounted - Rafael Sampaio
+        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before scene be mounted
         yield sleep(0.5)
         LoopingCall(self.move).start(self.simulation_core.clock.get_internal_time_unit(0.2))
 
     def move(self):
-        # moving the device icon in canvas in random way - Rafael Sampaio
+        # moving the device icon in canvas in random way
         UP = 1
         DOWN = 2
         LEFT = 3
@@ -53,31 +53,31 @@ class RandomWalkMobility(MobilityModel):
         tolerance = 0
 
         if direction == UP:
-            # preventing to move out of screen canvas - Rafael Sampaio
+            # preventing to move out of screen canvas
             if not (self.visual_component.y - self.step_distance) < 1:
                 y2 = y1 - self.step_distance
                 x2 = x1
 
         elif direction == DOWN:
-            # preventing to move out of screen canvas - Rafael Sampaio
+            # preventing to move out of screen canvas
             if not (self.visual_component.y + self.step_distance) > self.simulation_core.canvas.winfo_height():
                 y2 = y1 + self.step_distance
                 x2 = x1
-                # preventin icon cross down wall, adds icon height to prevet wall cross error - Rafael Sampaio
+                # preventin icon cross down wall, adds icon height to prevet wall cross error
                 tolerance = self.visual_component.height
 
         elif direction == LEFT:
-            # preventing to move out of screen canvas - Rafael Sampaio
+            # preventing to move out of screen canvas
             if not (self.visual_component.x - self.step_distance) < 1:
                 x2 = x1 - self.step_distance
                 y2 = y1
 
         elif direction == RIGHT:
-            # preventing to move out of screen canvas - Rafael Sampaio
+            # preventing to move out of screen canvas
             if not (self.visual_component.x + self.step_distance) > self.simulation_core.canvas.winfo_width():
                 x2 = x1 + self.step_distance
                 y2 = y1
-                # preventin icon cross right wall - Rafael Sampaio
+                # preventin icon cross right wall
                 tolerance = self.visual_component.width
 
         if x2 and y2:
@@ -88,12 +88,12 @@ class RandomWalkMobility(MobilityModel):
                 old_x = self.visual_component.x
                 old_y = self.visual_component.y
                 if not wall_was_found:
-                    # verify if object just got its destiny - Rafael Sampaio
+                    # verify if object just got its destiny
                     if not(x == x2 and y == y2):
                         self.visual_component.move_on_screen(x, y)
                         if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
                             if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                # if found a collision, then rolling back to old position - Rafael Sampaio
+                                # if found a collision, then rolling back to old position
                                 self.visual_component.move_on_screen(
                                     old_x, old_y)
                                 wall_was_found = True

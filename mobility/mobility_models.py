@@ -16,7 +16,7 @@ class MobilityModel(object):
     def draw_points(self, point_size):
         """Draw all mobility points on canvas."""
         for point in self.all_mobility_points:
-            # Drawing circles on canvas to represents every point coords - Rafael Sampaio
+            # Drawing circles on canvas to represents every point coords
             self.simulation_core.canvas.create_oval(
                 point['x'], point['y'], point['x']+point_size, point['y']+point_size, outline="red", dash=(4, 3))
 
@@ -26,40 +26,39 @@ class MobilityModel(object):
             n_points: num of points to be distributed into a given area
             area_max_width: max width of desired area
             area_max_height: max height of desired area
-            Rafael Sampaio
         """
         log.msg("Info : - | Generating area borde for mobility points...")
-        # waiting for mobility model object get the simulation core - Rafael Sampaio
+        # waiting for mobility model object get the simulation core
         yield sleep(0.5)
         point_size = 1
         left_padding = 80
         top_padding = 80
 
-        # generating top line points - Rafael Sampaio
+        # generating top line points
         for x in range(left_padding, self.area_max_width):
-            # top line position - Rafael Sampaio
+            # top line position
             y = top_padding
             self.all_mobility_points.append({"x": x, "y": y})
 
-        # generating bottom line points - Rafael Sampaio
+        # generating bottom line points
         for x in range(left_padding, self.area_max_width):
-            # bottom line position - Rafael Sampaio
+            # bottom line position
             y = self.area_max_height
             self.all_mobility_points.append({"x": x, "y": y})
 
-        # generating left line points - Rafael Sampaio
+        # generating left line points
         for y in range(top_padding, self.area_max_height):
-            # left line position - Rafael Sampaio
+            # left line position
             x = left_padding
             self.all_mobility_points.append({"x": x, "y": y})
 
-        # generating rigth line points - Rafael Sampaio
+        # generating rigth line points
         for y in range(top_padding, self.area_max_height):
-            # left line position - Rafael Sampaio
+            # left line position
             x = self.area_max_width
             self.all_mobility_points.append({"x": x, "y": y})
 
-        # Drawing points in canvas - Rafael Sampaio
+        # Drawing points in canvas
         self.draw_points(point_size)
 
     @inlineCallbacks
@@ -68,27 +67,26 @@ class MobilityModel(object):
             n_points: num of points to be distributed into a given area
             area_max_width: max width of desired area
             area_max_height: max height of desired area
-            Rafael Sampaio
         """
         log.msg("Info : - | Generating mobility points...")
-        # waiting for mobility model object get the simulation core - Rafael Sampaio
+        # waiting for mobility model object get the simulation core
         yield sleep(0.5)
         point_size = 20
         left_padding = 50
         top_padding = 50
         for point in range(1, self.n_points+1):
-            # Casting to int due uniform distribution returns float - Rafael Sampaio
+            # Casting to int due uniform distribution returns float
             x = int(random.uniform(left_padding, self.area_max_width))
             y = int(random.uniform(top_padding, self.area_max_height))
 
             if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
-                # Avoiding to place points into walls - Rafael Sampaio
+                # Avoiding to place points into walls
                 if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance=point_size):
                     x += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
                     y += point_size+self.simulation_core.scene_adapter.ground_plan.wall_tickness
 
             self.all_mobility_points.append({"x": x, "y": y})
-        # Drawing points in canvas - Rafael Sampaio
+        # Drawing points in canvas
         self.draw_points(point_size)
 
     def find_directions_based_on_coords(self, visual_component, x, y):
