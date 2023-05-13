@@ -1,7 +1,8 @@
 from tkinter import RIGHT
 from twisted.internet import reactor
 from twisted.internet import reactor
-
+import os
+import json
 
 class SmartHomeAdapter(object):
     def __init__(self, simulation_core) -> None:
@@ -15,22 +16,20 @@ class SimpleGroundPlan(object):
 
     def __init__(self, simulation_core) -> None:
         self.simulation_core = simulation_core
-        self.wall_tickness = 10
-        self.wall_color = "violet"
-
-        self.draw_wall(62, 57, 745, "v")
-        self.draw_wall(462, 57, 400, "v")
-        self.draw_wall(686, 57, 582, "v")
-        self.draw_wall(686, 724, 744, "v")
-        self.draw_wall(332, 550, 744, "v")
-        self.draw_wall(342, 550, 744, "v")
-        self.draw_wall(352, 550, 744, "v")
-        
-        self.draw_wall(62, 57, 696, "h")
-        self.draw_wall(623, 390, 690, "h")
-        self.draw_wall(452, 390, 480, "h")
-        self.draw_wall(62, 390, 310, "h")
-        self.draw_wall(62, 737, 696, "h")
+        file_path = 'projects/'+simulation_core.project_name+'/ground_plan.json'
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as ground_plan_file:
+                data = json.loads(ground_plan_file.read())
+                if data:
+                    self.wall_tickness = data['wall_tickness']
+                    self.wall_color = data['wall_color']
+                    for wall in data['walls']:
+                        self.draw_wall(
+                            wall['start_x'],
+                            wall['start_y'],
+                            wall['end_point'],
+                            wall['orientation']
+                        )
         
 
     def draw_wall(self, start_x: int, start_y: int, end_point: int, orientation: str):

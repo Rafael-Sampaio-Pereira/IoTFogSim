@@ -1,0 +1,21 @@
+{
+    "wall_tickness": 10,
+    "wall_color": "violet",
+    "walls": [
+        { "start_x": 62, "start_y": 57, "end_point": 745, "orientation": "v" },
+        { "start_x": 462, "start_y": 57, "end_point": 400, "orientation": "v" },
+        { "start_x": 686, "start_y": 57, "end_point": 582, "orientation": "v" },
+        { "start_x": 686, "start_y": 724, "end_point": 744, "orientation": "v" },
+        { "start_x": 332, "start_y": 550, "end_point": 744, "orientation": "v" },
+        { "start_x": 342, "start_y": 550, "end_point": 744, "orientation": "v" },
+        { "start_x": 352, "start_y": 550, "end_point": 744, "orientation": "v" },
+        { "start_x": 62, "start_y": 57, "end_point": 696, "orientation": "h" },
+        { "start_x": 623, "start_y": 390, "end_point": 690, "orientation": "h" },
+        { "start_x": 452, "start_y": 390, "end_point": 480, "orientation": "h" },
+        { "start_x": 62, "start_y": 390, "end_point": 310, "orientation": "h" },
+        { "start_x": 62, "start_y": 737, "end_point": 696, "orientation": "h" }
+    ]
+}
+
+
+
