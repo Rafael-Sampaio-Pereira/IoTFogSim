@@ -10,7 +10,8 @@ from core.functions import sleep
 from twisted.python import log
 from twisted.internet import reactor
 from twisted.internet.task import cooperate
-
+import os
+import json
 from twisted.internet.task import LoopingCall
 
 
@@ -168,36 +169,24 @@ class GraphRandomWaypointMobility(MobilityModel):
         log.msg("Info :  - | Generating graph mobility points...")
         # waiting for mobility model object get the simulation core - Rafael Sampaio
         yield sleep(0.5)
-        point_size = 0
-        self.add_graph_node("IN_1", x=124, y=180)
-        self.add_graph_node("IN_2", x=765, y=824)
-        
-        self.add_graph_node("DOOR_1", x=377, y=180)
-        self.add_graph_node("DOOR_2", x=507, y=311)
-        self.add_graph_node("DOOR_3", x=507, y=565)
-        self.add_graph_node("DOOR_4", x=255, y=565)
-        self.add_graph_node("DOOR_5", x=638, y=696)
-        self.add_graph_node("DOOR_5A", x=770, y=311)
-        self.add_graph_node("DOOR_6", x=892, y=434)
-        self.add_graph_node("DOOR_7", x=1024, y=311)
-        self.add_graph_node("DOOR_8", x=1024, y=565)
-        
-        self.add_graph_node("POINT_1", x=243, y=180)
-        self.add_graph_node("POINT_2", x=508, y=180)
-        self.add_graph_node("POINT_3", x=508, y=434)
-        self.add_graph_node("POINT_4", x=377, y=696)
-        self.add_graph_node("POINT_5", x=243, y=434)
-        self.add_graph_node("POINT_6", x=761, y=565)
-        self.add_graph_node("POINT_7", x=761, y=180)
-        self.add_graph_node("POINT_8", x=1024, y=434)
-        self.add_graph_node("POINT_9", x=1024, y=180)
-        self.add_graph_node("POINT_10", x=1024, y=696)
-        
+        point_size = 20
+        first_vertice = None
+
+        file_path = 'projects/'+self.simulation_core.project_name+'/mobility_graph.json'
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as nodes_file:
+                data = json.loads(nodes_file.read())
+                if data:
+                    for vertice in data['vertices']:
+                        if not first_vertice:
+                            first_vertice = vertice
+                        self.add_graph_node(vertice['name'], vertice['x'], vertice['y'])
+
         # Put icon in the fisrt node of the graph - Rafael Sampaio
-        self.visual_component.move_on_screen(124, 180)
+        self.visual_component.move_on_screen(first_vertice['x'], first_vertice['y'])
         
         # Drawing points in canvas - Rafael Sampaio
-        # self.draw_points(point_size)
+        self.draw_points(point_size)
     
     @inlineCallbacks  
     def generate_graph_edges(self):
