@@ -222,7 +222,16 @@ class GraphRandomWaypointMobility(MobilityModel):
         dist = math.sqrt((second_node['x'] - fisrt_node['x'])**2 + (second_node['y'] - fisrt_node['y'])**2)
         self.graph.add_edge(fisrt_node_name, second_node_name, weight=dist)
         # uncomment the line below to plot edge arrows on the canvas
-        #self.simulation_core.canvas.create_line(int(fisrt_node['x']), int(fisrt_node['y']), int(second_node['x']), int(second_node['y']), arrow="both", width=3, fill='red')
+        self.simulation_core.canvas.create_line(
+            int(fisrt_node['x']),
+            int(fisrt_node['y']),
+            int(second_node['x']),
+            int(second_node['y']),
+            arrow="both",
+            dash=(4,2),
+            width=1,
+            fill='gray'
+        )
     
     def get_graph_node_by_coords(self, x, y):
         for node in self.graph.nodes(data=True):
