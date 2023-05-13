@@ -191,35 +191,14 @@ class GraphRandomWaypointMobility(MobilityModel):
     @inlineCallbacks  
     def generate_graph_edges(self):
         yield sleep(0.5)
-        self.add_graph_edge_with_dinamic_weight('IN_1', 'POINT_1')
-        self.add_graph_edge_with_dinamic_weight('POINT_1', 'DOOR_1')
-        self.add_graph_edge_with_dinamic_weight('DOOR_1', 'POINT_2')
-        self.add_graph_edge_with_dinamic_weight('POINT_2', 'DOOR_2')
-        self.add_graph_edge_with_dinamic_weight('DOOR_1', 'DOOR_2')
-        self.add_graph_edge_with_dinamic_weight('DOOR_2', 'POINT_3')
-        self.add_graph_edge_with_dinamic_weight('POINT_3', 'DOOR_3')
-        self.add_graph_edge_with_dinamic_weight('DOOR_3', 'DOOR_5')
-        self.add_graph_edge_with_dinamic_weight('DOOR_3', 'POINT_4')
-        self.add_graph_edge_with_dinamic_weight('POINT_4', 'DOOR_5')
-        self.add_graph_edge_with_dinamic_weight('POINT_4', 'DOOR_4')
-        self.add_graph_edge_with_dinamic_weight('DOOR_4', 'POINT_5')
-        self.add_graph_edge_with_dinamic_weight('DOOR_4', 'DOOR_5')
-        self.add_graph_edge_with_dinamic_weight('DOOR_5', 'IN_2')
-        self.add_graph_edge_with_dinamic_weight('DOOR_5', 'POINT_6')
-        self.add_graph_edge_with_dinamic_weight('DOOR_5', 'DOOR_5A')
-        self.add_graph_edge_with_dinamic_weight('IN_2', 'POINT_6')
-        self.add_graph_edge_with_dinamic_weight('IN_2', 'DOOR_6')
-        self.add_graph_edge_with_dinamic_weight('POINT_6', 'DOOR_5A')
-        self.add_graph_edge_with_dinamic_weight('POINT_6', 'DOOR_6')
-        self.add_graph_edge_with_dinamic_weight('DOOR_5A', 'POINT_7')
-        self.add_graph_edge_with_dinamic_weight('DOOR_5A', 'DOOR_6')
-        self.add_graph_edge_with_dinamic_weight('DOOR_6', 'DOOR_7')
-        self.add_graph_edge_with_dinamic_weight('DOOR_6', 'DOOR_8')
-        self.add_graph_edge_with_dinamic_weight('DOOR_6', 'POINT_8')
-        self.add_graph_edge_with_dinamic_weight('POINT_8', 'DOOR_7')
-        self.add_graph_edge_with_dinamic_weight('POINT_8', 'DOOR_8')
-        self.add_graph_edge_with_dinamic_weight('POINT_9', 'DOOR_7')
-        self.add_graph_edge_with_dinamic_weight('POINT_10', 'DOOR_8')
+        file_path = 'projects/'+self.simulation_core.project_name+'/mobility_graph.json'
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as nodes_file:
+                data = json.loads(nodes_file.read())
+                if data:
+                    for edge in data['edges']:
+                        self.add_graph_edge_with_dinamic_weight(edge['vertice_1'], edge['vertice_2'])
+
 
         
     def add_graph_node(self, name, x, y):

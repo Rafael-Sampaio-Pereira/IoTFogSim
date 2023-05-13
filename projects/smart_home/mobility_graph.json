@@ -9,5 +9,16 @@
         { "name": "POINT_4", "x": 190, "y": 600 },
         { "name": "POINT_5", "x": 255, "y": 205 },
         { "name": "POINT_6", "x": 570, "y": 205 }
+    ],
+    "edges": [
+        { "vertice_1": "DOOR_1", "vertice_2": "POINT_1"},
+        { "vertice_1": "DOOR_2", "vertice_2": "POINT_1"},
+        { "vertice_1": "DOOR_2", "vertice_2": "POINT_2"},
+        { "vertice_1": "DOOR_2", "vertice_2": "POINT_6"},
+        { "vertice_1": "DOOR_3", "vertice_2": "POINT_2"},
+        { "vertice_1": "DOOR_3", "vertice_2": "POINT_5"},
+        { "vertice_1": "POINT_1", "vertice_2": "POINT_2"},
+        { "vertice_1": "POINT_2", "vertice_2": "POINT_3"},
+        { "vertice_1": "POINT_3", "vertice_2": "POINT_4"}
     ]
 }
