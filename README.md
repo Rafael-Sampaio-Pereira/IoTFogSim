@@ -4,7 +4,7 @@ IoTFogSim é um simulador orientado a eventos desenvolvido em python, que utiliz
 
 Core Technology in Version
 ---------------------------
- - Python 3.8.14
+ - Python 3.10
  
 ## Inicio rápido
 
