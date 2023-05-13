@@ -142,6 +142,9 @@ class SimulationCore(object):
     def get_human_instance_by_icon_id(self, id):
         return next(filter(lambda human: human.visual_component.draggable_img == id,  self.all_humans), None)
 
+    def get_machine_instance_by_icon_id(self, id):
+        return next(filter(lambda obj: obj.visual_component.draggable_img == id,  self.all_machines), None)
+
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class
         try:

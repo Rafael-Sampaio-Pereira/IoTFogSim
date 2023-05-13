@@ -39,7 +39,8 @@ class Human(object):
     
     def check_current_environment(self):
         if self.current_environment:
-            print(self.current_environment.name)
+            print(self.current_environment.name, self.current_environment.machine_list)
+            # print(self.current_environment.name)
 
 
         # all_envs = self.simulation_core.canvas.find_withtag('env')

@@ -98,10 +98,11 @@ def initialization_screen(simulation_core):
                 simulation_core.build_scene_adapter(
                     settings['scene_adapter'])
             
-            load_environments(selected_project_name, simulation_core)
+            
             load_nodes(selected_project_name, simulation_core)
             load_appliances(selected_project_name, simulation_core)
             load_humans(selected_project_name, simulation_core)
+            load_environments(selected_project_name, simulation_core)
             
 
             window.destroy()
