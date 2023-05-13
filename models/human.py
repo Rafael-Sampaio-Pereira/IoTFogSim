@@ -22,6 +22,7 @@ class Human(object):
         self.x = x
         self.y = y
         self.current_environment = None
+        self.last_environment = None
         self.simulation_core = simulation_core
         icon_file = getIconFileName(icon)
         self.icon = ICONS_PATH+icon_file
@@ -62,24 +63,26 @@ class Human(object):
 
         in_range_along_x = human_xcenter < env_xmax and env_xmin < human_xcenter
         in_range_along_y = human_ycenter < env_ymax and env_ymin < human_ycenter
+
+        # verify if human is into env range
         if in_range_along_x and in_range_along_y:
             self.current_environment = env_id
+            if not self.last_environment:
+                self.last_environment = env_id
             self.simulation_core.canvas.itemconfig(env_id, outline='green')
-            return True
         else:
-            return False
-
+            self.simulation_core.canvas.itemconfig(self.last_environment, outline='red')
 
     def run_mobility(self):
         LoopingCall(self.main).start(0.1)
-        GraphRandomWaypointMobility(
-            self.visual_component,
-            self.simulation_core,
-            0.02,
-            0.08,
-            2,
-            10
-        )
+        # GraphRandomWaypointMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     0.02,
+        #     0.08,
+        #     2,
+        #     10
+        # )
         
         # RandomDirectionMobility(
         #     self.visual_component,
@@ -96,14 +99,14 @@ class Human(object):
         #     10
         # )
         
-        # RandomWaypointMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     0.02,
-        #     0.08,
-        #     2,
-        #     10
-        # )
+        RandomWaypointMobility(
+            self.visual_component,
+            self.simulation_core,
+            0.02,
+            0.08,
+            2,
+            10
+        )
 
 class HumanVisualComponent(object):
 
