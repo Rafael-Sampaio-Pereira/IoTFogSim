@@ -34,13 +34,12 @@ class Human(object):
     def start(self):
         self.run_mobility()
         
-
-    
     def main(self):
         self.check_current_environment()
     
     def check_current_environment(self):
-        pass
+        if self.current_environment:
+            print(self.current_environment.name)
 
 
         # all_envs = self.simulation_core.canvas.find_withtag('env')

@@ -139,6 +139,9 @@ class SimulationCore(object):
         # filter list by network_interface ip, if not found, return None
         return next(filter(lambda interface: interface.ip == ip,  self.all_network_interfaces), None)
 
+    def get_human_instance_by_icon_id(self, id):
+        return next(filter(lambda human: human.visual_component.draggable_img == id,  self.all_humans), None)
+
     def build_scene_adapter(self, scene_adapter_class) -> None:
         # the classPath needs to be = folder.file.class
         try:

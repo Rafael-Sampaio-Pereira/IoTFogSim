@@ -14,7 +14,7 @@ class Environment(object):
         self.y2 = y2
         self.limits_area = None
         self.draw_limits_area()
-        LoopingCall(self.check_for_human_inside_environment_area).start(0)
+        LoopingCall(self.check_for_human_inside_environment_area).start(0.2)
         
     def draw_limits_area(self) -> None:
         self.limits_area = self.simulation_core.canvas.create_rectangle(
@@ -29,7 +29,6 @@ class Environment(object):
             tags=("env","env_"+str(self.name))
         )
 
-        
     def change_limits_area_color(self, color) -> None:
         if self.limits_area:
             self.simulation_core.canvas.itemconfig(
@@ -47,6 +46,8 @@ class Environment(object):
             # verify if human icon is inside the environment area
             for obj in objects_inside_env:
                 if "human" in self.simulation_core.canvas.gettags(obj):
+                    human = self.simulation_core.get_human_instance_by_icon_id(obj)
+                    human.current_environment = self
                     qt_humans += 1
 
             if qt_humans > 0:
