@@ -10,6 +10,7 @@ from core.ScrollableScreen import ScrollableScreen
 from importlib import import_module
 from core.functions import create_csv_results_file
 from twisted.internet.task import LoopingCall
+from tkextrafont import Font
 
 class InternalClock(object):
     def __init__(self, simulation_core):
@@ -49,6 +50,7 @@ class InternalClock(object):
         # Updates clock on screen
         self.simulation_core.simulation_screen.menubar.entryconfigure(
             5, label="Simulation clock: "+self.get_humanized_time(),)
+        self.simulation_core.canvas.itemconfig(self.simulation_core.screen_clock, text=self.get_humanized_time())
 
 class SimulationCore(object):
 
@@ -203,5 +205,6 @@ class SimulationCore(object):
             window, self.project_name, resizeable, self)
         self.simulation_screen.pack(fill="both", expand=True)
         canvas = self.simulation_screen.getCanvas()
-
+        font = Font(file="utils/fonts/alarm_clock.ttf", family="Alarm Clock", size=25)
+        self.screen_clock = canvas.create_text((108,25), font=font, text="clock", fill='black')
         self.canvas = canvas
