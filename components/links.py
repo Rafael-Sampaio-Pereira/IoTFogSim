@@ -37,7 +37,7 @@ class Link(object):
         self.delay_mean = None
         self.delay_standard_deviation = None
         self.arrow_color = None
-        LoopingCall(self.transmission_channel).start(0.001) # fast as can be o prevent false delay on packet delivery
+        LoopingCall(self.transmission_channel).start(0.001) # fast as can be to prevent false delay on packet delivery
         
         
     def transmission_channel(self):

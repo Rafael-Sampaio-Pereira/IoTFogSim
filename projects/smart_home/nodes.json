@@ -85,8 +85,27 @@
               "ip": "192.168.0.4"
             }
           ],
-          "x": 700,
-          "y": 480
+          "x": 472,
+          "y": 685
+        },
+        {
+          "name": "Desktop 1 - HTTP Client",
+          "MIPS": 1024,
+          "icon": "client_icon",
+          "type": "client",
+          "is_wireless": true,
+          "power_watts": 65,
+          "coverage_area_radius": 200,
+          "application": "apps.http.ContinuosRequetWebClientApp",
+          "network_interfaces": [
+            {
+              "name": "eth0",
+              "is_wireless": false,
+              "ip": "192.168.0.10"
+            }
+          ],
+          "x": 130,
+          "y": 345
         },
         {
           "name": "SmartPhone",
