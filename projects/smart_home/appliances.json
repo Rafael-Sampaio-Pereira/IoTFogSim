@@ -58,7 +58,7 @@
         "y": 500
     },   
     {
-        "name": "IP Camera",
+        "name": "IP Camera 1",
         "MIPS": 1024,
         "icon": "camera_icon",
         "type": "appliance",
@@ -73,7 +73,45 @@
                 "ip": "192.168.0.7"
             }
         ],
-        "x": 710,
-        "y": 443
+        "x": 700,
+        "y": 422
+    },
+    {
+        "name": "IP Camera 2",
+        "MIPS": 1024,
+        "icon": "camera_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 55,
+        "coverage_area_radius": 0,
+        "application": "apps.cctv.CameraApp",
+        "network_interfaces": [
+            {
+                "name": "eth0",
+                "is_wireless": false,
+                "ip": "192.168.0.8"
+            }
+        ],
+        "x": 85,
+        "y": 764
+    },
+    {
+        "name": "IP Camera 3",
+        "MIPS": 1024,
+        "icon": "camera_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 55,
+        "coverage_area_radius": 0,
+        "application": "apps.cctv.CameraApp",
+        "network_interfaces": [
+            {
+                "name": "eth0",
+                "is_wireless": false,
+                "ip": "192.168.0.9"
+            }
+        ],
+        "x": 700,
+        "y": 78
     }
 ]
