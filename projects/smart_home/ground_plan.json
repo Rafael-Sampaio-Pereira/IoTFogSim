@@ -1,6 +1,6 @@
 {
     "wall_tickness": 10,
-    "wall_color": "violet",
+    "wall_color": "#191919",
     "walls": [
         { "start_x": 62, "start_y": 57, "end_point": 745, "orientation": "v" },
         { "start_x": 462, "start_y": 57, "end_point": 400, "orientation": "v" },

@@ -87,14 +87,14 @@ class Human(object):
 
     def run_mobility(self):
         LoopingCall(self.main).start(0.5)
-        GraphRandomWaypointMobility(
-            self.visual_component,
-            self.simulation_core,
-            0.02,
-            0.08,
-            2,
-            10
-        )
+        # GraphRandomWaypointMobility(
+        #     self.visual_component,
+        #     self.simulation_core,
+        #     0.02,
+        #     0.08,
+        #     2,
+        #     10
+        # )
         
         # RandomDirectionMobility(
         #     self.visual_component,
@@ -111,14 +111,14 @@ class Human(object):
         #     10
         # )
         
-        # RandomWaypointMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     0.02,
-        #     0.08,
-        #     2,
-        #     10
-        # )
+        RandomWaypointMobility(
+            self.visual_component,
+            self.simulation_core,
+            0.02,
+            0.08,
+            2,
+            10
+        )
 
 class HumanVisualComponent(object):
 

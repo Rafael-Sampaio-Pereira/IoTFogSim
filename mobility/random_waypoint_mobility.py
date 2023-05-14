@@ -98,7 +98,7 @@ class RandomWaypointMobility(MobilityModel):
                     # verify if object just got its destiny
                     if not(x == next_random_point['x']) and not(y == next_random_point['y']):
                         # preventing icon cross wall
-                        tolerance = 10
+                        tolerance = 5
                         # Moving icon on screen at
                         self.visual_component.move_on_screen(x, y)
                         if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:

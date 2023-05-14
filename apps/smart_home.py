@@ -54,7 +54,7 @@ class SimpleGroundPlan(object):
         if not tolerance:
             tolerance = 0
 
-        # finding all the wifi devices on the canvas screen. - Rafael Sampaio
+        # finding all the wifi devices on the canvas screen
         all_wall = self.simulation_core.canvas.find_withtag("wall")
         collision_items = self.simulation_core.canvas.find_overlapping(
             x + tolerance,
