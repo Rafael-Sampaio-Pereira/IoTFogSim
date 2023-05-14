@@ -71,7 +71,7 @@ class Environment(object):
             # looking for all machines inside the environment area
             for obj in objects_inside_env:
                 obj = self.simulation_core.get_machine_instance_by_icon_id(obj)
-                if isinstance(obj, Machine) and (not isinstance(obj.app, AccessPointApp) or not isinstance(obj.app, RouterApp)):
+                if isinstance(obj, Machine) and (not isinstance(obj.app, AccessPointApp) and not isinstance(obj.app, RouterApp)):
                     self.machine_list.append(obj)
                 
 

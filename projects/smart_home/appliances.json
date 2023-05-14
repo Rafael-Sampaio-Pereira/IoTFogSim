@@ -1,7 +1,7 @@
 [
     {
         "name": "Refrigerator",
-        "MIPS": 1024,
+        "MIPS": 0,
         "icon": "refrigerator_icon",
         "type": "appliance",
         "is_wireless": false,
@@ -14,7 +14,7 @@
     },
     {
         "name": "Vaccum Bot",
-        "MIPS": 1024,
+        "MIPS": 0,
         "icon": "robot_icon",
         "type": "appliance",
         "is_wireless": false,
@@ -22,9 +22,22 @@
         "coverage_area_radius": 0,
         "application": "apps.vacuum_bot.VacuumBotApp",
         "network_interfaces": [],
-        "x": 308,
-        "y": 695
-    },   
+        "x": 495,
+        "y": 505
+    },
+    {
+        "name": "Shower",
+        "MIPS": 0,
+        "icon": "shower_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.shower.ShowerApp",
+        "network_interfaces": [],
+        "x": 655,
+        "y": 95
+    },
     {
         "name": "Smart TV",
         "MIPS": 1024,

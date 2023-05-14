@@ -47,6 +47,7 @@ class Machine(object):
         self.is_turned_on = False
         self.power_watts = power_watts
         self.up_time = 0 # expressed in seconds
+        self.calculating_up_time = False
                 
     def get_billable_amount(self):
         return self.simulation_core.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.simulation_core.kwh_price,3))
@@ -67,6 +68,7 @@ class Machine(object):
             if self.is_turned_on:
                 self.up_time += 1
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
+        self.calculating_up_time = True
         
     def colorize_signal(self):
         # setting the color of signal(circle border) from transparent to red.
@@ -96,7 +98,8 @@ class Machine(object):
     def turn_on(self, event=None):
         if not self.is_turned_on:
             self.is_turned_on = True
-            reactor.callFromThread(self.calculate_up_time)
+            if not self.calculating_up_time:
+                reactor.callFromThread(self.calculate_up_time)
             self.simulation_core.updateEventsCounter(f"{self.name} - Turning on {self.type}...")
             if len(self.network_interfaces)>0:
                 self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)

@@ -72,12 +72,12 @@ class MobilityModel(object):
         # waiting for mobility model object get the simulation core
         yield sleep(0.5)
         point_size = 20
-        left_padding = 50
-        top_padding = 50
+        left_padding = 100
+        top_padding = 100
         for point in range(1, self.n_points+1):
             # Casting to int due uniform distribution returns float
-            x = int(random.uniform(left_padding, self.area_max_width))
-            y = int(random.uniform(top_padding, self.area_max_height))
+            x = int(random.uniform(left_padding, self.area_max_width-100))
+            y = int(random.uniform(top_padding, self.area_max_height-100))
 
             if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
                 # Avoiding to place points into walls
