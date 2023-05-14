@@ -94,7 +94,7 @@
           "icon": "client_icon",
           "type": "client",
           "is_wireless": true,
-          "power_watts": 65,
+          "power_watts": 105,
           "coverage_area_radius": 200,
           "application": "apps.http.ContinuosRequetWebClientApp",
           "network_interfaces": [

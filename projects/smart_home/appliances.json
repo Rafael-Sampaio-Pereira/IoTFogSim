@@ -1,5 +1,57 @@
 [
     {
+        "name": "Light Bulb 1",
+        "MIPS": 0,
+        "icon": "light_off_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.light_bulb.LightBulbApp",
+        "network_interfaces": [],
+        "x": 505,
+        "y": 535
+    },
+    {
+        "name": "Light Bulb 2",
+        "MIPS": 0,
+        "icon": "light_off_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.light_bulb.LightBulbApp",
+        "network_interfaces": [],
+        "x": 190,
+        "y": 550
+    },
+    {
+        "name": "Light Bulb 3",
+        "MIPS": 0,
+        "icon": "light_off_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.light_bulb.LightBulbApp",
+        "network_interfaces": [],
+        "x": 565,
+        "y": 200
+    },
+    {
+        "name": "Light Bulb 4",
+        "MIPS": 0,
+        "icon": "light_off_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 57,
+        "coverage_area_radius": 0,
+        "application": "apps.light_bulb.LightBulbApp",
+        "network_interfaces": [],
+        "x": 260,
+        "y": 200
+    },
+    {
         "name": "Refrigerator",
         "MIPS": 0,
         "icon": "refrigerator_icon",
@@ -23,7 +75,7 @@
         "application": "apps.vacuum_bot.VacuumBotApp",
         "network_interfaces": [],
         "x": 495,
-        "y": 505
+        "y": 555
     },
     {
         "name": "Shower",
