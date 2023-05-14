@@ -128,3 +128,32 @@ def get_random_color(global_seed=None):
             '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'
     ]
     return random.choice(colors)
+
+def cline(x1, y1, x2, y2):
+    # Autor: John Clark Craig
+    # Available at https://jccraig.medium.com/we-must-draw-the-line-1820d49d19dd
+    all_coords = []
+    x = x1
+    y = y1
+    dx = abs(x2 - x1)
+    dy = abs(y2 - y1)
+    sx = 1 if x1 < x2 else -1 if x1 > x2 else 0
+    sy = 1 if y1 < y2 else -1 if y1 > y2 else 0
+    ix = dy // 2
+    iy = dx // 2
+    pixels = dx + 1 if dx > dy else dy + 1
+    while pixels:
+        all_coords.append((x, y))
+        ix += dx
+        if ix >= dy:
+            ix -= dy
+            x += sx
+        iy += dy
+        if iy >= dx:
+            iy -= dx
+            y += sy
+        pixels -= 1
+        
+    all_coords.append((x2, y2))
+    return all_coords
+    

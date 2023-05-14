@@ -4,7 +4,7 @@ from twisted.python import log
 from twisted.internet.task import LoopingCall
 from bresenham import bresenham
 from twisted.internet.defer import inlineCallbacks
-from core.functions import sleep
+from core.functions import cline
 from twisted.internet import reactor
 from twisted.internet.task import cooperate
 from core.functions import get_random_color
@@ -71,13 +71,13 @@ class Link(object):
                     delay = self.simulation_core.clock.get_internal_time_unit(delay)
                     
                     if sender == self.network_interface_1:
-                        # self.animate_package(packet)
+                        self.animate_package(packet)
                         self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_2)
                         reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     elif sender == self.network_interface_2:
-                        # self.animate_package(packet)
+                        self.animate_package(packet)
                         self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_1)
                         reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
@@ -128,6 +128,7 @@ class Link(object):
             dash=(4,3)
         )
         reactor.callLater(0.5, self.restore_arrow)
+
     
     def animate_package(self, packet):
 
@@ -149,7 +150,8 @@ class Link(object):
                 self.ball = self.simulation_core.canvas.create_oval(
                     x1, y1, x1+7, y1+7, fill=packet.color or get_random_color()
                 )
-                self.all_coordinates = list(bresenham(
+
+                self.all_coordinates = list(cline(
                     x1, y1, x2, y2
                 ))
                 self.display_time = 0.009 # time that the packege ball still on the screen after get the destinantion
@@ -158,13 +160,13 @@ class Link(object):
                 cont = 0.001
                 
                 # THIS BLOCK REMOVES ABOUT 60% OF ALL POINTS IN PACKET BALL WAY
-                final_pos = self.all_coordinates[-1]
-                n_elements = int(len(self.all_coordinates) * 0.6)
-                self.all_coordinates = random.sample(
-                    self.all_coordinates,
-                    n_elements
-                )
-                self.all_coordinates.append(final_pos)
+                # final_pos = self.all_coordinates[-1]
+                # n_elements = int(len(self.all_coordinates) * 0.6)
+                # self.all_coordinates = random.sample(
+                #     self.all_coordinates,
+                #     n_elements
+                # )
+                # self.all_coordinates.append(final_pos)
                 
                 if self.simulation_core.clock.time_speed_multiplier <= 10:
                     for x, y in self.all_coordinates:
