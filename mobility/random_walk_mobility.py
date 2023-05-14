@@ -78,7 +78,8 @@ class RandomWalkMobility(MobilityModel):
                 x2 = x1 + self.step_distance
                 y2 = y1
                 # preventin icon cross right wall
-                tolerance = self.visual_component.width
+                # tolerance = self.visual_component.width
+                tolerance = 40 # works right with the vacuum bot
 
         if x2 and y2:
             all_coordinates_between_two_points = list(

@@ -25,6 +25,7 @@ iconsList = {
     "refrigerator_icon": "iotfogsim_refrigerator.png",
     "repeater_icon": "iotfogsim_repeater.png",
     "restfull_server_icon": "iotfogsim_restfull_server.png",
+    "robot_icon": "iotfogsim_robot.png",
     "router_icon": "iotfogsim_router.png",
     "server_icon": "iotfogsim_server.png",
     "sensor_icon": "iotfogsim_sensor_node.png",
