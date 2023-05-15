@@ -39,24 +39,24 @@ class Environment(object):
                 self.limits_area,
                 outline=color
             )
-            if color != 'red':
-                self.simulation_core.canvas.itemconfig(
-                    self.limits_area,
-                    fill=color
-                )
-                self.simulation_core.canvas.itemconfig(
-                    self.limits_area,
-                    stipple='gray12' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
-                )
-            else:
-                self.simulation_core.canvas.itemconfig(
-                    self.limits_area,
-                    fill=''
-                )
-                self.simulation_core.canvas.itemconfig(
-                    self.limits_area,
-                    stipple=''
-                )
+            # if color != 'red':
+            #     self.simulation_core.canvas.itemconfig(
+            #         self.limits_area,
+            #         fill=color
+            #     )
+            #     self.simulation_core.canvas.itemconfig(
+            #         self.limits_area,
+            #         stipple='gray12' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
+            #     )
+            # else:
+            #     self.simulation_core.canvas.itemconfig(
+            #         self.limits_area,
+            #         fill=''
+            #     )
+            #     self.simulation_core.canvas.itemconfig(
+            #         self.limits_area,
+            #         stipple=''
+            #     )
                 
 
     def check_for_human_inside_environment_area(self):
