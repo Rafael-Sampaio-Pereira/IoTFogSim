@@ -28,7 +28,7 @@ class Environment(object):
             self.y2,
             fill=None,
             dash=(4,3),
-            outline='red',
+            outline='',
             width=2,
             tags=("env","env_"+str(self.name))
         )
@@ -39,24 +39,25 @@ class Environment(object):
                 self.limits_area,
                 outline=color
             )
-            # if color != 'red':
-            #     self.simulation_core.canvas.itemconfig(
-            #         self.limits_area,
-            #         fill=color
-            #     )
-            #     self.simulation_core.canvas.itemconfig(
-            #         self.limits_area,
-            #         stipple='gray12' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
-            #     )
-            # else:
-            #     self.simulation_core.canvas.itemconfig(
-            #         self.limits_area,
-            #         fill=''
-            #     )
-            #     self.simulation_core.canvas.itemconfig(
-            #         self.limits_area,
-            #         stipple=''
-            #     )
+            if color == '':
+                 
+                self.simulation_core.canvas.itemconfig(
+                    self.limits_area,
+                    fill='black'
+                )
+                self.simulation_core.canvas.itemconfig(
+                    self.limits_area,
+                    stipple='gray50' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
+                )
+            else:
+                self.simulation_core.canvas.itemconfig(
+                    self.limits_area,
+                    fill=''
+                )
+                self.simulation_core.canvas.itemconfig(
+                    self.limits_area,
+                    stipple=''
+                )
                 
 
     def check_for_human_inside_environment_area(self):
@@ -78,7 +79,7 @@ class Environment(object):
             if qt_humans > 0:
                 self.change_limits_area_color('#AAFF00')
             else:
-                self.change_limits_area_color('red')
+                self.change_limits_area_color('')
 
 
     def load_all_machines_inside_environment_area(self):

@@ -15,7 +15,9 @@ from tkextrafont import Font
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.elapsed_seconds = 0
+        self.start_time = 28800 # start clock time as seconds
+        self.elapsed_seconds = self.start_time
+        self.elapsed_days = 0
         self.time_speed_multiplier = 1
         self.main_loop = None
         
@@ -40,7 +42,12 @@ class InternalClock(object):
         return original_seconds/self.time_speed_multiplier
         
     def get_humanized_time(self):
-        return f"{str(datetime.timedelta(seconds=self.elapsed_seconds))}"
+        if self.elapsed_seconds == 86399: # 23h 59min in seconds
+            self.elapsed_days +=1
+            self.elapsed_seconds=0
+            return f"{self.elapsed_days} days - {str(datetime.timedelta(seconds=self.elapsed_seconds))}"
+        
+        return f"{self.elapsed_days} days - {str(datetime.timedelta(seconds=self.elapsed_seconds))}"
     
     def update_speed_menu_label(self):
         self.simulation_core.simulation_screen.menubar.entryconfigure(

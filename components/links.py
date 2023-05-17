@@ -71,13 +71,13 @@ class Link(object):
                     delay = self.simulation_core.clock.get_internal_time_unit(delay)
                     
                     if sender == self.network_interface_1:
-                        self.animate_package(packet)
+                        # self.animate_package(packet)
                         self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_2)
                         reactor.callLater(delay, self.network_interface_2.machine.app.in_buffer.append, packet)
                         self.simulation_core.updateEventsCounter(f"{self.name} - Transmiting packet {packet.id} delay {delay}ms")
                     elif sender == self.network_interface_2:
-                        self.animate_package(packet)
+                        # self.animate_package(packet)
                         self.blink_arrow(packet.color)
                         packet.trace.append(self.network_interface_1)
                         reactor.callLater(delay, self.network_interface_1.machine.app.in_buffer.append, packet)
