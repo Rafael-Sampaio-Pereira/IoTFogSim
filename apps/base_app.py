@@ -28,6 +28,9 @@ class BaseApp(object):
 
     def main(self):
         pass
+
+    def set_simulation_core(self, simulation_core):
+        self.simulation_core = simulation_core
     
     @inlineCallbacks 
     def start(self):

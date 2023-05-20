@@ -15,7 +15,7 @@ from tkextrafont import Font
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.start_time = 28800 # start clock time as seconds
+        self.start_time = 64795 #28800 # start clock time as seconds
         self.elapsed_seconds = self.start_time
         self.elapsed_days = 0
         self.time_speed_multiplier = 1
