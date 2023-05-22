@@ -87,7 +87,7 @@ class Environment(object):
                 
 
     def check_for_human_inside_environment_area(self):
-        self.toggle_between_day_and_night()
+        # self.toggle_between_day_and_night()
         if self.limits_area:
             # get objects inside the environment area
             objects_inside_env = self.simulation_core.canvas.find_enclosed(
@@ -101,12 +101,74 @@ class Environment(object):
                     if human.current_environment != self:
                         human.current_environment = self
                     qt_humans += 1
-                    if len(self.all_lights) > 0:
+            if len(self.all_lights) > 0:
+                if qt_humans > 0:
+                    # 64799s = 17h 59m
+                    # 18000s = 5h
+                    self.simulation_core.canvas.itemconfig(
+                        self.limits_area,
+                        fill=''
+                    )
+                    self.simulation_core.canvas.itemconfig(
+                        self.limits_area,
+                        stipple=''
+                    )
+                    if self.simulation_core.clock.elapsed_seconds > 64799:
                         for light in self.all_lights:
                             self.simulation_core.canvas.itemconfig(
                                 light.visual_component.draggable_img,
                                 image=self.on_light_icon
                             )
+                    elif self.simulation_core.clock.elapsed_seconds < 18000:
+                        for light in self.all_lights:
+                            self.simulation_core.canvas.itemconfig(
+                                light.visual_component.draggable_img,
+                                image=self.on_light_icon
+                            )
+                    else:
+                        for light in self.all_lights:
+                            self.simulation_core.canvas.itemconfig(
+                                light.visual_component.draggable_img,
+                                image=self.off_light_icon
+                            )
+                    
+                else:
+                    # 64799s = 17h 59m
+                    # 18000s = 5h
+                    if self.simulation_core.clock.elapsed_seconds > 64799:
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            fill='black'
+                        )
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            stipple='gray50' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
+                        )
+                    elif self.simulation_core.clock.elapsed_seconds < 18000:
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            fill='black'
+                        )
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            stipple='gray50' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
+                        )
+                    else:
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            fill=''
+                        )
+                        self.simulation_core.canvas.itemconfig(
+                            self.limits_area,
+                            stipple=''
+                        )
+                    
+                    for light in self.all_lights:
+                        self.simulation_core.canvas.itemconfig(
+                            light.visual_component.draggable_img,
+                            image=self.off_light_icon
+                        )
+
             
 
             if qt_humans > 0:
