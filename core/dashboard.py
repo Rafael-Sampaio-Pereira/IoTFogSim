@@ -13,7 +13,7 @@ from twisted.internet import reactor
 
 
 class DashboardScreen(tkinter.Frame):
-    def __init__(self, project_name, simulation_core):
+    def __init__(self, simulation_core):
         self.root = tkinter.Toplevel()
         tksupport.install(self.root)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)

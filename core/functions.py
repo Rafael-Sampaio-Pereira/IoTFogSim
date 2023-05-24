@@ -10,6 +10,8 @@ import netifaces
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet import reactor
 from twisted.internet.task import deferLater
+from datetime import datetime, date
+import os
 
 
 def sleep(secs):
@@ -42,13 +44,11 @@ def import_and_instantiate_class_from_string(class_path):
 def configure_logger(log_file_path, project_name):
     from sys import stdout
     from twisted.logger import Logger, textFileLogObserver, globalLogBeginner
-    from datetime import datetime, date
     import os
 
     # create logs directoy if it not exist
-    os.makedirs(log_file_path+"/logs/", exist_ok=True)
-    temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
-    log_file = log_file_path+"/logs/"+project_name+temp+".log"
+    os.makedirs(log_file_path, exist_ok=True)
+    log_file = log_file_path+project_name+"_events.log"
     logfile = open(log_file, 'a')
     globalLogBeginner.beginLoggingTo([
         textFileLogObserver(stdout),
@@ -57,7 +57,7 @@ def configure_logger(log_file_path, project_name):
 
 
 def create_csv_database_file(simulation_core, description=""):
-    from datetime import datetime, date
+    from datetime import datetime
     import os
 
     file_path = "projects/"+simulation_core.project_name+"/"
@@ -73,16 +73,9 @@ def create_csv_database_file(simulation_core, description=""):
 
 
 def create_csv_results_file(simulation_core, description=""):
-    from datetime import datetime, date
-    import os
-
-    file_path = "projects/"+simulation_core.project_name+"/"
-
     # create results directoy if it not exist
-    os.makedirs(file_path+"/results/", exist_ok=True)
-    temp = "_{:%Y_%m_%d__%H_%M_%S}".format(datetime.now())
-    file = file_path+"/results/" + \
-        simulation_core.project_name+temp+"_"+description+".csv"
+    os.makedirs(simulation_core.output_dir+"/results/", exist_ok=True)
+    file = simulation_core.output_dir+"/results/"+simulation_core.project_name+"_"+description+".csv"
     database = open(file, 'a')
 
     return database

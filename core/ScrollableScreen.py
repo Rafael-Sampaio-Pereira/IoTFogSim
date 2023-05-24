@@ -476,8 +476,7 @@ class ScrollableScreen(tkinter.Frame):
                 reactor.callFromThread(human.start)
     
     def open_dashboard(self):
-            self.dashboard_screen = DashboardScreen(
-            self.canvas.simulation_core.project_name, self.canvas.simulation_core)
+            self.dashboard_screen = DashboardScreen(self.canvas.simulation_core)
             self.dashboard_screen.pack(fill="both", expand=True)
             self.canvas.simulation_core.dashboard_canvas = self.dashboard_screen.getCanvas()
 

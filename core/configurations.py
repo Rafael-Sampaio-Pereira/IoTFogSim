@@ -69,7 +69,7 @@ def initialization_screen(simulation_core):
             simulation_core.project_name = selected_project_name
 
             # Configuring log
-            log_path = "projects/"+selected_project_name+"/"
+            log_path = simulation_core.output_dir+"/logs/"
             configure_logger(log_path, selected_project_name)
 
             resizable = None
@@ -117,7 +117,7 @@ def initialization_screen(simulation_core):
                 os.makedirs("projects/%s" % (new_project_name))
 
                 # Configuring log
-                log_path = "projects/"+new_project_name+"/"
+                log_path = simulation_core.output_dir+"/logs/"
                 configure_logger(log_path, new_project_name)
 
                 simulation_core.project_name = new_project_name

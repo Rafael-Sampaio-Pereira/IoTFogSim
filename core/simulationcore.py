@@ -1,6 +1,7 @@
 
 from collections import defaultdict
 import datetime
+from datetime import datetime as dt
 from twisted.python import log
 import tkinter
 from twisted.internet import tksupport
@@ -11,6 +12,7 @@ from importlib import import_module
 from core.functions import create_csv_results_file
 from twisted.internet.task import LoopingCall
 from tkextrafont import Font
+import os
 
 class InternalClock(object):
     def __init__(self, simulation_core):
@@ -87,6 +89,9 @@ class SimulationCore(object):
         self.machines_results = None
         self.clock = None
         self.smart_hub = None
+        self.output_dir =  "outputs/{:%Y_%m_%d__%H_%M_%S}".format(dt.now())
+        # create results directoy if it not exist
+        os.makedirs(self.output_dir, exist_ok=True)
         
         
     def start_clock(self):

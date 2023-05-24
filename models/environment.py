@@ -31,18 +31,6 @@ class Environment(object):
         self.load_all_machines_inside_environment_area()
         LoopingCall(self.check_for_human_inside_environment_area).start(0.2)
         
-    # def load_all_lights(self):
-    #     # get objects inside the environment area
-    #     objects_inside_env = self.simulation_core.canvas.find_enclosed(
-    #         self.x1, self.y1, self.x2, self.y2
-    #     )
-
-    #     # verify if human icon is inside the environment area
-    #     for obj in objects_inside_env:
-    #         if "light_bulb" in self.simulation_core.canvas.gettags(obj):
-    #             print("TEM LUZ")
-    #             self.all_lights.append(obj)
-
     def toggle_between_day_and_night(self):
         # 64799s = 17h 59m
         # 18000s = 5h
@@ -186,9 +174,7 @@ class Environment(object):
             # looking for all machines inside the environment area
             for obj in objects_inside_env:
                 obj = self.simulation_core.get_machine_instance_by_icon_id(obj)
-                print(type(obj))
                 if isinstance(obj, Machine) and (not isinstance(obj.app, AccessPointApp) and not isinstance(obj.app, RouterApp)):
                     self.machine_list.append(obj)
                 if obj and isinstance(obj.app, Light):
-                    print("TEM LUZ")
                     self.all_lights.append(obj)
