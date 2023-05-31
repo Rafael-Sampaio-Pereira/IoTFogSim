@@ -50,17 +50,7 @@ class Machine(object):
         self.up_time = 0 # expressed in seconds
         self.calculating_up_time = False
         
-        # create results directoy if it not exist
-        os.makedirs(simulation_core.output_dir+"/datasets/", exist_ok=True)
-        file = simulation_core.output_dir+"/datasets/" + \
-            simulation_core.project_name+"_"+name+".csv"
-        self.dataset_file  = open(file, 'a')
-        
-    def update_dataset(self, row):
-        def core(row):
-            print(row, file = self.dataset_file, flush=True)
-        reactor.callInThread(core, row)
-                
+                        
     def get_billable_amount(self):
         return self.simulation_core.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.simulation_core.kwh_price,3))
         
@@ -79,7 +69,7 @@ class Machine(object):
         def time_counter():
             if self.is_turned_on:
                 self.up_time += 1
-                self.update_dataset(self.up_time)
+                
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         self.calculating_up_time = True
         

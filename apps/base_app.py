@@ -17,6 +17,12 @@ class BaseApp(object):
         self.machine = None
         self.in_buffer = []
         self.is_running = False
+        self.dataset_file = None
+        
+    def update_dataset(self, row):
+        def core(row):
+            print(row, file = self.dataset_file, flush=True)
+        reactor.callInThread(core, row)
         
     def check_in_buffer(self):
         if len(self.in_buffer) > 0:
@@ -26,7 +32,11 @@ class BaseApp(object):
                 del packet
 
     def main(self):
-        pass
+        # create results directoy if it not exist
+        os.makedirs(self.simulation_core.output_dir+"/datasets/", exist_ok=True)
+        file = self.simulation_core.output_dir+"/datasets/" + \
+            self.simulation_core.project_name+"_"+self.machine.name+".csv"
+        self.dataset_file  = open(file, 'a')
 
     def set_simulation_core(self, simulation_core):
         self.simulation_core = simulation_core
