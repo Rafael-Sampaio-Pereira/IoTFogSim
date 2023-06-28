@@ -1,4 +1,3 @@
-from typing_extensions import Self
 import uuid
 from core.functions import import_and_instantiate_class_from_string
 from config.settings import ICONS_PATH
@@ -11,6 +10,7 @@ from twisted.internet.task import LoopingCall
 from twisted.internet import reactor
 import os
 from datetime import datetime
+import random
 
 class Machine(object):
     def __init__(
@@ -49,26 +49,53 @@ class Machine(object):
         self.power_watts = power_watts
         self.up_time = 0 # expressed in seconds
         self.calculating_up_time = False
+        self.power_ofloat_margin = 0.7
+        self.consumed_energy_kw = 0
+        self.current_consumption = 0
+        
+    def simulate_power_consumption(self):
+        """ This simulates power consumption considering power variance.
+        To call it, you need to use a variance margin(float_margin) value"""
+        min_power = None
+        if self.power_watts - self.power_ofloat_margin < 1:
+            min_power = self.power_watts
+        else:
+            min_power = self.power_watts - self.power_ofloat_margin
+            
+        max_power = self.power_watts+self.power_ofloat_margin
+        return random.uniform(min_power, max_power)
         
                         
     def get_billable_amount(self):
-        return self.simulation_core.currency_prefix+" "+str(round(float(self.get_consumed_energy()[:-4])*self.simulation_core.kwh_price,3))
+        return self.simulation_core.currency_prefix+" "+str(round(float(self.consumed_energy_kw)*self.simulation_core.kwh_price,3))
         
-    def get_consumed_energy(self):
+    # def get_consumed_energy(self):
+    #     """
+    #         https://www.youtube.com/watch?v=U9Tm7Bmr-i4
+    #     """
+    #     base_second = 0.000277778 # 1 second means 0,000277778 hour
+    #     active_hours = base_second * self.up_time
+    #     kw = self.simulate_power_consumption()/1000
+    #     consumed_energy = str(round((kw * active_hours),5))+" Kwh"
+    #     return consumed_energy
+    
+    def calculate_consumed_energy(self):
         """
             https://www.youtube.com/watch?v=U9Tm7Bmr-i4
         """
         base_second = 0.000277778 # 1 second means 0,000277778 hour
-        active_hours = base_second * self.up_time
-        kw = self.power_watts/1000
-        consumed_energy = str(round((kw * active_hours),5))+" Kwh"
-        return consumed_energy
+        # active_hours = base_second * self.up_time
+        active_hours = self.up_time / 3600
+        self.current_consumption = self.simulate_power_consumption()/1000
+        self.consumed_energy_kw = round((self.current_consumption * active_hours),5)
         
+
     def calculate_up_time(self):
         """Calculate active time in seconds. Each seconds increases the active time"""
         def time_counter():
             if self.is_turned_on:
                 self.up_time += 1
+                self.calculate_consumed_energy()
                 
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         self.calculating_up_time = True

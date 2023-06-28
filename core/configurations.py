@@ -31,7 +31,7 @@ class CoreConfig():
         root.withdraw()
 
         simulation_core = SimulationCore()
-        reactor.callFromThread(simulation_core.start_clock)
+        
 
         # initialization_screen(simulation_core)
         reactor.callFromThread(initialization_screen, simulation_core)

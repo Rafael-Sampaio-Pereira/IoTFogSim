@@ -21,7 +21,8 @@ class BaseApp(object):
         
     def update_dataset(self, row):
         def core(row):
-            print(row, file = self.dataset_file, flush=True)
+            if self.machine.is_turned_on:
+                print(row, file = self.dataset_file, flush=True)
         reactor.callInThread(core, row)
         
     def check_in_buffer(self):

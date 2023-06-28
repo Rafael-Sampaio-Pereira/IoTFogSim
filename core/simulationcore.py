@@ -13,6 +13,7 @@ from core.functions import create_csv_results_file
 from twisted.internet.task import LoopingCall
 from tkextrafont import Font
 import os
+from twisted.internet import reactor
 
 class InternalClock(object):
     def __init__(self, simulation_core):
@@ -47,7 +48,6 @@ class InternalClock(object):
         if self.elapsed_seconds == 86399: # 23h 59min in seconds
             self.elapsed_days +=1
             self.elapsed_seconds=0
-            return f"{self.elapsed_days} days - {str(datetime.timedelta(seconds=self.elapsed_seconds))}"
         
         return f"{self.elapsed_days} days - {str(datetime.timedelta(seconds=self.elapsed_seconds))}"
     
@@ -92,6 +92,7 @@ class SimulationCore(object):
         self.output_dir =  "outputs/{:%Y_%m_%d__%H_%M_%S}".format(dt.now())
         # create results directoy if it not exist
         os.makedirs(self.output_dir, exist_ok=True)
+        reactor.callInThread(self.start_clock)
         
         
     def start_clock(self):
@@ -118,7 +119,7 @@ class SimulationCore(object):
                     else:
                         result_line += 'not connected,'
                     result_line += f'{machine.power_watts}W,'
-                    result_line += machine.get_consumed_energy()+','
+                    result_line += str(machine.consumed_energy_kw)+','
                     result_line += f'{str(datetime.timedelta(seconds=machine.up_time))},'
                     result_line += machine.get_billable_amount()
                     

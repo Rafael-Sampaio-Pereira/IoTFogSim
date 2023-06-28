@@ -107,18 +107,24 @@ class Environment(object):
                                 light.visual_component.draggable_img,
                                 image=self.on_light_icon
                             )
+                            if not light.is_turned_on:
+                                light.turn_on()
                     elif self.simulation_core.clock.elapsed_seconds < 18000:
                         for light in self.all_lights:
                             self.simulation_core.canvas.itemconfig(
                                 light.visual_component.draggable_img,
                                 image=self.on_light_icon
                             )
+                            if not light.is_turned_on:
+                                light.turn_on()
                     else:
                         for light in self.all_lights:
                             self.simulation_core.canvas.itemconfig(
                                 light.visual_component.draggable_img,
                                 image=self.off_light_icon
                             )
+                            if light.is_turned_on:
+                                light.turn_off()
                     
                 else:
                     # 64799s = 17h 59m
@@ -156,6 +162,8 @@ class Environment(object):
                             light.visual_component.draggable_img,
                             image=self.off_light_icon
                         )
+                        if light.is_turned_on:
+                            light.turn_off()
 
             
 

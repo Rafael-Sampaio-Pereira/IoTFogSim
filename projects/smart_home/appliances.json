@@ -5,7 +5,7 @@
         "icon": "light_off_icon",
         "type": "appliance",
         "is_wireless": false,
-        "power_watts": 57,
+        "power_watts": 1000,
         "coverage_area_radius": 0,
         "application": "apps.light_bulb.LightBulbApp",
         "network_interfaces": [],
