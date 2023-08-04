@@ -1,3 +1,4 @@
+import datetime
 import uuid
 from components.packets import Packet
 from twisted.python import log
@@ -18,12 +19,28 @@ class BaseApp(object):
         self.in_buffer = []
         self.is_running = False
         self.dataset_file = None
+        self.last_actor = 'Unknow' # Last person/system that has interacted with the app
+        self.dataset_file_has_header = False
         
-    def update_dataset(self, row):
+    def update_dataset(self):
+        if not self.dataset_file_has_header:
+            dataset_csv_header = 'day; time; machine; power consuption watts; status; last actor'
+            print(dataset_csv_header, file = self.dataset_file, flush=True)
+            self.dataset_file_has_header = True
+            
+        def get_row():
+            row = \
+            f"{self.simulation_core.clock.elapsed_days};"+\
+            f"{str(datetime.timedelta(seconds=self.simulation_core.clock.elapsed_seconds))};"+\
+            f"{self.machine.name};"+\
+            f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
+            f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
+            f"{self.last_actor}"
+            return row
+        
         def core(row):
-            if self.machine.is_turned_on:
-                print(row, file = self.dataset_file, flush=True)
-        reactor.callInThread(core, row)
+            print(row, file = self.dataset_file, flush=True)
+        reactor.callInThread(core, get_row())
         
     def check_in_buffer(self):
         if len(self.in_buffer) > 0:

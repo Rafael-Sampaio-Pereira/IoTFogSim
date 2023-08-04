@@ -15,17 +15,13 @@ class LightBulbApp(BaseApp, Light):
         
     def main(self):
         super().main()
-        dataset_csv_header = 'day; time; power consuption watts'
-        print(dataset_csv_header, file = self.dataset_file, flush=True)
-        LoopingCall(
-            self.update_dataset,
-            f"{self.simulation_core.clock.elapsed_days};"+
-            f"{str(datetime.timedelta(seconds=self.simulation_core.clock.elapsed_seconds))};"+
-            f"{round(self.machine.current_consumption,3)}"
-        ).start(1)
+        LoopingCall(self.update_dataset).start(interval=1, now=True)
 
-# implementar sensor de humidade e temperatura interna
-# torneira inelgigente pressão/vazão
+
+# Generic sensor
+#    |-- Generic Float Sensor
+#    |-- Generic Int Sensor 
+#    |-- Generic Binary Sensor
 
 # dispositivos salvar tensão/ corrente e potencia por segundo
 

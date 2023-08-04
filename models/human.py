@@ -52,6 +52,9 @@ class Human(object):
                 
                 # turn on or off the selected machine founded inside environment
                 selected_machine.toggle_power_state()
+                
+                # This will be in dataset as the agent that trigged the machine or turned it off
+                selected_machine.app.last_actor = self.name
     
     def check_current_environment(self):
         if self.current_environment:

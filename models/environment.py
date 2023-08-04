@@ -82,6 +82,7 @@ class Environment(object):
                 self.x1, self.y1, self.x2, self.y2
             )
             qt_humans = 0
+            human = None
             # verify if human icon is inside the environment area
             for obj in objects_inside_env:
                 if "human" in self.simulation_core.canvas.gettags(obj):
@@ -109,6 +110,8 @@ class Environment(object):
                             )
                             if not light.is_turned_on:
                                 light.turn_on()
+                                light.app.last_actor = human.name
+                                
                     elif self.simulation_core.clock.elapsed_seconds < 18000:
                         for light in self.all_lights:
                             self.simulation_core.canvas.itemconfig(
@@ -117,6 +120,7 @@ class Environment(object):
                             )
                             if not light.is_turned_on:
                                 light.turn_on()
+                                light.app.last_actor = human.name
                     else:
                         for light in self.all_lights:
                             self.simulation_core.canvas.itemconfig(
@@ -125,6 +129,7 @@ class Environment(object):
                             )
                             if light.is_turned_on:
                                 light.turn_off()
+                                light.app.last_actor = 'Automation System'
                     
                 else:
                     # 64799s = 17h 59m
@@ -164,6 +169,7 @@ class Environment(object):
                         )
                         if light.is_turned_on:
                             light.turn_off()
+                            light.app.last_actor = 'Automation System'
 
             
 

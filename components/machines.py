@@ -96,7 +96,7 @@ class Machine(object):
             if self.is_turned_on:
                 self.up_time += 1
                 self.calculate_consumed_energy()
-                
+                            
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         self.calculating_up_time = True
         
