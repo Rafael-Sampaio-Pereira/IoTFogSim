@@ -64,53 +64,54 @@ class RandomWaypointMobility(MobilityModel):
     @inlineCallbacks
     def move(self) -> None:
 
-        all_coordinates_between_two_points = []
-        # Choosing randomically a waypoint in all_mobility_points list
-        next_random_point = random.choice(self.all_mobility_points)
-        # Getting all coords between current node(visual_component) position and the selected next point
-        if next_random_point:
-            all_coordinates_between_two_points = list(
-                bresenham(self.visual_component.x, self.visual_component.y, next_random_point['x'], next_random_point['y']))
+        if not self.is_stopped:
+            all_coordinates_between_two_points = []
+            # Choosing randomically a waypoint in all_mobility_points list
+            next_random_point = random.choice(self.all_mobility_points)
+            # Getting all coords between current node(visual_component) position and the selected next point
+            if next_random_point:
+                all_coordinates_between_two_points = list(
+                    bresenham(self.visual_component.x, self.visual_component.y, next_random_point['x'], next_random_point['y']))
 
-            # reducing points quantities based on simulation speed
-            if self.simulation_core.clock.time_speed_multiplier != 1:
-                final_pos = all_coordinates_between_two_points[-1]
-                n_elements = int(len(all_coordinates_between_two_points) * self.simulation_core.clock.time_speed_multiplier/100)
-                all_coordinates_between_two_points = random.sample(
-                    all_coordinates_between_two_points,
-                    n_elements
-                )
-                all_coordinates_between_two_points.append(final_pos)
+                # reducing points quantities based on simulation speed
+                if self.simulation_core.clock.time_speed_multiplier != 1:
+                    final_pos = all_coordinates_between_two_points[-1]
+                    n_elements = int(len(all_coordinates_between_two_points) * self.simulation_core.clock.time_speed_multiplier/100)
+                    all_coordinates_between_two_points = random.sample(
+                        all_coordinates_between_two_points,
+                        n_elements
+                    )
+                    all_coordinates_between_two_points.append(final_pos)
 
 
-            self.simulation_core.updateEventsCounter(
-                f"Mobile Node {self.visual_component.name} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+                self.simulation_core.updateEventsCounter(
+                    f"Mobile Node {self.visual_component.name} Moving to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
 
-            step_speed = random.uniform(self.min_speed, self.max_speed)
-            step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
-            wall_was_found = False
-            tolerance = None
-            for x, y in all_coordinates_between_two_points:
-                old_x = self.visual_component.x
-                old_y = self.visual_component.y
-                # Due it is a loop, verify if last movement has resulted in a wall collision
-                if not wall_was_found:
-                    # verify if object just got its destiny
-                    if not(x == next_random_point['x']) and not(y == next_random_point['y']):
-                        # preventing icon cross wall
-                        tolerance = 5
-                        # Moving icon on screen at
-                        self.visual_component.move_on_screen(x, y)
-                        if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
-                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                # if found a collision, then rolling back to old position
-                                self.visual_component.move_on_screen(
-                                    old_x, old_y)
-                                wall_was_found = True
-                                break
-                    yield sleep(step_speed)
+                step_speed = random.uniform(self.min_speed, self.max_speed)
+                step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
+                wall_was_found = False
+                tolerance = None
+                for x, y in all_coordinates_between_two_points:
+                    old_x = self.visual_component.x
+                    old_y = self.visual_component.y
+                    # Due it is a loop, verify if last movement has resulted in a wall collision
+                    if not wall_was_found:
+                        # verify if object just got its destiny
+                        if not(x == next_random_point['x']) and not(y == next_random_point['y']):
+                            # preventing icon cross wall
+                            tolerance = 5
+                            # Moving icon on screen at
+                            self.visual_component.move_on_screen(x, y)
+                            if self.simulation_core.scene_adapter and self.simulation_core.scene_adapter.ground_plan:
+                                if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
+                                    # if found a collision, then rolling back to old position
+                                    self.visual_component.move_on_screen(
+                                        old_x, old_y)
+                                    wall_was_found = True
+                                    break
+                        yield sleep(step_speed)
 
-            # Stay at point for a random period, so move again to another point
-            pause_time = random.randint(self.min_pause, self.max_pause)
-            pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
-            reactor.callLater(pause_time, self.move)
+                # Stay at point for a random period, so move again to another point
+                pause_time = random.randint(self.min_pause, self.max_pause)
+                pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
+                reactor.callLater(pause_time, self.move)

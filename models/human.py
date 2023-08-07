@@ -31,6 +31,7 @@ class Human(object):
             self.simulation_core,
             self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
+        self.mobility = None
 
     def start(self):
         self.run_mobility()
@@ -90,7 +91,7 @@ class Human(object):
 
     def run_mobility(self):
         LoopingCall(self.main).start(0.5)
-        # GraphRandomWaypointMobility(
+        # self.mobility = GraphRandomWaypointMobility(
         #     self.visual_component,
         #     self.simulation_core,
         #     0.02,
@@ -99,7 +100,7 @@ class Human(object):
         #     10
         # )
         
-        # RandomDirectionMobility(
+        # self.mobility = RandomDirectionMobility(
         #     self.visual_component,
         #     self.simulation_core,
         #     0.02,
@@ -108,13 +109,13 @@ class Human(object):
         #     10
         # )
 
-        # RandomWalkMobility(
+        # self.mobility = RandomWalkMobility(
         #     self.visual_component,
         #     self.simulation_core,
         #     10
         # )
         
-        RandomWaypointMobility(
+        self.mobility = RandomWaypointMobility(
             self.visual_component,
             self.simulation_core,
             0.02,
@@ -123,6 +124,8 @@ class Human(object):
             10
         )
 
+        self.mobility.is_stopped = False
+        
 class HumanVisualComponent(object):
 
     def __init__(self, simulation_core, name, file, x, y):

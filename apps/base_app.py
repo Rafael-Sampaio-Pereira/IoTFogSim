@@ -24,7 +24,7 @@ class BaseApp(object):
         
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; power consuption watts; status; last actor'
+            dataset_csv_header = 'day; time; machine; status; power consuption (watts); last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             
@@ -33,8 +33,8 @@ class BaseApp(object):
             f"{self.simulation_core.clock.elapsed_days};"+\
             f"{str(datetime.timedelta(seconds=self.simulation_core.clock.elapsed_seconds))};"+\
             f"{self.machine.name};"+\
-            f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
             f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
+            f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
             f"{self.last_actor}"
             return row
         

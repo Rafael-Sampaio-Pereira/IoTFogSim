@@ -12,6 +12,7 @@ class MobilityModel(object):
         self.area_max_width = simulation_core.simulation_screen.screen_w
         self.area_max_height = simulation_core.simulation_screen.screen_h
         self.all_mobility_points = []
+        self.is_stopped = True
 
     def draw_points(self, point_size):
         """Draw all mobility points on canvas."""
