@@ -18,7 +18,7 @@ from twisted.internet import reactor
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.start_time = 64795 #28800 # start clock time as seconds
+        self.start_time = 86399 #28800 # start clock time as seconds
         self.elapsed_seconds = self.start_time
         self.elapsed_days = 0
         self.time_speed_multiplier = 1
@@ -30,6 +30,8 @@ class InternalClock(object):
             if self.simulation_core.is_running:
                 self.elapsed_seconds += 1
                 self.update_clock_menu_bar()
+                if self.elapsed_seconds >= 86399: # 23h 59min in seconds
+                    self.elapsed_seconds=0
         self.main_loop = LoopingCall(time_counter)
         self.main_loop.start(1/self.time_speed_multiplier)
     
@@ -45,9 +47,8 @@ class InternalClock(object):
         return original_seconds/self.time_speed_multiplier
         
     def get_humanized_time(self):
-        if self.elapsed_seconds == 86399: # 23h 59min in seconds
+        if self.elapsed_seconds >= 86399: # 23h 59min in seconds
             self.elapsed_days +=1
-            self.elapsed_seconds=0
         
         return f"{self.elapsed_days} days - {str(datetime.timedelta(seconds=self.elapsed_seconds))}"
     

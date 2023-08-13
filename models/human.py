@@ -1,8 +1,6 @@
 
 import uuid
 from core.visualcomponent import VisualComponent
-import tkinter
-import random
 from config.settings import ICONS_PATH
 from mobility.random_direction_mobility import RandomDirectionMobility
 from mobility.random_walk_mobility import RandomWalkMobility
@@ -12,6 +10,8 @@ from PIL import ImageTk, Image
 from core.iconsRegister import getIconFileName
 from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
 from twisted.internet.task import LoopingCall
+
+from models.behavior import BasicBehavior, TimeDriverBehavior
 
 class Human(object):
     def __init__(self, simulation_core, name, age, weight, height, icon, x, y, mobility_model_class=None):
@@ -32,31 +32,13 @@ class Human(object):
             self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
         self.mobility = None
+        self.behavior = None
 
     def start(self):
         self.run_mobility()
-        
-    def main(self):
-        self.interact_to_current_environment_machines()
-        
-    def interact_to_current_environment_machines(self):
-        self.check_current_environment()
-        if self.current_environment:
-            # if self.simulation_core.global_seed:
-            #     random.seed(self.simulation_core.global_seed)
+        self.behavior = TimeDriverBehavior(self)
+        self.behavior.run()
             
-            if len(self.current_environment.machine_list) > 0:
-                
-                random.shuffle(self.current_environment.machine_list)
-                # Select a machine randomly from environment machines list
-                selected_machine = random.choice(self.current_environment.machine_list)
-                
-                # turn on or off the selected machine founded inside environment
-                selected_machine.toggle_power_state()
-                
-                # This will be in dataset as the agent that trigged the machine or turned it off
-                selected_machine.app.last_actor = self.name
-    
     def check_current_environment(self):
         if self.current_environment:
             
@@ -90,7 +72,7 @@ class Human(object):
 
 
     def run_mobility(self):
-        LoopingCall(self.main).start(0.5)
+
         # self.mobility = GraphRandomWaypointMobility(
         #     self.visual_component,
         #     self.simulation_core,

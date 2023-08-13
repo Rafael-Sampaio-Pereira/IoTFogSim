@@ -5,6 +5,7 @@ from twisted.python import log
 from twisted.internet.defer import inlineCallbacks
 from core.functions import sleep
 from twisted.internet import reactor
+from twisted.internet.task import LoopingCall
 import os
 
 
@@ -55,6 +56,8 @@ class BaseApp(object):
         file = self.simulation_core.output_dir+"/datasets/" + \
             self.simulation_core.project_name+"_"+self.machine.name+".csv"
         self.dataset_file  = open(file, 'a')
+        if self.machine.is_turned_on:
+            LoopingCall(self.update_dataset).start(interval=1, now=True)
 
     def set_simulation_core(self, simulation_core):
         self.simulation_core = simulation_core

@@ -10,9 +10,10 @@ from core.iconsRegister import getIconFileName
 
 class Environment(object):
 
-    def __init__(self, simulation_core, name, x1, y1, x2, y2):
+    def __init__(self, simulation_core, name, type, x1, y1, x2, y2):
         self.simulation_core = simulation_core
         self.name = name
+        self.type = type
         self.machine_list = []
         self.human_list = []
         self.x1 = x1
@@ -29,30 +30,9 @@ class Environment(object):
         self.draw_limits_area()
         self.all_lights = []
         self.load_all_machines_inside_environment_area()
-        LoopingCall(self.check_for_human_inside_environment_area).start(0.2)
+        LoopingCall(self.check_for_human_inside_environment_area).start(0.4)
         
-    def toggle_between_day_and_night(self):
-        # 64799s = 17h 59m
-        # 18000s = 5h
-        if self.simulation_core.clock.elapsed_seconds > 64799 and self.simulation_core.clock.elapsed_seconds > 18000:
-            self.simulation_core.canvas.itemconfig(
-                self.limits_area,
-                fill='black'
-            )
-            self.simulation_core.canvas.itemconfig(
-                self.limits_area,
-                stipple='gray50' # You can use 'gray75', 'gray50', 'gray25' and 'gray12'
-            )
-        else:
-            self.simulation_core.canvas.itemconfig(
-                self.limits_area,
-                fill=''
-            )
-            self.simulation_core.canvas.itemconfig(
-                self.limits_area,
-                stipple=''
-            )
-        
+
     def draw_limits_area(self) -> None:
         self.limits_area = self.simulation_core.canvas.create_rectangle(
             self.x1,
@@ -75,7 +55,6 @@ class Environment(object):
                 
 
     def check_for_human_inside_environment_area(self):
-        # self.toggle_between_day_and_night()
         if self.limits_area:
             # get objects inside the environment area
             objects_inside_env = self.simulation_core.canvas.find_enclosed(
@@ -94,6 +73,7 @@ class Environment(object):
                 if qt_humans > 0:
                     # 64799s = 17h 59m
                     # 18000s = 5h
+                    # convert time to seconds at https://onlinetimetools.com/convert-time-to-seconds
                     self.simulation_core.canvas.itemconfig(
                         self.limits_area,
                         fill=''

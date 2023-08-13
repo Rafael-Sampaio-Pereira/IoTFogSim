@@ -18,9 +18,10 @@ class VacuumBotApp(BaseApp):
     def main(self):
         super().main()
         if self.machine.is_turned_on:
+            self.energy_storage.initial_time = self.machine.up_time
             self.run_mobility()
-            LoopingCall(self.decrease_energy_storage).start(interval=1, now=True)
-            LoopingCall(self.update_dataset).start(interval=1, now=True)
+            LoopingCall(self.decrease_energy_storage).start(interval=15, now=True)
+            
 
     def run_mobility(self):
         if not self.is_moving:
@@ -33,11 +34,11 @@ class VacuumBotApp(BaseApp):
             self.is_moving = True
 
     def decrease_energy_storage(self):
-        TRABALHAR COM SLLEP E WILHE TRUE
+        
         if self.machine.is_turned_on and not self.energy_storage.is_charging:
             if self.energy_storage.capacity_remaning > 0:
-                if self.machine.up_time % self.energy_storage.autonomy == 0:
-                    self.energy_storage.capacity_remaning -= 1
+                self.energy_storage.capacity_remaning -= 1
+                    
             else:
                 self.mobility.is_stopped = True
                 self.is_moving = False
@@ -51,7 +52,6 @@ class VacuumBotApp(BaseApp):
             self.energy_storage.is_charging = True
             for i in range(1, 100):
                 self.energy_storage.capacity_remaning += 1
-
 
             if self.energy_storage.capacity_remaning >= 99:
                 self.energy_storage.is_charging = False

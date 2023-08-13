@@ -145,6 +145,7 @@ def load_environments(project_name, simulation_core):
                     _env = Environment(
                             simulation_core,
                             env['name'],
+                            env['type'],
                             env['x1'],
                             env['y1'],
                             env['x2'],
