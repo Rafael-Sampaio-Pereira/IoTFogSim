@@ -18,7 +18,7 @@ from twisted.internet import reactor
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.start_time = 86399 #28800 # start clock time as seconds
+        self.start_time = 25200 #28800 # start clock time as seconds
         self.elapsed_seconds = self.start_time
         self.elapsed_days = 0
         self.time_speed_multiplier = 1

@@ -15,6 +15,7 @@ import json
 from twisted.internet.task import LoopingCall
 
 
+
 """
 Model introduction
 This extends random waypoint models, but node can only move into a given graph
@@ -35,8 +36,12 @@ class GraphRandomWaypointMobility(MobilityModel):
                  min_speed: float,
                  max_speed: float,
                  min_pause: int,
-                 max_pause: int):
+                 max_pause: int,
+                 actor):
         super().__init__(simulation_core)
+        self.all_mobility_points = []
+        self.actor = actor
+        self.main_mobility_loop = LoopingCall(self.move)
         self.graph = nx.Graph()
         self.mount_graph()
         self.simulation_core = simulation_core
@@ -45,15 +50,17 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.max_speed = max_speed
         self.min_pause = min_pause
         self.max_pause = max_pause
-        self.state = 'STOPED'
         self.all_path_trajectory_coordinates = []
+        self.next_mobility_point = None
+        self.is_moving = False
         
 
     @inlineCallbacks
     def start(self):
         # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list
         yield sleep(0.5)
-        LoopingCall(self.move).start(0.1)
+        self.main_mobility_loop.start(0.1)
+        # self.move()
         
     def generate_all_path_coords_points_between_two_points(self):
         
@@ -108,16 +115,32 @@ class GraphRandomWaypointMobility(MobilityModel):
                                 'trajectory_coordinates': all_trajectory_coordinates
                             }
                             self.all_path_trajectory_coordinates.append(coords_data)
+                        
+    def set_next_mobility_point(self, point_name):
+        self.next_mobility_point = next(filter(
+                lambda point: point["name"] == point_name,
+                self.all_mobility_points), None)
                     
     @inlineCallbacks
     def move(self) -> None:
-        if not self.is_stopped:
+
+        if self.actor.is_at_bed() and self.actor.state == 'SLEEPING':
+            # If is time to sleep and actor is at bed, so do nothing
+            pass
+                            
+        # elif not self.is_stopped:
+        elif not self.is_moving:
             all_trajectory_coordinates = None
-            # Choosing randomically a waypoint in all_mobility_points list
-            next_random_point = random.choice(self.all_mobility_points)
+            next_point = None
+            if self.next_mobility_point:
+                next_point = self.next_mobility_point 
+                self.next_mobility_point = None
+            else:
+                # Choosing randomically a waypoint in all_mobility_points list
+                next_point = random.choice(self.all_mobility_points)
             
             # Getting destiny graph node(i.e. vertice)
-            destiny_point = self.get_graph_node_by_coords(next_random_point['x'], next_random_point['y'])
+            destiny_point = self.get_graph_node_by_coords(next_point['x'], next_point['y'])
             
             # Getting current position
             current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
@@ -126,7 +149,7 @@ class GraphRandomWaypointMobility(MobilityModel):
                                     lambda data: data['source_point'] == current_point and data['destination_point'] == destiny_point,
                                     self.all_path_trajectory_coordinates), None)
             self.simulation_core.updateEventsCounter(
-                f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_random_point['x']} y:{next_random_point['y']} coords ")
+                f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_point['x']} y:{next_point['y']} coords ")
             
             if trajectory_data:
                 all_trajectory_coordinates = trajectory_data['trajectory_coordinates']
@@ -134,17 +157,19 @@ class GraphRandomWaypointMobility(MobilityModel):
                 step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
                 wall_was_found = False
                 tolerance = None
+                self.is_moving = True
                 for x, y in all_trajectory_coordinates:
                     old_x = self.visual_component.x
                     old_y = self.visual_component.y
                     # Due it is a loop, verify if last movement has resulted in a wall collision
                     if not wall_was_found:
                         # verify if object just got its destiny
-                        if not(x == next_random_point['x']) and not(y == next_random_point['y']):
+                        if not(x == next_point['x']) and not(y == next_point['y']):
                             # preventing icon cross wall
                             tolerance = 10
                             # Moving icon on screen at
                             cooperate(self.visual_component.move_on_screen(x, y))
+                            
                             if self.simulation_core.scene_adapter:
                                 if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
                                     # if found a collision, then rolling back to old position
@@ -155,12 +180,18 @@ class GraphRandomWaypointMobility(MobilityModel):
                             # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again
                             self.visual_component.move_on_screen(x, y)
                         yield sleep(step_speed)
+                yield sleep(1)
+                self.is_moving = False
 
                 # Stay at point for a random period, so move again to another point
                 pause_time = random.randint(self.min_pause, self.max_pause)
                 pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
-                reactor.callLater(pause_time, self.move)
 
+                # if self.actor.is_at_bed():
+                #     pause_time = self.simulation_core.clock.get_internal_time_unit(30)
+
+                reactor.callLater(pause_time, self.move)
+                
 
     @inlineCallbacks 
     def generate_graph_points(self):
@@ -202,7 +233,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         
     def add_graph_node(self, name, x, y):
         self.graph.add_node(name, x=x, y=y)
-        self.all_mobility_points.append({"x": x, "y": y})
+        self.all_mobility_points.append({"name": name, "x": x, "y": y})
     
     @inlineCallbacks
     def mount_graph(self):

@@ -57,7 +57,7 @@ class BaseApp(object):
             self.simulation_core.project_name+"_"+self.machine.name+".csv"
         self.dataset_file  = open(file, 'a')
         if self.machine.is_turned_on:
-            LoopingCall(self.update_dataset).start(interval=1, now=True)
+            LoopingCall(self.update_dataset).start(interval=self.simulation_core.clock.get_internal_time_unit(1), now=True)
 
     def set_simulation_core(self, simulation_core):
         self.simulation_core = simulation_core

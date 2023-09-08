@@ -33,11 +33,23 @@ class Human(object):
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
         self.mobility = None
         self.behavior = None
+        self.state = 'AWAKE'
+
+    def set_state(self, new_state):
+        self.state = new_state
 
     def start(self):
-        self.run_mobility()
         self.behavior = TimeDriverBehavior(self)
         self.behavior.run()
+
+    def is_at_bed(self):
+        bed = next(filter(
+                lambda point: point["name"] == 'BED',
+                self.mobility.all_mobility_points), None)
+        if bed:
+            if self.visual_component.x == bed['x'] and self.visual_component.y == bed['y']:
+                return True
+        return False
             
     def check_current_environment(self):
         if self.current_environment:
@@ -71,42 +83,42 @@ class Human(object):
                 self.current_environment = None
 
 
-    def run_mobility(self):
+    # def run_mobility(self):
 
-        # self.mobility = GraphRandomWaypointMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     0.02,
-        #     0.08,
-        #     2,
-        #     10
-        # )
+    #     # self.mobility = GraphRandomWaypointMobility(
+    #     #     self.visual_component,
+    #     #     self.simulation_core,
+    #     #     0.02,
+    #     #     0.08,
+    #     #     2,
+    #     #     10
+    #     # )
         
-        # self.mobility = RandomDirectionMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     0.02,
-        #     0.08,
-        #     2,
-        #     10
-        # )
+    #     # self.mobility = RandomDirectionMobility(
+    #     #     self.visual_component,
+    #     #     self.simulation_core,
+    #     #     0.02,
+    #     #     0.08,
+    #     #     2,
+    #     #     10
+    #     # )
 
-        # self.mobility = RandomWalkMobility(
-        #     self.visual_component,
-        #     self.simulation_core,
-        #     10
-        # )
+    #     # self.mobility = RandomWalkMobility(
+    #     #     self.visual_component,
+    #     #     self.simulation_core,
+    #     #     10
+    #     # )
         
-        self.mobility = RandomWaypointMobility(
-            self.visual_component,
-            self.simulation_core,
-            0.02,
-            0.08,
-            2,
-            10
-        )
+    #     # self.mobility = RandomWaypointMobility(
+    #     #     self.visual_component,
+    #     #     self.simulation_core,
+    #     #     0.02,
+    #     #     0.08,
+    #     #     2,
+    #     #     10
+    #     # )
 
-        self.mobility.is_stopped = False
+    #     self.mobility.is_stopped = False
         
 class HumanVisualComponent(object):
 

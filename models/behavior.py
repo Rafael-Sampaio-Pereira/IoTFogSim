@@ -1,5 +1,7 @@
 from twisted.internet.task import LoopingCall
+from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
 import random
+from twisted.internet import reactor
 
 
 class BasicBehavior(object):
@@ -32,7 +34,7 @@ class BasicBehavior(object):
 
 class EnvironmentDrivenBehavior(BasicBehavior):
 
-    def __ini__(self, human):
+    def __init__(self, human):
         super().__init__(human)
 
     def main_looping(self):
@@ -44,7 +46,9 @@ class EnvironmentDrivenBehavior(BasicBehavior):
 time_table = {
     # convert time to seconds at https://onlinetimetools.com/convert-time-to-seconds
     "00:00 am": 0,
+    "06:59 am": 25140,
     "07:00 am": 25200,
+    "11:59 am": 43140,
     "22:00 pm": 79200,
     "23:59 pm": 86399,
 }
@@ -52,9 +56,25 @@ time_table = {
 
 class TimeDriverBehavior(BasicBehavior):
 
-    def __ini__(self, human):
+    def __init__(self, human):
         super().__init__(human)
         self.human = human
+        self.human.mobility = GraphRandomWaypointMobility(
+            self.human.visual_component,
+            self.human.simulation_core,
+            0.02,
+            0.08,
+            2,
+            10,
+            self.human
+        )
+
+        self.human.mobility.is_stopped = False
+    
+    def go_to_point_and_stay_at(self, point_name, state_before, state_after, duration):
+        self.human.mobility.set_next_mobility_point(point_name)
+        reactor.callLater(20, self.human.set_state, state_before)
+        reactor.callLater(duration, self.human.set_state, state_after)
 
     def is_mid_night_or_dawn(self) -> bool:
         clock = self.human.simulation_core.clock
@@ -67,7 +87,37 @@ class TimeDriverBehavior(BasicBehavior):
         if (
                 clock.elapsed_seconds >= time_table["00:00 am"]
                     and
-                clock.elapsed_seconds <= time_table["07:00 am"]
+                clock.elapsed_seconds <= time_table["06:59 am"]
+            ):
+                return True
+        return False
+    
+    def is_morning(self) -> bool:
+        clock = self.human.simulation_core.clock
+        if (
+                clock.elapsed_seconds >= time_table["07:00 am"]
+                    and
+                clock.elapsed_seconds <= time_table["11:59 am"]
+            ):
+                return True
+        return False
+    
+    def is_midday(self) -> bool:
+        clock = self.human.simulation_core.clock
+        if (
+                clock.elapsed_seconds >= time_table["12:00 am"]
+                    and
+                clock.elapsed_seconds <= time_table["12:59 pm"]
+            ):
+                return True
+        return False
+    
+    def is_afternoon(self) -> bool:
+        clock = self.human.simulation_core.clock
+        if (
+                clock.elapsed_seconds >= time_table["13:00 pm"]
+                    and
+                clock.elapsed_seconds <= time_table["16:59 pm"]
             ):
                 return True
         return False
@@ -77,7 +127,15 @@ class TimeDriverBehavior(BasicBehavior):
         self.human.check_current_environment()
     
         if self.is_mid_night_or_dawn():
-            print("IT'S TIME TO SLEEP")
+            if not self.human.is_at_bed() and not self.human.state == 'SLEEPING':
+                self.go_to_point_and_stay_at('BED', 'SLEEPING', 'AWAKE', 3600)
 
-        
+        elif self.is_morning():
+            print('Its morning....................................')
+
+        elif self.is_midday():
+            print('Its midday.....................................')
+
+        elif self.is_afternoon():
+            print('Its afternoon..................................')
             
