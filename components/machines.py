@@ -100,10 +100,10 @@ class Machine(object):
         LoopingCall(time_counter).start(self.simulation_core.clock.get_internal_time_unit(1))
         self.calculating_up_time = True
         
-    def colorize_signal(self):
+    def colorize_signal(self, color='red'):
         # setting the color of signal(circle border) from transparent to red.
         self.simulation_core.canvas.itemconfig(
-            self.visual_component.draggable_signal_circle, outline="red")
+            self.visual_component.draggable_signal_circle, outline=color)
         
     @inlineCallbacks
     def propagate_signal(self):

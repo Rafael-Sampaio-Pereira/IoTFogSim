@@ -29,12 +29,12 @@ class Environment(object):
             self.name+'_occupancy_sensor',
             0,
             'sensor_icon',
-            False,
+            True,
             self.sensor_x,
             self.sensor_y,
             'apps.occupancy_sensor.OccupancySensorApp',
             'Sensor',
-            0,
+            100,
             0.5
         )
         self.occupancy_sensor.app.environment = self
@@ -51,6 +51,7 @@ class Environment(object):
         reactor.callLater(0.1, self.occupancy_sensor.turn_on)
         LoopingCall(self.check_for_human_inside_environment_area).start(
             self.simulation_core.clock.get_internal_time_unit(0.4))
+        reactor.callLater(0.7,self.occupancy_sensor.colorize_signal, '#AAFF00')
         
         
 
@@ -90,6 +91,17 @@ class Environment(object):
                     if human.current_environment != self:
                         human.current_environment = self
                     qt_humans += 1
+
+            if qt_humans > 0:
+                self.occupancy_sensor.app.occupancy_sensing.occupancy = 'OCCUPIED'
+                self.occupancy_sensor.propagate_signal()
+                self.change_limits_area_color('#AAFF00')
+                self.occupancy_sensor.app.last_actor = human.name
+            else:
+                self.occupancy_sensor.app.occupancy_sensing.occupancy = 'UNOCCUPIED'
+                self.change_limits_area_color('')
+                self.occupancy_sensor.app.last_actor = 'Automation System'
+
             if len(self.all_lights) > 0:
                 if qt_humans > 0:
                     # 64799s = 17h 59m
@@ -171,13 +183,6 @@ class Environment(object):
                         if light.is_turned_on:
                             light.turn_off()
                             light.app.last_actor = 'Automation System'
-
-            
-
-            if qt_humans > 0:
-                self.change_limits_area_color('#AAFF00')
-            else:
-                self.change_limits_area_color('')
 
 
     def load_all_machines_inside_environment_area(self):

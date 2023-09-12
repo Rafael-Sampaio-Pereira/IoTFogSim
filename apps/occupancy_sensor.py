@@ -8,7 +8,7 @@ class OccupancySensorApp(BaseApp):
     def __init__(self):
         super(OccupancySensorApp, self).__init__()
         self.name = 'OccupancySensorApp'
-        self.occupancy_sensor = OccupancySensing()
+        self.occupancy_sensing = OccupancySensing()
         self.environment = None
 
     def update_dataset(self):
@@ -25,7 +25,7 @@ class OccupancySensorApp(BaseApp):
             f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
             f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
             f"{self.environment.name if self.environment else 'N/A'};"+\
-            f"{self.occupancy_sensor.occupancy};"+\
+            f"{self.occupancy_sensing.occupancy};"+\
             f"{self.last_actor}"
             return row
         
