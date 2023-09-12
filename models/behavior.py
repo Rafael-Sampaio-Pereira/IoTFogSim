@@ -1,7 +1,8 @@
 from twisted.internet.task import LoopingCall
-from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
 import random
 from twisted.internet import reactor
+
+from mobility.probabilistic_graph_random_waypoint_mobility import ProbabilisticGraphRandomWaypointMobility
 
 
 class BasicBehavior(object):
@@ -27,7 +28,7 @@ class BasicBehavior(object):
                 selected_machine.app.last_actor = self.human.name
 
     def run(self):
-        LoopingCall(self.main_looping).start(1)
+        LoopingCall(self.main_looping).start(self.human.simulation_core.clock.get_internal_time_unit(1))
 
     def main_looping(self):
         pass
@@ -59,7 +60,7 @@ class TimeDriverBehavior(BasicBehavior):
     def __init__(self, human):
         super().__init__(human)
         self.human = human
-        self.human.mobility = GraphRandomWaypointMobility(
+        self.human.mobility = ProbabilisticGraphRandomWaypointMobility(
             self.human.visual_component,
             self.human.simulation_core,
             0.02,
@@ -73,8 +74,16 @@ class TimeDriverBehavior(BasicBehavior):
     
     def go_to_point_and_stay_at(self, point_name, state_before, state_after, duration):
         self.human.mobility.set_next_mobility_point(point_name)
-        reactor.callLater(20, self.human.set_state, state_before)
-        reactor.callLater(duration, self.human.set_state, state_after)
+        reactor.callLater(
+            self.human.simulation_core.clock.get_internal_time_unit(20),
+            self.human.set_state,
+            state_before
+        )
+        reactor.callLater(
+            self.human.simulation_core.clock.get_internal_time_unit(duration),
+            self.human.set_state,
+            state_after
+        )
 
     def is_mid_night_or_dawn(self) -> bool:
         clock = self.human.simulation_core.clock

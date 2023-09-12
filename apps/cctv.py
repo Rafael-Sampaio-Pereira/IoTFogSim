@@ -1,9 +1,6 @@
 
 from twisted.internet.task import LoopingCall
 from apps.base_app import BaseApp
-from twisted.internet import reactor
-from twisted.internet.defer import inlineCallbacks
-from core.functions import sleep
 
 
 DEFAULT_PACKET_LENGTH = 1024

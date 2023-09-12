@@ -72,7 +72,7 @@ class DashboardScreen(tkinter.Frame):
         self.canvas.tag_bind(tag_name, "<Enter>", lambda event: self.check_hand_enter())
         self.canvas.tag_bind(tag_name, "<Leave>", lambda event: self.check_hand_leave())
         
-        self.update_interval = 1
+        self.update_interval = self.simulation_core.clock.get_internal_time_unit(1)
         reactor.callFromThread(self.start_panel)
         
     def on_closing(self):

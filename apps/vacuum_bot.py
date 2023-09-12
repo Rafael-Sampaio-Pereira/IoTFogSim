@@ -20,7 +20,8 @@ class VacuumBotApp(BaseApp):
         if self.machine.is_turned_on:
             self.energy_storage.initial_time = self.machine.up_time
             self.run_mobility()
-            LoopingCall(self.decrease_energy_storage).start(interval=15, now=True)
+            LoopingCall(self.decrease_energy_storage).start(
+                interval=self.simulation_core.clock.get_internal_time_unit(15), now=True)
             
 
     def run_mobility(self):

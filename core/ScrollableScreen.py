@@ -416,9 +416,10 @@ class ScrollableScreen(tkinter.Frame):
         
         speed_menu = tkinter.Menu(self.menubar, tearoff=0)
         speed_menu.add_command(label="x1 - Normal", command=lambda: self.canvas.simulation_core.clock.change_speed(1))
-        speed_menu.add_command(label="x2 - soft incrase", command=lambda: self.canvas.simulation_core.clock.change_speed(2))
+        speed_menu.add_command(label="x2 - Soft incrase", command=lambda: self.canvas.simulation_core.clock.change_speed(2))
         speed_menu.add_command(label="x10 - Fast", command=lambda: self.canvas.simulation_core.clock.change_speed(10))
         speed_menu.add_command(label="x50 - Express", command=lambda: self.canvas.simulation_core.clock.change_speed(50))
+        speed_menu.add_command(label="x100 - Is this really needed?", command=lambda: self.canvas.simulation_core.clock.change_speed(100))
         speed_menu_label = "Speed: x"+str(self.canvas.simulation_core.clock.time_speed_multiplier)
         self.menubar.add_cascade(label=speed_menu_label, menu=speed_menu)
         

@@ -22,7 +22,8 @@ class LightBulbApp(BaseApp, Light):
 
     def main(self):
         super().main()
-        LoopingCall(self.update_dataset).start(interval=1, now=True)
+        LoopingCall(self.update_dataset).start(
+            interval=self.simulation_core.clock.get_internal_time_unit(1), now=True)
 
     def update_dataset(self):
         if not self.dataset_file_has_header:

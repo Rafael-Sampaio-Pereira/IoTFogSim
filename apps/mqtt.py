@@ -241,7 +241,8 @@ class Topic(object):
         self.subscribers_list = []
         self.resource_list = []
         self.message_queue = []
-        LoopingCall(self.handle_message_queue).start(0.5)
+        LoopingCall(self.handle_message_queue).start(
+            self.simulation_core.clock.get_internal_time_unit(0.5))
 
     def handle_message_queue(self):
         if len(self.message_queue) > 0:

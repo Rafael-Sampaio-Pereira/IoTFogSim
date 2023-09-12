@@ -22,7 +22,7 @@ This extends random waypoint models, but node can only move into a given graph
 """
 
 
-class GraphRandomWaypointMobility(MobilityModel):
+class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
     """Move randomically a visual component icon into graph using the random waypoint mobility model.
                 visual_component: A component that contains icon and node info
                 min_speed: float - Min value for mobility velocility
@@ -51,6 +51,7 @@ class GraphRandomWaypointMobility(MobilityModel):
         self.min_pause = min_pause
         self.max_pause = max_pause
         self.all_path_trajectory_coordinates = []
+        self.next_mobility_point = None
         self.is_moving = False
         
 
@@ -123,12 +124,20 @@ class GraphRandomWaypointMobility(MobilityModel):
     @inlineCallbacks
     def move(self) -> None:
 
-        all_trajectory_coordinates = None
+        if self.actor.is_at_bed() and self.actor.state == 'SLEEPING':
+            # If is time to sleep and actor is at bed, so do nothing
+            pass
                             
-        if not self.is_stopped:
-        
-            # Choosing randomically a waypoint in all_mobility_points list
-            next_point = random.choice(self.all_mobility_points)
+        # elif not self.is_stopped:
+        elif not self.is_moving:
+            all_trajectory_coordinates = None
+            next_point = None
+            if self.next_mobility_point:
+                next_point = self.next_mobility_point 
+                self.next_mobility_point = None
+            else:
+                # Choosing randomically a waypoint in all_mobility_points list
+                next_point = random.choice(self.all_mobility_points)
             
             # Getting destiny graph node(i.e. vertice)
             destiny_point = self.get_graph_node_by_coords(next_point['x'], next_point['y'])

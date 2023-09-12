@@ -16,7 +16,7 @@ class GenericSensor(object):
             self.is_wireless,
             self.simulation_core,
             self.name, self.icon, x, y, 0, self)
-        LoopingCall(self.collect_data).start(1)
+        LoopingCall(self.collect_data).start(self.simulation_core.clock.get_internal_time_unit(1))
 
     def collect_data(self, low=1, high=10):
         """Collect a new value from monitoring envirioment or object"""
