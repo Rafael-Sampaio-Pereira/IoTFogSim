@@ -1,11 +1,11 @@
 
 from apps.access_point import AccessPointApp
-from apps.light_bulb import Light, LightBulbApp
-from apps.occupancy_sensor import OccupancySensorApp
+from apps.light_bulb import Light
 from apps.router import RouterApp
 from components.machines import Machine
 from twisted.internet.task import LoopingCall
 from PIL import ImageTk, Image
+from twisted.internet import reactor
 from config.settings import ICONS_PATH
 from core.iconsRegister import getIconFileName
 
@@ -37,9 +37,8 @@ class Environment(object):
             0,
             0.5
         )
-
         self.occupancy_sensor.app.environment = self
-
+        simulation_core.all_machines.append(self.occupancy_sensor )
         self.on_light_icon = ImageTk.PhotoImage(
             file=ICONS_PATH+getIconFileName("light_on_icon")
         )
@@ -49,8 +48,10 @@ class Environment(object):
         self.draw_limits_area()
         self.all_lights = []
         self.load_all_machines_inside_environment_area()
+        reactor.callLater(0.1, self.occupancy_sensor.turn_on)
         LoopingCall(self.check_for_human_inside_environment_area).start(
             self.simulation_core.clock.get_internal_time_unit(0.4))
+        
         
 
     def draw_limits_area(self) -> None:

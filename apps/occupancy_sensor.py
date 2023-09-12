@@ -23,6 +23,7 @@ class OccupancySensorApp(BaseApp):
             f"{str(datetime.timedelta(seconds=self.simulation_core.clock.elapsed_seconds))};"+\
             f"{self.machine.name};"+\
             f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
+            f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
             f"{self.environment.name if self.environment else 'N/A'};"+\
             f"{self.occupancy_sensor.occupancy};"+\
             f"{self.last_actor}"
