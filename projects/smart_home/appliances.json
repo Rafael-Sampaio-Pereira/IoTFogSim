@@ -98,7 +98,7 @@
         "is_wireless": false,
         "power_watts": 55,
         "coverage_area_radius": 0,
-        "application": "apps.stream.StreamClientApp",
+        "application": "apps.smart_tv.SmartTvApp",
         "network_interfaces": [
             {
                 "name": "eth0",
@@ -165,5 +165,18 @@
         ],
         "x": 700,
         "y": 78
+    },
+    {
+        "name": "Air Conditioner",
+        "MIPS": 1024,
+        "icon": "air_conditioner_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 5500,
+        "coverage_area_radius": 0,
+        "application": "apps.air_conditioner.AirConditionerApp",
+        "network_interfaces": [],
+        "x": 240,
+        "y": 90
     }
 ]

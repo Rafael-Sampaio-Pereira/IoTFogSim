@@ -30,6 +30,7 @@ class TemperatureSetting(object):
                 step=1
             )
         ]
+        self.thermostat_temperature_ambient = 17
 
     def thermostat_set_mode(self, thermostat_mode):
         if self.thermostat_mode in available_thermostat_modes:

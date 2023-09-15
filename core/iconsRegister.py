@@ -2,6 +2,7 @@
 
 iconsList = {
 
+    "air_conditioner_icon": "iotfogsim_air_conditioner.png",
     "ap_icon": "iotfogsim_access_point.png",
     "ap_signal_icon": "iotfogsim_access_point_signal.png",
     "application_server_icon": "iotfogsim_application_server.png",
