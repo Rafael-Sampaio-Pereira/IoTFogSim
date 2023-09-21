@@ -262,7 +262,7 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
             arrow="both",
             dash=(4,2),
             width=1,
-            fill='gray'
+            fill='#F0F4D3'
         )
     
     def get_graph_node_by_coords(self, x, y):

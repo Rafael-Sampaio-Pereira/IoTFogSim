@@ -25,7 +25,7 @@ class BaseApp(object):
         
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; status; power consuption (watts); last actor'
+            dataset_csv_header = 'day; time; machine; status; power consumption (watts); last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             
@@ -58,6 +58,13 @@ class BaseApp(object):
         self.dataset_file  = open(file, 'a')
         if self.machine.is_turned_on:
             LoopingCall(self.update_dataset).start(interval=self.simulation_core.clock.get_internal_time_unit(1), now=True)
+            LoopingCall(self.measure_energy).start(interval=self.simulation_core.clock.get_internal_time_unit(1), now=True)
+
+    def measure_energy(self):
+        if self.machine.is_turned_on:
+            self.simulation_core.smart_energy_meter.app.mesure_energy(
+                round(self.machine.current_consumption,3)
+            )
 
     def set_simulation_core(self, simulation_core):
         self.simulation_core = simulation_core

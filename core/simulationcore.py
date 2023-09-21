@@ -224,10 +224,8 @@ class SimulationCore(object):
         self.screen_clock = canvas.create_text((108,25), font=font, text="clock", fill='black')
         self.canvas = canvas
 
+        self.build_smart_energy_meter_controller()
         self.build_smart_hub_controller()
-
-
-
 
     def build_smart_hub_controller(self):
         self.smart_hub = Machine(
@@ -236,11 +234,27 @@ class SimulationCore(object):
             1024,
             'alexa_icon',
             True,
-            500,
-            500,
+            385,
+            550,
             'apps.smart_hub.SmartHubApp',
             'Smart Hub',
             100,
             25
         )
         self.all_machines.append(self.smart_hub)
+
+    def build_smart_energy_meter_controller(self):
+        self.smart_energy_meter = Machine(
+            self,
+            'Energy Meter',
+            1024,
+            'smart_meter_icon',
+            True,
+            720,
+            280,
+            'apps.smart_energy_meter.SmartEnergyMeterApp',
+            'Smart Energy Meter',
+            100,
+            25
+        )
+        self.all_machines.append(self.smart_energy_meter)

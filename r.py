@@ -1,19 +1,19 @@
-class Man(object):
-    def __init__(self):
-        self.name = 'man'
-        self.age = 15
-        self.car = 'Camaro amarelo'
-
-    def get_name(self):
-        return self.name
-    
-    def get_age(self):
-        return self.age
-    
-    def get_car(self):
-        return self.car
-    
-
-man1 = Man()
+import numpy as np
 
 
+
+lista = [ 10, 5, 5, 5, 11]
+
+print('lista antes', lista)
+
+cp = lista.copy()
+
+lista.append(5)
+lista.append(6)
+
+print('lista alterada', lista)
+
+for i in cp:
+    lista.remove(i)
+
+print('lista nova', lista)

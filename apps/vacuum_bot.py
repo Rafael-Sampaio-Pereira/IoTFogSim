@@ -60,7 +60,7 @@ class VacuumBotApp(BaseApp):
 
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; status; power consuption (watts); battery(%); position (x,y); last actor'
+            dataset_csv_header = 'day; time; machine; status; power consumption (watts); battery(%); position (x,y); last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             
