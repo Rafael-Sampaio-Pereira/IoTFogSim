@@ -15,7 +15,7 @@ from tkextrafont import Font
 import os
 from twisted.internet import reactor
 
-from core.smart_hub import SmartHub
+from apps.smart_hub import SmartHub
 
 class InternalClock(object):
     def __init__(self, simulation_core):

@@ -1,7 +1,7 @@
 from twisted.internet.task import LoopingCall
 import random
 from twisted.internet import reactor
-from core.smart_hub import Scene
+from apps.smart_hub import Scene
 
 from mobility.probabilistic_graph_random_waypoint_mobility import ProbabilisticGraphRandomWaypointMobility
 
