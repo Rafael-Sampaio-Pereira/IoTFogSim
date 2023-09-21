@@ -38,7 +38,7 @@ class Environment(object):
             0.5
         )
         self.occupancy_sensor.app.environment = self
-        simulation_core.all_machines.append(self.occupancy_sensor )
+        simulation_core.all_machines.append(self.occupancy_sensor)
         self.on_light_icon = ImageTk.PhotoImage(
             file=ICONS_PATH+getIconFileName("light_on_icon")
         )

@@ -149,8 +149,8 @@ class TimeDriverBehavior(BasicBehavior):
                     'Schedules tasks to be execute in the morning period'
                 )
                 scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 60)
-                self.human.simulation_core.smart_hub.all_scenes.append(scene)
-                self.human.simulation_core.smart_hub.schedule_scenes()
+                self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
+                self.human.simulation_core.smart_hub.app.schedule_scenes()
         elif self.is_midday():
             print('Its midday.....................................')
 

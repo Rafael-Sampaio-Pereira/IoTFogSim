@@ -6,6 +6,7 @@ from twisted.python import log
 import tkinter
 from twisted.internet import tksupport
 from tkinter import PhotoImage
+from components.machines import Machine
 from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
 from importlib import import_module
@@ -15,7 +16,6 @@ from tkextrafont import Font
 import os
 from twisted.internet import reactor
 
-from apps.smart_hub import SmartHub
 
 class InternalClock(object):
     def __init__(self, simulation_core):
@@ -91,7 +91,6 @@ class SimulationCore(object):
         self.links_results = None
         self.machines_results = None
         self.clock = None
-        self.smart_hub = SmartHub(self)
         self.output_dir =  "outputs/{:%Y_%m_%d__%H_%M_%S}".format(dt.now())
         # create results directoy if it not exist
         os.makedirs(self.output_dir, exist_ok=True)
@@ -224,3 +223,24 @@ class SimulationCore(object):
         font = Font(file="utils/fonts/alarm_clock.ttf", family="Alarm Clock", size=25)
         self.screen_clock = canvas.create_text((108,25), font=font, text="clock", fill='black')
         self.canvas = canvas
+
+        self.build_smart_hub_controller()
+
+
+
+
+    def build_smart_hub_controller(self):
+        self.smart_hub = Machine(
+            self,
+            'Alexa',
+            1024,
+            'alexa_icon',
+            True,
+            500,
+            500,
+            'apps.smart_hub.SmartHubApp',
+            'Smart Hub',
+            100,
+            25
+        )
+        self.all_machines.append(self.smart_hub)

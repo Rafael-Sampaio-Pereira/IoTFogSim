@@ -1,6 +1,8 @@
 
 from twisted.internet.task import LoopingCall
 from twisted.internet import reactor
+from apps.base_app import BaseApp
+from components.machines import Machine
 from core.functions import get_all_methods_and_attributes_from_instance, sleep
 
 class Scene(object):
@@ -80,21 +82,19 @@ class SceneActivity(object):
                 self.fired = True
                 reactor.callLater(self.trigger_after, self.fire)
         
+class SmartHubApp(BaseApp):
 
-        
-
-                    
-class SmartHub(object):
-
-    def __init__(self, simulation_core):
-        self.simulation_core = simulation_core
+    def __init__(self):
+        super(SmartHubApp, self).__init__()
         self.name ='Alexa'
         self.all_scenes = []
         self.running_scene = None
         
-    def start(self):
-        self.schedule_scenes()
-        # LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(60))
+    def main(self):
+        super().main()
+        if self.machine.is_turned_on:
+            self.schedule_scenes()
+            # LoopingCall(self.main_loop).start(self.simulation_core.clock.get_internal_time_unit(60))
 
     def schedule_scenes(self):
         if len(self.all_scenes)>0:
@@ -102,23 +102,3 @@ class SmartHub(object):
                 if len(scene.activity_table)>0:
                     for activity in scene.activity_table:
                         activity.schedule()
-        
-    # def main_loop(self):
-    #     now = self.simulation_core.clock.get_humanized_time()
-
-        # for scene in self.all_scenes:
-        
-        # for machine_activity in self.activity_table:
-        #     if machine_activity['starts_at'] == now:
-        #         machine = self.simulation_core.get_machine_by_ip(machine_activity['addr'])
-        #         machine.turn_on()
-        #     elif machine_activity['ends_at'] == now:
-        #         machine = self.simulation_core.get_machine_by_ip(machine_activity['addr'])
-        #         machine.turn_off()
-
-
-
-
-# COLOCAR SMART HUB COMO UM DEVICE E ICON DE ALEXA
-# CRIAR AGENDAMENTO DE TAREFAS
-# TESTAR AGENDAMENTO 
