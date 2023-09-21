@@ -1,6 +1,7 @@
 from twisted.internet.task import LoopingCall
 import random
 from twisted.internet import reactor
+from core.smart_hub import Scene
 
 from mobility.probabilistic_graph_random_waypoint_mobility import ProbabilisticGraphRandomWaypointMobility
 
@@ -69,7 +70,7 @@ class TimeDriverBehavior(BasicBehavior):
             10,
             self.human
         )
-
+        self.has_scheduled_scenes = False
         self.human.mobility.is_stopped = False
     
     def go_to_point_and_stay_at(self, point_name, state_before, state_after, duration):
@@ -140,8 +141,16 @@ class TimeDriverBehavior(BasicBehavior):
                 self.go_to_point_and_stay_at('BED', 'SLEEPING', 'AWAKE', 3600)
 
         elif self.is_morning():
-            print('Its morning....................................')
-
+            if not self.has_scheduled_scenes:
+                self.has_scheduled_scenes = True
+                scene = Scene(
+                    self.human.simulation_core,
+                    'Morning tasks',
+                    'Schedules tasks to be execute in the morning period'
+                )
+                scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 60)
+                self.human.simulation_core.smart_hub.all_scenes.append(scene)
+                self.human.simulation_core.smart_hub.schedule_scenes()
         elif self.is_midday():
             print('Its midday.....................................')
 

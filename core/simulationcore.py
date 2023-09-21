@@ -15,6 +15,8 @@ from tkextrafont import Font
 import os
 from twisted.internet import reactor
 
+from core.smart_hub import SmartHub
+
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
@@ -89,7 +91,7 @@ class SimulationCore(object):
         self.links_results = None
         self.machines_results = None
         self.clock = None
-        self.smart_hub = None
+        self.smart_hub = SmartHub(self)
         self.output_dir =  "outputs/{:%Y_%m_%d__%H_%M_%S}".format(dt.now())
         # create results directoy if it not exist
         os.makedirs(self.output_dir, exist_ok=True)
