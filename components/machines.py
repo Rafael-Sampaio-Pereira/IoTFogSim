@@ -52,6 +52,9 @@ class Machine(object):
         self.power_float_margin = 0.7
         self.consumed_energy_kwh = 0
         self.current_consumption = 0
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert,fill='red')
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert,font=('Helvetica', 10, 'bold'))
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text='⏻')
         
     def simulate_power_consumption(self):
         """ This simulates power consumption considering power variance.
@@ -137,6 +140,9 @@ class Machine(object):
                 self.update_name_on_screen(self.name+'\n'+self.network_interfaces[0].ip)
             else:
                 self.update_name_on_screen(self.name)
+
+            self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert,fill='green')
+            # self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text='ON')
             
             if self.is_wireless:
                 self.colorize_signal()
@@ -144,6 +150,8 @@ class Machine(object):
         
     def turn_off(self, event=None):
         self.is_turned_on = False
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert,fill='red')
+        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text='OFF')
         self.simulation_core.updateEventsCounter(f"{self.name} - Turning off {self.type}...")
                 
     def verify_if_connection_link_already_exists(self, machine):
