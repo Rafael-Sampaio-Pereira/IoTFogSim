@@ -241,11 +241,14 @@ class SimulationCore(object):
             385,
             550,
             'apps.smart_hub.SmartHubApp',
-            'Smart Hub',
+            'smart_hub',
             100,
             25
         )
         self.all_machines.append(self.smart_hub)
+        self.smart_hub.app.last_actor = 'Simulation Core'
+        self.smart_hub.turn_on()
+
 
     def build_smart_energy_meter_controller(self):
         self.smart_energy_meter = Machine(
@@ -257,8 +260,10 @@ class SimulationCore(object):
             720,
             280,
             'apps.smart_energy_meter.SmartEnergyMeterApp',
-            'Smart Energy Meter',
+            'energy_meter',
             100,
             25
         )
         self.all_machines.append(self.smart_energy_meter)
+        self.smart_energy_meter.app.last_actor = 'Simulation Core'
+        self.smart_energy_meter.turn_on()

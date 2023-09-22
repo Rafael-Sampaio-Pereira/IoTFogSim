@@ -116,7 +116,7 @@ class DashboardScreen(tkinter.Frame):
                 self.all_icons.append(image_file)
                 
                 _type = self.canvas.create_text(120, last_height-10, anchor="nw", text=f"{machine.type}" if len(machine.type) <= 6 else f"{machine.type[:4 or None]}...", fill="white")
-                ip = self.canvas.create_text(170, last_height-10, anchor="nw", text=f"{machine.network_interfaces[0].ip}" if len(machine.network_interfaces)>0 else machine.name, fill="white")
+                ip = self.canvas.create_text(170, last_height-10, anchor="nw", text=f"{machine.network_interfaces[0].ip}" if len(machine.network_interfaces)>0 else machine.name[:4 or None], fill="white")
                 power = self.canvas.create_text(265, last_height-10, anchor="nw", text=f"{machine.power_watts}W", fill="white")
                 kwh = self.canvas.create_text(320, last_height-10, anchor="nw", text=f"{machine.consumed_energy_kwh}", fill="white")
                 power_btn_image = None

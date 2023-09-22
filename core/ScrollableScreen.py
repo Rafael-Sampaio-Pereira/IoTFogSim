@@ -464,14 +464,19 @@ class ScrollableScreen(tkinter.Frame):
             load_links(self.canvas.simulation_core.project_name, self.canvas.simulation_core)
 
             for gateway in self.canvas.simulation_core.all_gateways:
+                gateway.app.last_actor = 'Simulation Core'
                 reactor.callLater(0.1, gateway.turn_on)
             # yield sleep(0.5)
             for server in self.canvas.simulation_core.all_servers:
+                server.app.last_actor = 'Simulation Core'
                 reactor.callLater(0.1, server.turn_on)
             # yield sleep(0.5)   
             for machine in self.canvas.simulation_core.all_machines:
-                if machine.type != 'router' or machine.type != 'switch' or machine.type != 'server' or machine.type != 'access_point':
-                    reactor.callLater(0.1, machine.turn_on)
+                if machine.type != 'router' and machine.type != 'switch' and machine.type != 'server' and machine.type != 'access_point' and machine.type != 'energy_meter' and machine.type != 'smart_hub':
+                    pass
+                    # Uncomment the following lines if you want to all machines to starts on mode automatically
+                    # machine.app.last_actor = 'Simulation Core'
+                    # reactor.callLater(0.1, machine.turn_on)
                     
             for human in self.canvas.simulation_core.all_humans:
                 reactor.callFromThread(human.start)
