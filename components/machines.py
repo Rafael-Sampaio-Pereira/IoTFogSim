@@ -49,25 +49,27 @@ class Machine(object):
         self.power_watts = power_watts
         self.up_time = 0 # expressed in seconds
         self.calculating_up_time = False
-        self.power_ofloat_margin = 0.7
-        self.consumed_energy_kw = 0
+        self.power_float_margin = 0.7
+        self.consumed_energy_kwh = 0
         self.current_consumption = 0
         
     def simulate_power_consumption(self):
         """ This simulates power consumption considering power variance.
         To call it, you need to use a variance margin(float_margin) value"""
         min_power = None
-        if self.power_watts - self.power_ofloat_margin < 1:
+        if self.power_watts - self.power_float_margin < 1:
             min_power = self.power_watts
         else:
-            min_power = self.power_watts - self.power_ofloat_margin
+            min_power = self.power_watts - self.power_float_margin
             
-        max_power = self.power_watts+self.power_ofloat_margin
+        max_power = self.power_watts+self.power_float_margin
         return random.uniform(min_power, max_power)
         
                         
     def get_billable_amount(self):
-        return self.simulation_core.currency_prefix+" "+str(round(float(self.consumed_energy_kw)*self.simulation_core.kwh_price,3))
+        return self.simulation_core.currency_prefix+" "+str(
+            round(float(self.consumed_energy_kwh)*self.simulation_core.kwh_price,3)
+        )
         
     # def get_consumed_energy(self):
     #     """
@@ -87,7 +89,7 @@ class Machine(object):
         # active_hours = base_second * self.up_time
         active_hours = self.up_time / 3600
         self.current_consumption = self.simulate_power_consumption()/1000
-        self.consumed_energy_kw = round((self.current_consumption * active_hours),5)
+        self.consumed_energy_kwh = round((self.current_consumption * active_hours),5)
         
 
     def calculate_up_time(self):

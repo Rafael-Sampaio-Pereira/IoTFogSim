@@ -45,7 +45,7 @@ class SmartTvApp(BaseApp):
                     
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; status; power consumption (watts); source; channel; volume; last actor'
+            dataset_csv_header = 'day; time; machine; status; power consumption (Kw); source; channel; volume; last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             

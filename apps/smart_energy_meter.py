@@ -30,7 +30,7 @@ class SmartEnergyMeterApp(BaseApp):
 
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; status; power consumption (watts); mesured energy (watts); total mesured energy (watts); last actor'
+            dataset_csv_header = 'day; time; machine; status; power consumption (Kw); mesured energy (Kw); total mesured energy (Kw); last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             

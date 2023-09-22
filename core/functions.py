@@ -152,3 +152,8 @@ def cline(x1, y1, x2, y2):
     
 def get_all_methods_and_attributes_from_instance(instance):
     return [ cmd for cmd in dir(instance) if not cmd.startswith('__')]
+
+def close_terminal():
+    import os
+    import signal
+    os.kill(os.getppid(), signal.SIGHUP)

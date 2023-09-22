@@ -10,7 +10,8 @@ from components.machines import Machine
 from config.settings import version
 from core.ScrollableScreen import ScrollableScreen
 from importlib import import_module
-from core.functions import create_csv_results_file
+from twisted.internet.defer import inlineCallbacks
+from core.functions import close_terminal, create_csv_results_file, sleep
 from twisted.internet.task import LoopingCall
 from tkextrafont import Font
 import os
@@ -101,9 +102,12 @@ class SimulationCore(object):
         self.clock = InternalClock(self)
         self.clock.start()
     
+    @inlineCallbacks
     def before_close(self):
         log.msg("Info :  - | Getting ready to close the simulation...")
         self.generate_results()
+        yield sleep(10)
+        close_terminal()
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")
@@ -121,7 +125,7 @@ class SimulationCore(object):
                     else:
                         result_line += 'not connected,'
                     result_line += f'{machine.power_watts}W,'
-                    result_line += str(machine.consumed_energy_kw)+','
+                    result_line += str(machine.consumed_energy_kwh)+','
                     result_line += f'{str(datetime.timedelta(seconds=machine.up_time))},'
                     result_line += machine.get_billable_amount()
                     

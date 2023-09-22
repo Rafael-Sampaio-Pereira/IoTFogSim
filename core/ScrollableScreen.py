@@ -12,7 +12,7 @@ from config.settings import version
 import PIL
 from PIL import Image, ImageTk
 from tkinter import PhotoImage
-from core.functions import get_all_app_classes_name
+from core.functions import close_terminal, get_all_app_classes_name
 from tkinter import ttk
 import pathlib
 from tkinter import filedialog

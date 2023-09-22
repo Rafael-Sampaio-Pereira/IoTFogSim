@@ -2,6 +2,7 @@
 from apps.access_point import AccessPointApp
 from apps.light_bulb import Light
 from apps.router import RouterApp
+from apps.smart_hub import SmartHubApp
 from components.machines import Machine
 from twisted.internet.task import LoopingCall
 from PIL import ImageTk, Image
@@ -194,7 +195,7 @@ class Environment(object):
             # looking for all machines inside the environment area
             for obj in objects_inside_env:
                 obj = self.simulation_core.get_machine_instance_by_icon_id(obj)
-                if isinstance(obj, Machine) and (not isinstance(obj.app, AccessPointApp) and not isinstance(obj.app, RouterApp)):
+                if isinstance(obj, Machine) and (not isinstance(obj.app, AccessPointApp) and not isinstance(obj.app, RouterApp) and not isinstance(obj.app, SmartHubApp)):
                     self.machine_list.append(obj)
                 if obj and isinstance(obj.app, Light):
                     self.all_lights.append(obj)
