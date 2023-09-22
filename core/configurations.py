@@ -108,7 +108,7 @@ def initialization_screen(simulation_core):
             window.destroy()
             window.update()
 
-    def creat_project(window, new_project_name, simulation_core):
+    def createproject(window, new_project_name, simulation_core):
         try:
             if new_project_name == '':
                 messagebox.showwarning(
@@ -177,6 +177,6 @@ def initialization_screen(simulation_core):
     input_new_project_name = tkinter.Entry(window)
     input_new_project_name.place(relx="0.1", rely="0.6")
 
-    btn_new = ttk.Button(window, text="Create new project and start it", command=lambda: creat_project(
+    btn_new = ttk.Button(window, text="Create new project and start it", command=lambda: createproject(
         window, input_new_project_name.get(), simulation_core))
     btn_new.place(relx="0.1", rely="0.65")

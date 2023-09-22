@@ -8,6 +8,7 @@ import datetime
 from datetime import datetime
 from twisted.internet import tksupport
 import os.path
+from apps.cctv import CameraApp
 from config.settings import version
 import PIL
 from PIL import Image, ImageTk
@@ -470,10 +471,15 @@ class ScrollableScreen(tkinter.Frame):
             for server in self.canvas.simulation_core.all_servers:
                 server.app.last_actor = 'Simulation Core'
                 reactor.callLater(0.1, server.turn_on)
-            # yield sleep(0.5)   
+            # yield sleep(0.5)
+
+            auto_start_devices_apps = (CameraApp,) # Put in this tuple all apps that need to be started automatically
+
             for machine in self.canvas.simulation_core.all_machines:
-                if machine.type != 'router' and machine.type != 'switch' and machine.type != 'server' and machine.type != 'access_point' and machine.type != 'energy_meter' and machine.type != 'smart_hub':
-                    pass
+                if isinstance(machine.app, auto_start_devices_apps):
+                    reactor.callLater(0.1, machine.turn_on)
+                # if machine.type != 'router' and machine.type != 'switch' and machine.type != 'server' and machine.type != 'access_point' and machine.type != 'energy_meter' and machine.type != 'smart_hub':
+                    # pass
                     # Uncomment the following lines if you want to all machines to starts on mode automatically
                     # machine.app.last_actor = 'Simulation Core'
                     # reactor.callLater(0.1, machine.turn_on)

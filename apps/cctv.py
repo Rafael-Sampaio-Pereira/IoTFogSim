@@ -47,6 +47,7 @@ class CameraApp(BaseApp):
         self.cctv_server_address = '172.148.0.2'
         self.cctv_server_port = 8000
         self.data_frame_counter = 0
+        self.last_actor = 'Security System'
         
         
     def main(self):
