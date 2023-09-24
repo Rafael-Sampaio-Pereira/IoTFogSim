@@ -38,7 +38,7 @@ class RandomWalkMobility(MobilityModel):
         LoopingCall(self.move).start(self.simulation_core.clock.get_internal_time_unit(0.2))
 
     def move(self):
-        if not self.is_stopped:
+        if not self.is_stopped and self.visual_component.device.is_turned_on:
             # moving the device icon in canvas in random way
             UP = 1
             DOWN = 2

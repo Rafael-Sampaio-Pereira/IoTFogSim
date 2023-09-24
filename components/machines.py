@@ -151,7 +151,6 @@ class Machine(object):
     def turn_off(self, event=None):
         self.is_turned_on = False
         self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert,fill='red')
-        self.simulation_core.canvas.itemconfig(self.visual_component.draggable_alert, text='OFF')
         self.simulation_core.updateEventsCounter(f"{self.name} - Turning off {self.type}...")
                 
     def verify_if_connection_link_already_exists(self, machine):

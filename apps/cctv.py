@@ -1,6 +1,8 @@
 
+import datetime
 from twisted.internet.task import LoopingCall
 from apps.base_app import BaseApp
+from twisted.internet import reactor
 
 
 DEFAULT_PACKET_LENGTH = 1024
@@ -35,6 +37,27 @@ class CCTVClientApp(BaseApp):
                     self.simulation_core.updateEventsCounter(f"{self.name}-{self.protocol} - proccessing packet {packet.id}. Payload: {packet.payload}")
                     self.in_buffer.remove(packet)
                     del packet
+
+    def update_dataset(self):
+        if not self.dataset_file_has_header:
+            dataset_csv_header = 'day; time; machine; status; power consumption (Kw); running app; last actor'
+            print(dataset_csv_header, file = self.dataset_file, flush=True)
+            self.dataset_file_has_header = True
+            
+        def get_row():
+            row = \
+            f"{self.simulation_core.clock.elapsed_days};"+\
+            f"{str(datetime.timedelta(seconds=self.simulation_core.clock.elapsed_seconds))};"+\
+            f"{self.machine.name};"+\
+            f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
+            f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
+            f"{self.name if self.machine.is_turned_on else 'N/A'};"+\
+            f"{self.last_actor}"
+            return row
+        
+        def core(row):
+            print(row, file = self.dataset_file, flush=True)
+        reactor.callInThread(core, get_row())
                     
 
 class CameraApp(BaseApp):

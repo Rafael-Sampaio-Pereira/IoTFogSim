@@ -19,7 +19,7 @@ class MobilityModel(object):
         for point in self.all_mobility_points:
             # Drawing circles on canvas to represents every point coords
             self.simulation_core.canvas.create_oval(
-                point['x'], point['y'], point['x']+point_size, point['y']+point_size, outline="red", dash=(4, 3))
+                point['x'], point['y'], point['x']+point_size, point['y']+point_size, outline="#ACAF97", dash=(4, 3))
 
     @inlineCallbacks
     def generate_area_border_points(self):

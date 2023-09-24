@@ -132,28 +132,38 @@ class TimeDriverBehavior(BasicBehavior):
                 return True
         return False
 
+    def create_scenes(self):
+        self.has_scheduled_scenes = True
+        scene = Scene(
+            self.human.simulation_core,
+            'Morning tasks',
+            'Schedules tasks to be execute in the morning period'
+        )
+        scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 60)
+        self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
+        self.human.simulation_core.smart_hub.app.schedule_scenes()
+        
+    
     def main_looping(self):
         super().main_looping()
         self.human.check_current_environment()
+
+        if not self.has_scheduled_scenes:
+            self.create_scenes()
     
         if self.is_mid_night_or_dawn():
             if not self.human.is_at_bed() and not self.human.state == 'SLEEPING':
                 self.go_to_point_and_stay_at('BED', 'SLEEPING', 'AWAKE', 3600)
 
         elif self.is_morning():
-            if not self.has_scheduled_scenes:
-                self.has_scheduled_scenes = True
-                scene = Scene(
-                    self.human.simulation_core,
-                    'Morning tasks',
-                    'Schedules tasks to be execute in the morning period'
-                )
-                scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 60)
-                self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
-                self.human.simulation_core.smart_hub.app.schedule_scenes()
+            print('Its morning.....................................')
+            
         elif self.is_midday():
             print('Its midday.....................................')
 
         elif self.is_afternoon():
             print('Its afternoon..................................')
+        
+        # interacts to environment appliances and nodes
+        self.interact_to_current_environment_machines()
             

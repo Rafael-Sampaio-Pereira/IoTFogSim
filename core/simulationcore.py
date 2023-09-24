@@ -102,49 +102,49 @@ class SimulationCore(object):
         self.clock = InternalClock(self)
         self.clock.start()
     
-    @inlineCallbacks
+    # @inlineCallbacks
     def before_close(self):
         log.msg("Info :  - | Getting ready to close the simulation...")
         self.generate_results()
-        yield sleep(10)
-        close_terminal()
+        # yield sleep(10)
+        # close_terminal()
         
     def generate_results(self):
         log.msg("Info :  - | Generating simulation results...")
         
         self.machines_results = create_csv_results_file(self, "machine_results")
-        machines_results_csv_header = 'name, ip, power watts, consumed energy, up time, billable amount'
+        machines_results_csv_header = 'name; ip; power watts; consumed energy; up time; billable amount'
         print(machines_results_csv_header, file = self.machines_results, flush=True)
         if len(self.canvas.simulation_core.all_machines) > 0:
                 for machine in self.canvas.simulation_core.all_machines:
                     machine.turn_off()
                     result_line = ''
-                    result_line +=machine.name+','
+                    result_line +=machine.name+';'
                     if len(machine.network_interfaces) > 0:
-                        result_line += machine.network_interfaces[0].ip+','
+                        result_line += machine.network_interfaces[0].ip+';'
                     else:
-                        result_line += 'not connected,'
-                    result_line += f'{machine.power_watts}W,'
-                    result_line += str(machine.consumed_energy_kwh)+','
-                    result_line += f'{str(datetime.timedelta(seconds=machine.up_time))},'
+                        result_line += 'not connected;'
+                    result_line += f'{machine.power_watts}W;'
+                    result_line += str(machine.consumed_energy_kwh)+';'
+                    result_line += f'{str(datetime.timedelta(seconds=machine.up_time))};'
                     result_line += machine.get_billable_amount()
                     
                     print(result_line, file = self.machines_results, flush=True)
                     
         self.links_results = create_csv_results_file(self, "links_results")
-        links_results_csv_header = 'name, machine 1, machine 2, delay mean, delay min, delay max, total sent packets, total dropped packets'
+        links_results_csv_header = 'name; machine 1; machine 2; delay mean; delay min; delay max; total sent packets; total dropped packets'
         print(links_results_csv_header, file = self.links_results, flush=True)
         if len(self.canvas.simulation_core.all_links) > 0:
                 for link in self.canvas.simulation_core.all_links:
                     result_line = ''
-                    result_line += link.name+','
-                    result_line += link.network_interface_1.ip+','
-                    result_line += link.network_interface_2.ip+','
-                    result_line += str(round(link.delay_average,3))+'ms,'
-                    result_line += str(link.min_delay  or [0])+','
-                    result_line += str(link.max_delay or [0])+','
-                    result_line += str(link.sent_packets)+','
-                    result_line += str(link.dropped_packets)+','
+                    result_line += link.name+';'
+                    result_line += link.network_interface_1.ip+';'
+                    result_line += link.network_interface_2.ip+';'
+                    result_line += str(round(link.delay_average,3))+'ms;'
+                    result_line += str(link.min_delay  or [0])+';'
+                    result_line += str(link.max_delay or [0])+';'
+                    result_line += str(link.sent_packets)+';'
+                    result_line += str(link.dropped_packets)+';'
                     
                     print(result_line, file = self.links_results, flush=True)
                     
