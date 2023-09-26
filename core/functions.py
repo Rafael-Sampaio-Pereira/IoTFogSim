@@ -10,9 +10,7 @@ import netifaces
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet import reactor
 from twisted.internet.task import deferLater
-from datetime import datetime, date
-import os
-
+from datetime import datetime, date, time, timedelta
 
 def sleep(secs):
     """Provide a non-blocking sleep function.
@@ -157,3 +155,11 @@ def close_terminal():
     import os
     import signal
     os.kill(os.getppid(), signal.SIGHUP)
+
+
+def readable_time_to_seconds(hours, minutes):
+    timeobj = time(hours, minutes)
+    t = datetime.combine(date.min, timeobj) - datetime.min
+    isinstance(t, timedelta)
+    time_in_seconds = str(t.total_seconds()).split('.')[0]
+    return int(time_in_seconds)

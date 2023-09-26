@@ -68,6 +68,20 @@ class BaseApp(object):
 
     def set_simulation_core(self, simulation_core):
         self.simulation_core = simulation_core
+
+    def toggle_power_state(self):
+        if self.machine.is_turned_on:
+            self.machine.turn_off()
+        else:
+            self.machine.turn_on()
+    
+    def turn_on(self):
+        if not self.machine.is_turned_on:
+            self.machine.turn_on()
+    
+    def turn_off(self):
+        if self.machine.is_turned_on:
+            self.machine.turn_off()
     
     @inlineCallbacks 
     def start(self):

@@ -1,4 +1,5 @@
 import datetime
+import random
 from apps.base_app import BaseApp
 from twisted.internet import reactor
 from apps.smart_traits.fan_speed import FanSpeed
@@ -11,6 +12,16 @@ class AirConditionerApp(BaseApp):
         self.name = 'AirConditionerApp'
         self.fan_speed = FanSpeed(30)
         self.temperature_setting = TemperatureSetting(16.0, 24.0)
+    
+    def set_fan_speed(self, fan_speed=None):
+        if self.machine.is_turned_on:
+            self.fan_speed = fan_speed or random.randint(0,100)
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new air conditioner fan speed: {self.fan_speed}%")
+
+    def set_temperature(self, temperature=None):
+        if self.machine.is_turned_on:
+            self.temperature_setting.temperature = temperature or random.uniform(16.0, 24.0)
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new air conditioner temperature: {self.temperature_setting.temperature} °c")
 
 
     def update_dataset(self):

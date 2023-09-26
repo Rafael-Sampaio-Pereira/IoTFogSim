@@ -19,8 +19,4 @@ class TemperatureControl(object):
             )
         ]
         self.temperature = temperature
-        
         self.temperature_unit_for_ux = '°C'
-
-    def set_temperature(self, temperature) -> None:
-        self.temperature = temperature

@@ -1,3 +1,4 @@
+import random
 from apps.base_app import BaseApp
 from twisted.internet import reactor
 import datetime
@@ -9,6 +10,11 @@ class ShowerApp(BaseApp):
         super(ShowerApp, self).__init__()
         self.name = 'ShowerApp'
         self.temperature_control = TemperatureControl(24.0, 50.0, 39.1)
+    
+    def set_temperature(self, temperature=None):
+        if self.machine.is_turned_on:
+            self.temperature_control.temperature = temperature or random.uniform(self.temperature_control.min_threshold_celsius, self.temperature_control.max_threshold_celsius)
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new shower temperature: {self.temperature_control.temperature} °c")
 
     def update_dataset(self):
         if not self.dataset_file_has_header:

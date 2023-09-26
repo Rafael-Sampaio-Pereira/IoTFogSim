@@ -1,5 +1,6 @@
 
 import datetime
+import random
 from twisted.internet.task import LoopingCall
 from apps.base_app import BaseApp
 from twisted.internet import reactor
@@ -7,6 +8,7 @@ from twisted.internet.defer import inlineCallbacks
 from apps.smart_traits.channel import Channel
 from apps.smart_traits.volume import Volume
 from core.functions import sleep
+import names
 
 
 DEFAULT_PACKET_LENGTH = 1024
@@ -21,8 +23,23 @@ class SmartTvApp(BaseApp):
         self.channel = Channel(5, 'Record')
         self.volume = Volume(7)
         self.source = 'Antena'
-        
-        
+
+    def set_source(self, source=None):
+        if self.machine.is_turned_on:
+            self.source = source or names.get_last_name()
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv souce: {self.source}")
+
+    def set_volume(self, volume=None):
+        if self.machine.is_turned_on:
+            self.volume.current_volume = volume or random.uniform(0,50)
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv volume: {self.volume.current_volume}")
+
+    def set_channel(self, channel_code=None, channel_name=None):
+        if self.machine.is_turned_on:
+            self.channel.channel_code = channel_code or random.randint(1,20)
+            self.channel.channel_name = channel_name or names.get_last_name()
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv channel: {self.channel.channel_code} - {self.channel.channel_name}")
+
     def main(self):
         super().main()
         stream_server_address = '192.168.1.2'
