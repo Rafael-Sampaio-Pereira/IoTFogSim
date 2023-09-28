@@ -178,5 +178,31 @@
         "network_interfaces": [],
         "x": 240,
         "y": 90
+    },
+    {
+        "name": "Ventilator",
+        "MIPS": 0,
+        "icon": "ventilator_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 150,
+        "coverage_area_radius": 0,
+        "application": "apps.ventilator.VentilatorApp",
+        "network_interfaces": [],
+        "x": 640,
+        "y": 430
+    },
+    {
+        "name": "Ventilator 1",
+        "MIPS": 0,
+        "icon": "ventilator_icon",
+        "type": "appliance",
+        "is_wireless": false,
+        "power_watts": 150,
+        "coverage_area_radius": 0,
+        "application": "apps.ventilator.VentilatorApp",
+        "network_interfaces": [],
+        "x": 300,
+        "y": 560
     }
 ]

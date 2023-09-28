@@ -39,7 +39,7 @@ iconsList = {
     "smart_meter_icon_signal": "iotfogsim_smart_meter_signal.png",
     "smartphone_icon": "iotfogsim_smartphone.png",
     "smart_tv_icon": "iotfogsim_tv.png",
-
+    "ventilator_icon": "iotfogsim_ventilator.png",
 }
 
 

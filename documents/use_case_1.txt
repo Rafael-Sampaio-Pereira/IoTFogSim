@@ -1,0 +1,18 @@
+Título: Economia de Energia
+
+Descrição: Este caso de uso descreve como um usuário pode utilizar dispositivos inteligentes para reduzir o consumo de energia em sua casa.
+
+Ator Principal: Usuário
+
+Pré-condições: O usuário possui dispositivos inteligentes configurados em sua casa.
+
+Fluxo Principal:
+
+O usuário acessa o aplicativo ou interface do sistema de automação residencial.
+O usuário seleciona a opção "Economia de Energia".
+O sistema exibe informações sobre o consumo de energia atual em diferentes dispositivos.
+O usuário revisa os dados e identifica áreas de alto consumo.
+Com base nas informações, o usuário faz ajustes, como agendar o desligamento de dispositivos não utilizados ou reduzir o brilho das luzes.
+O sistema implementa as mudanças conforme as preferências do usuário.
+O sistema monitora o consumo de energia após as alterações.
+Pós-condições: O consumo de energia foi reduzido de acordo com as ações tomadas pelo usuário.

@@ -27,18 +27,18 @@ class SmartTvApp(BaseApp):
     def set_source(self, source=None):
         if self.machine.is_turned_on:
             self.source = source or names.get_last_name()
-            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv souce: {self.source}")
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} souce: {self.source}")
 
     def set_volume(self, volume=None):
         if self.machine.is_turned_on:
             self.volume.current_volume = volume or random.uniform(0,50)
-            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv volume: {self.volume.current_volume}")
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} volume: {self.volume.current_volume}")
 
     def set_channel(self, channel_code=None, channel_name=None):
         if self.machine.is_turned_on:
             self.channel.channel_code = channel_code or random.randint(1,20)
             self.channel.channel_name = channel_name or names.get_last_name()
-            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new tv channel: {self.channel.channel_code} - {self.channel.channel_name}")
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} channel: {self.channel.channel_code} - {self.channel.channel_name}")
 
     def main(self):
         super().main()

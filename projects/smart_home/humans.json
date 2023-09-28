@@ -1,11 +1,12 @@
 [
     {
-        "name": "Older Man",
+        "name": "Jhon Due",
         "age": 65,
         "weight": 78,
         "height": 1.75,
         "icon": "human_icon",
         "x": 100,
-        "y": 100
+        "y": 100,
+        "behavior": "models.behavior.MaleBehavior"
     }
 ]

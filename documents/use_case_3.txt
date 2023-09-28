@@ -1,0 +1,17 @@
+Caso de Uso: Grupos Heterogêneos de Pessoas
+
+Título: Grupos Heterogêneos de Pessoas
+
+Descrição: Este caso de uso descreve como o sistema de automação residencial lida com grupos de pessoas com diferentes preferências e necessidades.
+
+Ator Principal: Sistema de Automação Residencial
+
+Pré-condições: Existem diferentes grupos de pessoas com perfis variados na casa.
+
+Fluxo Principal:
+
+O sistema identifica a presença de diferentes grupos de pessoas na casa com base em sensores de movimento, reconhecimento facial ou outros métodos.
+O sistema permite que cada grupo de pessoas tenha perfis e preferências personalizados.
+O sistema ajusta automaticamente as configurações de dispositivos, como temperatura, iluminação e entretenimento, de acordo com as preferências de cada grupo.
+O sistema monitora as atividades e feedback de cada grupo para aprimorar suas preferências ao longo do tempo.
+Pós-condições: O sistema oferece experiências personalizadas para grupos heterogêneos de pessoas com base em suas preferências e necessidades.

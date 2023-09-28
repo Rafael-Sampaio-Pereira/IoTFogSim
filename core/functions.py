@@ -37,6 +37,22 @@ def import_and_instantiate_class_from_string(class_path):
     except Exception as e:
         log.msg(e)
 
+def import_and_instantiate_class_from_string_with_params(class_path, *args):
+
+    # the classPath needs to be = folder.file.class
+
+    try:
+        paths = class_path.split('.')
+        module_path = paths[0]+"."+paths[1]
+        class_name = paths[2]
+        module = import_module(module_path)
+        _class = getattr(module, class_name)
+        class_instance = _class(*args)
+        return class_instance
+
+    except Exception as e:
+        log.msg(e)
+
 
 # This configure function let us to observ logs in screen while they are save in a log file
 def configure_logger(log_file_path, project_name):

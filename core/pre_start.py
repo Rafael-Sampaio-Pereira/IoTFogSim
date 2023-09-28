@@ -63,6 +63,7 @@ def load_humans(project_name, simulation_core):
                         weight=human['weight'],
                         height=human['height'],
                         simulation_core=simulation_core,
+                        behavior=human['behavior']
                     )
                     simulation_core.all_humans.append(_human)
                 

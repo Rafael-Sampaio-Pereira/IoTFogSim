@@ -1,0 +1,20 @@
+Caso de Uso: Automação
+
+Título: Automação
+
+Descrição: Este caso de uso descreve como um usuário pode criar cenários de automação para controlar dispositivos inteligentes em sua casa.
+
+Ator Principal: Usuário
+
+Pré-condições: O usuário possui dispositivos inteligentes configurados em sua casa e está logado no sistema de automação residencial.
+
+Fluxo Principal:
+
+O usuário acessa o aplicativo ou interface do sistema de automação residencial.
+O usuário seleciona a opção "Automação".
+O usuário cria um novo cenário de automação.
+O sistema permite que o usuário defina condições desencadeadoras, como horários, sensores de movimento ou eventos específicos.
+O usuário especifica as ações que os dispositivos devem executar quando as condições forem atendidas.
+O sistema armazena o cenário de automação criado pelo usuário.
+O sistema monitora as condições e executa as ações automaticamente quando necessário.
+Pós-condições: Os dispositivos são controlados automaticamente com base nas condições definidas pelo usuário.

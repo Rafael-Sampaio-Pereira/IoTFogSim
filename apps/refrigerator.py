@@ -14,7 +14,7 @@ class RefrigeratorApp(BaseApp):
     def set_temperature(self, temperature=None):
         if self.machine.is_turned_on:
             self.temperature_control.temperature = temperature or random.uniform(self.temperature_control.min_threshold_celsius, self.temperature_control.max_threshold_celsius)
-            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new refrigerator temperature: {self.temperature_control.temperature} °c")
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} temperature: {self.temperature_control.temperature} °c")
 
     def update_dataset(self):
         if not self.dataset_file_has_header:

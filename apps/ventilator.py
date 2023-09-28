@@ -1,24 +1,24 @@
+import datetime
 import random
 from apps.base_app import BaseApp
 from twisted.internet import reactor
-import datetime
-from apps.smart_traits.temperature_control import TemperatureControl
+from apps.smart_traits.fan_speed import FanSpeed
 
 
-class ShowerApp(BaseApp):
+class VentilatorApp(BaseApp):
     def __init__(self):
-        super(ShowerApp, self).__init__()
-        self.name = 'ShowerApp'
-        self.temperature_control = TemperatureControl(24.0, 50.0, 39.1)
+        super(VentilatorApp, self).__init__()
+        self.name = 'VentilatorApp'
+        self.fan_speed = FanSpeed(30)
     
-    def set_temperature(self, temperature=None):
+    def set_fan_speed(self, fan_speed=None):
         if self.machine.is_turned_on:
-            self.temperature_control.temperature = temperature or random.uniform(self.temperature_control.min_threshold_celsius, self.temperature_control.max_threshold_celsius)
-            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} temperature: {self.temperature_control.temperature} °c")
+            self.fan_speed.fan_speed_percent = fan_speed or random.randint(0,3)
+            self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} fan speed: {self.fan_speed.fan_speed_percent}")
 
     def update_dataset(self):
         if not self.dataset_file_has_header:
-            dataset_csv_header = 'day; time; machine; status; power consumption (Kw); temperature (°C); last actor'
+            dataset_csv_header = 'day; time; machine; status; power consumption (Kw); fan speed; last actor'
             print(dataset_csv_header, file = self.dataset_file, flush=True)
             self.dataset_file_has_header = True
             
@@ -29,7 +29,7 @@ class ShowerApp(BaseApp):
             f"{self.machine.name};"+\
             f"{'ON' if self.machine.is_turned_on else 'OFF'};"+\
             f"{round(self.machine.current_consumption,3) if self.machine.is_turned_on else 0};"+\
-            f"{str(self.temperature_control.temperature)};"+\
+            f"{str(self.fan_speed.fan_speed_percent) if self.machine.is_turned_on else '-'};"+\
             f"{self.last_actor}"
             return row
         

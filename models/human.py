@@ -1,5 +1,6 @@
 
 import uuid
+from core.functions import import_and_instantiate_class_from_string, import_and_instantiate_class_from_string_with_params
 from core.visualcomponent import VisualComponent
 from config.settings import ICONS_PATH
 from mobility.random_direction_mobility import RandomDirectionMobility
@@ -11,10 +12,10 @@ from core.iconsRegister import getIconFileName
 from mobility.graph_random_waypoint_mobility import GraphRandomWaypointMobility
 from twisted.internet.task import LoopingCall
 
-from models.behavior import BasicBehavior, TimeDriverBehavior
+from models.behavior import BasicBehavior, TimeDrivenBehavior
 
 class Human(object):
-    def __init__(self, simulation_core, name, age, weight, height, icon, x, y, mobility_model_class=None):
+    def __init__(self, simulation_core, name, age, weight, height, icon, x, y, behavior, mobility_model_class=None):
         self.id = uuid.uuid4().hex
         self.name = name
         self.age = age
@@ -32,14 +33,16 @@ class Human(object):
             self.name, self.icon, x, y)
         self.simulation_core.updateEventsCounter(f"{self.name} - Initializing human...")
         self.mobility = None
-        self.behavior = None
+        # self.behavior = None
+        self.behavior = import_and_instantiate_class_from_string_with_params(behavior, *[self])
         self.state = 'AWAKE'
 
     def set_state(self, new_state):
         self.state = new_state
 
     def start(self):
-        self.behavior = TimeDriverBehavior(self)
+        # self.behavior = TimeDrivenBehavior(self)
+        
         self.behavior.run()
 
     def is_at_bed(self):
