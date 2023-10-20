@@ -1,52 +1,91 @@
+
 # import pandas as pd
 # import matplotlib.pyplot as plt
+# from matplotlib.animation import FuncAnimation
+# from datetime import datetime
 
-# path = 'outputs/2023_09_27__23_45_04/datasets/smart_home_Energy Meter.csv'
+# plt.style.use('seaborn')
 
-# def plot_energy_meter_line_graph(file_path):
-#     df = pd.read_csv(file_path)
+# def animate():
+#     data = pd.read_csv('outputs/2023_10_03__13_54_22/datasets/smart_home_Energy Meter.csv', header=0, sep=';')
+#     data[' time'] = pd.to_datetime(data[' time'], format='%H:%M:%S')
 
-#     df.plot(x='mesured energy (Kw)', y='Total tax revenue (% of GDP) (ICTD (2021))')
-
-#     # plt.savefig('foo.png', bbox_inches='tight')
-
-
-# # plot_energy_meter_line_graph(path)
-
-# df = pd.read_csv(path, sep=';')
-# # print(df.columns)
-# price_date = df['time']
-# price_close = df['mesured energy (Kw)']
-# plt.plot(price_date.values, price_close.values, linestyle='solid')
+#     x = data[' time']
+#     y1 = data[' mesured energy (Kw)']
 
 
-import pandas as pd
+#     plt.cla()
+#     plt.plot(x.values, y1.values, label='Energy Meter')
+
+
+#     plt.legend(loc='upper left')
+#     plt.tight_layout()
+
+#     # ani = FuncAnimation(plt.gcf(), animate, interval=1000)
+
+#     plt.tight_layout()
+#     # plt.show()
+#     plt.savefig('foo.png', bbox_inches='tight')
+
+# if __name__ == '__main__':
+#     animate()
+
+# =================================================================
+
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from datetime import datetime
+import matplotlib.animation as animation
+from matplotlib import style
+import pandas as pd
 
-plt.style.use('seaborn')
+style.use('fivethirtyeight')
 
-def animate():
-    data = pd.read_csv('outputs/2023_09_27__01_07_30/datasets/smart_home_Energy Meter.csv', header=0, sep=';')
-    data['time'] = pd.to_datetime(data['time'], format='%H:%M:%S')
+fig = plt.figure()
+# fig.gca().relim()
+# fig.gca().autoscale_view()
+ax1 = fig.add_subplot(1,1,1)
 
-    x = data['time']
-    y1 = data['mesured energy (Kw)']
+tail_length = 50
+
+def animate(i):
+    graph_data = pd.read_csv('outputs/2023_10_04__00_22_11/datasets/smart_home_Energy Meter.csv', header=0, sep=';')
+    graph_data[' time'] = pd.to_datetime(graph_data[' time'], format='%H:%M:%S')
+
+    x = graph_data[' time'][-tail_length:]
+    y1 = graph_data[' mesured energy (Kw)'][-tail_length:]
 
 
-    plt.cla()
-    plt.plot(x.values, y1.values, label='Energy Meter')
+    ax1.clear()
+    ax1.plot(x.values, y1.values, scaley=True, scalex=True, color="red")
+
+ani = animation.FuncAnimation(fig, animate, interval=1)
+plt.show()
+
+# =================================================================
 
 
-    plt.legend(loc='upper left')
-    plt.tight_layout()
+# import matplotlib.pyplot as plt
+# from matplotlib.animation import FuncAnimation
+# import random
+# import pandas as pd
+# # %matplotlib qt
 
-    # ani = FuncAnimation(plt.gcf(), animate, interval=61000)
+# fig = plt.figure(figsize=(6,4))
+# axes = fig.add_subplot(1,1,1)
+# plt.title("Dynamic Axes")
 
-    plt.tight_layout()
-    # plt.show()
-    plt.savefig('foo.png', bbox_inches='tight')
+# tail_length = 50
 
-if __name__ == '__main__':
-    animate()
+
+# def animate(i):
+#     graph_data = pd.read_csv('outputs/2023_10_03__23_23_21/datasets/smart_home_Energy Meter.csv', header=0, sep=';')
+#     graph_data[' time'] = pd.to_datetime(graph_data[' time'], format='%H:%M:%S')
+
+#     x = graph_data[' time'][-tail_length:]
+#     y1 = graph_data[' mesured energy (Kw)'][-tail_length:]
+#     plt.xlim(i-30,i+3)
+#     axes.set_ylim(y1[i]-100, y1[i]+100)
+#     plt.plot(x,y1, scaley=True, scalex=True, color="red")
+
+# anim = FuncAnimation(fig, animate, interval=100)
+
+# plt.show()

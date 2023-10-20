@@ -3,6 +3,7 @@ from twisted.internet.task import LoopingCall
 import random
 from twisted.internet import reactor
 from apps.air_conditioner import AirConditionerApp
+from apps.microwave import MicrowaveApp
 from apps.refrigerator import RefrigeratorApp
 from apps.shower import ShowerApp
 from apps.smart_hub import Scene
@@ -45,6 +46,12 @@ ventilator_functions = [
     'turn_off',
     'set_fan_speed'
 ]
+microwave_functions = [
+    'turn_on',
+    'turn_off',
+    'set_cooking_mode'
+]
+
 
 class BasicBehavior(object):
     def __init__(self, human):
@@ -159,17 +166,22 @@ class TimeDrivenBehavior(BasicBehavior):
     def __init__(self, human):
         super().__init__(human)
         self.human = human
+        self.min_pause_time = 2
+        self.max_pause_time = 10
         self.human.mobility = ProbabilisticGraphRandomWaypointMobility(
             self.human.visual_component,
             self.human.simulation_core,
             0.02,
             0.08,
-            2,
-            10,
+            self.min_pause_time,
+            self.max_pause_time,
             self.human
         )
         self.has_scheduled_scenes = False
         self.human.mobility.is_stopped = False
+
+    # def random_choose_next_point(self):
+    #     IMPLEMENTAR AQUI PROBABILIDADE DE ESCOLHA DO PROXIMO AMBIENTE OU PONTO
 
     def create_scenes(self):
         pass
@@ -289,6 +301,9 @@ class MaleBehavior(TimeDrivenBehavior):
 
     def __init__(self, human):
         super().__init__(human)
+        self.min_pause_time = 30
+        self.max_pause_time = 60
+        
 
     def create_scenes(self):
         super().create_scenes()
@@ -301,6 +316,7 @@ class MaleBehavior(TimeDrivenBehavior):
         scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 43200)
         scene.add_automation_scene('living_room', 'SmartTv', 'turn_on', 120)
         scene.add_automation_scene('living_room', 'Ventilator', 'turn_on', 3600)
+        scene.add_automation_scene('kitchen', 'Microwave', 'turn_on', 86400)
         self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
         self.human.simulation_core.smart_hub.app.schedule_scenes()
         
@@ -363,6 +379,10 @@ class MaleBehavior(TimeDrivenBehavior):
             choices_functions = ventilator_functions
             weights = (88, 2, 10)
 
+        elif isinstance(machine.app, MicrowaveApp):
+            choices_functions = microwave_functions
+            weights = (20, 10, 70)
+
         return choices_functions, weights
     
     def afternoon_actions(self, machine):
@@ -405,7 +425,7 @@ class MaleBehavior(TimeDrivenBehavior):
 
         elif isinstance(machine.app, VacuumBotApp):
             choices_functions = vaccumbot_functions
-            weights = (0, 0)
+            weights = (0, 100)
 
         elif isinstance(machine.app, ShowerApp):
             choices_functions = shower_functions
@@ -435,7 +455,7 @@ class MaleBehavior(TimeDrivenBehavior):
 
         elif isinstance(machine.app, VacuumBotApp):
             choices_functions = vaccumbot_functions
-            weights = (0, 0)
+            weights = (0, 100)
 
         elif isinstance(machine.app, RefrigeratorApp):
             choices_functions = refrigerator_functions

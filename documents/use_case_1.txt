@@ -16,3 +16,9 @@ Com base nas informações, o usuário faz ajustes, como agendar o desligamento 
 O sistema implementa as mudanças conforme as preferências do usuário.
 O sistema monitora o consumo de energia após as alterações.
 Pós-condições: O consumo de energia foi reduzido de acordo com as ações tomadas pelo usuário.
+
+
+NADA AUTOMAÇÃO INTELIGÊNCIA
+
+Desligar  tv, ar condicionado, ventiladores quando não tem ninguem.
+Colocar geladeira em modo ferias, desligar o filtro dagua.

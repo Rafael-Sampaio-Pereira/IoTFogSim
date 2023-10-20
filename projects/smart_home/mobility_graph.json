@@ -9,7 +9,9 @@
         { "name": "POINT_4", "x": 190, "y": 600 },
         { "name": "POINT_5", "x": 255, "y": 205 },
         { "name": "POINT_6", "x": 570, "y": 205 },
-        { "name": "BED", "x": 410, "y": 90 }
+        { "name": "BED", "x": 410, "y": 90 },
+        { "name": "SUPERMARKET", "x": 950, "y": 200 },
+        { "name": "WORKPLACE", "x": 950, "y": 643 }
     ],
     "edges": [
         { "vertice_1": "DOOR_1", "vertice_2": "POINT_1"},
@@ -21,6 +23,8 @@
         { "vertice_1": "POINT_1", "vertice_2": "POINT_2"},
         { "vertice_1": "POINT_2", "vertice_2": "POINT_3"},
         { "vertice_1": "POINT_3", "vertice_2": "POINT_4"},
-        { "vertice_1": "DOOR_3", "vertice_2": "BED"}
+        { "vertice_1": "DOOR_3", "vertice_2": "BED"},
+        { "vertice_1": "DOOR_1", "vertice_2": "SUPERMARKET"},
+        { "vertice_1": "DOOR_1", "vertice_2": "WORKPLACE"}
     ]
 }
