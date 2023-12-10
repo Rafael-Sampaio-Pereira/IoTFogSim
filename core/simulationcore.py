@@ -17,6 +17,8 @@ from tkextrafont import Font
 import os
 from twisted.internet import reactor
 
+from core.energy_plots import energy_stored_data_plot
+
 
 class InternalClock(object):
     def __init__(self, simulation_core):
@@ -147,8 +149,8 @@ class SimulationCore(object):
                     result_line += str(link.dropped_packets)+';'
                     
                     print(result_line, file = self.links_results, flush=True)
-                    
-        
+        log.msg("Info :  - | Generating energy data plots for last simulation...")       
+        energy_stored_data_plot(amount=round(self.smart_energy_meter.app.total_consumption, 3))
         log.msg("Info :  - | Closing IoTFogSim Application...")
         log.msg(f"Info :  - | Simulation Final Clock: {self.clock.get_humanized_time()}")
         

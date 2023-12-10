@@ -1,0 +1,13 @@
+ANOTAÇÕES DIVERSAS
+
+NADA AUTOMAÇÃO INTELIGÊNCIA
+
+Desligar  tv, ar condicionado, ventiladores quando não tem ninguem.
+Colocar geladeira em modo ferias, desligar o filtro dagua.
+
+NADA - INTERAÇÃO
+AUTOMAÇÃO - INTERAÇÃO - LAMPADAS
+INTELIGÊNCIA - INTERAÇÃO - LAMPADAS - ORQUESTRAÇÃO
+
+
+kW significa 1.000 Watts, enquanto kWh representa 1.000 Watts dentro de uma hora

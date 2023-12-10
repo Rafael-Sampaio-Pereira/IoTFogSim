@@ -51,7 +51,6 @@ tail_length = 50
 def get_last_dir_inside_of(directory):
     return str(max(pathlib.Path(directory).glob('*/'), key=os.path.getmtime))
 
-print()
 
 def animate(i):
     file = get_last_dir_inside_of('outputs')+"/datasets/smart_home_Energy Meter.csv"

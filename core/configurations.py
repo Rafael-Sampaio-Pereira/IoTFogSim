@@ -32,10 +32,9 @@ class CoreConfig():
 
         simulation_core = SimulationCore()
         
-
         # initialization_screen(simulation_core)
         reactor.callFromThread(initialization_screen, simulation_core)
-        
+
         # generates results when reactor stopped via command line (CRTL+C)
         reactor.addSystemEventTrigger('before', 'shutdown', simulation_core.before_close)
     

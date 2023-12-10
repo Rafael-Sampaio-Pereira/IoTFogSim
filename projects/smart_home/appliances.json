@@ -70,7 +70,7 @@
         "icon": "robot_icon",
         "type": "appliance",
         "is_wireless": false,
-        "power_watts": 90,
+        "power_watts": 40,
         "coverage_area_radius": 0,
         "application": "apps.vacuum_bot.VacuumBotApp",
         "network_interfaces": [],

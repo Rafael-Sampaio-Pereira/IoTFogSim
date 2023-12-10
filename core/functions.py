@@ -5,6 +5,7 @@ from importlib import import_module
 import inspect
 import importlib
 import os
+import pathlib
 from fabric.api import local
 import netifaces
 from twisted.internet.defer import inlineCallbacks
@@ -179,3 +180,6 @@ def readable_time_to_seconds(hours, minutes):
     isinstance(t, timedelta)
     time_in_seconds = str(t.total_seconds()).split('.')[0]
     return int(time_in_seconds)
+
+def get_last_dir_inside_of(directory):
+    return str(max(pathlib.Path(directory).glob('*/'), key=os.path.getmtime))

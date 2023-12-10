@@ -66,7 +66,11 @@ class Machine(object):
             min_power = self.power_watts - self.power_float_margin
             
         max_power = self.power_watts+self.power_float_margin
-        return random.uniform(min_power, max_power)
+        final_value = random.uniform(min_power, max_power)
+
+        # print(f"name: {self.name}, original: {self.power_watts}, max: {max_power}, min: {min_power}, final: {final_value}")
+
+        return final_value
         
                         
     def get_billable_amount(self):
