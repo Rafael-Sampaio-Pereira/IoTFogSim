@@ -101,7 +101,7 @@ class Link(object):
         if self.network_interface_1.is_wireless == True or self.network_interface_2.is_wireless == True:
             self.arrow_color = "#CFD8DC"
         else:
-            self.arrow_color = "#263238"
+            self.arrow_color = "#CFD8DC" #"#263238"
         self.connection_arrow = self.simulation_core.canvas.create_line(
             self.network_interface_1.machine.visual_component.x,
             self.network_interface_1.machine.visual_component.y,

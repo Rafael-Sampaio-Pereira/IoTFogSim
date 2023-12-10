@@ -1,9 +1,18 @@
 
 import datetime
+import subprocess
 from twisted.internet.task import LoopingCall
 from twisted.internet import reactor
 from apps.base_app import BaseApp
 from components.machines import Machine
+import os
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib import style
+import pandas as pd
+from twisted.internet.task import cooperate
+
+style.use('fivethirtyeight')
 
 
 class SmartEnergyMeterApp(BaseApp):
@@ -13,6 +22,8 @@ class SmartEnergyMeterApp(BaseApp):
         self.name ='Energy Meter'
         self.consumption_buffer = []
         self.total_consumption = 0
+        self.fig = plt.figure()
+        
 
     def performe_mesures_per_second(self):
         temp_buffer = self.consumption_buffer.copy()

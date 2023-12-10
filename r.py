@@ -36,6 +36,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
 import pandas as pd
+import pathlib, os
 
 style.use('fivethirtyeight')
 
@@ -46,8 +47,15 @@ ax1 = fig.add_subplot(1,1,1)
 
 tail_length = 50
 
+
+def get_last_dir_inside_of(directory):
+    return str(max(pathlib.Path(directory).glob('*/'), key=os.path.getmtime))
+
+print()
+
 def animate(i):
-    graph_data = pd.read_csv('outputs/2023_10_04__00_22_11/datasets/smart_home_Energy Meter.csv', header=0, sep=';')
+    file = get_last_dir_inside_of('outputs')+"/datasets/smart_home_Energy Meter.csv"
+    graph_data = pd.read_csv(file, header=0, sep=';')
     graph_data[' time'] = pd.to_datetime(graph_data[' time'], format='%H:%M:%S')
 
     x = graph_data[' time'][-tail_length:]
@@ -89,3 +97,5 @@ plt.show()
 # anim = FuncAnimation(fig, animate, interval=100)
 
 # plt.show()
+
+

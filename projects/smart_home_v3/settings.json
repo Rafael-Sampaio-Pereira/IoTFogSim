@@ -1,9 +1,0 @@
-{
-    "settings": {
-        "resizeable": false,
-        "scene_adapter": null,
-        "global_seed": 390293,
-        "currency_prefix": "R$",
-        "kwh_price": 1.20
-    }
-}
