@@ -3,6 +3,7 @@ from twisted.internet.task import LoopingCall
 import random
 from twisted.internet import reactor
 from apps.air_conditioner import AirConditionerApp
+from apps.light_bulb import LightBulbApp
 from apps.microwave import MicrowaveApp
 from apps.refrigerator import RefrigeratorApp
 from apps.shower import ShowerApp
@@ -51,7 +52,10 @@ microwave_functions = [
     'turn_off',
     'set_cooking_mode'
 ]
-
+light_functions = [
+    'turn_on',
+    'turn_off'
+]
 
 class BasicBehavior(object):
     def __init__(self, human):
@@ -307,18 +311,19 @@ class MaleBehavior(TimeDrivenBehavior):
 
     def create_scenes(self):
         super().create_scenes()
-        self.has_scheduled_scenes = True
-        scene = Scene(
-            self.human.simulation_core,
-            'Morning tasks',
-            'Schedules tasks to be execute in the morning period'
-        )
-        scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 43200)
-        scene.add_automation_scene('living_room', 'SmartTv', 'turn_on', 120)
-        scene.add_automation_scene('living_room', 'Ventilator', 'turn_on', 3600)
-        scene.add_automation_scene('kitchen', 'Microwave', 'turn_on', 86400)
-        self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
-        self.human.simulation_core.smart_hub.app.schedule_scenes()
+        if 'smart' in self.human.simulation_core.modes:
+            self.has_scheduled_scenes = True
+            scene = Scene(
+                self.human.simulation_core,
+                'Morning tasks',
+                'Schedules tasks to be execute in the morning period'
+            )
+            scene.add_automation_scene('bed_room', 'Air Conditioner', 'turn_off', 43200)
+            scene.add_automation_scene('living_room', 'SmartTv', 'turn_on', 120)
+            scene.add_automation_scene('living_room', 'Ventilator', 'turn_on', 3600)
+            scene.add_automation_scene('kitchen', 'Microwave', 'turn_on', 86400)
+            self.human.simulation_core.smart_hub.app.all_scenes.append(scene)
+            self.human.simulation_core.smart_hub.app.schedule_scenes()
         
 
     def morning_actions(self, machine):
@@ -348,6 +353,10 @@ class MaleBehavior(TimeDrivenBehavior):
         elif isinstance(machine.app, VentilatorApp):
             choices_functions = ventilator_functions
             weights = (70, 10, 20)
+
+        elif isinstance(machine.app, LightBulbApp):
+            choices_functions = vaccumbot_functions
+            weights = (40, 60)
             
         return choices_functions, weights
     
@@ -383,6 +392,10 @@ class MaleBehavior(TimeDrivenBehavior):
             choices_functions = microwave_functions
             weights = (20, 10, 70)
 
+        elif isinstance(machine.app, LightBulbApp):
+            choices_functions = vaccumbot_functions
+            weights = (40, 60)
+
         return choices_functions, weights
     
     def afternoon_actions(self, machine):
@@ -412,6 +425,10 @@ class MaleBehavior(TimeDrivenBehavior):
         elif isinstance(machine.app, VentilatorApp):
             choices_functions = ventilator_functions
             weights = (88, 2, 10)
+
+        elif isinstance(machine.app, LightBulbApp):
+            choices_functions = vaccumbot_functions
+            weights = (40, 60)
 
         return choices_functions, weights
     
@@ -443,6 +460,10 @@ class MaleBehavior(TimeDrivenBehavior):
             choices_functions = ventilator_functions
             weights = (10, 70, 20)
 
+        elif isinstance(machine.app, LightBulbApp):
+            choices_functions = vaccumbot_functions
+            weights = (90, 10)
+
         return choices_functions, weights
     
     def night_actions(self, machine):
@@ -468,5 +489,9 @@ class MaleBehavior(TimeDrivenBehavior):
         elif isinstance(machine.app, VentilatorApp):
             choices_functions = ventilator_functions
             weights = (10, 70, 20)
+
+        elif isinstance(machine.app, LightBulbApp):
+            choices_functions = vaccumbot_functions
+            weights = (90, 10)
 
         return choices_functions, weights

@@ -70,6 +70,7 @@ class InternalClock(object):
 class SimulationCore(object):
 
     def __init__(self):
+        self.modes = ['smart', 'pure', 'automation']
         self.all_links = []
         self.all_humans = []
         self.all_machines = []

@@ -103,7 +103,7 @@ class Environment(object):
                 self.change_limits_area_color('')
                 self.occupancy_sensor.app.last_actor = 'Automation System'
 
-            if len(self.all_lights) > 0:
+            if len(self.all_lights) > 0 and 'automation' in self.simulation_core.modes:
                 if qt_humans > 0:
                     # 64799s = 17h 59m
                     # 18000s = 5h
