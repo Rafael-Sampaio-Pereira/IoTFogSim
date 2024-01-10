@@ -70,7 +70,11 @@ class InternalClock(object):
 class SimulationCore(object):
 
     def __init__(self):
-        self.modes = ['smart', 'pure', 'automation']
+        self.modes = [
+            # 'smart',
+            'pure',
+            # 'automation'
+        ]
         self.all_links = []
         self.all_humans = []
         self.all_machines = []
@@ -99,7 +103,6 @@ class SimulationCore(object):
         # create results directoy if it not exist
         os.makedirs(self.output_dir, exist_ok=True)
         reactor.callInThread(self.start_clock)
-        
         
     def start_clock(self):
         self.clock = InternalClock(self)

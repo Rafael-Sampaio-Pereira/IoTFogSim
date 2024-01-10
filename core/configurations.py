@@ -1,3 +1,4 @@
+import datetime
 import tkinter
 from tkinter import PhotoImage
 from twisted.internet import tksupport
@@ -15,12 +16,12 @@ import os
 from tkinter import ttk
 from tkinter import messagebox
 from config.settings import version
-from core.functions import configure_logger
+from core.functions import configure_logger, get_last_dir_inside_of
 from twisted.internet import task
 from twisted.internet import reactor
 import time
 from pathlib import Path
-
+from twisted.internet.task import LoopingCall
 
 class CoreConfig():
     def __init__(self):
@@ -37,10 +38,15 @@ class CoreConfig():
 
         # generates results when reactor stopped via command line (CRTL+C)
         reactor.addSystemEventTrigger('before', 'shutdown', simulation_core.before_close)
-    
-
-
-
+        
+        def save_pid_info():
+            pid = os.getpid()
+            process_info_file = open(get_last_dir_inside_of('outputs')+"/process_id.info", 'a')
+            print(pid, file = process_info_file, flush=True)
+            process_info_file.close()
+        
+        save_pid_info()
+        
 
 def initialization_screen(simulation_core):
     window = tkinter.Toplevel()
