@@ -15,11 +15,15 @@ class AirConditionerApp(BaseApp):
     
     def set_fan_speed(self, fan_speed=None):
         if self.machine.is_turned_on:
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             self.fan_speed.fan_speed_percent = fan_speed or random.randint(0,100)
             self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} fan speed: {self.fan_speed.fan_speed_percent}%")
 
     def set_temperature(self, temperature=None):
         if self.machine.is_turned_on:
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             self.temperature_setting.temperature = temperature or random.uniform(16.0, 24.0)
             self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} temperature: {self.temperature_setting.temperature} °c")
 

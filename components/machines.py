@@ -66,6 +66,8 @@ class Machine(object):
             min_power = self.power_watts - self.power_float_margin
             
         max_power = self.power_watts+self.power_float_margin
+        if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
         final_value = random.uniform(min_power, max_power)
 
         # print(f"name: {self.name}, original: {self.power_watts}, max: {max_power}, min: {min_power}, final: {final_value}")
@@ -96,7 +98,7 @@ class Machine(object):
         # active_hours = base_second * self.up_time
         active_hours = self.up_time / 3600
         self.current_consumption = self.simulate_power_consumption()/1000
-        self.consumed_energy_kwh = round((self.current_consumption * active_hours),5)
+        self.consumed_energy_kwh = round((self.current_consumption * active_hours),2)
         
 
     def calculate_up_time(self):

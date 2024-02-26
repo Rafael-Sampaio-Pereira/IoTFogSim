@@ -13,6 +13,8 @@ class ShowerApp(BaseApp):
     
     def set_temperature(self, temperature=None):
         if self.machine.is_turned_on:
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             self.temperature_control.temperature = temperature or random.uniform(self.temperature_control.min_threshold_celsius, self.temperature_control.max_threshold_celsius)
             self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} temperature: {self.temperature_control.temperature} °c")
 

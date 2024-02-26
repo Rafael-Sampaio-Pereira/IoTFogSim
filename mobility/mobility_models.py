@@ -76,6 +76,8 @@ class MobilityModel(object):
         left_padding = 100
         top_padding = 100
         for point in range(1, self.n_points+1):
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             # Casting to int due uniform distribution returns float
             x = int(random.uniform(left_padding, self.area_max_width-100))
             y = int(random.uniform(top_padding, self.area_max_height-100))

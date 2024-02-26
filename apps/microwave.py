@@ -14,6 +14,8 @@ class MicrowaveApp(BaseApp):
     
     def set_cooking_mode(self, cooking_mode=None):
         if self.machine.is_turned_on:
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             self.cook.cooking_mode = cooking_mode or random.choice(self.cook.valids_cooking_modes)
             self.simulation_core.updateEventsCounter(f"{self.last_actor} has setted a new {self.machine.name} cooking mode: {self.cook.cooking_mode}")
 

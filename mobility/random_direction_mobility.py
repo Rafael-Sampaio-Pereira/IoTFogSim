@@ -54,6 +54,8 @@ class RandomDirectionMobility(MobilityModel):
 
         if not self.is_stopped:
             all_coordinates_between_two_points = []
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             # Choosing randomically a border point in all_mobility_points list
             next_random_point = random.choice(self.all_mobility_points)
             # Getting all coords between current node(visual_component) position and the selected next point

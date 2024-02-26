@@ -102,6 +102,8 @@ class GraphRandomWaypointMobility(MobilityModel):
                                     if self.simulation_core.clock.time_speed_multiplier != 1:
                                         final_pos = all_trajectory_coordinates[-1]
                                         n_elements = int(len(all_trajectory_coordinates) * self.simulation_core.clock.time_speed_multiplier/100)
+                                        if self.simulation_core.global_seed:
+                                            random.seed(self.simulation_core.global_seed)
                                         all_trajectory_coordinates = random.sample(
                                             all_trajectory_coordinates,
                                             n_elements
@@ -126,6 +128,9 @@ class GraphRandomWaypointMobility(MobilityModel):
         all_trajectory_coordinates = None
                             
         if not self.is_stopped:
+            
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
         
             # Choosing randomically a waypoint in all_mobility_points list
             next_point = random.choice(self.all_mobility_points)
@@ -143,6 +148,8 @@ class GraphRandomWaypointMobility(MobilityModel):
                 f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_point['x']} y:{next_point['y']} coords ")
             
             if trajectory_data:
+                if self.simulation_core.global_seed:
+                    random.seed(self.simulation_core.global_seed)
                 all_trajectory_coordinates = trajectory_data['trajectory_coordinates']
                 step_speed = random.uniform(self.min_speed, self.max_speed)
                 step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
@@ -173,6 +180,9 @@ class GraphRandomWaypointMobility(MobilityModel):
                         yield sleep(step_speed)
                 yield sleep(1)
                 self.is_moving = False
+
+                if self.simulation_core.global_seed:
+                    random.seed(self.simulation_core.global_seed)
 
                 # Stay at point for a random period, so move again to another point
                 pause_time = random.randint(self.min_pause, self.max_pause)

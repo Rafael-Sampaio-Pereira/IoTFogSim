@@ -45,6 +45,8 @@ class RandomWalkMobility(MobilityModel):
             LEFT = 3
             RIGHT = 4
             directions = [UP, DOWN, LEFT, RIGHT]
+            if self.simulation_core.global_seed:
+                random.seed(self.simulation_core.global_seed)
             direction = random.choice(directions)
 
             x1 = self.visual_component.x

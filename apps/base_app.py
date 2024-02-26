@@ -63,7 +63,7 @@ class BaseApp(object):
     def measure_energy(self):
         if self.machine.is_turned_on:
             self.simulation_core.smart_energy_meter.app.mesure_energy(
-                round(self.machine.current_consumption,3)
+                round(self.machine.current_consumption,2)
             )
 
     def set_simulation_core(self, simulation_core):

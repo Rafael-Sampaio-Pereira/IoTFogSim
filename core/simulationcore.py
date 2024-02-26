@@ -23,7 +23,7 @@ from core.energy_plots import energy_stored_data_plot
 class InternalClock(object):
     def __init__(self, simulation_core):
         self.simulation_core = simulation_core
-        self.start_time = 25200 #28800 # start clock time as seconds
+        self.start_time = 42300 #25200 #28800 # start clock time as seconds
         self.elapsed_seconds = self.start_time
         self.elapsed_days = 0
         self.time_speed_multiplier = 1
@@ -71,9 +71,9 @@ class SimulationCore(object):
 
     def __init__(self):
         self.modes = [
-            # 'smart',
-            'pure',
-            # 'automation'
+            #'smart',
+            'human',
+            #'automation'
         ]
         self.all_links = []
         self.all_humans = []

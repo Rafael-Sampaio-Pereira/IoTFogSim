@@ -80,11 +80,11 @@ class BasicBehavior(object):
             to interact to, then it can choose a machine
             function based on weighted choices options and day period."""
         
-        if self.human.current_environment:
-            # if self.simulation_core.global_seed:
-            #     random.seed(self.simulation_core.global_seed)
-            
+        if self.human.current_environment and 'human' in self.human.simulation_core.modes:
             if len(self.human.current_environment.machine_list) > 0:
+                
+                if self.human.simulation_core.global_seed:
+                    random.seed(self.human.simulation_core.global_seed)
                 
                 random.shuffle(self.human.current_environment.machine_list)
                 # Select a machine randomly from environment machines list
@@ -121,9 +121,9 @@ class BasicBehavior(object):
 
     def interact_to_current_environment_machines(self):
         """Chooses randonmicly a environment machine to interact to."""
-        if self.human.current_environment:
-            # if self.simulation_core.global_seed:
-            #     random.seed(self.simulation_core.global_seed)
+        if self.human.current_environment and 'human' in self.human.simulation_core.modes:
+            if self.human.simulation_core.global_seed:
+                random.seed(self.human.simulation_core.global_seed)
             
             if len(self.human.current_environment.machine_list) > 0:
                 

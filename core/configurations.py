@@ -1,4 +1,5 @@
 import datetime
+import subprocess
 import tkinter
 from tkinter import PhotoImage
 from twisted.internet import tksupport
@@ -46,6 +47,7 @@ class CoreConfig():
             process_info_file.close()
         
         save_pid_info()
+        
         
 
 def initialization_screen(simulation_core):
@@ -108,7 +110,7 @@ def initialization_screen(simulation_core):
             load_appliances(selected_project_name, simulation_core)
             load_humans(selected_project_name, simulation_core)
             load_environments(selected_project_name, simulation_core)
-            
+                        
 
             window.destroy()
             window.update()

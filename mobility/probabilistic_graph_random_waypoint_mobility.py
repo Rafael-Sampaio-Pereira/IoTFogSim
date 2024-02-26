@@ -108,6 +108,8 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                                     if self.simulation_core.clock.time_speed_multiplier != 1:
                                         final_pos = all_trajectory_coordinates[-1]
                                         n_elements = int(len(all_trajectory_coordinates) * self.simulation_core.clock.time_speed_multiplier/100)
+                                        if self.simulation_core.global_seed:
+                                            random.seed(self.simulation_core.global_seed)
                                         all_trajectory_coordinates = random.sample(
                                             all_trajectory_coordinates,
                                             n_elements
@@ -153,6 +155,8 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                         next_point = self.next_mobility_point 
                         self.next_mobility_point = None
                     else:
+                        if self.simulation_core.global_seed:
+                            random.seed(self.simulation_core.global_seed)
                         # Choosing randomically a waypoint in all_mobility_points list
                         next_point = random.choice(self.all_mobility_points)
                     
@@ -170,6 +174,8 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                     
                     if trajectory_data:
                         all_trajectory_coordinates = trajectory_data['trajectory_coordinates']
+                        if self.simulation_core.global_seed:
+                            random.seed(self.simulation_core.global_seed)
                         step_speed = random.uniform(self.min_speed, self.max_speed)
                         step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
                         wall_was_found = False
@@ -206,7 +212,8 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                         del trajectory_data
                         # yield sleep(0.5)
                         
-
+                        if self.simulation_core.global_seed:
+                            random.seed(self.simulation_core.global_seed)
                         # Stay at point for a random period, so move again to another point
                         pause_time = random.randint(self.actor.behavior.min_pause_time, self.actor.behavior.max_pause_time)
                         pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
