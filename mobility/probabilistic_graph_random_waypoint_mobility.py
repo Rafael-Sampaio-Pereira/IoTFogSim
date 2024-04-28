@@ -14,7 +14,7 @@ import os
 import json
 from twisted.internet.task import LoopingCall
 import time
-
+import numpy as np
 
 """
 Model introduction
@@ -149,6 +149,11 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                                     
                 # elif not self.is_stopped:
                 elif not self.is_moving:
+                    # Getting current position
+                    current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
+                    
+                    
+                    
                     all_trajectory_coordinates = None
                     next_point = None
                     if self.next_mobility_point:
@@ -157,14 +162,26 @@ class ProbabilisticGraphRandomWaypointMobility(MobilityModel):
                     else:
                         if self.simulation_core.global_seed:
                             random.seed(self.simulation_core.global_seed)
+                                                    
+                        # Excluding current point from choice list (available points)
+                        available_points_list = self.all_mobility_points.copy()
+                        print("THE CUR POINT IS: ", available_points_list)
+                        # Shuffling points list to avoid duplicates choices
+                        random.shuffle(self.all_mobility_points)
+                        available_points_list = [x for x in self.all_mobility_points if x['name'] != current_point[0]]
+                        print("THE NEW POINT IS: ", available_points_list)
+                        
+                        
                         # Choosing randomically a waypoint in all_mobility_points list
-                        next_point = random.choice(self.all_mobility_points)
-                    
+                        next_point = random.choice(available_points_list)
+                        print("THE NEXT POINT IS: ", next_point)
+                        print("THE CURR POINT IS: ", current_point[0])
+                        
+                    # Shuffling points list to avoid duplicates choices
+                    random.shuffle(self.all_mobility_points)
+                        
                     # Getting destiny graph node(i.e. vertice)
                     destiny_point = self.get_graph_node_by_coords(next_point['x'], next_point['y'])
-                    
-                    # Getting current position
-                    current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
                     
                     trajectory_data = next(filter(
                                             lambda data: data['source_point'] == current_point and data['destination_point'] == destiny_point,

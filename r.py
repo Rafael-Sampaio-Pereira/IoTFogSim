@@ -1,24 +1,13 @@
 import random
 
-def simulate_power_consumption():
-        """ This simulates power consumption considering power variance.
-        To call it, you need to use a variance margin(float_margin) value"""
-        min_power = None
-        power_watts = 1500
-        power_float_margin = 0.7
-        if power_watts - power_float_margin < 1:
-            min_power = power_watts
-        else:
-            min_power = power_watts - power_float_margin
-            
-        max_power = power_watts+power_float_margin
-        final_value = random.uniform(min_power, max_power)
-
-        # print(f"name: {self.name}, original: {power_watts}, max: {max_power}, min: {min_power}, final: {final_value}")
-
-        return final_value
-    
-    
-    
-for i in range(0,100):
-    print(round(simulate_power_consumption()/1000,3))
+current_list = [{'name': 'DOOR_1', 'x': 684, 'y': 650}, {'name': 'DOOR_2', 'x': 560, 'y': 390}, {'name': 'DOOR_3', 'x': 380, 'y': 390}, {'name': 'POINT_1', 'x': 515, 'y': 610}, {'name': 'POINT_2', 'x': 385, 'y': 475}, {'name': 'POINT_3', 'x': 185, 'y': 470}, {'name': 'POINT_4', 'x': 190, 'y': 600}, {'name': 'POINT_5', 'x': 255, 'y': 205}, {'name': 'POINT_6', 'x': 570, 'y': 205}, {'name': 'BED', 'x': 410, 'y': 90}, {'name': 'SUPERMARKET', 'x': 950, 'y': 200}, {'name': 'WORKPLACE', 'x': 950, 'y': 643}]
+print("THE CUR POINT IS: ", current_list)
+current_list = [x for x in current_list if x['name'] != 'DOOR_2']
+# current_list = list(set(current_list) - set(
+# {
+#     'name': 'DOOR_2',
+#     'x': 560,
+#     'y': 390
+# }
+# ))
+print("THE NEW POINT IS: ", current_list)

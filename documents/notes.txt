@@ -11,3 +11,74 @@ INTELIGÊNCIA - INTERAÇÃO - LAMPADAS - ORQUESTRAÇÃO
 
 
 kW significa 1.000 Watts, enquanto kWh representa 1.000 Watts dentro de uma hora
+
+==============================================================================
+
+Definir probabilidades na hora da execução das atiividades com base em cada atividade.
+se o personagem vai fazer cafe, a probablilidade de abrir geladeira é baixa
+
+curva de acionamento eletricos  com base no equipamento especifico
+
+cada ambiente com uma temperatura diferente
+
+variar temperatura externa
+
+simular o sol, lumens e temperatura externa
+
+probabilidade nas atividades e não nos ambientes
+
+remover probabilidade da mobilidade e deixar na atividade
+
+================================================================
+
+[ ] Criar objeto global "Sun" que determine lumens e temperatura externa
+
+[ ] Utilizar distribuição na simulação do consumo de corrente
+    e calcular consumo com base na corrente atual
+
+[ ] Remover probabilidade de o personagem ir para outro ambiente 
+    com base no ambiente atual
+
+[ ] Comandar a mobilidade nos pontos do grafo com base na task
+
+[ ] Criar uma pilha e um scheduler de atividades global para o core do simulador
+
+[ ] Criar uma pilha e um scheduler de atividades global para cada personagem
+
+[ ] criar lista de atividades
+    [
+        {
+            "point": "A",
+            "actor_name": "Jhon"
+            "code": "MC01",
+            "title": "Make coffe",
+            "duration": 500, # time to sleep before call post actions in scheduler stack
+            "main_action": {
+                "object_name": "AIRC01",
+                "function": "turn_on",
+                "parameters": []
+            },
+            "pre_tasks": [
+                "MC02",
+                "MC03",
+            ],
+            "post_tasks": [
+                "MC02",
+                "MC03",externa
+            ]
+        }
+    ]
+[ ] Associar atividades ao vertice
+
+[ ] Criar scheduler de atividades com pilha de atividades
+
+[ ] Resolver problema de aceleração de simulação
+
+[ ] Projetar cenário de economia de energia
+
+[ ] Planejar experimento
+
+[ ] Rodar experimento e analisar resultados
+
+[ ] Retomar a escrita
+
