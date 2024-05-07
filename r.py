@@ -1,13 +1,143 @@
-import random
+import os
+import json
+from core.functions import sleep
+from twisted.internet.defer import inlineCallbacks
+from core.functions import get_all_methods_and_attributes_from_instance
+from twisted.internet import reactor
 
-current_list = [{'name': 'DOOR_1', 'x': 684, 'y': 650}, {'name': 'DOOR_2', 'x': 560, 'y': 390}, {'name': 'DOOR_3', 'x': 380, 'y': 390}, {'name': 'POINT_1', 'x': 515, 'y': 610}, {'name': 'POINT_2', 'x': 385, 'y': 475}, {'name': 'POINT_3', 'x': 185, 'y': 470}, {'name': 'POINT_4', 'x': 190, 'y': 600}, {'name': 'POINT_5', 'x': 255, 'y': 205}, {'name': 'POINT_6', 'x': 570, 'y': 205}, {'name': 'BED', 'x': 410, 'y': 90}, {'name': 'SUPERMARKET', 'x': 950, 'y': 200}, {'name': 'WORKPLACE', 'x': 950, 'y': 643}]
-print("THE CUR POINT IS: ", current_list)
-current_list = [x for x in current_list if x['name'] != 'DOOR_2']
-# current_list = list(set(current_list) - set(
-# {
-#     'name': 'DOOR_2',
-#     'x': 560,
-#     'y': 390
-# }
-# ))
-print("THE NEW POINT IS: ", current_list)
+class Task(object):
+    def __init__(
+        self,
+        point,
+        actor_name,
+        code,
+        title,
+        duration,
+        device_name,
+        function_to_call,
+        parameters,
+        dependencies
+    ):
+        self.point = point
+        self.actor_name = actor_name
+        self.code = code
+        self.title = title
+        self.duration = duration
+        self.device_name = device_name
+        self.function_to_call = function_to_call
+        self.parameters = parameters
+        self.dependencies = dependencies
+        self.is_function_at_queue = False
+
+class Device(object):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+        
+    def get_name(self):
+        return self.name
+
+    def get_power(self):
+        return self.power
+
+device_list = [
+    {
+        "name": "Air",
+        "power": 2000
+    },
+    {
+        "name": "Computer",
+        "power": 100
+    },
+    {
+        "name": "Refrigerator",
+        "power": 500
+    },
+    {
+        "name": "Bed",
+        "power": 350
+    }
+]
+
+all_devices = []
+
+for device in device_list:
+    _device = Device(device["name"], device["power"])
+    all_devices.append(_device)
+    
+all_tasks_list = []
+
+def load_tasks():
+    file_path = 'task.json'
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as tasks_file:
+            data = json.loads(tasks_file.read())
+
+            if data:
+                for task in data:
+                    _task = Task(
+                        task["point"],
+                        task["actor_name"],
+                        task["code"],
+                        task["title"],
+                        task["duration"],
+                        task["device_name"],
+                        task['function_to_call'],
+                        task["parameters"],
+                        task["dependencies"]
+                    )
+                    all_tasks_list.append(_task)                                        
+                    
+load_tasks()
+
+task_functions_queue = []
+
+def get_task_device_function_to_call(task):
+
+    device = next(filter(
+        lambda _device: _device.name == task.device_name,
+        all_devices), None)
+    
+    if device:
+        valid_commands = get_all_methods_and_attributes_from_instance(device)
+        if task.function_to_call in valid_commands:
+            fn = getattr(device, task.function_to_call, None)
+            if callable(fn):
+                # device.app.last_actor = self.scene.simulation_core.smart_hub.name
+                return fn
+
+def schedule_tasks_functions(first_task):
+
+        if len(first_task.dependencies) > 0:
+            for dependency in first_task.dependencies:
+                _dependency = next(
+                    filter(lambda tsk: tsk.code == dependency, all_tasks_list),
+                    None
+                )
+                if _dependency and not _dependency.is_function_at_queue:
+                    _dependency.is_function_at_queue = True
+                    schedule_tasks_functions(_dependency)
+        
+        fn = get_task_device_function_to_call(first_task)
+        if fn:
+            first_task.is_function_at_queue = True
+            task_functions_queue.append((fn, first_task.duration))
+            
+
+for task in all_tasks_list:
+    schedule_tasks_functions(task)
+
+
+print(task_functions_queue)
+
+@inlineCallbacks 
+def  process_tasks():
+
+    for task_function in task_functions_queue:
+        print(task_function[0]())
+        yield sleep(task_function[1])
+
+process_tasks()
+
+if __name__ == '__main__':
+    reactor.run()

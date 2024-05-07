@@ -1,0 +1,46 @@
+[
+    {
+        "point": "POINT_1",
+        "actor_name": "Jhon",
+        "code": "ATV01",
+        "title": "Turn on air conditioner",
+        "duration": 10,
+        "device_name": "Air",
+        "function_to_call": "get_name",
+        "parameters": null,
+        "dependencies": []
+    },
+    {
+        "point": "POINT_2",
+        "actor_name": "Jhon",
+        "code": "ATV02",
+        "title": "Turn on Computer",
+        "duration": 40,
+        "device_name": "Computer",
+        "function_to_call": "get_name",
+        "parameters": null,
+        "dependencies": ["ATV03"]
+    },
+    {
+        "point": "POINT_3",
+        "actor_name": "Jhon",
+        "code": "ATV03",
+        "title": "Turn on Refrigerator",
+        "duration": 40,
+        "device_name": "Refrigerator",
+        "function_to_call": "get_name",
+        "parameters": null,
+        "dependencies": ["ATV01", "ATV04"]
+    },
+    {
+        "point": "POINT_4",
+        "actor_name": "Jhon",
+        "code": "ATV04",
+        "title": "Turn on Bed",
+        "duration": 40,
+        "device_name": "Bed",
+        "function_to_call": "get_name",
+        "parameters": null,
+        "dependencies": ["ATV02"]
+    }
+]

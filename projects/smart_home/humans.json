@@ -7,6 +7,6 @@
         "icon": "human_icon",
         "x": 100,
         "y": 100,
-        "behavior": "models.behavior.MaleBehavior"
+        "behavior": "models.task_driven_behavior.TaskDrivenBehavior"
     }
 ]

@@ -31,48 +31,54 @@ remover probabilidade da mobilidade e deixar na atividade
 
 ================================================================
 
-[ ] Criar objeto global "Sun" que determine lumens e temperatura externa
-
-[ ] Utilizar distribuição na simulação do consumo de corrente
-    e calcular consumo com base na corrente atual
-
-[ ] Remover probabilidade de o personagem ir para outro ambiente 
-    com base no ambiente atual
-
-[ ] Comandar a mobilidade nos pontos do grafo com base na task
-
-[ ] Criar uma pilha e um scheduler de atividades global para o core do simulador
-
-[ ] Criar uma pilha e um scheduler de atividades global para cada personagem
 
 [ ] criar lista de atividades
     [
         {
             "point": "A",
-            "actor_name": "Jhon"
+            "actor_name": "Jhon",
             "code": "MC01",
             "title": "Make coffe",
             "duration": 500, # time to sleep before call post actions in scheduler stack
             "main_action": {
-                "object_name": "AIRC01",
-                "function": "turn_on",
+                "device_name": "AIRC01",
+                "function_to_call": "turn_on",
                 "parameters": []
             },
-            "pre_tasks": [
+            "pre_task": [
                 "MC02",
-                "MC03",
             ],
-            "post_tasks": [
+            "post_task": [
                 "MC02",
-                "MC03",externa
             ]
         }
     ]
-[ ] Associar atividades ao vertice
 
-[ ] Criar scheduler de atividades com pilha de atividades
+[ ] Criar uma pilha e um scheduler de atividades global para o core do simulador
+
+[ ] Criar uma pilha e um scheduler de atividades global para cada personagem
+    Atividades só podem ser executadas quando o personagem chega ao ponto
+
+------------------------------------------------------------------------
+\
+[ ] Remover probabilidade de o personagem ir para outro ambiente 
+    com base no ambiente atual
+
+[ ] Comandar a mobilidade nos pontos do grafo com base na task
+
+[ ] Grafo automatico criado apartir dos pontos dos dispositivos
+-----------------------------------------------------------------------
+
+[ ] Criar objeto global "Sun" que determine lumens e temperatura externa
+
+[ ] Determinar temperatura interna a partir da temperatura externa
+
+[ ] Utilizar distribuição na simulação do consumo de corrente
+    e calcular consumo com base na corrente atual
 
 [ ] Resolver problema de aceleração de simulação
+
+------------------------------------------------------------------------
 
 [ ] Projetar cenário de economia de energia
 
