@@ -4,10 +4,9 @@
         "actor_name": "Jhon",
         "code": "ATV01",
         "title": "Turn on air conditioner",
-        "duration": 10,
-        "device_name": "Air",
-        "function_to_call": "get_name",
-        "parameters": null,
+        "duration": 20,
+        "device_name": "Air Conditioner",
+        "function_to_call": "turn_on",
         "dependencies": []
     },
     {
@@ -15,21 +14,19 @@
         "actor_name": "Jhon",
         "code": "ATV02",
         "title": "Turn on Computer",
-        "duration": 40,
-        "device_name": "Computer",
-        "function_to_call": "get_name",
-        "parameters": null,
-        "dependencies": ["ATV03"]
+        "duration": 20,
+        "device_name": "Desktop 1 - HTTP Client",
+        "function_to_call": "turn_on",
+        "dependencies": ["ATV01"]
     },
     {
         "point": "POINT_3",
         "actor_name": "Jhon",
         "code": "ATV03",
         "title": "Turn on Refrigerator",
-        "duration": 40,
+        "duration": 20,
         "device_name": "Refrigerator",
-        "function_to_call": "get_name",
-        "parameters": null,
+        "function_to_call": "turn_on",
         "dependencies": ["ATV01", "ATV04"]
     },
     {
@@ -37,10 +34,9 @@
         "actor_name": "Jhon",
         "code": "ATV04",
         "title": "Turn on Bed",
-        "duration": 40,
+        "duration":20,
         "device_name": "Bed",
-        "function_to_call": "get_name",
-        "parameters": null,
+        "function_to_call": "turn_on",
         "dependencies": ["ATV02"]
     }
 ]

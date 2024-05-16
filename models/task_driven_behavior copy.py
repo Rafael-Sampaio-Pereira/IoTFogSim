@@ -11,7 +11,6 @@ from apps.smart_tv import SmartTvApp
 from apps.vacuum_bot import VacuumBotApp
 from apps.ventilator import VentilatorApp
 from core.functions import readable_time_to_seconds
-from twisted.internet.task import cooperate
 import os
 import json
 import time
@@ -31,6 +30,7 @@ class Task(object):
         duration,
         device_name,
         function_to_call,
+        parameters,
         dependencies=None
     ):
         self.point = point
@@ -40,35 +40,33 @@ class Task(object):
         self.duration = duration
         self.device_name = device_name
         self.function_to_call = function_to_call
+        self.parameters = parameters
         self.dependencies = dependencies or []
         self.completed = False
         self.human = None
-        self.task_queue = []
-        
-        
     
+    # @inlineCallbacks 
     def run(self):
-        @inlineCallbacks 
-        def core():
-            for task in self.task_queue:
-                print(f"Executando a tarefa: {task.title}")
-                # nao funciona vai para um ponto porem nao chega aos demais
-                self.human.mobility.set_next_mobility_point(task.point)
-                self.human.mobility.move()
-                #  waiting for human to get destiny point
+        print(f"Executando a tarefa: {self.title}")
+        # nao funciona vai para um ponto porem nao chega aos demais
+        self.human.mobility.set_next_mobility_point(self.point)
+        self.human.mobility.move()
+        #  waiting for human to get destiny point
+        # @inlineCallbacks 
+        # def check_if_human_got_destination_point():
+        #     # yield sleep(1)
+        #     if self.human.mobility.got_destiny:
+        #         print("FINALMENTE CHEGOU")
+        #         return 
+        #     else:
+        #         print("AGUARDANDO A CHEGADA")
+        #         check_if_human_got_destination_point()
+        # check_if_human_got_destination_point()
+        time.sleep(self.duration)
+        self.human.mobility.got_destiny = False
+        print(f"Tarefa concluída: {self.title}")
 
-                # call task main function
-                if task.function_to_call:
-                    task.function_to_call()
-                
-                # waitng time for call next task
-                yield sleep(task.duration)
-            
-                print(f"Tarefa concluída: {task.title}")
-        
-        cooperate(core())
-            
-    
+
 class TaskScheduler:
     def __init__(self):
         self.tasks = {}
@@ -76,35 +74,70 @@ class TaskScheduler:
     def add_task(self, task):
         self.tasks[task.code] = task
 
+    def run_task(self, task_code):
+        print("VEIO ATÉ AQUI", task_code)
+        task = self.tasks.get(task_code)
+        print("VEIO ATÉ AQUI TBM ....", task.code)
+        if task:
+            # if not task.completed:
+            if not task.completed:
+                if len(task.dependencies) > 0:
+                    print("VEIO ATÉ AQUI VELHAOOOOOO", len(task.dependencies))
+                    for dependency in task.dependencies:
+                        self.run_task(dependency)
+                        task.completed = True
+                
+                #  - configura o proximo ponto e vai para lá
+                #  - verifica se já chegou no ponto, se sim:
+                #      - executa a função principal da tarefa
+                #      - espera o tempo de ruração da tarefa
+                
+                
+                task.run()
+
 
 class TaskDrivenBehavior(object):
     def __init__(self, human):
         self.human = human
+        self.min_pause_time = 2
+        self.max_pause_time = 10
         self.scheduler = TaskScheduler()
-        self.all_task_list = []
         self.human.mobility = TaskBasedGraphRandomWaypointMobility(
             self.human.visual_component,
             self.human.simulation_core,
             0.02,
             0.08,
+            self.min_pause_time,
+            self.max_pause_time,
             self.human
         )
         self.load_tasks()
-        for _task in self.all_task_list:
-            self.schedule_tasks_functions(_task, _task.task_queue)
-            self.scheduler.add_task(_task)
         
+    
+    # def go_to_point_and_stay_at(self, point_name, state_before, state_after, duration):
+    #     self.human.mobility.set_next_mobility_point(point_name)
+    #     reactor.callLater(
+    #         self.human.simulation_core.clock.get_internal_time_unit(20),
+    #         self.human.set_state,
+    #         state_before
+    #     )
+    #     reactor.callLater(
+    #         self.human.simulation_core.clock.get_internal_time_unit(duration),
+    #         self.human.set_state,
+    #         state_after
+    #     )
+
+
     def run(self):
-        self.all_task_list[2].run()
-        # self.scheduler.run_task("ATV03")
+        self.scheduler.run_task("ATV03")
         # LoopingCall(self.main_looping).start(self.human.simulation_core.clock.get_internal_time_unit(1))
 
     def main_looping(self):
-        """ COLOCAR AQUI A IMPLEMENTAÇÃO DO SCHEDULER QUE VERIFICARÁ O VALOR DA TEMPERATURA E DA LUMINOSIDADE"""
         pass
     
     def load_tasks(self):
         # create tasks
+        print(self.human.simulation_core.project_name, "EM TESTE")
         file_path = 'projects/'+self.human.simulation_core.project_name+'/task.json'
         if os.path.exists(file_path):
             with open(file_path, 'r') as tasks_file:
@@ -119,39 +152,10 @@ class TaskDrivenBehavior(object):
                             task["duration"],
                             task["device_name"],
                             task['function_to_call'],
+                            task["parameters"],
                             task["dependencies"]
                         )
                         _task.human = self.human
-                        _task.function_to_call = self.get_task_device_function_to_call(task)
-                        self.all_task_list.append(_task)
-                        
-
-    def schedule_tasks_functions(self, _task, queue):
-
-            if len(_task.dependencies) > 0:
-                for dependency in _task.dependencies:
-                    _dependency = next(
-                        filter(lambda tsk: tsk.code == dependency, self.all_task_list),
-                        None
-                    )
-                    self.schedule_tasks_functions(_dependency, queue)
-            
-            if _task:
-                queue.append(_task)
-                
-    
-    def get_task_device_function_to_call(self, task):
-
-        device = next(filter(
-            lambda _device: _device.name == task["device_name"],
-            self.human.simulation_core.all_machines), None)
-        
-        if device:
-            valid_commands = get_all_methods_and_attributes_from_instance(device)
-            if task["function_to_call"] in valid_commands:
-                fn = getattr(device, task["function_to_call"], None)
-                if callable(fn):
-                    # device.app.last_actor = self.scene.simulation_core.smart_hub.name
-                    return fn
-
+                        # Adding tasks to the scheduler
+                        self.scheduler.add_task(_task)
 

@@ -16,28 +16,19 @@ from twisted.internet.task import LoopingCall
 import time
 import numpy as np
 
-"""
-Model introduction
-This extends random waypoint models, but node can only move into a given graph
-"""
-
 
 class TaskBasedGraphRandomWaypointMobility(MobilityModel):
-    """Move randomically a visual component icon into graph using the random waypoint mobility model.
+    """Move a visual component icon into graph based on task point.
                 visual_component: A component that contains icon and node info
                 min_speed: float - Min value for mobility velocility
                 max_speed: float - Max value for mobility velocility
-                min_pause: int - Mix pause value for a node stay at a given waypoint
-                max_pause: int - Max pause value for a node stay at a given waypoint
             """
 
     def __init__(self, visual_component,
-                 simulation_core,
-                 min_speed: float,
-                 max_speed: float,
-                 min_pause: int,
-                 max_pause: int,
-                 actor):
+                simulation_core,
+                min_speed: float,
+                max_speed: float,
+                actor):
         super().__init__(simulation_core)
         self.all_mobility_points = []
         self.actor = actor
@@ -48,24 +39,11 @@ class TaskBasedGraphRandomWaypointMobility(MobilityModel):
         self.visual_component = visual_component
         self.min_speed = min_speed
         self.max_speed = max_speed
-        self.min_pause = min_pause
-        self.max_pause = max_pause
         self.all_path_trajectory_coordinates = []
         self.next_mobility_point = None
-        self.is_moving = False
-        self.has_started_move = False
 
-
-    # @inlineCallbacks
     def start(self):
-        # wait few times before node start the mobility, this is to prevent the node.run_mobility be called before put points in list
-        # yield sleep(1)
-
-        if not self.simulation_core.is_running and not self.has_started_move:
-            reactor.callLater(1, self.start)
-        else:
-            if not self.has_started_move: 
-                cooperate(self.move())
+        pass
         
     def generate_all_path_coords_points_between_two_points(self):
         
@@ -127,126 +105,57 @@ class TaskBasedGraphRandomWaypointMobility(MobilityModel):
         self.next_mobility_point = next(filter(
                 lambda point: point["name"] == point_name,
                 self.all_mobility_points), None)
-        print(point_name, self.next_mobility_point)
                     
     @inlineCallbacks
     def move(self) -> None:
         
-        if not self.has_started_move:
-            self.has_started_move = True
-        
-
-        print("CHEGOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
-
-        while True:
-            print("TÁ AQUI IIIIIIIIIIIIIIIIIIIIIIIIIIIII")
-            if self.simulation_core.is_running:
-                print("TÁ AQUI MESMO")
-                # to prevent "builtins.UnboundLocalError: local variable 'pause_time' referenced before assignment"
-                pause_time = self.actor.behavior.min_pause_time
-
-                if self.actor.is_at_bed() and self.actor.state == 'SLEEPING':
-                    # If is time to sleep and actor is at bed, so do nothing
-                    pass
-                                    
-                # elif not self.is_stopped:
-                elif not self.is_moving:
-                    print("TÁ AQUI MOVENDO NÃO", self.next_mobility_point)
-                    # Getting current position
-                    current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
-                    
-                    
-                    
-                    all_trajectory_coordinates = None
-                    next_point = None
-                    if self.next_mobility_point:
-                        next_point = self.next_mobility_point 
-                        self.next_mobility_point = None
-                    # else:
-                    #     if self.simulation_core.global_seed:
-                    #         random.seed(self.simulation_core.global_seed)
-                                                    
-                    #     # Excluding current point from choice list (available points)
-                    #     available_points_list = self.all_mobility_points.copy()
-                    #     print("THE CUR POINT IS: ", available_points_list)
-                    #     # Shuffling points list to avoid duplicates choices
-                    #     random.shuffle(self.all_mobility_points)
-                    #     available_points_list = [x for x in self.all_mobility_points if x['name'] != current_point[0]]
-                    #     print("THE NEW POINT IS: ", available_points_list)
+        if self.simulation_core.is_running:
+            # Getting current position
+            current_point = self.get_graph_node_by_coords(self.visual_component.x, self.visual_component.y)
                         
-                        
-                    #     # Choosing randomically a waypoint in all_mobility_points list
-                    #     next_point = random.choice(available_points_list)
-                    #     print("THE NEXT POINT IS: ", next_point)
-                    #     print("THE CURR POINT IS: ", current_point[0])
-                        
-                        # Shuffling points list to avoid duplicates choices
-                        random.shuffle(self.all_mobility_points)
+            all_trajectory_coordinates = None
+            next_point = None
+            if self.next_mobility_point:
+                next_point = self.next_mobility_point 
+                self.next_mobility_point = None
+
+                # Shuffling points list to avoid duplicates choices
+                random.shuffle(self.all_mobility_points)
+                    
+                # Getting destiny graph node(i.e. vertice)
+                destiny_point = self.get_graph_node_by_coords(next_point['x'], next_point['y'])
+                
+                trajectory_data = next(filter(
+                                        lambda data: data['source_point'] == current_point and data['destination_point'] == destiny_point,
+                                        self.all_path_trajectory_coordinates), None)
+                self.simulation_core.updateEventsCounter(
+                    f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_point['x']} y:{next_point['y']} coords ")
+                
+                if trajectory_data:
+                    print("TEM DADOS DE TRAJETORIA")
+                    all_trajectory_coordinates = trajectory_data['trajectory_coordinates']
+                    if self.simulation_core.global_seed:
+                        random.seed(self.simulation_core.global_seed)
+                    step_speed = random.uniform(self.min_speed, self.max_speed)
+                    step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
+                    wall_was_found = False
+
+                    for x, y in all_trajectory_coordinates:
+                        # Due it is a loop, verify if last movement has resulted in a wall collision
+                        if not wall_was_found:
+                            # verify if object just got its destiny
+                            if not(x == next_point['x']) and not(y == next_point['y']):
+                                # Moving icon on screen at
+                                self.visual_component.move_on_screen(x, y)
+                                
+                            else:
+                                # doing last trajectory movement
+                                self.visual_component.move_on_screen(x, y)
+                            yield sleep(step_speed)
                             
-                        # Getting destiny graph node(i.e. vertice)
-                        destiny_point = self.get_graph_node_by_coords(next_point['x'], next_point['y'])
-                        
-                        trajectory_data = next(filter(
-                                                lambda data: data['source_point'] == current_point and data['destination_point'] == destiny_point,
-                                                self.all_path_trajectory_coordinates), None)
-                        self.simulation_core.updateEventsCounter(
-                            f"{self.visual_component.name} moving from x:{self.visual_component.x} y:{self.visual_component.y} coords to x:{next_point['x']} y:{next_point['y']} coords ")
-                        
-                        if trajectory_data:
-                            all_trajectory_coordinates = trajectory_data['trajectory_coordinates']
-                            if self.simulation_core.global_seed:
-                                random.seed(self.simulation_core.global_seed)
-                            step_speed = random.uniform(self.min_speed, self.max_speed)
-                            step_speed = self.simulation_core.clock.get_internal_time_unit(step_speed)
-                            wall_was_found = False
-                            tolerance = None
-                            self.is_moving = True
-                            for x, y in all_trajectory_coordinates:
+                    del all_trajectory_coordinates
+                    del trajectory_data
 
-                                old_x = self.visual_component.x
-                                old_y = self.visual_component.y
-                                # Due it is a loop, verify if last movement has resulted in a wall collision
-                                if not wall_was_found:
-                                    # verify if object just got its destiny
-                                    if not(x == next_point['x']) and not(y == next_point['y']):
-                                        # preventing icon cross wall
-                                        tolerance = 10
-                                        # Moving icon on screen at
-                                        self.visual_component.move_on_screen(x, y)
-                                        
-                                        if self.simulation_core.scene_adapter:
-                                            if self.simulation_core.scene_adapter.ground_plan.verify_wall_collision(x, y, tolerance):
-                                                # if found a collision, then rolling back to old position
-                                                # reactor.callFromThread(self.visual_component.move_on_screen, old_x, old_y)
-                                                self.visual_component.move_on_screen(old_x, old_y)
-                                                wall_was_found = True
-                                                break
-                                    else:
-                                        # doing last trajectory movement, so it will pause and after some tim, choose another graph point and play again
-                                        self.visual_component.move_on_screen(x, y)
-
-                                    yield sleep(step_speed)
-                                    
-                                    print("STEP SPEEEDDDDDDDDDDDDDDDDD", step_speed)
-                            del all_trajectory_coordinates
-                            del trajectory_data
-                            # yield sleep(0.5)
-                            
-                            if self.simulation_core.global_seed:
-                                random.seed(self.simulation_core.global_seed)
-                            # Stay at point for a random period, so move again to another point
-                            pause_time = random.randint(self.actor.behavior.min_pause_time, self.actor.behavior.max_pause_time)
-                            pause_time = self.simulation_core.clock.get_internal_time_unit(pause_time)
-            
-            if pause_time < 0.5:
-                pause_time = 0.5
-            
-            yield sleep(pause_time)
-            self.is_moving = False
-        
-
-
-                    
 
     @inlineCallbacks 
     def generate_graph_points(self):

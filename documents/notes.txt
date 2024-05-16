@@ -32,44 +32,23 @@ remover probabilidade da mobilidade e deixar na atividade
 ================================================================
 
 
-[ ] criar lista de atividades
-    [
-        {
-            "point": "A",
-            "actor_name": "Jhon",
-            "code": "MC01",
-            "title": "Make coffe",
-            "duration": 500, # time to sleep before call post actions in scheduler stack
-            "main_action": {
-                "device_name": "AIRC01",
-                "function_to_call": "turn_on",
-                "parameters": []
-            },
-            "pre_task": [
-                "MC02",
-            ],
-            "post_task": [
-                "MC02",
-            ]
-        }
-    ]
-
+[x] criar lista de atividades
+  
 [ ] Criar uma pilha e um scheduler de atividades global para o core do simulador
 
-[ ] Criar uma pilha e um scheduler de atividades global para cada personagem
+[x] Criar uma pilha e um scheduler de atividades para cada personagem
     Atividades só podem ser executadas quando o personagem chega ao ponto
 
 ------------------------------------------------------------------------
-\
-[ ] Remover probabilidade de o personagem ir para outro ambiente 
+
+[x] Remover probabilidade de o personagem ir para outro ambiente 
     com base no ambiente atual
 
-[ ] Comandar a mobilidade nos pontos do grafo com base na task
+[x] Comandar a mobilidade nos pontos do grafo com base na task
 
-[ ] Grafo automatico criado apartir dos pontos dos dispositivos
 -----------------------------------------------------------------------
 
-[ ] Criar objeto global "Sun" que determine lumens e temperatura externa
+[x] Criar objeto global "Sun" que determine lumens e temperatura externa
 
 [ ] Determinar temperatura interna a partir da temperatura externa
 

@@ -37,6 +37,8 @@ task4 = Task("Tarefa 4", dependencies=["Tarefa 2",])
 task5 = Task("Tarefa 5", dependencies=["Tarefa 3", "Tarefa 4"])
 task6 = Task("Tarefa 6", dependencies=["Tarefa 4"])
 task7 = Task("Tarefa 7", dependencies=["Tarefa 5", "Tarefa 6"])
+task8 = Task("Tarefa 8", dependencies=["Tarefa 9"])
+task9 = Task("Tarefa 9", dependencies=["Tarefa 8"])
 
 # Criando o agendador
 scheduler = TaskScheduler()
@@ -49,6 +51,8 @@ scheduler.add_task(task4)
 scheduler.add_task(task5)
 scheduler.add_task(task6)
 scheduler.add_task(task7)
+scheduler.add_task(task8)
+scheduler.add_task(task9)
 
 # Executando as tarefas
-scheduler.run_task("Tarefa 6")
+scheduler.run_task("Tarefa 8")
